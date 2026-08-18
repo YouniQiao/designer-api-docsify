@@ -6,7 +6,7 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_densityUpdate
+## off_densityUpdate('densityUpdate')
 
 ```TypeScript
 export function off(type: 'densityUpdate', context: UIContext, callback?: Callback<DensityInfo>): void
@@ -30,5 +30,5 @@ Unregisters the listener for screen pixel density changes.
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | Yes | Event type. Set to **'densityUpdate'** for screen pixel density change events. |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **densityUpdate** event under the current UI context are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **densityUpdate** event under the current UI context are unregistered. |
 

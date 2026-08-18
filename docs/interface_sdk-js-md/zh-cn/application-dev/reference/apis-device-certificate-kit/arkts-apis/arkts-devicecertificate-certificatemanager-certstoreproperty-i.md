@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlg
@@ -53,7 +55,7 @@ certType: CertType
 
 表示证书的类型。
 
-**类型：** [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md)
+**类型：** CertType
 
 **起始版本：** 23
 

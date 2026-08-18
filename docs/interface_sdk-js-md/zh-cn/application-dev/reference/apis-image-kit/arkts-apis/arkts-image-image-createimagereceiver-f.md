@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -29,7 +30,7 @@ function createImageReceiver(width: number, height: number, format: number, capa
 | --- | --- | --- | --- |
 | width | number | 是 | 图像的默认宽度。单位：像素（px）。该参数不会影响接收到的图片宽度，实际宽度由生产者决定，如相机。 |
 | height | number | 是 | 图像的默认高度。单位：像素（px）。该参数不会影响接收到的图片高度，实际高度由生产者决定，如相机。 |
-| format | number | 是 | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md#imageformat)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机 ）。 |
+| format | number | 是 | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机 ）。 |
 | capacity | number | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
 **返回值：**
@@ -64,7 +65,7 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: int): Im
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | size | Size | 是 | 图像的默认大小。单位：像素（px）。该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。 |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md#imageformat)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决 定，如相机）。 |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决 定，如相机）。 |
 | capacity | int | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
 **返回值：**
@@ -120,8 +121,8 @@ Creates an ImageReceiver instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | Size | 是 | The default [Size](arkts-image-image-size-i.md#size) in pixels of the Images that this receiver will produce. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md#imageformat) constants. |
+| size | Size | 是 | The default [Size](arkts-image-image-size-i.md) in pixels of the Images that this receiver will produce. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md) constants. |
 | capacity | int | 是 | The maximum number of images the user will want to access simultaneously. |
 
 **返回值：**

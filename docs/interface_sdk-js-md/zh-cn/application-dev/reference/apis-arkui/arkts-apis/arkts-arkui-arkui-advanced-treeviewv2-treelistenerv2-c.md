@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## offNodeAdd
@@ -35,7 +36,7 @@ offNodeAdd(callback?: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 否 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 否 |  |
 
 ## offNodeClick
 
@@ -59,7 +60,7 @@ offNodeClick(callback?: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 否 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 否 |  |
 
 ## offNodeDelete
 
@@ -83,7 +84,7 @@ offNodeDelete(callback?: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 否 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 否 |  |
 
 ## offNodeModify
 
@@ -107,7 +108,7 @@ offNodeModify(callback?: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 否 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 否 |  |
 
 ## offNodeMove
 
@@ -131,7 +132,7 @@ offNodeMove(callback?: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 否 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 否 |  |
 
 ## onNodeAdd
 
@@ -155,7 +156,7 @@ onNodeAdd(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onNodeClick
 
@@ -179,7 +180,7 @@ onNodeClick(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onNodeDelete
 
@@ -203,7 +204,7 @@ onNodeDelete(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onNodeModify
 
@@ -227,7 +228,7 @@ onNodeModify(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onNodeMove
 
@@ -251,7 +252,7 @@ onNodeMove(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onceNodeAdd
 
@@ -275,7 +276,7 @@ onceNodeAdd(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onceNodeClick
 
@@ -299,7 +300,7 @@ onceNodeClick(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onceNodeDelete
 
@@ -323,7 +324,7 @@ onceNodeDelete(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onceNodeModify
 
@@ -347,7 +348,7 @@ onceNodeModify(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 
 ## onceNodeMove
 
@@ -371,5 +372,5 @@ onceNodeMove(callback: OnChangedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | 是 |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | 是 |  |
 

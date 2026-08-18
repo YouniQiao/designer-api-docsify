@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## deleteDesktopShortcutInfo
@@ -30,7 +29,7 @@ Deletes a shortcut for the given user. This API uses a promise to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shortcutInfo | ShortcutInfo | Yes | Shortcut information. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 

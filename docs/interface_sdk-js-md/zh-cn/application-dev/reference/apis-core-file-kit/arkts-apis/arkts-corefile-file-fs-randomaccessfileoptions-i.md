@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## end
@@ -19,7 +22,7 @@
 end?: number
 ```
 
-表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。
+表示文件的结束偏移位置，单位为Byte。可选，默认文件末尾。
 
 **类型：** number
 
@@ -35,7 +38,7 @@ end?: number
 start?: number
 ```
 
-表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。
+表示文件的起始偏移位置，单位为Byte。可选，默认从当前位置开始读。
 
 **类型：** number
 

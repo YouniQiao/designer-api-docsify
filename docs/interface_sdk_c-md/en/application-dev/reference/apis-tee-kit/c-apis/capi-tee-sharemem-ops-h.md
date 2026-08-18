@@ -49,7 +49,7 @@ Alloc shared memory in TEE.
 
 | Type | Description |
 | -- | -- |
-| void * | Returns a pointer to the newly allocated space if the operation is successful.<br>         Returns a <b>NULL</b> pointer if the allocation fails. |
+| void * | Returns a pointer to the newly allocated space if the operation is successful.          Returns a <b>NULL</b> pointer if the allocation fails. |
 
 ### tee_alloc_coherent_sharemem_aux()
 
@@ -74,7 +74,7 @@ Alloc continuous shared memory in TEE.
 
 | Type | Description |
 | -- | -- |
-| void * | Returns a pointer to the newly allocated space if the operation is successful.<br>         Returns a <b>NULL</b> pointer if the allocation fails. |
+| void * | Returns a pointer to the newly allocated space if the operation is successful.          Returns a <b>NULL</b> pointer if the allocation fails. |
 
 ### tee_free_sharemem()
 
@@ -99,7 +99,7 @@ Free the shared memory in TEE.
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Returns <b>0</b> if the operation is successful.<br>         Returns others if the operation is failed. |
+| uint32_t | Returns <b>0</b> if the operation is successful.          Returns others if the operation is failed. |
 
 ### copy_from_sharemem()
 
@@ -127,7 +127,7 @@ Copy shared memory from source task.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if the operation is successful.<br>         Returns <b>-1</b> if the operation is failed. |
+| int32_t | Returns <b>0</b> if the operation is successful.          Returns <b>-1</b> if the operation is failed. |
 
 ### copy_to_sharemem()
 
@@ -155,6 +155,6 @@ Copy shared memory to destination task.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if the operation is successful.<br>         Returns <b>-1</b> if the operation is failed. |
+| int32_t | Returns <b>0</b> if the operation is successful.          Returns <b>-1</b> if the operation is failed. |
 
 

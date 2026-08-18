@@ -1,8 +1,8 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery). It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md). It provides APIs related to the flash.
 
-**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
 **Since:** 23
 
@@ -67,7 +67,7 @@ Unsubscribes from flash light status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onFlashStateChange
 
@@ -91,7 +91,7 @@ Subscribes to flash light status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | Yes | Callback used to return the flash light status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | Yes | Callback used to return the flash light status. |
 
 ## setFlashMode
 

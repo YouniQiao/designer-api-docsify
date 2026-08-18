@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function isSharing(callback: AsyncCallback<boolean>): void
 ```
 
-Return the global network sharing state.
+Obtains the current network sharing status. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Return the global network sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} indicating network sharing is running; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that network sharing is in progress, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ sharing.isSharing((error: BusinessError, data: boolean) => {
 function isSharing(): Promise<boolean>
 ```
 
-Return the global network sharing state.
+Obtains the current network sharing status. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -75,7 +75,7 @@ Return the global network sharing state.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that network sharing is in progress, and **false** means the opposite. |
 
 **Error codes:**
 

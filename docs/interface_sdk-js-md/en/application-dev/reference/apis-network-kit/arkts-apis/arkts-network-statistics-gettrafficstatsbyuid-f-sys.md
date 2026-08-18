@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStatsInfo>): void
 ```
 
-Get the traffic usage details of the specified time period of the application.
+Obtains the historical data traffic of the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Get the traffic usage details of the specified time period of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Detailed query content. See [UidInfo](arkts-network-statistics-uidinfo-i-sys.md#uidinfo-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | Yes | Returns the [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) object; |
+| uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Application information. For details, see [UidInfo](arkts-network-statistics-uidinfo-i-sys.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the application. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ statistics.getTrafficStatsByUid(
 function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>
 ```
 
-Get the traffic usage details of the specified time period of the application.
+Obtains the historical data traffic of the specified application. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -105,13 +105,13 @@ Get the traffic usage details of the specified time period of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Detailed query content. See [UidInfo](arkts-network-statistics-uidinfo-i-sys.md#uidinfo-system-api). |
+| uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Application information. For details, see [UidInfo](arkts-network-statistics-uidinfo-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Promise used to return the result, which is the historical traffic statistics of the specified NIC. |
 
 **Error codes:**
 

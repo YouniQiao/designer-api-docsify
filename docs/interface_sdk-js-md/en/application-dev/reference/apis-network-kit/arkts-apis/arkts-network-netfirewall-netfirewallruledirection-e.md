@@ -1,6 +1,6 @@
-# NetFirewallRuleDirection
+# NetFirewallRuleDirection(Network Firewall)
 
-Firewall rule direction enumeration.
+Enumerates the firewall rule directions, including inbound and outbound.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Firewall rule direction enumeration.
 RULE_IN = 1
 ```
 
-Inbound.
+Inbound direction.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ Inbound.
 RULE_OUT = 2
 ```
 
-Outbound.
+Outbound direction.
 
 **Since:** 15
 

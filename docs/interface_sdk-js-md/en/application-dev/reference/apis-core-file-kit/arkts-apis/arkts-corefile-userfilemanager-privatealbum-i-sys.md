@@ -1,14 +1,14 @@
 # PrivateAlbum (System API)
 
-Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md#album-system-api) instead.
+Provides APIs for managing the system albums. This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md) instead.
 
-**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#absalbum-system-api)
+**Inheritance/Implementation:** PrivateAlbum extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md)
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#album)
+**Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md)
 
 <!--Device-userFileManager-interface PrivateAlbum--><!--Device-userFileManager-interface PrivateAlbum-End-->
 
@@ -49,7 +49,7 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -169,7 +169,7 @@ Recovers a file in the system album. Only the files in the trash can be recovere
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 

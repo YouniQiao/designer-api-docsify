@@ -2,7 +2,7 @@
 
 Defines the Extendable Toggle.
 
-**Inheritance/Implementation:** ExtendableToggle implements [ToggleAttribute](arkts-na-toggle-toggleattribute-i.md#toggleattribute)
+**Inheritance/Implementation:** ExtendableToggle implements [ToggleAttribute](arkts-na-toggle-toggleattribute-i.md)
 
 **Since:** 26.0.0
 

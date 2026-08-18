@@ -318,7 +318,7 @@ disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | long | 是 | 在connectServiceExtensionAbility中返回的number。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -795,7 +795,7 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pickerWant | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 拉起UIExtension的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起UIExtension成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起UIExtension成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1080,7 +1080,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1101,11 +1101,11 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1169,7 +1169,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1190,11 +1190,11 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1288,11 +1288,11 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1358,7 +1358,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1379,11 +1379,11 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1440,7 +1440,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1460,11 +1460,11 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1550,11 +1550,11 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -1956,7 +1956,7 @@ startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1978,11 +1978,11 @@ startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2050,7 +2050,7 @@ startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callb
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当根据accountId启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2072,11 +2072,11 @@ startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callb
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2175,11 +2175,11 @@ startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Pro
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2248,7 +2248,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动Ability的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2268,10 +2268,10 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2336,7 +2336,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 需要启动Ability的Want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个指定的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2356,10 +2356,10 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9+ |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2453,10 +2453,10 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
@@ -2524,7 +2524,7 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2686,7 +2686,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: As
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | int | 是 | 系统账号的账号ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动一个新的ServiceExtensionAbility成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2881,7 +2881,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 | [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid. |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid. |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
@@ -2926,7 +2926,7 @@ export default class EntryServiceExtAbility extends ServiceExtensionAbility {
 startUIServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-启动一个新的[UIServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability系统接口) 。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+启动一个新的[UIServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) 。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 23
 
@@ -3016,7 +3016,7 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -3170,7 +3170,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: Asy
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 停止Ability的Want信息。 |
 | accountId | int | 是 | 需要停止的系统账号的账号ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当使用账户停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当使用账户停止同一应用程序内的服务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -3328,7 +3328,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止Ability自身成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止Ability自身成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

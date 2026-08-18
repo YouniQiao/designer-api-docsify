@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## onEnabledAccessibilityExtensionListChange
@@ -27,7 +28,7 @@ Register the listener that watches for changes in the enabled status of accessib
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Indicates the listener. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Indicates the listener. |
 
 **错误码：**
 

@@ -2,7 +2,7 @@
 
 Define IObservedObject interface.
 
-**继承/实现关系：** IObservedObject extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md#iwatchsubscriberregister)
+**继承/实现关系：** IObservedObject extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md)
 
 **起始版本：** 23
 

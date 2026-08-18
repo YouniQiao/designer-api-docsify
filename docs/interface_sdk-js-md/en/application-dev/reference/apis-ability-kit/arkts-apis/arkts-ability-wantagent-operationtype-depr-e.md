@@ -6,7 +6,7 @@ Identifies the operation for using a WantAgent, such as starting an ability or s
 
 **Deprecated since:** 9
 
-**Substitutes:** [OperationType](arkts-ability-wantagent-operationtype-e.md#operationtype)
+**Substitutes:** [OperationType](arkts-ability-wantagent-operationtype-e.md)
 
 <!--Device-wantAgent-export enum OperationType--><!--Device-wantAgent-export enum OperationType-End-->
 
@@ -24,7 +24,7 @@ Unknown operation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN_TYPE](arkts-ability-wantagent-operationtype-e.md#unknowntype)
+**Substitutes:** [UNKNOWN_TYPE](arkts-ability-wantagent-operationtype-e.md#unknown_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +44,7 @@ Starts an ability with a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [START_ABILITY](arkts-ability-wantagent-operationtype-e.md#startability)
+**Substitutes:** [START_ABILITY](arkts-ability-wantagent-operationtype-e.md#start_ability)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +64,7 @@ Starts multiple abilities with a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [START_ABILITIES](arkts-ability-wantagent-operationtype-e.md#startabilities)
+**Substitutes:** [START_ABILITIES](arkts-ability-wantagent-operationtype-e.md#start_abilities)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,7 +84,7 @@ Starts an ability without a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [START_SERVICE](arkts-ability-wantagent-operationtype-e.md#startservice)
+**Substitutes:** [START_SERVICE](arkts-ability-wantagent-operationtype-e.md#start_service)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,7 +104,7 @@ Sends a common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SEND_COMMON_EVENT](arkts-ability-wantagent-operationtype-e.md#sendcommonevent)
+**Substitutes:** [SEND_COMMON_EVENT](arkts-ability-wantagent-operationtype-e.md#send_common_event)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

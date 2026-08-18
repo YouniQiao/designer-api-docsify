@@ -6,7 +6,7 @@ WLAN连接状态枚举。
 
 **废弃版本：** 9
 
-**替代接口：** [ConnState](arkts-connectivity-wifimanager-connstate-e.md#connstate)
+**替代接口：** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 <!--Device-wifi-export enum ConnState--><!--Device-wifi-export enum ConnState-End-->
 
@@ -78,7 +78,7 @@ OBTAINING_IPADDR
 
 **废弃版本：** 9
 
-**替代接口：** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtainingipaddr)
+**替代接口：** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtaining_ipaddr)
 
 <!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
 

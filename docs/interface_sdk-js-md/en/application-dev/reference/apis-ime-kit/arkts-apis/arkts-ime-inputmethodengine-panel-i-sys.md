@@ -12,7 +12,6 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## offSizeUpdate
@@ -37,7 +36,7 @@ Unsubscribe 'sizeUpdate' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel 
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | optional, the callback called when the panel size updates. |
 
-## off_sizeUpdate
+## off_sizeUpdate('sizeUpdate')
 
 ```TypeScript
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
@@ -92,7 +91,7 @@ Subscribe 'sizeUpdate' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel wi
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | the callback called when the panel size updates. |
 
-## on_sizeUpdate
+## on_sizeUpdate('sizeUpdate')
 
 ```TypeScript
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
@@ -132,7 +131,7 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 ```
 
-Sets the shadow effect of the input method window. > **NOTE：**> > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) is **SOFT_KEYBOARD** and > [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#panelflag) is **FLG_FIXED** are not supported.
+Sets the shadow effect of the input method window. > **NOTE：**> > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and > [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 23
 

@@ -22,5 +22,11 @@ Defines an object attribute.
 | -- | -- |
 | uint32_t attributeID | Attribute ID. |
 | union | Attribute content.<br>**Since**: 20 |
+| struct | Reference type content.<br>**Since**: 20 |
+| void *buffer | Buffer pointer. |
+| size_t length; } ref | Length of the buffer. |
+| struct | Value type content.<br>**Since**: 20 |
+| uint32_t a | First value. |
+| uint32_t b; } value; } content | Second value. |
 
 

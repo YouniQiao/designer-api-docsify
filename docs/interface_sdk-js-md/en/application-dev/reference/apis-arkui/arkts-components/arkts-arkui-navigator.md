@@ -52,4 +52,9 @@ Called when using the navigator.
 
 ## Summary
 
-- [NavigationType](arkts-arkui-navigationtype-e.md)
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [NavigationType](arkts-arkui-navigationtype-e.md) | Navigation type. |
+

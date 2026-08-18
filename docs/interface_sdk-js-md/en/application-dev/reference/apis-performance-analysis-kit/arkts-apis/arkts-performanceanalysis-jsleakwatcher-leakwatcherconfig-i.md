@@ -4,7 +4,7 @@ Defines the **LeakWatcherConfig** object, which contains multiple configurable p
 
 **Since:** 26.1.0
 
-<!--Device-jsLeakWatcher-interface LeakWatcherConfig--><!--Device-jsLeakWatcher-interface LeakWatcherConfig-End-->
+<!--Device-jsLeakWatcher-export interface LeakWatcherConfig--><!--Device-jsLeakWatcher-export interface LeakWatcherConfig-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 

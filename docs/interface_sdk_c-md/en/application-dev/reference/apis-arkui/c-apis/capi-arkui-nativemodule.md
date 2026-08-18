@@ -10,7 +10,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | Name | Description |
 | -- | -- |
 | [native_material.h](capi-native-material-h.md) | Declares the immersive material types and APIs for ArkUI on the native side. |
-| [native_gesture.h](capi-native-gesture-h.md) | Provides type definitions for <b>NativeGesture</b> APIs. |
+| [native_gesture.h](capi-native-gesture-h.md) | Declares the APIs of **NativeGesture**. |
 | [native_animate.h](capi-native-animate-h.md) | Defines a set of animation APIs of ArkUI on the native side. The APIs in **native_animate.h** must be calledin the main thread. |
 | [native_type_visual.h](capi-native-type-visual-h.md) | Defines the visual effect types for the native module. |
 | [native_node.h](capi-native-node-h.md) | Provides type definitions for <b>NativeNode</b> APIs. |

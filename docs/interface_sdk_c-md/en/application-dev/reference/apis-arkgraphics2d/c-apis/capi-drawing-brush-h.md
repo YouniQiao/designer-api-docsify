@@ -87,7 +87,7 @@ Copies an existing [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object t
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Brush*](capi-drawing-oh-drawing-brush.md) | Returns a pointer to the [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object created. If NULL is returned, the creation fails.<br> The possible failure cause is that no memory is available or brush is NULL. |
+| [OH_Drawing_Brush*](capi-drawing-oh-drawing-brush.md) | Returns a pointer to the [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object created. If NULL is returned, the creation fails.  The possible failure cause is that no memory is available or brush is NULL. |
 
 ### OH_Drawing_BrushDestroy()
 
@@ -263,7 +263,7 @@ Sets a color for this brush. The color will be used by the brush to fill in a sh
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if brush is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if brush is NULL. |
 
 ### OH_Drawing_BrushGetAlphaFloat()
 
@@ -288,7 +288,7 @@ Obtains the alpha value of the brush color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if brush or a is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if brush or a is NULL. |
 
 ### OH_Drawing_BrushGetRedFloat()
 
@@ -313,7 +313,7 @@ Obtains the red component of the brush color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if brush or r is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if brush or r is NULL. |
 
 ### OH_Drawing_BrushGetGreenFloat()
 
@@ -338,7 +338,7 @@ Obtains the green component of the brush color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if brush or g is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if brush or g is NULL. |
 
 ### OH_Drawing_BrushGetBlueFloat()
 
@@ -363,7 +363,7 @@ Obtains the blue component of the brush color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if brush or b is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if brush or b is NULL. |
 
 ### OH_Drawing_BrushSetShaderEffect()
 

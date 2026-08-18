@@ -12,7 +12,6 @@ Describes raw data in an image.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## bitsPerPixel

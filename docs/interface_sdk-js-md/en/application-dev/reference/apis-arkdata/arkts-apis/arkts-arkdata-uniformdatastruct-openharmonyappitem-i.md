@@ -12,7 +12,6 @@ Represents data of the home screen icon type defined by the system.
 
 ```TypeScript
 import { uniformDataStruct } from '@kit.ArkData';
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -147,7 +146,7 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 readonly uniformDataType: 'openharmony.app-item'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.app-item**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **openharmony.app-item**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'openharmony.app-item'
 

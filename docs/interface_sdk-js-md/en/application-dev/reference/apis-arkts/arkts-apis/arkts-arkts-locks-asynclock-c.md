@@ -106,7 +106,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
         options: AsyncLockOptions<U>): Promise<T | U>
 ```
 
-Perform an operation with the acquired lock. The method acquires the lock first, then calls the callback, and then releases the lock. The callback is called asynchronously in the same thread where lockAsync was called. An optional timeout value can be provided in [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md#asynclockoptions). In this case, lockAsync will reject the resulting promise with a BusinessError instance if the lock is not acquired before timeout exceeds. The error message, in this case, will contain the held and waited locks information and possible deadlock warnings.
+Perform an operation with the acquired lock. The method acquires the lock first, then calls the callback, and then releases the lock. The callback is called asynchronously in the same thread where lockAsync was called. An optional timeout value can be provided in [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md). In this case, lockAsync will reject the resulting promise with a BusinessError instance if the lock is not acquired before timeout exceeds. The error message, in this case, will contain the held and waited locks information and possible deadlock warnings.
 
 **Since:** 12
 

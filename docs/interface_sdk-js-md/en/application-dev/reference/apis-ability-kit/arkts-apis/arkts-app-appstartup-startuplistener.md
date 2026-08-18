@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { StartupListener } from '@kit.AbilityKit';
-import { StartupListener } from '@kit.AbilityKit';
 ```
 
 ## Summary

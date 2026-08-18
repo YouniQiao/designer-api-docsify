@@ -50,7 +50,7 @@ Initializes a condition variable.The condition variable must later be destroyed 
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the condition variable is initialized;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the condition variable is initialized;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_cond_signal()
 
@@ -74,7 +74,7 @@ Unblocks at least one of the threads that are blocked on a condition variable.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the thread is unblocked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked;          `ffrt_error_inval` otherwise. |
 
 **Reference**:
 
@@ -103,7 +103,7 @@ Unblocks all threads currently blocked on a condition variable.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the threads are unblocked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the threads are unblocked;          `ffrt_error_inval` otherwise. |
 
 **Reference**:
 
@@ -133,7 +133,7 @@ Blocks the calling thread on a condition variable.The mutex must be held by the 
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;          `ffrt_error_inval` otherwise. |
 
 **Reference**:
 
@@ -166,7 +166,7 @@ Blocks the calling thread until a given time point.If [ffrt_cond_signal](capi-co
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;<br>         `ffrt_error_timedout` if `time_point` is reached without being signaled;<br>         `ffrt_error_inval` if any of `cond`, `mutex`, or `time_point` is null. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;          `ffrt_error_timedout` if `time_point` is reached without being signaled;          `ffrt_error_inval` if any of `cond`, `mutex`, or `time_point` is null. |
 
 **Reference**:
 
@@ -197,6 +197,6 @@ Destroys a condition variable.The condition variable must have been initialized 
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the condition variable is destroyed;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the condition variable is destroyed;          `ffrt_error_inval` otherwise. |
 
 

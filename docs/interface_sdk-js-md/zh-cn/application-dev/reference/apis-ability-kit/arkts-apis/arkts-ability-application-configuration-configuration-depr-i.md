@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration)
+**替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 

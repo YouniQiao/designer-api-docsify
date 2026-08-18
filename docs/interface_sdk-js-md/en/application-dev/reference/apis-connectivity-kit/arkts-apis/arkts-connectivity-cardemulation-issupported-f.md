@@ -18,7 +18,7 @@ Checks whether a specified type of card emulation is supported. &lt;p&gt;This me
 
 **Deprecated since:** 9
 
-**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability)
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 

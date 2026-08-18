@@ -12,7 +12,6 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## direction

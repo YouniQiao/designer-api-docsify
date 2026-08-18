@@ -12,7 +12,6 @@ Cloud sync configuration.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## enablePredicate

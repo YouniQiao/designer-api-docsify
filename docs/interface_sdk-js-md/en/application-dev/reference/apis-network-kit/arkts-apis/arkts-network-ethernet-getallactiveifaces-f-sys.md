@@ -12,7 +12,7 @@ import { ethernet } from '@kit.NetworkKit';
 function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void
 ```
 
-Gets the names of all active network interfaces.
+Obtains the active network interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ Gets the names of all active network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ ethernet.getAllActiveIfaces((error: BusinessError, value: string[]) => {
 function getAllActiveIfaces(): Promise<Array<string>>
 ```
 
-Gets the names of all active network interfaces.
+Obtains the active network interface. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Gets the names of all active network interfaces.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | the promise returned by the function. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

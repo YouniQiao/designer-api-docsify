@@ -12,7 +12,6 @@ You can obtain the timestamp information from the event callback, including the 
 
 ```TypeScript
 import { displaySync } from '@kit.ArkGraphics2D';
-import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## targetTimestamp

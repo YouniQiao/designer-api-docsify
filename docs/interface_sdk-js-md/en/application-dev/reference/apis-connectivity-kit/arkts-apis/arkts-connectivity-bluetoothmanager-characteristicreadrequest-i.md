@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **Deprecated since:** 10
 
-**Substitutes:** [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md#characteristicreadrequest)
+**Substitutes:** [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)
 
 <!--Device-bluetoothManager-interface CharacteristicReadRequest--><!--Device-bluetoothManager-interface CharacteristicReadRequest-End-->
 

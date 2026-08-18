@@ -16,7 +16,6 @@ Performs date and time formatting.
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

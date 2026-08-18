@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md#getallactivenotifications-system-api)
+**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,7 +34,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getAllActiveNotifications
@@ -51,7 +49,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md#getallactivenotifications-system-api)
+**Substitutes:** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

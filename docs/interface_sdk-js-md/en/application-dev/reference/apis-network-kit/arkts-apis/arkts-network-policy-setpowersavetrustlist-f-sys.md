@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## setPowerSaveTrustlist
 
 ```TypeScript
-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean, callback: AsyncCallback<void>): void
+function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean, callback: AsyncCallback<void>): void
 ```
 
-Set the list of uids that are allowed to access the Internet in power saving mode.
+Sets whether the app with the specified UID is in the whitelist of the power saving firewall. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean, callback: AsyncCallback<void>): void--><!--Device-policy-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean, callback: AsyncCallback<void>): void-End-->
+<!--Device-policy-function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean, callback: AsyncCallback<void>): void--><!--Device-policy-function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,9 +28,9 @@ Set the list of uids that are allowed to access the Internet in power saving mod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array&lt;number&gt; | Yes | The specified uids of application. |
-| isAllowed | boolean | Yes | Whether to allow Uids in the list to access the Internet. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setPowerSaveTrustlist. |
+| uids | Array&lt;int&gt; | Yes | Unique ID of the application. |
+| isAllowed | boolean | Yes | Whether to add the application to the allowlist. The value **true** means to add the application to the allowlist, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -57,16 +57,16 @@ policy.setPowerSaveTrustlist([11111, 22222], true, (error: BusinessError) => {
 ## setPowerSaveTrustlist
 
 ```TypeScript
-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean): Promise<void>
+function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean): Promise<void>
 ```
 
-Set the list of uids that are allowed to access the Internet in power saving mode.
+Sets whether the app with the specified UID is in the whitelist of the power saving firewall. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean): Promise<void>--><!--Device-policy-function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean): Promise<void>-End-->
+<!--Device-policy-function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean): Promise<void>--><!--Device-policy-function setPowerSaveTrustlist(uids: Array<int>, isAllowed: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -76,14 +76,14 @@ Set the list of uids that are allowed to access the Internet in power saving mod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array&lt;number&gt; | Yes | The specified uids of application. |
-| isAllowed | boolean | Yes | Whether to allow Uids in the list to access the Internet. |
+| uids | Array&lt;int&gt; | Yes | Unique ID of the application. |
+| isAllowed | boolean | Yes | Whether to add the application to the allowlist. The value **true** means to add the application to the allowlist, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

@@ -15,7 +15,7 @@ Implements a **SecurityUIExtensionProxy** instance for the component host to sen
 ```TypeScript
 ```
 
-## off_asyncReceiverRegister
+## off_asyncReceiverRegister('asyncReceiverRegister')
 
 ```TypeScript
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -40,7 +40,7 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 | type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating unsubscription from the callback triggered for asynchronous registration of the extended ability. |
 | callback | Callback&lt;UIExtensionProxy&gt; | No | Callback function. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s asynchronous registration. If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**. |
 
-## off_syncReceiverRegister
+## off_syncReceiverRegister('syncReceiverRegister')
 
 ```TypeScript
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -65,7 +65,7 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 | type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating unsubscription to the asynchronous registration of the extension ability. |
 | callback | Callback&lt;UIExtensionProxy&gt; | No | Callback to unsubscribe from. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s synchronous registration. |
 
-## on_asyncReceiverRegister
+## on_asyncReceiverRegister('asyncReceiverRegister')
 
 ```TypeScript
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -90,7 +90,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating a subscription to the callback triggered for asynchronous registration of the extended ability. |
 | callback | Callback&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a setReceiveDataCallback. |
 
-## on_syncReceiverRegister
+## on_syncReceiverRegister('syncReceiverRegister')
 
 ```TypeScript
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void

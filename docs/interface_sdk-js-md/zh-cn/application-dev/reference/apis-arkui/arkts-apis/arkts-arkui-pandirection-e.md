@@ -30,7 +30,7 @@ None
 Horizontal
 ```
 
-水平方向。
+Sliding horizontally.
 
 **起始版本：** 7
 
@@ -46,7 +46,7 @@ Horizontal
 Left
 ```
 
-向左滑动。
+Sliding left.
 
 **起始版本：** 7
 
@@ -62,7 +62,7 @@ Left
 Right
 ```
 
-向右滑动。
+Sliding right.
 
 **起始版本：** 7
 
@@ -78,7 +78,7 @@ Right
 Vertical
 ```
 
-竖直方向。
+垂直滑动
 
 **起始版本：** 7
 
@@ -94,7 +94,7 @@ Vertical
 Up
 ```
 
-向上滑动。
+Sliding up.
 
 **起始版本：** 7
 
@@ -110,7 +110,7 @@ Up
 Down
 ```
 
-向下滑动。
+Sliding Down.
 
 **起始版本：** 7
 
@@ -126,7 +126,7 @@ Down
 All
 ```
 
-所有方向。
+Sliding in all directions.
 
 **起始版本：** 7
 

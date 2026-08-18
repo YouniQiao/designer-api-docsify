@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## offDeviceOffline
@@ -27,7 +26,7 @@ Unregister device offline callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Used to returns the device info |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Used to returns the device info |
 
 **Error codes:**
 

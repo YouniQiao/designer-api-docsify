@@ -1,8 +1,8 @@
 # PersistenceV2
 
-Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#appstoragev2). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
+Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
 
-**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#appstoragev2)
+**Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
 
 **Since:** 12
 

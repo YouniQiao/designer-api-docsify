@@ -118,7 +118,7 @@ PKCS #7.
 HUKS_PADDING_ISO_IEC_9796_2 = 6
 ```
 
-ISO_IEC_9796_2&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
+ISO_IEC_9796_2<!--Del--> (not supported currently)<!--DelEnd-->.
 
 **Since:** 12
 
@@ -134,7 +134,7 @@ ISO_IEC_9796_2&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
 HUKS_PADDING_ISO_IEC_9797_1 = 7
 ```
 
-ISO_IEC_9797_1&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
+ISO_IEC_9797_1<!--Del--> (not supported currently)<!--DelEnd-->.
 
 **Since:** 12
 

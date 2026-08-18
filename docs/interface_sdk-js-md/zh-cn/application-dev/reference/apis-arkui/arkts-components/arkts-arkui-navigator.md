@@ -52,4 +52,9 @@ Navigator()
 
 ## 汇总
 
-- [NavigationType](arkts-arkui-navigationtype-e.md)
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [NavigationType](arkts-arkui-navigationtype-e.md) | 路由的跳转方式。 |
+

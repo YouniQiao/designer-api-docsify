@@ -1,6 +1,6 @@
 # NetBackgroundPolicy (System API)
 
-Indicate whether the application can use metered networks in background.
+Enumerates the background network policies.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Indicate whether the application can use metered networks in background.
 NET_BACKGROUND_POLICY_NONE = 0
 ```
 
-Default value.
+No background network policy is specified. This is the default value.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Default value.
 NET_BACKGROUND_POLICY_ENABLE = 1
 ```
 
-Apps can use metered networks on background.
+Background applications are allowed to access a metered network.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Apps can use metered networks on background.
 NET_BACKGROUND_POLICY_DISABLE = 2
 ```
 
-Apps can't use metered networks on background.
+Applications running in the background are not allowed to access a metered network.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Apps can't use metered networks on background.
 NET_BACKGROUND_POLICY_TRUSTLIST = 3
 ```
 
-Only apps in trustlist can use metered networks on background.
+Only applications on the allowlist are allowed to access metered networks when they are running in the background.
 
 **Since:** 10
 

@@ -153,7 +153,7 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | String of the specified origin. <br>The origin format must comply with the format defined in RFC 6454. An exception is thrown when a non- conforming input string is input. Error code: 17100011. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin. <br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. <br>If the operation fails, the geolocation permission status of the specified origin is not found. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin. <br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. <br>If the operation fails, the geolocation permission status of the specified origin is not found. |
 | incognito | boolean | No | The value **true** indicates to get the geolocation permission status of the specified origin in privacy mode, and **false** indicates to get it in normal mode. <br>Default value: **false**. <br>Throws an exception error with error code 401 when null or undefined is input.<br>**Since:** 11 |
 
 **Error codes:**
@@ -217,7 +217,7 @@ Obtains the geolocation permission status of all origins. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return all origin information of stored geolocation permission statuses. The callback parameters include: error (error object, which is null when retrieval is successful) and origins (array of origin strings with stored geolocation permissions, where each element is an origin string that complies with the format defined in RFC 6454). When retrieval fails, error is the error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return all origin information of stored geolocation permission statuses. The callback parameters include: error (error object, which is null when retrieval is successful) and origins (array of origin strings with stored geolocation permissions, where each element is an origin string that complies with the format defined in RFC 6454). When retrieval fails, error is the error object. |
 | incognito | boolean | No | Whether to obtain all origin information of stored geolocation permission statuses in privacy mode. The value **true** indicates privacy mode, and **false** indicates normal mode. <br>Default value: **false**. <br>Throws an exception error code 401 when null or undefined is passed in.<br>**Since:** 11 |
 
 **Error codes:**

@@ -10,7 +10,7 @@ export type BundleStatusCallback = _BundleStatusCallback
 
 **废弃版本：** 9
 
-**替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#bundlechangedinfo系统接口)
+**替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
 
 <!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback--><!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback-End-->
 

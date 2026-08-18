@@ -11,6 +11,7 @@ FormBindingData对象的属性定义。
 ## 导入模块
 
 ```TypeScript
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## data
@@ -21,7 +22,7 @@ data: RecordData
 
 Data for updating.
 
-**类型：** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**类型：** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **起始版本：** 23
 

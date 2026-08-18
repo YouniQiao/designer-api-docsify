@@ -35,7 +35,7 @@ Executes a task periodically. In this execution mode, you can set the task prior
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The period is less than zero. |
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
@@ -111,7 +111,7 @@ Executes a generic task periodically, without verifying the parameter type and r
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The period is less than zero. |
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |

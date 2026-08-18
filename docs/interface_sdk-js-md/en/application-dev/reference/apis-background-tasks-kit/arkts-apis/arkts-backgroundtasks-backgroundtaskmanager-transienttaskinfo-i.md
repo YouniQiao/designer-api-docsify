@@ -12,7 +12,6 @@ Describes all transient task information.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## remainingQuota

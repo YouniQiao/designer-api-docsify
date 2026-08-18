@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void
 ```
 
-Resolves the host name to obtain all IP addresses based on the default data network.
+Obtains all IP addresses of the default network by resolving the host name. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 8
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -26,8 +26,8 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Returns the NetAddress list. |
+| host | string | Yes | Host name to resolve. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -61,9 +61,9 @@ connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.Ne
 function getAddressesByName(host: string): Promise<Array<NetAddress>>
 ```
 
-Resolves the host name to obtain all IP addresses based on the default data network.
+Obtains all IP addresses of the default network by resolving the host name. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 8
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -75,13 +75,13 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Host name to resolve. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 

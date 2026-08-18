@@ -26,7 +26,7 @@ Checks whether a new call is allowed. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

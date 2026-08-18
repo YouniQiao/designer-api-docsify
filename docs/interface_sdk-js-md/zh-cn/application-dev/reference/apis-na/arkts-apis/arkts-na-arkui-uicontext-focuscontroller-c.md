@@ -160,5 +160,5 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [KeyProcessingMode](../../apis-arkui/arkts-apis/arkts-arkui-keyprocessingmode-e.md) | 是 | Key processing mode. |
+| mode | [KeyProcessingMode](../../apis-arkui/arkts-apis/arkts-arkui-focus-keyprocessingmode-e.md) | 是 | Key processing mode. |
 

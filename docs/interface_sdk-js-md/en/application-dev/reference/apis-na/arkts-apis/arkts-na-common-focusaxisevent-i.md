@@ -2,7 +2,7 @@
 
 Focus axis event object description.
 
-**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **Since:** 23
 

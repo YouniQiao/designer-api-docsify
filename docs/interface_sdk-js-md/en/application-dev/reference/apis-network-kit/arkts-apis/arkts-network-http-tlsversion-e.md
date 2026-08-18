@@ -1,6 +1,6 @@
 # TlsVersion
 
-Enum for Tls version
+Enumerates TLS versions.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enum for Tls version
 TLS_V_1_0 = 4
 ```
 
-Tls version 1.0
+TLS version 1.0.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Tls version 1.0
 TLS_V_1_1 = 5
 ```
 
-Tls version 1.1
+TLS version 1.1.
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ Tls version 1.1
 TLS_V_1_2 = 6
 ```
 
-Tls version 1.2
+TLS version 1.2.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ Tls version 1.2
 TLS_V_1_3 = 7
 ```
 
-Tls version 1.3
+TLS version 1.3.
 
 **Since:** 23
 

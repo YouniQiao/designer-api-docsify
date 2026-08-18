@@ -14,7 +14,6 @@ The result of publish form.
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## code

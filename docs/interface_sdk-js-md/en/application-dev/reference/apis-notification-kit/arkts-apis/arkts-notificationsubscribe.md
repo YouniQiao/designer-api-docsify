@@ -14,40 +14,39 @@ The **notificationSubscribe** module provides APIs for notification subscription
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md#distributeoperation) | Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove) | Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api) | Removes a notification based on the bundle information and notification key. This API uses a promise to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api) | Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api) | Removes specified notifications. This API uses an asynchronous callback to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api) | Removes a notification based on the specified unique notification ID. This API uses a promise to return the result. |
-| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-system-api) | Removes specified notifications. This API uses a promise to return the result. |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall) | Removes all notifications for a specified application. This API uses an asynchronous callback to return the result. |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api) | Removes all notifications. This API uses an asynchronous callback to return the result. |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api) | Removes all notifications for a specified user. This API uses an asynchronous callback to return the result. |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api) | Removes all notifications for a specified user. This API uses a promise to return the result. |
-| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api) | Removes all notifications for a specified application. This API uses a promise to return the result. |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe) | Subscribes to notifications of all applications under this user. This API uses an asynchronous callback to return the result. |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-system-api) | Subscribes to a notification with the subscription information specified. This API uses an asynchronous callback to return the result. |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe-system-api) | Subscribes to a notification with the subscription information specified. This API uses a promise to return the result. |
-| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
-| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification-system-api) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
-| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md#subscribeself) | Subscribes to notifications of the application and specifies subscription information. This API uses a promise to return the result. |
-| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from a notification. This API uses an asynchronous callback to return the result. |
-| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-system-api) | Unsubscribes from a notification. This API uses a promise to return the result. |
+| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md) | Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes a notification based on the bundle information and notification key. This API uses a promise to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes specified notifications. This API uses an asynchronous callback to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes a notification based on the specified unique notification ID. This API uses a promise to return the result. |
+| [remove](arkts-notification-notificationsubscribe-remove-f-sys.md) | Removes specified notifications. This API uses a promise to return the result. |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md) | Removes all notifications for a specified application. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md) | Removes all notifications. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md) | Removes all notifications for a specified user. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md) | Removes all notifications for a specified user. This API uses a promise to return the result. |
+| [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md) | Removes all notifications for a specified application. This API uses a promise to return the result. |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md) | Subscribes to notifications of all applications under this user. This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md) | Subscribes to a notification with the subscription information specified. This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md) | Subscribes to a notification with the subscription information specified. This API uses a promise to return the result. |
+| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
+| [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
+| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md) | Subscribes to notifications of the application and specifies subscription information. This API uses a promise to return the result. |
+| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md) | Unsubscribes from a notification. This API uses an asynchronous callback to return the result. |
+| [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md) | Unsubscribes from a notification. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -56,7 +55,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -64,7 +63,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
@@ -78,7 +77,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 | [NotificationClassification](arkts-notification-notificationsubscribe-notificationclassification-t-sys.md) | Describes the notification classification information. |
 | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for notification subscription. |
 | [NotificationSubscriber](arkts-notification-notificationsubscribe-notificationsubscriber-t-sys.md) | Provides callback methods for subscribers to receive and cancel notifications. |
-| [NotificationSwitchChangedCallback](arkts-notification-notificationsubscribe-notificationswitchchangedcallback-t-sys.md) | Register the callback function type for notification switch state changes set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch-system-api). |
+| [NotificationSwitchChangedCallback](arkts-notification-notificationsubscribe-notificationswitchchangedcallback-t-sys.md) | Register the callback function type for notification switch state changes set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md). |
 | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscribe-notificationswitchchangedcallbackdata-t-sys.md) | Describes the notification switch state changes callback data. |
 | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled. |
 | [VoiceContent](arkts-notification-notificationsubscribe-voicecontent-t-sys.md) | Describes the properties of the voice content of the received notification. |

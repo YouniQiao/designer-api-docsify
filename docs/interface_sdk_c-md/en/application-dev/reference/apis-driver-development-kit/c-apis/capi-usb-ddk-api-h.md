@@ -58,7 +58,7 @@ Initializes the USB DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails, or an internal error occurs.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory allocation fails. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails, or an internal error occurs.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory allocation fails. |
 
 ### OH_Usb_Release()
 
@@ -92,7 +92,7 @@ Releases the USB DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails. |
 
 ### OH_Usb_GetDeviceDescriptor()
 
@@ -119,7 +119,7 @@ Obtains the device descriptor.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input desc is a null pointer. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input desc is a null pointer. |
 
 ### OH_Usb_GetConfigDescriptor()
 
@@ -147,7 +147,7 @@ Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeC
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input config is a null pointer.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory allocation fails. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input config is a null pointer.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory allocation fails. |
 
 ### OH_Usb_FreeConfigDescriptor()
 
@@ -195,7 +195,7 @@ Claims a USB interface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input interfaceHandle is a null pointer.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory to be allocated exceeds the limit. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input interfaceHandle is a null pointer.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory to be allocated exceeds the limit. |
 
 ### OH_Usb_ReleaseInterface()
 
@@ -221,7 +221,7 @@ Releases a USB interface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): One or more parameters are invalid. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): One or more parameters are invalid. |
 
 ### OH_Usb_SelectInterfaceSetting()
 
@@ -248,7 +248,7 @@ Activates the alternate setting of a USB interface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): One or more parameters are invalid. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): One or more parameters are invalid. |
 
 ### OH_Usb_GetCurrentInterfaceSetting()
 
@@ -275,7 +275,7 @@ Obtains the activated alternate setting of a USB interface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input settingIndex is a null pointer. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input settingIndex is a null pointer. |
 
 ### OH_Usb_SendControlReadRequest()
 
@@ -305,7 +305,7 @@ Sends a control read transfer request. This API works in a synchronous manner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input setup, data, or dataLen is a null pointer, or the value<br>     of datalen is less than the length of the read data.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.<br>     [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input setup, data, or dataLen is a null pointer, or the value      of datalen is less than the length of the read data.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.      [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
 
 ### OH_Usb_SendControlWriteRequest()
 
@@ -335,7 +335,7 @@ Sends a control write transfer request. This API works in a synchronous manner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input setup or data is a null pointer.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.<br>     [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input setup or data is a null pointer.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.      [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
 
 ### OH_Usb_SendPipeRequest()
 
@@ -362,7 +362,7 @@ Sends a pipe request. This API works in a synchronous manner. It applies to inte
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input pipe or devMmap is a null pointer, or the devMmap<br>     address is null.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.<br>     [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input pipe or devMmap is a null pointer, or the devMmap      address is null.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.      [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
 
 ### OH_Usb_SendPipeRequestWithAshmem()
 
@@ -389,7 +389,7 @@ Sends a pipe request based on the shared memory. This API returns the result syn
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input pipe or ashmem is a null pointer, or the ashmem address<br>     is null.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.<br>     [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input pipe or ashmem is a null pointer, or the ashmem address      is null.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The attempt to copy the memory that stores the read data fails.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode): An I/O exception occurs.      [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode): The operation times out. |
 
 ### OH_Usb_CreateDeviceMemMap()
 
@@ -417,7 +417,7 @@ Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](ca
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input parameter devMmap or devMmap is a null pointer.<br>     [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory mapping fails, or the memory allocation of devMmap fails. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input parameter devMmap or devMmap is a null pointer.      [USB_DDK_MEMORY_ERROR](capi-usb-ddk-types-h.md#usbddkerrcode): The memory mapping fails, or the memory allocation of devMmap fails. |
 
 ### OH_Usb_DestroyDeviceMemMap()
 
@@ -463,7 +463,7 @@ Obtains the USB device ID list. Ensure that the pointer parameters passed in are
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input devices is a null pointer. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode): The operation is successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode): The permission check fails.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode): The USB DDK service connection fails.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode): The input devices is a null pointer. |
 
 ### OH_Usb_ControlTransfer()
 
@@ -492,7 +492,7 @@ Performs a USB control transfer. This API works in a synchronous manner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | on success, the number of bytes actually transferred.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode) Permission authentication failed.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode) DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the<br>     initialization process first.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode) The setupPacket or data parameters are invalid.<br>     [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode) The control transfer timed out.<br>     [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode) Control transfer request I/O exception. |
+| int32_t | on success, the number of bytes actually transferred.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode) Permission authentication failed.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode) DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the      initialization process first.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode) The setupPacket or data parameters are invalid.      [USB_DDK_TIMEOUT](capi-usb-ddk-types-h.md#usbddkerrcode) The control transfer timed out.      [USB_DDK_IO_FAILED](capi-usb-ddk-types-h.md#usbddkerrcode) Control transfer request I/O exception. |
 
 ### OH_Usb_GetNonRootHubs()
 
@@ -518,6 +518,6 @@ Queries and returns the list of non-root hubs. Ensure that the pointer parameter
 
 | Type | Description |
 | -- | -- |
-| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode) Query operation successful.<br>     [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode) Permission authentication failed.<br>     [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode) DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the<br>     initialization process first.<br>     [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode) The parameter nonRootHub is null. |
+| int32_t | [USB_DDK_SUCCESS](capi-usb-ddk-types-h.md#usbddkerrcode) Query operation successful.      [USB_DDK_NO_PERM](capi-usb-ddk-types-h.md#usbddkerrcode) Permission authentication failed.      [USB_DDK_INVALID_OPERATION](capi-usb-ddk-types-h.md#usbddkerrcode) DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the      initialization process first.      [USB_DDK_INVALID_PARAMETER](capi-usb-ddk-types-h.md#usbddkerrcode) The parameter nonRootHub is null. |
 
 

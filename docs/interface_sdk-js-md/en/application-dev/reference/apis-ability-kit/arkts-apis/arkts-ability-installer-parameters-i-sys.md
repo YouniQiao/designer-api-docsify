@@ -14,7 +14,6 @@ Describes the extended parameter information.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## key

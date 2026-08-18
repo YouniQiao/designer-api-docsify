@@ -6,7 +6,7 @@ Defines the options of ShowToast.
 
 **Deprecated since:** 8
 
-**Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md#showtoastoptions)
+**Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 

@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## isHotspotActive
@@ -17,7 +21,7 @@ function isHotspotActive(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#ishotspotactive)
+**替代接口：** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 

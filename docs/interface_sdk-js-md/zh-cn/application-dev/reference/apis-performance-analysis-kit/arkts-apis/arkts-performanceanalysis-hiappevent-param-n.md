@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -19,7 +20,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-con.md#userid) | 用户自定义ID。 |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributedservicename) | 分布式服务名称。 |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributedserviceinstanceid) | 分布式服务实例ID。 |
+| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | 用户自定义ID。 |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | 分布式服务名称。 |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | 分布式服务实例ID。 |
 

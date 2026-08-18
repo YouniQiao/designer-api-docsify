@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#audiorendereroptions)
+**替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
 
 <!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## contentType

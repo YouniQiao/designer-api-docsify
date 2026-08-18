@@ -6,7 +6,7 @@ Defines the callback invoked upon change in the wearing state of the device that
 
 **Deprecated since:** 8
 
-**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#weardetection)
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 <!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
 

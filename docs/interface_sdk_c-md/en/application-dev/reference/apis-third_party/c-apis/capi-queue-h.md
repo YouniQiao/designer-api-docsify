@@ -14,6 +14,12 @@ Declares the queue interfaces in C.
 
 ## Summary
 
+### Struct
+
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) | ffrt_queue_t | Queue handle, which identifies different queues. |
+
 ### Enum
 
 | Name | typedef keyword | Description |
@@ -92,7 +98,7 @@ Initializes a queue attribute.The queue attribute must later be destroyed by [ff
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the queue attribute is initialized;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the queue attribute is initialized;          `-1` otherwise. |
 
 ### ffrt_queue_attr_destroy()
 
@@ -325,7 +331,7 @@ Gets the execution mode of a queue attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API bool | `true` if tasks are executed as native threads (thread mode);<br>         `false` if tasks are executed as coroutines (default). |
+| FFRT_C_API bool | `true` if tasks are executed as native threads (thread mode);          `false` if tasks are executed as coroutines (default). |
 
 ### ffrt_queue_create()
 
@@ -351,7 +357,7 @@ Creates a queue.The queue must later be destroyed by [ffrt_queue_destroy](capi-q
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_queue_t | A non-null queue handle if the queue is created;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_queue_t | A non-null queue handle if the queue is created;          a null pointer otherwise. |
 
 ### ffrt_queue_destroy()
 
@@ -420,7 +426,7 @@ Submits a task to the queue, and obtains a task handle.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;          a null pointer otherwise. |
 
 **Reference**:
 
@@ -478,7 +484,7 @@ Submits a task to a queue, and obtains a handle, simplified from the [ffrt_queue
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;          a null pointer otherwise. |
 
 **Reference**:
 
@@ -525,7 +531,7 @@ Cancels a task in the queue.Tasks that have already started executing cannot be 
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the task is canceled;<br>         `1` if the task has already been executed or removed from the queue;<br>         `-1` if `handle` is null. |
+| FFRT_C_API int | `0` if the task is canceled;          `1` if the task has already been executed or removed from the queue;          `-1` if `handle` is null. |
 
 ### ffrt_get_main_queue()
 

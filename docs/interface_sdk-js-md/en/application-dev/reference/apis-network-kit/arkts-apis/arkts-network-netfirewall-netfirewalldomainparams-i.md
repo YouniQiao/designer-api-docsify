@@ -1,6 +1,6 @@
-# NetFirewallDomainParams
+# NetFirewallDomainParams(Network Firewall)
 
-Firewall domain name parameters.
+Defines domain name parameters of a firewall rule. Currently, Chinese domain names are not supported.
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 domain: string
 ```
 
-Domain: when isWildcard is false, the complete domain that needs to be determined; When isWildcard is true, fuzzy domain only support domains like *.openharmony.cn; *.com.
+If **isWildcard** is set to **false**, the complete domain name, for example, "www.example.cn", needs to be specified.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Domain: when isWildcard is false, the complete domain that needs to be determine
 isWildcard: boolean
 ```
 
-Is there a universal configuration rule.
+Whether to contain wildcards. The value **true** means to contain wildcards; and the value **false** means the opposite.
 
 **Type:** boolean
 

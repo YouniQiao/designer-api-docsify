@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { hash } from '@kit.CoreFileKit';
-import { hash } from '@kit.CoreFileKit';
 ```
 
 ## hash
@@ -78,7 +77,7 @@ Calculates a hash value for a file. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file in the application sandbox. |
 | algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or **sha256**. **sha256** is recommended for security purposes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the hash value obtained. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the hash value obtained. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
 
 **Error codes:**
 

@@ -72,10 +72,7 @@ This file declares the functions related to the canvas in the drawing module.By 
 | [void OH_Drawing_CanvasRotate(OH_Drawing_Canvas* canvas, float degrees, float px, float py)](#oh_drawing_canvasrotate) | Rotates a canvas by a given angle. A positive value indicates a clockwise rotation, and a negative valueindicates a counterclockwise rotation.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasTranslate(OH_Drawing_Canvas* canvas, float dx, float dy)](#oh_drawing_canvastranslate) | Translates a canvas by a given distance.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasScale(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasscale) | Scales a canvas.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasskew) | Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows:
-\|1 sx 0\|
-\|sy 1 0\|
-\|0  0 1\|This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasskew) | Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows: \|1 sx 0\| \|sy 1 0\| \|0 0 1\|This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [int32_t OH_Drawing_CanvasGetWidth(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetwidth) | Obtains the canvas width.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [int32_t OH_Drawing_CanvasGetHeight(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetheight) | Obtains the canvas height.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_CanvasGetLocalClipBounds(OH_Drawing_Canvas* canvas, OH_Drawing_Rect* rect)](#oh_drawing_canvasgetlocalclipbounds) | Obtains the bounds of the cropping region of the canvas. This function cannot be used for a canvas of therecording type.This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
@@ -233,7 +230,7 @@ Binds a pixel map to a canvas so that the content drawn on the canvas is output 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Canvas*](capi-drawing-oh-drawing-canvas.md) | Pointer to the created canvas object [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md). If the returned object is NULL, the creation<br> fails due to insufficient memory or an empty pixel map object. |
+| [OH_Drawing_Canvas*](capi-drawing-oh-drawing-canvas.md) | Pointer to the created canvas object [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md). If the returned object is NULL, the creation  fails due to insufficient memory or an empty pixel map object. |
 
 ### OH_Drawing_CanvasDestroy()
 
@@ -424,7 +421,7 @@ Obtains the number of canvas statuses (canvas matrices) saved in the stack.This 
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Returns a 32-bit value that describes the number of canvas statuses (canvas matrices). The initial number is<br> 1. |
+| uint32_t | Returns a 32-bit value that describes the number of canvas statuses (canvas matrices). The initial number is  1. |
 
 ### OH_Drawing_CanvasRestoreToCount()
 
@@ -517,7 +514,7 @@ Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed acr
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if any of the parameters, such as cCanvas, pixelMap, and vertices<br> , is empty or the input parameter does not meet the value rule. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if any of the parameters, such as cCanvas, pixelMap, and vertices  , is empty or the input parameter does not meet the value rule. |
 
 ### OH_Drawing_CanvasDrawPixelMapNine()
 
@@ -545,7 +542,7 @@ Splits a pixel map into nine sections using two horizontal and two vertical line
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, pixelMap, or dst is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, pixelMap, or dst is NULL. |
 
 ### OH_Drawing_CanvasDrawPixelMapRect()
 
@@ -596,7 +593,7 @@ Draws a portion of a pixel map onto a specified area of the canvas.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, pixelMap, or dst is NULL. |
+| OH_Drawing_ErrorCode | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, pixelMap, or dst is NULL. |
 
 ### OH_Drawing_CanvasDrawBackground()
 
@@ -659,7 +656,7 @@ Draws a point.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or point is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or point is NULL. |
 
 ### OH_Drawing_CanvasDrawPoints()
 
@@ -788,7 +785,7 @@ Fills the entire canvas with the specified color and blend mode.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas is NULL.<br> OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if blendMode is not set to one of the enumerated values. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas is NULL.  OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if blendMode is not set to one of the enumerated values. |
 
 ### OH_Drawing_CanvasDrawOval()
 
@@ -856,7 +853,7 @@ Draws an arc. It enables you to define the start angle, sweep angle, and whether
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or rect is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or rect is NULL. |
 
 ### OH_Drawing_CanvasDrawRoundRect()
 
@@ -901,7 +898,7 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, outer, or inner is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, outer, or inner is NULL. |
 
 ### OH_Drawing_CanvasDrawSingleCharacter()
 
@@ -929,7 +926,7 @@ Draws a single character. If the typeface of the current font does not support t
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters canvas, str, or font is NULL,<br> or the length of str is 0. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters canvas, str, or font is NULL,  or the length of str is 0. |
 
 ### OH_Drawing_CanvasDrawSingleCharacterWithFeatures()
 
@@ -958,7 +955,7 @@ Draws a single character with font features. If the typeface of the current font
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters canvas, str, font, or <br> fontFeatures is NULL, or the length of str is 0. |
+| OH_Drawing_ErrorCode | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters canvas, str, font, or   fontFeatures is NULL, or the length of str is 0. |
 
 ### OH_Drawing_CanvasDrawTextBlob()
 
@@ -1011,7 +1008,7 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of canvas, glyphIds, positions and font is nullptr.<br> Returns [OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) if glyphIdOffset or positionOffset is less than 0, or if<br> glyphIdCount is less than (glyphIdOffset + glyphCount) or positionCount is less than (positionOffset + glyphCount). |
+| OH_Drawing_ErrorCode | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of canvas, glyphIds, positions and font is nullptr.  Returns [OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) if glyphIdOffset or positionOffset is less than 0, or if  glyphIdCount is less than (glyphIdOffset + glyphCount) or positionCount is less than (positionOffset + glyphCount). |
 
 ### OH_Drawing_CanvasClipRect()
 
@@ -1100,7 +1097,7 @@ Clips a rectangle.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or region is NULL.<br> OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if clipOp is not set to one of the enumerated values. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or region is NULL.  OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if clipOp is not set to one of the enumerated values. |
 
 ### OH_Drawing_CanvasRotate()
 
@@ -1171,10 +1168,7 @@ void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)
 
 **Description**
 
-Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows:
-\|1 sx 0\|
-\|sy 1 0\|
-\|0  0 1\|This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows: \|1 sx 0\| \|sy 1 0\| \|0 0 1\|This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget).If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1394,7 +1388,7 @@ Reset the clip status.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.<br>         Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br>         Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if canvas is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.          Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if canvas is nullptr. |
 
 ### OH_Drawing_CanvasDrawImageRectWithSrc()
 
@@ -1493,7 +1487,7 @@ Copies pixel data from a canvas to a specified address. This function cannot be 
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the pixel data is copied to the start address of the storage; returns false<br> otherwise. |
+| bool | Returns true if the pixel data is copied to the start address of the storage; returns false  otherwise. |
 
 ### OH_Drawing_CanvasReadPixelsToBitmap()
 
@@ -1545,7 +1539,7 @@ Checks whether the region that can be drawn is empty after clipping.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or isClipEmpty is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or isClipEmpty is NULL. |
 
 ### OH_Drawing_CanvasGetImageInfo()
 
@@ -1570,7 +1564,7 @@ Obtains the image information of a canvas.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or imageInfo is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or imageInfo is NULL. |
 
 ### OH_Drawing_CanvasDrawRecordCmd()
 
@@ -1595,7 +1589,7 @@ Draws an **OH_Drawing_RecordCmd** object.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or recordCmd is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or recordCmd is NULL. |
 
 ### OH_Drawing_CanvasDrawRecordCmdNesting()
 
@@ -1620,7 +1614,7 @@ Draws an **OH_Drawing_RecordCmd** object. This API supports nesting.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Operation code.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or recordCmd is NULL. |
+| OH_Drawing_ErrorCode | Operation code.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either canvas or recordCmd is NULL. |
 
 ### OH_Drawing_CanvasQuickRejectPath()
 
@@ -1646,7 +1640,7 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, path, or quickReject is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, path, or quickReject is NULL. |
 
 ### OH_Drawing_CanvasQuickRejectRect()
 
@@ -1672,7 +1666,7 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, rect, or quickReject is NULL. |
+| OH_Drawing_ErrorCode | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if canvas, rect, or quickReject is NULL. |
 
 ### OH_Drawing_CanvasIsOpaque()
 
@@ -1697,6 +1691,6 @@ Checks if the current layer that drawn into the device is opaque.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.<br>         Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br>         Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if canvas or isOpaque is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.          Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if canvas or isOpaque is nullptr. |
 
 

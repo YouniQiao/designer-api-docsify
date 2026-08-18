@@ -110,7 +110,7 @@ extendInfo?: Record<string, RecordData>
 
 Extended parameters customized for the system applications to publish notifications. This parameter is left empty by default.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

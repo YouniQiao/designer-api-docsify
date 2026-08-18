@@ -2,7 +2,7 @@
 
 The &lt;textarea&gt; component provides an interactive interface to receive user input, which is displayed in multiple lines by default.
 
-**Inheritance/Implementation:** TextAreaElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** TextAreaElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 4
 

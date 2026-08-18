@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-system-api)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isBadgeDisplayed
@@ -52,7 +50,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isbadgedisplayed-system-api)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

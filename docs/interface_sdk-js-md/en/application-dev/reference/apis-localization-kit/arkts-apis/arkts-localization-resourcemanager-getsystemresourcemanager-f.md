@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
-import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## getSystemResourceManager
@@ -19,7 +18,7 @@ Obtains a system resource management object for accessing preset system resource
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager)
+**Substitutes:** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

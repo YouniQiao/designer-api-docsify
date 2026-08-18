@@ -2,7 +2,7 @@
 
 Define AppIntentEntity.
 
-**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#intententity)
+**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
 
 **Since:** 26.0.0
 
@@ -14,10 +14,7 @@ Define AppIntentEntity.
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntent } from '@kit.AbilityKit';
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 

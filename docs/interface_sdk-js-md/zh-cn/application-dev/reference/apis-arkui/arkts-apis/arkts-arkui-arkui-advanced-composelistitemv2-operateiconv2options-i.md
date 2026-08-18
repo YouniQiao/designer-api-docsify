@@ -11,6 +11,7 @@ OperateIconV2构造函数的参数选项。
 ## 导入模块
 
 ```TypeScript
+import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -83,7 +84,7 @@ action?: OnActionCallback
 
 列表项右侧图标/箭头点击回调。 默认不设置或设置为undefined时，点击图标/箭头不触发回调。
 
-**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

@@ -17,7 +17,7 @@ declare function closeSync(fd: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [closeSync](arkts-corefile-file-fs-closesync-f.md#closesync)
+**替代接口：** [closeSync](arkts-corefile-file-fs-closesync-f.md)
 
 <!--Device-unnamed-declare function closeSync(fd: number): void--><!--Device-unnamed-declare function closeSync(fd: number): void-End-->
 

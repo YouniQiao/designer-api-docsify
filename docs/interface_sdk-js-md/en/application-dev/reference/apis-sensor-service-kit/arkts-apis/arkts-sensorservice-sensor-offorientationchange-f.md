@@ -25,7 +25,7 @@ Unsubscribe to orientation sensor data, {@code SensorId.ORIENTATION}.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | No | callback orientation data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | No | callback orientation data. |
 
 **Error codes:**
 

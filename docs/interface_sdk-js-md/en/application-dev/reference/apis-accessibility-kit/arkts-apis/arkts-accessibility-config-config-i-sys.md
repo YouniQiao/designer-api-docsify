@@ -14,7 +14,6 @@ Implements configuration, acquisition, and listening for properties.
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## get
@@ -79,7 +78,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the result. If the attribute is obtained successfully, **err** is **undefined** and **data** is the attribute value; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the result. If the attribute is obtained successfully, **err** is **undefined** and **data** is the attribute value; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -124,7 +123,7 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -149,7 +148,7 @@ config.highContrastText.off((data: boolean) => {
 on(callback: Callback<T>): void
 ```
 
-Adds a listener for property changes. This API uses an asynchronous callback to return the result. This API must be used together with [off](#offcallbackt). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for property changes. This API uses an asynchronous callback to return the result. This API must be used together with [off](#off_callbackt). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 23
 
@@ -165,7 +164,7 @@ Adds a listener for property changes. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | Yes | Callback invoked when the property changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | Yes | Callback invoked when the property changes. |
 
 **Error codes:**
 
@@ -261,7 +260,7 @@ Sets the property value. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | Attribute value to set. The value type is the same as that of the corresponding Config attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

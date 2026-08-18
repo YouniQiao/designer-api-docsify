@@ -1,8 +1,8 @@
 # QueryOptions
 
-Defines options of DNS query.
+Defines the type of the IP address to be queried.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-export interface QueryOptions--><!--Device-connection-export interface QueryOptions-End-->
 
@@ -20,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 family?: FamilyType
 ```
 
-Specify family type of DNS query.
+Type of the IP address to be queried. The default value is **FAMILY_TYPE_ALL**.
 
 **Type:** [FamilyType](arkts-network-connection-familytype-e.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-QueryOptions-family?: FamilyType--><!--Device-QueryOptions-family?: FamilyType-End-->
 

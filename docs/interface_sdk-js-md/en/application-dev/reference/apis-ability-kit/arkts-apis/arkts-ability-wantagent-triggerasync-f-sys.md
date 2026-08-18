@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## triggerAsync
@@ -43,7 +42,7 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) | The context is not ability context. |
+| [16000020](../errorcode-ability.md#16000020-context-is-not-an-ability-level-context) | The context is not ability context. |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |

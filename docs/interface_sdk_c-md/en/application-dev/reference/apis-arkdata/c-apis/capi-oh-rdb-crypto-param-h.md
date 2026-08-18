@@ -116,7 +116,7 @@ Creates an OH_Rdb_CryptoParam instance object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Rdb_CryptoParam *](capi-rdb-oh-rdb-cryptoparam.md) | Returns a pointer to OH_Rdb_CryptoParam instance when the execution is successful.<br> Otherwise, nullptr is returned. The memory must be released through the OH_Rdb_DestroyCryptoParam<br> interface after the use is complete. |
+| [OH_Rdb_CryptoParam *](capi-rdb-oh-rdb-cryptoparam.md) | Returns a pointer to OH_Rdb_CryptoParam instance when the execution is successful.  Otherwise, nullptr is returned. The memory must be released through the OH_Rdb_DestroyCryptoParam  interface after the use is complete. |
 
 **Reference**:
 
@@ -145,7 +145,7 @@ Destroys an OH_Rdb_CryptoParam instance object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetEncryptionKey()
 
@@ -171,7 +171,7 @@ Sets key data to the OH_Rdb_CryptoParam object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetIteration()
 
@@ -196,7 +196,7 @@ Sets the number of KDF iterations used when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetEncryptionAlgo()
 
@@ -221,7 +221,7 @@ Sets the encryption algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetHmacAlgo()
 
@@ -246,7 +246,7 @@ Sets the HMAC algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetKdfAlgo()
 
@@ -271,7 +271,7 @@ Sets the KDF algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetCryptoPageSize()
 
@@ -296,6 +296,6 @@ Sets the page size used when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 

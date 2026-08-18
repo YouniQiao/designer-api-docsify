@@ -27,5 +27,5 @@ Get components tree.
 
 | Type | Description |
 | --- | --- |
-| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |  |
+| [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |  |
 

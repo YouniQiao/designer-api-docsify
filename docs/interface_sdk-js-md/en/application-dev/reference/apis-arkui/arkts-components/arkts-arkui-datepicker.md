@@ -26,8 +26,18 @@ Creates a date picker in the given date range.
 
 ## Summary
 
-- [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)
-- [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
-- [DatePickerResult](arkts-arkui-datepickerresult-i.md)
-- [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
-- [DatePickerMode](arkts-arkui-datepickermode-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md). |
+| [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | Describes the parameters of the date picker. > **NOTE：**> > - For details about how to use **Date**, see TimePickerOptions. > > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take > effect. > **NOTE：**> > Handle exceptions for the start and end dates first, followed by exceptions for the selected date. |
+| [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Defines the time format returned by the date picker. |
+| [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md) | Defines the style of the lunar calendar switch in the **DatePickerDialog** component. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [DatePickerMode](arkts-arkui-datepickermode-e.md) | Enumerates date display modes. |
+

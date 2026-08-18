@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## cleanFileCache
@@ -206,7 +208,7 @@ Unsubscribes from cloud file cache download progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | callback function with a `MultiDownloadProgress` argument. |
 
 **错误码：**
 
@@ -251,7 +253,7 @@ Unsubscribes from cloud file cache download progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | callback function with a `DownloadProgress` argument. |
 
 **错误码：**
 
@@ -283,7 +285,7 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-云盘文件缓存对象移除由 [on](#onprogress)接口添加的云文 件批量缓存过程事件的监听。
+云盘文件缓存对象移除由 [on](#on_progress)接口添加的云文 件批量缓存过程事件的监听。
 
 **起始版本：** 20
 
@@ -296,7 +298,7 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | 是 | 取消订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
 
 **错误码：**
 
@@ -343,7 +345,7 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 否 | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
 
 **错误码：**
 
@@ -390,7 +392,7 @@ Subscribes to a batch of cloud file cache download progress change event. This m
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | callback function with a `MultiDownloadProgress` argument. |
 
 **错误码：**
 
@@ -439,7 +441,7 @@ Subscribes to cloud file cache download progress change event. This method uses 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | callback function with a `DownloadProgress` argument. |
 
 **错误码：**
 
@@ -483,7 +485,7 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | 是 | 订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | 回调函数。云文件批量缓存过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 | 回调函数。云文件批量缓存过程事件。 |
 
 **错误码：**
 
@@ -534,7 +536,7 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 订阅的事件类型，取值为'progress'（下载过程事件）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。云文件下载过程事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | 是 | 回调函数。云文件下载过程事件。 |
 
 **错误码：**
 
@@ -667,7 +669,7 @@ start(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动云文件下载。 |
 
 **错误码：**
 
@@ -892,7 +894,7 @@ stop(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止云文件下载。 |
 
 **错误码：**
 

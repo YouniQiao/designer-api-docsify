@@ -12,7 +12,6 @@ Used to indicate the call state of the current call.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## muted
@@ -39,7 +38,7 @@ Current muted status.
 state: CallState
 ```
 
-Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md#callstate)
+Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md)
 
 **Type:** CallState
 

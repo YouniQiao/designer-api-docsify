@@ -14,8 +14,6 @@ Describes app ID information.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 

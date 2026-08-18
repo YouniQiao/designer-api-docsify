@@ -1,8 +1,8 @@
 # PedometerDetectionResponse
 
-计步检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
+计步检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**继承/实现关系：** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**继承/实现关系：** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## scalar

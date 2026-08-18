@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>
 ```
 
-Resolves a host name to obtain all IP addresses with specified query option.
+Performs the DNS resolution using the current default network based on the specified IP address type. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -28,14 +28,14 @@ Resolves a host name to obtain all IP addresses with specified query option.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No | Indicates the query option. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No | Type of the IP address to be queried. The default value is **FAMILY_TYPE_ALL**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 

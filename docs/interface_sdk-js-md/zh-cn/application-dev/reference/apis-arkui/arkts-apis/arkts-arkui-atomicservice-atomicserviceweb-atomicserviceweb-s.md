@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorReceiveEvent, OnPageBeginEvent, OnPageEndEvent, AtomicServiceWebController, OnLoadInterceptEvent, OnProgressChangeEvent, OnLoadInterceptCallback, WebHeader } from '@kit.ArkUI';
 ```
 
 ## controller
@@ -134,7 +135,7 @@ onControllerAttached?: Callback<void>
 
 当Controller成功绑定到Web组件时触发该回调，此回调中不能使用操作网页的相关接口。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -152,7 +153,7 @@ onErrorReceive?: Callback<OnErrorReceiveEvent>
 
 网页加载遇到错误时触发该回调。出于性能考虑，建议此回调中尽量执行简单逻辑。在无网络的情况下，触发此回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md)&gt;
 
 **起始版本：** 12
 
@@ -170,7 +171,7 @@ onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 
 网页加载资源时遇到HTTP错误（响应码>=400）触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnHttpErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onhttperrorreceiveevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnHttpErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onhttperrorreceiveevent-i.md)&gt;
 
 **起始版本：** 12
 
@@ -206,7 +207,7 @@ onMessage?: Callback<OnMessageEvent>
 
 H5页面通过JS SDK的postMessage()发送消息后，Web组件对应的页面返回或销毁时，触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md)&gt;
 
 **起始版本：** 12
 
@@ -224,7 +225,7 @@ onPageBegin?: Callback<OnPageBeginEvent>
 
 网页开始加载时触发该回调，且只在主frame触发，iframe或者frameset的内容加载时不会触发此回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageBeginEvent](arkts-arkui-atomicservice-atomicserviceweb-onpagebeginevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageBeginEvent](arkts-arkui-atomicservice-atomicserviceweb-onpagebeginevent-i.md)&gt;
 
 **起始版本：** 12
 
@@ -242,7 +243,7 @@ onPageEnd?: Callback<OnPageEndEvent>
 
 网页加载完成时触发该回调，且只在主frame触发。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md)&gt;
 
 **起始版本：** 12
 
@@ -260,7 +261,7 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 
 网页加载进度变化时触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md)&gt;
 
 **起始版本：** 12
 

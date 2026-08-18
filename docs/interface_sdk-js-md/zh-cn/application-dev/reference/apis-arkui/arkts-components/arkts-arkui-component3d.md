@@ -26,6 +26,21 @@ Component3D(sceneOptions?: SceneOptions)
 
 ## 汇总
 
-- [SceneOptions](arkts-arkui-sceneoptions-i.md)
-- [Scene](arkts-arkui-scene-t.md)
-- [ModelType](arkts-arkui-modeltype-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [SceneOptions](arkts-arkui-sceneoptions-i.md) | 3D场景控制使用的场景选项 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [Scene](arkts-arkui-scene-t.md) | 提供控制3D场景的方法 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [ModelType](arkts-arkui-modeltype-e.md) | 模型类型枚举 |
+

@@ -2,7 +2,7 @@
 
 触屏输入事件。
 
-**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#inputevent)
+**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## fixedMode
@@ -39,7 +40,7 @@ fixedMode?: FixedMode
 isInject?: boolean
 ```
 
-表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考 [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#ohosmultimodalinputinputeventclient)。
+表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考 [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)。
 
 **类型：** boolean
 

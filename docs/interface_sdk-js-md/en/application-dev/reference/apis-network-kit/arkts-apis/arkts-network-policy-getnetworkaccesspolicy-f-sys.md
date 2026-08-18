@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## getNetworkAccessPolicy
 
 ```TypeScript
-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>
+function getNetworkAccessPolicy(uid: int): Promise<NetworkAccessPolicy>
 ```
 
-Query the network access policy of the specified application.
+Obtains whether the application with the specified UID can access the network. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>-End-->
+<!--Device-policy-function getNetworkAccessPolicy(uid: int): Promise<NetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(uid: int): Promise<NetworkAccessPolicy>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,13 +28,13 @@ Query the network access policy of the specified application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md)&gt; | Returns the network access policy of the application. For details, see { |
+| Promise&lt;[NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ policy
 function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>
 ```
 
-Query the network access policy of all applications.
+Obtains the network access policy of all applications under the current user. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -85,7 +85,7 @@ Query the network access policy of all applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UidNetworkAccessPolicy](arkts-network-policy-uidnetworkaccesspolicy-i.md)&gt; | the network access policy of all applications. |
+| Promise&lt;[UidNetworkAccessPolicy](arkts-network-policy-uidnetworkaccesspolicy-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

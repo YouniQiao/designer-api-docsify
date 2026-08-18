@@ -1,3 +1,0 @@
-# MarqueeModifier
-
-## Summary

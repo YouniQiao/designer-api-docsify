@@ -1,8 +1,8 @@
 # NetPortStatesInfo
 
-Defines port states of system network.
+Describes the information about the TCP and UDP ports that are currently listened for by the system.
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-connection-export interface NetPortStatesInfo--><!--Device-connection-export interface NetPortStatesInfo-End-->
 
@@ -20,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 tcpPortStatesInfo?: Array<TcpNetPortStatesInfo>
 ```
 
-Port information of the TCP network.
+TCP information currently listened for by the system.
 
 **Type:** Array&lt;[TcpNetPortStatesInfo](arkts-network-connection-tcpnetportstatesinfo-i.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +38,11 @@ Port information of the TCP network.
 udpPortStatesInfo?: Array<UdpNetPortStatesInfo>
 ```
 
-Port information of the UDP network.
+UDP information currently listened for by the system.
 
 **Type:** Array&lt;[UdpNetPortStatesInfo](arkts-network-connection-udpnetportstatesinfo-i.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

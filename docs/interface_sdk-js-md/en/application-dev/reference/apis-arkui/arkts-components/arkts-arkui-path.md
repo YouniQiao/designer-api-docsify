@@ -52,4 +52,9 @@ Defines the constructor of Path component
 
 ## Summary
 
-- [PathOptions](arkts-arkui-pathoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [PathOptions](arkts-arkui-pathoptions-i.md) | Describes the options of the path. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+

@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -37,7 +39,7 @@ certChains?: Array<string>
 outData?: Uint8Array
 ```
 
-表示 [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession) 操作之后获取到的challenge信息。默认为undefined。
+表示 [initSession](arkts-universalkeystore-huks-initsession-f.md) 操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Uint8Array
 
@@ -55,7 +57,7 @@ outData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-表示 [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession) 操作之后获取到的challenge信息。默认为undefined。
+表示 [initSession](arkts-universalkeystore-huks-initsession-f.md) 操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 

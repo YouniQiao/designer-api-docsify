@@ -12,7 +12,7 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace).
+Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md).
 
 **Since:** 23
 

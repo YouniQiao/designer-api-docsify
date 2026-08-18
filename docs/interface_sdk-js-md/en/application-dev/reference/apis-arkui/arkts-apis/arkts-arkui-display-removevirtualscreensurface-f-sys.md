@@ -41,7 +41,7 @@ Remove surface for the virtual screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function removeVirtualScreenSurface can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |

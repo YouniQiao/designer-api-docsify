@@ -12,7 +12,6 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionWindowProxy
@@ -89,7 +88,7 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
+Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
 
 **Since:** 23
 
@@ -145,7 +144,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
+Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) lifecycle of the UIExtensionAbility.
 
 **Since:** 23
 
@@ -317,7 +316,7 @@ Enables or disables the window privacy mode of the host application. A window in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | Whether to enable the privacy mode. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -381,7 +380,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -453,9 +452,9 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of startAbility. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of startAbility. |
 
 **Error codes:**
 
@@ -564,7 +563,7 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
 
 **Return value:**
@@ -599,7 +598,7 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -718,7 +717,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # RestartFlag
 
-Enumerates the application restart flags. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery).
+Enumerates the application restart flags. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md).
 
 **Since:** 23
 

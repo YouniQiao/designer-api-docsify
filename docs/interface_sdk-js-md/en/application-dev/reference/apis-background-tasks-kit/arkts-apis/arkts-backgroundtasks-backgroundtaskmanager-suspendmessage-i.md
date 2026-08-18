@@ -12,7 +12,6 @@ Describes the reason why a continuous task is suspended.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## message

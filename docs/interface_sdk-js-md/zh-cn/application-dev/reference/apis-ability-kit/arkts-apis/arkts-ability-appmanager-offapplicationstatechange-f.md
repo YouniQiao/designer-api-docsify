@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## offApplicationStateChange
@@ -26,7 +27,7 @@ function offApplicationStateChange(observerId: int, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | observerId | int | 是 | 注册的应用状态监听器ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of off. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of off. |
 
 **错误码：**
 

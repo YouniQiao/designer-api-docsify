@@ -2,7 +2,7 @@
 
 Manage hfp sink profile.
 
-**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HandsFreeHfProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md)
 
 **Since:** 26.0.0
 

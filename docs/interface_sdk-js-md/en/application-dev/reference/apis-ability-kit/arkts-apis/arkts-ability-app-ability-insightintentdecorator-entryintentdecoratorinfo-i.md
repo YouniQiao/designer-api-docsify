@@ -1,8 +1,8 @@
 # EntryIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo) and is used to describe the parameters supported by the @InsightIntentEntry decorator.
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and is used to describe the parameters supported by the @InsightIntentEntry decorator.
 
-**Inheritance/Implementation:** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
+**Inheritance/Implementation:** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
 **Since:** 20
 

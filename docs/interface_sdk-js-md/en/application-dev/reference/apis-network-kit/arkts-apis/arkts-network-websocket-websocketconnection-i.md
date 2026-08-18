@@ -1,8 +1,8 @@
 # WebSocketConnection
 
-Info about the connection from each specific client.
+Client information, including the IP address and port number.
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-webSocket-export interface WebSocketConnection--><!--Device-webSocket-export interface WebSocketConnection-End-->
 
@@ -24,7 +24,7 @@ IP address of the client.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketConnection-clientIP: string--><!--Device-WebSocketConnection-clientIP: string-End-->
 
@@ -36,11 +36,11 @@ IP address of the client.
 clientPort: int
 ```
 
-Port of the client.
+Port number of the client.
 
 **Type:** int
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketConnection-clientPort: int--><!--Device-WebSocketConnection-clientPort: int-End-->
 

@@ -2,7 +2,7 @@
 
 ItemInfo
 
-**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#baseiteminfo)
+**Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-na-file-photopickercomponent-baseiteminfo-c.md)
 
 **Since:** 26.0.0
 
@@ -25,7 +25,7 @@ public itemType?: ItemType
 
 itemType. include CAMERA and THUMBNAIL.
 
-**Type:** [ItemType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-itemtype-e.md)
+**Type:** [ItemType](arkts-na-file-photopickercomponent-itemtype-e.md)
 
 **Since:** 26.0.0
 

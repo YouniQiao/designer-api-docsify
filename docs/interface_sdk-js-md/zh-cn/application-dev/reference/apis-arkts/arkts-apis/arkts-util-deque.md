@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
 ```
 
 ## 汇总

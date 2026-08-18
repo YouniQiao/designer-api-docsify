@@ -2,7 +2,7 @@
 
 The &lt;video&gt; component provides a video player.
 
-**Inheritance/Implementation:** VideoElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** VideoElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 4
 

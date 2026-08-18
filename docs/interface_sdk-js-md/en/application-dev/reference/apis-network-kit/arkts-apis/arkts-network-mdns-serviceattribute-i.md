@@ -1,8 +1,8 @@
 # ServiceAttribute
 
-Defines the mDNS service attribute information.
+MDNS service attribute information.
 
-**Since:** 11
+**Since:** 10
 
 <!--Device-mdns-export interface ServiceAttribute--><!--Device-mdns-export interface ServiceAttribute-End-->
 
@@ -20,11 +20,11 @@ import { mdns } from '@kit.NetworkKit';
 key: string
 ```
 
-TXT record key.
+MDNS service attribute key. The value contains a maximum of 9 characters.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,18 +35,18 @@ TXT record key.
 ## value
 
 ```TypeScript
-value: Array<number>
+value: Array<int>
 ```
 
-TXT record value.
+MDNS service attribute value.
 
-**Type:** Array&lt;number&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ServiceAttribute-value: Array<number>--><!--Device-ServiceAttribute-value: Array<number>-End-->
+<!--Device-ServiceAttribute-value: Array<int>--><!--Device-ServiceAttribute-value: Array<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 

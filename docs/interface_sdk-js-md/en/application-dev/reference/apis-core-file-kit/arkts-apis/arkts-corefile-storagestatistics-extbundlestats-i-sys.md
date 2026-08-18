@@ -14,7 +14,6 @@ Details the space usage of system applications or system services.
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## businessName

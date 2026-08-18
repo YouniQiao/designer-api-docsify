@@ -6,7 +6,7 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Deprecated since:** 9
 
-**Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md#parcelable)
+**Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md)
 
 <!--Device-rpc-interface Sequenceable--><!--Device-rpc-interface Sequenceable-End-->
 

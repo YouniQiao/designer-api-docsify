@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isSupportDoNotDisturbMode
@@ -29,7 +28,7 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
 
 **Error codes:**
 

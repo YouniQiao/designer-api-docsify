@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## offAdd
@@ -29,7 +28,7 @@ Unregister installation listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | Indicates the callback to be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | Indicates the callback to be unregistered. |
 
 **Error codes:**
 

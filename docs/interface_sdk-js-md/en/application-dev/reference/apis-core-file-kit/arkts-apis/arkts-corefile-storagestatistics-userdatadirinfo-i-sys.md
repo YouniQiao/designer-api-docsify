@@ -14,7 +14,6 @@ Details the space usage of the **\/data** directory on the user device.
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## path

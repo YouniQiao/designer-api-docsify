@@ -51,7 +51,7 @@ Initializes a rwlock.The rwlock must later be destroyed by [ffrt_rwlock_destroy]
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is initialized and the attr is nullptr;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is initialized and the attr is nullptr;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_rwlock_wrlock()
 
@@ -75,7 +75,7 @@ Locks a write lock.Blocks the calling thread if the lock is unavailable. On succ
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is locked;<br>         `ffrt_error_inval` if `rwlock` is a null pointer. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is locked;          `ffrt_error_inval` if `rwlock` is a null pointer. |
 
 **Reference**:
 
@@ -105,7 +105,7 @@ Attempts to lock a write lock.Does not block the calling thread. On success, the
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is locked;<br>         `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is locked;          `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
 
 **Reference**:
 
@@ -134,7 +134,7 @@ Locks a read lock.Blocks the calling thread if the lock is unavailable. On succe
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is locked;<br>         `ffrt_error_inval` if `rwlock` is a null pointer. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is locked;          `ffrt_error_inval` if `rwlock` is a null pointer. |
 
 **Reference**:
 
@@ -164,7 +164,7 @@ Attempts to lock a read lock.Does not block the calling thread. On success, the 
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is locked;<br>         `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is locked;          `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
 
 **Reference**:
 
@@ -193,7 +193,7 @@ Unlocks a rwlock.The rwlock must be held by the calling thread, having been prev
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is unlocked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is unlocked;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_rwlock_destroy()
 
@@ -217,6 +217,6 @@ Destroys a rwlock.The rwlock must have been initialized by [ffrt_rwlock_init](ca
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the rwlock is destroyed;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the rwlock is destroyed;          `ffrt_error_inval` otherwise. |
 
 

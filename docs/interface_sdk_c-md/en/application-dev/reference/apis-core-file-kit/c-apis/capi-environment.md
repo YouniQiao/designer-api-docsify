@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module provides the ability to access the environment directory and obtain the native interface   for public root directory.
+This module provides the ability to access the environment directory and obtain the native interface for public root directory.
 
 **Since**: 12
 ## Files

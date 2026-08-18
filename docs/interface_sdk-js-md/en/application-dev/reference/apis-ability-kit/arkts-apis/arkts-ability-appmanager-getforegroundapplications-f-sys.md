@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundApplications
@@ -13,7 +12,7 @@ import { appManager } from '@kit.AbilityKit';
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md#appstatedata). This API uses an asynchronous callback to return the result.
+Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -29,7 +28,7 @@ Obtains applications that are running in the foreground. The application informa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -70,7 +69,7 @@ try {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md#appstatedata). This API uses a promise to return the result.
+Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses a promise to return the result.
 
 **Since:** 23
 

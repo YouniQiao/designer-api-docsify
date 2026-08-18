@@ -220,7 +220,7 @@ Called when the requested media asset is ready.
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t result | Request processing result. |
+| int32_t result | Request processing result. |
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID. |
 
 ### OH_MediaLibrary_OnImageDataPrepared()
@@ -239,7 +239,7 @@ Called when the requested image is ready.
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested source, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested source, which is specified by [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
@@ -261,7 +261,7 @@ Called when the requested moving photo is ready.
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) result | Request processing result, which is specified by [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode). |
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested resource, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested resource, which is specifiedby [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
@@ -283,7 +283,7 @@ This callback is called when the requested image source is ready. If an image bu
 
 | Parameter | Description |
 | -- | -- |
-| (MediaLibrary_ErrorCode result | Result of processing the requested resource. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) result | Result of processing the requested resource. |
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | **MediaLibrary_RequestId** of the requested resource. |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | **MediaLibrary_MediaQuality** of the requested resource. |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | **MediaLibrary_MediaContentType** of the requested resource. |

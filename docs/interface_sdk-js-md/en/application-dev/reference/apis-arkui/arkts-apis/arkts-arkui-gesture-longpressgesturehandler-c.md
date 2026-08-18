@@ -2,7 +2,7 @@
 
 Defines the LongPressGesture handler.
 
-**Inheritance/Implementation:** LongPressGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** LongPressGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

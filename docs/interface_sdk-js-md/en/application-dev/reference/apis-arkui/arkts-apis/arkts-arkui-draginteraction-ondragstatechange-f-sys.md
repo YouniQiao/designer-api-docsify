@@ -26,7 +26,7 @@ Listens for dragging state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | Yes | Indicates the callback to receive the changed dragging state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | Yes | Indicates the callback to receive the changed dragging state. |
 
 **Error codes:**
 

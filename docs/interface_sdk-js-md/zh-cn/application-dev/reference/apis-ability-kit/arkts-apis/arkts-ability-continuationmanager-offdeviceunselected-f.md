@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
-## off_deviceUnselected
+## off_deviceUnselected('deviceUnselected')
 
 ```TypeScript
 function off(type: 'deviceUnselected', token: number): void
@@ -17,7 +18,7 @@ function off(type: 'deviceUnselected', token: number): void
 
 **废弃版本：** 22
 
-**替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**替代接口：** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_devicestatechangedevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 

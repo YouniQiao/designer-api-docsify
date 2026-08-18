@@ -28,5 +28,15 @@ Creates a pattern lock component.
 
 ## Summary
 
-- [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)
-- [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md) | Describes the parameters of the ring style. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | Authentication challenge result of the pattern password. |
+

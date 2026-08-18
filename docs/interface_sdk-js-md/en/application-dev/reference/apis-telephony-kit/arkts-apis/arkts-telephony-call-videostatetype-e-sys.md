@@ -38,7 +38,7 @@ Video state.
 
 **Deprecated since:** 11
 
-**Substitutes:** [TYPE_VIDEO_BIDIRECTIONAL](#typevideobidirectional)
+**Substitutes:** [TYPE_VIDEO_BIDIRECTIONAL](#type_video_bidirectional)
 
 <!--Device-VideoStateType-TYPE_VIDEO = 1--><!--Device-VideoStateType-TYPE_VIDEO = 1-End-->
 

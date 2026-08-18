@@ -171,14 +171,14 @@ Defines a function pointer type OH_Archive_ProgressHandlerWithData forspecifying
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t progress | Processing progress percentage. |
+| int32_t progress | Processing progress percentage. |
 | void \*userData | A pointer to user-defined data, passed when calling the callback. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Archive_ProgressType](capi-oh-archive-h.md#oh_archive_progresstype) | Returns a compression/decompression Archive_ProgressType value.<br>         [OH_ARCHIVE_PROGRESS_CONTINUE](capi-oh-archive-h.md#oh_archive_progresstype) - continue current compression/decompression operation.<br>         [OH_ARCHIVE_PROGRESS_CANCEL](capi-oh-archive-h.md#oh_archive_progresstype) - cancel current compression/decompression operation. |
+| [OH_Archive_ProgressType](capi-oh-archive-h.md#oh_archive_progresstype) | Returns a compression/decompression Archive_ProgressType value.          [OH_ARCHIVE_PROGRESS_CONTINUE](capi-oh-archive-h.md#oh_archive_progresstype) - continue current compression/decompression operation.          [OH_ARCHIVE_PROGRESS_CANCEL](capi-oh-archive-h.md#oh_archive_progresstype) - cancel current compression/decompression operation. |
 
 ### OH_Archive_Stream_OutputHandler()
 
@@ -197,7 +197,7 @@ Function pointer type for user-defined callback function to handle compressed da
 | Parameter | Description |
 | -- | -- |
 | void\* userData | User-defined context that will be passed back in the callback. |
-| (const void\* data | Pointer to the compressed data. |
+| const void\* data | Pointer to the compressed data. |
 | uint64_t size | Length of the compressed data. |
 
 **Returns**:
@@ -257,7 +257,7 @@ Sets the progress callback function with user data for the archive reader.
 
 | Type | Description |
 | -- | -- |
-| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns OH_ARCHIVE_OK if successful.<br>         [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful<br>         [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
+| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns OH_ARCHIVE_OK if successful.          [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful          [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
 
 ### OH_Archive_Reader_ExtractAllFile()
 
@@ -361,7 +361,7 @@ Set the compression method for the archive file
 
 | Type | Description |
 | -- | -- |
-| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns ARCHIVE_OK if successful.<br>         [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful.<br>         [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
+| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns ARCHIVE_OK if successful.          [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful.          [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
 
 ### OH_Archive_Writer_SetProgressHandlerWithData()
 
@@ -387,7 +387,7 @@ Set the compression progress function for the archive file.
 
 | Type | Description |
 | -- | -- |
-| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns OH_ARCHIVE_OK if successful.<br>         [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful<br>         [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
+| [OH_Archive_ErrCode](capi-oh-archive-errcode-h.md#oh_archive_errcode) | Returns the error code. Returns OH_ARCHIVE_OK if successful.          [OH_ARCHIVE_OK](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Execution successful          [OH_ARCHIVE_PARAM_ERROR](capi-oh-archive-errcode-h.md#oh_archive_errcode) - Invalid input parameters. |
 
 ### OH_Archive_Writer_Add()
 

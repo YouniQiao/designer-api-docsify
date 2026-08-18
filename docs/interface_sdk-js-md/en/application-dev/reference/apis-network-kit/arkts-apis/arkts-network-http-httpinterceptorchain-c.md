@@ -1,8 +1,8 @@
 # HttpInterceptorChain
 
-Defines an HTTP Interceptor chain.
+Defines HTTP interceptor chain.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-http-export class HttpInterceptorChain--><!--Device-http-export class HttpInterceptorChain-End-->
 
@@ -20,11 +20,11 @@ import { http } from '@kit.NetworkKit';
 public addChain(chain: HttpInterceptor[]): boolean
 ```
 
-Add an interceptor chain to the HTTP client.
+Adds an interceptor to the HTTP client. > **NOTE：**> > An interceptor chain cannot contain interceptor instances of the same type. If interceptors of the same type > are passed in, the error code **2300802** (Duplicated interceptor type in the chain) is reported.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean--><!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean-End-->
 
@@ -34,13 +34,13 @@ Add an interceptor chain to the HTTP client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Yes | The chain of interceptors. |
+| chain | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Yes | Interception chain composed of interceptor instances. A single interceptor or multiple interceptors of different types can be passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the chain is added successfully. |
+| boolean | Whether the interceptor is added successfully. The value **true** indicates that the interceptor is successfully added, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -56,11 +56,11 @@ Add an interceptor chain to the HTTP client.
 public apply(httpRequest: HttpRequest): boolean
 ```
 
-Attach the chain to the target http request. Only one chain can be attached to a given request.
+Adds an interceptor chain to the target HTTP request. Each HTTP request instance can have only one interceptor chain attached. > **NOTE：**> > After an interceptor chain is attached to an [HttpRequest](arkts-network-http-httprequest-i.md) instance, when the instance > initiates an HTTP request, interceptors of the corresponding type in the attached interceptor chain are > triggered. > For more information about how to trigger interceptors using HTTP requests, see > [HTTP Interceptor Function Code Example](../../../network/http-request.md#http-interceptor). > The HTTP interceptor feature is supported only by > [HttpRequest.request](arkts-network-http-httprequest-i.md#request) APIs, > and is not supported by > [HttpRequest.requestInStream](arkts-network-http-httprequest-i.md#requestinstream) > APIs (streaming transmission).
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean--><!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean-End-->
 
@@ -70,13 +70,13 @@ Attach the chain to the target http request. Only one chain can be attached to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpRequest | HttpRequest | Yes | Initiates an HTTP request to a given URL. |
+| httpRequest | HttpRequest | Yes | [HttpRequest](arkts-network-http-httprequest-i.md) that initiates an HTTP request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the interceptor chain is attached successfully. |
+| boolean | Whether the interceptor is attached successfully. The value **true** indicates that the interceptor is successfully added, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -91,11 +91,11 @@ Attach the chain to the target http request. Only one chain can be attached to a
 public getChain(): HttpInterceptor[]
 ```
 
-The method to get the chain of interceptors.
+Obtains all interceptor instances in the current interceptor chain.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]--><!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]-End-->
 
@@ -105,5 +105,5 @@ The method to get the chain of interceptors.
 
 | Type | Description |
 | --- | --- |
-| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | The chain of interceptors. |
+| [HttpInterceptor](arkts-network-http-httpinterceptor-i.md)[] | Returns all interceptor instances added by the [addChain]{ |
 

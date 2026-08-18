@@ -53,11 +53,10 @@ The file declares the APIs used to create an OH_AVScreenCapture instance.
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_GetDisplayIdSelected(OH_AVScreenCapture_UserSelectionInfo *selection, uint64_t* displayId)](#oh_avscreencapture_getdisplayidselected) | Obtains the display ID of the screen selected by the user for capture. This function is used in the [OH_AVScreenCapture_OnUserSelected](capi-native-avscreen-capture-base-h.md#oh_avscreencapture_onuserselected)callback. The **selection** pointer is destroyed after the callback is complete. |
 | [OH_AVScreenCapture_CaptureStrategy* OH_AVScreenCapture_CreateCaptureStrategy(void)](#oh_avscreencapture_createcapturestrategy) | Creates a screen capture strategy. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ReleaseCaptureStrategy(OH_AVScreenCapture_CaptureStrategy* strategy)](#oh_avscreencapture_releasecapturestrategy) | Releases a screen capture strategy. |
-| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( 
-	struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)](#oh_avscreencapture_setcapturestrategy) | Sets a screen capture strategy for an OH_AVScreenCapture instance.This function must be called before screen capture starts. |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)](#oh_avscreencapture_setcapturestrategy) | Sets a screen capture strategy for an OH_AVScreenCapture instance.This function must be called before screen capture starts. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForKeepCaptureDuringCall( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforkeepcaptureduringcall) | Sets whether to keep screen capture during a cellular call.When **value** is set to **true** and screen capture is active during a cellular call, for privacy reasons, thevoices of both parties (local microphone and remote speaker) are not captured. Other system sounds are capturednormally. After the call ends, the screen capture framework resumes microphone recording. If the screen captureapplication is running in the background when the call ends, microphone recording fails to start because the audiomodule does not allow background applications to activate microphone recording. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForPrivacyMaskMode( OH_AVScreenCapture_CaptureStrategy *strategy, int32_t value)](#oh_avscreencapture_strategyforprivacymaskmode) | Set the fill mode for screen capture when a privacy window exists |
-| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForBFramesEncoding( OH_AVScreenCapture_CaptureStrategy *strategy, bool value )](#oh_avscreencapture_strategyforbframesencoding) | Sets whether to enable B-frame encoding for a CaptureStrategy instance to reduce the size of the recordedfile.For details about the restrictions on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}. Ifthe current environment does not meet the restrictions, B-frames will be skipped during screen capture, and no errorwill be returned. |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForBFramesEncoding( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforbframesencoding) | Sets whether to enable B-frame encoding for a CaptureStrategy instance to reduce the size of the recordedfile.For details about the restrictions on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}. Ifthe current environment does not meet the restrictions, B-frames will be skipped during screen capture, and no errorwill be returned. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForCanvasFollowRotation( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforcanvasfollowrotation) | Sets the automatic rotation following configuration for screen capture. If the value is set to **true**, thescreen capture follows the rotation, and the virtual screen size is automatically adjusted after a rotation toensure the output image matches the new orientation.After this setting, there is no need to manually call [OH_AVScreenCapture_ResizeCanvas](capi-native-avscreen-capture-h.md#oh_avscreencapture_resizecanvas) after rotationnotifications. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForPickerPopUp( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforpickerpopup) | Sets whether to display the screen capture picker. |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForFillMode( OH_AVScreenCapture_CaptureStrategy *strategy, OH_AVScreenCapture_FillMode mode)](#oh_avscreencapture_strategyforfillmode) | Sets the fill mode of the captured image in the target region. |
@@ -115,7 +114,7 @@ Initializes parameters related to an [OH_AVScreenCapture](capi-avscreencapture-o
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The configuration fails to be<br> initialized. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The configuration fails to be  initialized. |
 
 ### OH_AVScreenCapture_StartScreenCapture()
 
@@ -139,7 +138,7 @@ Starts screen capture and collects original streams.After this function is calle
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT} (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be<br> enabled or screen capture fails to start. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT} (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be  enabled or screen capture fails to start. |
 
 ### OH_AVScreenCapture_StopScreenCapture()
 
@@ -163,7 +162,7 @@ Stops screen capture. This function is used in pair with [OH_AVScreenCapture_Sta
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Screen capture fails to stop. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Screen capture fails to stop. |
 
 ### OH_AVScreenCapture_StartScreenRecording()
 
@@ -187,7 +186,7 @@ Starts screen recording, with recordings saved in files.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT} (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be<br> enabled or screen capture fails to start. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT} (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be  enabled or screen capture fails to start. |
 
 ### OH_AVScreenCapture_StopScreenRecording()
 
@@ -211,7 +210,7 @@ Stops screen recording. This function is used in pair with [OH_AVScreenCapture_S
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Screen capture fails to stop. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Screen capture fails to stop. |
 
 ### OH_AVScreenCapture_AcquireAudioBuffer()
 
@@ -237,7 +236,7 @@ Obtains an audio buffer. When calling this function, the application must alloca
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or audiobuffer is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The audio buffer fails to be allocated due to insufficient memory.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be<br> enabled or the audio buffer fails to be obtained. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or audiobuffer is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The audio buffer fails to be allocated due to insufficient memory.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be  enabled or the audio buffer fails to be obtained. |
 
 ### OH_AVScreenCapture_AcquireVideoBuffer()
 
@@ -264,7 +263,7 @@ Obtains a video buffer. The application can call this function to obtain informa
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBuffer*](capi-avscreencapture-oh-nativebuffer.md) | OH_NativeBuffer object if the operation is successful. The application can call the APIs provided by the<br> OH_NativeBuffer object to obtain information such as the video buffer and resolution. |
+| [OH_NativeBuffer*](capi-avscreencapture-oh-nativebuffer.md) | OH_NativeBuffer object if the operation is successful. The application can call the APIs provided by the  OH_NativeBuffer object to obtain information such as the video buffer and resolution. |
 
 ### OH_AVScreenCapture_ReleaseAudioBuffer()
 
@@ -289,7 +288,7 @@ Releases an audio buffer. When an audio buffer is no longer needed, call this fu
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback has been set or the<br> audio buffer fails to be released. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback has been set or the  audio buffer fails to be released. |
 
 ### OH_AVScreenCapture_ReleaseVideoBuffer()
 
@@ -313,7 +312,7 @@ Releases a video buffer. When a video buffer is no longer needed, call this func
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback has been set or the<br> vedio buffer fails to be released. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback has been set or the  vedio buffer fails to be released. |
 
 ### OH_AVScreenCapture_SetCallback()
 
@@ -338,7 +337,7 @@ Sets a callback to listen for available video buffers and audio buffers and erro
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The callback fails to be set. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The callback fails to be set. |
 
 ### OH_AVScreenCapture_Release()
 
@@ -362,7 +361,7 @@ Releases an OH_AVScreenCapture instance. This function is used in pair with [OH_
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The OH_AVScreenCapture instance fails to<br> be released. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The OH_AVScreenCapture instance fails to  be released. |
 
 ### OH_AVScreenCapture_SetMicrophoneEnabled()
 
@@ -387,7 +386,7 @@ Enables or disables the microphone.When **isMicrophone** is set to **true**, the
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The microphone fails to be enabled or<br> disabled. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The microphone fails to be enabled or  disabled. |
 
 ### OH_AVScreenCapture_SetStateCallback()
 
@@ -413,7 +412,7 @@ Sets a state change callback. This function must be called before screen capture
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The state callback fails to be set. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The state callback fails to be set. |
 
 ### OH_AVScreenCapture_SetDataCallback()
 
@@ -439,7 +438,7 @@ Sets a data processing callback. This function must be called before screen capt
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback fails to be set. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The data callback fails to be set. |
 
 ### OH_AVScreenCapture_SetErrorCallback()
 
@@ -465,7 +464,7 @@ Sets an error processing callback. This function must be called before screen ca
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The error callback fails to be set. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The error callback fails to be set. |
 
 ### OH_AVScreenCapture_SetCaptureContentChangedCallback()
 
@@ -491,7 +490,7 @@ Sets the callback for screen capture content changes. This function must be call
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The screen capture callback fails to be<br> set. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The screen capture callback fails to be  set. |
 
 ### OH_AVScreenCapture_StartScreenCaptureWithSurface()
 
@@ -516,7 +515,7 @@ Starts screen capture in surface mode.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture, input parameter window, or <br> windowSurface pointed to by window is nullptr.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be<br> enabled or screen capture with a surface fails to start. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture, input parameter window, or   windowSurface pointed to by window is nullptr.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The privacy permission fails to be  enabled or screen capture with a surface fails to start. |
 
 ### OH_AVScreenCapture_SetCanvasRotation()
 
@@ -541,7 +540,7 @@ Sets whether the captured screen data should rotate.When **canvasRotation** is s
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Canvas rotation fails to be set for<br> screen capture. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. Canvas rotation fails to be set for  screen capture. |
 
 ### OH_AVScreenCapture_CreateContentFilter()
 
@@ -583,7 +582,7 @@ Releases a content filter.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter filter is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter filter is nullptr. |
 
 ### OH_AVScreenCapture_ContentFilter_AddAudioContent()
 
@@ -608,7 +607,7 @@ Adds audio content to a content filter.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter filter is nullptr or the input parameter content<br> is invalid. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter filter is nullptr or the input parameter content  is invalid. |
 
 ### OH_AVScreenCapture_ExcludeContent()
 
@@ -633,7 +632,7 @@ Sets a content filter for an OH_AVScreenCapture instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or filter is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT}: The operation is not supported. For streams, the AudioCapturer API must be<br> called for the operation to take effect during the start.<br> For captured files, the Recorder API must be called for the operation to take effect during the start. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or filter is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_UNSUPPORT}: The operation is not supported. For streams, the AudioCapturer API must be  called for the operation to take effect during the start.  For captured files, the Recorder API must be called for the operation to take effect during the start. |
 
 ### OH_AVScreenCapture_ContentFilter_AddWindowContent()
 
@@ -685,7 +684,7 @@ Adjusts the screen resolution.This function is used to set the resolution of scr
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_SkipPrivacyMode()
 
@@ -711,7 +710,7 @@ Exempts privacy windows during screen capture.Currently, all the IDs of the subw
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_SetMaxVideoFrameRate()
 
@@ -736,7 +735,7 @@ Sets the maximum frame rate for screen capture.This function must be called afte
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr, or the input parameter <br> frameRate is not supported.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr, or the input parameter   frameRate is not supported.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_ShowCursor()
 
@@ -761,7 +760,7 @@ Sets whether to show the cursor.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The cursor setting fails. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  AV_SCREEN_CAPTURE_ERR_UNSUPPORT (available since API version 20): The device does not support the operation.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. The cursor setting fails. |
 
 ### OH_AVScreenCapture_SetCaptureArea()
 
@@ -787,7 +786,7 @@ Sets or updates the capture area.This function can be called before or after scr
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is a nullptr, the input displayId does<br> not exist, or the input area is abnormal. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is a nullptr, the input displayId does  not exist, or the input area is abnormal. |
 
 ### OH_AVScreenCapture_SetCaptureAreaHighlight()
 
@@ -812,7 +811,7 @@ Sets the highlight style for the screen capture area.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or config is invalid. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or config is invalid. |
 
 ### OH_AVScreenCapture_SetSelectionCallback()
 
@@ -838,7 +837,7 @@ Registers a callback to handle user selection results on the manual confirmation
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr. |
 
 ### OH_AVScreenCapture_GetCaptureTypeSelected()
 
@@ -863,7 +862,7 @@ Obtains the screen capture object type selected by the user on the confirmation 
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is nullptr. |
 
 ### OH_AVScreenCapture_GetDisplayIdSelected()
 
@@ -888,7 +887,7 @@ Obtains the display ID of the screen selected by the user for capture. This func
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is nullptr. |
 
 ### OH_AVScreenCapture_CreateCaptureStrategy()
 
@@ -930,13 +929,12 @@ Releases a screen capture strategy.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
 
 ### OH_AVScreenCapture_SetCaptureStrategy()
 
 ```c
-OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( 
-	struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)
+OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_SetCaptureStrategy( struct OH_AVScreenCapture *capture, OH_AVScreenCapture_CaptureStrategy *strategy)
 ```
 
 **Description**
@@ -956,7 +954,7 @@ Sets a screen capture strategy for an OH_AVScreenCapture instance.This function 
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or strategy is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_STATE}: This function is called after screen capture starts. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or strategy is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_STATE}: This function is called after screen capture starts. |
 
 ### OH_AVScreenCapture_StrategyForKeepCaptureDuringCall()
 
@@ -981,7 +979,7 @@ Sets whether to keep screen capture during a cellular call.When **value** is set
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
 
 ### OH_AVScreenCapture_StrategyForPrivacyMaskMode()
 
@@ -1006,12 +1004,12 @@ Set the fill mode for screen capture when a privacy window exists
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.<br>         {@link AV_SCREEN_CAPTURE_ERR_OK} if the execution is successful.<br>         {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL} strategy is nullptr or  value is invalid. |
+| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.          {@link AV_SCREEN_CAPTURE_ERR_OK} if the execution is successful.          {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL} strategy is nullptr or  value is invalid. |
 
 ### OH_AVScreenCapture_StrategyForBFramesEncoding()
 
 ```c
-OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForBFramesEncoding( OH_AVScreenCapture_CaptureStrategy *strategy, bool value )
+OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForBFramesEncoding( OH_AVScreenCapture_CaptureStrategy *strategy, bool value)
 ```
 
 **Description**
@@ -1025,13 +1023,13 @@ Sets whether to enable B-frame encoding for a CaptureStrategy instance to reduce
 | Parameter | Description |
 | -- | -- |
 | [OH_AVScreenCapture_CaptureStrategy](capi-avscreencapture-oh-avscreencapture-capturestrategy.md) *strategy | Pointer to an OH_AVScreenCapture_CaptureStrategy instance |
-| value | The default value is false, which means B frames  encoding are disabled. |
+| bool value | The default value is false, which means B frames  encoding are disabled. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
 
 ### OH_AVScreenCapture_StrategyForCanvasFollowRotation()
 
@@ -1056,7 +1054,7 @@ Sets the automatic rotation following configuration for screen capture. If the v
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
 
 ### OH_AVScreenCapture_StrategyForPickerPopUp()
 
@@ -1081,7 +1079,7 @@ Sets whether to display the screen capture picker.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr or value is invalid. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr or value is invalid. |
 
 ### OH_AVScreenCapture_StrategyForFillMode()
 
@@ -1106,7 +1104,7 @@ Sets the fill mode of the captured image in the target region.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter strategy is nullptr. |
 
 ### OH_AVScreenCapture_SetDisplayCallback()
 
@@ -1132,7 +1130,7 @@ Sets a callback function for obtaining the display ID.
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_STATE}: The callback must be called before the start function. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture or callback is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_NO_MEMORY}: The memory fails to be allocated due to insufficient memory.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_STATE}: The callback must be called before the start function. |
 
 ### OH_AVScreenCapture_ExcludePickerWindows()
 
@@ -1158,7 +1156,7 @@ Hides the specified window in the picker. This function is called before the pic
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or excludedWindowIDs is<br> invalid.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or excludedWindowIDs is  invalid.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_SetPickerMode()
 
@@ -1183,7 +1181,7 @@ Sets the display mode of the picker. You can define the content type displayed i
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or pickerMode is invalid.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr or pickerMode is invalid.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_PresentPicker()
 
@@ -1207,7 +1205,7 @@ Displays the picker once more after the screen capture starts, allowing for dyna
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is nullptr.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. |
 
 ### OH_AVScreenCapture_GetMultiDisplayCaptureCapability()
 
@@ -1234,7 +1232,7 @@ Obtains the multi-screen recording capability information and determines whether
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is a null pointer.<br> {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed, and data fails to be obtained. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter capture is a null pointer.  {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed, and data fails to be obtained. |
 
 ### OH_AVScreenCapture_GetMultiDisplayIdsSelected()
 
@@ -1260,7 +1258,7 @@ Obtains the list of display IDs selected by the user for recording on the picker
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is a null pointer. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input parameter selection is a null pointer. |
 
 ### OH_AVScreenCapture_SetPrivacyProtectCallback()
 
@@ -1286,7 +1284,7 @@ Sets a privacy protection callback so that the application can respond to privac
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.<br> {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input screen capture instance or callback is a null pointer. |
+| OH_AVSCREEN_CAPTURE_ErrCode | {@link AV_SCREEN_CAPTURE_ERR_OK}: The operation is successful.  {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: The input screen capture instance or callback is a null pointer. |
 
 ### OH_AVScreenCapture_StrategyForPause()
 
@@ -1311,7 +1309,7 @@ Allow to pause screen capture
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.<br>         {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.<br>         {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: strategy value is nullptr. |
+| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.          {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.          {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: strategy value is nullptr. |
 
 ### OH_AVScreenCapture_PauseScreenCapture()
 
@@ -1335,7 +1333,7 @@ Pause screen capture
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.<br>         {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.<br>         {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: capture value is nullptr.<br>         {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: operation not permitted. |
+| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.          {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.          {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: capture value is nullptr.          {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: operation not permitted. |
 
 ### OH_AVScreenCapture_ResumeScreenCapture()
 
@@ -1359,6 +1357,6 @@ Resume screen capture
 
 | Type | Description |
 | -- | -- |
-| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.<br>         {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.<br>         {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: capture value is nullptr.<br>         {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: operation not permitted. |
+| OH_AVSCREEN_CAPTURE_ErrCode | Function result code.          {@link AV_SCREEN_CAPTURE_ERR_OK}: the execution is successful.          {@link AV_SCREEN_CAPTURE_ERR_INVALID_VAL}: capture value is nullptr.          {@link AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT}: operation not permitted. |
 
 

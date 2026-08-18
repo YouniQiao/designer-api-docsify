@@ -6,7 +6,7 @@ P2P连接信息。
 
 **废弃版本：** 9
 
-**替代接口：** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#wifip2plinkedinfo)
+**替代接口：** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md)
 
 <!--Device-wifi-interface WifiP2pLinkedInfo--><!--Device-wifi-interface WifiP2pLinkedInfo-End-->
 
@@ -15,6 +15,10 @@ P2P连接信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## connectState

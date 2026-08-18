@@ -1,8 +1,8 @@
 # Aperture (System API)
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md#aperturequery-system-api).
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md).
 
-**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md#aperturequery-system-api)
+**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md)
 
 **Since:** 23
 

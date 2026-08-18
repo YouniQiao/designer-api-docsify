@@ -14,7 +14,6 @@ Provides utilities for ECC key parameter generation and point conversion based o
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertPoint

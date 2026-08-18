@@ -2,7 +2,7 @@
 
 The &lt;input&gt; component provides an interactive interface to receive user input, which is displayed in a single line by default.
 
-**Inheritance/Implementation:** InputElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** InputElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 4
 

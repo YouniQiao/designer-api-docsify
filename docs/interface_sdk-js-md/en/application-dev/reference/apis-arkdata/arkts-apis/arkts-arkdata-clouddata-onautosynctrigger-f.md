@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## onAutoSyncTrigger
@@ -27,7 +26,7 @@ Describes the triggering method for automatic device-cloud synchronization subsc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | Yes | Callback for automatic synchronization trigger interception. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | Yes | Callback for automatic synchronization trigger interception. |
 
 **Error codes:**
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
@@ -29,7 +28,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag). |
+| bundleFlags | int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md). |
 
 **Return value:**
 

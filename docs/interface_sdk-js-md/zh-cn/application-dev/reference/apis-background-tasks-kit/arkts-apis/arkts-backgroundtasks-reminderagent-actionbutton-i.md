@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#actionbutton)
+**替代接口：** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md)
 
 <!--Device-reminderAgent-interface ActionButton--><!--Device-reminderAgent-interface ActionButton-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## title

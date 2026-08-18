@@ -34,7 +34,7 @@ Sets restrictions on specified user behaviors.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | string | Yes | User behavior. <br>- **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
-| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
@@ -93,7 +93,7 @@ Restricts a specified user from modifying specified setting items.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Yes | User setting items to be restricted from modification. |
-| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| accountId | int | Yes | User ID, which must be greater than or equal to 0. <br>The value should be an integer. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | restricted | boolean | Yes | The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**

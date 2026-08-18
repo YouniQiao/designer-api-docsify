@@ -38,7 +38,7 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype).
+Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md).
 
 **Type:** PhotoType
 
@@ -56,7 +56,7 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType]
 subtype?: PhotoSubtype
 ```
 
-Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#photosubtype-system-api).
+Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md).
 
 **Type:** PhotoSubtype
 

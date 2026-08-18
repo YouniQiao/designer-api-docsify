@@ -14,7 +14,6 @@ Defines the device profile information.
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bleMac

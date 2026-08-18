@@ -9,16 +9,16 @@ import { eap } from '@kit.NetworkKit';
 ## logOffEthEap
 
 ```TypeScript
-function logOffEthEap(netId: number): void
+function logOffEthEap(netId: int): void
 ```
 
-Check whether the specified network is active.
+Revokes the EAP-authenticated state of an Ethernet NIC.
 
-**Since:** 23
+**Since:** 20
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
-<!--Device-eap-function logOffEthEap(netId: number): void--><!--Device-eap-function logOffEthEap(netId: number): void-End-->
+<!--Device-eap-function logOffEthEap(netId: int): void--><!--Device-eap-function logOffEthEap(netId: int): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -26,7 +26,7 @@ Check whether the specified network is active.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netId | number | Yes | Indicates the eth network id to log off EAP authentication. |
+| netId | int | Yes | ID of the Ethernet NIC. If the default value **-1** is specified, the system automatically matches the Ethernet NIC to initiate EAP authentication. |
 
 **Error codes:**
 

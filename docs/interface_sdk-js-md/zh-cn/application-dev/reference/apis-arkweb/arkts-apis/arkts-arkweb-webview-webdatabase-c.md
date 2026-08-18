@@ -11,6 +11,7 @@ Web组件数据库管理对象。
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## deleteHttpAuthCredentials

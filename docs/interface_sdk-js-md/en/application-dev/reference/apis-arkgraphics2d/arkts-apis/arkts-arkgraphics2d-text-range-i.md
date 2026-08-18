@@ -12,7 +12,6 @@ Describes a left-closed and right-open interval.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## end

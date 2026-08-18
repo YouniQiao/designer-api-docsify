@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleResourceInfo

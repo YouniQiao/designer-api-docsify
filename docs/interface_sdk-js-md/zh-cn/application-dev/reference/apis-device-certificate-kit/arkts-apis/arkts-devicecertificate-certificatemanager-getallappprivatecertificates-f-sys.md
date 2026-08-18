@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## getAllAppPrivateCertificates
@@ -27,7 +29,7 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取所有私有凭据列表成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md#cmresult)对象中的credentialList属性；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | 是 | 回调函数。当获取所有私有凭据列表成功时，err为null，data为 [CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)对象中的credentialList属性；否则为错误对象。 |
 
 **错误码：**
 

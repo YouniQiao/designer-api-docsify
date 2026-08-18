@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppCloneBundleInfo
@@ -13,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppCloneBundleInfo(bundleName: string, appIndex: int, bundleFlags: int, userId?: int): Promise<BundleInfo>
 ```
 
-Obtains the bundle information of an application or an application clone based on the given bundle name, app index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag), and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
+Obtains the bundle information of an application or an application clone based on the given bundle name, app index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md), and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 
@@ -32,7 +31,7 @@ Obtains the bundle information of an application or an application clone based o
 | bundleName | string | Yes | Bundle name. |
 | appIndex | int | Yes | Index of the application clone.<br>The value **0** means to obtain the bundle information of the main application. A value greater than 0 means to obtain the bundle information of the application clone. |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

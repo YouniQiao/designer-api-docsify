@@ -12,7 +12,7 @@ import { netFirewall } from '@kit.NetworkKit';
 function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>
 ```
 
-Update a firewall rule.
+Updates a firewall rule. This API uses a promise to return the result. **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
 
@@ -32,7 +32,7 @@ Update a firewall rule.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

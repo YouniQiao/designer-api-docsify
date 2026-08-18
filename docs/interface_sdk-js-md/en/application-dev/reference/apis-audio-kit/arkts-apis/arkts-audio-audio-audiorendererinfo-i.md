@@ -12,8 +12,6 @@ Describes audio renderer information.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -79,7 +77,7 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-audio-audiovolumemode-e.md#appindividual), this audio renderer will be affected by app volume percentage set by [setAppVolumePercentage](arkts-audio-audio-audiovolumemanager-i.md#setappvolumepercentage)
+Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-audio-audiovolumemode-e.md#app_individual), this audio renderer will be affected by app volume percentage set by [setAppVolumePercentage](arkts-audio-audio-audiovolumemanager-i.md#setappvolumepercentage)
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 

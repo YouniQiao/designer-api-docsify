@@ -1,6 +1,6 @@
 # PhotoSubtype (System API)
 
-Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) types.
+Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types.
 
 **Since:** 23
 

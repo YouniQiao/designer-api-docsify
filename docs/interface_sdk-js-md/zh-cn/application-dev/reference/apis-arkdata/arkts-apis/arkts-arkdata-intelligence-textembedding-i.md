@@ -1,6 +1,6 @@
 # TextEmbedding(智慧数据平台)
 
-描述文本嵌入模型的文本嵌入函数。 下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel)获取到TextEmbedding实例，再通过此实例调用对 应接口。
+描述文本嵌入模型的文本嵌入函数。 下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)获取到TextEmbedding实例，再通过此实例调用对 应接口。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding

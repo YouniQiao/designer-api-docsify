@@ -52,4 +52,9 @@ set the value.
 
 ## Summary
 
-- [CircleOptions](arkts-arkui-circleoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CircleOptions](arkts-arkui-circleoptions-i.md) | Describes the options of the circle. |
+

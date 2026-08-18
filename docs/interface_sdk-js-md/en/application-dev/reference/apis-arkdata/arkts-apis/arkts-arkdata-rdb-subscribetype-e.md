@@ -6,7 +6,7 @@ Defines the subscription type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetype)
+**Substitutes:** [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -26,7 +26,7 @@ Subscribe to remote data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SUBSCRIBE_TYPE_REMOTE](arkts-arkdata-relationalstore-subscribetype-e.md#subscribetyperemote)
+**Substitutes:** [SUBSCRIBE_TYPE_REMOTE](arkts-arkdata-relationalstore-subscribetype-e.md#subscribe_type_remote)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 

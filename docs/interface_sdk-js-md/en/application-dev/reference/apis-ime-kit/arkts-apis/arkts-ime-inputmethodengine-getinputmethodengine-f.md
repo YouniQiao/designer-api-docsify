@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getInputMethodEngine
@@ -13,13 +12,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#inputmethodengine) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
+Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)()
+**Substitutes:** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)()
 
 <!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 

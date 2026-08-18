@@ -14,7 +14,7 @@
 START = 0
 ```
 
-开头省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)中设置maxLines为1时生效。
+开头省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ START = 0
 MIDDLE = 1
 ```
 
-中间省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)中设置maxLines为1时生效。
+中间省略号，该枚举值只在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中设置maxLines为1时生效。
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ MIDDLE = 1
 END = 2
 ```
 
-末尾省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)中maxLines设置为任何值时均有效。
+末尾省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ END = 2
 MULTILINE_START = 3
 ```
 
-开头省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)中maxLines设置为任何值时均有效。
+开头省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **起始版本：** 24
 
@@ -78,7 +78,7 @@ MULTILINE_START = 3
 MULTILINE_MIDDLE = 4
 ```
 
-中间省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)中maxLines设置为任何值时均有效。
+中间省略号，该枚举值在[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中maxLines设置为任何值时均有效。
 
 **起始版本：** 24
 

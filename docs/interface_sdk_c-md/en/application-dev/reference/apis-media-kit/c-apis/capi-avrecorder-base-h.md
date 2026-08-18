@@ -204,7 +204,7 @@ Called when the AVRecorder state changes.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVRecorder \*recorder | Pointer to the OH_AVRecorder instance. |
+| [OH_AVRecorder](capi-avrecorder-oh-avrecorder.md) \*recorder | Pointer to the OH_AVRecorder instance. |
 | [OH_AVRecorder_State](capi-avrecorder-base-h.md#oh_avrecorder_state) state | AVRecorder state. |
 | [OH_AVRecorder_StateChangeReason](capi-avrecorder-base-h.md#oh_avrecorder_statechangereason) reason | Reason for the AVRecorder state change. |
 | void \*userData | Pointer to user-defined data. |
@@ -225,7 +225,7 @@ Called when an error occurs during recording.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVRecorder \*recorder | Pointer to the OH_AVRecorder instance. |
+| [OH_AVRecorder](capi-avrecorder-oh-avrecorder.md) \*recorder | Pointer to the OH_AVRecorder instance. |
 | int32_t errorCode | Error code. For details, see {@link OH_AVErrCode}. |
 | const char \*errorMsg | Pointer to the error message. |
 | void \*userData | Pointer to user-defined data. |
@@ -246,7 +246,7 @@ Called when the recording is in [OH_AVRecorder_FileGenerationMode](capi-avrecord
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVRecorder \*recorder | Pointer to the OH_AVRecorder instance. |
+| [OH_AVRecorder](capi-avrecorder-oh-avrecorder.md) \*recorder | Pointer to the OH_AVRecorder instance. |
 | [OH_MediaAsset](../MediaLibraryKit/capi-mediaassetmanager-oh-mediaasset.md) \*asset | Pointer to the OH_MediaAsset instance. |
 | void \*userData | Pointer to user-defined data. |
 

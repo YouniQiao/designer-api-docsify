@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 ```
 
-Removes assets in batches based on an alias list. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) can be removed in batches.
+Removes assets in batches based on an alias list. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be removed in batches.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ Removes assets in batches based on an alias list. Only assets with the same [GRO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) attributes of all data must be the same. |
+| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) attributes of all data must be the same. |
 
 **Return value:**
 
@@ -44,6 +44,6 @@ Removes assets in batches based on an alias list. Only assets with the same [GRO
 | [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
 | [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
 | [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) in the array is not consistent. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) in the array is not consistent. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 

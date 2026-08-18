@@ -10,7 +10,7 @@ Describes the video playback state. You can obtain the state through the **state
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate)
+**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
 <!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type VideoPlayState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
 

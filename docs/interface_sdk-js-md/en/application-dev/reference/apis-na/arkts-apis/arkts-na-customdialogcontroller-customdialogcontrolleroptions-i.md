@@ -492,7 +492,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 Defines the distance between the customDialog and system keyboard.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

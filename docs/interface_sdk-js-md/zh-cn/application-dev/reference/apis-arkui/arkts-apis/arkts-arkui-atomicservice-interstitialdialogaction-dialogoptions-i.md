@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from '@kit.ArkUI';
 ```
 
 ## backgroundImage
@@ -219,7 +220,7 @@ uiContext: UIContext
 
 UI上下文实例。
 
-**类型：** [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
+**类型：** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 

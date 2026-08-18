@@ -6,7 +6,7 @@ WLAN设备配置信息。
 
 **废弃版本：** 9
 
-**替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#wifideviceconfig)
+**替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -15,6 +15,10 @@ WLAN设备配置信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## creatorUid

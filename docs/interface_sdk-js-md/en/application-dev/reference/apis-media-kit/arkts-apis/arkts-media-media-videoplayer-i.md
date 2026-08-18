@@ -1,12 +1,12 @@
 # VideoPlayer
 
-VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer) to create a VideoPlayer instance.
+VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md) to create a VideoPlayer instance.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md#ohosmultimediamedia)
+**Substitutes:** [media](arkts-multimedia-media.md)
 
 <!--Device-media-interface VideoPlayer--><!--Device-media-interface VideoPlayer-End-->
 
@@ -40,7 +40,7 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
 ## getTrackDescription
 
@@ -66,19 +66,19 @@ Obtains the video track information. This API uses a promise to return the resul
 | --- | --- |
 | Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Promise used to return the MediaDescription array that holds the video track information. |
 
-## on_audioInterrupt
+## on_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent).
+Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md).
 
 **Since:** 9
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
 
 <!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -91,7 +91,7 @@ Subscribes to the audio interruption event. For details, see [audio.InterruptEve
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
 | callback | (info: audio.InterruptEvent) =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_bufferingUpdate
+## on_bufferingUpdate('bufferingUpdate')
 
 ```TypeScript
 on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void
@@ -103,7 +103,7 @@ Subscribes to the video buffering update event. This API works only under online
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
 
 <!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -114,9 +114,9 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#bufferinginfotype) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -128,7 +128,7 @@ Subscribes to video playback error events. After an error event is reported, you
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'error', callback: ErrorCallback)
 
 <!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -139,9 +139,9 @@ Subscribes to video playback error events. After an error event is reported, you
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during video playback. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
-## on_playbackCompleted
+## on_playbackCompleted('playbackCompleted')
 
 ```TypeScript
 on(type: 'playbackCompleted', callback: Callback<void>): void
@@ -153,7 +153,7 @@ Subscribes to the video playback completion event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
 
@@ -164,9 +164,9 @@ Subscribes to the video playback completion event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackCompleted' | Yes | Event type, which is **'playbackCompleted'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_startRenderFrame
+## on_startRenderFrame('startRenderFrame')
 
 ```TypeScript
 on(type: 'startRenderFrame', callback: Callback<void>): void
@@ -178,7 +178,7 @@ Subscribes to the frame rendering start event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'startRenderFrame', callback: Callback&lt;void&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'startRenderFrame', callback: Callback&lt;void&gt;)
 
 <!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
 
@@ -189,9 +189,9 @@ Subscribes to the frame rendering start event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_videoSizeChanged
+## on_videoSizeChanged('videoSizeChanged')
 
 ```TypeScript
 on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void
@@ -203,7 +203,7 @@ Subscribes to the video width and height change event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler)
 
 <!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
 
@@ -238,7 +238,7 @@ Pauses video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## pause
 
@@ -286,7 +286,7 @@ Starts video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## play
 
@@ -334,7 +334,7 @@ Prepares for video playback. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## prepare
 
@@ -382,7 +382,7 @@ Releases the video playback resources. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -430,7 +430,7 @@ Resets video playback. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## reset
 
@@ -479,7 +479,7 @@ Seeks to the specified playback position. The previous key frame at the specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
 
 ## seek
 
@@ -505,7 +505,7 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
 | mode | SeekMode | Yes | Seek mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
 
 ## seek
 
@@ -561,7 +561,7 @@ Sets a surface ID. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how to obtain it, see XComponent. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## setDisplaySurface
 
@@ -615,8 +615,8 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
 
 ## setSpeed
 
@@ -640,7 +640,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
 
 **Return value:**
 
@@ -671,7 +671,7 @@ Sets the volume. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## setVolume
 
@@ -725,7 +725,7 @@ Stops video playback. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 

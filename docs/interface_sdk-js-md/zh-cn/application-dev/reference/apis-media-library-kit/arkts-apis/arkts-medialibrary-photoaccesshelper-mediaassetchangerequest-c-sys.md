@@ -1,8 +1,8 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
 
-**继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -78,7 +79,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 addResourceForPicker(type: ResourceType, fileUri: string): void
 ```
 
-通过[fileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri)从应用沙箱添加资源。
+通过[fileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)从应用沙箱添加资源。
 
 **起始版本：** 23
 
@@ -104,7 +105,7 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: <br>1. The file corresponding to the URI is not in the app sandbox. <br>2. ResourceType must be image or video |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
 ## createAssetRequest
 

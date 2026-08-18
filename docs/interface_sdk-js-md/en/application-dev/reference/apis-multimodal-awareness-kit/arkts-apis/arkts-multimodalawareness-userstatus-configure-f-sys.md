@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { userStatus } from '@kit.MultimodalAwarenessKit';
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## configure

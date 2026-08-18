@@ -12,7 +12,6 @@ Represents a class for defining a uniform data type. It provides properties and 
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
-import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## belongsTo
@@ -35,7 +34,7 @@ Checks whether this data type belongs to the specified uniform data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 
@@ -139,7 +138,7 @@ Checks whether this data type is a higher-level type of the specified uniform da
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 
@@ -191,7 +190,7 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 

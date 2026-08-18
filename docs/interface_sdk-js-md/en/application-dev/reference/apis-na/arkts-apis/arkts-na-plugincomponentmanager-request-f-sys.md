@@ -29,6 +29,6 @@ Plugin component request method used to send a request for the information of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RequestParameterForStage](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
+| param | [RequestParameterForStage](arkts-na-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
 

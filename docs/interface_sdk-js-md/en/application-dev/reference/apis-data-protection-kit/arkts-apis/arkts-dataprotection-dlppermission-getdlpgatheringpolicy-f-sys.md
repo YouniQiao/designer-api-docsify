@@ -79,7 +79,7 @@ Obtains the DLP sandbox gathering policy. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -35,7 +35,7 @@ Obtains the class of a peer Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md#getremotedeviceclass)
+**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

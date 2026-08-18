@@ -14,7 +14,6 @@ Represents a field in the database.
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## alias
@@ -95,7 +94,7 @@ Whether the current column is the primary key. The value true means the current 
 type: FieldType
 ```
 
-Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md#fieldtype-system-api).
+Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md).
 
 **Type:** FieldType
 

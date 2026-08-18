@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** addSlot
+**Substitutes:** [addSlot](arkts-notification-notificationmanager-addslot-f.md)
 
 <!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -33,7 +31,7 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SlotType | Yes | Type of the notification slot to add. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## addSlot
@@ -48,7 +46,7 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** addSlot
+**Substitutes:** [addSlot](arkts-notification-notificationmanager-addslot-f.md)
 
 <!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
 

@@ -14,7 +14,6 @@ Haptics attributes in tone scenario.
 
 ```TypeScript
 import { systemSoundManager } from '@kit.AudioKit';
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## getFileName

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceId
@@ -41,7 +42,7 @@ deviceId: string
 deviceIdType: int
 ```
 
-设备ID类型。用于指定设备业务标识的类型，可在[DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#deviceidtype系统接口)基础上自定义扩展，如使用UNIFIED_DEVICE_ID(1)表示统一 设备ID，或使用厂商自定义值（≥10000）。
+设备ID类型。用于指定设备业务标识的类型，可在[DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md)基础上自定义扩展，如使用UNIFIED_DEVICE_ID(1)表示统一 设备ID，或使用厂商自定义值（≥10000）。
 
 **类型：** int
 

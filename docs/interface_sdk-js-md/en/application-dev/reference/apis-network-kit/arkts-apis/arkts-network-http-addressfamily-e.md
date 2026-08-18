@@ -1,6 +1,6 @@
 # AddressFamily
 
-Enum for Address Family
+Enumerates IP address families of the target domain name.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Enum for Address Family
 DEFAULT = 'CURL_IPRESOLVE_WHATEVER'
 ```
 
-Default, can use addresses of all IP versions that your system allows.
+Automatically selects the IPv4 or IPv6 address of the target domain name.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ Default, can use addresses of all IP versions that your system allows.
 ONLY_V4 = 'CURL_IPRESOLVE_V4'
 ```
 
-ONLYV4 Uses only IPv4 addresses.
+Resolves only the IPv4 address of the target domain name and ignores the IPv6 address.
 
 **Since:** 15
 
@@ -42,7 +42,7 @@ ONLYV4 Uses only IPv4 addresses.
 ONLY_V6 = 'CURL_IPRESOLVE_V6'
 ```
 
-ONLYV6 Uses only IPv6 addresses.
+Resolves only the IPv6 address of the target domain name and ignores the IPv4 address.
 
 **Since:** 15
 

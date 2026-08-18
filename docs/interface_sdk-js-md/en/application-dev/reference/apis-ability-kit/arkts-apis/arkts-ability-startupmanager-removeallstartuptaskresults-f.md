@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { startupManager } from '@kit.AbilityKit';
-import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## removeAllStartupTaskResults

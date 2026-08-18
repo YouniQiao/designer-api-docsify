@@ -21,7 +21,7 @@
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface)，设置旋转手势事件。
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置旋转手势事件。
 
 **起始版本：** 7
 

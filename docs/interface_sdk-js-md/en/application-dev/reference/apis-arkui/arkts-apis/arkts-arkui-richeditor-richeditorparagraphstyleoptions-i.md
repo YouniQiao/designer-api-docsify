@@ -2,7 +2,7 @@
 
 Defines paragraph style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md#richeditorrange)
+**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md)
 
 **Since:** 23
 

@@ -12,7 +12,6 @@ Describes the data content of a single channel of the gain map. For details, see
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## alternateOffset

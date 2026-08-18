@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setGestureNavigationEnabled
@@ -26,7 +29,7 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 设置手势导航启用状态。true表示启用手势导航；false表示禁用手势导航。当前仅禁用从屏幕下拉的手势，其他手势未禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
 
 **错误码：**
 

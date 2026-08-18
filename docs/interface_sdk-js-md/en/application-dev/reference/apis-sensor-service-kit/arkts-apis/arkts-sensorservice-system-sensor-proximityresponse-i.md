@@ -6,7 +6,7 @@ Callback invoked when the proximity sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md#proximityresponse)
+**Substitutes:** [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)
 
 <!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 

@@ -1,3 +1,0 @@
-# TextTimerModifier
-
-## Summary

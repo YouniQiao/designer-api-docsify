@@ -2,7 +2,7 @@
 
 Defines suffix icon option.
 
-**Inheritance/Implementation:** ChipV2SuffixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md#chipv2imageiconconfig), [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md#chipv2accessibilityconfig)
+**Inheritance/Implementation:** ChipV2SuffixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md), [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md)
 
 **Since:** 26.0.0
 

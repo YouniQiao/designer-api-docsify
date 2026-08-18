@@ -20,11 +20,11 @@ import { hfp } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md#createhfpagprofile) | create the instance of hfp profile. |
-| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md#createhfphfprofile) | create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile). |
+| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md) | create the instance of hfp profile. |
+| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md) | create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile). |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

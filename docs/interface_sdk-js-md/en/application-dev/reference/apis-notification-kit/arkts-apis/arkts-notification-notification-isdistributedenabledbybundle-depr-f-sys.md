@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains whether an application supports distributed notifications based on the b
 
 **Deprecated since:** 9
 
-**Substitutes:** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isdistributedenabledbybundle-system-api)
+**Substitutes:** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ Obtains whether an application supports distributed notifications based on the b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Application bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabledByBundle
@@ -52,7 +50,7 @@ Checks whether a specified application supports distributed notifications. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md#isdistributedenabledbybundle-system-api)
+**Substitutes:** [isDistributedEnabledByBundle](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

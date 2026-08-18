@@ -1,6 +1,6 @@
 # AudioLoopback
 
-This interface provides APIs for audio monitoring. Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) to create an AudioLoopback instance. When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in- ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusage), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#sourcetype). The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically. > **NOTE：**> > - The initial APIs of this interface are supported since API version 20.
+This interface provides APIs for audio monitoring. Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) to create an AudioLoopback instance. When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in- ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md). The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically. > **NOTE：**> > - The initial APIs of this interface are supported since API version 20.
 
 **Since:** 23
 
@@ -12,8 +12,6 @@ This interface provides APIs for audio monitoring. Before calling any API in Aud
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -196,7 +194,7 @@ Unsubscribes audio loopback status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
 
 **Error codes:**
 
@@ -204,7 +202,7 @@ Unsubscribes audio loopback status change event callback.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_statusChange
+## off_statusChange('statusChange')
 
 ```TypeScript
 off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
@@ -223,7 +221,7 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
 
 **Error codes:**
 
@@ -249,7 +247,7 @@ Subscribes to audio loopback status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
 
 **Error codes:**
 
@@ -257,7 +255,7 @@ Subscribes to audio loopback status changes.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_statusChange
+## on_statusChange('statusChange')
 
 ```TypeScript
 on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
@@ -276,7 +274,7 @@ Subscribes to the audio loopback status change event, which is triggered when th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
 
 **Error codes:**
 

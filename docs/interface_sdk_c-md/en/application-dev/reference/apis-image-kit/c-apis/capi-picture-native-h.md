@@ -133,7 +133,7 @@ Creates an **OH_ComposeOptions** instance.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_ComposeOptions_SetDesiredPixelFormat()
 
@@ -158,7 +158,7 @@ Sets the pixel format in **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredPixelFormat is not supported. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredPixelFormat is not supported. |
 
 ### OH_ComposeOptions_GetDesiredPixelFormat()
 
@@ -183,7 +183,7 @@ Obtains the pixel format in **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr,or desiredPixelFormat is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr,or desiredPixelFormat is nullptr. |
 
 ### OH_ComposeOptions_Release()
 
@@ -207,7 +207,7 @@ Releases the pointer to **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_PictureNative_CreatePicture()
 
@@ -232,7 +232,7 @@ Creates the pointer to an OH_PictureNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) mainPixelmap is nullptr, or picture is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) mainPixelmap is nullptr, or picture is nullptr. |
 
 ### OH_PictureNative_GetMainPixelmap()
 
@@ -257,7 +257,7 @@ Obtains the pointer to the OH_PixelmapNative object of a main picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or mainPixelmap is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or mainPixelmap is nullptr. |
 
 ### OH_PictureNative_GetHdrComposedPixelmap()
 
@@ -282,7 +282,7 @@ Obtains the pointer to the OH_PixelmapNative object of an HDR picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or hdrPixelmap is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) Unsupported operation, e.g. the picture does not has a gainmap. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or hdrPixelmap is nullptr.      <br>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) Unsupported operation, e.g. the picture does not has a gainmap. |
 
 ### OH_PictureNative_GetHdrComposedPixelmapWithOptions()
 
@@ -308,7 +308,7 @@ Obtains the pointer to **OH_PixelmapNative** of an HDR picture based on **OH_Com
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or hdrPixelmap is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) Unsupported operation, e.g. the picture does not has a gainmap. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or hdrPixelmap is nullptr.      <br>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) Unsupported operation, e.g. the picture does not has a gainmap. |
 
 ### OH_PictureNative_GetGainmapPixelmap()
 
@@ -333,7 +333,7 @@ Obtains the pointer to the OH_PixelmapNative object of a gain map.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or gainmapPixelmap is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or gainmapPixelmap is nullptr. |
 
 ### OH_PictureNative_SetAuxiliaryPicture()
 
@@ -359,7 +359,7 @@ Sets an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
 
 ### OH_PictureNative_GetAuxiliaryPicture()
 
@@ -385,7 +385,7 @@ Obtains an auxiliary picture by type.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
 
 ### OH_PictureNative_GetMetadata()
 
@@ -411,7 +411,7 @@ Obtains the metadata of a main picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or metadata is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or metadata is nullptr.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type. |
 
 ### OH_PictureNative_SetMetadata()
 
@@ -437,7 +437,7 @@ Sets the metadata for a main picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or metadata is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or metadata is nullptr.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type. |
 
 ### OH_PictureNative_GetAuxiliaryPictureCount()
 
@@ -462,7 +462,7 @@ Obtains the number of auxiliary pictures in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture or count is nullptr, or fail to get the picture.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture or count is nullptr, or fail to get the picture.</li>          </ul> |
 
 ### OH_PictureNative_GetAuxiliaryPictureTypes()
 
@@ -488,7 +488,7 @@ Obtains the types of auxiliary pictures in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture, auxiliaryPictureTypes, or count is nullptr,<br>         or fail to get the picture, or count is smaller than required.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture, auxiliaryPictureTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
 
 ### OH_PictureNative_GetMetadataCount()
 
@@ -513,7 +513,7 @@ Obtains the number of metadata entries in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture or count is nullptr, or fail to get the picture.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture or count is nullptr, or fail to get the picture.</li>          </ul> |
 
 ### OH_PictureNative_GetMetadataTypes()
 
@@ -539,7 +539,7 @@ Obtains the types of metadata in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture, metadataTypes, or count is nullptr,<br>         or fail to get the picture, or count is smaller than required.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture, metadataTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
 
 ### OH_PictureNative_RemoveAuxiliaryPicture()
 
@@ -564,7 +564,7 @@ Removes an auxiliary picture from a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the auxiliary picture was successfully removed or did not exist.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or fail to get the picture,<br>         or the type is invalid.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the auxiliary picture was successfully removed or did not exist.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or fail to get the picture,          or the type is invalid.</li>          </ul> |
 
 ### OH_PictureNative_RemoveMetadata()
 
@@ -589,7 +589,7 @@ Removes metadata from a Picture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the metadata was successfully removed or did not exist.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or fail to get the picture.</li><br>         <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the metadata was successfully removed or did not exist.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr, or fail to get the picture.</li>          <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li>          </ul> |
 
 ### OH_PictureNative_DeepCopyWithItems()
 
@@ -619,7 +619,7 @@ Creates a deep copy of a PictureNative object with specified auxiliary pictures 
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source or picture is nullptr, or counts mismatch,<br>         or fail to get the source picture, or Count is not zero but corresponding array is nullptr.</li><br>         <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source or picture is nullptr, or counts mismatch,          or fail to get the source picture, or Count is not zero but corresponding array is nullptr.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          </ul> |
 
 ### OH_PictureNative_Release()
 
@@ -643,7 +643,7 @@ Releases the pointer to an OH_PictureNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr. |
 
 ### OH_AuxiliaryPictureNative_Create()
 
@@ -671,7 +671,7 @@ Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports on
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) data is nullptr, or dataLength is invalid, or size is nullptr, or the type<br>         is invalid, or auxiliaryPicture is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) data is nullptr, or dataLength is invalid, or size is nullptr, or the type          is invalid, or auxiliaryPicture is nullptr. |
 
 ### OH_AuxiliaryPictureNative_CreateUsingAllocator()
 
@@ -699,7 +699,7 @@ Creates an OH_AuxiliaryPictureNative object with a specified memory type. By def
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info or auxiliaryPicture is nullptr, or allocator is invalid,<br>         or the size is invalid, or the type is unsupported, or dataLength is smaller than required.</li><br>         <li>[IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE](capi-image-common-h.md#image_errorcode) unsupported allocator type,<br>         e.g., use share memory create a gainmap as only DMA supported hdr metadata.</li><br>         <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info or auxiliaryPicture is nullptr, or allocator is invalid,          or the size is invalid, or the type is unsupported, or dataLength is smaller than required.</li>          <li>[IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE](capi-image-common-h.md#image_errorcode) unsupported allocator type,          e.g., use share memory create a gainmap as only DMA supported hdr metadata.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          </ul> |
 
 ### OH_AuxiliaryPictureNative_WritePixels()
 
@@ -725,7 +725,7 @@ Reads pixels in the buffer and writes the result to an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or source is nullptr, or the bufferSize is invalid.<br>     <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory alloc failed.<br>     <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) memory copy failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or source is nullptr, or the bufferSize is invalid.      <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory alloc failed.      <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) memory copy failed. |
 
 ### OH_AuxiliaryPictureNative_ReadPixels()
 
@@ -751,7 +751,7 @@ Reads pixels of an auxiliary picture and writes the result to the buffer.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or destination is nullptr,<br>         or the bufferSize is invalid.<br>     <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory alloc failed.<br>     <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) memory copy failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or destination is nullptr,          or the bufferSize is invalid.      <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory alloc failed.      <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) memory copy failed. |
 
 ### OH_AuxiliaryPictureNative_GetType()
 
@@ -776,7 +776,7 @@ Obtains the type of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or type is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or type is nullptr. |
 
 ### OH_AuxiliaryPictureNative_GetInfo()
 
@@ -801,7 +801,7 @@ Obtains the information of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or info is nullptr. |
 
 ### OH_AuxiliaryPictureNative_SetInfo()
 
@@ -826,7 +826,7 @@ Sets the information for an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or info is nullptr. |
 
 ### OH_AuxiliaryPictureNative_GetMetadata()
 
@@ -852,7 +852,7 @@ Obtains the metadata of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or metadata is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type, or the metadata type does not match the<br>         auxiliary picture type. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or metadata is nullptr.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
 
 ### OH_AuxiliaryPictureNative_SetMetadata()
 
@@ -878,7 +878,7 @@ Sets the metadata for an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or metadata is nullptr.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type, or the metadata type does not match the<br>         auxiliary picture type. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or metadata is nullptr.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
 
 ### OH_AuxiliaryPictureNative_AcquirePixelmap()
 
@@ -903,7 +903,7 @@ Obtains the OH_PixelmapNative object of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or pixelmap is nullptr.</li><br>         <li>[IMAGE_GET_IMAGE_DATA_FAILED](capi-image-common-h.md#image_errorcode) fail to get the auxiliary picture or its pixelmap content.</li><br>         <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) auxiliaryPicture is nullptr, or pixelmap is nullptr.</li>          <li>[IMAGE_GET_IMAGE_DATA_FAILED](capi-image-common-h.md#image_errorcode) fail to get the auxiliary picture or its pixelmap content.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          </ul> |
 
 ### OH_AuxiliaryPictureNative_Release()
 
@@ -927,7 +927,7 @@ Releases the pointer to an OH_AuxiliaryPictureNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) picture is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_Create()
 
@@ -951,7 +951,7 @@ Creates an OH_AuxiliaryPictureInfo object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetType()
 
@@ -976,7 +976,7 @@ Obtains the auxiliary picture type in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or type is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or type is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetType()
 
@@ -1001,7 +1001,7 @@ Sets the auxiliary picture type in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or type is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or type is invalid. |
 
 ### OH_AuxiliaryPictureInfo_GetSize()
 
@@ -1026,7 +1026,7 @@ Obtains the image size in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or size is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or size is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetSize()
 
@@ -1051,7 +1051,7 @@ Sets the image size in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or size is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or size is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetRowStride()
 
@@ -1076,7 +1076,7 @@ Obtains the row stride in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or rowStride is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or rowStride is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetRowStride()
 
@@ -1101,7 +1101,7 @@ Sets the row stride in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or rowStride is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or rowStride is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetPixelFormat()
 
@@ -1126,7 +1126,7 @@ Obtains the pixel format in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or pixelFormat is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or pixelFormat is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetPixelFormat()
 
@@ -1151,7 +1151,7 @@ Sets the pixel format in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_Release()
 
@@ -1175,7 +1175,7 @@ Releases the pointer to an OH_AuxiliaryPictureInfo object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
 
 ### OH_DecomposeOptions_Create()
 
@@ -1199,7 +1199,7 @@ Creates an OH_DecomposeOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) outOwnedOptions is nullptr.</li><br>         <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) outOwnedOptions is nullptr.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_DecomposeOptions_SetIsFullSizeGainmap()
 
@@ -1224,7 +1224,7 @@ Sets whether to generate a full-size gainmap.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_DecomposeOptions_GetIsFullSizeGainmap()
 
@@ -1249,7 +1249,7 @@ Gets whether to generate a full-size gainmap.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or isFullSizeGainmap is nullptr.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or isFullSizeGainmap is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_DecomposeOptions_SetDesiredPixelFormat()
 
@@ -1274,7 +1274,7 @@ Sets the desired pixel format of the SDR pixel map generated after HDR decomposi
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) desiredPixelFormat is not supported.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) desiredPixelFormat is not supported.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_DecomposeOptions_GetDesiredPixelFormat()
 
@@ -1299,7 +1299,7 @@ Gets the desired pixel format of the SDR pixel map generated after HDR decomposi
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredPixelFormat is nullptr.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredPixelFormat is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_DecomposeOptions_Release()
 
@@ -1323,7 +1323,7 @@ Releases an OH_DecomposeOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 ### OH_PictureNative_DecomposeToPicture()
 
@@ -1349,6 +1349,6 @@ Decomposes an HDR pixel map into a Picture object which contains an SDR pixel ma
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) hdrPixelmap, options, or outOwnedPicture is nullptr.</li><br>         <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) the pixel map is not supported for decomposition.</li><br>         <li>{@link IMAGE_DECOMPOSE_FAILED} the decomposition process failed.</li><br>         <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) hdrPixelmap, options, or outOwnedPicture is nullptr.</li>          <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) the pixel map is not supported for decomposition.</li>          <li>{@link IMAGE_DECOMPOSE_FAILED} the decomposition process failed.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
 
 

@@ -110,7 +110,7 @@ extendInfo?: Record<string, RecordData>
 
 系统应用发布通知时的自定义扩展参数。默认为空。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -209,7 +209,7 @@ notDistributed?: boolean
 notificationControlFlags?: long
 ```
 
-通知提醒方式管控。默认值为0。 可以通过此接口减少当前通知的提醒方式。与 [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md#notificationcontrolflagstatus系统接口)的 枚举进行按位或运算得到该参数。
+通知提醒方式管控。默认值为0。 可以通过此接口减少当前通知的提醒方式。与 [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md)的 枚举进行按位或运算得到该参数。
 
 **类型：** long
 
@@ -227,7 +227,7 @@ notificationControlFlags?: long
 overlayIcon?: image.PixelMap
 ```
 
-通知重叠图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。 未设置`overlayIcon`时，通知将不展示重叠图标。 此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)类型设置为SOCIAL_COMMUNICATION时生效。 建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+通知重叠图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。 未设置`overlayIcon`时，通知将不展示重叠图标。 此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md)类型设置为SOCIAL_COMMUNICATION时生效。 建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
 
 **类型：** image.PixelMap
 

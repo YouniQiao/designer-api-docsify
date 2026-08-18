@@ -55,7 +55,7 @@ Callback function for download status update.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioSuite_DownloadStatusInfoArray \*downloadStatusInfoArray | Pointer to array of download status information. |
+| [OH_AudioSuite_DownloadStatusInfoArray](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfoarray.md) \*downloadStatusInfoArray | Pointer to array of download status information. |
 
 ### OH_AudioSuite_GetDownloadManager()
 
@@ -79,7 +79,7 @@ Get the audio download manager handle.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager is nullptr.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager is nullptr.</li>          </ul> |
 
 ### OH_AudioSuite_RegisterDownloadCallback()
 
@@ -104,7 +104,7 @@ Register download status callback.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or callback is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or callback is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_UnregisterDownloadCallback()
 
@@ -129,7 +129,7 @@ Unregister download status callback.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or callback is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or callback is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_StartDownload()
 
@@ -154,7 +154,7 @@ Start downloading a feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_PauseDownload()
 
@@ -179,7 +179,7 @@ Pause downloading a feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_CancelDownload()
 
@@ -204,7 +204,7 @@ Cancel downloading a feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} If the current state does not allow cancellation.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} If the current state does not allow cancellation.</li>          </ul> |
 
 ### OH_AudioSuite_StartBackgroundDownload()
 
@@ -229,7 +229,7 @@ Start background downloading a feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_GetDownloadStatus()
 
@@ -255,7 +255,7 @@ Get download status of a feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager, featureName or status is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager, featureName or status is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 ### OH_AudioSuite_UninstallCloudRom()
 
@@ -280,6 +280,6 @@ Uninstall a downloaded feature.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li><br>         </ul> |
+| int32_t | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} If the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} If downloadManager or featureName is nullptr.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} If IPC communication fails or the operation fails.</li>          </ul> |
 
 

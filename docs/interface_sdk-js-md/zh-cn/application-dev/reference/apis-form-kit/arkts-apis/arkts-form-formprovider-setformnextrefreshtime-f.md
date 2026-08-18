@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## setFormNextRefreshTime
@@ -27,7 +28,7 @@ function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCall
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
 | minute | int | 是 | 指定卡片多久之后刷新，取值范围：大于等于5，单位：min。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置结果的回调，成功时error为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。设置结果的回调，成功时error为undefined。 |
 
 **错误码：**
 

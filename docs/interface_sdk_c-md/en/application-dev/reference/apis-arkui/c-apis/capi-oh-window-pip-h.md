@@ -14,6 +14,12 @@ The file declares the APIs related to the Picture in Picture (PiP) feature, incl
 
 ## Summary
 
+### Struct
+
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [PictureInPicture_PipConfig](capi-windowmanager-pictureinpicture-pipconfig.md) | PictureInPicture_PipConfig | Picture in picture config. |
+
 ### Enum
 
 | Name | typedef keyword | Description |
@@ -194,7 +200,7 @@ Defines a callback function for PiP window creation.
 
 | Parameter | Description |
 | -- | -- |
-| (uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
+| uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
 | uint8_t requestId | Request ID, which indicates the number of times the PiP window has been requested to be pulled up. |
 | uint64_t surfaceId | Surface ID of the **XComponent** in PiP. It is used for application rendering. |
 
@@ -214,7 +220,7 @@ Defines a callback function for PiP window lifecycle changes.
 
 | Parameter | Description |
 | -- | -- |
-| (uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
+| uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
 | [PictureInPicture_PipState](capi-oh-window-pip-h.md#pictureinpicture_pipstate) state | PiP lifecycle state. |
 | int32_t errcode | Common status codes of PiP APIs. For details, see {@link WindowManager_ErrorCode}. |
 
@@ -234,7 +240,7 @@ Defines a callback function for the component click event of the PiP window.
 
 | Parameter | Description |
 | -- | -- |
-| (uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
+| uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
 | [PictureInPicture_PipControlType](capi-oh-window-pip-h.md#pictureinpicture_pipcontroltype) controlType | Type of component displayed on the PiP controller. |
 | [PictureInPicture_PipControlStatus](capi-oh-window-pip-h.md#pictureinpicture_pipcontrolstatus) status | Status of the component displayed on the PiP controller. |
 
@@ -254,7 +260,7 @@ Defines a callback function for PiP window size changes.
 
 | Parameter | Description |
 | -- | -- |
-| (uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
+| uint32_t controllerId | ID of the PiP controller. The value is a non-negative integer. |
 | uint32_t width | PiP window width, in px. The value is a positive integer and cannot be greater than the screen width. |
 | uint32_t height | PiP window height, in px. The value is a positive integer and cannot be greater than the screenheight. |
 | double scale | Scale factor of the PiP window, representing the display size relative to the width and height. Thevalue is a floating-point number in the range (0.0, 1.0]. The value **1** means that the PiP windowmatches specified width and height. |
@@ -281,7 +287,7 @@ Creates a PiP configuration.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
 
 ### OH_PictureInPicture_DestroyPipConfig()
 
@@ -305,7 +311,7 @@ Destroys a PiP configuration.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
 
 ### OH_PictureInPicture_SetPipMainWindowId()
 
@@ -330,7 +336,7 @@ Sets the ID of the main window that launches PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
 
 ### OH_PictureInPicture_SetPipTemplateType()
 
@@ -355,7 +361,7 @@ Sets the PiP template type. The default value is video playback.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
 
 ### OH_PictureInPicture_SetPipRect()
 
@@ -381,7 +387,7 @@ Sets the size of the PiP window for calculating the aspect ratio.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
 
 ### OH_PictureInPicture_SetPipControlGroup()
 
@@ -407,7 +413,7 @@ Sets a PiP component group, which must match the template type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
 
 ### OH_PictureInPicture_SetPipNapiEnv()
 
@@ -432,7 +438,7 @@ Sets the runtime environment for launching PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported. |
 
 ### OH_PictureInPicture_CreatePip()
 
@@ -457,7 +463,7 @@ Creates a PiP controller.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_DeletePip()
 
@@ -481,7 +487,7 @@ Deletes a PiP controller.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} The function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
+| int32_t | Return the result code.          {@link OK} The function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
 
 ### OH_PictureInPicture_StartPip()
 
@@ -505,7 +511,7 @@ Starts PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL} the PiP window state is abnormal.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_CREATE_FAILED} failed to create the PiP window.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION} repeated PiP operation.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL} the PiP window state is abnormal.          {@link WINDOW_MANAGER_ERRORCODE_PIP_CREATE_FAILED} failed to create the PiP window.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION} repeated PiP operation.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
 
 ### OH_PictureInPicture_StopPip()
 
@@ -529,7 +535,7 @@ Stops PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_DESTROY_FAILED} failed to destroy the PiP window.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL} the PiP window state is abnormal.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION} repeated PiP operation.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_PIP_DESTROY_FAILED} failed to destroy the PiP window.          {@link WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL} the PiP window state is abnormal.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION} repeated PiP operation.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. |
 
 ### OH_PictureInPicture_UpdatePipContentSize()
 
@@ -555,7 +561,7 @@ Updates the media content size when the media content changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UpdatePipControlStatus()
 
@@ -581,7 +587,7 @@ Updates the PiP component status.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_SetPipControlEnabled()
 
@@ -607,7 +613,7 @@ Sets the PiP component enabled status.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_SetParentWindowId()
 
@@ -632,7 +638,7 @@ Sets the main window ID for PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_SetPipInitialSurfaceRect()
 
@@ -660,7 +666,7 @@ Sets the initial position and size of the PiP surface when the PiP launch animat
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnsetPipInitialSurfaceRect()
 
@@ -684,7 +690,7 @@ Cancels the previously set initial position and size for the PiP surface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_RegisterStartPipCallback()
 
@@ -709,7 +715,7 @@ Registers a callback to listen for the completion of PiP surface creation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterStartPipCallback()
 
@@ -734,7 +740,7 @@ Unregisters the callback used to listen for the completion of PiP surface creati
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllStartPipCallbacks()
 
@@ -758,7 +764,7 @@ Unregisters all the callbacks used to listen for the completion of PiP surface c
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_RegisterLifecycleListener()
 
@@ -783,7 +789,7 @@ Registers a callback to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterLifecycleListener()
 
@@ -808,7 +814,7 @@ Unregisters the callback used to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllLifecycleListeners()
 
@@ -832,7 +838,7 @@ Unregisters all the callbacks used to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_RegisterControlEventListener()
 
@@ -857,7 +863,7 @@ Registers a callback to listen for control panel action events in PiP mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterControlEventListener()
 
@@ -882,7 +888,7 @@ Unregisters the callback used to listen for control panel action events in PiP m
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllControlEventListeners()
 
@@ -906,7 +912,7 @@ Unregisters all the callbacks used to listen for control panel action events in 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_RegisterResizeListener()
 
@@ -931,7 +937,7 @@ Registers a callback to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterResizeListener()
 
@@ -956,7 +962,7 @@ Unregisters the callback used to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllResizeListeners()
 
@@ -980,7 +986,7 @@ Unregisters all the callbacks used to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code.<br>         {@link OK} the function call is successful.<br>         {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.<br>         {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.<br>         {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
+| int32_t | Return the result code.          {@link OK} the function call is successful.          {@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error.          {@link WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED} capability not supported.          {@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. |
 
 ### OH_PictureInPicture_SetAutoStartEnabled()
 
@@ -1005,6 +1011,6 @@ Sets whether to automatically start a PiP window when the user returns to the ho
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. <ul><br>         <li>{@link OK} the function call is successful. </li><br>         <li>{@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. Possible cause:<br>             Can not find the PiP controller corresponding to the controllerId ID.</li><br>         <li>{@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. Possible cause:<br>             The PiP controller has been destroyed.</li><br>         </ul> |
+| int32_t | Return the result code. <ul>          <li>{@link OK} the function call is successful. </li>          <li>{@link WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM} parameter error. Possible cause:              Can not find the PiP controller corresponding to the controllerId ID.</li>          <li>{@link WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR} pip internal error. Possible cause:              The PiP controller has been destroyed.</li>          </ul> |
 
 

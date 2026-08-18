@@ -52,7 +52,7 @@ Get uri From path.
 
 | Type | Description |
 | -- | -- |
-| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.<br>         [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode)  401 - Invalid input parameter.<br>         [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output uri string is 0.<br>         [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode)  13900011 - Failed to apply for memory or failed to copy memory.<br>         [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
+| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.          [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode)  401 - Invalid input parameter.          [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output uri string is 0.          [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode)  13900011 - Failed to apply for memory or failed to copy memory.          [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
 
 ### OH_FileUri_GetPathFromUri()
 
@@ -80,7 +80,7 @@ Get path From uri.
 
 | Type | Description |
 | -- | -- |
-| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.<br>         [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.<br>         [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output path string is 0.<br>         [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.<br>         [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
+| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.          [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.          [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output path string is 0.          [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.          [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
 
 ### OH_FileUri_GetFullDirectoryUri()
 
@@ -108,7 +108,7 @@ Gets the uri of the path or directory where the uri is located.
 
 | Type | Description |
 | -- | -- |
-| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.<br>         [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.<br>         [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.<br>         [ERR_ENOENT](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900002 - No such file or directory.<br>         [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output path string is 0.<br>         [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
+| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.          [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.          [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.          [ERR_ENOENT](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900002 - No such file or directory.          [ERR_UNKNOWN](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900042 - Unknow error. The length of the output path string is 0.          [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
 
 ### OH_FileUri_IsValidUri()
 
@@ -163,6 +163,6 @@ Gets the fileName From uri.This function obtains that the last segment of the UR
 
 | Type | Description |
 | -- | -- |
-| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.<br>        [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.<br>        [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.<br>        [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
+| [FileManagement_ErrCode](../ArkUI/capi-error-code-h.md#filemanagement_errcode) | Returns the status code of the execution.         [ERR_INVALID_PARAMETER](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 401 - Invalid input parameter.         [ERR_ENOMEM](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 13900011 - Failed to apply for memory or failed to copy memory.         [ERR_OK](../ArkUI/capi-error-code-h.md#filemanagement_errcode) 0 - This operation was successfully executed. |
 
 

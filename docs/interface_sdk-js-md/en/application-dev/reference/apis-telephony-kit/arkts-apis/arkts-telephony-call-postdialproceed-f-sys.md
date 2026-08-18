@@ -30,7 +30,7 @@ Continues a call by playing a post-dial DTMF string. This API uses an asynchrono
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
 | proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

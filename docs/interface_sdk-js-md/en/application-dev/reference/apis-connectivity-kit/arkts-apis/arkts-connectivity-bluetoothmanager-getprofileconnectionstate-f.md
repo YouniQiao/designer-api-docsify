@@ -18,7 +18,7 @@ Obtains the connection state of profile. On API 10 and above, the permission req
 
 **Deprecated since:** 10
 
-**Substitutes:** [getProfileConnectionState](arkts-connectivity-connection-getprofileconnectionstate-f.md#getprofileconnectionstate)
+**Substitutes:** [getProfileConnectionState](arkts-connectivity-connection-getprofileconnectionstate-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

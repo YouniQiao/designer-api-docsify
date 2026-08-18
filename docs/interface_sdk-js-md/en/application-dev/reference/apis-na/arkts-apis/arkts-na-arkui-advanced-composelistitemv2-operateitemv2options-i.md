@@ -23,7 +23,7 @@ arrow?: OperateIconV2
 
 Sets the arrow.
 
-**Type:** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -43,7 +43,7 @@ button?: OperateButtonV2
 
 Sets the button.
 
-**Type:** [OperateButtonV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**Type:** [OperateButtonV2](arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -63,7 +63,7 @@ checkbox?: OperateCheckV2
 
 Sets the checkBox.
 
-**Type:** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -83,7 +83,7 @@ icon?: OperateIconV2
 
 Sets the icon.
 
-**Type:** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -123,7 +123,7 @@ radio?: OperateCheckV2
 
 Sets the radio.
 
-**Type:** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -143,7 +143,7 @@ subIcon?: OperateIconV2
 
 Sets the subIcon.
 
-**Type:** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -203,7 +203,7 @@ toggle?: OperateCheckV2
 
 Sets the toggle.
 
-**Type:** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 

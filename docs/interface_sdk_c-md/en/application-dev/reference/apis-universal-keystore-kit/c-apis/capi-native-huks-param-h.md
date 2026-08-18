@@ -56,7 +56,7 @@ Initializes a parameter set. No parameter information is required, and the defau
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Initialization successful.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Initialization successful.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid. |
 
 ### OH_Huks_AddParams()
 
@@ -82,7 +82,7 @@ Adds parameters to a parameter set. After the parameters are added, use [OH_Huks
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: params is a null pointer or paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: params is a null pointer or paramSet is invalid. |
 
 ### OH_Huks_BuildParamSet()
 
@@ -106,7 +106,7 @@ Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_FreeParamSet()
 
@@ -150,7 +150,7 @@ Copies a parameter set (deep copy).
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: fromParamSet, fromParamSetSize, or paramSet<br>     is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: fromParamSet, fromParamSetSize, or paramSet      is invalid.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_GetParam()
 
@@ -176,7 +176,7 @@ Obtains a parameter from a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet or param is invalid, or param is not in <br>     paramSet. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet or param is invalid, or param is not in       paramSet. |
 
 ### OH_Huks_FreshParamSet()
 
@@ -201,7 +201,7 @@ Refreshes the [OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) data in the param
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_IsParamSetTagValid()
 
@@ -225,7 +225,7 @@ Checks whether the tags in a parameter set are valid.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: All tags in paramSet are valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid, or the parameter set contains<br>     invalid, duplicate, or incorrect tags. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: All tags in paramSet are valid.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid, or the parameter set contains      invalid, duplicate, or incorrect tags. |
 
 ### OH_Huks_IsParamSetValid()
 
@@ -250,7 +250,7 @@ Checks whether a parameter set is of the valid size.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: The size of the parameter set is valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: The paramSet or size parameter is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: The size of the parameter set is valid.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: The paramSet or size parameter is invalid. |
 
 ### OH_Huks_CheckParamMatch()
 
@@ -275,7 +275,7 @@ Checks whether two parameters are the same.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: The two parameters to be compared are the same.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: One of the parameters is invalid or the parameters do not<br>     match. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: The two parameters to be compared are the same.      <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: One of the parameters is invalid or the parameters do not      match. |
 
 ### OH_Huks_FreeKeyAliasSet()
 

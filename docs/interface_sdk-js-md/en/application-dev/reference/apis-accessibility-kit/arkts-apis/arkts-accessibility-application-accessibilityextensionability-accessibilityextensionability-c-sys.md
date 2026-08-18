@@ -95,7 +95,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 ```
 
-When an accessibility event occurs, the system distributes the event to the connected AccessibilityExtensionAbility and calls this API. You can process service logic based on the event information. This API usually needs to be overridden. For details about event types, see [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md#accessibilityeventtype-system-api).
+When an accessibility event occurs, the system distributes the event to the connected AccessibilityExtensionAbility and calls this API. You can process service logic based on the event information. This API usually needs to be overridden. For details about event types, see [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md).
 
 **Since:** 23
 

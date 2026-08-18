@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## onNotifyVisible
@@ -27,7 +28,7 @@ Listens to the event of notifyVisible type change. &lt;p&gt;You can use this met
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | The callback is used to return the running form info. |
 
 **错误码：**
 
@@ -64,7 +65,7 @@ Listens to the event of notifyVisible type change. &lt;p&gt;You can use this met
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hostBundleName | string | 是 | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | The callback is used to return the running form info. |
 
 **错误码：**
 

@@ -58,7 +58,7 @@ transitionCallback?: Callback<GeofenceTransition>
 
 Indicates the callback for reporting the BeaconFence transition status.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
 
 **Since:** 26.1.0
 

@@ -2,7 +2,7 @@
 
 The RestrictedWorker class contains all Worker functions.
 
-**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
+**Inheritance/Implementation:** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
 **Since:** 11
 

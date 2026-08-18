@@ -1,6 +1,6 @@
 # AVScreenCaptureRecorder
 
-屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过 [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder)创建一个 AVScreenCaptureRecorder实例。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
+屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过 [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md)创建一个 AVScreenCaptureRecorder实例。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## excludePickerWindows
@@ -99,7 +100,7 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## offStateChange
 
@@ -119,9 +120,9 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 否 | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 否 | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -140,9 +141,9 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 状态切换事件回调类型，支持的事件：'error'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
@@ -161,7 +162,7 @@ off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 否 | 状态切换事件回调方法， AVScreenCaptureStateCode表示切换到的状态，不填此参数则会取消最后一次 订阅事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 否 | 状态切换事件回调方法， AVScreenCaptureStateCode表示切换到的状态，不填此参数则会取消最后一次 订阅事件。 |
 
 ## onError
 
@@ -181,7 +182,7 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback invoked when the event is triggered. |
 
 **错误码：**
 
@@ -209,9 +210,9 @@ Subscribes to screen capture state changes. An application can subscribe to only
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 是 | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 是 | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -230,7 +231,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 错误事件回调类型，支持的事件：'error'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 录屏错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 录屏错误事件回调方法。 |
 
 **错误码：**
 
@@ -240,7 +241,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by ErrorCallback. |
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
@@ -259,7 +260,7 @@ on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 是 | 状态切换事件回调方法， AVScreenCaptureStateCode表示切换到的状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-multimedia-media-avscreencapturestatecode-e.md)&gt; | 是 | 状态切换事件回调方法， AVScreenCaptureStateCode表示切换到的状态。 |
 
 ## pauseRecording
 

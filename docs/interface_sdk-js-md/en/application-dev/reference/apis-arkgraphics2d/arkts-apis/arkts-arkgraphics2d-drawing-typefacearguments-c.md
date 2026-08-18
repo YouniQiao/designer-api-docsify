@@ -12,7 +12,6 @@ This module defines a struct for setting typeface arguments. > **NOTE：**> > - 
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addVariation

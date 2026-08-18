@@ -2,7 +2,7 @@
 
 Defines information about the socket connection.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface SocketRemoteInfo--><!--Device-socket-export interface SocketRemoteInfo-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 address: string
 ```
 
-Bound IP address.
+Peer IP address.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-SocketRemoteInfo-address: string--><!--Device-SocketRemoteInfo-address: string-End-->
 
@@ -36,11 +36,11 @@ Bound IP address.
 family: 'IPv4' | 'IPv6'
 ```
 
-Network protocol type. The options are as follows: IPv4, IPv6.
+Network protocol type. - IPv4 - IPv6 The default value is **IPv4**.
 
 **Type:** 'IPv4' \| 'IPv6'
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'--><!--Device-SocketRemoteInfo-family: 'IPv4' | 'IPv6'-End-->
 
@@ -49,32 +49,32 @@ Network protocol type. The options are as follows: IPv4, IPv6.
 ## port
 
 ```TypeScript
-port: number
+port: int
 ```
 
-Port number. The value ranges from 0 to 65535.
+Port number. The value ranges from **0** to **65535**.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-SocketRemoteInfo-port: number--><!--Device-SocketRemoteInfo-port: number-End-->
+<!--Device-SocketRemoteInfo-port: int--><!--Device-SocketRemoteInfo-port: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## size
 
 ```TypeScript
-size: number
+size: int
 ```
 
 Length of the server response message, in bytes.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-SocketRemoteInfo-size: number--><!--Device-SocketRemoteInfo-size: number-End-->
+<!--Device-SocketRemoteInfo-size: int--><!--Device-SocketRemoteInfo-size: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

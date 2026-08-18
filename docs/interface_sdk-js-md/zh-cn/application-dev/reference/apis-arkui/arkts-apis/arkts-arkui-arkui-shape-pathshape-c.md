@@ -1,8 +1,8 @@
 # PathShape
 
-用于clipShape和maskShape接口的路径。 继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod)。
+用于clipShape和maskShape接口的路径。 继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
 
-**继承/实现关系：** PathShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod)
+**继承/实现关系：** PathShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands

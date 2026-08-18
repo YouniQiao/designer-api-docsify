@@ -31,7 +31,7 @@ Disconnects all allowed bluetooth profiles between the local and remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 

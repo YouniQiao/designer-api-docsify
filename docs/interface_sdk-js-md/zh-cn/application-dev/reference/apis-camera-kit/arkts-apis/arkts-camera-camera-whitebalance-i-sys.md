@@ -1,8 +1,8 @@
 # WhiteBalance（系统接口）
 
-WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery系统接口)。 提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
+WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。 提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
 
-**继承/实现关系：** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery系统接口)
+**继承/实现关系：** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getWhiteBalance

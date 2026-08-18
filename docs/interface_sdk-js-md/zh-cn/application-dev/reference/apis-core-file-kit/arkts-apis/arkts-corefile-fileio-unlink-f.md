@@ -17,7 +17,7 @@ declare function unlink(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md)
 
 <!--Device-unnamed-declare function unlink(path: string): Promise<void>--><!--Device-unnamed-declare function unlink(path: string): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md)
 
 <!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -59,5 +59,5 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 待删除文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步删除文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步删除文件之后的回调。 |
 

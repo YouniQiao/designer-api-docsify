@@ -63,7 +63,7 @@ icon?: PopupIconOptions
 
 Icon of the popup. **NOTE：**The icon is not displayed when **width** and **height** are set to an invalid value or **0**. By default, no icon is displayed.
 
-**Type:** [PopupIconOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
+**Type:** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **Since:** 11
 
@@ -103,7 +103,7 @@ message: PopupTextOptions
 
 Message of the popup. **NOTE：****fontWeight** is not available for messages. By default, no message is displayed.
 
-**Type:** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 11
 
@@ -163,7 +163,7 @@ title?: PopupTextOptions
 
 Title of the popup. By default, no title is displayed.
 
-**Type:** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 11
 

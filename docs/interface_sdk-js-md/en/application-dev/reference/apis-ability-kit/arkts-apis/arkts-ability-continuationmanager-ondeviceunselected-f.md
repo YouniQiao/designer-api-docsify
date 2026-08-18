@@ -6,7 +6,7 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-## on_deviceUnselected
+## on_deviceUnselected('deviceUnselected')
 
 ```TypeScript
 function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void
@@ -18,7 +18,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 
 **Deprecated since:** 22
 
-**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_devicestatechangedevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -36,7 +36,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Error codes:**
 

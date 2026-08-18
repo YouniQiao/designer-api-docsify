@@ -81,7 +81,7 @@ Adds the header information to the client request.
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see <br>     OH_Websocket_ErrCode. |
+| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see       OH_Websocket_ErrCode. |
 
 ### OH_WebSocketClient_Connect()
 
@@ -111,7 +111,7 @@ Connects the WebSocket client to the server.
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see <br>     OH_Websocket_ErrCode. |
+| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see       OH_Websocket_ErrCode. |
 
 ### OH_WebSocketClient_Send()
 
@@ -141,7 +141,7 @@ Sends data from the WebSocket client to the server.
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see <br>     OH_Websocket_ErrCode. |
+| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see       OH_Websocket_ErrCode. |
 
 ### OH_WebSocketClient_Close()
 
@@ -170,7 +170,7 @@ Closes the connection on the WebSocket client.
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see <br>     OH_Websocket_ErrCode. |
+| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see       OH_Websocket_ErrCode. |
 
 ### OH_WebSocketClient_Destroy()
 
@@ -198,6 +198,6 @@ Destroys the WebSocket client and releases the context and resources of the WebS
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see <br>     OH_Websocket_ErrCode. |
+| int | 0 if the operation is successful; a non-0 value otherwise. For details about the return values, see       OH_Websocket_ErrCode. |
 
 

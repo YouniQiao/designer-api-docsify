@@ -6,9 +6,6 @@ Accessibility
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -24,7 +21,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 | [accessibility](arkts-accessibility-accessibility-n.md) | Accessibility |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

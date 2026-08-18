@@ -371,7 +371,7 @@ Called when an error occurs during the running of an OH_AVScreenCapture instance
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | int32_t errorCode | Error code. |
 
 ### OH_AVScreenCaptureOnAudioBufferAvailable()
@@ -390,7 +390,7 @@ Called when an audio buffer is available during the running of an OH_AVScreenCap
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | bool isReady | Whether the audio buffer is available. The values include **true** (yes) and **false** (no). |
 | [OH_AudioCaptureSourceType](capi-native-avscreen-capture-base-h.md#oh_audiocapturesourcetype) type | Audio source type. |
 
@@ -410,7 +410,7 @@ Called when a video buffer is available during the running of an OH_AVScreenCapt
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | bool isReady | Whether the video buffer is available. The values include **true** (yes) and **false** (no). |
 
 ### OH_AVScreenCapture_OnStateChange()
@@ -429,7 +429,7 @@ Called when the state changes during the running of an OH_AVScreenCapture instan
 
 | Parameter | Description |
 | -- | -- |
-| (struct OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [struct OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | [OH_AVScreenCaptureStateCode](capi-native-avscreen-capture-base-h.md#oh_avscreencapturestatecode) stateCode | Status code. |
 | void \*userData | Pointer to the user-defined data carried in the function. |
 
@@ -449,7 +449,7 @@ Called when an error occurs during the running of an OH_AVScreenCapture instance
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | int32_t errorCode | Error code. |
 | void \*userData | Pointer to the user-defined data carried in the function. |
 
@@ -469,7 +469,7 @@ Called when an audio buffer or a video buffer is available during the running of
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to the OH_AVScreenCapture instance. |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to the OH_AVScreenCapture instance. |
 | [OH_AVBuffer](../AVCodecKit/capi-core-oh-avbuffer.md) \*buffer | Pointer to the OH_AVBuffer instance. After the callback is triggered, the buffer is no longer valid. |
 | [OH_AVScreenCaptureBufferType](capi-native-avscreen-capture-base-h.md#oh_avscreencapturebuffertype) bufferType | Type of the buffer. |
 | int64_t timestamp | Timestamp, in nanoseconds. |
@@ -491,7 +491,7 @@ When one of the display devices start being captured, the function pointer will 
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture \*capture | Pointer to an OH_AVScreenCapture instance |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md) \*capture | Pointer to an OH_AVScreenCapture instance |
 | uint64_t displayId | Id of the display device that being captured |
 | void \*userData | Pointer to user specific data |
 
@@ -511,7 +511,7 @@ Called when the screen capture content changes during the running of an OH_AVScr
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture\* capture | Pointer to an OH_AVScreenCapture instance |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md)\* capture | Pointer to an OH_AVScreenCapture instance |
 | [OH_AVScreenCaptureContentChangedEvent](capi-native-avscreen-capture-base-h.md#oh_avscreencapturecontentchangedevent) event | enum for content change event |
 | [OH_Rect](capi-avscreencapture-oh-rect.md)\* area | capture content rect position |
 | void \*userData | Pointer to user specific data |
@@ -532,7 +532,7 @@ Called to return the parameters selected by the user on the authorization UI to 
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture\* capture | Pointer to an OH_AVScreenCapture instance |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md)\* capture | Pointer to an OH_AVScreenCapture instance |
 | [OH_AVScreenCapture_UserSelectionInfo](capi-avscreencapture-oh-avscreencapture-userselectioninfo.md)\* selections | The recording parameter informationselected by the user on the authorization interface |
 | void \*userData | Pointer to user specific data |
 
@@ -552,7 +552,7 @@ Called when a privacy protection event occurs during the running of the [OH_AVSc
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVScreenCapture\* capture | Pointer to an OH_AVScreenCapture instance |
+| [OH_AVScreenCapture](capi-avscreencapture-oh-avscreencapture.md)\* capture | Pointer to an OH_AVScreenCapture instance |
 | [OH_PrivacyProtectInfo](capi-avscreencapture-oh-privacyprotectinfo.md)\* privacyProtect | Pointer to privacy protect info |
 | void \*userData | Pointer to user specific data |
 

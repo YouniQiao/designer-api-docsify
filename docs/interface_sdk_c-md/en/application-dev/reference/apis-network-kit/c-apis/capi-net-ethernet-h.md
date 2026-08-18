@@ -49,7 +49,7 @@ Get the ethernet mac address list.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - success.<br> 201 - Permission denied.<br> 2200001 - Invalid parameter value.<br> 2200002 - Operation failed. Cannot connect to service.<br> 2201005 - Device information does not exist. |
+| int32_t | 0 - success.  201 - Permission denied.  2200001 - Invalid parameter value.  2200002 - Operation failed. Cannot connect to service.  2201005 - Device information does not exist. |
 
 ### OH_Ethernet_GetNetAddress()
 
@@ -77,6 +77,6 @@ Get the ethernet ip address list.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - success.<br> 201 - Permission denied.<br> 2200001 - Invalid parameter value.<br> 2200002 - Operation failed. Cannot connect to service.<br> 2201005 - Device information does not exist. |
+| int32_t | 0 - success.  201 - Permission denied.  2200001 - Invalid parameter value.  2200002 - Operation failed. Cannot connect to service.  2201005 - Device information does not exist. |
 
 

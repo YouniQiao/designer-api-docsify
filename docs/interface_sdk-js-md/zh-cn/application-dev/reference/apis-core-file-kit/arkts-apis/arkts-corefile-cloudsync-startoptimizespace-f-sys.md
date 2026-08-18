@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## startOptimizeSpace
@@ -28,7 +30,7 @@ function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | optimizePara | [OptimizeSpaceParam](arkts-corefile-cloudsync-optimizespaceparam-i-sys.md) | 是 | 优化参数。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OptimizeSpaceProgress](arkts-corefile-cloudsync-optimizespaceprogress-i-sys.md)&gt; | 否 | 回调函数。返回优化进度，缺省情况下返回401错误，不执行清理任务 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OptimizeSpaceProgress](arkts-corefile-cloudsync-optimizespaceprogress-i-sys.md)&gt; | 否 | 回调函数。返回优化进度，缺省情况下返回401错误，不执行清理任务 |
 
 **返回值：**
 

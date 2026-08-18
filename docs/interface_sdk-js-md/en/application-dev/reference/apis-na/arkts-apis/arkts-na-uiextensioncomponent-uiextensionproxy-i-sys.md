@@ -36,7 +36,7 @@ Deregisters the listener that watches for async data receiver callback being reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ Deregisters the listener that watches for sync data receiver callback being regi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Register the listener that watches for async data receiver callback being regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 
@@ -132,7 +132,7 @@ Register the listener that watches for sync data receiver callback being registe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ This function is for sending data to the UIExtensionAbility. AnonyMous Object Re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |  |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |  |
 
 **Error codes:**
 
@@ -196,13 +196,13 @@ This function is for sending data to the UIExtensionAbility and waiting for the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data send to the UIExtensionAbility. |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data send to the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | data - Data transferred from the UIExtensionAbility. |
+| Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | data - Data transferred from the UIExtensionAbility. |
 
 **Error codes:**
 

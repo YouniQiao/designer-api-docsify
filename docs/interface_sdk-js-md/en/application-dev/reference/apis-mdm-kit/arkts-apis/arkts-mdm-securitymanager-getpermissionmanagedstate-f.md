@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
-import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getPermissionManagedState
@@ -17,7 +16,7 @@ function getPermissionManagedState(
   ): PermissionManagedState
 ```
 
-Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md#permissions) of a specified application.
+Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application.
 
 **Since:** 20
 

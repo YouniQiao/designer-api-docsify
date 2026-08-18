@@ -1,6 +1,6 @@
 # @ohos.UiTest
 
-The static builder for building [On](arkts-test-uitest-on-c.md#on)object conveniently,usage example:ON.text('txt').enabled(true).
+The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true).
 
 ## Modules to Import
 
@@ -15,7 +15,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 
 | Name | Description |
 | --- | --- |
-| [ON](arkts-test-on-n.md) | The static builder for building [On](arkts-test-uitest-on-c.md#on)object conveniently,usage example:ON.text('txt').enabled(true). |
+| [ON](arkts-test-on-n.md) | The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true). |
 
 ### Classes
 

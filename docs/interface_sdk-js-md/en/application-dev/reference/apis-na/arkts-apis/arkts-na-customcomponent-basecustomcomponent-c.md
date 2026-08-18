@@ -2,7 +2,7 @@
 
 Definition of base custom component, which is base class of custom component.
 
-**Inheritance/Implementation:** BaseCustomComponent extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#extendablecomponent) and implements CommonAttribute
+**Inheritance/Implementation:** BaseCustomComponent extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md) and implements CommonAttribute
 
 **Since:** 23
 

@@ -6,7 +6,7 @@ Enumerates the authentication result codes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#userauthresultcode)
+**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
 
 <!--Device-userAuth-enum ResultCode--><!--Device-userAuth-enum ResultCode-End-->
 
@@ -60,7 +60,7 @@ A general operation error occurred.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-userauthresultcode-e.md#generalerror)
+**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-userauthresultcode-e.md#general_error)
 
 <!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
 
@@ -114,7 +114,7 @@ The authentication type is not supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#typenotsupport)
+**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#type_not_support)
 
 <!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
 
@@ -132,7 +132,7 @@ The authentication trust level is not supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#trustlevelnotsupport)
+**Substitutes:** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#trust_level_not_support)
 
 <!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
 
@@ -168,7 +168,7 @@ Invalid parameters are detected.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-userauthresultcode-e.md#invalidparameters)
+**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-userauthresultcode-e.md#invalid_parameters)
 
 <!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
 
@@ -204,7 +204,7 @@ The user has not enrolled the authentication information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-userauthresultcode-e.md#notenrolled)
+**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-userauthresultcode-e.md#not_enrolled)
 
 <!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
 

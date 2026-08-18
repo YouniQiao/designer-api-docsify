@@ -2,7 +2,7 @@
 
 Defines the row layout algorithm.
 
-**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](arkts-na-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
 
 ## alignItems
 
@@ -104,7 +104,7 @@ Alignment mode of the child components along the horizontal axis.
 
 Horizontal layout element spacing.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

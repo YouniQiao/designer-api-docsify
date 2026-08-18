@@ -1,6 +1,6 @@
 # UIWaterFlowEvent
 
-frameNode中 [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent)方法的返 回值，可用于给WaterFlow节点设置滚动事件。 UIWaterFlowEvent继承于UIScrollableCommonEvent。
+frameNode中 [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md)方法的返 回值，可用于给WaterFlow节点设置滚动事件。 UIWaterFlowEvent继承于UIScrollableCommonEvent。
 
 **继承/实现关系：** UIWaterFlowEvent extends UIScrollableCommonEvent
 

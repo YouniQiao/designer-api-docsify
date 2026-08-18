@@ -1,6 +1,6 @@
 # OfflineResourceType
 
-Enumerates the offline resource types corresponding to the [OfflineResourceMap](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcemap-i.md#offlineresourcemap) object.
+Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) object.
 
 **Since:** 12
 

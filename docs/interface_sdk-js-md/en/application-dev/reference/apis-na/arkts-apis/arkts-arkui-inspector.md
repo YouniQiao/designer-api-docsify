@@ -23,9 +23,9 @@ Used to do observer layout and draw event for component.
 
 | Name | Description |
 | --- | --- |
-| [getInspectorByKey](arkts-na-inspector-getinspectorbykey-f.md#getinspectorbykey) | Obtains all attributes of the component with the specified ID. |
-| [getInspectorTree](arkts-na-inspector-getinspectortree-f.md#getinspectortree) | Get components tree. |
-| [sendEventByKey](arkts-na-inspector-sendeventbykey-f.md#sendeventbykey) | Sends an event to the component with the specified ID. |
+| [getInspectorByKey](arkts-na-inspector-getinspectorbykey-f.md) | Obtains all attributes of the component with the specified ID. |
+| [getInspectorTree](arkts-na-inspector-getinspectortree-f.md) | Get components tree. |
+| [sendEventByKey](arkts-na-inspector-sendeventbykey-f.md) | Sends an event to the component with the specified ID. |
 
 ### Interfaces
 

@@ -29,12 +29,27 @@ Creates a **Grid** component.
 
 ## Summary
 
-- [ComputedBarAttribute](arkts-arkui-computedbarattribute-i.md)
-- [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)
-- [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md)
-- [UIGridEvent](arkts-arkui-uigridevent-i.md)
-- [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md)
-- [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md)
-- [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md)
-- [GridDirection](arkts-arkui-griddirection-e.md)
-- [GridItemAlignment](arkts-arkui-griditemalignment-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ComputedBarAttribute](arkts-arkui-computedbarattribute-i.md) | Provides information about the position and length of the scrollbar. |
+| [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns). On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout). To improve the performance of **Grid** in scenarios such as jumps and column quantity changes, you are advised to use **GridLayoutOptions** whenever possible. Even if there are no special cross-row or cross-column nodes in **Grid**, performance during jumps can still be enhanced by using 'Grid(this.scroller, {regularSize: [1, 1]})'. |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | Define start line info used in GridLayoutOptions. |
+| [UIGridEvent](arkts-arkui-uigridevent-i.md) | Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **Grid** node. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions. |
+| [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions. |
+| [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **Grid** component. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [GridDirection](arkts-arkui-griddirection-e.md) | Enumerates the main axis layout directions. |
+| [GridItemAlignment](arkts-arkui-griditemalignment-e.md) | Enumerates the alignment modes of grid items. > **NOTE：**> > 1. The **STRETCH** option only takes effect in scrollable grids.<br> > 2. The **STRETCH** option takes effect only if each grid item in a row is of a regular size (occupying only one > row and one column). It is not effective in scenarios where there are grid items spanning across rows or columns.<br> > 3. When **STRETCH** is used, only grid items without a set height will adopt the height of the tallest grid item > in the current row; the height of grid items with a set height will remain unchanged.<br> > 4. When **STRETCH** is used, the grid undergoes an additional layout process, which may incur additional > performance overhead. |
+

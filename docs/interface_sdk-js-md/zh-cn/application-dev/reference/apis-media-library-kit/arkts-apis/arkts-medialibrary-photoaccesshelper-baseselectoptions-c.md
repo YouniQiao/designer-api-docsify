@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType
@@ -97,7 +98,7 @@ autoPlayScenes?: Array<AutoPlayScene>
 combinedMediaTypeFilter?: Array<string>
 ```
 
-将过滤条件配置为字符串数组，支持多种类型组合。 字符串格式如下：`photoType | photoSubType1,photoSubType2, … | mimeType1,mimeType2, …`。 - 第1段指定1个photoType，固定为image（图片）或video（视频）。 - 第2段指定1~N个photoSubType，多个photoSubType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N目前支持最大为1；可选的PhotoSubType包括movingPhoto或“*”（忽略）。 - 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于 [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md#mimetypefilter)。 三段过滤的组合取交集处理。 支持“非”的逻辑。对于需要排除的类型，进行加括号的方式进行标识；一个string最多可使用1个括号。 当应用配置的过滤条件string不满足上述规格时，过滤结果为空。 配置该参数时，仅取数组前三个参数进行处理，MIMEType、mimeTypeFilter参数自动失效。 **原子化服务API：** 从API version 20开始支持在原子化服务中使用。
+将过滤条件配置为字符串数组，支持多种类型组合。 字符串格式如下：`photoType | photoSubType1,photoSubType2, … | mimeType1,mimeType2, …`。 - 第1段指定1个photoType，固定为image（图片）或video（视频）。 - 第2段指定1~N个photoSubType，多个photoSubType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N目前支持最大为1；可选的PhotoSubType包括movingPhoto或“*”（忽略）。 - 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于 [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)。 三段过滤的组合取交集处理。 支持“非”的逻辑。对于需要排除的类型，进行加括号的方式进行标识；一个string最多可使用1个括号。 当应用配置的过滤条件string不满足上述规格时，过滤结果为空。 配置该参数时，仅取数组前三个参数进行处理，MIMEType、mimeTypeFilter参数自动失效。 **原子化服务API：** 从API version 20开始支持在原子化服务中使用。
 
 **类型：** Array&lt;string&gt;
 
@@ -173,7 +174,7 @@ picker内宫格捏合模式。
 isMovingPhotoBadgeShown?: boolean
 ```
 
-是否在大图浏览模式下展示动态照片图标，true表示展示，false表示不展示，默认为false。 若设置为true，[Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoselectresult)返回movingPhotoBadgeStates数组，动态照片默认返回状态为 [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md#movingphotobadgestatetype)。 **注意：** 必须同时使用isMovingPhotoBadgeShown和MovingPhotoBadgeStateType判断照片是否是动态照片。
+是否在大图浏览模式下展示动态照片图标，true表示展示，false表示不展示，默认为false。 若设置为true，[Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)返回movingPhotoBadgeStates数组，动态照片默认返回状态为 [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)。 **注意：** 必须同时使用isMovingPhotoBadgeShown和MovingPhotoBadgeStateType判断照片是否是动态照片。
 
 **类型：** boolean
 

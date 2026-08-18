@@ -25,7 +25,7 @@ Get the hash code of an object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | Yes | The object that need to get hash code. |
+| obj | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | Yes | The object that need to get hash code. |
 
 **Return value:**
 

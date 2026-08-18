@@ -86,7 +86,7 @@ User-level encryption. The file permissions vary according to their scenarios. -
 EL5 = 4
 ```
 
-Application-level encryption. The file permissions vary according to their scenarios. - An open file is always readable and writable regardless of whether the screen is locked. When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by calling [Access](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess). When the screen is unlocked, such a file can be opened, read, and written. A file can be created and then opened, read, and written regardless of whether the screen is locked.
+Application-level encryption. The file permissions vary according to their scenarios. - An open file is always readable and writable regardless of whether the screen is locked. When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by calling [Access](arkts-ability-screenlockfilemanager-acquireaccess-f.md). When the screen is unlocked, such a file can be opened, read, and written. A file can be created and then opened, read, and written regardless of whether the screen is locked.
 
 **Since:** 23
 

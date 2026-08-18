@@ -12,7 +12,6 @@ Describes the image decoding options.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## cropAndScaleStrategy
@@ -53,7 +52,7 @@ Target color space. The default value is **UNKNOWN**.
 desiredDynamicRange?: DecodingDynamicRange
 ```
 
-Desired dynamic range. The default value is **SDR**. This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource). By default, the image source is decoded as SDR content. If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
+Desired dynamic range. The default value is **SDR**. This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md). By default, the image source is decoded as SDR content. If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
 
 **Type:** [DecodingDynamicRange](arkts-image-image-decodingdynamicrange-e.md)
 

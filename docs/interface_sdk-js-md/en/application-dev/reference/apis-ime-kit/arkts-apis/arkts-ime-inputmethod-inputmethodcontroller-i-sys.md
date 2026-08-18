@@ -1,6 +1,6 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md).
 
 **Since:** 23
 
@@ -12,16 +12,10 @@ A control class that encapsulates APIs for input method management, which can on
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 

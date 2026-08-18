@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## notifySaveAsResult
@@ -13,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -33,7 +32,7 @@ Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-ap
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the caller. |
 | requestCode | int | Yes | Request code passed in by the DLP management application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -51,7 +50,7 @@ Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-ap
 function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
 
 **Since:** 23
 

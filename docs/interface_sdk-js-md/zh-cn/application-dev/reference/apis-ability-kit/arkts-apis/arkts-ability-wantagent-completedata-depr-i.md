@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [CompleteData](arkts-ability-wantagent-completedata-i.md#completedata)
+**替代接口：** [CompleteData](arkts-ability-wantagent-completedata-i.md)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 

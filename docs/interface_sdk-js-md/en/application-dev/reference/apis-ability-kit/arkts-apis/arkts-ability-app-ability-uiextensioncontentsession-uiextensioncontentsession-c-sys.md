@@ -12,7 +12,6 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionHostWindowProxy
@@ -180,7 +179,7 @@ Send data from an ui extension to an ui extension component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the data send to ui extension component. |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the data send to ui extension component. |
 
 **Error codes:**
 
@@ -454,21 +453,21 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -526,21 +525,21 @@ Starts an ability with **options** specified. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -612,14 +611,14 @@ Starts an ability. This API uses a promise to return the result. UI extension us
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -680,21 +679,21 @@ Starts an ability as the caller. The initial ability places its caller informati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -757,21 +756,21 @@ Starts an ability as the caller, with **options** specified. The initial ability
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -848,14 +847,14 @@ Starts an ability as the caller. The initial ability places its caller informati
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -921,21 +920,21 @@ Starts an ability and returns the result to the caller after the ability is term
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -993,21 +992,21 @@ Starts an ability with **options** specified and returns the result to the calle
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -1079,14 +1078,14 @@ Starts an ability and returns the result to the caller after the ability is term
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |

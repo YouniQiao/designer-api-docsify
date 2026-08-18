@@ -79,7 +79,7 @@ Initializes a TEE.The TEE must be initialized before a session is open or comman
 
 | Type | Description |
 | -- | -- |
-| TEEC_Result | Returns {@code TEEC_SUCCESS} if the TEE is successfully initialized.<br>         Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>name</b> is incorrect or <b>context</b> is null.<br>         Returns {@code TEEC_ERROR_GENERIC} if the available system resources are insufficient. |
+| TEEC_Result | Returns {@code TEEC_SUCCESS} if the TEE is successfully initialized.          Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>name</b> is incorrect or <b>context</b> is null.          Returns {@code TEEC_ERROR_GENERIC} if the available system resources are insufficient. |
 
 ### TEEC_FinalizeContext()
 
@@ -127,7 +127,7 @@ Opens a session.This function is used to set up a connection between the CA and 
 
 | Type | Description |
 | -- | -- |
-| TEEC_Result | Returns {@code TEEC_SUCCESS} if the session is open successfully.<br>         Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b>, <b>session</b>, or <b>destination</b> is null.<br>         Returns {@code TEEC_ERROR_ACCESS_DENIED} if the access request is denied.<br>         Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient.<br>         Returns {@code TEEC_ERROR_TRUSTED_APP_LOAD_ERROR} if the TA failed to be loaded.<br>         For details about other return values, see {@code TEEC_ReturnCode}. |
+| TEEC_Result | Returns {@code TEEC_SUCCESS} if the session is open successfully.          Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b>, <b>session</b>, or <b>destination</b> is null.          Returns {@code TEEC_ERROR_ACCESS_DENIED} if the access request is denied.          Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient.          Returns {@code TEEC_ERROR_TRUSTED_APP_LOAD_ERROR} if the TA failed to be loaded.          For details about other return values, see {@code TEEC_ReturnCode}. |
 
 ### TEEC_CloseSession()
 
@@ -172,7 +172,7 @@ Sends a command to a TA.The CA sends the command ID to the TA through the specif
 
 | Type | Description |
 | -- | -- |
-| TEEC_Result | Returns {@code TEEC_SUCCESS} if the command is sent successfully.<br>         Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>session</b> is null or<br> <b>operation</b> is in incorrect format.<br>         Returns {@code TEEC_ERROR_ACCESS_DENIED} if the access request is denied.<br>         Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient.<br>         For details about other return values, see {@code TEEC_ReturnCode}. |
+| TEEC_Result | Returns {@code TEEC_SUCCESS} if the command is sent successfully.          Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>session</b> is null or  <b>operation</b> is in incorrect format.          Returns {@code TEEC_ERROR_ACCESS_DENIED} if the access request is denied.          Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient.          For details about other return values, see {@code TEEC_ReturnCode}. |
 
 ### TEEC_RegisterSharedMemory()
 
@@ -197,7 +197,7 @@ Registers shared memory in the specified TEE context.The registered shared memor
 
 | Type | Description |
 | -- | -- |
-| TEEC_Result | Returns {@code TEEC_SUCCESS} if the operation is successful.<br>         Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b> or <b>sharedMem</b> is null or<br> the pointed memory is empty. |
+| TEEC_Result | Returns {@code TEEC_SUCCESS} if the operation is successful.          Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b> or <b>sharedMem</b> is null or  the pointed memory is empty. |
 
 ### TEEC_AllocateSharedMemory()
 
@@ -222,7 +222,7 @@ Requests shared memory in the specified TEE context.The shared memory can be use
 
 | Type | Description |
 | -- | -- |
-| TEEC_Result | Returns {@code TEEC_SUCCESS} if the operation is successful.<br>         Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b> or <b>sharedMem</b> is null.<br>         Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient. |
+| TEEC_Result | Returns {@code TEEC_SUCCESS} if the operation is successful.          Returns {@code TEEC_ERROR_BAD_PARAMETERS} if <b>context</b> or <b>sharedMem</b> is null.          Returns {@code TEEC_ERROR_OUT_OF_MEMORY} if the available system resources are insufficient. |
 
 ### TEEC_ReleaseSharedMemory()
 

@@ -14,7 +14,6 @@ Defines the parameter used to execute an intent call.
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -123,7 +122,7 @@ Intent execution mode. If an intent defined by the @InsightIntentLink decorator 
 flags?: int
 ```
 
-[Flags](arkts-ability-wantconstant-flags-e.md#flags) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE：**This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
+[Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE：**This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
 **Type:** int
 
@@ -165,7 +164,7 @@ insightIntentParam: Record<string, RecordData>
 
 Indicates the insight intent param.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

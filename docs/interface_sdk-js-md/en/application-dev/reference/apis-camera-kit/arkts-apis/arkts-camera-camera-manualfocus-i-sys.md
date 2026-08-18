@@ -2,7 +2,7 @@
 
 ManualFocus object.
 
-**Inheritance/Implementation:** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md#manualfocusquery)
+**Inheritance/Implementation:** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md)
 
 **Since:** 23
 

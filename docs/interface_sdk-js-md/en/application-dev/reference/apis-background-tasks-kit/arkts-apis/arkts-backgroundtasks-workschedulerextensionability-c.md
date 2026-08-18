@@ -12,7 +12,6 @@ Provides callbacks to be invoked when the scheduling conditions are met or the s
 
 ```TypeScript
 import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart
@@ -57,7 +56,7 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
 onWorkStop(work: workScheduler.WorkInfo): void
 ```
 
-Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork) API is called to cancel the task.
+Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) API is called to cancel the task.
 
 **Since:** 23
 

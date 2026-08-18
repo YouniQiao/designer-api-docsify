@@ -2,13 +2,13 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md#hidhostprofile)
+**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md)
 
 <!--Device-bluetoothManager-interface HidHostProfile--><!--Device-bluetoothManager-interface HidHostProfile-End-->
 
@@ -20,7 +20,7 @@ Manager hid host profile.
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## off_connectionStateChange
+## off_connectionStateChange('connectionStateChange')
 
 ```TypeScript
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
@@ -46,7 +46,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -55,7 +55,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-## on_connectionStateChange
+## on_connectionStateChange('connectionStateChange')
 
 ```TypeScript
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
@@ -81,7 +81,7 @@ Subscribe the event reported when the profile connection state changes. On API 1
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 

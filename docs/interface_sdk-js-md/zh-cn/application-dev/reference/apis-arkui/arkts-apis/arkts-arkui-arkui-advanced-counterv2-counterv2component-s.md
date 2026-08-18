@@ -11,6 +11,7 @@ CounterV2组件用于精确调节数值，包含列表型、紧凑型、数值�
 ## 导入模块
 
 ```TypeScript
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## options

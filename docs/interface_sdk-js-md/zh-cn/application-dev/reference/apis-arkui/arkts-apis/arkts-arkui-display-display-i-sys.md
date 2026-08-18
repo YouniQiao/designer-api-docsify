@@ -1,6 +1,6 @@
 # Display
 
-屏幕实例。描述Display对象的属性和方法。 下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、 [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
+屏幕实例。描述Display对象的属性和方法。 下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md)、 [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
 ```
 
 ## hasImmersiveWindow
@@ -33,7 +34,7 @@ hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
 
 **错误码：**
 

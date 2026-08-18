@@ -12,7 +12,6 @@ Defines the connection result.
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## errorCode

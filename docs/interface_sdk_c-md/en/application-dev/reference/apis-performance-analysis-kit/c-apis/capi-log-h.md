@@ -129,7 +129,7 @@ Outputs logs.You can use this function to output logs based on the specified log
 
 | Type | Description |
 | -- | -- |
-| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller<br> than <b>0</b> otherwise. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller  than <b>0</b> otherwise. |
 
 ### OH_LOG_PrintMsg()
 
@@ -157,7 +157,7 @@ Outputs logs.You can use this function to output logs based on the specified log
 
 | Type | Description |
 | -- | -- |
-| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller<br> than <b>0</b> otherwise. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller  than <b>0</b> otherwise. |
 
 ### OH_LOG_PrintMsgByLen()
 
@@ -187,7 +187,7 @@ Outputs logs.You can use this function to output logs based on the specified log
 
 | Type | Description |
 | -- | -- |
-| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller<br> than <b>0</b> otherwise. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller  than <b>0</b> otherwise. |
 
 ### OH_LOG_VPrint()
 
@@ -216,7 +216,7 @@ Outputs logs.You can use this function to output logs based on the specified log
 
 | Type | Description |
 | -- | -- |
-| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller<br> than <b>0</b> otherwise. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller  than <b>0</b> otherwise. |
 
 ### OH_LOG_IsLoggable()
 
@@ -385,7 +385,7 @@ Defines the function pointer type for the user-defined log processing function.
 
 | Parameter | Description |
 | -- | -- |
-| (const LogType type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [const LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
 | [const LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>,<b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
 | const unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
 | const char \*tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |

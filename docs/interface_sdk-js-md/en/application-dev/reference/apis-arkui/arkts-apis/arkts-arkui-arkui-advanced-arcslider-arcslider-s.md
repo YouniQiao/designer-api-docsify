@@ -20,7 +20,7 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 options: ArcSliderOptions
 ```
 
-Parameters of the arc slider. Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#arcslideroptions)
+Parameters of the arc slider. Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 
 **Type:** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 

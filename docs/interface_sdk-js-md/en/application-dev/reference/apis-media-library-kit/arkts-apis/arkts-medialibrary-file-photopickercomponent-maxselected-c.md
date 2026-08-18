@@ -22,7 +22,7 @@ data?: Map<MaxCountType, number>
 
 Maximum number of media assets (images, videos, or both) that can be selected at a time.
 
-**Type:** Map&lt;[MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md), number&gt;
+**Type:** Map&lt;[MaxCountType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-maxcounttype-e.md), number&gt;
 
 **Since:** 12
 

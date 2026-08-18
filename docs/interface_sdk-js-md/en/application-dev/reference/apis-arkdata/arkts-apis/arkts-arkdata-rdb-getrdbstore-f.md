@@ -17,7 +17,7 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)
+**Substitutes:** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)
 
 <!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void-End-->
 
@@ -30,7 +30,7 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 | context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see Context. |
 | config | StoreConfig | Yes | Configuration of the RDB store. |
 | version | number | Yes | RDB store version.<br>Currently, automatic RDB upgrades and downgrades performed based on **version** is not supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes | Callback used to return the RDB store obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RdbStore&gt; | Yes | Callback used to return the RDB store obtained. |
 
 
 ## getRdbStore

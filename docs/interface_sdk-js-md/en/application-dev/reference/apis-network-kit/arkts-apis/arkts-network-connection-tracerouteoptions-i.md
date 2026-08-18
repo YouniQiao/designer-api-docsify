@@ -1,6 +1,6 @@
 # TraceRouteOptions
 
-Network traceroute option definition.
+Defines options for route tracing.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 maxJumpNumber?: int
 ```
 
-Maximum number of jumps, max is 30. Default is 30.
+Maximum number of jumps. The value range is [1, 30]. The default value is **30**.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Maximum number of jumps, max is 30. Default is 30.
 packetsType?: PacketsType
 ```
 
-Packets type. Default is NETCONN_PACKETS_ICMP.
+Type of the data packet used for probe. The default value is **NETCONN_PACKETS_ICMP**.
 
 **Type:** [PacketsType](arkts-network-connection-packetstype-e.md)
 

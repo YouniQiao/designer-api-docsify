@@ -12,7 +12,6 @@ Provides information about a form.
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -95,7 +94,7 @@ Obtains the custom data defined in this form.
 defaultDimension: int
 ```
 
-Obtains the default grid style of this form. The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension).
+Obtains the default grid style of this form. The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
 **Type:** int
 
@@ -329,7 +328,7 @@ Obtains the scheduledUpdateTime.
 supportDimensions: Array<int>
 ```
 
-Obtains the grid styles supported by this form. The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension).
+Obtains the grid styles supported by this form. The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
 **Type:** Array&lt;int&gt;
 
@@ -347,7 +346,7 @@ Obtains the grid styles supported by this form. The minimum length is 1, refer t
 supportedShapes: Array<int>
 ```
 
-Obtains the shape supported by this form. The minimum length is 1, refer to [FormShape](arkts-form-forminfo-formshape-e.md#formshape).
+Obtains the shape supported by this form. The minimum length is 1, refer to [FormShape](arkts-form-forminfo-formshape-e.md).
 
 **Type:** Array&lt;int&gt;
 

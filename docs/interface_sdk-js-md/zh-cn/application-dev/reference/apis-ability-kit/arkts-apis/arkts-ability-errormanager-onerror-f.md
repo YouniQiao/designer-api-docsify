@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 function on(type: 'error', observer: ErrorObserver): number

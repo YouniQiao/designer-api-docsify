@@ -32,7 +32,7 @@ Switch to (enable) the given profile on the eUICC.
 | slotId | int | Yes | Indicates the card slot index number. |
 | portIndex | int | Yes | Index of the port for the slot. |
 | iccid | string | Yes | The iccid of the profile to switch to. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#resultmustdisableprofile) to allow the user to agree to this operation first. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#result_must_disable_profile) to allow the user to agree to this operation first. |
 
 **Return value:**
 

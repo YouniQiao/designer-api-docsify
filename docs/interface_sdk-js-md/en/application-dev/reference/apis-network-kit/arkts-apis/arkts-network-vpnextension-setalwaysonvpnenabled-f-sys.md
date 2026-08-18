@@ -12,7 +12,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>
 ```
 
-Set the Enable/Disable Always on VPN mode for a device.
+Enables or disables the **always on** mode. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ Set the Enable/Disable Always on VPN mode for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Always on enable or disable |
-| bundleName | string | Yes | bundleName is used to set always on. |
+| enable | boolean | Yes | Whether to enable the **always on** mode. The value **true** means to enable the **always on** mode, and the value **false** means the opposite. |
+| bundleName | string | Yes | Bundle name of the third-party application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

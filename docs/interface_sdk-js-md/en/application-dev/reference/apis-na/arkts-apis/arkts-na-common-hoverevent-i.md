@@ -2,7 +2,7 @@
 
 The hover action triggers this method invocation.
 
-**Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **Since:** 23
 

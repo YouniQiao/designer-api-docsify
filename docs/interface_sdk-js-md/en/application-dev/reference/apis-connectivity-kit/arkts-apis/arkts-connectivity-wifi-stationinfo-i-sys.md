@@ -6,7 +6,7 @@ Wi-Fi station information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md#stationinfo-system-api)
+**Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)
 
 <!--Device-wifi-interface StationInfo--><!--Device-wifi-interface StationInfo-End-->
 

@@ -33,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | Attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ContainerReaderAttribute](arkts-na-arkui-components-containerreader-containerreaderattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[ContainerReaderAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -57,7 +57,7 @@ breakpointConfig(value?: BreakpointOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-na-arkui-components-containerreader-breakpointoptions-i.md) | No |  |
+| value | [BreakpointOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -81,7 +81,7 @@ setContainerReaderOptions(value: ContainerReaderInfo): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](arkts-na-arkui-components-containerreader-containerreaderinfo-i.md) | Yes |  |
+| value | [ContainerReaderInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes |  |
 
 **Return value:**
 

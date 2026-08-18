@@ -6,7 +6,7 @@ The UiTest framework provides a wide range of UI component feature description A
 
 **Deprecated since:** 9
 
-**Substitutes:** [On](arkts-test-uitest-on-c.md#on)
+**Substitutes:** [On](arkts-test-uitest-on-c.md)
 
 <!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
@@ -395,7 +395,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

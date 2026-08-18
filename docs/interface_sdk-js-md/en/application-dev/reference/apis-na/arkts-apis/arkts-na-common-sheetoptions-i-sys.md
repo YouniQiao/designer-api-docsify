@@ -2,7 +2,7 @@
 
 Component sheet options
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-na-common-bindoptions-i.md#bindoptions)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-na-common-bindoptions-i.md)
 
 **Since:** 23
 

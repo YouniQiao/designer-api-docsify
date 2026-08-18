@@ -16,7 +16,7 @@ selfIdealSize?: Size
 
 Ideal size of the node. Default value: **{ width: 0, height: 0 }**.
 
-**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 11
 

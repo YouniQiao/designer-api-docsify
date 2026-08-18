@@ -58,12 +58,22 @@ Creates a ListItem component.
 
 ## Summary
 
-- [ListItemOptions](arkts-arkui-listitemoptions-i.md)
-- [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
-- [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)
-- [EditMode](arkts-arkui-editmode-e.md)
-- [ListItemStyle](arkts-arkui-listitemstyle-e.md)
-- [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md)
-- [Sticky](arkts-arkui-sticky-e.md)
-- [SwipeActionState](arkts-arkui-swipeactionstate-e.md)
-- [SwipeEdgeEffect](arkts-arkui-swipeedgeeffect-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ListItemOptions](arkts-arkui-listitemoptions-i.md) | Defines ListItem component configuration options. |
+| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md) | Describes the swipe action item. For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left). For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down). |
+| [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | The top layer of the @builder function corresponding to start and end must be a single component. Otherwise, undefined behavior occurs. If the top layer of the @builder function is a statement such as if/else or ForEach, ensure that these statements can generate a single component. The swipe gesture works only in the list item area. If a swipe causes a child component to extend beyond the list item area, the portion outside the area does not respond to the swipe. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [EditMode](arkts-arkui-editmode-e.md) | Enumerates the edit modes of list items. |
+| [ListItemStyle](arkts-arkui-listitemstyle-e.md) | Enumerates the card styles of the List component. |
+| [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | Enumerates the swipe action menu display directions for ListItem components. |
+| [Sticky](arkts-arkui-sticky-e.md) | Enumerates the sticky effects for list items. |
+| [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | Enumerates swipe states of list items. |
+| [SwipeEdgeEffect](arkts-arkui-swipeedgeeffect-e.md) | Enumerates the edge effects. |
+

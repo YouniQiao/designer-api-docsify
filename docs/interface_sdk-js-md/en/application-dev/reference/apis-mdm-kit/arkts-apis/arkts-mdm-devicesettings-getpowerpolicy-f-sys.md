@@ -18,7 +18,7 @@ Obtains the power policy.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
+**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

@@ -76,7 +76,7 @@ Opens a new session with a TA.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the session is opened.<br>         Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the TA cannot be found in the Trusted Execution Environment (TEE).<br>         Returns <b>TEE_ERROR_ACCESS_DENIED</b> if the access request to the TA is denied. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the session is opened.          Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the TA cannot be found in the Trusted Execution Environment (TEE).          Returns <b>TEE_ERROR_ACCESS_DENIED</b> if the access request to the TA is denied. |
 
 ### TEE_CloseTASession()
 
@@ -123,6 +123,6 @@ Invokes a command in a session opened between this client TA instance and a targ
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_ACCESS_DENIED</b> if the command fails to be invoked. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_ACCESS_DENIED</b> if the command fails to be invoked. |
 
 

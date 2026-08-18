@@ -1,8 +1,8 @@
 # RadialGradientStyle
 
-显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle)。
+显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
-**继承/实现关系：** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle)
+**继承/实现关系：** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 20
 

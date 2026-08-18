@@ -268,7 +268,7 @@ setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions)
 | --- | --- | --- | --- |
 | selectionStart | int | 是 | 选中开始位置。 |
 | selectionEnd | int | 是 | 选中结束位置。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。<br/>缺省时，按照 [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md#selectionoptions)中的默认值处理。 |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。<br/>缺省时，按照 [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md)中的默认值处理。 |
 
 ## setStyledPlaceholder
 
@@ -292,7 +292,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于placeholder属 性设置的提示文本。<br>提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-gesturestyle-c.md#gesturestyle)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-urlstyle-c.md#urlstyle)样式的超链接跳转能力。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于placeholder属 性设置的提示文本。<br>提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-gesturestyle-c.md)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-urlstyle-c.md)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 

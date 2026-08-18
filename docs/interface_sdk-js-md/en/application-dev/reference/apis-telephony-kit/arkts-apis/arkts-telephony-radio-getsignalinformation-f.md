@@ -25,7 +25,7 @@ Obtains the list of signal strength information of the registered network corres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md#signalinformation). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for getting the instance list of the child classes derived from [SignalInformation](arkts-telephony-radio-signalinformation-i.md). |
 
 **Error codes:**
 

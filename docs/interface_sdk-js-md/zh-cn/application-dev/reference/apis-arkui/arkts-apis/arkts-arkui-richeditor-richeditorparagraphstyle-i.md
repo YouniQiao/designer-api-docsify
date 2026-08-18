@@ -76,7 +76,7 @@ paragraphSpacing?: double
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#richeditortextstyleresult)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#richeditortextstyleresult)的fontColor。 **模型约束：** 此接口仅可在Stage模型下使用。
+设置文本着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)的fontColor。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 

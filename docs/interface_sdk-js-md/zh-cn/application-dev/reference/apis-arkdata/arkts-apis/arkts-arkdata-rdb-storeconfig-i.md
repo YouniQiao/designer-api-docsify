@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig)
+**替代接口：** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)
 
 <!--Device-rdb-interface StoreConfig--><!--Device-rdb-interface StoreConfig-End-->
 

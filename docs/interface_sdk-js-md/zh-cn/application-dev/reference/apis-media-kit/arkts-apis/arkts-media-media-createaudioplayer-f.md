@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAudioPlayer
@@ -11,13 +12,13 @@
 function createAudioPlayer(): AudioPlayer
 ```
 
-同步方式创建音频播放实例。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)替代。
+同步方式创建音频播放实例。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [createAVPlayer](arkts-media-media-createavplayer-f.md)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback: AsyncCallback&lt;AVPlayer&gt;)
+**替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
 
 <!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
 

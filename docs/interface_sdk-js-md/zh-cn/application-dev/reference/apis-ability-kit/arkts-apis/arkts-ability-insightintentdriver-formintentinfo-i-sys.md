@@ -13,6 +13,7 @@ FormIntentInfo用于描述 @InsightIntentForm 装饰器支持的参数，例如�
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -41,7 +42,7 @@ Ability名称。
 readonly formName: string
 ```
 
-表示[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability)绑定的卡片名称。
+表示[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md)绑定的卡片名称。
 
 **类型：** string
 

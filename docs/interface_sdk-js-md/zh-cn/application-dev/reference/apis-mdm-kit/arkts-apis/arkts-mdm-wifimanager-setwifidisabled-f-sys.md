@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## setWifiDisabled
@@ -17,7 +18,7 @@ function setWifiDisabled(admin: Want, disabled: boolean): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**替代接口：** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 

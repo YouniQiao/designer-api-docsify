@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -15,7 +13,7 @@ import { audioHaptic } from '@kit.AudioKit';
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 9
 
@@ -30,7 +28,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
 
 **Examples**
 
@@ -61,7 +59,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **Since:** 23
 
@@ -76,7 +74,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
 
 **Error codes:**
 
@@ -91,7 +89,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-a
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This method uses a promise to return the renderer instance.
 
 **Since:** 9
 
@@ -135,7 +133,7 @@ async function createTonePlayerBefore(){
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
 ```
 
-Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer-system-api) instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This method uses a promise to return the renderer instance.
 
 **Since:** 23
 

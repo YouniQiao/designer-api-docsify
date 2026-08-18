@@ -34,7 +34,7 @@ Defines SelectionContainer component.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
+| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
 
 
 ## SelectionContainer
@@ -62,11 +62,11 @@ Defines SelectionContainer component. It requires calling setSelectionContainerO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | CustomBuilderT&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; | Yes | the callback to set up SelectionContainer's attributes. |
+| style | CustomBuilderT&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; | Yes | the callback to set up SelectionContainer's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 

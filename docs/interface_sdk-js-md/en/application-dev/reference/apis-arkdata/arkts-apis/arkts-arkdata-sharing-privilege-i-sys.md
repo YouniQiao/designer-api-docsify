@@ -14,7 +14,6 @@ Defines the privilege (permissions) on the shared data.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## creatable

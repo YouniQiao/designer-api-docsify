@@ -18,7 +18,7 @@ Obtains the supported power model.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
+**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,7 +45,7 @@ Obtains the supported power model.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
+**Substitutes:** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -57,5 +57,5 @@ Obtains the supported power model.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt;&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt;&gt; | Yes | callback function, no return value. |
 

@@ -28,6 +28,21 @@ Defines the constructor of TextArea.
 
 ## Summary
 
-- [TextAreaOptions](arkts-arkui-textareaoptions-i.md)
-- [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md)
-- [TextAreaType](arkts-arkui-textareatype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | Describes the initialization options of the **TextArea** component. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [TextAreaType](arkts-arkui-textareatype-e.md) | Multi-line text input box type. |
+

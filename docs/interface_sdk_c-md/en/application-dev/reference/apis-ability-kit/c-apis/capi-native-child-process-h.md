@@ -119,7 +119,7 @@ Creates a child process configuration object. When this object is no longer need
 
 | Type | Description |
 | -- | -- |
-| [Ability_ChildProcessConfigs*](capi-childprocess-ability-childprocessconfigs.md) | Pointer to the [Ability_ChildProcessConfigs](capi-childprocess-ability-childprocessconfigs.md) object: The call is successful.<br>      nullptr: An internal error occurs or memory allocation fails. |
+| [Ability_ChildProcessConfigs*](capi-childprocess-ability-childprocessconfigs.md) | Pointer to the [Ability_ChildProcessConfigs](capi-childprocess-ability-childprocessconfigs.md) object: The call is successful.       nullptr: An internal error occurs or memory allocation fails. |
 
 ### OH_Ability_DestroyChildProcessConfigs()
 
@@ -143,7 +143,7 @@ Destroys a child process configuration object and releases its memory. After thi
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: An input parameter is nullptr. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: An input parameter is nullptr. |
 
 ### OH_Ability_ChildProcessConfigs_SetIsolationMode()
 
@@ -168,7 +168,7 @@ Sets the sharing mode of the data sandbox and network environment for a child pr
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: The parameter configs is nullptr. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: The parameter configs is nullptr. |
 
 ### OH_Ability_ChildProcessConfigs_SetIsolationUid()
 
@@ -193,7 +193,7 @@ Sets whether the child process uses an independent UID. For example, in browser 
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: The parameter configs is nullptr. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: The parameter configs is nullptr. |
 
 ### OH_Ability_ChildProcessConfigs_SetProcessName()
 
@@ -218,7 +218,7 @@ Sets the process name in a child process configuration object.
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | <ul><br>      <li>[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the call is successful.</li><br>      <li>[NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the input parameter configs is nullptr, or processName contains<br>      characters other than letters, digits, and underscores (_).</li><br>      </ul> |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | <ul>       <li>[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the call is successful.</li>       <li>[NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the input parameter configs is nullptr, or processName contains       characters other than letters, digits, and underscores (_).</li>       </ul> |
 
 ### OH_Ability_OnNativeChildProcessStarted()
 
@@ -236,7 +236,7 @@ Defines a callback function for notifying the child process startup result.
 
 | Parameter | Description |
 | -- | -- |
-| (int errCode | Error code returned by the callback function.[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The child process is created successfully.[NCP_ERR_LIB_LOADING_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Loading the dynamic library file fails or the necessary export function isnot implemented in the dynamic library.[NCP_ERR_CONNECTION_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The **OnConnect** method implemented in the dynamic library does not returna valid IPC stub pointer.For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
+| int errCode | Error code returned by the callback function.[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The child process is created successfully.[NCP_ERR_LIB_LOADING_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Loading the dynamic library file fails or the necessary export function isnot implemented in the dynamic library.[NCP_ERR_CONNECTION_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The **OnConnect** method implemented in the dynamic library does not returna valid IPC stub pointer.For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
 | [OHIPCRemoteProxy](../IPCKit/capi-ohipcparcel-ohipcremoteproxy.md) \*remoteProxy | Pointer to the IPC object of the child process. If an exception occurs, the value may be nullptr.The object must be released by calling {@link OH_IPCRemoteProxy_Destroy} when it is no longer needed. |
 
 **Reference**:
@@ -268,7 +268,7 @@ Creates a child process, loads the specified dynamic library file, and returns t
 
 | Type | Description |
 | -- | -- |
-| int | [NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The call is successful, but the actual startup result is notified by the callback<br>      function.<br>      [NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The dynamic library name or callback function pointer is invalid.<br>      [NCP_ERR_NOT_SUPPORTED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The device does not support the creation of native child processes.<br>      [NCP_ERR_MULTI_PROCESS_DISABLED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Multi-process mode is disabled on the device.<br>      [NCP_ERR_ALREADY_IN_CHILD](capi-native-child-process-h.md#ability_nativechildprocess_errcode): A process cannot be created in a child process.<br>      [NCP_ERR_MAX_CHILD_PROCESSES_REACHED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The number of native child processes reaches the maximum.<br>      For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
+| int | [NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The call is successful, but the actual startup result is notified by the callback       function.       [NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The dynamic library name or callback function pointer is invalid.       [NCP_ERR_NOT_SUPPORTED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The device does not support the creation of native child processes.       [NCP_ERR_MULTI_PROCESS_DISABLED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Multi-process mode is disabled on the device.       [NCP_ERR_ALREADY_IN_CHILD](capi-native-child-process-h.md#ability_nativechildprocess_errcode): A process cannot be created in a child process.       [NCP_ERR_MAX_CHILD_PROCESSES_REACHED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The number of native child processes reaches the maximum.       For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
 
 **Reference**:
 
@@ -299,7 +299,7 @@ Creates a child process based on a child process configuration object and loads 
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | <ul><br>      <li>[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the call is successful.</li><br>      <li>[NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if an input parameter is invalid.</li><br>      <li>[NCP_ERR_NOT_SUPPORTED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the device does not support the creation of native child processes.</li><br>      <li>[NCP_ERR_MULTI_PROCESS_DISABLED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if multi-process mode is disabled on the device, and the child<br>      process cannot be started.</li><br>      <li>[NCP_ERR_ALREADY_IN_CHILD](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if a process cannot be created in a child process.</li><br>      <li>[NCP_ERR_MAX_CHILD_PROCESSES_REACHED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the maximum number of native child processes has been<br>      reached.</li><br>      </ul> |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | <ul>       <li>[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the call is successful.</li>       <li>[NCP_ERR_INVALID_PARAM](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if an input parameter is invalid.</li>       <li>[NCP_ERR_NOT_SUPPORTED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the device does not support the creation of native child processes.</li>       <li>[NCP_ERR_MULTI_PROCESS_DISABLED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if multi-process mode is disabled on the device, and the child       process cannot be started.</li>       <li>[NCP_ERR_ALREADY_IN_CHILD](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if a process cannot be created in a child process.</li>       <li>[NCP_ERR_MAX_CHILD_PROCESSES_REACHED](capi-native-child-process-h.md#ability_nativechildprocess_errcode) if the maximum number of native child processes has been       reached.</li>       </ul> |
 
 **Reference**:
 
@@ -331,7 +331,7 @@ Starts a native child process, loads the specified dynamic library file, and cal
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: The dynamic library name or callback function pointer is invalid.<br>      NCP_ERR_NOT_SUPPORTED: The device does not support the creation of native child processes.<br>      NCP_ERR_ALREADY_IN_CHILD: Multi-process mode is disabled on the device.<br>      NCP_ERR_MAX_CHILD_PROCESSES_REACHED: The maximum number of native child processes has been reached.<br>      For details about the error codes, see Ability_NativeChildProcess_ErrCode. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: The dynamic library name or callback function pointer is invalid.       NCP_ERR_NOT_SUPPORTED: The device does not support the creation of native child processes.       NCP_ERR_ALREADY_IN_CHILD: Multi-process mode is disabled on the device.       NCP_ERR_MAX_CHILD_PROCESSES_REACHED: The maximum number of native child processes has been reached.       For details about the error codes, see Ability_NativeChildProcess_ErrCode. |
 
 **Reference**:
 
@@ -363,7 +363,7 @@ Starts a native child process based on the child process configuration object, l
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: An input parameter is invalid.<br>      NCP_ERR_NOT_SUPPORTED: The device does not support the creation of native child processes.<br>      NCP_ERR_ALREADY_IN_CHILD: A process cannot be created in a child process.<br>      NCP_ERR_MAX_CHILD_PROCESSES_REACHED: The maximum number of native child processes has been reached.<br>      For details about the error codes, see Ability_NativeChildProcess_ErrCode. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: An input parameter is invalid.       NCP_ERR_NOT_SUPPORTED: The device does not support the creation of native child processes.       NCP_ERR_ALREADY_IN_CHILD: A process cannot be created in a child process.       NCP_ERR_MAX_CHILD_PROCESSES_REACHED: The maximum number of native child processes has been reached.       For details about the error codes, see Ability_NativeChildProcess_ErrCode. |
 
 ### OH_Ability_GetCurrentChildProcessArgs()
 
@@ -399,7 +399,7 @@ Defines a callback to listen for child process exit.
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t pid | Pointer to the ID of the child process. |
+| int32_t pid | Pointer to the ID of the child process. |
 | int32_t signal | Signal for child process exit. |
 
 ### OH_Ability_RegisterNativeChildProcessExitCallback()
@@ -424,7 +424,7 @@ Registers a callback to listen for child process exit. When a child process star
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: An input parameter is invalid.<br>      NCP_ERR_INTERNAL: An internal error occurs.<br>      For details, see Ability_NativeChildProcess_ErrCode. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: An input parameter is invalid.       NCP_ERR_INTERNAL: An internal error occurs.       For details, see Ability_NativeChildProcess_ErrCode. |
 
 ### OH_Ability_UnregisterNativeChildProcessExitCallback()
 
@@ -448,7 +448,7 @@ Unregisters the callback used to listen for child process exit.
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_INVALID_PARAM: An input parameter is invalid.<br>      NCP_ERR_INTERNAL: An internal error occurs.<br>      NCP_ERR_CALLBACK_NOT_EXIST: The callback function is not found.<br>      For details, see Ability_NativeChildProcess_ErrCode. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_INVALID_PARAM: An input parameter is invalid.       NCP_ERR_INTERNAL: An internal error occurs.       NCP_ERR_CALLBACK_NOT_EXIST: The callback function is not found.       For details, see Ability_NativeChildProcess_ErrCode. |
 
 ### OH_Ability_KillChildProcess()
 
@@ -472,7 +472,7 @@ Terminates a child process created by the current process.
 
 | Type | Description |
 | -- | -- |
-| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.<br>      NCP_ERR_SERVICE_ERROR: Server error.<br>      NCP_ERR_INVALID_PID: The input PID is invalid.<br>      For details, see Ability_NativeChildProcess_ErrCode. |
+| [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode) | NCP_NO_ERROR: The call is successful.       NCP_ERR_SERVICE_ERROR: Server error.       NCP_ERR_INVALID_PID: The input PID is invalid.       For details, see Ability_NativeChildProcess_ErrCode. |
 
 ### OH_Ability_IsNativeChildProcessSupported()
 

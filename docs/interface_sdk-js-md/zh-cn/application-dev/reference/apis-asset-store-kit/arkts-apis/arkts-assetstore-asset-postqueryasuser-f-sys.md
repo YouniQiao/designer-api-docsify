@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## postQueryAsUser
@@ -11,7 +12,7 @@
 function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 ```
 
-在指定用户空间中查询的后置处理，用于需要用户认证的关键资产（与[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser系统接口)函数成对出现）。使用Promise异步回调。
+在指定用户空间中查询的后置处理，用于需要用户认证的关键资产（与[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)函数成对出现）。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -28,7 +29,7 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 | 待处理的查询句柄，当前包含[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser系统接口)执行成功返回的挑战值。 |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 | 待处理的查询句柄，当前包含[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)执行成功返回的挑战值。 |
 
 **返回值：**
 

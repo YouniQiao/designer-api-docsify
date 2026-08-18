@@ -1,6 +1,6 @@
 # ResourceManager
 
-Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Provides the capability of accessing application resources and system resources.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
 import { resourceManager } from '@kit.LocalizationKit';
 ```
 
@@ -1829,14 +1828,14 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | type | int | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1910,14 +1909,14 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | type | number | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1983,14 +1982,14 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | type | int | No | Icon type. The default value is **0**. <br>**0**: Icon resource of the application. <br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -2760,7 +2759,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -2878,7 +2877,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -2939,7 +2938,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3062,7 +3061,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3180,7 +3179,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3241,7 +3240,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3376,7 +3375,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3506,7 +3505,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3625,7 +3624,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3743,7 +3742,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3873,7 +3872,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -4003,7 +4002,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4121,7 +4120,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
@@ -4239,7 +4238,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4300,7 +4299,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4372,7 +4371,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4437,7 +4436,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | long | Yes | Resource ID. |
-| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4509,7 +4508,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity). |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 

@@ -33,7 +33,7 @@ Get IReusableInfo for given Component/V2 in the pool.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentConstructor | [Class](arkts-na-class-c.md) | Yes | @ReusableV2 @ComponentV2 or @Reusable @Component. |
+| componentConstructor | [Class](arkts-na-class-c.md) | Yes |  |
 | reuseId | string | No | the reuse-id. |
 
 **Return value:**

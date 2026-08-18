@@ -30,8 +30,18 @@ Creates a data panel component.
 
 ## Summary
 
-- [ColorStop](arkts-arkui-colorstop-i.md)
-- [DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)
-- [DataPanelOptions](arkts-arkui-datapaneloptions-i.md)
-- [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md)
-- [DataPanelType](arkts-arkui-datapaneltype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ColorStop](arkts-arkui-colorstop-i.md) | Describes the gradient color stop. |
+| [DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+| [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Defines data panel configuration options. |
+| [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions**. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [DataPanelType](arkts-arkui-datapaneltype-e.md) | Enumerates data panel types. |
+

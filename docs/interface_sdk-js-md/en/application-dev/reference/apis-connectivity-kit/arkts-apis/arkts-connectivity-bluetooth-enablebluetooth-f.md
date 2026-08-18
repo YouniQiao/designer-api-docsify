@@ -35,7 +35,7 @@ Enables Bluetooth on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md#enablebluetooth)
+**Substitutes:** [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

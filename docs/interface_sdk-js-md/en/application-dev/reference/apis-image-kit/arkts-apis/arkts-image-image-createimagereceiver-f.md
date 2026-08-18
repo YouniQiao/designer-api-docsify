@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -31,7 +30,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 | --- | --- | --- | --- |
 | width | number | Yes | Default image width, in px. This parameter does not affect the width of the received image. The actual width is determined by the producer, for example, the camera. |
 | height | number | Yes | Default image height, in px. This parameter does not affect the height of the received image. The actual height is determined by the producer, for example, the camera. |
-| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#imageformat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
 | capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
@@ -66,7 +65,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | Size | Yes | Default size of the image. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md#imageformat). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
 | capacity | int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
@@ -110,8 +109,8 @@ Creates an ImageReceiver instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Size | Yes | The default [Size](arkts-image-image-size-i.md#size) in pixels of the Images that this receiver will produce. |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md#imageformat) constants. |
+| size | Size | Yes | The default [Size](arkts-image-image-size-i.md) in pixels of the Images that this receiver will produce. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | The format of the Image that this receiver will produce. This must be one of the [ImageFormat](arkts-image-image-imageformat-e.md) constants. |
 | capacity | int | Yes | The maximum number of images the user will want to access simultaneously. |
 
 **Return value:**

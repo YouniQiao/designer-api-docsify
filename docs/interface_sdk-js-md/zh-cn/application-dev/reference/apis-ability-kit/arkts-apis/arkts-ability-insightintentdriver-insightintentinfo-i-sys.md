@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -283,7 +284,7 @@ readonly parameters: Record<string, RecordData>
 
 The insight intent parameters.
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -303,7 +304,7 @@ readonly result: Record<string, RecordData>
 
 The type definition of the result returned by intent call.
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -341,7 +342,7 @@ readonly schema: string
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-表示特定意图装饰器的意图信息。 **说明：** 对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md#entryintentinfo系统接口)。
+表示特定意图装饰器的意图信息。 **说明：** 对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)。
 
 **类型：** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 

@@ -18,7 +18,7 @@
 | [PixelMapDrawableDescriptor](arkts-na-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md) | Use the PixelMapDrawableDescriptor class to get the resource of pixelmap or resource descriptor information. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

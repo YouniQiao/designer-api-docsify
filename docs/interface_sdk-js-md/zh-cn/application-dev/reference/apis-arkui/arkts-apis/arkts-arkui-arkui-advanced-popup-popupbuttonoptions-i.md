@@ -11,6 +11,8 @@ PopupButtonOptions定义按钮的相关属性和事件。
 ## 导入模块
 
 ```TypeScript
+import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 ```
 
 ## action

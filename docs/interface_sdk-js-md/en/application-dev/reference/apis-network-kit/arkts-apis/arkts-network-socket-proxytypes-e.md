@@ -1,6 +1,6 @@
 # ProxyTypes
 
-Specify proxy types.
+Enumerates socket proxy types.
 
 **Since:** 18
 
@@ -28,7 +28,7 @@ No proxy.
 SOCKS5 = 1
 ```
 
-Use Socks5 proxy.
+SOCKS5 proxy.
 
 **Since:** 18
 

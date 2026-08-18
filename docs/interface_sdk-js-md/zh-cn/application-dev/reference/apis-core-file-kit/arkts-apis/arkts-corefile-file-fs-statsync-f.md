@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## statSync
@@ -11,7 +14,7 @@
 declare function statSync(file: string | number): Stat
 ```
 
-以同步方法获取文件或目录详细属性信息。
+以同步方法获取文件或目录详细属性信息，返回包含文件大小、权限模式、访问时间、修改时间等属性的Stat对象。
 
 **起始版本：** 9
 

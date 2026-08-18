@@ -1,8 +1,8 @@
 # Compilation
 
-合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)。
+合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
-**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
+**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## hasMoreData

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getFontDescriptorByFullName
@@ -27,7 +26,7 @@ Obtains the font descriptor based on the font name and type. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) called. |
+| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) called. |
 | fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**

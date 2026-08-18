@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: AsyncCallback<void>): void
 ```
 
-Set metered network quota policies.
+Sets the metering network policy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Set metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| quotaPolicies | Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt; | Yes | Indicates [NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md#netquotapolicy-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setNetQuotaPolicies. |
+| quotaPolicies | Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt; | Yes | Defines the quota policy for the specified network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ policy.setNetQuotaPolicies(netQuotaPolicyList, (error: BusinessError) => {
 function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void>
 ```
 
-Set metered network quota policies.
+Sets the metering network policy. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -93,13 +93,13 @@ Set metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| quotaPolicies | Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt; | Yes | Indicates [NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md#netquotapolicy-system-api). |
+| quotaPolicies | Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt; | Yes | Defines the quota policy for the specified network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

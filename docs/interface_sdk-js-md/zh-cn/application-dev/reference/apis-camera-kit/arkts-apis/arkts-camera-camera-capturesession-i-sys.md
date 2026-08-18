@@ -1,12 +1,12 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
+**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getBeauty
@@ -172,7 +174,7 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype系统接口) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
 
 **起始版本：** 10
 

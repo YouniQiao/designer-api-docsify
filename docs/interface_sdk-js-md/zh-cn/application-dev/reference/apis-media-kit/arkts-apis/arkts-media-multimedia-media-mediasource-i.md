@@ -1,6 +1,6 @@
 # MediaSource
 
-媒体数据信息。来源于 [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl) 。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
+媒体数据信息。来源于 [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) 。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableOfflineCache

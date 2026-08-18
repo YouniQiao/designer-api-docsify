@@ -17,7 +17,7 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-system-api)
+**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -33,7 +33,7 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | Callback used to return the mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | Callback used to return the mission information obtained. |
 
 **Examples**
 
@@ -70,7 +70,7 @@ Obtains the information about a given mission. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-system-api)
+**Substitutes:** [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

@@ -1,10 +1,10 @@
 # UDPExtraOptions
 
-Defines other properties of the UDPSocket connection.
+Defines other properties of the **UDPSocket** object. This object is inherited from [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md).
 
-**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#extraoptionsbase)
+**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface UDPExtraOptions--><!--Device-socket-export interface UDPExtraOptions-End-->
 
@@ -22,11 +22,11 @@ import { socket } from '@kit.NetworkKit';
 broadcast?: boolean
 ```
 
-Whether to send broadcast messages. The default value is false.
+Whether to send broadcast messages. The value **true** indicates that broadcast messages can be sent, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-UDPExtraOptions-broadcast?: boolean--><!--Device-UDPExtraOptions-broadcast?: boolean-End-->
 

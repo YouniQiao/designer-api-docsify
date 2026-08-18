@@ -12,7 +12,6 @@ Provides APIs for SM2 cryptographic operations.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genCipherTextBySpec

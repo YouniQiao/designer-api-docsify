@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## removeWatcher
@@ -11,7 +12,7 @@
 function removeWatcher(watcher: Watcher): void
 ```
 
-取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md#watcher系统接口)类型的对象作为事件参数。
+取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)类型的对象作为事件参数。
 
 **起始版本：** 23
 

@@ -542,7 +542,7 @@ Sets the index of the selected item. Since API version 10, this parameter suppor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected item.<br>Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#alphabetindexeroptions).length – 1]<br>Default value: **0 |
+| index | number | Yes | Index of the selected item.<br>Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]<br>Default value: **0 |
 
 ## selectedBackgroundColor
 

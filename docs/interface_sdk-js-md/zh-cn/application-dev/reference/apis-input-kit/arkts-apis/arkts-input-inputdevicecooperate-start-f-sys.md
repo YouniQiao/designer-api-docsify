@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## start
@@ -11,13 +12,13 @@
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void
 ```
 
-启动键鼠穿越，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口) > 替代。
+启动键鼠穿越，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md) > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口)
+**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +32,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
 | srcInputDeviceId | number | 是 | 键鼠穿越待穿越外设标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -81,13 +82,13 @@ struct Index {
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>
 ```
 
-启动键鼠穿越，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口) > 替代。
+启动键鼠穿越，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md) > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口)
+**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 

@@ -1,18 +1,6 @@
 # Intl
 
-/*
- Copyright (c) 2026 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the 'License'),
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an 'AS IS' BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+Intl.
 
 **Since:** 26.0.0
 
@@ -35,11 +23,11 @@
 
 | Name | Description |
 | --- | --- |
-| [intlBestFitLocale](arkts-na-intl-intlbestfitlocale-f.md#intlbestfitlocale) | Gets the best fit locale from the given language tags. |
-| [intlBestFitLocales](arkts-na-intl-intlbestfitlocales-f.md#intlbestfitlocales) | Gets the best fit locales from the given language tags. |
-| [intlLocalesToLanguageTags](arkts-na-intl-intllocalestolanguagetags-f.md#intllocalestolanguagetags) | Converts locales to language tags. |
-| [intlLookUpLocale](arkts-na-intl-intllookuplocale-f.md#intllookuplocale) | Looks up a locale from the given language tags. |
-| [intlLookUpLocales](arkts-na-intl-intllookuplocales-f.md#intllookuplocales) | Looks up locales from the given language tags. |
+| [intlBestFitLocale](arkts-na-intl-intlbestfitlocale-f.md) | Gets the best fit locale from the given language tags. |
+| [intlBestFitLocales](arkts-na-intl-intlbestfitlocales-f.md) | Gets the best fit locales from the given language tags. |
+| [intlLocalesToLanguageTags](arkts-na-intl-intllocalestolanguagetags-f.md) | Converts locales to language tags. |
+| [intlLookUpLocale](arkts-na-intl-intllookuplocale-f.md) | Looks up a locale from the given language tags. |
+| [intlLookUpLocales](arkts-na-intl-intllookuplocales-f.md) | Looks up locales from the given language tags. |
 
 ### Classes
 

@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -17,7 +21,7 @@ function getDeviceMacAddress(): string[]
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md#getdevicemacaddress)
+**替代接口：** [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
 

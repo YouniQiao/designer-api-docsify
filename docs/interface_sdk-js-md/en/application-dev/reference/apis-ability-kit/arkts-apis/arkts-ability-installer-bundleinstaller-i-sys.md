@@ -14,7 +14,6 @@ Bundle installer interface, include install uninstall recover.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## addExtResource
@@ -106,7 +105,7 @@ Creates an application clone. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be created. |
-| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md#createappcloneparam-system-api). |
+| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md). |
 
 **Return value:**
 
@@ -179,7 +178,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. |
+| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -249,7 +248,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md#destroyappcloneparam-system-api). |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md). |
 
 **Return value:**
 
@@ -353,7 +352,7 @@ Destroy clone instance for an application.
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -375,7 +374,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -387,7 +386,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
@@ -447,7 +446,7 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -468,7 +467,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -480,7 +479,7 @@ Installs an application. This API uses an asynchronous callback to return the re
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
@@ -534,7 +533,7 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#applicationinfo).
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 23
 
@@ -555,7 +554,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api).<br>**Since:** 12 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 12 |
 
 **Return value:**
 
@@ -573,7 +572,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
@@ -650,7 +649,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be installed. |
 | pluginFilePaths | Array&lt;string&gt; | Yes | Paths where the plugin package files are stored. If multiple file paths or a directory is provided, ensure that these files are HSPs of the same plugin program and their signatures are consistent. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#pluginparam-system-api). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md). |
 
 **Return value:**
 
@@ -716,7 +715,7 @@ try {
 installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result. > **NOTE：**> > This API does not support the installation of applications whose > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#applicationinfo) > is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > This API does not support the installation of applications whose > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md) > is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
 
 **Since:** 23
 
@@ -733,7 +732,7 @@ Installs an application. This API uses a promise to return the result. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to install. |
-| userId | int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value must be greater than 0. The default value is the user ID of the caller. |
+| userId | int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value must be greater than 0. The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -803,7 +802,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -871,7 +870,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -933,7 +932,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 
@@ -1073,7 +1072,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1083,7 +1082,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 | [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
@@ -1145,7 +1144,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1154,7 +1153,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 | [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
@@ -1210,7 +1209,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api).<br>**Since:** 15 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 15 |
 
 **Return value:**
 
@@ -1226,7 +1225,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 | [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-inter-application-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
@@ -1287,7 +1286,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | Parameters required for the uninstall. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1460,7 +1459,7 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be uninstalled. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#pluginparam-system-api). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md). |
 
 **Return value:**
 
@@ -1530,7 +1529,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
+| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
 
 **Return value:**
 
@@ -1605,7 +1604,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1621,7 +1620,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
@@ -1687,7 +1686,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1703,7 +1702,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 | [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
@@ -1763,7 +1762,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 
@@ -1785,7 +1784,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
 | [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-inter-application-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |

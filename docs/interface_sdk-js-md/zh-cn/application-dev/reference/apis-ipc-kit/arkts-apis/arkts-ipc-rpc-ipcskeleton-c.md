@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## flushCmdBuffer
@@ -169,7 +170,7 @@ class Stub extends rpc.RemoteObject {
 static getCallingPid(): int
 ```
 
-静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md#remoteobject)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的PID。
+静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的PID。
 
 **起始版本：** 23
 
@@ -303,7 +304,7 @@ class Stub extends rpc.RemoteObject {
 static getCallingUid(): int
 ```
 
-静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md#remoteobject)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的UID。
+静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（ [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的UID。
 
 **起始版本：** 23
 

@@ -26,7 +26,7 @@ Subscribe to accelerometer sensor data once, {@code SensorId.ACCELEROMETER}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | Yes | callback accelerometer data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AccelerometerResponse&gt; | Yes | callback accelerometer data. |
 
 **Error codes:**
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVMetadataExtractor
@@ -95,7 +96,7 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的 AVMetadataExtractor实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的 AVMetadataExtractor实例，否则为错误对象。 |
 
 **错误码：**
 
@@ -138,7 +139,7 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
 
 **错误码：**
 

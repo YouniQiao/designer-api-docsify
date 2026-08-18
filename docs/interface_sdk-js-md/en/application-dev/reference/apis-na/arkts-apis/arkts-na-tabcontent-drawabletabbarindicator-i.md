@@ -42,7 +42,7 @@ drawable?: DrawableDescriptor
 
 Define the drawable object for the indicator.
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Type:** [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 23
 

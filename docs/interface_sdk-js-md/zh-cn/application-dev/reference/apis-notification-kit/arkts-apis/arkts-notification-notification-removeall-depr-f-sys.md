@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall系统接口)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用的所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用的所有通知回调函数。 |
 
 
 ## removeAll
@@ -52,7 +50,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall系统接口)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -66,7 +64,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除所有通知回调函数。 |
 
 
 ## removeAll
@@ -81,7 +79,7 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall系统接口)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -96,7 +94,7 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定用户所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定用户所有通知回调函数。 |
 
 
 ## removeAll
@@ -111,7 +109,7 @@ function removeAll(userId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall系统接口)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -146,7 +144,7 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall系统接口)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

@@ -6,7 +6,7 @@ The state of Wi-Fi connection enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md#connstate)
+**Substitutes:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
 
 <!--Device-wifi-export enum ConnState--><!--Device-wifi-export enum ConnState-End-->
 
@@ -78,7 +78,7 @@ The IP address of the Wi-Fi connection is being obtained.
 
 **Deprecated since:** 9
 
-**Substitutes:** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtainingipaddr)
+**Substitutes:** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtaining_ipaddr)
 
 <!--Device-ConnState-OBTAINING_IPADDR--><!--Device-ConnState-OBTAINING_IPADDR-End-->
 

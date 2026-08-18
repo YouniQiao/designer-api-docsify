@@ -202,7 +202,7 @@ Defines callback type for trace request.
 
 | Parameter | Description |
 | -- | -- |
-| (HiDebug_ErrorCode errorCode | Result code, see {@link HiDebug_ErrorCode}. |
+| HiDebug_ErrorCode errorCode | Result code, see {@link HiDebug_ErrorCode}. |
 | const char\* filePath | Path of the generated trace file, may be NULL on failure. |
 
 ### OH_HiDebug_ProfilingCallback()
@@ -221,6 +221,6 @@ Callback signature for the resource profiling result.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_HiDebug_ProfilingResult\* result | Pointer to the OH_HiDebug_ProfilingResult structure. |
+| [OH_HiDebug_ProfilingResult](capi-hidebug-oh-hidebug-profilingresult.md)\* result | Pointer to the OH_HiDebug_ProfilingResult structure. |
 
 

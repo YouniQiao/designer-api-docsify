@@ -64,7 +64,7 @@ Callback when the request is completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](arkts-na-webview-webschemehandlerrequest-c.md)&gt; | Yes | Callback of request is completed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSchemeHandlerRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandlerrequest-c.md)&gt; | Yes | Callback of request is completed. |
 
 **Error codes:**
 

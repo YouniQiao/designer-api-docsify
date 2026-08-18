@@ -54,6 +54,16 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 ## Summary
 
-- [ColumnOptions](arkts-arkui-columnoptions-i.md)
-- [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md)
-- [SpaceType](arkts-arkui-spacetype-t.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [SpaceType](arkts-arkui-spacetype-t.md) | Describes the supported data types for the **space** parameter in the constructors of the **Column** component. The type is a union of the following types. |
+

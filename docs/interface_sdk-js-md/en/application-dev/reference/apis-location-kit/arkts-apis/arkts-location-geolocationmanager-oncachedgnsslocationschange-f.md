@@ -27,7 +27,7 @@ Subscribe to cache GNSS locations update messages.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
 **Error codes:**
 

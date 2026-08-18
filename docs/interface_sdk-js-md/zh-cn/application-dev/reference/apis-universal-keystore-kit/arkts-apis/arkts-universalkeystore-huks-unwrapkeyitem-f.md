@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## unwrapKeyItem
@@ -11,7 +13,7 @@
 function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>
 ```
 
-加密导入密钥。使用Promise异步回调。 > **说明：** > > 加密导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。 &lt;!--Del--&gt;该功能暂不支持。&lt;!--DelEnd--&gt;
+加密导入密钥。使用Promise异步回调。 > **说明：** > > 加密导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。 <!--Del-->该功能暂不支持。<!--DelEnd-->
 
 **起始版本：** 20
 

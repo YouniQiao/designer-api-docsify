@@ -18,7 +18,7 @@ Disables NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disablenfc)
+**Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

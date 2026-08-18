@@ -18,7 +18,7 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppconnect)
+**Substitutes:** [sppConnect](arkts-connectivity-socket-sppconnect-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -33,8 +33,8 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#sppoption). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

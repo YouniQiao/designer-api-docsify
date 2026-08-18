@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## off_BundleChangedEvent
@@ -28,7 +29,7 @@ function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | 是 | 注销监听的事件类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
 
 **错误码：**
 

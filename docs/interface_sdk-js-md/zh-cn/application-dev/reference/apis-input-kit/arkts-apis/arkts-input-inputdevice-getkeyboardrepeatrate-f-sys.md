@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## getKeyboardRepeatRate
@@ -25,7 +27,7 @@ function getKeyboardRepeatRate(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取成功，err为undefined，data为键盘按键的重复速率；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取成功，err为undefined，data为键盘按键的重复速率；否则为错误对象。 |
 
 **错误码：**
 

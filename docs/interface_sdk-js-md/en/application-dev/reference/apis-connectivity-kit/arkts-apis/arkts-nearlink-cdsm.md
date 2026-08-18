@@ -22,13 +22,13 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) | Creates a CDSM client instance. |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) | Creates a CDSM client instance. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) to create a CDSM client instance. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) to create a CDSM client instance. |
 | [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Describes the coordinated devices set information. |
 | [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | Describes the member information of coordinated devices set. |
 

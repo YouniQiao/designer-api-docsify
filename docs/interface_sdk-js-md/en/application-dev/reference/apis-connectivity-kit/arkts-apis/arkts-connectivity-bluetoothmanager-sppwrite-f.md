@@ -18,7 +18,7 @@ Write data through the socket.
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppWrite](arkts-connectivity-socket-sppwrite-f.md#sppwrite)
+**Substitutes:** [sppWrite](arkts-connectivity-socket-sppwrite-f.md)
 
 <!--Device-bluetoothManager-function sppWrite(clientSocket: number, data: ArrayBuffer): void--><!--Device-bluetoothManager-function sppWrite(clientSocket: number, data: ArrayBuffer): void-End-->
 
@@ -28,7 +28,7 @@ Write data through the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppconnect). |
+| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md). |
 | data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Error codes:**

@@ -6,7 +6,7 @@ Defines the DND time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#donotdisturbdate-system-api)
+**Substitutes:** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)
 
 <!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
@@ -18,8 +18,6 @@ Defines the DND time.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```

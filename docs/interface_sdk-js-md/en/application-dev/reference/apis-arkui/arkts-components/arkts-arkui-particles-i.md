@@ -29,7 +29,7 @@ particles: Array<
   >
 ```
 
-An array of particle options, each of which covers the emitter, color, opacity, scale, velocity, acceleration, and spin speed of particles. For details, see [ParticleOptions](arkts-arkui-particleoptions-i.md#particleoptions).
+An array of particle options, each of which covers the emitter, color, opacity, scale, velocity, acceleration, and spin speed of particles. For details, see [ParticleOptions](arkts-arkui-particleoptions-i.md).
 
 **Type:** Array&lt;[ParticleOptions](arkts-arkui-particleoptions-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt;&gt;
 

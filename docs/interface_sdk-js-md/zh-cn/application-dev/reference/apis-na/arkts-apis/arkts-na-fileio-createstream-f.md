@@ -11,7 +11,7 @@
 function createStream(path: string, mode: string): Promise<Stream>
 ```
 
-基于文件路径创建文件流。使用Promise异步回调。需要配合[Stream](arkts-na-fileio-stream-i.md#stream)中的close()函数关闭文件流。
+基于文件路径创建文件流。使用Promise异步回调。需要配合[Stream](arkts-na-fileio-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 23
 
@@ -73,7 +73,7 @@ function createStream(path: string, mode: string): Promise<Stream>
 function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-基于文件路径创建文件流，需要配合[Stream](arkts-na-fileio-stream-i.md#stream)中的close()函数关闭文件流。使用callback异步回调。
+基于文件路径创建文件流，需要配合[Stream](arkts-na-fileio-stream-i.md)中的close()函数关闭文件流。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -89,7 +89,7 @@ function createStream(path: string, mode: string, callback: AsyncCallback<Stream
 | --- | --- | --- | --- |
 | path | string | 是 | 文件的应用沙箱路径。 |
 | mode | string | 是 |  r：打开只读文件，该文件必须存在。<br/>- r+：打开可读写的文件，该文件必须存在。<br/> - w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。<br/>- w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。<br/> - a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。<br/>- a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md)&gt; | 是 | 回调函数，返回Stream对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stream-i.md)&gt; | 是 | 回调函数，返回Stream对象。 |
 
 **错误码：**
 

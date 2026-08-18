@@ -14,7 +14,6 @@ Represents the cloud service information.
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## enableCloud

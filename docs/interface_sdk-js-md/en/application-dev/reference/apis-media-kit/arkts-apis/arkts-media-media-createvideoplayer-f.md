@@ -18,7 +18,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback: AsyncCallback&lt;AVPlayer&gt;)
+**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
 
 <!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
 
@@ -28,7 +28,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -59,7 +59,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)()
+**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md)()
 
 <!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 

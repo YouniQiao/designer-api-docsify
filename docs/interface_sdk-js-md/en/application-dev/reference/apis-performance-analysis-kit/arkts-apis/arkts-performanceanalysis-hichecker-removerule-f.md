@@ -18,7 +18,7 @@ Removes one or more rules. The removed rules will become ineffective.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)
+**Substitutes:** [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md)
 
 <!--Device-hichecker-function removeRule(rule: bigint): void--><!--Device-hichecker-function removeRule(rule: bigint): void-End-->
 

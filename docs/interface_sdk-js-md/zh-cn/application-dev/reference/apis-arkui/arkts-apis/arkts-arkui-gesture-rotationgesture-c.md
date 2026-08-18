@@ -2,7 +2,7 @@
 
 用于触发旋转手势，最少需要2指，最多5指，最小改变度数为1度。该手势不支持通过触控板双指旋转操作触发。 > **说明：** > > - 从API version 7开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
-**继承/实现关系：** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**继承/实现关系：** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@
 static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHandlerOptions): RotationGesture
 ```
 
-设置旋转手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#gesture)。
+设置旋转手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
 
 **起始版本：** 23
 

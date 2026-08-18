@@ -2,7 +2,7 @@
 
 Used to define the FrameNode type.
 
-**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#framenode)
+**Inheritance/Implementation:** TypedFrameNode extends [FrameNode](arkts-na-framenode-c.md)
 
 **Since:** 23
 

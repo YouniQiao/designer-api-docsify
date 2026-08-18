@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## getPolicyByUid
 
 ```TypeScript
-function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): void
+function getPolicyByUid(uid: int, callback: AsyncCallback<NetUidPolicy>): void
 ```
 
-Query the policy of the specified UID.
+Obtains the network access policy for the application specified by a given UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): void--><!--Device-policy-function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): void-End-->
+<!--Device-policy-function getPolicyByUid(uid: int, callback: AsyncCallback<NetUidPolicy>): void--><!--Device-policy-function getPolicyByUid(uid: int, callback: AsyncCallback<NetUidPolicy>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,8 +28,8 @@ Query the policy of the specified UID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | the specified UID of application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | Yes | the callback of getPolicyByUid. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the policy result is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -57,16 +57,16 @@ policy.getPolicyByUid(11111, (error: BusinessError, data: policy.NetUidPolicy) =
 ## getPolicyByUid
 
 ```TypeScript
-function getPolicyByUid(uid: number): Promise<NetUidPolicy>
+function getPolicyByUid(uid: int): Promise<NetUidPolicy>
 ```
 
-Query the policy of the specified UID.
+Obtains the network access policy by app UID. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getPolicyByUid(uid: number): Promise<NetUidPolicy>--><!--Device-policy-function getPolicyByUid(uid: number): Promise<NetUidPolicy>-End-->
+<!--Device-policy-function getPolicyByUid(uid: int): Promise<NetUidPolicy>--><!--Device-policy-function getPolicyByUid(uid: int): Promise<NetUidPolicy>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -76,13 +76,13 @@ Query the policy of the specified UID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | the specified UID of application. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | The promise returned by the function. |
+| Promise&lt;[NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

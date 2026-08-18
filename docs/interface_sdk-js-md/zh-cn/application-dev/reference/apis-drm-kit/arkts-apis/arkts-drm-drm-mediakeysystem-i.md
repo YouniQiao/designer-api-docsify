@@ -1,6 +1,6 @@
 # MediaKeySystem(Defines the DRM capability.)
 
-支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem)创建一个MediaKeySystem实例。
+支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)创建一个MediaKeySystem实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys
@@ -274,7 +275,7 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname)，具体支持的属性名由设备上DRM解决方案决定。 |
+| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md)，具体支持的属性名由设备上DRM解决方案决定。 |
 
 **返回值：**
 
@@ -310,7 +311,7 @@ getConfigurationString(configName: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configName | string | 是 | 配置属性名，不能为空，长度不能超过4096字节。<br>如果参数长度超过4096字节，会抛出错误码401。<br>属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname)，具体支持的属性名由设备上DRM解决方案决定。 |
+| configName | string | 是 | 配置属性名，不能为空，长度不能超过4096字节。<br>如果参数长度超过4096字节，会抛出错误码401。<br>属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md)，具体支持的属性名由设备上DRM解决方案决定。 |
 
 **返回值：**
 
@@ -475,7 +476,7 @@ Unregister keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_keySystemRequired
+## off_keySystemRequired('keySystemRequired')
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -495,7 +496,7 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 监听事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem)成功创建MediaKeySystem实例 后可监听。 |
+| type | 'keySystemRequired' | 是 | 监听事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)成功创建MediaKeySystem实例 后可监听。 |
 | callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
@@ -531,7 +532,7 @@ Register keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_keySystemRequired
+## on_keySystemRequired('keySystemRequired')
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
@@ -551,7 +552,7 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem)成功创建MediaKeySystem实例 后可监听，需要设备证书时触发该事件。 |
+| type | 'keySystemRequired' | 是 | 事件类型，通过 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)成功创建MediaKeySystem实例 后可监听，需要设备证书时触发该事件。 |
 | callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。只要有该事件返回就证明需请求设备证书。 |
 
 **错误码：**
@@ -617,7 +618,7 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname)，具体支持的属性名由设备上DRM解决方案决定。 |
+| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md)，具体支持的属性名由设备上DRM解决方案决定。 |
 | value | Uint8Array | 是 | 数组类型的配置属性值，具体属性值由设备上DRM解决方案决定。 |
 
 **错误码：**
@@ -648,7 +649,7 @@ setConfigurationString(configName: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname)，具体支持的属性名由设备上DRM解决方案决定。 |
+| configName | string | 是 | 配置属性名，不能为空，属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md)，具体支持的属性名由设备上DRM解决方案决定。 |
 | value | string | 是 | 配置属性值。 |
 
 **错误码：**

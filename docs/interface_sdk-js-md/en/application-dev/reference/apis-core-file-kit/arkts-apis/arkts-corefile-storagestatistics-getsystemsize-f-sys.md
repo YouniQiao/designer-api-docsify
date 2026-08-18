@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getSystemSize
@@ -29,7 +28,7 @@ Get the system size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
 
 **Error codes:**
 

@@ -73,7 +73,7 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API. It is called when the readable stream calls [on](arkts-arkts-stream-writable-c.md#onstring) for the first time. This API uses an asynchronous callback to return the result.
+You need to implement this API. It is called when the readable stream calls [on](arkts-arkts-stream-writable-c.md#on_string) for the first time. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -208,7 +208,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 **Examples**
 
@@ -279,7 +279,7 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 **Examples**
 

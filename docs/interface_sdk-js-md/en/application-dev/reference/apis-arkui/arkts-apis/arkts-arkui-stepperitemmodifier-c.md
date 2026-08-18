@@ -8,7 +8,7 @@ Defines StepperItem Modifier
 
 **Deprecated since:** 22
 
-**Substitutes:** [SwiperModifier](../../apis-na/arkts-apis/arkts-na-swipermodifier-c.md#swipermodifier)
+**Substitutes:** [SwiperModifier](../../apis-na/arkts-apis/arkts-na-swipermodifier-c.md)
 
 <!--Device-unnamed-export declare class StepperItemModifier--><!--Device-unnamed-export declare class StepperItemModifier-End-->
 

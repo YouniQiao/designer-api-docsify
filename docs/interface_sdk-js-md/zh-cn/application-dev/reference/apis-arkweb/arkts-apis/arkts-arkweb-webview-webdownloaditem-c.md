@@ -1,6 +1,6 @@
 # WebDownloadItem
 
-WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md#webdownloaddelegate)的回调参数，应用可以获取到 WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。 > **说明：** > > - 在下载过程中，下载的进度会通过WebDownloadDelegate通知给使用者，使用者可以通过参数WebDownloadItem来操作下载任务。 > > - 当前WebDownloadItem支持的下载文件路径（包含文件名）最长长度为255字节&lt;!--RP1--&gt;&lt;!--RP1End--&gt;。
+WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类。通过[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md)的回调参数，应用可以获取到 WebDownloadItem实例，进而对下载任务进行查询和控制，包括启动下载到指定路径、查询下载进度和状态、暂停/恢复/取消任务、序列化失败任务以便后续恢复等。 > **说明：** > > - 在下载过程中，下载的进度会通过WebDownloadDelegate通知给使用者，使用者可以通过参数WebDownloadItem来操作下载任务。 > > - 当前WebDownloadItem支持的下载文件路径（包含文件名）最长长度为255字节<!--RP1--><!--RP1End-->。
 
 **起始版本：** 11
 
@@ -11,6 +11,7 @@ WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## cancel

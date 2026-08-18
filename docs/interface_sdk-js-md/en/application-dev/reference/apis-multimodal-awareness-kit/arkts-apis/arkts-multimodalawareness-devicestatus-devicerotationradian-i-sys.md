@@ -14,7 +14,6 @@ Interface for device rotation radian
 
 ```TypeScript
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## x

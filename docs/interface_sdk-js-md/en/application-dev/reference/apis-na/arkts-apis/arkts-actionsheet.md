@@ -13,7 +13,7 @@
 | [SheetInfo](arkts-na-actionsheet-sheetinfo-i.md) | The information of sheet. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

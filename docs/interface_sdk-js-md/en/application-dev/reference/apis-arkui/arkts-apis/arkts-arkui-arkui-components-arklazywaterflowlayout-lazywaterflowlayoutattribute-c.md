@@ -38,7 +38,7 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. <br>Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -158,7 +158,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. <br>Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 

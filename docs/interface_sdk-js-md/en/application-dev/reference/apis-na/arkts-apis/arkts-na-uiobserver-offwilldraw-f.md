@@ -28,5 +28,5 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

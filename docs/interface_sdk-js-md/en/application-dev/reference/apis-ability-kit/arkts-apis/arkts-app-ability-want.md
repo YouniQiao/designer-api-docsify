@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
-import { Want } from '@kit.AbilityKit';
 ```
 
 ## Summary

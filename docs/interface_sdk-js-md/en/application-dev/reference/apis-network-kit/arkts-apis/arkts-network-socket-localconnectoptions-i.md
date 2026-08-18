@@ -1,8 +1,8 @@
 # LocalConnectOptions
 
-Defines LocalSocket connection parameters.
+Defines local socket connection parameters.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-export interface LocalConnectOptions--><!--Device-socket-export interface LocalConnectOptions-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 address: LocalAddress
 ```
 
-Bound Local address.
+Address of the local socket file.
 
 **Type:** [LocalAddress](arkts-network-socket-localaddress-i.md)
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalConnectOptions-address: LocalAddress--><!--Device-LocalConnectOptions-address: LocalAddress-End-->
 
@@ -33,16 +33,16 @@ Bound Local address.
 ## timeout
 
 ```TypeScript
-timeout?: number
+timeout?: int
 ```
 
-Timeout duration of the LocalSocket connection, in milliseconds.
+Timeout duration of the local socket connection, in ms. **Default value**: 0 You need to manually set this parameter for your application. The recommended value is **5000**.
 
-**Type:** number
+**Type:** int
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-LocalConnectOptions-timeout?: number--><!--Device-LocalConnectOptions-timeout?: number-End-->
+<!--Device-LocalConnectOptions-timeout?: int--><!--Device-LocalConnectOptions-timeout?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

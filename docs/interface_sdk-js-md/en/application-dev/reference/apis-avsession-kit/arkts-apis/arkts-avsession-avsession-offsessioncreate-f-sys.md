@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
-## off_sessionCreate
+## off_sessionCreate('sessionCreate')
 
 ```TypeScript
 function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void

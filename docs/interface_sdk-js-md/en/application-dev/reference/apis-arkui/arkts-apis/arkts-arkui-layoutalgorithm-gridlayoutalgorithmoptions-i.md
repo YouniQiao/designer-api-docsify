@@ -16,7 +16,7 @@ columnsGap?: LengthMetrics
 
 Spacing between columns. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -60,7 +60,7 @@ rowsGap?: LengthMetrics
 
 Spacing between rows. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

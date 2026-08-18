@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#kvstoreresultset)
+**替代接口：** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)
 
 <!--Device-distributedData-interface KvStoreResultSet--><!--Device-distributedData-interface KvStoreResultSet-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## getCount

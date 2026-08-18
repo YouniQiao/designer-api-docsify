@@ -21,7 +21,7 @@ Queries the Wi-Fi status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive)
+**Substitutes:** [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

@@ -12,7 +12,6 @@ Describes the region information.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## size

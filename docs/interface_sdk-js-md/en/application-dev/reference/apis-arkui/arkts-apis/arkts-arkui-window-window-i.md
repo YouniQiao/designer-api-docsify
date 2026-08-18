@@ -1,6 +1,6 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow), or [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
 
@@ -89,7 +89,7 @@ Converts relative coordinates (based on the top-left corner of the current windo
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int
 ```
 
-Enables conversion between window orientation, screen orientation, and screen angle. Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo) and the [Orientation](arkts-arkui-window-orientation-e.md#orientation) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation. > **NOTE：**> > The following figure and table show the relationship between the window orientation, screen orientation, and > screen angle of a bar-type device. > >  > | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+Enables conversion between window orientation, screen orientation, and screen angle. Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation. > **NOTE：**> > The following figure and table show the relationship between the window orientation, screen orientation, and > screen angle of a bar-type device. > >  > | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **Since:** 23
 
@@ -182,7 +182,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## destroy
 
@@ -228,7 +228,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -330,7 +330,7 @@ Enables the landscape multi-window mode for the UI page that supports the horizo
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -347,7 +347,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
 
 ## getAvoidArea
 
@@ -355,7 +355,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -425,7 +425,7 @@ Obtains the color space of this window. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorSpace&gt; | Yes | Callback used to return the result. When the color space is obtained successfully, **err** is **undefined**, and **data** is the current color space. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ColorSpace&gt; | Yes | Callback used to return the result. When the color space is obtained successfully, **err** is **undefined**, and **data** is the current color space. |
 
 ## getDecorButtonStyle
 
@@ -598,7 +598,7 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes | Callback used to return the window properties. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes | Callback used to return the window properties. |
 
 ## getProperties
 
@@ -748,7 +748,7 @@ Obtains a UIContext instance.
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this window. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty. This API is generally applicable to the following scenarios: - In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
+Obtains the avoid area of this window. Main window/Child window: - In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty. This API is generally applicable to the following scenarios: - In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts. - This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
 
 **Since:** 23
 
@@ -783,7 +783,7 @@ Obtains the avoid area of this window. Main window/Child window: - In the free-f
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this application window, even if the avoid area is invisible. Main window/Child window: - When the main window is in the free-floating window mode under a non- [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+Obtains the avoid area of this application window, even if the avoid area is invisible. Main window/Child window: - When the main window is in the free-floating window mode under a non- [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ( [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty. - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty. Global floating window, modal window, or system window: - This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 23
 
@@ -1108,7 +1108,7 @@ Obtains the mode of this window. > **NOTE：**> > In [freeform window](../../../
 getWindowSystemBarProperties(): SystemBarProperties
 ```
 
-Obtains the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar in the main window.
+Obtains the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar in the main window.
 
 **Since:** 23
 
@@ -1122,7 +1122,7 @@ Obtains the properties of the &lt;!--Del--&gt;three-button navigation bar and &l
 
 | Type | Description |
 | --- | --- |
-| [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar. |
+| [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
 
 **Error codes:**
 
@@ -1470,7 +1470,7 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
 
 ## isShowing
 
@@ -1542,7 +1542,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
 
 ## isSystemAvoidAreaEnabled
 
@@ -1550,7 +1550,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-window-avoidarea-i.md#avoidarea).
+Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-window-avoidarea-i.md).
 
 **Since:** 23
 
@@ -1581,7 +1581,7 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 isWindowHighlighted(): boolean
 ```
 
-Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-window-windoweventtype-e.md#windoweventtype) lifecycle is **WINDOW_ACTIVE**. You can use [on('windowHighlightChange')](#onrotationchange) to listen for status changes and then execute the corresponding service.
+Checks whether the window is active. To obtain the active state, call this API when the [WindowEventType](arkts-arkui-window-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**. You can use [on('windowHighlightChange')](#on_rotationchangerotationchange) to listen for status changes and then execute the corresponding service.
 
 **Since:** 23
 
@@ -1680,7 +1680,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1743,7 +1743,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. The path is configured in the **main_pages.json** file of the project. |
 | storage | LocalStorage | Yes | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1815,7 +1815,7 @@ Loads content from a page to this window. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. In the stage model, the path is configured in the **main_pages.json** file of the project. In the FA model, the path is configured in the **config.json** file of the project. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## loadContent
 
@@ -1871,7 +1871,7 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
 | storage | LocalStorage | Yes | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1904,7 +1904,7 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2085,7 +2085,7 @@ The behavior of this API varies based on the caller: - Minimizes the main window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2180,7 +2180,7 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 | --- | --- | --- | --- |
 | x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
 | y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## moveWindowTo
 
@@ -2241,7 +2241,7 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 | --- | --- | --- | --- |
 | x | int | Yes | X-coordinate to which the window moves, in px. A positive value indicates a position to the right of the origin, and a negative value indicates a position to the left of the origin. The value must be an integer. Non-integer values are rounded down. |
 | y | int | Yes | Y-coordinate to which the window moves, in pixels. A positive value indicates a position above the origin, and a negative value indicates a position below the origin. The value must be an integer. Non-integer values are rounded down. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3219,7 +3219,7 @@ Unsubscribes from the event indicating that the main window or child window will
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
 
-## off_avoidAreaChange
+## off_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
@@ -3248,7 +3248,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_dialogTargetTouch
+## off_dialogTargetTouch('dialogTargetTouch')
 
 ```TypeScript
 off(type: 'dialogTargetTouch', callback?: Callback<void>): void
@@ -3277,7 +3277,7 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_displayIdChange
+## off_displayIdChange('displayIdChange')
 
 ```TypeScript
 off(type: 'displayIdChange', callback?: Callback<long>): void
@@ -3308,7 +3308,7 @@ Unsubscribes from the display change event of this window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_frameMetricsMeasured
+## off_frameMetricsMeasured('frameMetricsMeasured')
 
 ```TypeScript
 off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
@@ -3336,7 +3336,7 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_freeWindowModeChange
+## off_freeWindowModeChange('freeWindowModeChange')
 
 ```TypeScript
 off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
@@ -3366,7 +3366,7 @@ Unsubscribes from the freeform window mode change event.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_keyboardDidHide
+## off_keyboardDidHide('keyboardDidHide')
 
 ```TypeScript
 off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
@@ -3396,7 +3396,7 @@ Unsubscribes from the event indicating that the hide animation of the soft keybo
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## off_keyboardDidShow
+## off_keyboardDidShow('keyboardDidShow')
 
 ```TypeScript
 off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
@@ -3426,7 +3426,7 @@ Unsubscribes from the event indicating that the show animation of the soft keybo
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## off_keyboardHeightChange
+## off_keyboardHeightChange('keyboardHeightChange')
 
 ```TypeScript
 off(type: 'keyboardHeightChange', callback?: Callback<int>): void
@@ -3455,7 +3455,7 @@ Unsubscribes from the event indicating soft keyboard height changes in the fixed
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_keyboardWillHide
+## off_keyboardWillHide('keyboardWillHide')
 
 ```TypeScript
 off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
@@ -3485,7 +3485,7 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## off_keyboardWillShow
+## off_keyboardWillShow('keyboardWillShow')
 
 ```TypeScript
 off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
@@ -3515,7 +3515,7 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## off_noInteractionDetected
+## off_noInteractionDetected('noInteractionDetected')
 
 ```TypeScript
 off(type: 'noInteractionDetected', callback?: Callback<void>): void
@@ -3547,7 +3547,7 @@ Unsubscribes from non-interaction events in a window within the specified period
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_occlusionStateChanged
+## off_occlusionStateChanged('occlusionStateChanged')
 
 ```TypeScript
 off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
@@ -3576,7 +3576,7 @@ Unsubscribes from the visibility status change event of the window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_rectChangeInGlobalDisplay
+## off_rectChangeInGlobalDisplay('rectChangeInGlobalDisplay')
 
 ```TypeScript
 off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void
@@ -3605,7 +3605,7 @@ Disables the listening event for changes in the window rectangle (window positio
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_rotationChange
+## off_rotationChange('rotationChange')
 
 ```TypeScript
 off(type: 'rotationChange', 
@@ -3637,7 +3637,7 @@ Unsubscribes from the window rotation change event.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
-## off_screenshot
+## off_screenshot('screenshot')
 
 ```TypeScript
 off(type: 'screenshot', callback?: Callback<void>): void
@@ -3666,7 +3666,7 @@ Unsubscribes from the screenshot event.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_screenshotAppEvent
+## off_screenshotAppEvent('screenshotAppEvent')
 
 ```TypeScript
 off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
@@ -3694,7 +3694,7 @@ Unsubscribes from the screenshot event.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_subWindowClose
+## off_subWindowClose('subWindowClose')
 
 ```TypeScript
 off(type: 'subWindowClose', callback?: Callback<void>): void
@@ -3726,7 +3726,7 @@ Unsubscribes from the event indicating that the child window is closed.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 
-## off_systemAvoidAreaChange
+## off_systemAvoidAreaChange('systemAvoidAreaChange')
 
 ```TypeScript
 off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
@@ -3738,7 +3738,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#offrotationchange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
+**Substitutes:** [off](#off_rotationchangerotationchange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
 
 <!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
 
@@ -3751,7 +3751,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 | type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | No | Callback used to return the area. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
-## off_systemDensityChange
+## off_systemDensityChange('systemDensityChange')
 
 ```TypeScript
 off(type: 'systemDensityChange', callback?: Callback<double>): void
@@ -3782,7 +3782,7 @@ Unsubscribes from the system density change event. In the callback function, you
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_touchOutside
+## off_touchOutside('touchOutside')
 
 ```TypeScript
 off(type: 'touchOutside', callback?: Callback<void>): void
@@ -3842,7 +3842,7 @@ Unsubscribes from the event indicating changes in the security restrictions of t
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowEvent
+## off_windowEvent('windowEvent')
 
 ```TypeScript
 off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
@@ -3871,7 +3871,7 @@ Unsubscribes from the window lifecycle change event.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_windowHighlightChange
+## off_windowHighlightChange('windowHighlightChange')
 
 ```TypeScript
 off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
@@ -3903,7 +3903,7 @@ Unsubscribes from the highlighted state change event of the window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowRectChange
+## off_windowRectChange('windowRectChange')
 
 ```TypeScript
 off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
@@ -3935,7 +3935,7 @@ Unsubscribes from window rectangle (position and size) change events.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowSizeChange
+## off_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 off(type: 'windowSizeChange', callback?: Callback<Size>): void
@@ -3964,7 +3964,7 @@ Unsubscribes from the window size change event. This API can be called only by t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_windowStatusChange
+## off_windowStatusChange('windowStatusChange')
 
 ```TypeScript
 off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
@@ -3994,7 +3994,7 @@ Disables the listening for window status changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## off_windowStatusDidChange
+## off_windowStatusDidChange('windowStatusDidChange')
 
 ```TypeScript
 off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
@@ -4022,7 +4022,7 @@ Unsubscribes from the event indicating that the window status has changed.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowTitleButtonRectChange
+## off_windowTitleButtonRectChange('windowTitleButtonRectChange')
 
 ```TypeScript
 off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void
@@ -4053,7 +4053,7 @@ Unsubscribes from the change event of the rectangle that holds the minimize, max
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowVisibilityChange
+## off_windowVisibilityChange('windowVisibilityChange')
 
 ```TypeScript
 off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
@@ -4085,7 +4085,7 @@ Unsubscribes from the visibility status change event of this window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## off_windowWillClose
+## off_windowWillClose('windowWillClose')
 
 ```TypeScript
 off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
@@ -4202,7 +4202,7 @@ Subscribes to events indicating changes in window frame metrics. This API must b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics](arkts-arkui-window-framemetrics-i.md#framemetrics). |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics](arkts-arkui-window-framemetrics-i.md). |
 
 **Error codes:**
 
@@ -4415,7 +4415,7 @@ Subscribes to the visibility status change event of the window. The visibility r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status](arkts-arkui-window-occlusionstate-e.md#occlusionstate). |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status](arkts-arkui-window-occlusionstate-e.md). |
 
 **Error codes:**
 
@@ -4764,7 +4764,7 @@ Subscribes to the window size change event. This API can be called only by the m
 onWindowStatusChange(callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange) .) After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange) . > **NOTE：**> > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on > tablets), the return value differs based on the > [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For > versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return > value is **WindowStatusType::MAXIMIZE**.
+Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#on_rotationchangerotationchange) .) After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#on_rotationchangerotationchange) . > **NOTE：**> > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on > tablets), the return value differs based on the > [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For > versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return > value is **WindowStatusType::MAXIMIZE**.
 
 **Since:** 23
 
@@ -4790,7 +4790,7 @@ Enables the listening for window status changes. When the window status changes,
 onWindowStatusDidChange(callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md#rect) property of the window has been updated).
+Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md) property of the window has been updated).
 
 **Since:** 23
 
@@ -4894,13 +4894,13 @@ Subscribes to the event indicating that the main window or child window will be 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
 
-## on_avoidAreaChange
+## on_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-Subscribes to the event indicating changes to the area where this window cannot be displayed. Main window/Child window: - When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned. Global floating window, modal window, or system window: - The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned. &lt;!--RP7--&gt;Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.&lt;!--RP7End--&gt;
+Subscribes to the event indicating changes to the area where this window cannot be displayed. Main window/Child window: - When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available. - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available. - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, an empty avoidance area is returned. - When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned. Global floating window, modal window, or system window: - The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned. <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
 **Since:** 9
 
@@ -4923,7 +4923,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_dialogTargetTouch
+## on_dialogTargetTouch('dialogTargetTouch')
 
 ```TypeScript
 on(type: 'dialogTargetTouch', callback: Callback<void>): void
@@ -4952,7 +4952,7 @@ Subscribes to click or touch events in a window covered by a modal window. This 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_displayIdChange
+## on_displayIdChange('displayIdChange')
 
 ```TypeScript
 on(type: 'displayIdChange', callback: Callback<long>): void
@@ -4983,7 +4983,7 @@ Subscribes to the display change event of this window. For example, this event i
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_frameMetricsMeasured
+## on_frameMetricsMeasured('frameMetricsMeasured')
 
 ```TypeScript
 on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
@@ -5002,7 +5002,7 @@ Subscribes to events indicating changes in window frame metrics. This API must b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frameMetricsMeasured' | Yes | Event type. The value is fixed at **'frameMetricsMeasured'**, indicating the window frame metrics change event. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics](arkts-arkui-window-framemetrics-i.md#framemetrics). |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics](arkts-arkui-window-framemetrics-i.md). |
 
 **Error codes:**
 
@@ -5011,7 +5011,7 @@ Subscribes to events indicating changes in window frame metrics. This API must b
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_freeWindowModeChange
+## on_freeWindowModeChange('freeWindowModeChange')
 
 ```TypeScript
 on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
@@ -5041,7 +5041,7 @@ Subscribes to the freeform window mode change event.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_keyboardDidHide
+## on_keyboardDidHide('keyboardDidHide')
 
 ```TypeScript
 on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
@@ -5071,7 +5071,7 @@ Subscribes to the event indicating that the hide animation of the soft keyboard 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## on_keyboardDidShow
+## on_keyboardDidShow('keyboardDidShow')
 
 ```TypeScript
 on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
@@ -5101,7 +5101,7 @@ Subscribes to the event indicating that the show animation of the soft keyboard 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## on_keyboardHeightChange
+## on_keyboardHeightChange('keyboardHeightChange')
 
 ```TypeScript
 on(type: 'keyboardHeightChange', callback: Callback<int>): void
@@ -5130,7 +5130,7 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_keyboardWillHide
+## on_keyboardWillHide('keyboardWillHide')
 
 ```TypeScript
 on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
@@ -5160,7 +5160,7 @@ Subscribes to the event indicating that the soft keyboard in the fixed state is 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## on_keyboardWillShow
+## on_keyboardWillShow('keyboardWillShow')
 
 ```TypeScript
 on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
@@ -5190,7 +5190,7 @@ Subscribes to the event indicating that the soft keyboard in the fixed state is 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 
-## on_noInteractionDetected
+## on_noInteractionDetected('noInteractionDetected')
 
 ```TypeScript
 on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void
@@ -5223,7 +5223,7 @@ Register the callback function that has no interaction for a long time. Interact
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed; |
 
-## on_occlusionStateChanged
+## on_occlusionStateChanged('occlusionStateChanged')
 
 ```TypeScript
 on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
@@ -5242,7 +5242,7 @@ Subscribes to the visibility status change event of the window. The visibility r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'occlusionStateChanged' | Yes | Event type. The value is fixed at **'occlusionStateChanged'**, indicating the window visibility status change event. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status](arkts-arkui-window-occlusionstate-e.md#occlusionstate). |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status](arkts-arkui-window-occlusionstate-e.md). |
 
 **Error codes:**
 
@@ -5252,7 +5252,7 @@ Subscribes to the visibility status change event of the window. The visibility r
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_rectChangeInGlobalDisplay
+## on_rectChangeInGlobalDisplay('rectChangeInGlobalDisplay')
 
 ```TypeScript
 on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void
@@ -5281,13 +5281,13 @@ Enables the listening event for changes in the window rectangle (window position
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_rotationChange
+## on_rotationChange('rotationChange')
 
 ```TypeScript
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult) does not take effect. This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult) within 20 ms, the system does not process the return value.
+Subscribes to the window rotation change event. If the window rotation event type in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) is **WINDOW_WILL_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) does not take effect. This API can be registered only on the main thread. If a window registers multiple callbacks of the same type, only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) within 20 ms, the system does not process the return value.
 
 **Since:** 19
 
@@ -5302,7 +5302,7 @@ Subscribes to the window rotation change event. If the window rotation event typ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the window rotation change event. |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | Yes | Callback used to return [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo) and [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult). |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | Yes | Callback used to return [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md). |
 
 **Error codes:**
 
@@ -5312,7 +5312,7 @@ Subscribes to the window rotation change event. If the window rotation event typ
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
-## on_screenshot
+## on_screenshot('screenshot')
 
 ```TypeScript
 on(type: 'screenshot', callback: Callback<void>): void
@@ -5341,7 +5341,7 @@ Subscribes to the screenshot event.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_screenshotAppEvent
+## on_screenshotAppEvent('screenshotAppEvent')
 
 ```TypeScript
 on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
@@ -5369,13 +5369,13 @@ Subscribes to the screenshot event.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_subWindowClose
+## on_subWindowClose('subWindowClose')
 
 ```TypeScript
 on(type: 'subWindowClose', callback: Callback<void>): void
 ```
 
-Subscribes to the event indicating that the child window is closed. This event is triggered only when the user clicks the system-provided close button in the top-right corner to close the child window. It is not triggered when the child window is closed in other ways. If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect. The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to [on('windowWillClose')](#onrotationchange) . If there is an existing event subscribed to by calling [on('windowWillClose')](#onrotationchange) , only the [on('windowWillClose')](#onrotationchange) API will be responded to.
+Subscribes to the event indicating that the child window is closed. This event is triggered only when the user clicks the system-provided close button in the top-right corner to close the child window. It is not triggered when the child window is closed in other ways. If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect. The callback function in this API is executed synchronously. For asynchronous close events of child windows, refer to [on('windowWillClose')](#on_rotationchangerotationchange) . If there is an existing event subscribed to by calling [on('windowWillClose')](#on_rotationchangerotationchange) , only the [on('windowWillClose')](#on_rotationchangerotationchange) API will be responded to.
 
 **Since:** 12
 
@@ -5401,7 +5401,7 @@ Subscribes to the event indicating that the child window is closed. This event i
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 
-## on_systemAvoidAreaChange
+## on_systemAvoidAreaChange('systemAvoidAreaChange')
 
 ```TypeScript
 on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
@@ -5413,7 +5413,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](#onrotationchange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
+**Substitutes:** [on](#on_rotationchangerotationchange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
 
 <!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
 
@@ -5426,7 +5426,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 | type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
 
-## on_systemDensityChange
+## on_systemDensityChange('systemDensityChange')
 
 ```TypeScript
 on(type: 'systemDensityChange', callback: Callback<double>): void
@@ -5457,7 +5457,7 @@ Subscribes to the system density change event, which is triggered when the syste
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_touchOutside
+## on_touchOutside('touchOutside')
 
 ```TypeScript
 on(type: 'touchOutside', callback: Callback<void>): void
@@ -5517,7 +5517,7 @@ Subscribes to the event indicating changes in the security restrictions of the U
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowEvent
+## on_windowEvent('windowEvent')
 
 ```TypeScript
 on(type: 'windowEvent', callback: Callback<WindowEventType>): void
@@ -5546,7 +5546,7 @@ Subscribes to the window lifecycle change event.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_windowHighlightChange
+## on_windowHighlightChange('windowHighlightChange')
 
 ```TypeScript
 on(type: 'windowHighlightChange', callback: Callback<boolean>): void
@@ -5578,7 +5578,7 @@ Subscribes to the highlighted state change event of the window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowRectChange
+## on_windowRectChange('windowRectChange')
 
 ```TypeScript
 on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
@@ -5610,7 +5610,7 @@ Subscribes to window rectangle (position and size) change events.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowSizeChange
+## on_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 on(type: 'windowSizeChange', callback: Callback<Size>): void
@@ -5639,13 +5639,13 @@ Subscribes to the window size change event. This API can be called only by the m
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_windowStatusChange
+## on_windowStatusChange('windowStatusChange')
 
 ```TypeScript
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#onrotationchange) .) After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#onrotationchange) . > **NOTE：**> > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on > tablets), the return value differs based on the > [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For > versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return > value is **WindowStatusType::MAXIMIZE**.
+Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use [on('windowStatusDidChange')](#on_rotationchangerotationchange) .) After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or **recover** method is called. To obtain the deduplicated callback, you can use [on('windowStatusDidChange')](#on_rotationchangerotationchange) . > **NOTE：**> > In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, when the window is > maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on > tablets), the return value differs based on the > [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) setting. For > versions below 14, the return value is **WindowStatusType::FULL_SCREEN**. For versions 14 and above, the return > value is **WindowStatusType::MAXIMIZE**.
 
 **Since:** 11
 
@@ -5669,13 +5669,13 @@ Enables the listening for window status changes. When the window status changes,
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## on_windowStatusDidChange
+## on_windowStatusDidChange('windowStatusDidChange')
 
 ```TypeScript
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md#rect) property of the window has been updated).
+Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md) property of the window has been updated).
 
 **Since:** 20
 
@@ -5697,7 +5697,7 @@ Subscribes to the event indicating that the window status has changed (the [Rect
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowTitleButtonRectChange
+## on_windowTitleButtonRectChange('windowTitleButtonRectChange')
 
 ```TypeScript
 on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void
@@ -5728,7 +5728,7 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowVisibilityChange
+## on_windowVisibilityChange('windowVisibilityChange')
 
 ```TypeScript
 on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
@@ -5760,13 +5760,13 @@ Subscribes to the visibility status change event of this window. The visibility 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
-## on_windowWillClose
+## on_windowWillClose('windowWillClose')
 
 ```TypeScript
 on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 ```
 
-Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways. The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to [on('subWindowClose')](#onrotationchange). For synchronous close events of the main window, refer to [on('windowStageClose')](#onrotationchange).
+Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways. The callback function in this API is executed asynchronously. For synchronous close events of child windows, refer to [on('subWindowClose')](#on_rotationchangerotationchange). For synchronous close events of the main window, refer to [on('windowStageClose')](#on_rotationchangerotationchange).
 
 **Since:** 15
 
@@ -5910,7 +5910,7 @@ Resets the aspect ratio of the window content layout. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -6003,7 +6003,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 | --- | --- | --- | --- |
 | width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../errorcode-universal.md#401-parameter-check-failed) is thrown. |
 | height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../errorcode-universal.md#401-parameter-check-failed) is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## resize
 
@@ -6011,7 +6011,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resize(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync). The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). > **NOTE：**> > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync). The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). If this API is called when the window is in other window modes, error code 1300002 is reported. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). > **NOTE：**> > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 23
 
@@ -6048,7 +6048,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resize(width: int, height: int, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync). The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. > **NOTE：**> > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [resizeAsync()](#resizeasync). The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. > **NOTE：**> > - When the main window is in floating window mode, this API does not take effect or return an error if called > in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 23
 
@@ -6064,7 +6064,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 | --- | --- | --- | --- |
 | width | int | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
 | height | int | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -6080,7 +6080,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 resizeAsync(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately. The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). > **NOTE：**> > - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, > this API does not work for the main window.
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately. The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call [getWindowLimits](#getwindowlimits) to find out the exact limits. The new window width and height you set must meet the following limits: If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions. If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect. This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other scenarios, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). > **NOTE：**> > - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, > this API does not work for the main window.
 
 **Since:** 23
 
@@ -6150,7 +6150,7 @@ Restores the main window from minimization to the foreground, returning it to it
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-Restores the main window of the current window to the foreground. If the main window is already in the foreground , the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-window-windowtype-e.md#windowtype) windows and can be called only after the DOWN event is triggered in the windows. This API uses a promise to return the result.
+Restores the main window of the current window to the foreground. If the main window is already in the foreground , the main window level is raised. This API is applicable only to [TYPE_FLOAT](arkts-arkui-window-windowtype-e.md) windows and can be called only after the DOWN event is triggered in the windows. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -6202,8 +6202,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). If [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md). If [WindowLimits](arkts-arkui-window-windowlimits-i.md) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -6233,7 +6233,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). If [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
+| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md). If [WindowLimits](arkts-arkui-window-windowlimits-i.md) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
 
 **Return value:**
 
@@ -6302,7 +6302,7 @@ Sets the background color for this window. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setBrightness
 
@@ -6357,7 +6357,7 @@ Sets the screen brightness for this window. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setColorSpace
 
@@ -6412,7 +6412,7 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colorSpace | ColorSpace | Yes | Color space to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setContentAspectRatio
 
@@ -6432,7 +6432,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits). If [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
+| ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md). If [WindowLimits](arkts-arkui-window-windowlimits-i.md) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
 | isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.<br>If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio](#resetaspectratio) to clear the persistently saved aspect ratio.<br>If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.<br>The default value is **true**. |
 | needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.<br>If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.<br>If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize](#resize) or [resizeAsync](#resizeasync).<br>The default value is **true**. |
 
@@ -6542,7 +6542,7 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dimBehindValue | number | Yes | Dimness of the window to set. The value range is [0.0, 1.0], and the value **1.0** means the dimmest. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setDimBehind
 
@@ -6737,7 +6737,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md) . |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setFollowParentMultiScreenPolicy
 
@@ -6823,7 +6823,7 @@ Sets whether the layout information (position and size) of a child window or mod
 setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result. Full-screen mode means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them. Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP 15End--&gt;, and components do not overlap with them. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. You are advised to use > [setWindowSystemBarEnable()](#setwindowsystembarenable) > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) > to implement the full-screen mode.
+Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result. Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them. Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. You are advised to use > [setWindowSystemBarEnable()](#setwindowsystembarenable) > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) > to implement the full-screen mode.
 
 **Since:** 6
 
@@ -6839,8 +6839,8 @@ Sets whether the main window or the child window is in full-screen mode. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;). **true** to set full-screen mode, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and <!--RP15-->three-button navigation bar<!--RP15End-->). **true** to set full-screen mode, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setFullScreen
 
@@ -6848,7 +6848,7 @@ Sets whether the main window or the child window is in full-screen mode. This AP
 setFullScreen(isFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result. Full-screen mode means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them. Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP 15End--&gt;, and components do not overlap with them. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. You are advised to use > [setWindowSystemBarEnable()](#setwindowsystembarenable) > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) > to implement the full-screen mode.
+Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result. Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them. Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. You are advised to use > [setWindowSystemBarEnable()](#setwindowsystembarenable) > and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen) > to implement the full-screen mode.
 
 **Since:** 6
 
@@ -6864,7 +6864,7 @@ Sets whether the main window or the child window is in full-screen mode. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;). **true** to set full-screen mode, **false** otherwise. |
+| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and <!--RP15-->three-button navigation bar<!--RP15End-->). **true** to set full-screen mode, **false** otherwise. |
 
 **Return value:**
 
@@ -6994,7 +6994,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setLayoutFullScreen
 
@@ -7002,7 +7002,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!-- RP15End--&gt;, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 7
 
@@ -7018,8 +7018,8 @@ Sets whether the main window layout or the child window layout is immersive. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;.) **true** if immersive, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and <!--RP15-->three-button navigation bar<!--RP15End-->.) **true** if immersive, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setLayoutFullScreen
 
@@ -7027,7 +7027,7 @@ Sets whether the main window layout or the child window layout is immersive. Thi
 setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result. An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!-- RP15End--&gt;, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result. An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 7
 
@@ -7043,7 +7043,7 @@ Sets whether the main window layout or the child window layout is immersive. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;.) **true** if immersive, **false** otherwise. |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and <!--RP15-->three-button navigation bar<!--RP15End-->.) **true** if immersive, **false** otherwise. |
 
 **Return value:**
 
@@ -7100,7 +7100,7 @@ Sets whether the area outside the child window is touchable. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setParentWindow
 
@@ -7146,7 +7146,7 @@ Sets a new parent window for this child window. The new parent window can be a m
 setPreferredOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect. Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect. Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 23
 
@@ -7181,7 +7181,7 @@ Sets the preferred orientation for the main window. This API uses a promise to r
 setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see [Display Orientation Switching](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-landscape-and-portrait-development) . Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect. Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see [Display Orientation Switching](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-landscape-and-portrait-development) . Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect. Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 23
 
@@ -7196,7 +7196,7 @@ Sets the preferred orientation for this window. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | orientation | Orientation | Yes | Display orientation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The callback indicates the API call result. It does not mean that the application rotation animation ends. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. The callback indicates the API call result. It does not mean that the application rotation animation ends. |
 
 **Error codes:**
 
@@ -7296,7 +7296,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setRaiseByClickEnabled
 
@@ -7431,7 +7431,7 @@ Sets whether to enable the main window or child window with decorations to resiz
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Disable window to resize by drag if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setResizeByDragEnabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setResizeByDragEnabled. |
 
 **Error codes:**
 
@@ -7521,7 +7521,7 @@ Sets whether the current window supports the event separation state. This API us
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-Sets whether to show or hide the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; of the main window. This API uses a promise to return the result. The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+Sets whether to show or hide the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> of the main window. This API uses a promise to return the result. The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -7672,7 +7672,7 @@ Sets the modality type of the child window. This API uses a promise to return th
 setSubWindowZLevel(zLevel: int): Promise<void>
 ```
 
-Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result. Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use [shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus) for focus switching.
+Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result. Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use [shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md) for focus switching.
 
 **Since:** 23
 
@@ -7749,7 +7749,7 @@ Sets the supported window modes of the app window.
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-Enables the capability to obtain the window avoidance area information using [getWindowAvoidArea()](#getwindowavoidarea) or listen for window avoidance area changes using [on('avoidAreaChange')](#onrotationchange) after a global floating window, modal window, or system window is created.
+Enables the capability to obtain the window avoidance area information using [getWindowAvoidArea()](#getwindowavoidarea) or listen for window avoidance area changes using [on('avoidAreaChange')](#on_rotationchangerotationchange) after a global floating window, modal window, or system window is created.
 
 **Since:** 23
 
@@ -7786,7 +7786,7 @@ Enables the capability to obtain the window avoidance area information using [ge
 setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses an asynchronous callback to return the result. From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt; The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result. From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End--> The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 7
 
@@ -7802,8 +7802,8 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setSystemBarEnable
 
@@ -7811,7 +7811,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses a promise to return the result. From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt; The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result. From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End--> The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 7
 
@@ -7827,7 +7827,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 
 **Return value:**
 
@@ -7841,7 +7841,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar of the main window. This API uses an asynchronous callback to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt; This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End--> This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 6
 
@@ -7857,8 +7857,8 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;Properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setSystemBarProperties
 
@@ -7866,7 +7866,7 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar of the main window. This API uses a promise to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.&lt;!--RP5 End--&gt; This API does not take effect when it is called by a child window.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5 End--> This API does not take effect when it is called by a child window.
 
 **Since:** 6
 
@@ -7882,7 +7882,7 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;Properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
 
 **Return value:**
 
@@ -7980,7 +7980,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setUIContent
 
@@ -8003,7 +8003,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page to which the content will be loaded |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8134,7 +8134,7 @@ Sets the window brightness for the main window. The window brightness takes effe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | double | Yes | the specified brightness value. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8200,7 +8200,7 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | colorSpace | ColorSpace | Yes | the specified color space. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8375,7 +8375,7 @@ Sets whether to enable delayed raising for the window. This API takes effect onl
 setWindowFocusable(isFocusable: boolean): Promise<void>
 ```
 
-Sets whether this window is focusable. This API uses a promise to return the result. Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+Sets whether this window is focusable. This API uses a promise to return the result. Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 23
 
@@ -8411,7 +8411,7 @@ Sets whether this window is focusable. This API uses a promise to return the res
 setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is focusable. This API uses an asynchronous callback to return the result. Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+Sets whether this window is focusable. This API uses an asynchronous callback to return the result. Starting from API version 22, if a virtual screen is created by calling [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) with **supportsFocus** set to **false**, windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 23
 
@@ -8426,7 +8426,7 @@ Sets whether this window is focusable. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isFocusable | boolean | Yes | can be focus if true, or can not be focus if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8530,7 +8530,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isKeepScreenOn | boolean | Yes | keep screen on if true, or not if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8546,7 +8546,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window. An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!-- RP15End--&gt;, and components do not overlap with them.
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window. An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 9
 
@@ -8564,8 +8564,8 @@ Sets whether the main window layout or the child window layout is immersive. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (In immersive layout mode, the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; remain visible.) **true** if immersive, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (In immersive layout mode, the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> remain visible.) **true** if immersive, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8581,7 +8581,7 @@ Sets whether the main window layout or the child window layout is immersive. Thi
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported. An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!-- RP15End--&gt;, and components do not overlap with them.
+Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported. An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them. A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 23
 
@@ -8670,7 +8670,7 @@ Sets the size limits for this window. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Yes | Target size limits, in px or vp. |
-| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
+| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
 
 **Return value:**
 
@@ -8826,7 +8826,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | in private mode if true, or not if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8910,7 +8910,7 @@ Sets the blur radius of the shadow on the edges of a child window or floating wi
 setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses an asynchronous callback to return the result. From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt; The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result. From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End--> The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 9
 
@@ -8928,8 +8928,8 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -8945,7 +8945,7 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses a promise to return the result. The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result. The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -8981,7 +8981,7 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar of the main window. This API uses an asynchronous callback to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt; This API does not take effect when it is called by a child window.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End--> This API does not take effect when it is called by a child window.
 
 **Since:** 9
 
@@ -8999,8 +8999,8 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;Properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -9017,7 +9017,7 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar of the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 23
 
@@ -9031,7 +9031,7 @@ Sets the properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;Properties of the &lt;!--Del--&gt;three-button navigation bar and &lt;!--DelEnd--&gt;status bar. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
 
 **Return value:**
 
@@ -9244,7 +9244,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isTouchable | boolean | Yes | is touchable if true, or not if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -9317,7 +9317,7 @@ Shows this window. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## show
 
@@ -9363,7 +9363,7 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -9456,7 +9456,7 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -9601,8 +9601,8 @@ Specifies the cursor position within the window and moves the window. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offsetX | int | Yes | X-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window width are invalid. The window width can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties). |
-| offsetY | int | Yes | Y-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window height are invalid. The window height can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties). |
+| offsetX | int | Yes | X-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window width are invalid. The window width can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md). |
+| offsetY | int | Yes | Y-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window height are invalid. The window height can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md). |
 
 **Return value:**
 

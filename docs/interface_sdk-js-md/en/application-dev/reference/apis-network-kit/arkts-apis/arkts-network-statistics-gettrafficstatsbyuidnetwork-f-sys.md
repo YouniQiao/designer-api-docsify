@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>
 ```
 
-Get the traffic usage sequence of the specified network of the application in the specified time period.
+Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,14 +28,14 @@ Get the traffic usage sequence of the specified network of the application in th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | int | Yes | UID with this parameter, get stats info of this UID. |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| uid | int | Yes | Application UID. |
+| networkInfo | NetworkInfo | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; | The statistics history of the sim card. |
+| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; | Promise used to return the result, which is the historical traffic statistics of the application. |
 
 **Error codes:**
 

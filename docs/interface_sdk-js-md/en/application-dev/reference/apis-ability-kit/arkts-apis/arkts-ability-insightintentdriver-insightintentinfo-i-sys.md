@@ -14,7 +14,6 @@ Defines the intent information, which is the specific parameter configuration of
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -285,7 +284,7 @@ readonly parameters: Record<string, RecordData>
 
 The insight intent parameters.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
@@ -305,7 +304,7 @@ readonly result: Record<string, RecordData>
 
 The type definition of the result returned by intent call.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
@@ -343,7 +342,7 @@ Standard intent name. If an intent in the standard intent list matches both the 
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md#entryintentinfo-system-api) by default.
+Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) by default.
 
 **Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 

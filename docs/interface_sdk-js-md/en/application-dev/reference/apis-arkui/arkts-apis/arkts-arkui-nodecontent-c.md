@@ -32,7 +32,7 @@ Adds a FrameNode to this **NodeContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to add. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | FrameNode to add. |
 
 **Error codes:**
 
@@ -104,7 +104,7 @@ Removes a FrameNode from this **NodeContent** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode to remove. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | FrameNode to remove. |
 
 **Examples**
 

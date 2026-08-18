@@ -1,8 +1,8 @@
 # GravityResponse
 
-Describes the gravity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the gravity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** GravityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** GravityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

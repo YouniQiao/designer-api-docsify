@@ -15,7 +15,7 @@
 ```TypeScript
 ```
 
-## off_asyncReceiverRegister
+## off_asyncReceiverRegister('asyncReceiverRegister')
 
 ```TypeScript
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -40,7 +40,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | type | 'asyncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示取消订阅扩展Ability发生异步注册回调。 |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调；非空代表取消订阅对应的异步注册回调。<br>**起始版本：** 18 |
 
-## off_syncReceiverRegister
+## off_syncReceiverRegister('syncReceiverRegister')
 
 ```TypeScript
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -65,7 +65,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | type | 'syncReceiverRegister' | 是 | 事件类型，取值为'syncReceiverRegister'，表示取消订阅扩展Ability发生同步注册回调。 |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调；非空代表取消订阅对应的同步注册回调。<br>**起始版本：** 18 |
 
-## on_asyncReceiverRegister
+## on_asyncReceiverRegister('asyncReceiverRegister')
 
 ```TypeScript
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -90,7 +90,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | type | 'asyncReceiverRegister' | 是 | 事件类型，取值为'asyncReceiverRegister'，表示订阅扩展Ability发生异步注册回调。 |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。扩展Ability注册setReceiveDataCallback后触发的回调。<br>**起始版本：** 18 |
 
-## on_syncReceiverRegister
+## on_syncReceiverRegister('syncReceiverRegister')
 
 ```TypeScript
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void

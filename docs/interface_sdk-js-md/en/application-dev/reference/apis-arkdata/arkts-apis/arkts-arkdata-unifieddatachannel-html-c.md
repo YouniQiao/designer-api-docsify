@@ -1,8 +1,8 @@
 # HTML
 
-Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#text).
+Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
 
-**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#text)
+**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## onceWearDetectionChange
@@ -23,7 +24,7 @@ Subscribe to wear detection sensor data once, {@code SensorId.WEAR_DETECTION}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | 是 | callback wear detection data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | 是 | callback wear detection data. |
 
 **错误码：**
 

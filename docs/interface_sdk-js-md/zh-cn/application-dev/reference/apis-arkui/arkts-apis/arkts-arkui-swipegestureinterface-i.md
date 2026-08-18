@@ -21,7 +21,7 @@
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface)，设置快滑手势事件。
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置快滑手势事件。
 
 **起始版本：** 8
 

@@ -12,7 +12,6 @@ Define pattern options of keyboard.
 
 ```TypeScript
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## action

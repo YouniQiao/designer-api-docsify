@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -32,8 +32,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -104,7 +104,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
@@ -163,7 +163,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -183,9 +183,9 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -236,7 +236,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -256,8 +256,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 

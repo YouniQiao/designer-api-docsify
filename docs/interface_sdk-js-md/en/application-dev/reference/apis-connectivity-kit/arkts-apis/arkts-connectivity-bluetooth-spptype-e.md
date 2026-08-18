@@ -6,7 +6,7 @@ The enum of SPP type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#spptype)
+**Substitutes:** [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 
 <!--Device-bluetooth-enum SppType--><!--Device-bluetooth-enum SppType-End-->
 
@@ -24,7 +24,7 @@ RFCOMM
 
 **Deprecated since:** 9
 
-**Substitutes:** [SPP_RFCOMM](arkts-connectivity-bluetoothmanager-spptype-e.md#spprfcomm)
+**Substitutes:** [SPP_RFCOMM](arkts-connectivity-bluetoothmanager-spptype-e.md#spp_rfcomm)
 
 <!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 

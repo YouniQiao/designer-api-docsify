@@ -1,6 +1,6 @@
 # PhotoSubType (System API)
 
-Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#fileasset-system-api) types.
+Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) types.
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#fil
 ## DEFAULT
 
 ```TypeScript
-DEFAULT
+DEFAULT = 0
 ```
 
 Default (photo) type.
@@ -28,7 +28,7 @@ Default (photo) type.
 
 **Substitutes:** DEFAULT
 
-<!--Device-PhotoSubType-DEFAULT--><!--Device-PhotoSubType-DEFAULT-End-->
+<!--Device-PhotoSubType-DEFAULT = 0--><!--Device-PhotoSubType-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ Default (photo) type.
 ## SCREENSHOT
 
 ```TypeScript
-SCREENSHOT
+SCREENSHOT = 1
 ```
 
 Screenshots and screen recording files.
@@ -48,7 +48,7 @@ Screenshots and screen recording files.
 
 **Substitutes:** SCREENSHOT
 
-<!--Device-PhotoSubType-SCREENSHOT--><!--Device-PhotoSubType-SCREENSHOT-End-->
+<!--Device-PhotoSubType-SCREENSHOT = 1--><!--Device-PhotoSubType-SCREENSHOT = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ Screenshots and screen recording files.
 ## CAMERA
 
 ```TypeScript
-CAMERA
+CAMERA = 2
 ```
 
 Photos and videos taken by a camera.
@@ -68,7 +68,7 @@ Photos and videos taken by a camera.
 
 **Substitutes:** SOURCE_GENERIC
 
-<!--Device-PhotoSubType-CAMERA--><!--Device-PhotoSubType-CAMERA-End-->
+<!--Device-PhotoSubType-CAMERA = 2--><!--Device-PhotoSubType-CAMERA = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

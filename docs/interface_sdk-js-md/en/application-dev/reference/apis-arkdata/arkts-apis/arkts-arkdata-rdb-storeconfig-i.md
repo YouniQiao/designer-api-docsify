@@ -6,7 +6,7 @@ Defines the RDB store configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig)
+**Substitutes:** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)
 
 <!--Device-rdb-interface StoreConfig--><!--Device-rdb-interface StoreConfig-End-->
 

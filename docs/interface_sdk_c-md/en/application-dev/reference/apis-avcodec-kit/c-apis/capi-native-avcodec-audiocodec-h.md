@@ -120,7 +120,7 @@ Clears the internal resources of an audio codec and destroys the codec instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_NO_MEMORY}: Internal resources have been released.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_NO_MEMORY}: Internal resources have been released.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_RegisterCallback()
 
@@ -146,7 +146,7 @@ Sets an asynchronous callback so that your application can respond to events gen
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable. |
 
 ### OH_AudioCodec_Configure()
 
@@ -171,7 +171,7 @@ Configures the audio description. The audio codec is usually configured based on
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_Prepare()
 
@@ -195,7 +195,7 @@ Prepares internal resources for an audio codec. This function must be called aft
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_Start()
 
@@ -219,7 +219,7 @@ Starts an audio codec after it is prepared successfully. After being started, th
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_Stop()
 
@@ -243,7 +243,7 @@ Stops an audio codec. After the codec is stopped, you can call **Start** to star
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_Flush()
 
@@ -267,7 +267,7 @@ Clears the input and output data in the internal buffer of an audio codec. This 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_Reset()
 
@@ -291,7 +291,7 @@ Resets an audio codec. The configured parameters and input and output data are c
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable. |
 
 ### OH_AudioCodec_GetOutputDescription()
 
@@ -315,7 +315,7 @@ Obtains the OH_AVFormat information about the output data of an audio codec.You 
 
 | Type | Description |
 | -- | -- |
-| OH_AVFormat * | Handle to an OH_AVFormat instance. The lifecycle of this instance is refreshed when<br>     [OH_AudioCodec_GetOutputDescription](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_getoutputdescription) is called again and destroyed when the OH_AVCodec instance is<br>     destroyed. |
+| OH_AVFormat * | Handle to an OH_AVFormat instance. The lifecycle of this instance is refreshed when      [OH_AudioCodec_GetOutputDescription](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_getoutputdescription) is called again and destroyed when the OH_AVCodec instance is      destroyed. |
 
 ### OH_AudioCodec_SetParameter()
 
@@ -340,7 +340,7 @@ Sets dynamic parameters for an audio codec.This function can be called only afte
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_PushInputBuffer()
 
@@ -365,7 +365,7 @@ Notifies the audio codec that the input data has been written to the buffer iden
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The input index is used or invalid. Use the index returned by the<br>     [OH_AVCodecOnNeedInputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconneedinputbuffer) callback.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec state is incorrect.<br>     Before calling OH_AudioCodec_PushInputBuffer, ensure that [OH_AudioCodec_Configure](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_configure),<br>     [OH_AudioCodec_Prepare](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_prepare), and [OH_AudioCodec_Start](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_start) are successfully called in sequence.<br>     <br>{@link AV_ERR_UNKNOWN}: The input buffer size is invalid. Ensure that the buffer size and flags are<br>     correctly set. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The input index is used or invalid. Use the index returned by the      [OH_AVCodecOnNeedInputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconneedinputbuffer) callback.      <br>{@link AV_ERR_INVALID_STATE}: The codec state is incorrect.      Before calling OH_AudioCodec_PushInputBuffer, ensure that [OH_AudioCodec_Configure](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_configure),      [OH_AudioCodec_Prepare](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_prepare), and [OH_AudioCodec_Start](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_start) are successfully called in sequence.      <br>{@link AV_ERR_UNKNOWN}: The input buffer size is invalid. Ensure that the buffer size and flags are      correctly set. |
 
 ### OH_AudioCodec_FreeOutputBuffer()
 
@@ -390,7 +390,7 @@ Frees an output buffer of an audio codec. You need to call this function to rele
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. The buffer index is obtained from<br>     [OH_AVCodecOnNewOutputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconnewoutputbuffer).<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or<br>     unsupported operation.<br>     <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. The buffer index is obtained from      [OH_AVCodecOnNewOutputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconnewoutputbuffer).      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not allowed. This may be because of incorrect state or      unsupported operation.      <br>{@link AV_ERR_UNKNOWN}: An internal error occurs. You are advised to check logs. |
 
 ### OH_AudioCodec_IsValid()
 
@@ -415,7 +415,7 @@ Checks whether an audio codec instance is valid.This function is used to detect 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. |
 
 ### OH_AudioCodec_SetDecryptionConfig()
 
@@ -441,7 +441,7 @@ Sets the decryption information.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid, or the mediaKeySystemInfo<br>     instance is nullptr or invalid.<br>     <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.<br>     <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The OH_AVCodec instance is nullptr or invalid, or the mediaKeySystemInfo      instance is nullptr or invalid.      <br>{@link AV_ERR_INVALID_STATE}: The codec service is unavailable.      <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails. |
 
 ### OH_AudioCodec_QueryInputBuffer()
 
@@ -467,7 +467,7 @@ Obtains the index of an available input buffer for an audio codec within the spe
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The operation fails due to incorrect input parameters.<br>     <br>{@link AV_ERR_INVALID_STATE}: The operation fails due to an invalid state, for example, the codec not being<br>     started.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation fails because the call is not allowed in asynchronous mode.<br>     <br>{@link AV_ERR_TRY_AGAIN_LATER}: The operation fails because no available buffer is obtained within the<br>     timeout period. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The operation fails due to incorrect input parameters.      <br>{@link AV_ERR_INVALID_STATE}: The operation fails due to an invalid state, for example, the codec not being      started.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation fails because the call is not allowed in asynchronous mode.      <br>{@link AV_ERR_TRY_AGAIN_LATER}: The operation fails because no available buffer is obtained within the      timeout period. |
 
 ### OH_AudioCodec_GetInputBuffer()
 
@@ -518,7 +518,7 @@ Obtains the index of an available output buffer for an audio codec within the sp
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The operation fails due to incorrect input parameters.<br>     <br>{@link AV_ERR_INVALID_STATE}: The operation fails due to an invalid state, for example, the codec not being<br>     started.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation fails because the call is not allowed in asynchronous mode.<br>     <br>{@link AV_ERR_STREAM_CHANGED}: The format of the decoded output stream changes. You can call<br>     [OH_AudioCodec_GetOutputDescription](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_getoutputdescription) to obtain the new stream information.<br>     <br>{@link AV_ERR_TRY_AGAIN_LATER}: The operation fails because no available buffer is obtained within the<br>     timeout period. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The operation fails due to incorrect input parameters.      <br>{@link AV_ERR_INVALID_STATE}: The operation fails due to an invalid state, for example, the codec not being      started.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation fails because the call is not allowed in asynchronous mode.      <br>{@link AV_ERR_STREAM_CHANGED}: The format of the decoded output stream changes. You can call      [OH_AudioCodec_GetOutputDescription](capi-native-avcodec-audiocodec-h.md#oh_audiocodec_getoutputdescription) to obtain the new stream information.      <br>{@link AV_ERR_TRY_AGAIN_LATER}: The operation fails because no available buffer is obtained within the      timeout period. |
 
 ### OH_AudioCodec_GetOutputBuffer()
 

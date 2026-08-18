@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { preferences } from '@kit.ArkData';
-import { preferences } from '@kit.ArkData';
 ```
 
 ## isStorageTypeSupported

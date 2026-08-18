@@ -2,7 +2,7 @@
 
 Defines the number style options.
 
-**Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md#counterv2inlinestyleoptions)
+**Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
 **Since:** 26.0.0
 

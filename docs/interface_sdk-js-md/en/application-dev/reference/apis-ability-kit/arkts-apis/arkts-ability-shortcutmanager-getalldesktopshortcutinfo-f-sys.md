@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllDesktopShortcutInfo
@@ -29,7 +28,7 @@ Obtains the information about all shortcuts of the given user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 

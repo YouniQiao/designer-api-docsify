@@ -1,6 +1,6 @@
 # Watcher
 
-Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events. > **NOTE：**> > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an > event occurs.
+Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events. > **NOTE：**> > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md) in the callback. Once a watcher is > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an > event occurs.
 
 **Since:** 23
 

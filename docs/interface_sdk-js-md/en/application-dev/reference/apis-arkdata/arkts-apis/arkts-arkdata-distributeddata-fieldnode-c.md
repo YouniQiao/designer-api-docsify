@@ -16,7 +16,6 @@ Represents a **Schema** instance, which provides the APIs for defining the value
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## appendChild

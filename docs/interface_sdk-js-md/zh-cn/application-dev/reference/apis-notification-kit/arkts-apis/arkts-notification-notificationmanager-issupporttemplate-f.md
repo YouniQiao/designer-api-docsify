@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isSupportTemplate
@@ -13,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -26,7 +25,7 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | templateName | string | 是 | 模板名称。当前仅支持'downloadTemplate'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持该模板；返回false表示不支持该模板；调用失败返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示支持该模板；返回false表示不支持该模板；调用失败返回错误对象。 |
 
 **错误码：**
 
@@ -78,7 +77,7 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **起始版本：** 23
 

@@ -4,7 +4,7 @@
 type NetBearType = connection.NetBearType
 ```
 
-Get network bear type.
+Defines the network type.
 
 **Since:** 10
 

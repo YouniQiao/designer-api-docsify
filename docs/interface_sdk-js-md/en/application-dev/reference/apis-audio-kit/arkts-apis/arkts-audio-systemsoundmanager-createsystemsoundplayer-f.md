@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { systemSoundManager } from '@kit.AudioKit';
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## createSystemSoundPlayer

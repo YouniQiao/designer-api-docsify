@@ -35,7 +35,7 @@ Callback will be triggered before web download start.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download will be start. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download will be start. |
 
 ## onDownloadFailed
 
@@ -57,7 +57,7 @@ Callback will be triggered when web download is interrupted or canceled.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did fail. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did fail. |
 
 ## onDownloadFinish
 
@@ -79,7 +79,7 @@ Callback will be triggered when web download is completed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did finish. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did finish. |
 
 ## onDownloadUpdated
 
@@ -101,5 +101,5 @@ Callback will be triggered when web download is processing.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did update. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | The callback of download did update. |
 

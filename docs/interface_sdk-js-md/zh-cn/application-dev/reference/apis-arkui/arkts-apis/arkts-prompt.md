@@ -1,12 +1,12 @@
 # @ohos.prompt
 
-创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-na/arkts-apis/arkts-na-promptaction-n.md#promptaction)。
+创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-na/arkts-apis/arkts-na-promptaction-n.md)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [promptAction/promptAction](../../apis-na/arkts-apis/arkts-na-promptaction-n.md#promptaction)
+**替代接口：** [promptAction/promptAction](../../apis-na/arkts-apis/arkts-na-promptaction-n.md)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -23,11 +25,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu) | 创建并显示操作菜单，菜单响应结果异步返回。 |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu) | 创建并显示操作菜单，菜单响应后同步返回结果。 |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog) | 创建并显示对话框，对话框响应结果异步返回。 |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog) | 创建并显示对话框，对话框响应后同步返回结果。 |
-| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) | 创建并显示文本提示框。 |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应结果异步返回。 |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应后同步返回结果。 |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md) | 创建并显示对话框，对话框响应结果异步返回。 |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md) | 创建并显示对话框，对话框响应后同步返回结果。 |
+| [showToast](arkts-arkui-prompt-showtoast-f.md) | 创建并显示文本提示框。 |
 
 ### 接口
 

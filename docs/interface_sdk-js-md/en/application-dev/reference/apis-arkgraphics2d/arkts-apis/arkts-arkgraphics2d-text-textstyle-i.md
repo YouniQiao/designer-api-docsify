@@ -1,6 +1,6 @@
 # TextStyle
 
-Represents a text style, which controls the visual appearance attributes of text, including font, color, font size, spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
+Represents a text style, which controls the visual appearance attributes of text, including font, color, font size, spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Represents a text style, which controls the visual appearance attributes of text
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 
@@ -295,7 +294,7 @@ Array of variable font properties. Pass this parameter when you need to adjust t
 fontWeight?: FontWeight
 ```
 
-Font weight. The default value is W400. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
+Font weight. The default value is W400. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
 
 **Type:** FontWeight
 

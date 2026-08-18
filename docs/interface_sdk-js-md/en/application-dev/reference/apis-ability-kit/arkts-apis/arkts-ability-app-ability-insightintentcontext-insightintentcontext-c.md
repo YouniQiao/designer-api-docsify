@@ -1,6 +1,6 @@
 # InsightIntentContext
 
-The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#insightintentexecutor) and [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#insightintententryexecutor) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#uiability) within the same application.
+The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md) and [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md) within the same application.
 
 **Since:** 23
 
@@ -12,7 +12,6 @@ The module provides the context for intent execution. It is used as a property i
 
 ```TypeScript
 import { InsightIntentContext } from '@kit.AbilityKit';
-import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -21,7 +20,7 @@ import { InsightIntentContext } from '@kit.AbilityKit';
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md#executemode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md).
 
 **Since:** 23
 
@@ -94,7 +93,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md#executemode).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md).
 
 **Since:** 23
 
@@ -183,20 +182,20 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -279,13 +278,13 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -334,7 +333,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: int
 ```
 
-Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult).
+Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md).
 
 **Type:** int
 

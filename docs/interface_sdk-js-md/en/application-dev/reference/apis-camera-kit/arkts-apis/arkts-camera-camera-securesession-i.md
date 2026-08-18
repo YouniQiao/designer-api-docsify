@@ -1,8 +1,8 @@
 # SecureSession
 
-**SecureSession** inherits from [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Focus](arkts-camera-camera-focus-i.md#focus), and [Zoom](arkts-camera-camera-zoom-i.md#zoom). It implements a secure session, which provides operations on the flash, exposure, white balance, focus, and zoom. You can call [createSession](arkts-camera-camera-cameramanager-i.md#createsession) with [SceneMode](arkts-camera-camera-scenemode-e.md#scenemode) set to **SECURE_PHOTO** to create a session in secure mode. The secure mode is designed for applications with high security requirements, such as facial recognition systems and banking services. It must be used together with the &lt; !--RP1--&gt;security TA&lt;!--RP1End--&gt; to support service scenarios where both standard preview streams and security streams are output.&lt;!--RP2--&gt; The security TA can verify the signature of data delivered by the server, sign images, parse and assemble TLV logic, and read, create, and operate keys. It applies to image processing.&lt;!--RP2End--&gt;
+**SecureSession** inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), and [Zoom](arkts-camera-camera-zoom-i.md). It implements a secure session, which provides operations on the flash, exposure, white balance, focus, and zoom. You can call [createSession](arkts-camera-camera-cameramanager-i.md#createsession) with [SceneMode](arkts-camera-camera-scenemode-e.md) set to **SECURE_PHOTO** to create a session in secure mode. The secure mode is designed for applications with high security requirements, such as facial recognition systems and banking services. It must be used together with the &lt; !--RP1--&gt;security TA<!--RP1End--> to support service scenarios where both standard preview streams and security streams are output.<!--RP2--> The security TA can verify the signature of data delivered by the server, sign images, parse and assemble TLV logic, and read, create, and operate keys. It applies to image processing.<!--RP2End-->
 
-**Inheritance/Implementation:** SecureSession extends [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Focus](arkts-camera-camera-focus-i.md#focus), [Zoom](arkts-camera-camera-zoom-i.md#zoom)
+**Inheritance/Implementation:** SecureSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)
 
 **Since:** 23
 
@@ -23,7 +23,7 @@ import { cameraPicker } from '@kit.CameraKit';
 addSecureOutput(previewOutput: PreviewOutput): void
 ```
 
-Marks a [PreviewOutput](arkts-camera-camera-previewoutput-i.md#previewoutput) stream as secure output.
+Marks a [PreviewOutput](arkts-camera-camera-previewoutput-i.md) stream as secure output.
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the capture session errors. |
 
 ## offFocusStateChange
 
@@ -85,9 +85,9 @@ Unsubscribes from focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -108,9 +108,9 @@ Unsubscribes from SecureSession error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## off_focusStateChange
+## off_focusStateChange('focusStateChange')
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -131,7 +131,7 @@ Unsubscribes from focus state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onError
 
@@ -151,7 +151,7 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the capture session errors. |
 
 ## onFocusStateChange
 
@@ -171,9 +171,9 @@ Subscribes focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -194,9 +194,9 @@ Subscribes to SecureSession error events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
-## on_focusStateChange
+## on_focusStateChange('focusStateChange')
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -217,5 +217,5 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
 

@@ -4,7 +4,7 @@
 export type CipherSuite = TlsV13CipherSuite
 ```
 
-Include all cipher suite.
+Declares the cipher suite.
 
 **Since:** 23
 

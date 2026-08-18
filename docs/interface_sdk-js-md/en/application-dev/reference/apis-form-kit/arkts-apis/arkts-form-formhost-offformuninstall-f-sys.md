@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formHost } from '@kit.FormKit';
-import { formHost } from '@kit.FormKit';
 ```
 
 ## offFormUninstall
@@ -27,7 +26,7 @@ Cancels listening to the event of uninstall form. You can use this method to can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | The callback of formUninstall. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | The callback of formUninstall. |
 
 **Error codes:**
 

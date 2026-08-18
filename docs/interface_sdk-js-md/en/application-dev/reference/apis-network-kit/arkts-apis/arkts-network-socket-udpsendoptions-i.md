@@ -1,8 +1,8 @@
 # UDPSendOptions
 
-Defines the parameters for sending data over the UDPSocket connection.
+Defines the parameters for sending data over a UDP socket connection.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface UDPSendOptions--><!--Device-socket-export interface UDPSendOptions-End-->
 
@@ -24,7 +24,7 @@ Destination address.
 
 **Type:** NetAddress
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-UDPSendOptions-address: NetAddress--><!--Device-UDPSendOptions-address: NetAddress-End-->
 
@@ -40,7 +40,7 @@ Data to send.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-UDPSendOptions-data: string | ArrayBuffer--><!--Device-UDPSendOptions-data: string | ArrayBuffer-End-->
 
@@ -52,7 +52,7 @@ Data to send.
 proxy?: ProxyOptions
 ```
 
-Set this option for the proxy feature.
+Proxy option. By default, no proxy is used.
 
 **Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 

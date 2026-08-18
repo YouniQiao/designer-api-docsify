@@ -19,7 +19,7 @@
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+获取触摸位置相对于当前组件实时位置的左上角坐标。
 
 **起始版本：** 26.0.0
 
@@ -35,7 +35,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| Coordinate2D | 触摸位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 
@@ -103,7 +103,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
+触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 

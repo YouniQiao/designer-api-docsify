@@ -26,7 +26,7 @@ Specifies the description for the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | the description value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of description value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of description value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

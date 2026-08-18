@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## onSeniorModeStateChangeForApp
@@ -13,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): void
 ```
 
-Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp-system-api) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur.
+Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur.
 
 **Since:** 26.0.0
 
@@ -31,7 +30,7 @@ Listens for senior mode state change events of all apps. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | Yes | Callback invoked to return the modified senior mode information of the app. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | Yes | Callback invoked to return the modified senior mode information of the app. |
 
 **Error codes:**
 

@@ -51,7 +51,7 @@ Called when the LowPowerVideoSink needs more data. This callback is included in 
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)\* buffer | OH_AVSamplesBuffer instance that will be written in |
 | void \*userData | User specific data |
 
@@ -71,7 +71,7 @@ Called when an error occurs in the LowPowerVideoSink.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | errorCode | The error code returned when an error occurs during service operation.See the definition of {@OH_AVErrCode} |
 | errorMsg | string of Error description information returned when an error occursduring service operation |
 | void\* userData | User specific data |
@@ -92,7 +92,7 @@ Called when the LowPowerVideoSink reaches the target point. This callback is inc
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | const int64_t targetPts | Target pts of renderred frame, in microseconds |
 | const bool isTimeout | If wait target pts timeout, it is false |
 | void\* userData | User specific data |
@@ -113,7 +113,7 @@ Called when the LowPowerVideoSink starts rendering. This callback is included in
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | void\* userData | User specific data |
 
 ### OH_LowPowerVideoSink_OnStreamChanged()
@@ -132,8 +132,8 @@ Called when the stream changes in the LowPowerVideoSink. This callback is includ
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
-| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)\* format | Carrying changing parameters and corresponding values |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
+| OH_AVFormat\* format | Carrying changing parameters and corresponding values |
 | void\* userData | User specific data |
 
 ### OH_LowPowerVideoSink_OnFirstFrameDecoded()
@@ -152,7 +152,7 @@ Called when the first frame is successfully decoded in the LowPowerVideoSink. Th
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | void\* userData | User specific data |
 
 ### OH_LowPowerVideoSink_OnEos()
@@ -171,7 +171,7 @@ Called when the playback is completed in the LowPowerVideoSink. This callback is
 
 | Parameter | Description |
 | -- | -- |
-| (OH_LowPowerVideoSink\* sink | OH_LowPowerVideoSink instance |
+| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | OH_LowPowerVideoSink instance |
 | void\* userData | User specific data |
 
 

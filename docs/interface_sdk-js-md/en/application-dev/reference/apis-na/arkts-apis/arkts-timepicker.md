@@ -11,7 +11,7 @@
 | [TimePickerResult](arkts-na-timepicker-timepickerresult-i.md) | Defines the struct of TimePickerResult. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

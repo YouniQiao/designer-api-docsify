@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSyncNotificationEnabledWithoutApp
@@ -32,7 +31,7 @@ function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | int | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取同步通知到未安装应用设备的开关是否开启的回调函数（true：开启，false：未开启）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取同步通知到未安装应用设备的开关是否开启的回调函数（true：开启，false：未开启）。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # @ohos.net.policy
 
-Provides interfaces to manage network policy rules.
+The **policy** module provides APIs for managing network policies, which allow you to use firewall technology to control and manage the data traffic used.
 
 **Since:** 10
 
@@ -20,97 +20,97 @@ import { policy } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md#getnetaccesspolicy) | Query the network access policy of the calling application. |
-| [showAppNetPolicySettings](arkts-network-policy-showappnetpolicysettings-f.md#showappnetpolicysettings) | Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result. |
+| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md) | Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings** > **Mobile network** > **Manage data usage** > **Network access**. This API uses a promise to return the result. |
+| [showAppNetPolicySettings](arkts-network-policy-showappnetpolicysettings-f.md) | Sets whether the current application can connect to the Wi-Fi or cellular network. You can call this API to open the network access settings page of the current application and set the network access permission of the application. This API uses a promise to return the result. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getBackgroundPolicyByUid](arkts-network-policy-getbackgroundpolicybyuid-f-sys.md#getbackgroundpolicybyuid) | Get the background network policy for the specified uid. |
-| [getBackgroundPolicyByUid](arkts-network-policy-getbackgroundpolicybyuid-f-sys.md#getbackgroundpolicybyuid-system-api) | Get the background network policy for the specified uid. |
-| [getDeviceIdleTrustlist](arkts-network-policy-getdeviceidletrustlist-f-sys.md#getdeviceidletrustlist) | Obtain the list of uids that are allowed to access the Internet in hibernation mode. |
-| [getDeviceIdleTrustlist](arkts-network-policy-getdeviceidletrustlist-f-sys.md#getdeviceidletrustlist-system-api) | Obtain the list of uids that are allowed to access the Internet in hibernation mode. |
-| [getNetQuotaPolicies](arkts-network-policy-getnetquotapolicies-f-sys.md#getnetquotapolicies) | Get metered network quota policies. |
-| [getNetQuotaPolicies](arkts-network-policy-getnetquotapolicies-f-sys.md#getnetquotapolicies-system-api) | Get metered network quota policies. |
-| [getNetworkAccessPolicy](arkts-network-policy-getnetworkaccesspolicy-f-sys.md#getnetworkaccesspolicy) | Query the network access policy of the specified application. |
-| [getNetworkAccessPolicy](arkts-network-policy-getnetworkaccesspolicy-f-sys.md#getnetworkaccesspolicy-system-api) | Query the network access policy of all applications. |
-| [getPolicyByUid](arkts-network-policy-getpolicybyuid-f-sys.md#getpolicybyuid) | Query the policy of the specified UID. |
-| [getPolicyByUid](arkts-network-policy-getpolicybyuid-f-sys.md#getpolicybyuid-system-api) | Query the policy of the specified UID. |
-| [getPowerSaveTrustlist](arkts-network-policy-getpowersavetrustlist-f-sys.md#getpowersavetrustlist) | Obtain the list of uids that are allowed to access the Internet in power saving mode. |
-| [getPowerSaveTrustlist](arkts-network-policy-getpowersavetrustlist-f-sys.md#getpowersavetrustlist-system-api) | Obtain the list of uids that are allowed to access the Internet in power saving mode. |
-| [getUidsByPolicy](arkts-network-policy-getuidsbypolicy-f-sys.md#getuidsbypolicy) | Query the application UIDs of the specified policy. |
-| [getUidsByPolicy](arkts-network-policy-getuidsbypolicy-f-sys.md#getuidsbypolicy-system-api) | Query the application UIDs of the specified policy. |
-| [isBackgroundAllowed](arkts-network-policy-isbackgroundallowed-f-sys.md#isbackgroundallowed) | Get the status if applications can use data on background. |
-| [isBackgroundAllowed](arkts-network-policy-isbackgroundallowed-f-sys.md#isbackgroundallowed-system-api) | Get the status if applications can use data on background. |
-| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md#isuidnetallowed) | Get the status whether the uid app can access the metered network or non-metered network. |
-| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md#isuidnetallowed-system-api) | Get the status whether the uid app can access the metered network or non-metered network. |
-| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md#isuidnetallowed-system-api) | Get the status of whether the specified uid can access the specified network. |
-| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md#isuidnetallowed-system-api) | Get the status of whether the specified uid can access the specified network. |
-| [off_netBackgroundPolicyChange](arkts-network-policy-offnetbackgroundpolicychange-f-sys.md#offnetbackgroundpolicychange) | Unregister network background policy change listener. |
-| [off_netMeteredIfacesChange](arkts-network-policy-offnetmeteredifaceschange-f-sys.md#offnetmeteredifaceschange) | Unregister metered ifaces change listener. |
-| [off_netQuotaPolicyChange](arkts-network-policy-offnetquotapolicychange-f-sys.md#offnetquotapolicychange) | Unregister quota policies change listener. |
-| [off_netUidPolicyChange](arkts-network-policy-offnetuidpolicychange-f-sys.md#offnetuidpolicychange) | Unregister uid policy change listener. |
-| [off_netUidRuleChange](arkts-network-policy-offnetuidrulechange-f-sys.md#offnetuidrulechange) | Unregister uid rule change listener. |
-| [on_netBackgroundPolicyChange](arkts-network-policy-onnetbackgroundpolicychange-f-sys.md#onnetbackgroundpolicychange) | Register network background policy change listener. |
-| [on_netMeteredIfacesChange](arkts-network-policy-onnetmeteredifaceschange-f-sys.md#onnetmeteredifaceschange) | Register metered ifaces change listener. |
-| [on_netQuotaPolicyChange](arkts-network-policy-onnetquotapolicychange-f-sys.md#onnetquotapolicychange) | Register quota policies change listener. |
-| [on_netUidPolicyChange](arkts-network-policy-onnetuidpolicychange-f-sys.md#onnetuidpolicychange) | Register uid policy change listener. |
-| [on_netUidRuleChange](arkts-network-policy-onnetuidrulechange-f-sys.md#onnetuidrulechange) | Register uid rule change listener. |
-| [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md#resetpolicies) | Reset network policies\rules\quota policies\firewall rules. |
-| [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md#resetpolicies-system-api) | Reset network policies\rules\quota policies\firewall rules. |
-| [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md#restoreallpolicies) | Reset the specified network management policy. |
-| [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md#setbackgroundallowed) | Control if applications can use data on background. |
-| [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md#setbackgroundallowed-system-api) | Control if applications can use data on background. |
-| [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md#setdeviceidletrustlist) | Set the list of uids that are allowed to access the Internet in hibernation mode. |
-| [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md#setdeviceidletrustlist-system-api) | Set the list of uids that are allowed to access the Internet in hibernation mode. |
-| [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md#setnetquotapolicies) | Set metered network quota policies. |
-| [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md#setnetquotapolicies-system-api) | Set metered network quota policies. |
-| [setNetworkAccessPolicy](arkts-network-policy-setnetworkaccesspolicy-f-sys.md#setnetworkaccesspolicy) | Set the policy to access the network of the specified application. |
-| [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md#setpolicybyuid) | Set the policy for the specified UID. |
-| [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md#setpolicybyuid-system-api) | Set the policy for the specified UID. |
-| [setPowerSaveTrustlist](arkts-network-policy-setpowersavetrustlist-f-sys.md#setpowersavetrustlist) | Set the list of uids that are allowed to access the Internet in power saving mode. |
-| [setPowerSaveTrustlist](arkts-network-policy-setpowersavetrustlist-f-sys.md#setpowersavetrustlist-system-api) | Set the list of uids that are allowed to access the Internet in power saving mode. |
-| [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateremindpolicy) | Update the policy when the quota reaches the upper limit. |
-| [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateremindpolicy-system-api) | Update the policy when the quota reaches the upper limit. |
+| [getBackgroundPolicyByUid](arkts-network-policy-getbackgroundpolicybyuid-f-sys.md) | Checks whether the specified UID can access the background network. This API uses an asynchronous callback to return the result. |
+| [getBackgroundPolicyByUid](arkts-network-policy-getbackgroundpolicybyuid-f-sys.md) | Obtains whether the UID can access the network of the background. This API uses a promise to return the result. |
+| [getDeviceIdleTrustlist](arkts-network-policy-getdeviceidletrustlist-f-sys.md) | Obtains the UID of applications that are on the device idle allowlist. This API uses an asynchronous callback to return the result. |
+| [getDeviceIdleTrustlist](arkts-network-policy-getdeviceidletrustlist-f-sys.md) | Obtains the UID of applications that are on the device idle allowlist. This API uses a promise to return the result. |
+| [getNetQuotaPolicies](arkts-network-policy-getnetquotapolicies-f-sys.md) | Obtains the metering network policy. This API uses an asynchronous callback to return the result. |
+| [getNetQuotaPolicies](arkts-network-policy-getnetquotapolicies-f-sys.md) | Obtains the metering network policy. This API uses a promise to return the result. |
+| [getNetworkAccessPolicy](arkts-network-policy-getnetworkaccesspolicy-f-sys.md) | Obtains whether the application with the specified UID can access the network. This API uses a promise to return the result. |
+| [getNetworkAccessPolicy](arkts-network-policy-getnetworkaccesspolicy-f-sys.md) | Obtains the network access policy of all applications under the current user. This API uses a promise to return the result. |
+| [getPolicyByUid](arkts-network-policy-getpolicybyuid-f-sys.md) | Obtains the network access policy for the application specified by a given UID. This API uses an asynchronous callback to return the result. |
+| [getPolicyByUid](arkts-network-policy-getpolicybyuid-f-sys.md) | Obtains the network access policy by app UID. This API uses a promise to return the result. |
+| [getPowerSaveTrustlist](arkts-network-policy-getpowersavetrustlist-f-sys.md) | Obtains the UID array of applications that are on the power saving allowlist. This API uses an asynchronous callback to return the result. |
+| [getPowerSaveTrustlist](arkts-network-policy-getpowersavetrustlist-f-sys.md) | Obtains the UID array of applications that are on the device idle allowlist. This API uses a promise to return the result. |
+| [getUidsByPolicy](arkts-network-policy-getuidsbypolicy-f-sys.md) | Obtains all UIDs that match the specified network policy. This API uses an asynchronous callback to return the result. |
+| [getUidsByPolicy](arkts-network-policy-getuidsbypolicy-f-sys.md) | Obtains all UIDs that match the policy by policy. This API uses a promise to return the result. |
+| [isBackgroundAllowed](arkts-network-policy-isbackgroundallowed-f-sys.md) | Checks whether the current application is allowed to access the network in the background. This API uses an asynchronous callback to return the result. |
+| [isBackgroundAllowed](arkts-network-policy-isbackgroundallowed-f-sys.md) | Checks whether the current application is allowed to access the network in the background. This API uses a promise to return the result. |
+| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Checks whether the application specified by a given UID is allowed to access a metered network. This API uses an asynchronous callback to return the result. |
+| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Checks whether the application specified by a given UID is allowed to access a metered network. This API uses a promise to return the result. |
+| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Obtains whether the network of the specified iface can be accessed by the corresponding UID. This API uses an asynchronous callback to return the result. |
+| [isUidNetAllowed](arkts-network-policy-isuidnetallowed-f-sys.md) | Obtains whether the UID can access the network of the specified iface. This API uses a promise to return the result. |
+| [off_netBackgroundPolicyChange](arkts-network-policy-offnetbackgroundpolicychange-f-sys.md#off_netbackgroundpolicychangenetbackgroundpolicychange) | Unsubscribes from background network policy changes. This API uses an asynchronous callback to return the result. |
+| [off_netMeteredIfacesChange](arkts-network-policy-offnetmeteredifaceschange-f-sys.md#off_netmeteredifaceschangenetmeteredifaceschange) | Unsubscribes from the changes of the metering interface. This API uses an asynchronous callback to return the result. |
+| [off_netQuotaPolicyChange](arkts-network-policy-offnetquotapolicychange-f-sys.md#off_netquotapolicychangenetquotapolicychange) | Unsubscribes from the changes of the metering network policy. This API uses an asynchronous callback to return the result. |
+| [off_netUidPolicyChange](arkts-network-policy-offnetuidpolicychange-f-sys.md#off_netuidpolicychangenetuidpolicychange) | Unsubscribes from **policy** changes. This API uses an asynchronous callback to return the result. |
+| [off_netUidRuleChange](arkts-network-policy-offnetuidrulechange-f-sys.md#off_netuidrulechangenetuidrulechange) | Unsubscribes from **rule** changes. This API uses an asynchronous callback to return the result. |
+| [on_netBackgroundPolicyChange](arkts-network-policy-onnetbackgroundpolicychange-f-sys.md#on_netbackgroundpolicychangenetbackgroundpolicychange) | Registers the callback for background network policy changes. This API uses an asynchronous callback to return the result. |
+| [on_netMeteredIfacesChange](arkts-network-policy-onnetmeteredifaceschange-f-sys.md#on_netmeteredifaceschangenetmeteredifaceschange) | Registers the callback when the **iface** changes. This API uses an asynchronous callback to return the result. |
+| [on_netQuotaPolicyChange](arkts-network-policy-onnetquotapolicychange-f-sys.md#on_netquotapolicychangenetquotapolicychange) | Registers the callback for network quota policy changes. This API uses an asynchronous callback to return the result. |
+| [on_netUidPolicyChange](arkts-network-policy-onnetuidpolicychange-f-sys.md#on_netuidpolicychangenetuidpolicychange) | Registers the callback when the **policy** changes. This API uses an asynchronous callback to return the result. |
+| [on_netUidRuleChange](arkts-network-policy-onnetuidrulechange-f-sys.md#on_netuidrulechangenetuidrulechange) | Registers the callback when the **rule** changes. This API uses an asynchronous callback to return the result. |
+| [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | Restores all the policies (cellular network, background network, firewall, and application-specific network policies) for the specified SIM card. This API uses an asynchronous callback to return the result. |
+| [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md) | Resets the cellular network, background network policy, firewall policy, and app policy corresponding to the SIM card ID. This API uses a promise to return the result. |
+| [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md) | Reset the specified network management policy. |
+| [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md) | Sets whether background applications are allowed to access the network. This API uses an asynchronous callback to return the result. |
+| [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md) | Sets whether background applications are allowed to access the network. This API uses a promise to return the result. |
+| [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md) | Adds applications specified by given UIDs to the device idle allowlist. This API uses an asynchronous callback to return the result. |
+| [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md) | Sets whether multiple UIDs are in the whitelist of the sleep firewall. This API uses a promise to return the result. |
+| [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md) | Sets the metering network policy. This API uses an asynchronous callback to return the result. |
+| [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md) | Sets the metering network policy. This API uses a promise to return the result. |
+| [setNetworkAccessPolicy](arkts-network-policy-setnetworkaccesspolicy-f-sys.md) | Sets whether the application with the specified UID can access the network. This API uses a promise to return the result. |
+| [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md) | Sets the metered network access policy for the application specified by a given UID. This API uses an asynchronous callback to return the result. |
+| [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md) | Sets whether the application with the corresponding UID can access the metering network. This API uses a promise to return the result. |
+| [setPowerSaveTrustlist](arkts-network-policy-setpowersavetrustlist-f-sys.md) | Sets whether the app with the specified UID is in the whitelist of the power saving firewall. This API uses an asynchronous callback to return the result. |
+| [setPowerSaveTrustlist](arkts-network-policy-setpowersavetrustlist-f-sys.md) | Sets whether the app with the specified UID is in the whitelist of the power saving firewall. This API uses a promise to return the result. |
+| [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md) | Updates a reminder policy. This API uses an asynchronous callback to return the result. |
+| [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md) | Updates a reminder policy. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md) | Network policies that limit the specified UID of application to access the network. |
-| [UidNetworkAccessPolicy](arkts-network-policy-uidnetworkaccesspolicy-i.md) | Provides the container definition for network access policy key-value pairs. |
+| [NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md) | Defines the network access policy information. |
+| [UidNetworkAccessPolicy](arkts-network-policy-uidnetworkaccesspolicy-i.md) | Defines the network policy for an application with the specified UID. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md) | Net quota policies, including matching network rule usage periods, restrictions, and warnings. |
-| [NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md) | Callback function for registering network UID policy changes. |
-| [NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md) | The interface is used to generate network unique identifiers. |
-| [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Network policies that limit the specified UID of application to access the network. |
-| [NetworkMatchRule](arkts-network-policy-networkmatchrule-i-sys.md) | The matching rules of network quota policies. |
-| [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md) | Policies that limit network quota. |
+| [NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md) | Defines the quota policy for the specified network. |
+| [NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md) | Defines the network policy information for an application. |
+| [NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md) | Defines a unique network ID. |
+| [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Network access policy. |
+| [NetworkMatchRule](arkts-network-policy-networkmatchrule-i-sys.md) | Defines the network for which the quota policy is set. |
+| [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md) | Defines the network quota policy. |
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [LimitAction](arkts-network-policy-limitaction-e-sys.md) | The action when quota policy hit the limit. |
-| [NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md) | Indicate whether the application can use metered networks in background. |
-| [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Uid Specifies the Internet access policy in background mode. |
-| [NetUidRule](arkts-network-policy-netuidrule-e-sys.md) | Rules whether an uid can access to a metered or non-metered network. |
-| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateremindpolicy-system-api). |
+| [LimitAction](arkts-network-policy-limitaction-e-sys.md) | Enumerates the actions that can be taken when the data volume quota is reached. |
+| [NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md) | Enumerates the background network policies. |
+| [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Enumerates network access policies for the application. |
+| [NetUidRule](arkts-network-policy-netuidrule-e-sys.md) | Enumerates the metered network rules. |
+| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Enumerates the reminder types. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [NetBearType](arkts-network-policy-netbeartype-t.md) | Get network bear type. |
+| [NetBearType](arkts-network-policy-netbeartype-t.md) | Defines the network type. |
 

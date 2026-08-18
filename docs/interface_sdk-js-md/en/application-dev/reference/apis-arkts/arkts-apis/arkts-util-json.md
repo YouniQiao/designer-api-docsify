@@ -1,18 +1,6 @@
 # @ohos.util.json
 
-/*
- Copyright (c) 2024 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The JSON module provides a series of APIs for converting JSON text into JSON objects or values and converting objects into JSON text.
 
 **Since:** 12
 
@@ -32,11 +20,11 @@ import { JSON } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [has](arkts-arkts-json-has-f.md#has) | Checks whether an ArkTS object contains a key. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
-| [parse](arkts-arkts-json-parse-f.md#parse) | Parses a JSON string into an ArkTS object or null. |
-| [remove](arkts-arkts-json-remove-f.md#remove) | Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
-| [stringify](arkts-arkts-json-stringify-f.md#stringify) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
-| [stringify](arkts-arkts-json-stringify-f.md#stringify) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| [has](arkts-arkts-json-has-f.md) | Checks whether an ArkTS object contains a key. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
+| [parse](arkts-arkts-json-parse-f.md) | Parses a JSON string into an ArkTS object or null. |
+| [remove](arkts-arkts-json-remove-f.md) | Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
+| [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
 
 ### Interfaces
 
@@ -54,5 +42,5 @@ import { JSON } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [Transformer](arkts-arkts-json-transformer-t.md) | Defines the type of the conversion result function. When used as a parameter of [JSON.parse](arkts-arkts-json-parse-f.md#parse), the function is called by each member of the object, allowing for custom data processing or conversion during parsing. When used as a parameter of [JSON.stringify](arkts-arkts-json-stringify-f.md#stringify), the function is used to transfer and handle each property during serialization. |
+| [Transformer](arkts-arkts-json-transformer-t.md) | Defines the type of the conversion result function. When used as a parameter of [JSON.parse](arkts-arkts-json-parse-f.md), the function is called by each member of the object, allowing for custom data processing or conversion during parsing. When used as a parameter of [JSON.stringify](arkts-arkts-json-stringify-f.md), the function is used to transfer and handle each property during serialization. |
 

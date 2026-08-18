@@ -28,7 +28,7 @@ Unsubscribe from the peerDimensionsChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from peerDimensionsChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PeerDimensionsDetail](arkts-telephony-call-peerdimensionsdetail-i-sys.md)&gt; | No | Indicates the callback to unsubscribe from peerDimensionsChange event. |
 
 **Error codes:**
 

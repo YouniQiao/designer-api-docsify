@@ -2,7 +2,7 @@
 
 表示包含UI界面的应用组件，提供组件创建、销毁、前后台切换等生命周期回调，同时也具备后台通信能力。
 
-**继承/实现关系：** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#ability)
+**继承/实现关系：** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## onBackPressed
@@ -89,7 +90,7 @@ export default class MyUIAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。 > **说明：** > > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。 > > - 通过 > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md#flags)为 > FLAG_ABILITY_ON_COLLABORATE。 > > - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在 > [onForeground](#onforeground)前或[onBackground](#onbackground)后调用； > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在 > [onNewWant](#onnewwant)前调用。
+UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。 > **说明：** > > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。 > > - 通过 > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为 > FLAG_ABILITY_ON_COLLABORATE。 > > - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在 > [onForeground](#onforeground)前或[onBackground](#onbackground)后调用； > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在 > [onNewWant](#onnewwant)前调用。
 
 **起始版本：** 18
 
@@ -129,7 +130,7 @@ export default class MyAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, RecordData>): AbilityConstant.CollaborateResult
 ```
 
-UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。 > **说明：** > > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。 > > - 通过 > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md#flags)为 > FLAG_ABILITY_ON_COLLABORATE。 > > - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在 > [onForeground](#onforeground)前或[onBackground](#onbackground)后调用； > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在 > [onNewWant](#onnewwant)前调用。
+UIAbility生命周期回调，在多设备协同场景下，协同方应用在被拉起的过程中返回是否接受协同。 > **说明：** > > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。 > > - 通过 > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为 > FLAG_ABILITY_ON_COLLABORATE。 > > - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在 > [onForeground](#onforeground)前或[onBackground](#onbackground)后调用； > [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在 > [onNewWant](#onnewwant)前调用。
 
 **起始版本：** 23
 
@@ -143,7 +144,7 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **返回值：**
 
@@ -561,7 +562,7 @@ export default class MyUIAbility extends UIAbility {
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-当已经启动的UIAbility实例再次被拉起时，系统会触发该回调。若在特定场景下（参见 [Scenarios](arkts-ability-contextconstant-scenarios-e.md#scenarios)），不需要触发该生命周期回调，可以使用 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口设置。 同步接口，不支持异步回调。
+当已经启动的UIAbility实例再次被拉起时，系统会触发该回调。若在特定场景下（参见 [Scenarios](arkts-ability-contextconstant-scenarios-e.md)），不需要触发该生命周期回调，可以使用 [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios)接口设置。 同步接口，不支持异步回调。
 
 **起始版本：** 23
 
@@ -700,7 +701,7 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。 > **说明：** > > 从API version 20开始，当 > [onSaveStateAsync](#onsavestateasync) > 实现时，本回调函数将不执行。
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。 > **说明：** > > 从API version 20开始，当 > [onSaveStateAsync](#onsavestateasync) > 实现时，本回调函数将不执行。
 
 **起始版本：** 9
 
@@ -745,7 +746,7 @@ export default class MyUIAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>): AbilityConstant.OnSaveResult
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。 > **说明：** > > 从API version 20开始，当 > [onSaveStateAsync](#onsavestateasync) > 实现时，本回调函数将不执行。
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，系统将触发该回调来保存UIAbility的数据。 > **说明：** > > 从API version 20开始，当 > [onSaveStateAsync](#onsavestateasync) > 实现时，本回调函数将不执行。
 
 **起始版本：** 23
 
@@ -760,7 +761,7 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordD
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在onCreate中的Want.parameters中。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在onCreate中的Want.parameters中。 |
 
 **返回值：**
 
@@ -792,7 +793,7 @@ export default class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -839,7 +840,7 @@ class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, RecordData>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-该接口需要与[appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
+该接口需要与[appRecovery](arkts-app-ability-apprecovery.md)配合使用。如果应用已使能故障恢复功能（即 [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)接口中的saveOccasion参数设置为 SAVE_WHEN_ERROR），当应用出现故障时，将触发该回调来保存UIAbility的数据。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -854,7 +855,7 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的 Want.parameters中。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](#oncreate)的 Want.parameters中。 |
 
 **返回值：**
 
@@ -938,7 +939,7 @@ onShare(wantParam: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待分享的数据。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待分享的数据。 |
 
 **示例**
 
@@ -1086,7 +1087,7 @@ export default class EntryAbility extends UIAbility {
 onWindowStageCreate(windowStage: window.WindowStage): void
 ```
 
-当[WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md#window)实例创建完成后，系统会触发该回调。开发者可以在该回调中通过WindowStage加载页面。
+当[WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md)实例创建完成后，系统会触发该回调。开发者可以在该回调中通过WindowStage加载页面。
 
 **起始版本：** 23
 

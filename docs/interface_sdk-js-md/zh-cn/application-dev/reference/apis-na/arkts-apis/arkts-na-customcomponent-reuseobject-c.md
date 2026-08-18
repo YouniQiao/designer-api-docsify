@@ -38,7 +38,7 @@ Get value from the ReuseObject by key.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | the target value. |
+| [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | the target value. |
 
 ## has
 

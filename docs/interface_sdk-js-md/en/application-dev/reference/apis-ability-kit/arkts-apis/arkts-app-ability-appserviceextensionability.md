@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AppServiceExtensionAbility } from '@kit.AbilityKit';
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

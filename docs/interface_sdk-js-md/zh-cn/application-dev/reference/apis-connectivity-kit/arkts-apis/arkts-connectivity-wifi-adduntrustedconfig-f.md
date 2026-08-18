@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## addUntrustedConfig
@@ -17,7 +21,7 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
+**替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -83,7 +87,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 **废弃版本：** 9
 
-**替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
+**替代接口：** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -96,7 +100,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
 
 **示例**
 

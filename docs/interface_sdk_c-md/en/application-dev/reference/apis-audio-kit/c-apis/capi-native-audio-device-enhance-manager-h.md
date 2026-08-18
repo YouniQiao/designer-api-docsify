@@ -55,7 +55,7 @@ Obtains the audio device enhancement manager handle.This handle is used as the f
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if the input audioDeviceEnhanceManager<br>     pointer is NULL. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if the input audioDeviceEnhanceManager      pointer is NULL. |
 
 ### OH_AudioDeviceEnhanceManager_IsEnhancedRoutingSupported()
 
@@ -80,7 +80,7 @@ Queries whether the system supports the enhanced routing functions provided by t
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL or<br>     supported is NULL,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL or      supported is NULL,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
 
 ### OH_AudioDeviceEnhanceManager_SelectOutputDevice()
 
@@ -105,7 +105,7 @@ Sets the preferred output device for the application.This configuration applies 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result)  if audioDeviceEnhanceManager is NULL,<br>     deviceDescriptor is invalid, or the specified device has gone offline,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result)  if audioDeviceEnhanceManager is NULL,      deviceDescriptor is invalid, or the specified device has gone offline,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
 
 ### OH_AudioDeviceEnhanceManager_SelectInputDevice()
 
@@ -130,7 +130,7 @@ Sets the preferred input device for the application.This setting applies to all 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL,<br>     deviceDescriptor is invalid, or the specified input device has gone offline,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL,      deviceDescriptor is invalid, or the specified input device has gone offline,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
 
 ### OH_AudioDeviceEnhanceManager_SelectOutputDeviceForAudioRenderer()
 
@@ -156,7 +156,7 @@ Sets the preferred output device for a specific audio renderer.Your application 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL, renderer is NULL,<br>     deviceDescriptor is invalid, or the specified output device has gone offline,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL, renderer is NULL,      deviceDescriptor is invalid, or the specified output device has gone offline,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
 
 ### OH_AudioDeviceEnhanceManager_SelectInputDeviceForAudioCapturer()
 
@@ -182,6 +182,6 @@ Sets the preferred input device for a specific audio capturer.Your application m
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL, capturer is NULL,<br>     deviceDescriptor is invalid, or the specified input device has gone offline,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if audioDeviceEnhanceManager is NULL, capturer is NULL,      deviceDescriptor is invalid, or the specified input device has gone offline,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio service error occurs, such as the service died. |
 
 

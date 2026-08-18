@@ -12,7 +12,6 @@ The item in the playlist of the session
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## description

@@ -548,7 +548,7 @@ Create a motion path option for path animation.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_MotionPathOptions*](capi-arkui-nativemodule-arkui-motionpathoptions.md) | Pointer to [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md).<br>     <br>In the newly created [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md) object, path (motion path) is an empty string, <br>     from (start progress) is 0, to (end progress) is 1, and rotatable (whether the component<br>     rotates along the path) is false. |
+| [ArkUI_MotionPathOptions*](capi-arkui-nativemodule-arkui-motionpathoptions.md) | Pointer to [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md).      <br>In the newly created [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md) object, path (motion path) is an empty string,       from (start progress) is 0, to (end progress) is 1, and rotatable (whether the component      rotates along the path) is false. |
 
 ### OH_ArkUI_MotionPathOptions_Dispose()
 
@@ -591,7 +591,7 @@ Sets the motion path for the animation using an SVG path string. The path suppor
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_GetPath()
 
@@ -618,7 +618,7 @@ Obtains the motion path string stored in the motion path option.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> .<br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the buffer size is less than the minimum buffer size.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> .          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the buffer size is less than the minimum buffer size.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_SetFrom()
 
@@ -643,7 +643,7 @@ Sets the start progress of the motion path. Progress refers to the ratio of the 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if from is out of the range [0.0, 1.0] or from is<br>              greater than to.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if from is out of the range [0.0, 1.0] or from is               greater than to.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_GetFrom()
 
@@ -668,7 +668,7 @@ Obtains the start progress of the motion path from the motion path option.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_SetTo()
 
@@ -693,7 +693,7 @@ Sets the end progress of the motion path. Progress refers to the ratio of the le
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>.<br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if to is out of the range [0.0, 1.0] or to is less than<br>          from.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>.          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if to is out of the range [0.0, 1.0] or to is less than           from.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_GetTo()
 
@@ -718,7 +718,7 @@ Obtains the end progress of the motion path from the motion path option.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_SetRotatable()
 
@@ -743,7 +743,7 @@ Sets whether the component rotates along the motion path.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_MotionPathOptions_GetRotatable()
 
@@ -768,7 +768,7 @@ Obtains whether the component rotates along the motion path.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_Create()
 
@@ -829,7 +829,7 @@ Sets the blur radius for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetRadius()
 
@@ -854,7 +854,7 @@ Obtains the blur radius for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_SetType()
 
@@ -879,7 +879,7 @@ Sets the shadow type for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetType()
 
@@ -904,7 +904,7 @@ Obtains the shadow type for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_SetColor()
 
@@ -929,7 +929,7 @@ Sets the shadow color for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetColor()
 
@@ -954,7 +954,7 @@ Obtains the shadow color for the shadow options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_SetOffsetX()
 
@@ -979,7 +979,7 @@ Sets the shadow offset on the x-axis.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetOffsetX()
 
@@ -1004,7 +1004,7 @@ Obtains the shadow offset on the x-axis.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_SetOffsetY()
 
@@ -1029,7 +1029,7 @@ Sets the shadow offset on the y-axis.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetOffsetY()
 
@@ -1054,7 +1054,7 @@ Obtains the shadow offset on the y-axis.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_SetFill()
 
@@ -1079,7 +1079,7 @@ Sets whether to fill a component with a shadow.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_ShadowOptions_GetFill()
 
@@ -1104,7 +1104,7 @@ Obtains whether a component is filled with a shadow.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_Create()
 
@@ -1165,7 +1165,7 @@ Sets the scaling factor in the x direction of the scaling parameter object for m
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetX()
 
@@ -1190,7 +1190,7 @@ Obtains the scaling factor in the x direction of the scaling parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetY()
 
@@ -1215,7 +1215,7 @@ Sets the scaling factor in the y direction of the scaling parameter object for m
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetY()
 
@@ -1240,7 +1240,7 @@ Obtains the scaling factor in the y direction of the scaling parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetZ()
 
@@ -1265,7 +1265,7 @@ Sets the scaling factor in the z direction of the scaling parameter object for m
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetZ()
 
@@ -1290,7 +1290,7 @@ Obtains the scaling factor in the z direction of the scaling parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetCenterX()
 
@@ -1315,7 +1315,7 @@ Sets the x coordinate of the transformation center point of the scaling paramete
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetCenterX()
 
@@ -1340,7 +1340,7 @@ Obtains the x coordinate of the transformation center point of the scaling param
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetCenterY()
 
@@ -1365,7 +1365,7 @@ Sets the y coordinate of the transformation center point of the scaling paramete
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetCenterY()
 
@@ -1390,7 +1390,7 @@ Obtains the y coordinate of the transformation center point of the scaling param
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_Create()
 
@@ -1451,7 +1451,7 @@ Sets the direction vector in the x direction of the rotation parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetX()
 
@@ -1476,7 +1476,7 @@ Obtains the direction vector in the x direction of the rotation parameter object
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetY()
 
@@ -1501,7 +1501,7 @@ Sets the direction vector in the y direction of the rotation parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetY()
 
@@ -1526,7 +1526,7 @@ Obtains the direction vector in the y direction of the rotation parameter object
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetZ()
 
@@ -1551,7 +1551,7 @@ Sets the direction vector in the z direction of the rotation parameter object fo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetZ()
 
@@ -1576,7 +1576,7 @@ Obtains the direction vector in the z direction of the rotation parameter object
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetAngle()
 
@@ -1601,7 +1601,7 @@ Sets the rotation angle in the rotation parameter object for matrix operations.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetAngle()
 
@@ -1626,7 +1626,7 @@ Obtains the rotation angle in the rotation parameter object for matrix operation
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetCenterX()
 
@@ -1651,7 +1651,7 @@ Sets the x-axis offset of a single matrix transformation center point relative t
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetCenterX()
 
@@ -1676,7 +1676,7 @@ Obtains the x-axis offset of a single matrix transformation center point relativ
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetCenterY()
 
@@ -1701,7 +1701,7 @@ Sets the y-axis offset of a single matrix transformation center point relative t
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetCenterY()
 
@@ -1726,7 +1726,7 @@ Obtains the y-axis offset of a single matrix transformation center point relativ
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul>curs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul>curs. |
 
 ### OH_ArkUI_Matrix4TranslationOptions_Create()
 
@@ -1787,7 +1787,7 @@ Sets the translation value of a translation object on the x-axis for matrix oper
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetX()
 
@@ -1812,7 +1812,7 @@ Obtains the translation value of a translation object on the x-axis for matrix o
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4TranslationOptions_SetY()
 
@@ -1837,7 +1837,7 @@ Sets the translation value of a translation object on the y-axis for matrix oper
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetY()
 
@@ -1862,7 +1862,7 @@ Obtains the translation value of a translation object on the y-axis for matrix o
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4TranslationOptions_SetZ()
 
@@ -1887,7 +1887,7 @@ Sets the translation value of a translation object on the z-axis for matrix oper
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul>. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul>. |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetZ()
 
@@ -1912,7 +1912,7 @@ Obtains the translation value of a translation object on the z-axis for matrix o
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_CreateIdentity()
 
@@ -1954,7 +1954,7 @@ Creates a fourth-order matrix object by specifying each element of the matrix.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_Matrix4*](capi-arkui-nativemodule-arkui-matrix4.md) | Pointer to the created fourth-order matrix object. If the elements pointer is a null pointer, a null<br>     value is returned. |
+| [ArkUI_Matrix4*](capi-arkui-nativemodule-arkui-matrix4.md) | Pointer to the created fourth-order matrix object. If the elements pointer is a null pointer, a null      value is returned. |
 
 ### OH_ArkUI_Matrix4_Dispose()
 
@@ -2020,7 +2020,7 @@ Performs an inverse matrix transformation on the input matrix.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_Combine()
 
@@ -2045,7 +2045,7 @@ Combines another matrix with the original matrix and stores the resulting matrix
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_Translate()
 
@@ -2070,7 +2070,7 @@ Applies a translation transformation to the original matrix to obtain the transl
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_Scale()
 
@@ -2095,7 +2095,7 @@ Applies a scaling transformation to the original matrix to obtain the scaled mat
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_Rotate()
 
@@ -2120,7 +2120,7 @@ Applies a rotation transformation to the original matrix to obtain the rotated m
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_Skew()
 
@@ -2146,7 +2146,7 @@ Applies a skew transformation to the original matrix to obtain the skewed matrix
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_TransformPoint()
 
@@ -2172,7 +2172,7 @@ Calculates the new coordinate position of a point after it is transformed by a m
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_SetPolyToPoly()
 
@@ -2199,7 +2199,7 @@ Maps the vertex coordinates of one polygon to the vertex coordinates of another 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Matrix4_GetElements()
 
@@ -2224,6 +2224,6 @@ Obtains the 16 elements of the fourth-order matrix.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 

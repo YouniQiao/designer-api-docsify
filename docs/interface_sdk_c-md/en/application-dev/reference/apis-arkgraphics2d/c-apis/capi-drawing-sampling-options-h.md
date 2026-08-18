@@ -116,7 +116,7 @@ Creates a copy of an [OH_Drawing_SamplingOptions](capi-drawing-oh-drawing-sampli
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_SamplingOptions*](capi-drawing-oh-drawing-samplingoptions.md) | Returns a pointer to the created [OH_Drawing_SamplingOptions](capi-drawing-oh-drawing-samplingoptions.md) object copy. If NULL is returned, the<br> creation fails. The possible failure cause is that no memory is available or samplingOptions is NULL. |
+| [OH_Drawing_SamplingOptions*](capi-drawing-oh-drawing-samplingoptions.md) | Returns a pointer to the created [OH_Drawing_SamplingOptions](capi-drawing-oh-drawing-samplingoptions.md) object copy. If NULL is returned, the  creation fails. The possible failure cause is that no memory is available or samplingOptions is NULL. |
 
 ### OH_Drawing_SamplingOptionsDestroy()
 

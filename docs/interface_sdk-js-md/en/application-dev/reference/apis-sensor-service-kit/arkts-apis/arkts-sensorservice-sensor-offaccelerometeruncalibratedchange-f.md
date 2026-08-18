@@ -27,7 +27,7 @@ Unsubscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROM
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | No | callback uncalibrated accelerometer data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | No | callback uncalibrated accelerometer data. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@ Provides the information about the suspension delay.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md#delaysuspendinfo)
+**Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)
 
 <!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
 

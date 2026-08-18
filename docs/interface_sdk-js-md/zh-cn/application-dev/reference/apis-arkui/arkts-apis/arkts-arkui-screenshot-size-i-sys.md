@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## height

@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStatsInfo>
 ```
 
-Get the traffic usage details of the specified network of all applications in the specified time period.
+Obtains the traffic statistics of all applications on the specified network within the specified period. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ Get the traffic usage details of the specified network of all applications in th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| networkInfo | NetworkInfo | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md)&gt; | The statistics of the sim card. |
+| Promise&lt;[UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md)&gt; | Promise used to return the result, which is the historical traffic statistics of all applications. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # AVTranscoder
 
-AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createavtranscoder) to create an AVTranscoder instance. For details about the AVTranscoder demo, see [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
+AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md) to create an AVTranscoder instance. For details about the AVTranscoder demo, see [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ Unsubscribes from the event indicating that transcoding is complete. This event 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
 
 ## offError
 
@@ -120,7 +120,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## offProgressUpdate
 
@@ -140,9 +140,9 @@ Unsubscribes from transcoding progress updates. This event can be triggered by b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
 
-## off_complete
+## off_complete('complete')
 
 ```TypeScript
 off(type:'complete', callback?: Callback<void>):void
@@ -163,9 +163,9 @@ Unsubscribes from the event indicating that transcoding is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' | Yes | Event type, which is **'complete'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type:'error', callback?: ErrorCallback):void
@@ -186,9 +186,9 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during transcoding. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
-## off_progressUpdate
+## off_progressUpdate('progressUpdate')
 
 ```TypeScript
 off(type:'progressUpdate', callback?: Callback<int>):void
@@ -209,7 +209,7 @@ Unsubscribes from transcoding progress updates.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current callback mechanism. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current callback mechanism. |
 
 ## onComplete
 
@@ -229,7 +229,7 @@ Subscribes to the event indicating that transcoding is complete. An application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback that has been registered to listen for transcoding completion events. |
 
 ## onError
 
@@ -249,7 +249,7 @@ Subscribes to AVTranscoder errors. If this event is reported, call [release()](#
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -282,9 +282,9 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
 
-## on_complete
+## on_complete('complete')
 
 ```TypeScript
 on(type:'complete', callback: Callback<void>):void
@@ -305,9 +305,9 @@ Subscribes to the event indicating that transcoding is complete. An application 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' | Yes | Event type, which is **'complete'** in this case. This event is triggered by the system during transcoding. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the event callback method. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the event callback method. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type:'error', callback: ErrorCallback):void
@@ -328,7 +328,7 @@ Subscribes to AVTranscoder errors. If this event is reported, call [release()](#
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during recording. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -343,7 +343,7 @@ Subscribes to AVTranscoder errors. If this event is reported, call [release()](#
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 
-## on_progressUpdate
+## on_progressUpdate('progressUpdate')
 
 ```TypeScript
 on(type:'progressUpdate', callback: Callback<int>):void
@@ -364,7 +364,7 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. This event is triggered by the system during transcoding. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the progress update event. The **number** parameter in the function indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the progress update event. The **number** parameter in the function indicates the current transcoding progress, in percentage. |
 
 ## pause
 
@@ -416,7 +416,7 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | Yes | Video transcoding parameters to set.&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
+| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | Yes | Video transcoding parameters to set.<!--RP1--><!--RP1End--> |
 
 **Return value:**
 

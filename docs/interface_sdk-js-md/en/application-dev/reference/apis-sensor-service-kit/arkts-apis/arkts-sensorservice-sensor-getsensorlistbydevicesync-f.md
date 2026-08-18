@@ -24,7 +24,7 @@ Obtains the information about all sensors on the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor) to obtain the device ID. |
+| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor) to obtain the device ID. |
 
 **Return value:**
 

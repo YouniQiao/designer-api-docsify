@@ -16,7 +16,6 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## and
@@ -121,7 +120,7 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > The value of **deviceId** can be obtained by <!--RP1--> > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync). > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 

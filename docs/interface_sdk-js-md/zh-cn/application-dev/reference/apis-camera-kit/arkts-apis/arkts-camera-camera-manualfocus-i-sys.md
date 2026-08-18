@@ -2,7 +2,7 @@
 
 ManualFocus object.
 
-**继承/实现关系：** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md#manualfocusquery)
+**继承/实现关系：** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ ManualFocus object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getFocusDistance

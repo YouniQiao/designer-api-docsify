@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formHost } from '@kit.FormKit';
-import { formHost } from '@kit.FormKit';
 ```
 
 ## shareForm
@@ -31,7 +30,7 @@ Shares a specified widget with a remote device. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | deviceId | string | Yes | Remote device ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is shared, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is shared, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 

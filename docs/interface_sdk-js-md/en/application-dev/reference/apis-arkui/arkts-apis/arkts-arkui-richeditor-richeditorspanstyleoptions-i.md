@@ -2,7 +2,7 @@
 
 Defines span style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md#richeditorrange)
+**Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md)
 
 **Since:** 23
 

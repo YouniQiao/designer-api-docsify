@@ -40,7 +40,7 @@ Whether the window should use the default density of the system. If the default 
 zIndex?: int
 ```
 
-Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-window-windowtype-e.md#windowtype) is set to **TYPE_DYNAMIC**.
+Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-window-windowtype-e.md) is set to **TYPE_DYNAMIC**.
 
 **Type:** int
 

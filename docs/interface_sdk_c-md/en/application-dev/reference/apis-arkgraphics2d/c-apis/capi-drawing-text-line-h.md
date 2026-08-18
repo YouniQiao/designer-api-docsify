@@ -131,7 +131,7 @@ Obtains the text line object with the specified index in a text line array.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_TextLine*](capi-drawing-oh-drawing-textline.md) | Pointer to the [OH_Drawing_TextLine](capi-drawing-oh-drawing-textline.md) text line object at the specified index. <br>Returns NULL if<br>     lines is NULL or the index is out of bounds. |
+| [OH_Drawing_TextLine*](capi-drawing-oh-drawing-textline.md) | Pointer to the [OH_Drawing_TextLine](capi-drawing-oh-drawing-textline.md) text line object at the specified index. <br>Returns NULL if      lines is NULL or the index is out of bounds. |
 
 ### OH_Drawing_TextLineGetGlyphCount()
 
@@ -205,7 +205,7 @@ Obtains the array of text rendering units [OH_Drawing_Run](capi-drawing-oh-drawi
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of text rendering units [OH_Drawing_Run](capi-drawing-oh-drawing-run.md). When the<br>     [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) is no longer needed, please use the [OH_Drawing_DestroyRuns](capi-drawing-text-line-h.md#oh_drawing_destroyruns) API to release the<br>     pointer of the object. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of text rendering units [OH_Drawing_Run](capi-drawing-oh-drawing-run.md). When the      [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) is no longer needed, please use the [OH_Drawing_DestroyRuns](capi-drawing-text-line-h.md#oh_drawing_destroyruns) API to release the      pointer of the object. |
 
 ### OH_Drawing_DestroyRuns()
 
@@ -252,7 +252,7 @@ Obtains the glyph run object with the specified index in a glyph run array.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Run*](capi-drawing-oh-drawing-run.md) | Pointer to the text rendering unit object [OH_Drawing_Run](capi-drawing-oh-drawing-run.md) at the specified index. <br>NULL is<br>     returned if runs is NULL or the index is out of bounds. |
+| [OH_Drawing_Run*](capi-drawing-oh-drawing-run.md) | Pointer to the text rendering unit object [OH_Drawing_Run](capi-drawing-oh-drawing-run.md) at the specified index. <br>NULL is      returned if runs is NULL or the index is out of bounds. |
 
 ### OH_Drawing_TextLinePaint()
 
@@ -304,7 +304,7 @@ Creates a truncated text line object. Truncates the original text line based on 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_TextLine*](capi-drawing-oh-drawing-textline.md) | Pointer to the truncated text line object [OH_Drawing_TextLine](capi-drawing-oh-drawing-textline.md). <br>NULL is returned when line or<br>     ellipsis is NULL. <br>Please use [OH_Drawing_DestroyTextLine](capi-drawing-text-line-h.md#oh_drawing_destroytextline) to release the object's memory when it is no<br>     longer needed. |
+| [OH_Drawing_TextLine*](capi-drawing-oh-drawing-textline.md) | Pointer to the truncated text line object [OH_Drawing_TextLine](capi-drawing-oh-drawing-textline.md). <br>NULL is returned when line or      ellipsis is NULL. <br>Please use [OH_Drawing_DestroyTextLine](capi-drawing-text-line-h.md#oh_drawing_destroytextline) to release the object's memory when it is no      longer needed. |
 
 ### OH_Drawing_TextLineGetTypographicBounds()
 
@@ -359,7 +359,7 @@ Obtains the image bounds of the text line object. The image bounds of a text lin
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Rect*](capi-drawing-oh-drawing-rect.md) | Pointer to the image bounds [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) of the text line object. <br>Returns NULL when the<br>     passed-in line is NULL. <br>When the [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) is no longer needed, please use the<br>     {@link OH_Drawing_RectDestroy} API to release the pointer of the object. |
+| [OH_Drawing_Rect*](capi-drawing-oh-drawing-rect.md) | Pointer to the image bounds [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) of the text line object. <br>Returns NULL when the      passed-in line is NULL. <br>When the [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) is no longer needed, please use the      {@link OH_Drawing_RectDestroy} API to release the pointer of the object. |
 
 ### OH_Drawing_TextLineGetTrailingSpaceWidth()
 
@@ -412,7 +412,7 @@ Obtains the string index at the specified position in the text line object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the index of the character. For example, for the string "abc", the index of "a" is 0, the index of "<br>     b" is 1, and the index of "c" is 2. If the specified position is at "a", then 0 is returned. |
+| int32_t | Returns the index of the character. For example, for the string "abc", the index of "a" is 0, the index of "      b" is 1, and the index of "c" is 2. If the specified position is at "a", then 0 is returned. |
 
 ### OH_Drawing_TextLineGetOffsetForStringIndex()
 
@@ -459,7 +459,7 @@ Defines a custom callback used to receive the offset and index of each character
 
 | Parameter | Description |
 | -- | -- |
-| (double offset | Offset of each character in the text line object. |
+| double offset | Offset of each character in the text line object. |
 | int32_t index | Index of each character in the text line object. |
 | bool leadingEdge | Whether the cursor is located at the leading edge of a character. **true** means that thecursor is located at the front of the character, that is, the offset does not contain the character width.**false** means that the cursor is located at the rear of the character, that is, the offset contains thecharacter width. |
 

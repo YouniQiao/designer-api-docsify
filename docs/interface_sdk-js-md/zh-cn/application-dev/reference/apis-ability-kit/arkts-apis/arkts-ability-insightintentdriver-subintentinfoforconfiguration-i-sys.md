@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## entities
@@ -23,7 +24,7 @@ readonly entities?: Record<string, RecordData>
 
 表示意图包含的实体信息。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -63,7 +64,7 @@ readonly inputParams?: Array<Record<string, RecordData>>
 
 表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 
@@ -83,7 +84,7 @@ readonly outputParams?: Array<Record<string, RecordData>>
 
 表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
 
-**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 

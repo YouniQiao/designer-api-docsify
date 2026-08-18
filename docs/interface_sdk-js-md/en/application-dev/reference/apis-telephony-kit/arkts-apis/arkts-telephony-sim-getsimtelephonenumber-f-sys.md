@@ -29,7 +29,7 @@ Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the MSISDN; Returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the MSISDN; Returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
 
 **Error codes:**
 

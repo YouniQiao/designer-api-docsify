@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## globalX
@@ -19,7 +20,7 @@
 globalX?: int
 ```
 
-该触屏输入事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的 [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md#toucheventdata系统接口)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+该触屏输入事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
 
 **类型：** int
 
@@ -35,7 +36,7 @@ globalX?: int
 globalY?: int
 ```
 
-该触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的 [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md#toucheventdata系统接口)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+该触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。<!--Del-->作为入参时，若接口参数中的 [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。<!--DelEnd-->作为出参时，由系统上报。
 
 **类型：** int
 

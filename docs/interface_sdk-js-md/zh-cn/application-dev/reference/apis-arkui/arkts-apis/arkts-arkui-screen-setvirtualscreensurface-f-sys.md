@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { screen } from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## setVirtualScreenSurface
@@ -29,7 +31,7 @@ function setVirtualScreenSurface(screenId:long, surfaceId: string, callback: Asy
 | --- | --- | --- | --- |
 | screenId | long | 是 | 屏幕的id，该参数仅支持整数输入。 |
 | surfaceId | string | 是 | 代表虚拟屏幕的surface标识符，surfaceId值可自行定义，由用户指定某一实际存在的surface对应的surfaceId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置虚拟屏幕surface成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置虚拟屏幕surface成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

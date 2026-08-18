@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { insightIntentProvider } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## sendIntentResult

@@ -20,7 +20,7 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 linkType: LinkType
 ```
 
-Link type of the proxy channel. For details about the value range, see [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md#linktype). Currently, only **LINK_BR** (Bluetooth BR protocol) is supported.
+Link type of the proxy channel. For details about the value range, see [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md). Currently, only **LINK_BR** (Bluetooth BR protocol) is supported.
 
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 

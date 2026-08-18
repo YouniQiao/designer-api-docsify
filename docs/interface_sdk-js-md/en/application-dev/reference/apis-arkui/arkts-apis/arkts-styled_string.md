@@ -21,8 +21,8 @@
 | [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | Describes the letter spacing style. |
 | [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | Describes the text line height style. |
 | [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | Describes the text line spacing style. |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Inherits from the [StyledString](arkts-arkui-styledstring-c.md#styledstring) class. > **An exception is thrown in the following cases:** > > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. > > **styledKey** or **styledValue** is set to an invalid value or they do not match. |
-| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style. Except the first paragraph, all paragraphs are formed using the escape character '\n'. The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component. Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a [CustomSpan](arkts-arkui-customspan-c.md#customspan) or [ImageAttachment](arkts-arkui-imageattachment-c.md#imageattachment), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect. |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class. > **An exception is thrown in the following cases:** > > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. > > **styledKey** or **styledValue** is set to an invalid value or they do not match. |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style. Except the first paragraph, all paragraphs are formed using the escape character '\n'. The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component. Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a [CustomSpan](arkts-arkui-customspan-c.md) or [ImageAttachment](arkts-arkui-imageattachment-c.md), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect. |
 | [StyledString](arkts-arkui-styledstring-c.md) | StyledString |
 | [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | Describes the text shadow style. |
 | [TextStyle](arkts-arkui-textstyle-c.md) | Describes the text style. |
@@ -30,7 +30,7 @@
 | [UserDataSpan](arkts-arkui-userdataspan-c.md) | Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation. The extended user data does not affect the display effect. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -71,12 +71,12 @@
 | [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | Defines the style for a styled string. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
-| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue-system-api). |
+| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Defines a custom marshalling object for styled strings, which you need to define marshalling and unmarshalling methods. |
-| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue-system-api). |
+| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 <!--DelEnd-->
 

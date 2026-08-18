@@ -30,8 +30,8 @@ Removes a callback function that was previously registered with `onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NavDestinationSwitchObserverOptions](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | The options object. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
+| options | [NavDestinationSwitchObserverOptions](arkts-na-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
 
 
 ## offNavDestinationUpdate
@@ -56,5 +56,5 @@ Removes a callback function that was previously registered with `onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

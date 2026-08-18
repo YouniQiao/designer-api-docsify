@@ -147,7 +147,7 @@ In jank scenario, you need to insert two stub functions before and aftereach eve
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* eventName | Business thread processing event name. |
+| const char\* eventName | Business thread processing event name. |
 
 ### OH_HiCollie_EndFunc()
 
@@ -165,7 +165,7 @@ Records the end time when a service thread processes an event. This function is 
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* eventName | Name of the service thread event. |
+| const char\* eventName | Name of the service thread event. |
 
 ### OH_HiCollie_Init_StuckDetection()
 
@@ -189,7 +189,7 @@ Registers a callback used to periodically detect service thread stuck events.By 
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-<br> main thread.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-  main thread.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_Init_StuckDetectionWithTimeout()
 
@@ -214,7 +214,7 @@ Registers a callback used to periodically detect service thread stuck events.You
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - Invalid detection time.<br> [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-<br> main thread.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - Invalid detection time.  [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-  main thread.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_Init_JankDetection()
 
@@ -240,7 +240,7 @@ Registers a callback used to detect service thread jank events.To monitor servic
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - The begin and end functions are not both set or both unset; they must either<br> both have valid values or both be empty.<br> [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-<br> main thread.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - The begin and end functions are not both set or both unset; they must either  both have valid values or both be empty.  [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-  main thread.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_Report()
 
@@ -264,7 +264,7 @@ Reports a service thread stuck event and generates logs to help locate applicati
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - The begin and end functions are not both set or both unset; they must either<br> both have valid values or both be empty.<br> [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-<br> main thread.<br> [HICOLLIE_REMOTE_FAILED](capi-hicollie-h.md#hicollie_errorcode) 29800002 - Remote call error. The IPC remote service fails to be called.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_INVALID_ARGUMENT](capi-hicollie-h.md#hicollie_errorcode) 401 - The begin and end functions are not both set or both unset; they must either  both have valid values or both be empty.  [HICOLLIE_WRONG_THREAD_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800001 - Incorrect calling thread. This function should be called in a non-  main thread.  [HICOLLIE_REMOTE_FAILED](capi-hicollie-h.md#hicollie_errorcode) 29800002 - Remote call error. The IPC remote service fails to be called.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_ReportInputBlock()
 
@@ -282,7 +282,7 @@ Reports an application input unresponsive event and generates logs to help locat
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_REMOTE_FAILED](capi-hicollie-h.md#hicollie_errorcode) 29800002 - Remote call error. The IPC remote service fails to be called.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_REMOTE_FAILED](capi-hicollie-h.md#hicollie_errorcode) 29800002 - Remote call error. The IPC remote service fails to be called.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_Callback()
 
@@ -319,7 +319,7 @@ Registers a timer to check whether the execution time of a function or code bloc
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.<br> [HICOLLIE_INVALID_TIMER_NAME](capi-hicollie-h.md#hicollie_errorcode) 29800003 - Invalid timer name. The timer name cannot be NULL or an empty string.<br> [HICOLLIE_INVALID_TIMEOUT_VALUE](capi-hicollie-h.md#hicollie_errorcode) 29800004 - Invalid timeout value.<br> [HICOLLIE_WRONG_PROCESS_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800005 - Invalid process context for detection. This function cannot be<br> called in the appspawn and nativespawn processes.<br> [HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM](capi-hicollie-h.md#hicollie_errorcode) 29800006 - The pointer used to save the returned timer ID is NULL.<br> For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | [HICOLLIE_SUCCESS](capi-hicollie-h.md#hicollie_errorcode) 0 - Operation successful.  [HICOLLIE_INVALID_TIMER_NAME](capi-hicollie-h.md#hicollie_errorcode) 29800003 - Invalid timer name. The timer name cannot be NULL or an empty string.  [HICOLLIE_INVALID_TIMEOUT_VALUE](capi-hicollie-h.md#hicollie_errorcode) 29800004 - Invalid timeout value.  [HICOLLIE_WRONG_PROCESS_CONTEXT](capi-hicollie-h.md#hicollie_errorcode) 29800005 - Invalid process context for detection. This function cannot be  called in the appspawn and nativespawn processes.  [HICOLLIE_WRONG_TIMER_ID_OUTPUT_PARAM](capi-hicollie-h.md#hicollie_errorcode) 29800006 - The pointer used to save the returned timer ID is NULL.  For details, see [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode). |
 
 ### OH_HiCollie_CancelTimer()
 
@@ -355,7 +355,7 @@ the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#o
 
 | Parameter | Description |
 | -- | -- |
-| (OH_HiCollie_Freeze_Type type | Freeze event type in [OH_HiCollie_Freeze_Type](capi-hicollie-h.md#oh_hicollie_freeze_type) |
+| [OH_HiCollie_Freeze_Type](capi-hicollie-h.md#oh_hicollie_freeze_type) type | Freeze event type in [OH_HiCollie_Freeze_Type](capi-hicollie-h.md#oh_hicollie_freeze_type) |
 | void\* buffer | log buffer provided by the system, whose content will be moved to APP_FREEZE or APP_HICOLLIEHiAppEvent |
 | size_t size | buffer size can be used |
 
@@ -411,6 +411,6 @@ Reports a freeze event of a process. In this case, a **HiAppEvent** event of the
 
 | Type | Description |
 | -- | -- |
-| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | HICOLLIE_SUCCESS: 0 - The operation is successful.<br> OH_HICOLLIE_REACH_REPORT_LIMIT: 29800007 - The reporting frequency is too high. |
+| [HiCollie_ErrorCode](capi-hicollie-h.md#hicollie_errorcode) | HICOLLIE_SUCCESS: 0 - The operation is successful.  OH_HICOLLIE_REACH_REPORT_LIMIT: 29800007 - The reporting frequency is too high. |
 
 

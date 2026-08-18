@@ -6,7 +6,7 @@ Sets the package and ability that are redirected to when the reminder notificati
 
 **Deprecated since:** 9
 
-**Substitutes:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md#wantagent)
+**Substitutes:** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 <!--Device-reminderAgent-interface WantAgent--><!--Device-reminderAgent-interface WantAgent-End-->
 
@@ -16,7 +16,6 @@ Sets the package and ability that are redirected to when the reminder notificati
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

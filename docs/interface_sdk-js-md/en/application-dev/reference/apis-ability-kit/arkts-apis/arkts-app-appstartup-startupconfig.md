@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { StartupConfig } from '@kit.AbilityKit';
-import { StartupConfig } from '@kit.AbilityKit';
-import { StartupConfigEntry } from '@kit.AbilityKit';
 import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 

@@ -12,7 +12,6 @@ The definition of play information.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## currentPlayDuration

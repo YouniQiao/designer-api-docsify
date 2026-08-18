@@ -22,7 +22,7 @@ import { common } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | Defines application instance data. It is used as an input parameter in the [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps), [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps), [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps), and [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps) APIs. |
+| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | Defines application instance data. It is used as an input parameter in the [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md), [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md), [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md), and [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md) APIs. |
 | [InstallationResult](arkts-mdm-common-installationresult-i.md) | An object that holds the application installation result. This object is used as a callback parameter in [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult). |
 | [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | Defines the policy change event. This API is used as a callback input parameter of [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged). |
 
@@ -38,5 +38,5 @@ import { common } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). |
+| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 

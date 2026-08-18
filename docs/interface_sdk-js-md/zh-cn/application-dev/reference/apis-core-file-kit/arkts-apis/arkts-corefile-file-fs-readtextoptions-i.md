@@ -1,8 +1,8 @@
 # ReadTextOptions
 
-可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#readoptions)。
+可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md)。
 
-**继承/实现关系：** ReadTextOptions extends [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#readoptions)
+**继承/实现关系：** ReadTextOptions extends [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md)
 
 **起始版本：** 11
 
@@ -13,6 +13,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## encoding

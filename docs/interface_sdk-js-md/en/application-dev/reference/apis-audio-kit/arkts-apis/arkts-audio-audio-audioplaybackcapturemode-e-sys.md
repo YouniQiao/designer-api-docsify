@@ -14,7 +14,7 @@ Defines mode for playback capture, each mode means different target streams to c
 MODE_ONLY_VOIP = 0x4000
 ```
 
-Only voip mode. Capture only voice/video communication streams. If [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackcaptureuid) is set, only the voice/video communication stream of the specified application is captured. The [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackcaptureuid) takes effect only when this mode is set. This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO` permission; otherwise [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer) fails.
+Only voip mode. Capture only voice/video communication streams. If [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackcaptureuid) is set, only the voice/video communication stream of the specified application is captured. The [playbackCaptureUid](arkts-audio-audio-audiocaptureroptions-i-sys.md#playbackcaptureuid) takes effect only when this mode is set. This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO` permission; otherwise [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) fails.
 
 **Since:** 26.0.0
 

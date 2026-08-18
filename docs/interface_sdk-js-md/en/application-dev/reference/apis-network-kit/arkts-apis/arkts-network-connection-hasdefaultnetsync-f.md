@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function hasDefaultNetSync(): boolean
 ```
 
-Checks whether the default data network is activated.
+Checks whether there is an available network. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Checks whether the default data network is activated.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the default data network is activated, else returns false. |
+| boolean | Whether there is an available network. The value **true** indicates that a network is available, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

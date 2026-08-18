@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## stopCasting
@@ -28,7 +27,7 @@ Stop current cast and disconnect device connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be stopped. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
 
 **Error codes:**
 

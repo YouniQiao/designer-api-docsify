@@ -28,7 +28,7 @@
 | [UnlitMaterial](arkts-arkgraphics3d-sceneresources-unlitmaterial-i.md) | Material that is not affected by lighting. The shading value of the material is related only to the base color and is irrelevant to lighting conditions. It inherits from Material. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -48,7 +48,7 @@
 | [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md) | Enumerates the scene resource types, which are used to classify resources in a scene. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

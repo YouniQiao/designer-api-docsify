@@ -30,5 +30,15 @@ Defines the constructor of ImageSpan.
 
 ## Summary
 
-- [ImageLoadResult](arkts-arkui-imageloadresult-i.md)
-- [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Describes the object returned after the callback is triggered when an image is successfully loaded or decoded. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md) | Defines the callback triggered when the image is successfully loaded or decoded. |
+

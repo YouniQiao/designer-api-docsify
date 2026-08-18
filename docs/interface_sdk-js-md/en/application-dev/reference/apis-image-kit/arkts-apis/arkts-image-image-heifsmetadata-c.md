@@ -2,7 +2,7 @@
 
 HeifsMetadata implements Metadata HEIF image sequence metadata.
 
-**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#metadata)
+**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ HeifsMetadata implements Metadata HEIF image sequence metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 ```
 
@@ -67,7 +66,7 @@ Creates an empty [HeifsMetadata](#heifsmetadata) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#heifspropertykey).
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 23
 
@@ -179,7 +178,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#heifspropertykey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 表示用户朝向角度数据。
 
-**继承/实现关系：** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#userstatusdata系统接口)
+**继承/实现关系：** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## hpeNetworkId

@@ -6,7 +6,7 @@ Configuring parameters in current location requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md#currentlocationrequest)
+**Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

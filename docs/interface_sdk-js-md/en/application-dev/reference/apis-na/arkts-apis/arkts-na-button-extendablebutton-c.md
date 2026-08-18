@@ -2,7 +2,7 @@
 
 Defines the Extendable Button.
 
-**Inheritance/Implementation:** ExtendableButton implements [ButtonAttribute](arkts-na-button-buttonattribute-i.md#buttonattribute)
+**Inheritance/Implementation:** ExtendableButton implements [ButtonAttribute](arkts-na-button-buttonattribute-i.md)
 
 **Since:** 26.0.0
 

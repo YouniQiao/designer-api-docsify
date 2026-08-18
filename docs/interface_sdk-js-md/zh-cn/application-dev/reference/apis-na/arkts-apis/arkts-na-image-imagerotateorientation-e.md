@@ -14,7 +14,7 @@
 AUTO = 0
 ```
 
-读取图片携带的EXIF元数据作为显示方向，支持旋转和镜像。 [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)和 [DrawableDescriptor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#drawabledescriptor10) 类型 的图片不包含头信息，调用该接口时图片显示效果不变化。 
+读取图片携带的EXIF元数据作为显示方向，支持旋转和镜像。 [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)和 [DrawableDescriptor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#drawabledescriptor10) 类型 的图片不包含头信息，调用该接口时图片显示效果不变化。 
 
 **起始版本：** 23
 

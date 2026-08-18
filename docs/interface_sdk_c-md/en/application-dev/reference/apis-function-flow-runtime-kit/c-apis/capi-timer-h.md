@@ -79,7 +79,7 @@ Stops a timer on an FFRT worker.This is a blocking interface. Avoid calling it i
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if success;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if success;          `-1` otherwise. |
 
 **Reference**:
 

@@ -12,7 +12,6 @@ Get the bundle statistics.
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## appSize

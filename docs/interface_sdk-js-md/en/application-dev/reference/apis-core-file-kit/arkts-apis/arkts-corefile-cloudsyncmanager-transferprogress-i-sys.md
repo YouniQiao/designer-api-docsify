@@ -14,7 +14,6 @@ Defines the TransferProgress data structure.
 
 ```TypeScript
 import { cloudSyncManager } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## failedCount

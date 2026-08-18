@@ -32,7 +32,7 @@ Lists all file names in a directory. This API uses a promise to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileExtOptions](../../apis-na/arkts-apis/arkts-na-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

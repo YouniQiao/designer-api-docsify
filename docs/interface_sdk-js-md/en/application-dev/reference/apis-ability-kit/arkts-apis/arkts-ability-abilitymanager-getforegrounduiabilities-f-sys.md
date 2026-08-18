@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundUIAbilities
@@ -29,7 +28,7 @@ Obtains the information about the UIAbility components of an application that is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 

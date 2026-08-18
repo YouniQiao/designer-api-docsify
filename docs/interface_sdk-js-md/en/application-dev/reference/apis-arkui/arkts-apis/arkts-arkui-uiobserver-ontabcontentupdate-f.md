@@ -6,13 +6,13 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_tabContentUpdate
+## on_tabContentUpdate('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ Subscribes to **TabContent** page switching events for the specified **Tabs** co
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
 | options | ObserverOptions | Yes | ID of the target **Tabs** component. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
 
 **Examples**
 
@@ -84,13 +84,13 @@ struct TabsExample {
 ```
 
 
-## on_tabContentUpdate
+## on_tabContentUpdate('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 
@@ -107,7 +107,7 @@ Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
 
 **Examples**
 

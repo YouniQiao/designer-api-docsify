@@ -4,7 +4,7 @@
 export type TlsV13CipherSuite = TlsV12CipherSuite | TlsV13SpecificCipherSuite
 ```
 
-TLS1.3 cipher suite should include TLS1.2 cipher suite.
+Declares the cipher suite for TLS 1.3, which is also compatible with TLS 1.2.
 
 **Since:** 23
 
@@ -16,6 +16,6 @@ TLS1.3 cipher suite should include TLS1.2 cipher suite.
 
 | Type | Description |
 | --- | --- |
-| TlsV12CipherSuite |  |
-| TlsV13SpecificCipherSuite |  |
+| TlsV12CipherSuite | [TlsV11CipherSuite]{ |
+| TlsV13SpecificCipherSuite | [TlsV13SpecificCipherSuite]{ |
 

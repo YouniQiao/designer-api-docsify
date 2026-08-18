@@ -11,7 +11,7 @@
 | [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md) | Defines the [multi-app mode](../../../quick-start/multiInstance.md). |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

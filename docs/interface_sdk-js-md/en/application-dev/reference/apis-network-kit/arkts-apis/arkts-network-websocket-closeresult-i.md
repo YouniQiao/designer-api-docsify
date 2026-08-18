@@ -1,6 +1,6 @@
 # CloseResult
 
-The result for closing a WebSocket connection.
+Represents the result obtained from the **close** event reported when the WebSocket connection is closed.
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ import { webSocket } from '@kit.NetworkKit';
 code: int
 ```
 
-Error code.
+Error code for closing the connection.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CloseResult-code: int--><!--Device-CloseResult-code: int-End-->
 
@@ -38,13 +38,13 @@ Error code.
 reason: string
 ```
 
-Error cause.
+Error cause for closing the connection.
 
 **Type:** string
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CloseResult-reason: string--><!--Device-CloseResult-reason: string-End-->
 

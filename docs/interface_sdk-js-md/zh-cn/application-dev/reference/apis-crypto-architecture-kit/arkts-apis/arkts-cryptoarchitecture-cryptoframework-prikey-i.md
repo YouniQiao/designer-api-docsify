@@ -1,8 +1,8 @@
 # PriKey
 
-私钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#key)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。 <br>私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#asykeygenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#asykeygeneratorbyspec)来生成。
+私钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。 <br>私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
 
-**继承/实现关系：** PriKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#key)
+**继承/实现关系：** PriKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## clearMem

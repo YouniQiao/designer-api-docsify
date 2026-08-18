@@ -14,7 +14,6 @@ Describes the information of the UIAbility bound to the [intent developed using 
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

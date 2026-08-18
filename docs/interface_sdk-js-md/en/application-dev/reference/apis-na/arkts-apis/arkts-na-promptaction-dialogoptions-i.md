@@ -2,7 +2,7 @@
 
 Dialog options
 
-**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)
+**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
 
 **Since:** 23
 

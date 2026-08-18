@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## onCameraCapabilitiesChange
@@ -27,7 +28,7 @@ Subscribe to the cameraCapabilitiesChange event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of CameraCapabilities details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of CameraCapabilities details. |
 
 **错误码：**
 

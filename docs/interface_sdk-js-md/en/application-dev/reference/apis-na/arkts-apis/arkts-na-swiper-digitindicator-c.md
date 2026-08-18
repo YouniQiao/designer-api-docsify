@@ -2,7 +2,7 @@
 
 Define DigitIndicator, the indicator type is digit.
 
-**Inheritance/Implementation:** DigitIndicator extends [Indicator](arkts-na-swiper-indicator-c.md#indicator)
+**Inheritance/Implementation:** DigitIndicator extends [Indicator](arkts-na-swiper-indicator-c.md)
 
 **Since:** 23
 

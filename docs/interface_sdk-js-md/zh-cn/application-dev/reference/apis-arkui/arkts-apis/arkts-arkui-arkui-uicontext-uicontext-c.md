@@ -1,6 +1,6 @@
 # UIContext
 
-UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
+UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](#getcallingscopeuicontext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
 
 **起始版本：** 10
 
@@ -11,6 +11,10 @@ UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## addLocalInputEventMonitor
@@ -218,7 +222,7 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[createAnimator](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createanimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#simpleanimatoroptions)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createanimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
@@ -270,13 +274,13 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability)或 [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability)所对应的上下文环境。 |
+| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
 
 **错误码：**
 
@@ -291,7 +295,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 static destroyUIContextWithoutWindow(): void
 ```
 
-销毁[createUIContextWithoutWindow](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createuicontextwithoutwindow)创建的UI实例。
+销毁[createUIContextWithoutWindow](#createuicontextwithoutwindow)创建的UI实例。
 
 **起始版本：** 17
 
@@ -387,7 +391,7 @@ whether to enable or disable swipe to back event.
 fp2px(value: number): number
 ```
 
-将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将fp单位的数值转换为以px为单位的数值。 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
 
@@ -431,7 +435,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
 
 ## getAtomicServiceBar
 
@@ -455,7 +459,7 @@ Get AtomicServiceBar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[AtomicServiceBar](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| [Nullable](../../apis-na/arkts-apis/arkts-na-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -493,7 +497,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-获取当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 > **说明：** > > 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#isavailable)接口判断其有效性。
+获取当前[调用作用域](../../../ui/arkts-global-interface.md#基本概念)的UIContext，调用作用域不明确时返回undefined。 > **说明：** > > 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](#isavailable)接口判断其有效性。
 
 **起始版本：** 22
 
@@ -509,7 +513,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -533,7 +537,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md) | 组件快照。 |
+| [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | 组件快照。 |
 
 ## getComponentUtils
 
@@ -557,7 +561,7 @@ get object ComponentUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -581,7 +585,7 @@ Get object context menu controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -605,7 +609,7 @@ Get object cursor controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CursorController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -629,7 +633,7 @@ getDialogPresenter(): DialogPresenter
 
 | 类型 | 说明 |
 | --- | --- |
-| [DialogPresenter](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dialogpresenter-c.md) | Dialog对象。 |
+| [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog对象。 |
 
 ## getDragController
 
@@ -653,7 +657,7 @@ Get DragController.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -751,7 +755,7 @@ getFocusController(): FocusController
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md) | 焦点控制器 |
+| [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | 焦点控制器 |
 
 ## getFont
 
@@ -775,7 +779,7 @@ getFont(): Font
 
 | 类型 | 说明 |
 | --- | --- |
-| [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-font-c.md) | Font实例对象。 |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font实例对象。 |
 
 ## getFrameNodeById
 
@@ -859,7 +863,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-na/arkts-apis/arkts-na-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
 
 ## getId
 
@@ -907,7 +911,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 返回虚拟键盘抬起时的页面避让模式。 |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 返回虚拟键盘抬起时的页面避让模式。 |
 
 ## getLastFocusedUIContext
 
@@ -931,7 +935,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -955,7 +959,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -963,7 +967,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 getMagnifier(): Magnifier
 ```
 
-获取[Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md#magnifier)对象，可控制放大镜显示和隐藏。
+获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md)对象，可控制放大镜显示和隐藏。
 
 **起始版本：** 22
 
@@ -979,7 +983,7 @@ getMagnifier(): Magnifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md) | Magnifier对象，可用于控制放大镜的显示和隐藏。 |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier对象，可用于控制放大镜的显示和隐藏。 |
 
 ## getMaxFontScale
 
@@ -1027,7 +1031,7 @@ getMeasureUtils(): MeasureUtils
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md) | 提供文本宽度、高度等相关计算。 |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | 提供文本宽度、高度等相关计算。 |
 
 ## getMediaQuery
 
@@ -1051,7 +1055,7 @@ get object mediaQuery.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaQuery](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1105,7 +1109,7 @@ Obtains the OverlayManager object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManager](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
 
 ## getOverlayManagerOptions
 
@@ -1129,7 +1133,7 @@ Get object OverlayManagerOptions.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1159,7 +1163,7 @@ getPageInfoByUniqueId(id: number): PageInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PageInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1235,7 +1239,7 @@ get object PromptAction.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptAction](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md) | PromptAction object. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
 
 ## getRouter
 
@@ -1259,7 +1263,7 @@ Obtains a Router object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md) | Router object. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
 
 ## getSharedLocalStorage
 
@@ -1307,7 +1311,7 @@ getSmartGestureController(): SmartGestureController
 
 | 类型 | 说明 |
 | --- | --- |
-| [SmartGestureController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-smartgesturecontroller-c.md) | 智能手势控制器对象。 |
+| [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | 智能手势控制器对象。 |
 
 ## getTextMenuController
 
@@ -1315,7 +1319,7 @@ getSmartGestureController(): SmartGestureController
 getTextMenuController(): TextMenuController
 ```
 
-获取[TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#textmenucontroller)对象，可通过该对象控制文本选择菜单。
+获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md)对象，可通过该对象控制文本选择菜单。
 
 **起始版本：** 16
 
@@ -1331,7 +1335,7 @@ getTextMenuController(): TextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md) | TextMenuController对象。 |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | TextMenuController对象。 |
 
 ## getUIInspector
 
@@ -1355,7 +1359,7 @@ getUIInspector(): UIInspector
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIInspector](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
 
 ## getUIObserver
 
@@ -1379,7 +1383,7 @@ getUIObserver(): UIObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIObserver](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiobserver-c.md) | 返回UIObserver实例对象。 |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | 返回UIObserver实例对象。 |
 
 ## getWindowHeightBreakpoint
 
@@ -1411,7 +1415,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 getWindowId(): number | undefined
 ```
 
-获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)内，则返回主应用程 > 序的顶层窗口ID。
+获取当前应用实例所属的窗口ID。 > **说明：** > > 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)内，则返回主应用程 > 序的顶层窗口ID。
 
 **起始版本：** 23
 
@@ -1608,7 +1612,7 @@ lpx2px(value: number): number
 openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>
 ```
 
-创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。 > **说明：** > > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。 > > 2. 由于[updateBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#updatebindsheet)和[closeBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#closebindsheet)依赖 > bindSheetContent去更新或者关闭指定的半模态页面，开发者需自行维护传入的bindSheetContent。 > > 3. 不支持设置SheetOptions.UIContext。
+创建并弹出以bindSheetContent作为内容的半模态页面，使用Promise异步回调。通过该接口弹出的半模态页面样式完全按照bindSheetContent中设置的样式显示。 > **说明：** > > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。 > > 2. 由于[updateBindSheet](#updatebindsheet)和[closeBindSheet](#closebindsheet)依赖 > bindSheetContent去更新或者关闭指定的半模态页面，开发者需自行维护传入的bindSheetContent。 > > 3. 不支持设置SheetOptions.UIContext。
 
 **起始版本：** 12
 
@@ -1667,7 +1671,7 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
 | delayTime | number | 是 | 延迟的时间，以毫秒为单位。传入null、undefined或小于0的值，会按0处理。 |
 
 ## postFrameCallback
@@ -1692,7 +1696,7 @@ postFrameCallback(frameCallback: FrameCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | 下一帧需要执行的回调。 |
 
 ## px2fp
 
@@ -1700,7 +1704,7 @@ postFrameCallback(frameCallback: FrameCallback): void
 px2fp(value: number): number
 ```
 
-将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
+将px单位的数值转换为以fp为单位的数值。 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。 > **说明：** > > getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
 
@@ -1756,7 +1760,7 @@ px2lpx(value: number): number
 px2vp(value: number): number
 ```
 
-将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将px单位的数值转换为以vp为单位的数值。 转换公式为：vp值 = px值 ÷ 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
 
@@ -1830,7 +1834,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1854,7 +1858,7 @@ static resolveUIContext(): ResolvedUIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-resolveduicontext-c.md) | 返回带有解析策略的UIContext实例对象。 |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | 返回带有解析策略的UIContext实例对象。 |
 
 ## runScopedTask
 
@@ -1902,7 +1906,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
 
 ## setImageCacheCount
 
@@ -1974,7 +1978,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。&lt;br /&gt;默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。&lt;br /&gt;setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | 配置虚拟键盘抬起时页面的避让模式。&lt;br /&gt;默认值：KeyboardAvoidMode.OFFSET，键盘抬起时默认避让模式为上抬。&lt;br /&gt;setKeyboardAvoidMode传入异常值时，该属性设置不生效。 |
 
 ## setOverlayManagerOptions
 
@@ -1998,7 +2002,7 @@ Init OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -2084,7 +2088,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
 
 ## showActionSheet
 
@@ -2327,7 +2331,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 vp2px(value: number): number
 ```
 
-将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#virtualscreenconfig).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
+将vp单位的数值转换为以px为单位的数值。 转换公式为：px值 = vp值 × 像素密度 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。 > **说明：** > > 1. getUIContext需在windowStage. > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后 > 调用此接口，否则无法返回准确结果。 > > 2. UI实例未创建时，像素单位中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offDistanceMeasure
@@ -31,7 +32,7 @@ function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | 测距接口配置参数 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | 否 | 表示取消指定的callback通知。如果输入空、undefined或null，则取消 configParams订阅的所有测距通知事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | 否 | 表示取消指定的callback通知。如果输入空、undefined或null，则取消 configParams订阅的所有测距通知事件。 |
 
 **错误码：**
 

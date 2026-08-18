@@ -28,7 +28,7 @@ Get the profile connection state of the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md#profileconnectionstate). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
+| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
 
 **Return value:**
 

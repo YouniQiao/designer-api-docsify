@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## on_wifiRssiChange
+## on_wifiRssiChange('wifiRssiChange')
 
 ```TypeScript
 function on(type: 'wifiRssiChange', callback: Callback<number>): void
@@ -34,5 +34,5 @@ Subscribe Wi-Fi rssi change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiRssiChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on |
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## stopWork

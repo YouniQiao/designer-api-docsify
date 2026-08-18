@@ -23,7 +23,7 @@ Provides constants that define the names of all predefined events. | Name | Type
 
 | Name | Description |
 | --- | --- |
-| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#userlogin) | User login event. |
-| [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#userlogout) | User logout event. |
-| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#distributedservicestart) | Distributed service event. |
+| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#user_login) | User login event. |
+| [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#user_logout) | User logout event. |
+| [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) | Distributed service event. |
 

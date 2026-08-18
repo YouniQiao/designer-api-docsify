@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -19,7 +18,7 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification系统接口)
+**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -34,7 +33,7 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
 
 **错误码：**
 
@@ -109,7 +108,7 @@ function subscribe(
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification系统接口)
+**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -125,7 +124,7 @@ function subscribe(
 | --- | --- | --- | --- |
 | subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
 | info | NotificationSubscribeInfo | 是 | 通知订阅信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 订阅动作回调函数。 |
 
 **错误码：**
 
@@ -206,7 +205,7 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification系统接口)
+**替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

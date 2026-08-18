@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md#wifiscaninfo)
+**替代接口：** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)
 
 <!--Device-wifi-interface WifiScanInfo--><!--Device-wifi-interface WifiScanInfo-End-->
 
@@ -15,6 +15,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## band

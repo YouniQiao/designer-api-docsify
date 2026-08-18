@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -21,7 +22,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp) | 完成应用的ArkTS脚本执行，上报执行结果。使用Promise异步回调。 |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) | 完成应用的ArkTS脚本执行，上报执行结果。使用Promise异步回调。 |
 
 ### 接口
 

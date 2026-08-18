@@ -142,7 +142,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103307](../../apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
+| [103307](../../apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-pop-up-window) | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 

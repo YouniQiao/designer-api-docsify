@@ -82,7 +82,7 @@ The result of a method instance.
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md#service) instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

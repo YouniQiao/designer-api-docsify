@@ -6,7 +6,7 @@ Enumerates reminder types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#remindertype)
+**Substitutes:** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
 
 <!--Device-reminderAgent-export enum ReminderType--><!--Device-reminderAgent-export enum ReminderType-End-->
 

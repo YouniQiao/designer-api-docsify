@@ -11,6 +11,7 @@ ArcSliderOptions的构造信息。
 ## 导入模块
 
 ```TypeScript
+import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstructorOptions, ArcSliderLayoutOptions, ArcSliderLayoutOptionsConstructorOptions, ArcSliderStyleOptions, ArcSliderStyleOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderValueOptionsConstructorOptions } from '@kit.ArkUI';
 ```
 
 ## digitalCrownSensitivity
@@ -37,7 +38,7 @@ digitalCrownSensitivity?: CrownSensitivity
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
@@ -109,7 +110,7 @@ onTouch?: ArcSliderTouchHandler
 styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
@@ -127,7 +128,7 @@ styleOptions?: ArcSliderStyleOptions
 valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 

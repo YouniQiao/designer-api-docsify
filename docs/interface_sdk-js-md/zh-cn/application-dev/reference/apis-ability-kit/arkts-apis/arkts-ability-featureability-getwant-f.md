@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWant
@@ -25,7 +26,7 @@ function getWant(callback: AsyncCallback<Want>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数，返回want信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数，返回want信息。 |
 
 **示例**
 

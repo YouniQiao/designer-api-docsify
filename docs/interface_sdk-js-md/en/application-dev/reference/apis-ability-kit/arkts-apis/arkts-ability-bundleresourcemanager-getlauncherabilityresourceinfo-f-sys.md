@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityResourceInfo
@@ -30,7 +29,7 @@ Obtains the bundle information of the entry ability of an application based on t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL**. |
 
 **Return value:**
 
@@ -71,7 +70,7 @@ Obtains the launcher ability resource information of an application based on the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api).GET_RESOURCE_INFO_ALL**. |
+| resourceFlags | int | No | Type of the resource information to obtain. The default value is **[ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ALL**. |
 | appIndex | int | No | Index of the application clone. The default value is **0**. |
 
 **Return value:**

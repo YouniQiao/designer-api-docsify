@@ -1,3 +1,0 @@
-# SearchModifier
-
-## Summary

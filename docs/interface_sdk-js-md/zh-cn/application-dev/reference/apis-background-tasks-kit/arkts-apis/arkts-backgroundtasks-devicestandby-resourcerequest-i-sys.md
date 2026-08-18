@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration
@@ -75,7 +76,7 @@ reason: string
 resourceTypes: int
 ```
 
-资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype系统接口)。
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
 
 **类型：** int
 

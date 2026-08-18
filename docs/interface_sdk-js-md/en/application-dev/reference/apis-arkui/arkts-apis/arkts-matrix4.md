@@ -1,18 +1,6 @@
 # @ohos.matrix4
 
-/*
- Copyright (c) 2020-2023 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation. **Matrix4** can be used in the following scenarios: In Transformation, the transform API uses the **Matrix4** object to display the matrix transformation in two-dimensional transformation, and the transform3D API uses the **Matrix4** object to set the three-dimensional transformation matrix for a component.
 
 **Since:** 7
 
@@ -32,15 +20,15 @@ import { matrix4 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [combine](arkts-arkui-matrix4-combine-f.md#combine) | Combines the effects of two matrices to generate a new matrix object. |
-| [copy](arkts-arkui-matrix4-copy-f.md#copy) | Copies this matrix object. |
-| [identity](arkts-arkui-matrix4-identity-f.md#identity) | Constructs an identity matrix. |
-| [init](arkts-arkui-matrix4-init-f.md#init) | Matrix constructor, which is used to create a 4 x 4 matrix with the input parameters. Column-major order is used. |
-| [invert](arkts-arkui-matrix4-invert-f.md#invert) | Inverts this matrix object. |
-| [rotate](arkts-arkui-matrix4-rotate-f.md#rotate) | Rotates this matrix object along the x, y, and z axes. |
-| [scale](arkts-arkui-matrix4-scale-f.md#scale) | Scales this matrix object along the x, y, and z axes. |
-| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md#transformpoint) | Applies the current transformation effect to a coordinate point. |
-| [translate](arkts-arkui-matrix4-translate-f.md#translate) | Translates this matrix object along the x, y, and z axes. |
+| [combine](arkts-arkui-matrix4-combine-f.md) | Combines the effects of two matrices to generate a new matrix object. |
+| [copy](arkts-arkui-matrix4-copy-f.md) | Copies this matrix object. |
+| [identity](arkts-arkui-matrix4-identity-f.md) | Constructs an identity matrix. |
+| [init](arkts-arkui-matrix4-init-f.md) | Matrix constructor, which is used to create a 4 x 4 matrix with the input parameters. Column-major order is used. |
+| [invert](arkts-arkui-matrix4-invert-f.md) | Inverts this matrix object. |
+| [rotate](arkts-arkui-matrix4-rotate-f.md) | Rotates this matrix object along the x, y, and z axes. |
+| [scale](arkts-arkui-matrix4-scale-f.md) | Scales this matrix object along the x, y, and z axes. |
+| [transformPoint](arkts-arkui-matrix4-transformpoint-f.md) | Applies the current transformation effect to a coordinate point. |
+| [translate](arkts-arkui-matrix4-translate-f.md) | Translates this matrix object along the x, y, and z axes. |
 
 ### Interfaces
 

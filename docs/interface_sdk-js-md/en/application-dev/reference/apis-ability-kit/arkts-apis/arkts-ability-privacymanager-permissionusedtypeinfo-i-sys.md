@@ -14,7 +14,6 @@ Represents detailed information about the use of a permission.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## permissionName

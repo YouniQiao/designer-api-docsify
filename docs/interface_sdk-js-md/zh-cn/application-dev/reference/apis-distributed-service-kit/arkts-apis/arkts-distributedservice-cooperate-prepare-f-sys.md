@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## prepare
@@ -17,7 +18,7 @@ function prepare(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -29,7 +30,7 @@ function prepare(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -69,7 +70,7 @@ function prepare(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate系统接口)()
+**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)()
 
 <!--Device-cooperate-function prepare(): Promise<void>--><!--Device-cooperate-function prepare(): Promise<void>-End-->
 

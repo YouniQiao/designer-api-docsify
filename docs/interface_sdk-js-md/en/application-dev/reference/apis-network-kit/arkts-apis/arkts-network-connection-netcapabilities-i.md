@@ -20,13 +20,13 @@ import { connection } from '@kit.NetworkKit';
 bearerTypes: Array<NetBearType>
 ```
 
-Network type.
+Network type. The array contains only one network type.
 
 **Type:** Array&lt;NetBearType&gt;
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCapabilities-bearerTypes: Array<NetBearType>--><!--Device-NetCapabilities-bearerTypes: Array<NetBearType>-End-->
 
@@ -38,7 +38,7 @@ Network type.
 linkDownBandwidthKbps?: int
 ```
 
-Downstream (network-to-device) bandwidth.
+Downlink (network-to-device) bandwidth, in kbit/s. The value **0** indicates that the current network bandwidth cannot be evaluated.
 
 **Type:** int
 
@@ -54,7 +54,7 @@ Downstream (network-to-device) bandwidth.
 linkUpBandwidthKbps?: int
 ```
 
-Uplink (device-to-network) bandwidth.
+Uplink (device-to-network) bandwidth, in kbit/s. The value **0** indicates that the current network bandwidth cannot be evaluated.
 
 **Type:** int
 
@@ -70,13 +70,13 @@ Uplink (device-to-network) bandwidth.
 networkCap?: Array<NetCap>
 ```
 
-Network-specific capabilities.
+Network capability.
 
 **Type:** Array&lt;[NetCap](arkts-network-connection-netcap-e.md)&gt;
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCapabilities-networkCap?: Array<NetCap>--><!--Device-NetCapabilities-networkCap?: Array<NetCap>-End-->
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -145,7 +146,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 readonly uniformDataType: 'openharmony.app-item'
 ```
 
-统一数据类型标识为桌面图标类型数据，固定为“openharmony.app-item”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。
+统一数据类型标识为桌面图标类型数据，固定为“openharmony.app-item”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'openharmony.app-item'
 

@@ -12,7 +12,6 @@ Represents the font variable axis information.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## defaultValue

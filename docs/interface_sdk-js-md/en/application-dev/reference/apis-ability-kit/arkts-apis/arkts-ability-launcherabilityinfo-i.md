@@ -1,6 +1,6 @@
 # LauncherAbilityInfo
 
-The module describes the ability information of the launcher application. The information can be obtained by calling [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) &lt;!--Del--&gt; or [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-system-api) &lt;!--DelEnd--&gt;.
+The module describes the ability information of the launcher application. The information can be obtained by calling [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md) <!--Del--> or [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) <!--DelEnd-->.
 
 **Since:** 23
 

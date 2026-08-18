@@ -1,6 +1,6 @@
 # Content
 
-Defines the base class for ComponentContent and [NodeContent](../../apis-na/arkts-apis/arkts-na-nodecontent-c.md#nodecontent).
+Defines the base class for ComponentContent and [NodeContent](arkts-arkui-nodecontent-c.md).
 
 **Since:** 12
 

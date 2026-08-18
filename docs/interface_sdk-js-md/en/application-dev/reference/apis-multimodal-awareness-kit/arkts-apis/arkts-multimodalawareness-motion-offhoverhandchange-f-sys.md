@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { motion } from '@kit.MultimodalAwarenessKit';
-import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offHoverHandChange
@@ -29,7 +28,7 @@ Unsubscribe to hover hand event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | No | Callback used to return hover hand action. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | No | Callback used to return hover hand action. |
 
 **Error codes:**
 

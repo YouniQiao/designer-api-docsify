@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { preferences } from '@kit.ArkData';
-import { preferences } from '@kit.ArkData';
 ```
 
 ## getPreferences
@@ -27,9 +26,9 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | name | string | Yes | Name of the **Preferences** instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and the **Preferences** instance obtained is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Preferences&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and the **Preferences** instance obtained is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -103,9 +102,9 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | options | Options | Yes | Configuration options of the **Preferences** instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Preferences&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and the **Preferences** instance obtained is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Preferences&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and the **Preferences** instance obtained is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -185,7 +184,7 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | name | string | Yes | Name of the **Preferences** instance. |
 
 **Return value:**
@@ -265,7 +264,7 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | options | Options | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**

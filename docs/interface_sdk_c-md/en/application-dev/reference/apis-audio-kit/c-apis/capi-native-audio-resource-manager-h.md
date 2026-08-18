@@ -57,7 +57,7 @@ Fetch the audio resource manager handle, which is a singleton.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr |
 
 ### OH_AudioResourceManager_CreateWorkgroup()
 
@@ -83,7 +83,7 @@ Create a workgroup for audio data processing threads in application.System manag
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr<br>     [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) out of workgroup resources<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr      [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) out of workgroup resources      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 ### OH_AudioResourceManager_ReleaseWorkgroup()
 
@@ -108,7 +108,7 @@ Release the workgroup created before.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 ### OH_AudioWorkgroup_AddCurrentThread()
 
@@ -133,7 +133,7 @@ Add current thread into a specified audio workgroup as audio data processing thr
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr<br>     [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) out of resources for the new thread<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr      [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) out of resources for the new thread      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 ### OH_AudioWorkgroup_RemoveThread()
 
@@ -158,7 +158,7 @@ Remove the thread from a specified audio workgroup.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr or token id is invalid<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr or token id is invalid      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 ### OH_AudioWorkgroup_Start()
 
@@ -184,7 +184,7 @@ Notify system the audio workgroup start working. Call this function before proce
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr, or time is invalid<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr, or time is invalid      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 ### OH_AudioWorkgroup_Stop()
 
@@ -208,6 +208,6 @@ Notify system the audio workgroup stop working. Call this function after the aud
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr<br>     [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if input param is nullptr      [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) system process error occurs |
 
 

@@ -12,7 +12,6 @@ Manages configurations of the embedding model.
 
 ```TypeScript
 import { intelligence } from '@kit.ArkData';
-import { intelligence } from '@kit.ArkData';
 ```
 
 ## cachePath

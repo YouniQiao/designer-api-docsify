@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setdistributedenable系统接口)
+**替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置设备是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置设备是否支持分布式通知的回调函数。 |
 
 
 ## enableDistributed
@@ -52,7 +50,7 @@ function enableDistributed(enable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setdistributedenable系统接口)
+**替代接口：** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

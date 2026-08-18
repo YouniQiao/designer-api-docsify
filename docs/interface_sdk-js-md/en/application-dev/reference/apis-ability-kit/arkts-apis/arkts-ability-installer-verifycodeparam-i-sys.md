@@ -16,7 +16,6 @@ Defines the information about the code signature file.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## moduleName

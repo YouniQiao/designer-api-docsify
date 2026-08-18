@@ -14,8 +14,6 @@ Options for setting the render target of an audio renderer. This parameter takes
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -25,7 +23,7 @@ import { audioHaptic } from '@kit.AudioKit';
 streamId: long
 ```
 
-The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicecommunication) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
+The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#source_type_voice_communication) capture stream identified by uid. This stream is the injection target for the render stream. It is valid only when the target is non-PLAYBACK.
 
 **Type:** long
 

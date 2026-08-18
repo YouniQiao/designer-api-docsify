@@ -17,7 +17,7 @@ declare function rmdirSync(path: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [rmdirSync](arkts-corefile-file-fs-rmdirsync-f.md#rmdirsync)
+**替代接口：** [rmdirSync](arkts-corefile-file-fs-rmdirsync-f.md)
 
 <!--Device-unnamed-declare function rmdirSync(path: string): void--><!--Device-unnamed-declare function rmdirSync(path: string): void-End-->
 

@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function clearCustomDnsRules(callback: AsyncCallback<void>): void
 ```
 
-Clear all custom DNS rules for current application.
+Removes all custom DNS rules of the current application. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -26,7 +26,7 @@ Clear all custom DNS rules for current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback of clearCustomDnsRules. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -60,9 +60,9 @@ connection.clearCustomDnsRules((error: BusinessError, data: void) => {
 function clearCustomDnsRules(): Promise<void>
 ```
 
-Clear all custom DNS rules for current application.
+Removes all custom DNS rules of the current application. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -74,7 +74,7 @@ Clear all custom DNS rules for current application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

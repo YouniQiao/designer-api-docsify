@@ -3,16 +3,16 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#uiextensioncomponent-system-api) | Defines UIExtensionComponent Component. |
-| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md#uiextensioncomponent-system-api) | Defines UIExtensionComponent Component.It requires call setUIExtensionComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md) | Defines UIExtensionComponent Component. |
+| [UIExtensionComponent](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md) | Defines UIExtensionComponent Component.It requires call setUIExtensionComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -21,7 +21,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -30,7 +30,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

@@ -2,7 +2,7 @@
 
 Video Functions object.
 
-**Inheritance/Implementation:** VideoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#manualexposurequery-system-api), [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery), [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#stabilizationquery), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquery-system-api), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery-system-api), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md#colormanagementquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#scenedetectionquery-system-api)
+**Inheritance/Implementation:** VideoFunctions extends [FlashQuery](arkts-camera-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md), [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md), [FocusQuery](arkts-camera-camera-focusquery-i.md), [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md), [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md), [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 
 **Since:** 23
 

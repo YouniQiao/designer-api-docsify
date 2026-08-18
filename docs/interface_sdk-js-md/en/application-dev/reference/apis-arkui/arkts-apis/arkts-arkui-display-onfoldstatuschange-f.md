@@ -24,7 +24,7 @@ Register the callback for fold status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | Yes | Callback used to return the current fold status of device |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FoldStatus&gt; | Yes | Callback used to return the current fold status of device |
 
 **Error codes:**
 

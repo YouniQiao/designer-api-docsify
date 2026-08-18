@@ -16,7 +16,7 @@
 particles: Array<ParticleOptions>
 ```
 
-粒子动画的集合。每一个的粒子动画（[ParticleOptions](arkts-arkui-particle-particleoptions-i.md#particleoptions)）包含粒子发射，同时可配置粒子的颜色、透明度、大小、速度、加速度与旋转速度，详见 [ParticleOptions](arkts-arkui-particle-particleoptions-i.md#particleoptions)属性说明。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+粒子动画的集合。每一个的粒子动画（[ParticleOptions](arkts-arkui-particle-particleoptions-i.md)）包含粒子发射，同时可配置粒子的颜色、透明度、大小、速度、加速度与旋转速度，详见 [ParticleOptions](arkts-arkui-particle-particleoptions-i.md)属性说明。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Array&lt;[ParticleOptions](arkts-arkui-particle-particleoptions-i.md)&gt;
 

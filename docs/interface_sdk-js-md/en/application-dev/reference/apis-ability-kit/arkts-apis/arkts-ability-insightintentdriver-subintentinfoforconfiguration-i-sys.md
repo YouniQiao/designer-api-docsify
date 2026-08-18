@@ -14,7 +14,6 @@ Describes the unique information of the [intent developed using a configuration 
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## entities
@@ -25,7 +24,7 @@ readonly entities?: Record<string, RecordData>
 
 Entity information contained in the intent.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
@@ -65,7 +64,7 @@ readonly inputParams?: Array<Record<string, RecordData>>
 
 Data format of intent parameters, which is used to define the input data format during intent calls.
 
-**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
@@ -85,7 +84,7 @@ readonly outputParams?: Array<Record<string, RecordData>>
 
 Data format for the results returned by intent calls. It defines how the data should be structured.
 
-**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**Type:** Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 

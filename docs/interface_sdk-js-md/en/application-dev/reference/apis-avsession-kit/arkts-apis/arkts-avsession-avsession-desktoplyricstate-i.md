@@ -12,7 +12,6 @@ Desktop lyric state definition.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## isLocked

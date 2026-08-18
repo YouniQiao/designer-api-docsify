@@ -23,7 +23,7 @@ componentTemplate: PluginComponentTemplate
 
 Defines componentTemplate.
 
-**Type:** [PluginComponentTemplate](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
+**Type:** [PluginComponentTemplate](arkts-na-plugincomponent-plugincomponenttemplate-i.md)
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ data: KVObject
 
 Defines data.
 
-**Type:** [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](arkts-na-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -63,7 +63,7 @@ extraData: KVObject
 
 Defines extraData.
 
-**Type:** [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](arkts-na-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 

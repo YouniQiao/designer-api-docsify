@@ -1,6 +1,6 @@
 # WindowExtensionContext（系统接口）
 
-WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)。 WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#windowextensionability系统接口)具有的能力，包括启动 Ability。 > **说明：** > > - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext)。 > > - 本模块接口为系统接口。 > > - 本模块接口仅可在Stage模型下使用。
+WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)具有的能力，包括启动 Ability。 > **说明：** > > - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。 > > - 本模块接口为系统接口。 > > - 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** WindowExtensionContext extends ExtensionContext
 
@@ -40,7 +40,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | 是 | 启动Ability的want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
 
 **错误码：**
 

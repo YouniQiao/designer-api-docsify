@@ -957,7 +957,7 @@ Sets the onlyBetweenLines parameter for the line spacing options.When set to tru
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <ul><br>     <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>     <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the options parameter is null.</li><br>     </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <ul>      <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>      <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the options parameter is null.</li>      </ul> |
 
 ### OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines()
 
@@ -982,6 +982,6 @@ Gets the onlyBetweenLines parameter from the line spacing options.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <ul><br>     <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>     <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if any parameter is null.</li><br>     </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <ul>      <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>      <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if any parameter is null.</li>      </ul> |
 
 

@@ -24,7 +24,7 @@ Cancel callback when the signal strength is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
 
 **Error codes:**
 

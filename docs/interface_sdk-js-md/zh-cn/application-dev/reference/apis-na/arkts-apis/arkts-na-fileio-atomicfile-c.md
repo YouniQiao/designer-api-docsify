@@ -41,7 +41,7 @@ constructor(path: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 ## delete
 
@@ -63,11 +63,11 @@ delete(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
-| 13900027 | Read-only file system |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
+| 13900027 |  |
 
 ## failWrite
 
@@ -89,7 +89,7 @@ failWrite(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900042 | Internal error |
+| 13900042 |  |
 
 ## finishWrite
 
@@ -111,7 +111,7 @@ finishWrite(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900042 | Internal error |
+| 13900042 |  |
 
 ## getBaseFile
 
@@ -139,10 +139,10 @@ getBaseFile(): File
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900005 | IO error |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
+| 13900005 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
 
 ## openRead
 
@@ -170,10 +170,10 @@ openRead(): ReadStream
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
 
 ## readFully
 
@@ -201,8 +201,8 @@ readFully(): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Internal error |
+| 13900005 |  |
+| 13900042 |  |
 
 ## startWrite
 
@@ -230,9 +230,9 @@ startWrite(): WriteStream
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
-| 13900027 | Read-only file system |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
+| 13900027 |  |
 

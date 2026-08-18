@@ -26,4 +26,9 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 ## 汇总
 
-- [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | MenuItem分组的标题和尾部信息。 |
+

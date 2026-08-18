@@ -62,7 +62,7 @@ Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-me
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_MetadataOutput\* metadataOutput | Pointer to the MetadataOutput instance that transfers the callback. |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)\* metadataOutput | Pointer to the MetadataOutput instance that transfers the callback. |
 | [Camera_MetadataObject](capi-oh-camera-camera-metadataobject.md)\* metadataObject | Pointer to the metadata output data. |
 | uint32_t size | Size of the metadata object. |
 
@@ -82,7 +82,7 @@ Defines the callback used to listen for metadata object ext available.
 
 | Parameter | Description |
 | -- | -- |
-| (void\* context | Pointer to the context provided by user. |
+| void\* context | Pointer to the context provided by user. |
 | [OH_Camera_MetadataObjectExt](capi-oh-camera-oh-camera-metadataobjectext.md)\*\* metadataObjectExt | Pointer to the metadata output data. |
 | uint32_t size | Size of the metadata object ext. |
 
@@ -102,7 +102,7 @@ Defines the callback defined in the [MetadataOutput_Callbacks](capi-oh-camera-me
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_MetadataOutput\* metadataOutput | Pointer to the MetadataOutput instance that transfers the callback. |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)\* metadataOutput | Pointer to the MetadataOutput instance that transfers the callback. |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) errorCode | Error code reported during metadata output. |
 
 **Reference**:
@@ -126,7 +126,7 @@ Defines the callback used to listen for error ext event.
 
 | Parameter | Description |
 | -- | -- |
-| (void\* context | Pointer to the context provided by user. |
+| void\* context | Pointer to the context provided by user. |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) errorCode | Error code reported during metadata output. |
 
 **Reference**:
@@ -157,7 +157,7 @@ Registers a callback to listen for metadata output events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_UnregisterCallback()
 
@@ -182,7 +182,7 @@ Unregisters the callback used to listen for metadata output events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_RegisterMetadataObjectExtAvailableCallback()
 
@@ -208,7 +208,7 @@ Registers a callback to listen for [OH_Camera_MetadataObjectExt](capi-oh-camera-
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_UnregisterMetadataObjectExtAvailableCallback()
 
@@ -234,7 +234,7 @@ Unregisters the callback used to listen for metadata object ext events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_RegisterErrorExtCallback()
 
@@ -260,7 +260,7 @@ Registers a callback to listen for error ext events.The callback can be unregist
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_UnregisterErrorExtCallback()
 
@@ -286,7 +286,7 @@ Unregisters the callback used to listen for error ext events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataOutput_Start()
 
@@ -310,7 +310,7 @@ Starts metadata output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_MetadataOutput_Stop()
 
@@ -334,7 +334,7 @@ Stops metadata output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_MetadataOutput_Release()
 
@@ -358,7 +358,7 @@ Releases a MetadataOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### ()
 
@@ -384,7 +384,7 @@ Adds the metadata object types.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| Camera_ErrorCode OH_MetadataOutput_AddMetadataObjectTypes | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### ()
 
@@ -410,7 +410,7 @@ Removes the metadata object types.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| Camera_ErrorCode OH_MetadataOutput_RemoveMetadataObjectTypes | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_MetadataOutput_IsLockMetadataObjectTrackingSupported()
 
@@ -459,7 +459,7 @@ Lock metadata object tracking, can be unlocked by [OH_MetadataOutput_UnlockMetad
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_MetadataOutput_UnlockMetadataObjectTracking()
 
@@ -483,6 +483,6 @@ Unlock metadata object tracking.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 

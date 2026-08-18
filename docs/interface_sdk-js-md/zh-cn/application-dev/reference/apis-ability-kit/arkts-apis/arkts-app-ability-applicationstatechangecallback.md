@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## 汇总

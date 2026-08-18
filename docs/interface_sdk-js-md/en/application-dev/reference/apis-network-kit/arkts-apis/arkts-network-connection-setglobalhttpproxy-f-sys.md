@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback<void>): void
 ```
 
-Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
+Sets the global network HTTP proxy configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setGlobalHttpProxy. |
+| httpProxy | HttpProxy | Yes | Global HTTP proxy configuration of the network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is set successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
 function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>
 ```
 
-Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
+Sets the global network HTTP proxy configuration information. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -87,13 +87,13 @@ Set a network independent global [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
+| httpProxy | HttpProxy | Yes | Global HTTP proxy configuration of the network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

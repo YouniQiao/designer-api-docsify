@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationParameters
@@ -13,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)中wantAgent字段的部分信息。使用Promise异 步回调。
+获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异 步回调。
 
 **起始版本：** 24
 
@@ -83,7 +82,7 @@ notificationManager.getNotificationParameters(id, label).then((data: notificatio
 function getNotificationParameters(id: int, label?: string): Promise<NotificationParameters | null>
 ```
 
-获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)中wantAgent字段的部分信息。使用Promise异 步回调。
+获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异 步回调。
 
 **起始版本：** 24
 

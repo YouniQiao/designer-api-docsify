@@ -2,7 +2,7 @@
 
 Mesh resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
 **Since:** 23
 

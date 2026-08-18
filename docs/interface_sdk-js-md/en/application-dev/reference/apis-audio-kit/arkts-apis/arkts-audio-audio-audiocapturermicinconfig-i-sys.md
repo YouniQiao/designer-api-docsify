@@ -14,8 +14,6 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -85,7 +83,7 @@ Stream information that describes Mic-In audio stream.
 preferredInputDevice?: AudioDeviceDescriptor
 ```
 
-Prefered input device for this audio capturer. The preferred device must be an input device, and the source type in captureInfo must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition), [SOURCE_TYPE_VOICE_TRANSCRIPTION](arkts-audio-audio-sourcetype-e-sys.md#sourcetypevoicetranscription) or [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#sourcetypeunprocessedvoiceassistant), otherwise this parameter will be ignored. If the user does not specify a device, the system will automatically select the recording device for the audio capturer. When the user specifies a preferred device: 1) If the preferred device is online, the current audio capturer may use the preferred device for recording. If the preferred device becomes offline during recording, the system will select another device. 2) If the preferred device is offline, the system will select a recording device. If the preferred device becomes online during recording, it may switch to the preferred device. The user can query the selected device by [getCurrentAudioCapturerChangeInfo](arkts-audio-audio-audiocapturer-i.md#getcurrentaudiocapturerchangeinfo).
+Prefered input device for this audio capturer. The preferred device must be an input device, and the source type in captureInfo must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition), [SOURCE_TYPE_VOICE_TRANSCRIPTION](arkts-audio-audio-sourcetype-e-sys.md#source_type_voice_transcription) or [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#source_type_unprocessed_voice_assistant), otherwise this parameter will be ignored. If the user does not specify a device, the system will automatically select the recording device for the audio capturer. When the user specifies a preferred device: 1) If the preferred device is online, the current audio capturer may use the preferred device for recording. If the preferred device becomes offline during recording, the system will select another device. 2) If the preferred device is offline, the system will select a recording device. If the preferred device becomes online during recording, it may switch to the preferred device. The user can query the selected device by [getCurrentAudioCapturerChangeInfo](arkts-audio-audio-audiocapturer-i.md#getcurrentaudiocapturerchangeinfo).
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 

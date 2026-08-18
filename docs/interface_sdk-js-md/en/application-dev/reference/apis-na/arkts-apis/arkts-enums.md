@@ -113,7 +113,7 @@
 | [XComponentType](arkts-na-enums-xcomponenttype-e.md) | The type of XComponent |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

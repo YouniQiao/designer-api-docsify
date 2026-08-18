@@ -12,11 +12,12 @@ import { data } from '@kit.TelephonyKit';
 function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void
 ```
 
-Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return value of service state query of cellular data services.
+Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**Required permissions:** 
+- API version 22+: ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void--><!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void-End-->
 
@@ -26,13 +27,13 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataFlowType&gt; | Yes | Indicates the data flow type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataFlowType&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -56,11 +57,12 @@ data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType
 function getCellularDataFlowType(): Promise<DataFlowType>
 ```
 
-Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return value of service state query of cellular data services.
+Obtains the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**Required permissions:** 
+- API version 22+: ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>--><!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>-End-->
 
@@ -70,13 +72,13 @@ Indicates that there is no uplink or downlink data. &lt;p&gt;It is a return valu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataFlowType&gt; | Returns the data flow type. |
+| Promise&lt;DataFlowType&gt; | Promise used to return the data flow type of the cellular network (corresponding to the uplink and downlink arrows next to the signal bar). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 22 and later |
 
 **Examples**
 

@@ -2,7 +2,7 @@
 
 This material inherits from Material and draws only the surface shadows. When the Blend property is enabled, the material can be blended with the background to simulate transparency.
 
-**Inheritance/Implementation:** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#material)
+**Inheritance/Implementation:** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **Since:** 23
 

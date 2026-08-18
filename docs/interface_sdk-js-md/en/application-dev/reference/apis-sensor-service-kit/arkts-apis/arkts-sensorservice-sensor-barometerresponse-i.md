@@ -1,8 +1,8 @@
 # BarometerResponse
 
-Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

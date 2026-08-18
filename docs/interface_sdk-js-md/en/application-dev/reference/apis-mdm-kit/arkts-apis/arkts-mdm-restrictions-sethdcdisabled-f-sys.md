@@ -18,7 +18,7 @@ Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
@@ -36,7 +36,7 @@ Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | disabled | boolean | Yes | Operation to perform. The value **true** means to disable HDC; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. <br>If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. <br>If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Enables or disables HDC on a device. This API uses a promise to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 

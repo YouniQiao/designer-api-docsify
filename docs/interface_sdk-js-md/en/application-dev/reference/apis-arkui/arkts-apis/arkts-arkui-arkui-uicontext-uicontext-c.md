@@ -202,13 +202,13 @@ Creates an **Animator** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -222,7 +222,7 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -238,13 +238,13 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -274,7 +274,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability). |
+| context | common.UIAbilityContext \| common.ExtensionContext | Yes | Context corresponding to [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) or [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md). |
 
 **Return value:**
 
@@ -969,7 +969,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#magnifier) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
 
@@ -1321,7 +1321,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#textmenucontroller) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
 
 **Since:** 16
 
@@ -1417,7 +1417,7 @@ Obtains the height breakpoint value of the window where this instance is located
 getWindowId(): number | undefined
 ```
 
-Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) that runs in the main > application process, the top-level window ID of the main application is returned.
+Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main > application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
 

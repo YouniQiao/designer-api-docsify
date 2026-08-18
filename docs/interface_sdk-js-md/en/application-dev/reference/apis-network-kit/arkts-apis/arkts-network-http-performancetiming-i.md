@@ -1,6 +1,6 @@
 # PerformanceTiming
 
-Counting the time taken of various stages of HTTP request.
+Configures the timing for performance tracing, in ms.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 dnsTiming: double
 ```
 
-Time taken from startup to DNS resolution completion, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the DNS resolution is complete.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ Time taken from startup to DNS resolution completion, in milliseconds.
 firstReceiveTiming: double
 ```
 
-Time taken from startup to receiving the first byte, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the first byte is received.
 
 **Type:** double
 
@@ -52,7 +52,7 @@ Time taken from startup to receiving the first byte, in milliseconds.
 firstSendTiming: double
 ```
 
-Time taken from startup to start sending the first byte, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the first byte is sent.
 
 **Type:** double
 
@@ -68,7 +68,7 @@ Time taken from startup to start sending the first byte, in milliseconds.
 redirectTiming: double
 ```
 
-Time taken from startup to completion of all redirection steps, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when all redirection steps are complete.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ Time taken from startup to completion of all redirection steps, in milliseconds.
 responseBodyTiming: double
 ```
 
-Time taken from HTTP Request to body completion, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the body resolution is complete.
 
 **Type:** double
 
@@ -100,7 +100,7 @@ Time taken from HTTP Request to body completion, in milliseconds.
 responseHeaderTiming: double
 ```
 
-Time taken from HTTP request to header completion, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the header resolution is complete.
 
 **Type:** double
 
@@ -116,7 +116,7 @@ Time taken from HTTP request to header completion, in milliseconds.
 tcpTiming: double
 ```
 
-Time taken from startup to TCP connection completion, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the TCP connection is complete.
 
 **Type:** double
 
@@ -132,7 +132,7 @@ Time taken from startup to TCP connection completion, in milliseconds.
 tlsTiming: double
 ```
 
-Time taken from startup to TLS connection completion, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the TLS connection is complete.
 
 **Type:** double
 
@@ -148,7 +148,7 @@ Time taken from startup to TLS connection completion, in milliseconds.
 totalFinishTiming: double
 ```
 
-Time taken from startup to the completion of the request, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when the request is complete.
 
 **Type:** double
 
@@ -164,7 +164,7 @@ Time taken from startup to the completion of the request, in milliseconds.
 totalTiming: double
 ```
 
-Time taken from HTTP Request to callback to the application, in milliseconds.
+Duration from the time when the [request](arkts-network-http-httprequest-i.md#request) is sent to the time when a callback is returned to the application.
 
 **Type:** double
 

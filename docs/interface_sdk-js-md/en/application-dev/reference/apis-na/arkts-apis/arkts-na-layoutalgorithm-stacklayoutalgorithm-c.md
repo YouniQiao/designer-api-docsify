@@ -2,7 +2,7 @@
 
 Defines the stack layout algorithm.
 
-**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [StackLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | set properties of stack layout algorithm. |
+| option | [StackLayoutAlgorithmOptions](arkts-na-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | No | set properties of stack layout algorithm. |
 
 ## alignContent
 

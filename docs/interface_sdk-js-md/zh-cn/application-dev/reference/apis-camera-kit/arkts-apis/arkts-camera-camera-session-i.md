@@ -1,6 +1,6 @@
 # Session
 
-会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)，并向相机设备申请完成相机功 能（录像，拍照）。
+会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功 能（录像，拍照）。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addInput
@@ -19,7 +21,7 @@
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)加入到会话。
+把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
 
 **起始版本：** 23
 
@@ -50,7 +52,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)加入到会话。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
 
 **起始版本：** 23
 
@@ -174,7 +176,7 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)，比如预览流与录像输出流的分辨率的宽高比不一致，会返回7400201。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)，比如预览流与录像输出流的分辨率的宽高比不一致，会返回7400201。 |
 
 **错误码：**
 
@@ -232,7 +234,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -274,7 +276,7 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)。当前函数需要在[beginConfig](#beginconfig)和 [commitConfig](#commitconfig)之间生效。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md)。当前函数需要在[beginConfig](#beginconfig)和 [commitConfig](#commitconfig)之间生效。
 
 **起始版本：** 23
 
@@ -305,7 +307,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **起始版本：** 23
 
@@ -350,7 +352,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -410,7 +412,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

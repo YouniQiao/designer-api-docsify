@@ -65,7 +65,7 @@ Creates a pointer to the instance of the [OH_Utd](capi-udmf-oh-utd.md).
 
 | Type | Description |
 | -- | -- |
-| [OH_Utd*](capi-udmf-oh-utd.md) | If the operation is successful, a pointer to the instance of the [OH_Utd](capi-udmf-oh-utd.md)<br> structure is returned.If the operation is failed, nullptr is returned.<br> Must be destroyed with [OH_Utd_Destroy](capi-utd-h.md#oh_utd_destroy) when not needed. |
+| [OH_Utd*](capi-udmf-oh-utd.md) | If the operation is successful, a pointer to the instance of the [OH_Utd](capi-udmf-oh-utd.md)  structure is returned.If the operation is failed, nullptr is returned.  Must be destroyed with [OH_Utd_Destroy](capi-utd-h.md#oh_utd_destroy) when not needed. |
 
 **Reference**:
 
@@ -374,7 +374,7 @@ Calculate relationships of two types.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status code of the execution.<br>         {@code false} Represents srcTypeId not belongs to destTypeId.<br>         {@code true} Represents srcTypeId belongs to destTypeId. |
+| bool | Returns the status code of the execution.          {@code false} Represents srcTypeId not belongs to destTypeId.          {@code true} Represents srcTypeId belongs to destTypeId. |
 
 ### OH_Utd_IsLower()
 
@@ -399,7 +399,7 @@ Calculate relationships of two types.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status code of the execution.<br>         {@code false} Represents srcTypeId not lower level to destTypeId.<br>         {@code true} Represents srcTypeId lower level to destTypeId. |
+| bool | Returns the status code of the execution.          {@code false} Represents srcTypeId not lower level to destTypeId.          {@code true} Represents srcTypeId lower level to destTypeId. |
 
 ### OH_Utd_IsHigher()
 
@@ -424,7 +424,7 @@ Calculate relationships of two types.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status code of the execution.<br>         {@code false} Represents srcTypeId not higher level to destTypeId.<br>         {@code true} Represents srcTypeId higher level to destTypeId. |
+| bool | Returns the status code of the execution.          {@code false} Represents srcTypeId not higher level to destTypeId.          {@code true} Represents srcTypeId higher level to destTypeId. |
 
 ### OH_Utd_Equals()
 
@@ -449,7 +449,7 @@ Calculate two [OH_Utd](capi-udmf-oh-utd.md)s are equal.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status code of the execution.<br>         {@code false} Represents utd1 and utd2 are not equal.<br>         {@code true} Represents utd1 and utd2 are equal. |
+| bool | Returns the status code of the execution.          {@code false} Represents utd1 and utd2 are not equal.          {@code true} Represents utd1 and utd2 are equal. |
 
 ### OH_Utd_DestroyStringList()
 

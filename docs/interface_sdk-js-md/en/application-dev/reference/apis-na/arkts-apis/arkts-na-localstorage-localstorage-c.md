@@ -56,7 +56,7 @@ Construct new instance of LocalStorage initialize with all properties and their 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initializingProperties | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | initializing Properties |
+| initializingProperties | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | initializing Properties |
 
 ## delete
 

@@ -22,7 +22,7 @@ import { scriptManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp) | complete arkTS script for in-app skills. |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md) | complete arkTS script for in-app skills. |
 
 ### Interfaces
 

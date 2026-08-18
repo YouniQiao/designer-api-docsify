@@ -12,7 +12,6 @@ Describes the text embedding functions of the multi-modal embedding model. Chine
 
 ```TypeScript
 import { intelligence } from '@kit.ArkData';
-import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding

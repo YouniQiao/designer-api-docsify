@@ -2,7 +2,7 @@
 
 Defines the dialog param with buttons.
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#alertdialogparam)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md)
 
 **Since:** 23
 

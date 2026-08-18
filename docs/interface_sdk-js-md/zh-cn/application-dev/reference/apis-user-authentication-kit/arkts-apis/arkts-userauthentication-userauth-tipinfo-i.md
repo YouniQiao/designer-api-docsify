@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md#authtipinfo)
+**替代接口：** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
 
 <!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## module

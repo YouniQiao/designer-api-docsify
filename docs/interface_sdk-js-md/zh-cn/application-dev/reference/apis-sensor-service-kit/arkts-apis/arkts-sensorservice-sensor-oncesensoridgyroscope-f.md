@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorId.GYROSCOPE
@@ -26,7 +27,7 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.GYROSCOPE | 是 | 传感器类型，该值固定为SensorId.GYROSCOPE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为GyroscopeResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为GyroscopeResponse。 |
 
 **错误码：**
 

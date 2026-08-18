@@ -1,6 +1,6 @@
 # DLPFile (System API)
 
-Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the [closeDLPFile](#closedlpfile) API to release resources to prevent file handle leaks. Authorization is required when the **DLPFile** object is transferred across processes.
+Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the [closeDLPFile](#closedlpfile) API to release resources to prevent file handle leaks. Authorization is required when the **DLPFile** object is transferred across processes.
 
 **Since:** 10
 
@@ -121,7 +121,7 @@ Adds a link file to the FUSE. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
 
 **Error codes:**
 
@@ -187,7 +187,7 @@ async function ExampleFunction() {
 closeDLPFile(): Promise<void>
 ```
 
-Closes a **DLPFile** object. This API uses a promise to return the result. After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object. This API is used when the file owner decides to close a DLP file. > **NOTE：**> > If a DLP file is no longer used, close the **dlpFile** object to release the memory.
+Closes a **DLPFile** object. This API uses a promise to return the result. After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object. This API is used when the file owner decides to close a DLP file. > **NOTE：**> > If a DLP file is no longer used, close the **dlpFile** object to release the memory.
 
 **Since:** 10
 
@@ -276,7 +276,7 @@ Closes a **DLPFile** object. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
 
 **Error codes:**
 
@@ -439,7 +439,7 @@ Deletes a link file from the FUSE. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
 
 **Error codes:**
 
@@ -542,10 +542,10 @@ Recovers the plaintext of a DLP file. This API uses a promise to return the resu
 | [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [19100010](../errorcode-dlp.md#19100010-readonly-dlp-file) | The DLP file is read only. |
+| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 **Examples**
@@ -615,7 +615,7 @@ Recovers the plaintext of a DLP file. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -629,10 +629,10 @@ Recovers the plaintext of a DLP file. This API uses an asynchronous callback to 
 | [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [19100010](../errorcode-dlp.md#19100010-readonly-dlp-file) | The DLP file is read only. |
+| [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) | The DLP file is read only. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 **Examples**
@@ -794,7 +794,7 @@ Replaces a link file. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -955,7 +955,7 @@ Resumes the read and write on the FUSE. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
 
 **Error codes:**
 
@@ -1114,7 +1114,7 @@ Stops the read and write on the FUSE. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 

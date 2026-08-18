@@ -1,6 +1,6 @@
 # UIExtensionContext
 
-UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
+UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
 
 **Inheritance/Implementation:** UIExtensionContext extends ExtensionContext
 
@@ -65,7 +65,7 @@ Connects the current UI extension to an service extension ability with a root ho
 setHostPageOverlayForbidden(isForbidden: boolean) : void
 ```
 
-Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) can be overlaid by the page of the user. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > This API must be called before a window is created. You are advised to call it within the > [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate) lifecycle of the > [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability).
+Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > This API must be called before a window is created. You are advised to call it within the > [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate) lifecycle of the > [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).
 
 **Since:** 23
 
@@ -81,7 +81,7 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-abil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForbidden | boolean | Yes | Whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) can be overlaid by the page of the user. **true** if the page can be overlaid, **false** otherwise. |
+| isForbidden | boolean | Yes | Whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user. **true** if the page can be overlaid, **false** otherwise. |
 
 **Error codes:**
 
@@ -131,15 +131,15 @@ Starts an ability with the caller information specified. The caller information 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 
 ## startServiceExtensionAbility
@@ -183,7 +183,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -217,7 +217,7 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
+| accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 
 **Return value:**
 
@@ -236,7 +236,7 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -293,10 +293,10 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
@@ -351,9 +351,9 @@ Starts a second UIAbility after the first UIAbility instance is created, and dis
 | [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | Target UIAbility does not exist. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid. |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |

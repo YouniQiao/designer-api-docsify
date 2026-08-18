@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
-import { securityManager } from '@kit.MDMKit';
 ```
 
 ## setDisallowedPermission
@@ -32,7 +31,7 @@ Disables the specified permission of the specified user. After the permission is
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | permission | string | Yes | Name of the permission. |
 | disallow | boolean | Yes | Whether to disable the permission. The value **true** indicates yes, and the value **false** indicates no. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 
 **Error codes:**
 

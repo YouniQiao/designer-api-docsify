@@ -61,7 +61,7 @@ Obtains metadata object type.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataObjectExt_GetTimestamp()
 
@@ -86,7 +86,7 @@ Obtains the timestamp of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataObjectExt_GetBoundingBox()
 
@@ -111,7 +111,7 @@ Obtains the bounding box of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_MetadataObjectExt_GetPitchAngle()
 
@@ -136,7 +136,7 @@ Obtains the pitch angle of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_GetYawAngle()
 
@@ -161,7 +161,7 @@ Obtains the yaw angle of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_GetRollAngle()
 
@@ -186,7 +186,7 @@ Obtains the roll angle of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_GetLeftEyeBoundingBox()
 
@@ -211,7 +211,7 @@ Obtains the left eye bounding box of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_GetRightEyeBoundingBox()
 
@@ -236,7 +236,7 @@ Obtains the right eye bounding box of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_GetEmotion()
 
@@ -261,7 +261,7 @@ Obtains the emotion of the metadata object extension.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST: The optional property does not exist. |
 
 ### OH_MetadataObjectExt_Destroy()
 

@@ -3,6 +3,22 @@
 ## 导入模块
 
 ```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
+import { appDomainVerify } from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## setApplicationEnabled
@@ -33,7 +49,7 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指示需要启用或禁用的应用Bundle名称。 |
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 
 ## setApplicationEnabled

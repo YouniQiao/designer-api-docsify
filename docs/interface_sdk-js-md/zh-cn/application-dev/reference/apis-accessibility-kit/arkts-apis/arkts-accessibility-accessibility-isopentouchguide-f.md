@@ -3,6 +3,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## isOpenTouchGuide
@@ -17,7 +22,7 @@ function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 10
 
-**替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync)
+**替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md)
 
 <!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void-End-->
 
@@ -27,7 +32,7 @@ function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示触摸浏览模式已开启；返回false表示触摸浏览模式未开启。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示触摸浏览模式已开启；返回false表示触摸浏览模式未开启。 |
 
 **示例**
 
@@ -57,7 +62,7 @@ function isOpenTouchGuide(): Promise<boolean>
 
 **废弃版本：** 10
 
-**替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync)
+**替代接口：** [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md)
 
 <!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>--><!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>-End-->
 

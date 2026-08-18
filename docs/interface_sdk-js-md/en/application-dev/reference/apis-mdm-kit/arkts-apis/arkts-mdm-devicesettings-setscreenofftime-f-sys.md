@@ -18,7 +18,7 @@ Sets the device screen-off time.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue)
+**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_SCREENOFF_TIME
 

@@ -1,6 +1,6 @@
 # NetUidRuleInfo (System API)
 
-The interface is used to generate network unique identifiers.
+Defines a unique network ID.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { policy } from '@kit.NetworkKit';
 rule: NetUidRule
 ```
 
-Rules whether an uid can access to a metered or non-metered network.
+Rule that specifies whether the application specified by a given UID is allowed to access a metered or non- metered network.
 
 **Type:** [NetUidRule](arkts-network-policy-netuidrule-e-sys.md)
 
@@ -37,16 +37,16 @@ Rules whether an uid can access to a metered or non-metered network.
 ## uid
 
 ```TypeScript
-uid: number
+uid: int
 ```
 
-The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
+Traffic alarm threshold. The default value is **DATA_USAGE_UNKNOWN**.
 
-**Type:** number
+**Type:** int
 
 **Since:** 11
 
-<!--Device-NetUidRuleInfo-uid: number--><!--Device-NetUidRuleInfo-uid: number-End-->
+<!--Device-NetUidRuleInfo-uid: int--><!--Device-NetUidRuleInfo-uid: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

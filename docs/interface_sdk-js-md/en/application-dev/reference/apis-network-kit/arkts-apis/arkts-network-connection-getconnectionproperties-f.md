@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void
 ```
 
-Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ Queries the connection properties of a network. This method requires the {@code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | the callback of getConnectionProperties.[ConnectionProperties](arkts-network-connection-connectionproperties-i.md#connectionproperties). |
+| netHandle | NetHandle | Yes | Network handle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Yes | Callback used to return the result. If the connection properties of the network specified by **netHandle** is obtained successfully, **error** is **undefined** and **data** is the obtained network connection information. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>
 ```
 
-Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -82,13 +82,13 @@ Queries the connection properties of a network. This method requires the {@code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
+| netHandle | NetHandle | Yes | Handle of the data network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | Promise used to return the network connection information. |
 
 **Error codes:**
 

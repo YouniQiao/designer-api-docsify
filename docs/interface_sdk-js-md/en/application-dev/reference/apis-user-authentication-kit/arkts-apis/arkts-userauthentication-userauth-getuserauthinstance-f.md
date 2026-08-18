@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -15,7 +13,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance
 ```
 
-Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#userauthinstance) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. > **NOTE：**> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must > obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful > or fails), the instance cannot be used again.
+Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. > **NOTE：**> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must > obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful > or fails), the instance cannot be used again.
 
 **Since:** 23
 

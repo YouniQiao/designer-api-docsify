@@ -30,7 +30,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
 | inputDeviceId | int | Yes | Identifier of the input device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

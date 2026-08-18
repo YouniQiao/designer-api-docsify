@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getDeviceRotationRadian

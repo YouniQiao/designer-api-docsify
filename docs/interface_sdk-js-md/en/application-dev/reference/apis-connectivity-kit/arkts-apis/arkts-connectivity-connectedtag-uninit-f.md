@@ -18,7 +18,7 @@ UnInitializes Connected Tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md#uninitialize)
+**Substitutes:** [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

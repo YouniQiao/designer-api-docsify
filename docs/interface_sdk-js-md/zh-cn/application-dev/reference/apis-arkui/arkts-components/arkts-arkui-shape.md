@@ -68,4 +68,9 @@ Called when a component is drawn.
 
 ## 汇总
 
-- [ViewportRect](arkts-arkui-viewportrect-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ViewportRect](arkts-arkui-viewportrect-i.md) | 用于描述Viewport的绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

@@ -6,7 +6,7 @@ Describes the settings for BLE advertising.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md#advertisesetting)
+**Substitutes:** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md)
 
 <!--Device-bluetoothManager-interface AdvertiseSetting--><!--Device-bluetoothManager-interface AdvertiseSetting-End-->
 

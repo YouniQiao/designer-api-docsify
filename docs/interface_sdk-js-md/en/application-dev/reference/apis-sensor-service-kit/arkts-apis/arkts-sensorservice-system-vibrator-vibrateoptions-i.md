@@ -6,7 +6,7 @@ Defines the vibration options.
 
 **Deprecated since:** 8
 
-**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#vibratetime)
+**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -34,7 +34,7 @@ Called when the API call is complete.
 
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -58,7 +58,7 @@ Called when the API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -82,7 +82,7 @@ Vibration mode. The value **long** indicates long vibration, and **short** indic
 
 **Deprecated since:** 8
 
-**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#vibratetime)
+**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -106,7 +106,7 @@ Called when the vibrator data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 
 **Required permissions:** ohos.permission.VIBRATE
 

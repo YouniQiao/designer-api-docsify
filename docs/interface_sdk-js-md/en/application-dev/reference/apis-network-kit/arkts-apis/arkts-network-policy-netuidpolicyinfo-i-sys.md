@@ -1,6 +1,6 @@
 # NetUidPolicyInfo (System API)
 
-Callback function for registering network UID policy changes.
+Defines the network policy information for an application.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { policy } from '@kit.NetworkKit';
 policy: NetUidPolicy
 ```
 
-Uid Specifies the Internet access policy in background mode.
+Policy that specifies whether the application specified by a given UID is allowed to access the network when running in the background.
 
 **Type:** [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md)
 
@@ -37,16 +37,16 @@ Uid Specifies the Internet access policy in background mode.
 ## uid
 
 ```TypeScript
-uid: number
+uid: int
 ```
 
-The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
+Traffic alarm threshold. The default value is **DATA_USAGE_UNKNOWN**.
 
-**Type:** number
+**Type:** int
 
 **Since:** 11
 
-<!--Device-NetUidPolicyInfo-uid: number--><!--Device-NetUidPolicyInfo-uid: number-End-->
+<!--Device-NetUidPolicyInfo-uid: int--><!--Device-NetUidPolicyInfo-uid: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

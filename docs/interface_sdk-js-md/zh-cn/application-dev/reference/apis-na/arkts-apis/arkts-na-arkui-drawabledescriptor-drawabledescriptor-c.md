@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)实例，图片资源加载能力。
 
 **起始版本：** 23
 
@@ -45,7 +45,7 @@ getPixelMap(): image.PixelMap | undefined
 invalidate(): void
 ```
 
-重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#picturedrawabledescriptor)类型，其他DrawableDescriptor子类型触发后无效果。 若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触发后无效果。 若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
 

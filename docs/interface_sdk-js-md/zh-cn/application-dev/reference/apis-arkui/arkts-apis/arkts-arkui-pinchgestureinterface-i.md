@@ -21,7 +21,7 @@
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface)，设置捏合手势事件。
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置捏合手势事件。
 
 **起始版本：** 7
 

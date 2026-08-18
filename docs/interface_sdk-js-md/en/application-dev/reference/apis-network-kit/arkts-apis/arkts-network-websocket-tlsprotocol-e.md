@@ -1,6 +1,6 @@
 # TlsProtocol
 
-Enumerates TLS protocols.
+Enumerates the TLS protocol types.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Enumerates TLS protocols.
 TLS_V_1_0 = 0
 ```
 
-TLS1.0.
+TLS version 1.0.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ TLS1.0.
 TLS_V_1_1 = 1
 ```
 
-TLS1.1.
+TLS version 1.1.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ TLS1.1.
 TLS_V_1_2 = 2
 ```
 
-TLS1.2.
+TLS version 1.2.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ TLS1.2.
 TLS_V_1_3 = 3
 ```
 
-TLS1.3.
+TLS version 1.3.
 
 **Since:** 26.0.0
 

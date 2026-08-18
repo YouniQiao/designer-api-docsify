@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's descriptor read request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#descriptorreadrequest)
+**Substitutes:** [DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)
 
 <!--Device-bluetooth-interface DescriptorReadReq--><!--Device-bluetooth-interface DescriptorReadReq-End-->
 

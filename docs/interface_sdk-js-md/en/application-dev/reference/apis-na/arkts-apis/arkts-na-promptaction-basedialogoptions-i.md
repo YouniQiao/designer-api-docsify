@@ -523,7 +523,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback function when the CustomDialog interactive dismiss.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 23
 

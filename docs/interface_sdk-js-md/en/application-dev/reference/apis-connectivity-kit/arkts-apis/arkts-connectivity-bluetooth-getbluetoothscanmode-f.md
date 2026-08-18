@@ -35,7 +35,7 @@ Obtains the Bluetooth scanning mode of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md#getbluetoothscanmode)
+**Substitutes:** [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

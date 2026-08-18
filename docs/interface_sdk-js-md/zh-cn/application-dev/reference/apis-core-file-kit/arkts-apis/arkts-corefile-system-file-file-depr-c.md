@@ -27,7 +27,7 @@ static access(options: FileAccessOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
+**替代接口：** [access](arkts-corefile-file-fs-access-f.md)
 
 <!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
 
@@ -132,7 +132,7 @@ static copy(options: FileCopyOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -239,7 +239,7 @@ static delete(options: FileDeleteOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md)
 
 <!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
 
@@ -344,7 +344,7 @@ static get(options: FileGetOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [stat](arkts-corefile-file-fs-stat-f.md#stat)
+**替代接口：** [stat](arkts-corefile-file-fs-stat-f.md)
 
 <!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
 
@@ -449,7 +449,7 @@ static list(options: FileListOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -554,7 +554,7 @@ static mkdir(options: FileMkdirOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
+**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md)
 
 <!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
 
@@ -659,7 +659,7 @@ static move(options: FileMoveOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
+**替代接口：** [moveFile](arkts-corefile-file-fs-movefile-f.md)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -766,7 +766,7 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-read-f.md)
 
 <!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
 
@@ -875,7 +875,7 @@ static readText(options: FileReadTextOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
+**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -980,7 +980,7 @@ static rmdir(options: FileRmdirOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
+**替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md)
 
 <!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
 
@@ -1085,7 +1085,7 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md)
 
 <!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
 
@@ -1192,7 +1192,7 @@ static writeText(options: FileWriteTextOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md)
 
 <!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
 

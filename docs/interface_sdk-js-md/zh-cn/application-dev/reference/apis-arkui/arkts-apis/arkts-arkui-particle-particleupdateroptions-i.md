@@ -16,7 +16,7 @@
 config: ParticlePropertyUpdaterConfigs
 ```
 
-属性变化配置。属性变化类型type有三类： 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.NONE]。 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.RANDOM]。 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.CURVE]。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+属性变化配置。属性变化类型type有三类： 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.NONE]。 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.RANDOM]。 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.CURVE]。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)
 

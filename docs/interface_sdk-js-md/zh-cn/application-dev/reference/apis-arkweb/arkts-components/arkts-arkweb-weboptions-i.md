@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## controller
@@ -19,7 +24,7 @@
 controller: WebController | WebviewController
 ```
 
-控制器，通过controller可以控制Web组件各种行为，包括页面导航、生命周期状态、JavaScript交互等。从API version 9开始，WebController不再维护，建议使用 [WebviewController](arkts-arkweb-webviewcontroller-t.md#webviewcontroller)替代。
+控制器，通过controller可以控制Web组件各种行为，包括页面导航、生命周期状态、JavaScript交互等。从API version 9开始，WebController不再维护，建议使用 [WebviewController](arkts-arkweb-webviewcontroller-t.md)替代。
 
 **类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
@@ -53,7 +58,7 @@ emulateTouchFromMouseEvent? : boolean
 incognitoMode? : boolean
 ```
 
-表示当前创建的Webview是否是隐私模式。true表示创建隐私模式，false表示创建正常模式。 默认值：false。 传入undefined或null时为false。&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+表示当前创建的Webview是否是隐私模式。true表示创建隐私模式，false表示创建正常模式。 默认值：false。 传入undefined或null时为false。<!--RP1--><!--RP1End-->
 
 **类型：** boolean
 

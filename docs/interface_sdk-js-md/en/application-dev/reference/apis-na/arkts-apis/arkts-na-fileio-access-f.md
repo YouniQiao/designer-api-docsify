@@ -73,7 +73,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## queryAbilityInfoSync
@@ -31,7 +30,7 @@ Obtains the ability information based on the given want, ability flags, and user
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | int | Yes | Type of the ability information to obtain. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

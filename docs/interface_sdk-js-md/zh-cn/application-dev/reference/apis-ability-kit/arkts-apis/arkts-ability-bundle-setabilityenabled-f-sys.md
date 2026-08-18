@@ -3,6 +3,22 @@
 ## 导入模块
 
 ```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
+import { appDomainVerify } from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## setAbilityEnabled
@@ -33,7 +49,7 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 | --- | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 | Ability信息，指示需要设置启用状态的Ability。 |
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 为返回操作结果而调用的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 为返回操作结果而调用的回调。 |
 
 
 ## setAbilityEnabled

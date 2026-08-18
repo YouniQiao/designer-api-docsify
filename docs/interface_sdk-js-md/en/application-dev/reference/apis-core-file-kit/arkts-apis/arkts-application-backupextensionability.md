@@ -17,7 +17,7 @@ import { BundleVersion } from '@kit.CoreFileKit';
 | [BackupExtensionAbility](arkts-corefile-application-backupextensionability-backupextensionability-c.md) | Class to be override for backup extension ability. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

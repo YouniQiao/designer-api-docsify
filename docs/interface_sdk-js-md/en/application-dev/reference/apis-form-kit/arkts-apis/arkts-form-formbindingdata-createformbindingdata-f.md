@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
-import { formBindingData } from '@kit.FormKit';
 ```
 
 ## createFormBindingData
@@ -100,7 +99,7 @@ Create an FormBindingData instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Indicates the FormBindingData instance data. |
+| obj | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Indicates the FormBindingData instance data. |
 
 **Return value:**
 

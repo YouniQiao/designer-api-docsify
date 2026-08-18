@@ -11,6 +11,8 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 ## 导入模块
 
 ```TypeScript
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

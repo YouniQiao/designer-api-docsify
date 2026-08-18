@@ -14,7 +14,6 @@ Provides the button information of the notification.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## buttonName

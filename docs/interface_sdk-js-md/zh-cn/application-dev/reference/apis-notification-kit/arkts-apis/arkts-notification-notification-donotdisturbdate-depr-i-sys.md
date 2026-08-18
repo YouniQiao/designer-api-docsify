@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#donotdisturbdate系统接口)
+**替代接口：** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)
 
 <!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
@@ -18,8 +18,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```

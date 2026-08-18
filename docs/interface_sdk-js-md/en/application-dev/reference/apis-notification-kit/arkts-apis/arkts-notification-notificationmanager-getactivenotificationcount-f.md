@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getActiveNotificationCount
@@ -29,7 +28,7 @@ setBadgeNumber sets the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is an error object. |
 
 **Error codes:**
 

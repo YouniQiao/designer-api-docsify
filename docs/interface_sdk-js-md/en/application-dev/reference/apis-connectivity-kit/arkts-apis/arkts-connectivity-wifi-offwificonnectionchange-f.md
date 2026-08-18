@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_wifiConnectionChange
+## off_wifiConnectionChange('wifiConnectionChange')
 
 ```TypeScript
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
@@ -34,7 +34,7 @@ Unsubscribe Wi-Fi connection change events. &lt;p&gt;All callback functions will
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | the callback of on, 0: disconnected, 1: connected |
 
 **Examples**
 

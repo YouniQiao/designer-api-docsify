@@ -1,8 +1,8 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 相册变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 相册变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
 
-**继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAlbumRequest

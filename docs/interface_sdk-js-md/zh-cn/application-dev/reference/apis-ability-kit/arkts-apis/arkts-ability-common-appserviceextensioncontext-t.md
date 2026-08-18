@@ -4,7 +4,7 @@
 export type AppServiceExtensionContext = _AppServiceExtensionContext
 ```
 
-[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability) 组件上下文，继承自Context。
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) 组件上下文，继承自Context。
 
 **起始版本：** 23
 

@@ -48,7 +48,22 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 ## Summary
 
-- [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md)
-- [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md)
-- [RouteType](arkts-arkui-routetype-e.md)
-- [SlideEffect](arkts-arkui-slideeffect-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Parameters of the exit or entrance animation. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Represents the callback for page transition events. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [RouteType](arkts-arkui-routetype-e.md) | Sets the type of page transition. |
+| [SlideEffect](arkts-arkui-slideeffect-e.md) | Slide-in and slide-out effects for page transitions. |
+

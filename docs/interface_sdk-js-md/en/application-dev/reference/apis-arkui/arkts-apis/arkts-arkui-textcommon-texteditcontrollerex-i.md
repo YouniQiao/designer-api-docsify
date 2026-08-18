@@ -2,7 +2,7 @@
 
 Define the text extended editing controller.
 
-**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md#textbasecontroller)
+**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)
 
 **Since:** 23
 

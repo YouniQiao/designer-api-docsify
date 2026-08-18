@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function createStreamSync(path: string, mode: string): Stream
 ```
 
-Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md#stream).
+Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
 

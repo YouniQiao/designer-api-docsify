@@ -12,7 +12,6 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## getDeviceIconInfo
@@ -398,7 +397,7 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
 
 **Error codes:**
 
@@ -407,7 +406,7 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## off_replyResult
+## off_replyResult('replyResult')
 
 ```TypeScript
 off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
@@ -430,7 +429,7 @@ Unsubscribes from the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
@@ -477,7 +476,7 @@ Register a callback from deviceManager service so that the devicemanager ui can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
 
 **Error codes:**
 
@@ -486,7 +485,7 @@ Register a callback from deviceManager service so that the devicemanager ui can 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## on_replyResult
+## on_replyResult('replyResult')
 
 ```TypeScript
 on(type: 'replyResult', callback: Callback<{ param: string; }>): void
@@ -509,7 +508,7 @@ Subscribes to the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 

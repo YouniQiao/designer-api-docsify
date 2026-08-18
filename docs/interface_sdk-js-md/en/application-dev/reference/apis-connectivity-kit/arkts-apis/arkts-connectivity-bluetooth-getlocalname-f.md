@@ -35,7 +35,7 @@ Obtains the Bluetooth local name of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md#getlocalname)
+**Substitutes:** [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

@@ -6,7 +6,7 @@ The power model enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md#powermode)
+**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
 <!--Device-wifiext-export enum PowerModel--><!--Device-wifiext-export enum PowerModel-End-->
 
@@ -24,7 +24,7 @@ Sleeping model.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md#powermode)
+**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
 <!--Device-PowerModel-SLEEPING = 0--><!--Device-PowerModel-SLEEPING = 0-End-->
 
@@ -42,7 +42,7 @@ General model.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md#powermode)
+**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
 <!--Device-PowerModel-GENERAL = 1--><!--Device-PowerModel-GENERAL = 1-End-->
 
@@ -60,7 +60,7 @@ Through wall model.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md#powermode)
+**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
 <!--Device-PowerModel-THROUGH_WALL = 2--><!--Device-PowerModel-THROUGH_WALL = 2-End-->
 

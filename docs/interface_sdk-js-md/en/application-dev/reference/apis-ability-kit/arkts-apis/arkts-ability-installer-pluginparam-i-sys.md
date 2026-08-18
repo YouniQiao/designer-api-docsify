@@ -14,7 +14,6 @@ Defines the parameters for installing or uninstalling a plugin.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## parameters
@@ -41,7 +40,7 @@ Extension parameters for installing or uninstalling the plugin. The default valu
 userId?: int
 ```
 
-ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller.
+ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller.
 
 **Type:** int
 

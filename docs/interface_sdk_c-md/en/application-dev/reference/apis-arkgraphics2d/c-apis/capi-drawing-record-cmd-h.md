@@ -66,7 +66,7 @@ Destroys an **OH_Drawing_RecordCmdUtils** object and reclaims the memory occupie
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if recordCmdUtils is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if recordCmdUtils is NULL. |
 
 ### OH_Drawing_RecordCmdUtilsBeginRecording()
 
@@ -93,7 +93,7 @@ Starts recording. This API must be used together with [OH_Drawing_RecordCmdUtils
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either recordCmdUtils or canvas is NULL.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either width or height is less than 0.<br> OH_DRAWING_ERROR_ALLOCATION_FAILED if the system memory is insufficient. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either recordCmdUtils or canvas is NULL.  OH_DRAWING_ERROR_INVALID_PARAMETER if either width or height is less than 0.  OH_DRAWING_ERROR_ALLOCATION_FAILED if the system memory is insufficient. |
 
 ### OH_Drawing_RecordCmdUtilsFinishRecording()
 
@@ -118,7 +118,7 @@ Stops video recording. This function must be called after [OH_Drawing_RecordCmdU
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either recordCmdUtils or recordCmd is NULL.<br> OH_DRAWING_ERROR_ALLOCATION_FAILED if the system memory is insufficient. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either recordCmdUtils or recordCmd is NULL.  OH_DRAWING_ERROR_ALLOCATION_FAILED if the system memory is insufficient. |
 
 ### OH_Drawing_RecordCmdDestroy()
 
@@ -142,6 +142,6 @@ Destroys an **OH_Drawing_RecordCmd** object and reclaims the memory occupied by 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if recordCmd is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if recordCmd is NULL. |
 
 

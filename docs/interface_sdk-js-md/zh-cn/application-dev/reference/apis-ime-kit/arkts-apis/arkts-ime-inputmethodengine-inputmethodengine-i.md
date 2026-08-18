@@ -1,12 +1,12 @@
 # InputMethodEngine
 
-下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine)获取到InputMethodEngine实例后，通过实例调用。
+下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md)获取到InputMethodEngine实例后，通过实例调用。
 
 **起始版本：** 8
 
 **废弃版本：** 23
 
-**替代接口：** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#inputmethodability)
+**替代接口：** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)
 
 <!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
 
@@ -15,9 +15,10 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## off_inputStart
+## off_inputStart('inputStart')
 
 ```TypeScript
 off(
@@ -55,7 +56,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## off_keyboardHide
+## off_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -87,7 +88,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## off_keyboardShow
+## off_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -119,7 +120,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## on_inputStart
+## on_inputStart('inputStart')
 
 ```TypeScript
 on(
@@ -157,7 +158,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## on_keyboardHide
+## on_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -193,7 +194,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 });
 ```
 
-## on_keyboardShow
+## on_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void

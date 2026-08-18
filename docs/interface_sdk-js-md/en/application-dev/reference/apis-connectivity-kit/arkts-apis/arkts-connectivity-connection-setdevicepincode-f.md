@@ -30,7 +30,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | code | string | Yes | The pin code entered by the user. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setDevicePinCode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setDevicePinCode. |
 
 **Error codes:**
 

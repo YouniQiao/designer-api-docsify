@@ -6,7 +6,7 @@ Defines a **GyroscopeResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md#gyroscoperesponse)
+**Substitutes:** [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

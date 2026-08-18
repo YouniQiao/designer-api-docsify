@@ -1,8 +1,8 @@
 # RSAKeyPairSpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#asykeyspec) used to specify full parameters of the public and private keys in the RSA algorithm. <br>To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify full parameters of the public and private keys in the RSA algorithm. <br>To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md) to create a key generator.
 
-**Inheritance/Implementation:** RSAKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#asykeyspec)
+**Inheritance/Implementation:** RSAKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
 **Since:** 23
 
@@ -15,7 +15,6 @@ Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-a
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 

@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate系统接口)
+**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 
 ## setDoNotDisturbDate
@@ -52,7 +50,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate系统接口)
+**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -87,7 +85,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 **废弃版本：** 9
 
-**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate系统接口)
+**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -103,7 +101,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
 | userId | number | 是 | 设置免打扰时间的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 
 ## setDoNotDisturbDate
@@ -118,7 +116,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 **废弃版本：** 9
 
-**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md#setdonotdisturbdate系统接口)
+**替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

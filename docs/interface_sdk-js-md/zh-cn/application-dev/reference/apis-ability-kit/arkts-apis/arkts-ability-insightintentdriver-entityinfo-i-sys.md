@@ -1,6 +1,6 @@
 # EntityInfo（系统接口）
 
-EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md#intententitydecoratorinfo)， 用于描述 @InsightIntentEntity 装饰器定义的意图实体的信息。
+EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md)， 用于描述 @InsightIntentEntity 装饰器定义的意图实体的信息。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insight
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## className
@@ -103,7 +104,7 @@ readonly parameters: Record<string, RecordData>
 
 The parameters of intent entity.
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

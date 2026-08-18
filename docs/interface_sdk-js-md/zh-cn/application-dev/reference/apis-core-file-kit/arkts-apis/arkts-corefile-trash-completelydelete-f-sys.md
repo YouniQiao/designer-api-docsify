@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## completelyDelete
@@ -11,7 +12,7 @@
 function completelyDelete(uri: string): void
 ```
 
-Permanently deletes a file or directory from the **Recently deleted** list.
+将uri对应文件/目录从最近删除（回收站）列表中彻底删除。
 
 **起始版本：** 10
 
@@ -31,7 +32,7 @@ Permanently deletes a file or directory from the **Recently deleted** list.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | string | 是 | URI of the file or directory. |
+| uri | string | 是 | 回收站文件/文件夹URI。 |
 
 **错误码：**
 

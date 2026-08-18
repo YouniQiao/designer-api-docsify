@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## getScreenOffTime
@@ -17,7 +18,7 @@ function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
+**替代接口：** [getValue](arkts-mdm-devicesettings-getvalue-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_SETTINGS
 
@@ -34,7 +35,7 @@ function getScreenOffTime(admin: Want, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备息屏时间（单位：毫秒），否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备息屏时间（单位：毫秒），否则err为错误对象。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function getScreenOffTime(admin: Want): Promise<number>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
+**替代接口：** [getValue](arkts-mdm-devicesettings-getvalue-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_SETTINGS
 

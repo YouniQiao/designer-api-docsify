@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfoSync
@@ -27,7 +28,7 @@ function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): B
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要查询的应用Bundle名称。 |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **返回值：**
 

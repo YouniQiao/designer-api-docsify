@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 destination: LinkAddress
 ```
 
-Destination Address
+Destination address.
 
 **Type:** LinkAddress
 
@@ -52,7 +52,7 @@ Gateway address.
 hasGateway: boolean
 ```
 
-Whether a gateway is present.
+Whether a gateway is present. Whether a gateway is available. The value **true** indicates that a gateway is available, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Network card name.
 interface: string
 ```
 
-Network card name.
+NIC name.
 
 **Type:** string
 
@@ -100,7 +100,7 @@ Network card name.
 isDefaultRoute: boolean
 ```
 
-Whether the route is the default route.
+Whether the route is the default one. Whether the route is the default route. The value **true** indicates that the route is the default route, and the value **false** indicates the opposite. Note: The IPv4 default route refers to the route whose destination address is **0.0.0.0/0**. The IPv6 default route refers to the route whose destination address is **::/0**.
 
 **Type:** boolean
 
@@ -116,7 +116,7 @@ Whether the route is the default route.
 isExcludedRoute?: boolean
 ```
 
-Whether the route is the excluded route.
+Whether the route is excluded. The value **true** indicates that the route is excluded, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

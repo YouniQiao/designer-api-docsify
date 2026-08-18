@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
 ## getArguments
@@ -11,7 +12,7 @@
 function getArguments(): AbilityDelegatorArgs
 ```
 
-获取单元测试参数[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#abilitydelegatorargs)对象。
+获取单元测试参数[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)对象。
 
 **起始版本：** 23
 

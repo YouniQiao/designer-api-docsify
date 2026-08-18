@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [MovingPhotoView](arkts-na-multimedia-movingphotoview-movingphotoview-f.md#movingphotoview) | Defines the MovingPhotoView component. |
+| [MovingPhotoView](arkts-na-multimedia-movingphotoview-movingphotoview-f.md) | Defines the MovingPhotoView component. |
 
 ### Classes
 
@@ -20,7 +20,7 @@
 | [MovingPhotoViewController](arkts-na-multimedia-movingphotoview-movingphotoviewcontroller-c.md) | Defines the MovingPhotoView controller. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -35,7 +35,7 @@
 | [MovingPhotoViewOptions](arkts-na-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -44,7 +44,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

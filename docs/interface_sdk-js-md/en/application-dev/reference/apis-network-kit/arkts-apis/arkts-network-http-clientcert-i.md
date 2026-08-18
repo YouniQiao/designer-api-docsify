@@ -1,6 +1,6 @@
 # ClientCert
 
-The clientCert field of the client certificate, which includes 4 attributes: client certificate (cert), client certificate type (certType), certificate private key (key), and passphrase (keyPassword).
+Defines the client certificate type.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 certPath: string
 ```
 
-The path to the client certificate file.
+Path of the certificate file.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ The path to the client certificate file.
 certType?: CertType
 ```
 
-The type of the client certificate.
+Certificate type. The default value is **PEM**.
 
 **Type:** CertType
 
@@ -52,7 +52,7 @@ The type of the client certificate.
 keyPassword?: string
 ```
 
-Password required to use the client certificate private key.
+Password of the certificate key file. The default value is an empty string.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Password required to use the client certificate private key.
 keyPath: string
 ```
 
-The path of the client certificate private key file.
+Path of the certificate key file.
 
 **Type:** string
 

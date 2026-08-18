@@ -54,8 +54,18 @@ Creates a badge with the given string.
 
 ## Summary
 
-- [BadgeParam](arkts-arkui-badgeparam-i.md)
-- [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md)
-- [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md)
-- [BadgeStyle](arkts-arkui-badgestyle-i.md)
-- [BadgePosition](arkts-arkui-badgeposition-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [BadgeParam](arkts-arkui-badgeparam-i.md) | Provides basic parameters for creating a badge. |
+| [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
+| [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
+| [BadgeStyle](arkts-arkui-badgestyle-i.md) | Describes the badge style. It includes the font color, font size, badge color, badge size, etc. > **NOTE：**> > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is > recommended that you use the Text component with its > outline attribute instead of the **Badge** component. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [BadgePosition](arkts-arkui-badgeposition-e.md) | Enumerates the display positions of a badge. |
+

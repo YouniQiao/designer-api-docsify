@@ -6,7 +6,7 @@ Defines device information.
 
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)
+**Substitutes:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 

@@ -74,7 +74,7 @@ Checks whether a default activated data network is available.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetDefaultNet()
 
@@ -102,7 +102,7 @@ Obtains the default activated data network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_IsDefaultNetMetered()
 
@@ -130,7 +130,7 @@ Checks whether metering is enabled for the default data network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetConnectionProperties()
 
@@ -159,7 +159,7 @@ Obtains the link information of a data network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetNetCapabilities()
 
@@ -188,7 +188,7 @@ Obtains the capabilities of a data network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetDefaultHttpProxy()
 
@@ -214,7 +214,7 @@ Obtains the default network proxy.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetAddrInfo()
 
@@ -246,7 +246,7 @@ Obtains the DNS result based on the specified **netId**.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_FreeDnsResult()
 
@@ -274,7 +274,7 @@ Releases the DNS query result.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_GetAllNets()
 
@@ -302,7 +302,7 @@ Obtains all activated data networks.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 201: Missing permissions.<br>     <br>401: Parameter error. 2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success. 201: Missing permissions.      <br>401: Parameter error. 2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OHOS_NetConn_RegisterDnsResolver()
 
@@ -332,7 +332,7 @@ Registers a custom DNS resolver.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success. 401: Parameter error.<br>     <br>2100002: Service connection failure.  2100003: Internal error. |
+| int32_t | 0: Success. 401: Parameter error.      <br>2100002: Service connection failure.  2100003: Internal error. |
 
 ### OHOS_NetConn_UnregisterDnsResolver()
 
@@ -356,7 +356,7 @@ Unregisters a custom DNS resolver.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success.      <br>2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_RegisterDnsResolver()
 
@@ -384,7 +384,7 @@ Registers a custom DNS resolver.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>NETMANAGER_EXT_SUCCESS: Operation success.<br>     <br>NETMANAGER_ERR_PARAMETER_ERROR: Parameter error. Enter a correct parameter. |
+| int32_t | Result code.      <br>NETMANAGER_EXT_SUCCESS: Operation success.      <br>NETMANAGER_ERR_PARAMETER_ERROR: Parameter error. Enter a correct parameter. |
 
 ### OH_NetConn_UnregisterDnsResolver()
 
@@ -406,7 +406,7 @@ Unregisters a custom DNS resolver.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success.      <br>2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_RegisterCustomDnsResolver()
 
@@ -430,7 +430,7 @@ Registers a custom DNS resolver to intercept and override DNS queries.Falls back
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         401 - Parameter error. Please enter a correct parameter.<br>         2101008 - Resolver already exists. use OH_NetConn_UnregisterCustomDnsResolver before registering a new one. |
+| int32_t | 0 - Success.          401 - Parameter error. Please enter a correct parameter.          2101008 - Resolver already exists. use OH_NetConn_UnregisterCustomDnsResolver before registering a new one. |
 
 ### OH_NetConn_UnregisterCustomDnsResolver()
 
@@ -448,7 +448,7 @@ Unregisters the custom DNS resolver.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>         2100003 - Internal error. |
+| int32_t | 0 - Success.          2100003 - Internal error. |
 
 ### OH_NetConn_BindSocket()
 
@@ -475,7 +475,7 @@ Binds a socket to the specified network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>401: Parameter error.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success.      <br>401: Parameter error.      <br>2100002: Service connection failure.      <br>2100003: Internal error. |
 
 ### OH_NetConn_SetAppHttpProxy()
 
@@ -501,7 +501,7 @@ Sets an HTTP proxy for the current application.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>401: Parameter error. |
+| int32_t | 0: Success.      <br>401: Parameter error. |
 
 ### OH_NetConn_RegisterAppHttpProxyCallback()
 
@@ -528,7 +528,7 @@ Registers a callback for HTTP proxy changes of the application.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>401: Parameter error. |
+| int32_t | 0: Success.      <br>401: Parameter error. |
 
 ### OH_NetConn_UnregisterAppHttpProxyCallback()
 
@@ -575,7 +575,7 @@ Requests global HTTP proxy re-authentication and reports the result through a on
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>0 - Success.</li><br>     <li>201 - Permission denied.</li><br>     <li>401 - Parameter error.</li></ul> |
+| int32_t | <ul><li>0 - Success.</li>      <li>201 - Permission denied.</li>      <li>401 - Parameter error.</li></ul> |
 
 ### OH_NetConn_RegisterNetConnCallback()
 
@@ -606,7 +606,7 @@ Registers a callback for network status changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>201: Missing permissions.<br>     <br>401: Parameter error.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error.<br>     <br>2101008: Callback already registered.<br>     <br>2101022: Maximum number of requests exceeded. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>401: Parameter error.      <br>2100002: Service connection failure.      <br>2100003: Internal error.      <br>2101008: Callback already registered.      <br>2101022: Maximum number of requests exceeded. |
 
 ### OH_NetConn_RegisterDefaultNetConnCallback()
 
@@ -635,7 +635,7 @@ Registers a callback for status changes of the default network.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>201: Missing permissions.<br>     <br>401: Parameter error.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error.<br>     <br>2101008: Callback already registered.<br>     <br>2101022: Maximum number of requests exceeded. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>401: Parameter error.      <br>2100002: Service connection failure.      <br>2100003: Internal error.      <br>2101008: Callback already registered.      <br>2101022: Maximum number of requests exceeded. |
 
 ### OH_NetConn_UnregisterNetConnCallback()
 
@@ -663,7 +663,7 @@ Unregisters the callback for network status changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>201: Missing permissions.<br>     <br>401: Parameter error.<br>     <br>2100002: Service connection failure.<br>     <br>2100003: Internal error.<br>     <br>2101007: Callback not exist. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>401: Parameter error.      <br>2100002: Service connection failure.      <br>2100003: Internal error.      <br>2101007: Callback not exist. |
 
 ### OH_NetConn_SetPacUrl()
 
@@ -689,7 +689,7 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **
 
 | Type | Description |
 | -- | -- |
-| [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode) | Result code defined in [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode).<br>     <br>[NETCONN_SUCCESS](capi-net-connection-type-h.md#netconn_errorcode): success.<br>     <br>[NETCONN_PERMISSION_DENIED](capi-net-connection-type-h.md#netconn_errorcode): permission denied.<br>     <br>[NETCONN_PARAMETER_ERROR](capi-net-connection-type-h.md#netconn_errorcode): parameter error.<br>     <br>[NETCONN_OPERATION_FAILED](capi-net-connection-type-h.md#netconn_errorcode): unable to connect to the service.<br>     <br>[NETCONN_INTERNAL_ERROR](capi-net-connection-type-h.md#netconn_errorcode): internal error. |
+| [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode) | Result code defined in [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode).      <br>[NETCONN_SUCCESS](capi-net-connection-type-h.md#netconn_errorcode): success.      <br>[NETCONN_PERMISSION_DENIED](capi-net-connection-type-h.md#netconn_errorcode): permission denied.      <br>[NETCONN_PARAMETER_ERROR](capi-net-connection-type-h.md#netconn_errorcode): parameter error.      <br>[NETCONN_OPERATION_FAILED](capi-net-connection-type-h.md#netconn_errorcode): unable to connect to the service.      <br>[NETCONN_INTERNAL_ERROR](capi-net-connection-type-h.md#netconn_errorcode): internal error. |
 
 ### OH_NetConn_GetPacUrl()
 
@@ -713,7 +713,7 @@ Obtains the URL of the system-level PAC script.
 
 | Type | Description |
 | -- | -- |
-| [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode) | Result code defined in [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode).<br>     <br>[NETCONN_SUCCESS](capi-net-connection-type-h.md#netconn_errorcode): success.<br>     <br>[NETCONN_PARAMETER_ERROR](capi-net-connection-type-h.md#netconn_errorcode): parameter error.<br>     <br>[NETCONN_OPERATION_FAILED](capi-net-connection-type-h.md#netconn_errorcode): unable to connect to the service.<br>     <br>[NETCONN_INTERNAL_ERROR](capi-net-connection-type-h.md#netconn_errorcode): internal error. |
+| [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode) | Result code defined in [NetConn_ErrorCode](capi-net-connection-type-h.md#netconn_errorcode).      <br>[NETCONN_SUCCESS](capi-net-connection-type-h.md#netconn_errorcode): success.      <br>[NETCONN_PARAMETER_ERROR](capi-net-connection-type-h.md#netconn_errorcode): parameter error.      <br>[NETCONN_OPERATION_FAILED](capi-net-connection-type-h.md#netconn_errorcode): unable to connect to the service.      <br>[NETCONN_INTERNAL_ERROR](capi-net-connection-type-h.md#netconn_errorcode): internal error. |
 
 ### OH_NetConn_QueryProbeResult()
 
@@ -741,7 +741,7 @@ Queries network probe results. If an exception (for example, network disconnecti
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>201: Missing permissions.<br>     <br>401: Parameter error.<br>     <br>2100003: Internal error. |
+| int32_t | 0: Success.      <br>201: Missing permissions.      <br>401: Parameter error.      <br>2100003: Internal error. |
 
 ### OH_NetConn_QueryTraceRoute()
 
@@ -769,6 +769,6 @@ Queries network trace route information.
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0: Success.<br>     <br>201: Missing permissions. |
+| int32_t | 0: Success.      <br>201: Missing permissions. |
 
 

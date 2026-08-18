@@ -147,7 +147,7 @@ Called when a cookie is saved.
 
 | Parameter | Description |
 | -- | -- |
-| (ArkWeb_ErrorCode errorCode | [ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is successfully saved.<br>[ARKWEB_COOKIE_SAVE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to save the cookie.<br>[ARKWEB_COOKIE_MANAGER_INITIALIZE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): The **CookieManager** initialization failed. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) errorCode | [ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is successfully saved.<br>[ARKWEB_COOKIE_SAVE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to save the cookie.<br>[ARKWEB_COOKIE_MANAGER_INITIALIZE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): The **CookieManager** initialization failed. |
 
 ### OH_ArkWeb_OnCookieFetchCallback()
 
@@ -165,7 +165,7 @@ Defines a pointer to the callback invoked when the cookie fetch operation is com
 
 | Parameter | Description |
 | -- | -- |
-| (ArkWeb_ErrorCode errorCode | Error code for the cookie fetch callback.<br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is fetched successfully.<br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid URL.<br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to open the dynamic link library.<br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): The required symbol is not found in the dynamic link library. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) errorCode | Error code for the cookie fetch callback.<br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is fetched successfully.<br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid URL.<br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to open the dynamic link library.<br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): The required symbol is not found in the dynamic link library. |
 | char\* cookieValue | Cookies corresponding to the URL. The function allocates memory for cookieValue, and thedeveloper must release the string using {@link OH_ArkWeb_ReleaseString}. |
 
 ### OH_NativeArkWeb_RunJavaScript()
@@ -281,7 +281,7 @@ Obtains the callback used when a registered object is valid.
 
 | Type | Description |
 | -- | -- |
-| [NativeArkWeb_OnValidCallback](capi-native-interface-arkweb-h.md#nativearkweb_onvalidcallback) | Callback used when a registered object is valid. If no valid callback function is set for the webTag<br>     parameter, a null pointer is returned. |
+| [NativeArkWeb_OnValidCallback](capi-native-interface-arkweb-h.md#nativearkweb_onvalidcallback) | Callback used when a registered object is valid. If no valid callback function is set for the webTag      parameter, a null pointer is returned. |
 
 ### OH_NativeArkWeb_SetDestroyCallback()
 
@@ -328,7 +328,7 @@ Obtains the registered callback invoked when the **Web** component is destroyed.
 
 | Type | Description |
 | -- | -- |
-| [NativeArkWeb_OnDestroyCallback](capi-native-interface-arkweb-h.md#nativearkweb_ondestroycallback) | Returns the registered callback for when the Web component is destroyed. If the destroy callback specified<br>     by the webTag parameter is not set, a null pointer is returned. |
+| [NativeArkWeb_OnDestroyCallback](capi-native-interface-arkweb-h.md#nativearkweb_ondestroycallback) | Returns the registered callback for when the Web component is destroyed. If the destroy callback specified      by the webTag parameter is not set, a null pointer is returned. |
 
 ### OH_NativeArkWeb_LoadData()
 
@@ -359,7 +359,7 @@ Loads data or a URL. This function must be called in the main thread. Typical us
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Error codes of OH_NativeArkWeb_LoadData.<br>     <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): data loaded successfully.<br>     <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): a required parameter is not specified, the parameter type is incorrect, or<br>     parameter verification fails.<br>     <br>[ARKWEB_INIT_ERROR](capi-arkweb-error-code-h.md#arkweb_errorcode): initialization fails. No valid Web component is found based on the passed "webTag"<br>     .<br>     <br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to open the dynamic link library. Check whether the library file<br>     path is correct, whether the library file is corrupted, and whether you have sufficient access permissions.<br>     <br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): the required symbol is not found in the dynamic link library. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Error codes of OH_NativeArkWeb_LoadData.      <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): data loaded successfully.      <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): a required parameter is not specified, the parameter type is incorrect, or      parameter verification fails.      <br>[ARKWEB_INIT_ERROR](capi-arkweb-error-code-h.md#arkweb_errorcode): initialization fails. No valid Web component is found based on the passed "webTag"      .      <br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to open the dynamic link library. Check whether the library file      path is correct, whether the library file is corrupted, and whether you have sufficient access permissions.      <br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): the required symbol is not found in the dynamic link library. |
 
 ### OH_NativeArkWeb_RegisterAsyncThreadJavaScriptProxy()
 
@@ -455,7 +455,7 @@ Obtains the first screen loading prediction information, and starts to generate 
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_BlanklessInfo](capi-web-arkweb-blanklessinfo.md) | Prediction information about blankless loading, including the first screen similarity and first screen<br> loading duration. The application determines whether to enable blankless loading based on the prediction information. |
+| [ArkWeb_BlanklessInfo](capi-web-arkweb-blanklessinfo.md) | Prediction information about blankless loading, including the first screen similarity and first screen  loading duration. The application determines whether to enable blankless loading based on the prediction information. |
 
 ### OH_NativeArkWeb_SetBlanklessLoadingCacheCapacity()
 
@@ -479,7 +479,7 @@ Sets the persistent cache capacity for the blankless loading solution and return
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Effective capacity value, in MB, ranging from 0 to 100.<br>     <br>If the value is greater than 100, the effective value is 100. |
+| uint32_t | Effective capacity value, in MB, ranging from 0 to 100.      <br>If the value is greater than 100, the effective value is 100. |
 
 ### OH_ArkWebCookieManager_SaveCookieSync()
 
@@ -497,7 +497,7 @@ Persists all cookies currently accessible through the CookieManager API to the d
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Error codes of OH_ArkWebCookieManager_SaveCookieSync. Check whether the disk space is sufficient, whether<br>     write permission is available, and whether the cookie data format is correct.<br>     <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): the cookie is saved successfully.<br>     <br>[ARKWEB_COOKIE_SAVE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to save the cookie.<br>     <br>[ARKWEB_COOKIE_MANAGER_INITIALIZE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to initialize CookieManager.<br>     <br>[ARKWEB_COOKIE_MANAGER_NOT_INITIALIZED](capi-arkweb-error-code-h.md#arkweb_errorcode): on a non-UI thread, calling this API without initializing the<br>     CookieManager API is not allowed. Use {@link OH_ArkWeb_GetNativeAPI} to initialize the CookieManager API first. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Error codes of OH_ArkWebCookieManager_SaveCookieSync. Check whether the disk space is sufficient, whether      write permission is available, and whether the cookie data format is correct.      <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): the cookie is saved successfully.      <br>[ARKWEB_COOKIE_SAVE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to save the cookie.      <br>[ARKWEB_COOKIE_MANAGER_INITIALIZE_FAILED](capi-arkweb-error-code-h.md#arkweb_errorcode): failed to initialize CookieManager.      <br>[ARKWEB_COOKIE_MANAGER_NOT_INITIALIZED](capi-arkweb-error-code-h.md#arkweb_errorcode): on a non-UI thread, calling this API without initializing the      CookieManager API is not allowed. Use {@link OH_ArkWeb_GetNativeAPI} to initialize the CookieManager API first. |
 
 ### OH_ArkWebCookieManager_SaveCookieAsync()
 
@@ -579,7 +579,7 @@ bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 
 | Type | Description |
 | -- | -- |
-| bool | Whether the kernel used by the current app is the Evergreen kernel. The value true indicates it is the<br>     Evergreen kernel, and false indicates it is not. |
+| bool | Whether the kernel used by the current app is the Evergreen kernel. The value true indicates it is the      Evergreen kernel, and false indicates it is not. |
 
 ### OH_ArkWebCookieManager_FetchCookieSync()
 
@@ -607,7 +607,7 @@ Obtains the cookies corresponding to the specified URL. If this API is used in a
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.<br>     <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is obtained successfully.<br>     <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid URL.<br>     <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid parameter.<br>     <br>[ARKWEB_COOKIE_MANAGER_NOT_INITIALIZED](capi-arkweb-error-code-h.md#arkweb_errorcode): In a non-UI thread, calling this API without initializing the<br>     CookieManager API is not allowed. Initialize the CookieManager API using OH_ArkWeb_GetNativeAPI first.<br>     <br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to open the dynamic link library.<br>     <br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): The required symbol is not found in the dynamic link library. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.      <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): The cookie is obtained successfully.      <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid URL.      <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): Invalid parameter.      <br>[ARKWEB_COOKIE_MANAGER_NOT_INITIALIZED](capi-arkweb-error-code-h.md#arkweb_errorcode): In a non-UI thread, calling this API without initializing the      CookieManager API is not allowed. Initialize the CookieManager API using OH_ArkWeb_GetNativeAPI first.      <br>[ARKWEB_LIBRARY_OPEN_FAILURE](capi-arkweb-error-code-h.md#arkweb_errorcode): Failed to open the dynamic link library.      <br>[ARKWEB_LIBRARY_SYMBOL_NOT_FOUND](capi-arkweb-error-code-h.md#arkweb_errorcode): The required symbol is not found in the dynamic link library. |
 
 ### OH_ArkWebCookieManager_FetchCookieAsync()
 

@@ -1,6 +1,6 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md#blanklessinfo).
+Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) or [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md).
 
 **起始版本：** 23
 

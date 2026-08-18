@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { appMemoryOptimizer } from '@kit.AbilityKit';
-import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## evictModuleFilePages

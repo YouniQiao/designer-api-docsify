@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedUninstallBundlesSync
@@ -28,7 +29,7 @@ function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Arr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the account ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
+| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the account ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
 
 **返回值：**
 
@@ -90,7 +91,7 @@ function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
-| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the user ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
+| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the user ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
 
 **返回值：**
 

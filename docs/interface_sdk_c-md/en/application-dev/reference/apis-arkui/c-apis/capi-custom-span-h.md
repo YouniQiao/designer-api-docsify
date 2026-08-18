@@ -58,7 +58,7 @@ Creates measurement information for this custom span.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | Returns a <b>CustomSpanMeasureInfo</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
+| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | Returns a <b>CustomSpanMeasureInfo</b> instance.  <br> If the result returns nullptr, there may be out of memory. |
 
 ### OH_ArkUI_CustomSpanMeasureInfo_Dispose()
 
@@ -100,7 +100,7 @@ Obtains the font size of a custom span.
 
 | Type | Description |
 | -- | -- |
-| float | Returns the font size. If a parameter error occurs, <b>0.0f</b> is returned.<br> <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| float | Returns the font size. If a parameter error occurs, <b>0.0f</b> is returned.  <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanMetrics_Create()
 
@@ -118,7 +118,7 @@ Creates measurement metrics for this custom span.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | Returns a <b>CustomSpanMetrics</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
+| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | Returns a <b>CustomSpanMetrics</b> instance.  <br> If the result returns nullptr, there may be out of memory. |
 
 ### OH_ArkUI_CustomSpanMetrics_Dispose()
 
@@ -161,7 +161,7 @@ Sets the width for a custom span.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>         Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>         <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanMetrics_SetHeight()
 
@@ -186,7 +186,7 @@ Sets the height for a custom span.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>         Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>         <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Create()
 
@@ -204,7 +204,7 @@ Creates drawing information for this custom span.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | Returns a <b>CustomSpanDrawInfo</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
+| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | Returns a <b>CustomSpanDrawInfo</b> instance.  <br> If the result returns nullptr, there may be out of memory. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Dispose()
 
@@ -246,7 +246,7 @@ Obtains the x-axis offset of the custom span relative to the mounted component.
 
 | Type | Description |
 | -- | -- |
-| float | Returns the x-axis offset. If a parameter error occurs, <b>0.0f</b> is returned.<br> <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| float | Returns the x-axis offset. If a parameter error occurs, <b>0.0f</b> is returned.  <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineTop()
 
@@ -270,7 +270,7 @@ Obtains the top margin of the custom span relative to the mounted component.
 
 | Type | Description |
 | -- | -- |
-| float | Returns the top margin. If a parameter error occurs, <b>0.0f</b> is returned.<br> <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| float | Returns the top margin. If a parameter error occurs, <b>0.0f</b> is returned.  <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineBottom()
 
@@ -294,7 +294,7 @@ Obtains the bottom margin of the custom span relative to the mounted component.
 
 | Type | Description |
 | -- | -- |
-| float | Returns the bottom margin. If a parameter error occurs, <b>0.0f</b> is returned.<br> <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| float | Returns the bottom margin. If a parameter error occurs, <b>0.0f</b> is returned.  <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetBaseline()
 
@@ -318,6 +318,6 @@ Obtains the baseline offset of the custom span relative to the mounted component
 
 | Type | Description |
 | -- | -- |
-| float | Returns the baseline offset. If a parameter error occurs, <b>0.0f</b> is returned.<br> <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| float | Returns the baseline offset. If a parameter error occurs, <b>0.0f</b> is returned.  <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 

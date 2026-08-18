@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getAllNetsSync(): Array<NetHandle>
 ```
 
-Obtains the list of data networks that are activated. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the list of all connected networks. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Obtains the list of data networks that are activated. To call this method, you m
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NetHandle&gt; | Returns data networks that are activated. |
+| Array&lt;NetHandle&gt; | List of all connected networks. |
 
 **Error codes:**
 

@@ -11,6 +11,9 @@ CMS封装数据的KeyAgree接收方信息。
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -21,7 +24,7 @@ cert: X509Cert
 
 EC证书。
 
-**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
+**类型：** X509Cert
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#createnativemediaplayercallback)回调函数的参数。当 应用使用[NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md#nativemediaplayerbridge)接管网页媒体播放时，需要通过将播放器的各种状态变化实时同步给 ArkWeb 内核，确保网页 JavaScript 能够获取正确的播放器状态，ArkWeb 内核会将这些状态转换为标准的 HTML5 Media Events，触发网页中注册的事件监听器，从而保证网页功能的正常运行。
+NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的参数。当 应用使用[NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md)接管网页媒体播放时，需要通过将播放器的各种状态变化实时同步给 ArkWeb 内核，确保网页 JavaScript 能够获取正确的播放器状态，ArkWeb 内核会将这些状态转换为标准的 HTML5 Media Events，触发网页中注册的事件监听器，从而保证网页功能的正常运行。
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@ NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvi
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## handleBufferedEndTimeChanged

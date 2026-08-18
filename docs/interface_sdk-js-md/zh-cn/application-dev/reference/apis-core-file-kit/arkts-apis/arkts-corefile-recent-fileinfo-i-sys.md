@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## ctime
@@ -67,7 +68,7 @@ readonly fileName: string
 readonly mode: number
 ```
 
-[文件权限信息](arkts-corefile-file-fs-stat-i.md#stat)。
+[文件权限信息](arkts-corefile-file-fs-stat-i.md)。
 
 **类型：** number
 

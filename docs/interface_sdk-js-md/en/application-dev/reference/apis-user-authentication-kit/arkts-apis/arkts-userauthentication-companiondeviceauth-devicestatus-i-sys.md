@@ -14,7 +14,6 @@ Defines the device status information. It describes the current status of the co
 
 ```TypeScript
 import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceKey

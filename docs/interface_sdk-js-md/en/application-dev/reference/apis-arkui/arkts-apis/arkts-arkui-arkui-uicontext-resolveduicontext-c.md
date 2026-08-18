@@ -1,8 +1,8 @@
 # ResolvedUIContext
 
-**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) instance and its parsing policy.
+**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) instance and its parsing policy.
 
-**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)
+**Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 22
 

@@ -9,16 +9,16 @@ import { eap } from '@kit.NetworkKit';
 ## startEthEap
 
 ```TypeScript
-function startEthEap(netId: number, profile: EthEapProfile): void
+function startEthEap(netId: int, profile: EthEapProfile): void
 ```
 
-Set the specified network interface parameters.
+Starts EAP authentication on an Ethernet NIC.
 
-**Since:** 23
+**Since:** 20
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
-<!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void-End-->
+<!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: int, profile: EthEapProfile): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -26,8 +26,8 @@ Set the specified network interface parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netId | number | Yes | Indicates the eth network id to start EAP authentication. |
-| profile | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Yes | Indicates the eap profile. |
+| netId | int | Yes | ID of the Ethernet NIC. If the default value **-1** is specified, the system automatically matches the Ethernet NIC to initiate EAP authentication. |
+| profile | [EthEapProfile](arkts-network-eap-etheapprofile-i.md) | Yes | EAP profile. |
 
 **Error codes:**
 

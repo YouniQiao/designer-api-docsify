@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [PasteButton](arkts-arkui-pastebutton-pastebutton-f.md#pastebutton) | Set a paste button. |
+| [PasteButton](arkts-arkui-pastebutton-pastebutton-f.md) | Set a paste button. |
 
 ### Interfaces
 

@@ -148,7 +148,7 @@ Defines a callback to be invoked to obtain the progress information when the def
 
 | Parameter | Description |
 | -- | -- |
-| (Pasteboard_ProgressInfo\* progressInfo | A struct for the progress information.This information is reported only when [Pasteboard_ProgressInfo](capi-pasteboard-pasteboard-progressinfo.md) is set to **NONE**. |
+| [Pasteboard_ProgressInfo](capi-pasteboard-pasteboard-progressinfo.md)\* progressInfo | A struct for the progress information.This information is reported only when [Pasteboard_ProgressInfo](capi-pasteboard-pasteboard-progressinfo.md) is set to **NONE**. |
 
 ### Pasteboard_Notify()
 
@@ -167,7 +167,7 @@ Defines a callback to be invoked when the pasteboard content changes.
 | Parameter | Description |
 | -- | -- |
 | context | Context information, which is passed by the [OH_PasteboardObserver_SetData](capi-oh-pasteboard-h.md#oh_pasteboardobserver_setdata) function. |
-| ype type | Data change type. For details, see [Pasteboard_NotifyType](capi-oh-pasteboard-h.md#pasteboard_notifytype). |
+| pe type | Data change type. For details, see [Pasteboard_NotifyType](capi-oh-pasteboard-h.md#pasteboard_notifytype). |
 
 ### Pasteboard_Finalize()
 
@@ -185,7 +185,7 @@ Defines a callback to be invoked to release the context when the pasteboard obse
 
 | Parameter | Description |
 | -- | -- |
-| (void\* context | Pointer to the context to release. |
+| void\* context | Pointer to the context to release. |
 
 ### OH_PasteboardObserver_Create()
 
@@ -203,7 +203,7 @@ Creates an [OH_PasteboardObserver](capi-pasteboard-oh-pasteboardobserver.md) ins
 
 | Type | Description |
 | -- | -- |
-| [OH_PasteboardObserver*](capi-pasteboard-oh-pasteboardobserver.md) | Returns a pointer to the [OH_PasteboardObserver](capi-pasteboard-oh-pasteboardobserver.md) instance created if the operation is successful;<br> returns nullptr otherwise.<br> If this pointer is no longer required, use [OH_PasteboardObserver_Destroy](capi-oh-pasteboard-h.md#oh_pasteboardobserver_destroy) to destroy it. Otherwise, memory<br> leaks may occur. |
+| [OH_PasteboardObserver*](capi-pasteboard-oh-pasteboardobserver.md) | Returns a pointer to the [OH_PasteboardObserver](capi-pasteboard-oh-pasteboardobserver.md) instance created if the operation is successful;  returns nullptr otherwise.  If this pointer is no longer required, use [OH_PasteboardObserver_Destroy](capi-oh-pasteboard-h.md#oh_pasteboardobserver_destroy) to destroy it. Otherwise, memory  leaks may occur. |
 
 **Reference**:
 
@@ -232,7 +232,7 @@ Destroys the [OH_PasteboardObserver](capi-pasteboard-oh-pasteboardobserver.md) i
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -264,7 +264,7 @@ Sets a callback for the pasteboard observer.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -287,7 +287,7 @@ Creates an [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md) instance and a poin
 
 | Type | Description |
 | -- | -- |
-| [OH_Pasteboard*](capi-pasteboard-oh-pasteboard.md) | Returns a pointer to the [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md) instance created if the operation is successful;<br> returns nullptr otherwise.<br> If this pointer is no longer required, use [OH_Pasteboard_Destroy](capi-oh-pasteboard-h.md#oh_pasteboard_destroy) to destroy it. Otherwise, memory<br> leaks may occur. |
+| [OH_Pasteboard*](capi-pasteboard-oh-pasteboard.md) | Returns a pointer to the [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md) instance created if the operation is successful;  returns nullptr otherwise.  If this pointer is no longer required, use [OH_Pasteboard_Destroy](capi-oh-pasteboard-h.md#oh_pasteboard_destroy) to destroy it. Otherwise, memory  leaks may occur. |
 
 **Reference**:
 
@@ -341,7 +341,7 @@ Subscribes to the pasteboard observer.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -372,7 +372,7 @@ Unsubscribes from the pasteboard observer.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -401,7 +401,7 @@ Checks whether the pasteboard data comes from remote devices.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns a Boolean value indicating whether the data comes from a remote device. The value true means the<br> data is from a remote device; false means the data is from the local device. |
+| bool | Returns a Boolean value indicating whether the data comes from a remote device. The value true means the  data is from a remote device; false means the data is from the local device. |
 
 **Reference**:
 
@@ -432,7 +432,7 @@ Obtains the pasteboard data source.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -462,7 +462,7 @@ Checks whether the pasteboard contains data of the specified type.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns a Boolean value indicating whether the pasteboard contains data of the specified type. The value<br> true means the pasteboard contains data of the specified type; the value false means the opposite. |
+| bool | Returns a Boolean value indicating whether the pasteboard contains data of the specified type. The value  true means the pasteboard contains data of the specified type; the value false means the opposite. |
 
 **Reference**:
 
@@ -491,7 +491,7 @@ Checks whether the pasteboard contains data.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns a Boolean value indicating whether the pasteboard contains data. The value true means the<br> pasteboard contains data; the value false means the opposite. |
+| bool | Returns a Boolean value indicating whether the pasteboard contains data. The value true means the  pasteboard contains data; the value false means the opposite. |
 
 **Reference**:
 
@@ -520,7 +520,7 @@ Checks whether the pasteboard data is on a remote device. Transferring data acro
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the check result. The value true indicates that the pasteboard data is on a remote device,<br> and false indicates the opposite. Default value: false. |
+| bool | Returns the check result. The value true indicates that the pasteboard data is on a remote device,  and false indicates the opposite. Default value: false. |
 
 **Reference**:
 
@@ -552,7 +552,7 @@ Obtains data from the pasteboard.
 
 | Type | Description |
 | -- | -- |
-| [OH_UdmfData*](../ArkData/capi-udmf-oh-udmfdata.md) | Returns the pointer to an [OH_UdmfData](../ArkData/capi-udmf-oh-udmfdata.md) instance obtained if the operation is successful; returns a<br> null pointer otherwise. |
+| [OH_UdmfData*](../ArkData/capi-udmf-oh-udmfdata.md) | Returns the pointer to an [OH_UdmfData](../ArkData/capi-udmf-oh-udmfdata.md) instance obtained if the operation is successful; returns a  null pointer otherwise. |
 
 **Reference**:
 
@@ -582,7 +582,7 @@ Writes the unified data object to the OH_Pasteboard instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -611,7 +611,7 @@ Clears data in the Pasteboard.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.<br> Returns ERR_OK if the operation is successful.<br> Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
+| int | Returns an error code. For details about the error codes, see {@link PASTEBOARD_ErrCode}.  Returns ERR_OK if the operation is successful.  Returns ERR_INVALID_PARAMETER if an invalid parameter is passed in. |
 
 **Reference**:
 
@@ -670,7 +670,7 @@ Obtains the number of pasteboard content changes.
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Returns the number of pasteboard content changes if this API is called successfully;<br> otherwise, returns 0.<br> Even though the pasteboard data expires, or the data becomes empty because of the called OH_Pasteboard_ClearData<br> API, the number of data changes remains.<br> When the system is restarted, or the pasteboard service is restarted due to an exception, the number of pasteboard<br> data changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for<br> multiple times. Therefore, each time the data is copied, the number of data changes increases. |
+| uint32_t | Returns the number of pasteboard content changes if this API is called successfully;  otherwise, returns 0.  Even though the pasteboard data expires, or the data becomes empty because of the called OH_Pasteboard_ClearData  API, the number of data changes remains.  When the system is restarted, or the pasteboard service is restarted due to an exception, the number of pasteboard  data changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for  multiple times. Therefore, each time the data is copied, the number of data changes increases. |
 
 ### OH_Pasteboard_GetDataParams_Create()
 
@@ -688,7 +688,7 @@ Creates a [Pasteboard_GetDataParams](capi-pasteboard-pasteboard-getdataparams.md
 
 | Type | Description |
 | -- | -- |
-| [Pasteboard_GetDataParams *](capi-pasteboard-pasteboard-getdataparams.md) | Returns a pointer to the [Pasteboard_GetDataParams](capi-pasteboard-pasteboard-getdataparams.md) instance created if the operation is successful;<br> returns nullptr otherwise.<br> If this pointer is no longer required, use [OH_Pasteboard_GetDataParams_Destroy](capi-oh-pasteboard-h.md#oh_pasteboard_getdataparams_destroy) to destroy it. Otherwise,<br> memory leaks may occur. |
+| [Pasteboard_GetDataParams *](capi-pasteboard-pasteboard-getdataparams.md) | Returns a pointer to the [Pasteboard_GetDataParams](capi-pasteboard-pasteboard-getdataparams.md) instance created if the operation is successful;  returns nullptr otherwise.  If this pointer is no longer required, use [OH_Pasteboard_GetDataParams_Destroy](capi-oh-pasteboard-h.md#oh_pasteboard_getdataparams_destroy) to destroy it. Otherwise,  memory leaks may occur. |
 
 **Reference**:
 
@@ -893,7 +893,7 @@ Obtains the pasteboard data and paste progress. Folders cannot be copied.
 
 | Type | Description |
 | -- | -- |
-| [OH_UdmfData*](../ArkData/capi-udmf-oh-udmfdata.md) | Returns a pointer to the OH_UdmfData instance obtained if the operation is successful; returns a null<br> pointer otherwise. |
+| [OH_UdmfData*](../ArkData/capi-udmf-oh-udmfdata.md) | Returns a pointer to the OH_UdmfData instance obtained if the operation is successful; returns a null  pointer otherwise. |
 
 **Reference**:
 
@@ -916,7 +916,7 @@ Syncs all delayed data from the application to the pasteboard. Use this API toge
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md)\* pasteboard | Pointer to an [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md) instance. |
+| H_Pasteboard\* pasteboard | Pointer to an [OH_Pasteboard](capi-pasteboard-oh-pasteboard.md) instance. |
 | void (\*callback)(int errorCode) | Indicates the pointer to the callback that is called after the synchronize is finished. |
 
 

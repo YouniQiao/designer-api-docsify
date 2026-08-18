@@ -154,7 +154,7 @@ Defines the pointer to the custom DNS resolver.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*host | Host name. |
+| const char \*host | Host name. |
 | const char \*serv | Service name. |
 | const struct addrinfo \*hint | Pointer to the addrinfo structure. |
 | struct addrinfo \*\*res | DNS query result, which is in the format of linked lists. |
@@ -175,7 +175,7 @@ Callback for application http proxy information changed.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_HttpProxy \*proxy | Changed proxy information, which can be a null pointer. |
+| [NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | Changed proxy information, which can be a null pointer. |
 
 ### OH_NetConn_GlobalHttpProxyRefreshCallback()
 
@@ -193,7 +193,7 @@ Defines the one-shot callback used to receive the global HTTP proxy re-authentic
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t result | The re-authentication result. 0 indicates success. Other values indicate failure. |
+| int32_t result | The re-authentication result. 0 indicates success. Other values indicate failure. |
 | [const NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | The refreshed global HTTP proxy information when result is 0. If re-authenticationfails, proxy is NULL.<br>The proxy object is owned by the system and is valid only during this callbackinvocation. The caller must not free or modify it. If the caller needs to use theproxy information after the callback returns, the caller must make a deep copy. |
 | void \*userContext | The user-defined data passed to OH_NetConn_RefreshGlobalHttpProxyWithCallback. The systemdoes not access, copy, or release it. |
 
@@ -213,7 +213,7 @@ Defines the callback invoked when the network is available.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_NetHandle \*netHandle | Network handle. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
 
 ### OH_NetConn_NetCapabilitiesChange()
 
@@ -231,7 +231,7 @@ Defines the callback invoked when the network capabilities change.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_NetHandle \*netHandle | Network handle. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
 | [NetConn_NetCapabilities](capi-netconnection-netconn-netcapabilities.md) \*netCapabilities | Network capability set. |
 
 ### OH_NetConn_NetConnectionPropertiesChange()
@@ -250,7 +250,7 @@ Defines the callback invoked when network connection properties change.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_NetHandle \*netHandle | Network handle. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
 | [NetConn_ConnectionProperties](capi-netconnection-netconn-connectionproperties.md) \*connConnetionProperties | Network connection properties. |
 
 ### OH_NetConn_NetLost()
@@ -269,7 +269,7 @@ Defines the callback invoked when the network is disconnected.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_NetHandle \*netHandle | Network handle. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
 
 ### OH_NetConn_NetUnavailable()
 
@@ -299,7 +299,7 @@ Defines the callback invoked when the network blocking status changes.
 
 | Parameter | Description |
 | -- | -- |
-| (NetConn_NetHandle \*netHandle | Network handle. |
+| [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
 | bool blocked | Whether the network is blocked. The value true indicates that the network is blocked, and the valuefalse indicates the opposite. |
 
 

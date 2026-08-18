@@ -167,7 +167,7 @@ The callback function pointer definition for reporting error during video proces
 
 | Parameter | Description |
 | -- | -- |
-| (OH_VideoProcessing\* videoProcessor | The video processing instance. |
+| [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)\* videoProcessor | The video processing instance. |
 | [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) error | Error code reporting to user. |
 | void\* userData | User's custom data. |
 
@@ -187,7 +187,7 @@ The callback function pointer definition for reporting video processing state.Th
 
 | Parameter | Description |
 | -- | -- |
-| (OH_VideoProcessing\* videoProcessor | The video processing instance. |
+| [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)\* videoProcessor | The video processing instance. |
 | [VideoProcessing_State](capi-video-processing-types-h.md#videoprocessing_state) state | see [VideoProcessing_State](capi-video-processing-types-h.md#videoprocessing_state). |
 | void\* userData | User's custom data. |
 
@@ -207,7 +207,7 @@ The callback function pointer definition for reporting a new output buffer is fi
 
 | Parameter | Description |
 | -- | -- |
-| (OH_VideoProcessing\* videoProcessor | The video processing instance. |
+| [OH_VideoProcessing](capi-videoprocessing-oh-videoprocessing.md)\* videoProcessor | The video processing instance. |
 | uint32_t index | The index of the new output buffer. |
 | void\* userData | The user's custom data. |
 

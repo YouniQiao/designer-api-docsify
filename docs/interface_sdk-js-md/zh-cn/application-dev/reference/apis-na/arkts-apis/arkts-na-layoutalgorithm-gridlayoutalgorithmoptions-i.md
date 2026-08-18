@@ -18,7 +18,7 @@ columnsGap?: LengthMetrics
 
 列与列之间的间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -58,7 +58,7 @@ rowsGap?: LengthMetrics
 
 行与行之间的间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

@@ -18,7 +18,7 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten)
+**Substitutes:** [sppListen](arkts-connectivity-socket-spplisten-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -33,8 +33,8 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
-| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md#sppoption). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**
 

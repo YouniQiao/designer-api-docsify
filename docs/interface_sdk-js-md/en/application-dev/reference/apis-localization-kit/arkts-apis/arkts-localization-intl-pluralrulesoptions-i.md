@@ -16,7 +16,6 @@ Defines the options for creating a **PluralRules** object. Since API version 9, 
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## localeMatcher

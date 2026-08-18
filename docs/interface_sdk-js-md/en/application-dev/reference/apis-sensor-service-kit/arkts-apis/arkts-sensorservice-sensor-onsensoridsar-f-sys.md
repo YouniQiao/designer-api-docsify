@@ -27,7 +27,7 @@ Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.SAR | Yes | Sensor type. The value is fixed at **SensorId.SAR**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | Yes | Callback used to report the sensor data, which is a **SarResponse** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | Yes | Callback used to report the sensor data, which is a **SarResponse** object. |
 | options | Options | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 **Error codes:**

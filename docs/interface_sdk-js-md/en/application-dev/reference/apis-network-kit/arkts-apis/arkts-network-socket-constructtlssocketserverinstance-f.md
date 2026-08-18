@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructTLSSocketServerInstance(): TLSSocketServer
 ```
 
-Creates a TLSSocketServer object.
+Creates a **TLSSocketServer** object.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer--><!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer-End-->
 
@@ -24,7 +24,7 @@ Creates a TLSSocketServer object.
 
 | Type | Description |
 | --- | --- |
-| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | the TLSSocketServer of the constructTLSSocketServerInstance. |
+| [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) | TLSSocketServer** object. |
 
 **Examples**
 

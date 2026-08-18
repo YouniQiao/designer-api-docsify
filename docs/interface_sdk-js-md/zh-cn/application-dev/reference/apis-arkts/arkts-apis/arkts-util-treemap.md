@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
 ```
 
 ## 汇总

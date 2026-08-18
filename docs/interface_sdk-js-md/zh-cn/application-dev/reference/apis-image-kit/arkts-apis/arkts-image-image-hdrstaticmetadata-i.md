@@ -1,6 +1,6 @@
 # HdrStaticMetadata
 
-静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#hdrmetadatakey)中HDR_STATIC_METADATA关键字对应的值。
+静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_STATIC_METADATA关键字对应的值。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## displayPrimariesX

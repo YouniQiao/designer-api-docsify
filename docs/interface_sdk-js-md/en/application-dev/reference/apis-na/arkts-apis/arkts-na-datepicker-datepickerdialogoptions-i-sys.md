@@ -2,7 +2,7 @@
 
 Parameters of the date picker dialog box.
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-na-datepicker-datepickeroptions-i.md#datepickeroptions)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-na-datepicker-datepickeroptions-i.md)
 
 **Since:** 23
 

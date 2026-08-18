@@ -26,7 +26,7 @@ function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-na-wallpaper-wallpapertype-e.md) | 是 |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
 
 **示例**
 

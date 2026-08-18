@@ -1,6 +1,6 @@
 # MissionParameter（系统接口）
 
-作为 [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions系统接口) 的入参，表示同步时所需参数的枚举。
+作为 [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) 的入参，表示同步时所需参数的枚举。
 
 **起始版本：** 23
 

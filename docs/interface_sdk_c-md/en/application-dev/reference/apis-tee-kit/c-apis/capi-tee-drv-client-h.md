@@ -48,7 +48,7 @@ Open the specified driver in the TEE.
 
 | Type | Description |
 | -- | -- |
-| int64_t | Returns greater than 0, which means the fd of the corresponding driver.<br>         Returns less than or equal to 0, which means falied to open the driver. |
+| int64_t | Returns greater than 0, which means the fd of the corresponding driver.          Returns less than or equal to 0, which means falied to open the driver. |
 
 ### tee_drv_ioctl()
 
@@ -75,7 +75,7 @@ Cancels an operation.
 
 | Type | Description |
 | -- | -- |
-| int64_t | Returns <b>0</b> if the operation is successful.<br>         Returns <b>-1</b> if the operation is failed. |
+| int64_t | Returns <b>0</b> if the operation is successful.          Returns <b>-1</b> if the operation is failed. |
 
 ### tee_drv_close()
 
@@ -99,6 +99,6 @@ Open the specified driver in the TEE.
 
 | Type | Description |
 | -- | -- |
-| int64_t | Returns <b>0</b> if the operation is successful.<br>         Returns <b>-1</b> if the operation is failed. |
+| int64_t | Returns <b>0</b> if the operation is successful.          Returns <b>-1</b> if the operation is failed. |
 
 

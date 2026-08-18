@@ -2,7 +2,7 @@
 
 自定义弹窗的内容，继承自BaseDialogOptions。
 
-**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)
+**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-na-promptaction-basedialogoptions-i.md)
 
 **起始版本：** 23
 

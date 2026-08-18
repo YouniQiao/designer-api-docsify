@@ -18,7 +18,7 @@ Queries whether to disallow a user to add accounts.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed)
+**Substitutes:** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

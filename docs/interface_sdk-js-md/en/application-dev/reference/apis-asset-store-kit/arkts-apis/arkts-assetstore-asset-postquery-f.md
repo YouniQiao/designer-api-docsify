@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function postQuery(handle: AssetMap): Promise<void>
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery) together. This API uses a promise to return the result.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQuery](arkts-assetstore-asset-prequery-f.md) together. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery). |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuery](arkts-assetstore-asset-prequery-f.md). |
 
 **Return value:**
 

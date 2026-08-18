@@ -12,8 +12,6 @@ Represents the device-cloud file version management class. It allows you to mana
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -126,7 +124,7 @@ Obtains the content of a file of a specified version based on the version number
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
 | versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](#gethistoryversionlist) API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
 

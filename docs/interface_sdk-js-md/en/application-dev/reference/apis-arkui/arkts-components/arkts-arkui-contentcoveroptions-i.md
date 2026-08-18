@@ -1,8 +1,8 @@
 # ContentCoverOptions
 
-Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions). Provides content options of the modal.
+Inherited from [BindOptions](arkts-arkui-bindoptions-i.md). Provides content options of the modal.
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **Since:** 10
 

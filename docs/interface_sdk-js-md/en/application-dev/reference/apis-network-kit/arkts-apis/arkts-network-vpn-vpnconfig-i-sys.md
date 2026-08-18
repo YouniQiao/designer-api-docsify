@@ -1,6 +1,6 @@
 # VpnConfig (System API)
 
-Define configuration of the VPN network.
+Defines the VPN configuration.
 
 **Since:** 10
 
@@ -23,7 +23,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 addresses: Array<LinkAddress>
 ```
 
-The array of addresses for VPN interface.
+IP address of the vNIC.
 
 **Type:** Array&lt;LinkAddress&gt;
 
@@ -41,7 +41,7 @@ The array of addresses for VPN interface.
 blockedApplications?: Array<string>
 ```
 
-The array of blocklist for the VPN network. The string indicates package name.
+Used to specify that the bundle name of the string type cannot access the VPN network.
 
 **Type:** Array&lt;string&gt;
 
@@ -59,7 +59,7 @@ The array of blocklist for the VPN network. The string indicates package name.
 dnsAddresses?: Array<string>
 ```
 
-The array of DNS servers for the VPN network.
+IP address of the DNS server.
 
 **Type:** Array&lt;string&gt;
 
@@ -77,7 +77,7 @@ The array of DNS servers for the VPN network.
 isBlocking?: boolean
 ```
 
-Whether the VPN interface's file descriptor is in blocking/non-blocking mode. The default value is false.
+Whether the blocking mode is used. The value **true** indicates that the blocking mode is used, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -95,7 +95,7 @@ Whether the VPN interface's file descriptor is in blocking/non-blocking mode. Th
 isIPv4Accepted?: boolean
 ```
 
-Whether ipv4 is supported. The default value is true.
+Whether IPv4 is supported. The value **true** indicates that IPv4 is supported, and the value **false** indicates the opposite. Default value: **true**.
 
 **Type:** boolean
 
@@ -113,7 +113,7 @@ Whether ipv4 is supported. The default value is true.
 isIPv6Accepted?: boolean
 ```
 
-Whether ipv6 is supported. The default value is false.
+Whether IPv6 is supported. The value **true** indicates that IPv6 is supported, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -131,7 +131,7 @@ Whether ipv6 is supported. The default value is false.
 isLegacy?: boolean
 ```
 
-Whether to use the built-in VPN. The default value is false.
+Whether the built-in VPN is supported. The value **true** indicates that the built-in VPN is supported, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -146,16 +146,16 @@ Whether to use the built-in VPN. The default value is false.
 ## mtu
 
 ```TypeScript
-mtu?: number
+mtu?: int
 ```
 
-The maximum transmission unit (MTU) for the VPN interface.
+Maximum transmission unit (MTU), in bytes.
 
-**Type:** number
+**Type:** int
 
 **Since:** 10
 
-<!--Device-VpnConfig-mtu?: number--><!--Device-VpnConfig-mtu?: number-End-->
+<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -167,7 +167,7 @@ The maximum transmission unit (MTU) for the VPN interface.
 routes?: Array<RouteInfo>
 ```
 
-The array of routes for VPN interface.
+Route information of the vNIC.
 
 **Type:** Array&lt;RouteInfo&gt;
 
@@ -185,7 +185,7 @@ The array of routes for VPN interface.
 searchDomains?: Array<string>
 ```
 
-The array of search domains for the DNS resolver.
+List of DNS search domains.
 
 **Type:** Array&lt;string&gt;
 
@@ -203,7 +203,7 @@ The array of search domains for the DNS resolver.
 trustedApplications?: Array<string>
 ```
 
-The array of trustlist for the VPN network. The string indicates package name.
+Used to specify that the bundle name of the string type can access the VPN network.
 
 **Type:** Array&lt;string&gt;
 
@@ -221,7 +221,7 @@ The array of trustlist for the VPN network. The string indicates package name.
 vpnId?: string
 ```
 
-The uuid for the VPN network.
+Unique VPN ID.
 
 **Type:** string
 

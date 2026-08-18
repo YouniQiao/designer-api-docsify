@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecord
@@ -97,7 +96,7 @@ Obtains historical permission usage records, which can be used in permission aud
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | [PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md) | Yes | Request for querying permission usage records. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

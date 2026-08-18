@@ -2,7 +2,7 @@
 
 Represents boxed int value and related operations
 
-**Inheritance/Implementation:** Int extends [Integral](arkts-na-numeric-integral-c.md#integral) and implements Comparable<Int>
+**Inheritance/Implementation:** Int extends [Integral](arkts-na-numeric-integral-c.md) and implements Comparable<Int>
 
 **Since:** 24
 

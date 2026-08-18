@@ -12,7 +12,6 @@ Connection options for the application.
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## needReceiveStream

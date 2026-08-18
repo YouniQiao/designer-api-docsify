@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## isApplicationDisableForbidden
@@ -30,7 +31,7 @@ function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用的包名。 |
-| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，取值范围：大于等于0。 |
+| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，取值范围：大于等于0。 |
 | appIndex | int | 是 | 表示应用索引。取值范围0~5，取值为0表示主应用，取值1~5表示分身应用的索引。 |
 
 **返回值：**

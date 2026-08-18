@@ -2,7 +2,7 @@
 
 Custom layout algorithm class. > **NOTE：**> > The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Customizes the position of the child component to be arranged. When the position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| self | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
 | position | [Position](arkts-arkui-position-t.md) | Yes | Position information used in layout of the dynamic layout component. |
 
 ## onMeasure
@@ -61,6 +61,6 @@ Customizes the size of the child component to be measured. When the size of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraint used by the dynamic layout component for measurement. |
+| self | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Entity node of the dynamic layout component in the component tree. |
+| constraint | [LayoutConstraint](../../apis-na/arkts-apis/arkts-na-framenode-layoutconstraint-i.md) | Yes | Layout constraint used by the dynamic layout component for measurement. |
 

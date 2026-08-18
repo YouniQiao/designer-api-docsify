@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { colorSpaceManager } from '@kit.ArkGraphics2D';
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## create

@@ -2,7 +2,7 @@
 
 Represents error that is thrown when negative array size is supplied
 
-**Inheritance/Implementation:** NegativeArraySizeError extends [RangeError](arkts-na-errors-rangeerror-c.md#rangeerror)
+**Inheritance/Implementation:** NegativeArraySizeError extends [RangeError](arkts-na-errors-rangeerror-c.md)
 
 **Since:** 26.0.0
 

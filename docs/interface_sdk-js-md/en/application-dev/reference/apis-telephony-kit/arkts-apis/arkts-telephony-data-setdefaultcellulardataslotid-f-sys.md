@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void
 ```
 
-Switch cellular data services to another card, without changing the default settings.
+Sets the default slot of the SIM card used for mobile data. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Switch cellular data services to another card, without changing the default sett
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the ID of the target card slot. The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDefaultCellularDataSlotId. |
+| slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -38,7 +38,7 @@ Switch cellular data services to another card, without changing the default sett
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) | SIM card is not activated. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
@@ -67,7 +67,7 @@ data.setDefaultCellularDataSlotId(0, (err: BusinessError) => {
 function setDefaultCellularDataSlotId(slotId: int): Promise<void>
 ```
 
-Switch cellular data services to another card, without changing the default settings.
+Sets the default slot of the SIM card used for mobile data. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -83,13 +83,13 @@ Switch cellular data services to another card, without changing the default sett
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the ID of the target card slot. The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
+| slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDefaultCellularDataSlotId. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ Switch cellular data services to another card, without changing the default sett
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) | SIM card is not activated. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | No SIM card found. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |

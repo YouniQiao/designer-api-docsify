@@ -17,7 +17,7 @@ declare function statSync(path: string): Stat
 
 **废弃版本：** 9
 
-**替代接口：** [statSync](arkts-corefile-file-fs-statsync-f.md#statsync)
+**替代接口：** [statSync](arkts-corefile-file-fs-statsync-f.md)
 
 <!--Device-unnamed-declare function statSync(path: string): Stat--><!--Device-unnamed-declare function statSync(path: string): Stat-End-->
 

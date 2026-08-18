@@ -1,8 +1,8 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md). It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md#whitebalancequery-system-api)
+**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
 **Since:** 23
 

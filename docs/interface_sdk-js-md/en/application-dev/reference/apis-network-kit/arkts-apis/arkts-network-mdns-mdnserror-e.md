@@ -1,8 +1,8 @@
 # MdnsError
 
-Defines the mDNS error information.
+Defines the MDNS error information.
 
-**Since:** 11
+**Since:** 10
 
 <!--Device-mdns-export enum MdnsError--><!--Device-mdns-export enum MdnsError-End-->
 
@@ -14,9 +14,9 @@ Defines the mDNS error information.
 INTERNAL_ERROR = 0
 ```
 
-Indicates that the operation failed due to internal error.
+Operation failed because of an internal error.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,9 +30,9 @@ Indicates that the operation failed due to internal error.
 ALREADY_ACTIVE = 1
 ```
 
-Indicates that the operation failed because it is already active.
+Operation failed because the service already exists.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,9 +46,9 @@ Indicates that the operation failed because it is already active.
 MAX_LIMIT = 2
 ```
 
-&lt;p&gt;Indicates that the operation failed because the maximum outstanding requests from the applications have reached.&lt;/p&gt;
+Operation failed because the number of requests exceeds the maximum value.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

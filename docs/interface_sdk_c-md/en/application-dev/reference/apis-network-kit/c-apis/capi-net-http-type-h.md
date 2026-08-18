@@ -263,7 +263,7 @@ Callback function that is invoked when response is received.
 
 | Parameter | Description |
 | -- | -- |
-| (struct Http_Response \*response | Http response struct, see [Http_Response](capi-netstack-http-response.md). |
+| [struct Http_Response](capi-netstack-http-response.md) \*response | Http response struct, see [Http_Response](capi-netstack-http-response.md). |
 | uint32_t errCode | Response error code. |
 
 ### Http_OnDataReceiveCallback()
@@ -282,7 +282,7 @@ Callback function that is invoked when a response body is received.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*data | Response body. |
+| const char \*data | Response body. |
 | size_t length | Length of response body. |
 
 ### Http_OnProgressCallback()
@@ -301,7 +301,7 @@ Callback function invoked during request/response data transmission.
 
 | Parameter | Description |
 | -- | -- |
-| (uint64_t totalSize | total size. |
+| uint64_t totalSize | total size. |
 | uint64_t transferredSize | transferred size. |
 
 ### Http_OnHeaderReceiveCallback()
@@ -320,7 +320,7 @@ Callback called when header are received.
 
 | Parameter | Description |
 | -- | -- |
-| (Http_Headers \*headers | Headers of the received requests, which points to the pointer of [Http_Headers](capi-netstack-http-headers.md). |
+| [Http_Headers](capi-netstack-http-headers.md) \*headers | Headers of the received requests, which points to the pointer of [Http_Headers](capi-netstack-http-headers.md). |
 
 ### Http_OnVoidCallback()
 

@@ -12,8 +12,6 @@ This interface implements audio stream management. Before calling any API in Aud
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -36,7 +34,7 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -129,7 +127,7 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -189,7 +187,7 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -286,7 +284,7 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
 
 ## isActive
 
@@ -646,7 +644,7 @@ Unsubscribes to audio capturer change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio capturer change event. |
 
 **Error codes:**
 
@@ -672,7 +670,7 @@ Unsubscribes to audio renderer change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback invoked for the audio renderer change event. |
 
 **Error codes:**
 
@@ -680,7 +678,7 @@ Unsubscribes to audio renderer change events.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_audioCapturerChange
+## off_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
@@ -699,7 +697,7 @@ Unsubscribes from the audio capturer change event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback used to return the audio capturer information.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No | Callback used to return the audio capturer information.<br>**Since:** 18 |
 
 **Error codes:**
 
@@ -707,7 +705,7 @@ Unsubscribes from the audio capturer change event. This API uses an asynchronous
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_audioRendererChange
+## off_audioRendererChange('audioRendererChange')
 
 ```TypeScript
 off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
@@ -726,7 +724,7 @@ Unsubscribes from the audio renderer change event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback used to return the audio renderer information.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No | Callback used to return the audio renderer information.<br>**Since:** 18 |
 
 **Error codes:**
 
@@ -752,7 +750,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio capturer change event. |
 
 **Error codes:**
 
@@ -778,7 +776,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback invoked for the audio renderer change event. |
 
 **Error codes:**
 
@@ -786,7 +784,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_audioCapturerChange
+## on_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
@@ -805,7 +803,7 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio capturer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio capturer information. |
 
 **Error codes:**
 
@@ -814,7 +812,7 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_audioRendererChange
+## on_audioRendererChange('audioRendererChange')
 
 ```TypeScript
 on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
@@ -833,7 +831,7 @@ Subscribes to the audio renderer change event, which is triggered when the audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio renderer information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the audio renderer information. |
 
 **Error codes:**
 

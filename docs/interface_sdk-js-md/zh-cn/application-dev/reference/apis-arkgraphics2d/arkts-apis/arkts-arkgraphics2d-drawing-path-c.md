@@ -11,6 +11,7 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -425,7 +426,7 @@ constructor(path: Path)
 contains(x: double, y: double): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md#pathfilltype)。
+判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md)。
 
 **起始版本：** 23
 

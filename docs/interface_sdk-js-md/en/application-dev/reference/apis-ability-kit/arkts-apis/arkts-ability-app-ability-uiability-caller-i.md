@@ -12,7 +12,6 @@ A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilityconte
 
 ```TypeScript
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call
@@ -248,13 +247,13 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## off_release
+## off_release('release')
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#onrelease). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#on_releaserelease). It is currently not supported.
 
 **Since:** 9
 
@@ -308,13 +307,13 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off_release
+## off_release('release')
 
 ```TypeScript
 off(type: 'release'): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#onrelease). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#on_releaserelease). It is currently not supported.
 
 **Since:** 9
 
@@ -486,7 +485,7 @@ export default class MainAbility extends UIAbility {
 }
 ```
 
-## on_release
+## on_release('release')
 
 ```TypeScript
 on(type: 'release', callback: OnReleaseCallback): void

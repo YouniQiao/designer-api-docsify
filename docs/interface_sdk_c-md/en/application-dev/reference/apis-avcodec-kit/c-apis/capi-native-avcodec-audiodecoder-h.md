@@ -347,7 +347,7 @@ Obtains the description information about the output data of an audio decoder.Th
 
 | Type | Description |
 | -- | -- |
-| OH_AVFormat * | Handle to an OH_AVFormat instance. The lifecycle of this instance is refreshed when GetOutputDescription<br>     is called again and destroyed when the OH_AVCodec instance is destroyed. |
+| OH_AVFormat * | Handle to an OH_AVFormat instance. The lifecycle of this instance is refreshed when GetOutputDescription      is called again and destroyed when the OH_AVCodec instance is destroyed. |
 
 ### OH_AudioDecoder_SetParameter()
 

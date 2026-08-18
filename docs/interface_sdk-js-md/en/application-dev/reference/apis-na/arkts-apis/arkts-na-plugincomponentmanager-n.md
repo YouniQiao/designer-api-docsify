@@ -23,17 +23,17 @@ Plugin component manager interface.
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-na-plugincomponentmanager-push-f.md#push) | Plugin component push method. |
-| [request](arkts-na-plugincomponentmanager-request-f.md#request) | Plugin component request method. |
-| [on_string](arkts-na-plugincomponentmanager-onstring-f.md#onstring) | Plugin component event listener. |
+| [push](arkts-na-plugincomponentmanager-push-f.md) | Plugin component push method. |
+| [request](arkts-na-plugincomponentmanager-request-f.md) | Plugin component request method. |
+| [on_string](arkts-na-plugincomponentmanager-onstring-f.md#on_string) | Plugin component event listener. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-na-plugincomponentmanager-push-f-sys.md#push-system-api) | Plugin component push method used to send the information of the template it provides. |
-| [request](arkts-na-plugincomponentmanager-request-f-sys.md#request-system-api) | Plugin component request method used to send a request for the information of the template it wants. |
+| [push](arkts-na-plugincomponentmanager-push-f-sys.md) | Plugin component push method used to send the information of the template it provides. |
+| [request](arkts-na-plugincomponentmanager-request-f-sys.md) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -46,7 +46,7 @@ Plugin component manager interface.
 | [RequestEventResult](arkts-na-plugincomponentmanager-requesteventresult-i.md) | Plugin component request event result value. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

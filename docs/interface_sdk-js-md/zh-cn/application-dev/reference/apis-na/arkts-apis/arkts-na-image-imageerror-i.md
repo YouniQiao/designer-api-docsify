@@ -76,7 +76,7 @@ error?: BusinessError<void>
 
 图片加载异常返回的报错信息，其中code为错误码，message为错误信息。报错信息请参考以下错误信息的详细介绍。 默认值：{ code : -1, message : "" }
 
-**类型：** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
+**类型：** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
 
 **起始版本：** 23
 

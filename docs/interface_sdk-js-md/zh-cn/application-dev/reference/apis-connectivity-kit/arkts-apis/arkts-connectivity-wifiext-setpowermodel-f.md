@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## setPowerModel
@@ -17,7 +18,7 @@ function setPowerModel(model: PowerModel): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md#setpowermode)
+**替代接口：** [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md)
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -143,7 +144,7 @@ struct Index {
 getSelectedIndex(): int
 ```
 
-获取保存成功后的文件后缀类型的下标。 该方法只在调用 [save()](#save)时使用生效， 其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#documentsaveoptions)。 该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数 [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#documentsaveoptions)里的某个后缀类型。 如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+获取保存成功后的文件后缀类型的下标。 该方法只在调用 [save()](#save)时使用生效， 其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)。 该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数 [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)里的某个后缀类型。 如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
 **起始版本：** 23
 
@@ -323,7 +324,7 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 是 | documentPicker保存选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -401,7 +402,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -546,7 +547,7 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 是 | documentPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -619,7 +620,7 @@ select(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 

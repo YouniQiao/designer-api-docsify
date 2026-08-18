@@ -1,12 +1,12 @@
 # AudioRecorder
 
-AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) to create an AudioRecorder instance.
+AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md) to create an AudioRecorder instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [media](arkts-multimedia-media.md#ohosmultimediamedia)
+**Substitutes:** [media](arkts-multimedia-media.md)
 
 <!--Device-media-interface AudioRecorder--><!--Device-media-interface AudioRecorder-End-->
 
@@ -18,7 +18,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 import { media } from '@kit.MediaKit';
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -30,7 +30,7 @@ Subscribes to audio recording error events. After an error event is reported, yo
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'error', callback: ErrorCallback)
 
 <!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -41,9 +41,9 @@ Subscribes to audio recording error events. After an error event is reported, yo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during audio recording. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
-## on_pause
+## on_pause('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -55,7 +55,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -68,7 +68,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_prepare
+## on_prepare('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -80,7 +80,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -93,7 +93,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_release
+## on_release('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -105,7 +105,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -118,7 +118,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_reset
+## on_reset('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -130,7 +130,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -143,7 +143,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_resume
+## on_resume('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -155,7 +155,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -168,7 +168,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_start
+## on_start('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -180,7 +180,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -193,7 +193,7 @@ Subscribes to the audio recording events.
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_stop
+## on_stop('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
 on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
@@ -205,7 +205,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avrecorder-i.md#onaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
+**Substitutes:** [on](arkts-media-media-avrecorder-i.md#on_audiocapturerchangeaudiocapturerchange)(type: 'stateChange', callback: OnAVRecorderStateChangeHandler)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 

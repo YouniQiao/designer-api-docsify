@@ -20,6 +20,6 @@ typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config
 
 | Name | Description |
 | -- | -- |
-| int32_t stride;          ///< the stride of memory in bytes |  |
+| int32_t stride; ///< the stride of memory in bytes |  |
 
 

@@ -2,7 +2,7 @@
 
 Video Conflict Functions object.
 
-**Inheritance/Implementation:** VideoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api)
+**Inheritance/Implementation:** VideoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
 
 **Since:** 23
 

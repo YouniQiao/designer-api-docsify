@@ -24,7 +24,7 @@ Callback when the call state corresponding to the default sim card is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ Callback when the call state corresponding to the monitored {@code slotId} is up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the call state and the called number. |
 
 **Error codes:**
 

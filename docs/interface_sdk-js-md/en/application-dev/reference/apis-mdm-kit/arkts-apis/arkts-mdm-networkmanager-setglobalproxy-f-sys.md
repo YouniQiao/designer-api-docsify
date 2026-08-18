@@ -18,7 +18,7 @@ Sets the global network proxy. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync)
+**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -36,7 +36,7 @@ Sets the global network proxy. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | httpProxy | connection.HttpProxy | Yes | Global HTTP proxy to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Sets the global network proxy. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync)
+**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 

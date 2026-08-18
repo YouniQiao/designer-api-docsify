@@ -2,7 +2,7 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制， 绘制对象可以是形状、文本、图片等。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-na-canvas-canvasrenderer-c.md#canvasrenderer)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-na-canvas-canvasrenderer-c.md)
 
 **起始版本：** 23
 

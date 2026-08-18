@@ -12,7 +12,6 @@ Defines the information about the transient task.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actualDelayTime
@@ -21,7 +20,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 actualDelayTime: int
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds. <br>Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ( [BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md#batterycapacitylevel) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
+Actual duration of the transient task requested by the application, in milliseconds. <br>Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ( [BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
 
 **Type:** int
 

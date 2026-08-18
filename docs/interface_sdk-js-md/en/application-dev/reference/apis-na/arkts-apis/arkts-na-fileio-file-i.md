@@ -104,7 +104,7 @@ Applies a shared lock on a file in blocking mode. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Applies an exclusive lock or a shared lock on a file in blocking mode. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | exclusive | boolean | Yes | Whether to apply an exclusive lock. The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

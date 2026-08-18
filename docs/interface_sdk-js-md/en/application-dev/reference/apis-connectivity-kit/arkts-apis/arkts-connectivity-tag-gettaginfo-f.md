@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function getTagInfo(want: Want): TagInfo
 ```
 
-Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md#taginfo) object from Want.
+Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md) object from Want.
 
 **Since:** 23
 

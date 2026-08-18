@@ -33,7 +33,7 @@ Updates network interface statistics data.
 | iface | string | Yes | Network interface name. |
 | start | int | Yes | Start timestamp for the statistics data to update. |
 | end | int | Yes | End timestamp for the statistics data to update. |
-| stats | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md) | Yes | Network statistics information. |
+| stats | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) | Yes | Network statistics information. |
 
 **Return value:**
 

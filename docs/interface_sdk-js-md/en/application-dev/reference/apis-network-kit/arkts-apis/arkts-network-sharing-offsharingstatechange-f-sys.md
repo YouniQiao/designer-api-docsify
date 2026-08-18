@@ -6,13 +6,13 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-## off_sharingStateChange
+## off_sharingStateChange('sharingStateChange')
 
 ```TypeScript
 function off(type: 'sharingStateChange', callback?: Callback<boolean>): void
 ```
 
-Unregister a callback for the global network sharing state change.
+Unregisters the network sharing status change event. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,8 +28,8 @@ Unregister a callback for the global network sharing state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sharingStateChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | the callback function that returns the status. |
+| type | 'sharingStateChange' | Yes | Event type. The value **sharingStateChange** indicates a network sharing status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback invoked when the network sharing state changes. |
 
 **Error codes:**
 

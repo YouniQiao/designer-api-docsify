@@ -2,7 +2,7 @@
 
 Represents boxed short value and related operations
 
-**Inheritance/Implementation:** Short extends [Integral](arkts-na-numeric-integral-c.md#integral) and implements Comparable<Short>
+**Inheritance/Implementation:** Short extends [Integral](arkts-na-numeric-integral-c.md) and implements Comparable<Short>
 
 **Since:** 26.0.0
 

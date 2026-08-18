@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## onCallDetailsChange
@@ -27,7 +28,7 @@ Subscribe to the callDetailsChange event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of call details. <br>获取通话信息的回调 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallAttributeOptions](arkts-telephony-call-callattributeoptions-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of call details. <br>获取通话信息的回调 |
 
 **错误码：**
 

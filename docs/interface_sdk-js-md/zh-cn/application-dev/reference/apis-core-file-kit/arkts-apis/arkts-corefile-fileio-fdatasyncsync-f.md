@@ -17,7 +17,7 @@ declare function fdatasyncSync(fd: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md#fdatasyncsync)
+**替代接口：** [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md)
 
 <!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
 

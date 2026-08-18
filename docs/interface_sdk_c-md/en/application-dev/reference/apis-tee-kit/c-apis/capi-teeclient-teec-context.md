@@ -25,5 +25,9 @@ Defines the context, a logical connection between a CA and a TEE.
 | struct [ListNode](capi-teeclient-listnode.md) session_list | Linked list of sessions associated with the context. |
 | struct [ListNode](capi-teeclient-listnode.md) shrd_mem_list | Linked list of shared memory regions associated with the context. |
 | union | Union for either shared buffer or implementation data.<br>**Since**: 20 |
+| struct | Shared buffer used for data exchange and synchronization.<br>**Since**: 20 |
+| void *buffer | Pointer to the shared buffer. |
+| sem_t buffer_barrier; } share_buffer | Semaphore for synchronization of the shared buffer. |
+| uint64_t imp; } | Implementation-specific data. |
 
 

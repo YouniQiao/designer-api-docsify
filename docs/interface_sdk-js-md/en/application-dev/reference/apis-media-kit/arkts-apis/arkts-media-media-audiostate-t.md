@@ -10,7 +10,7 @@ Describes the audio playback state. You can obtain the state through the **state
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate)
+**Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md)
 
 <!--Device-media-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'--><!--Device-media-type AudioState = 'idle' | 'playing' | 'paused' | 'stopped' | 'error'-End-->
 

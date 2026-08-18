@@ -1,8 +1,8 @@
 # LocalServiceInfo
 
-Defines the mDNS service information.
+MDNS service information.
 
-**Since:** 11
+**Since:** 10
 
 <!--Device-mdns-export interface LocalServiceInfo--><!--Device-mdns-export interface LocalServiceInfo-End-->
 
@@ -20,11 +20,11 @@ import { mdns } from '@kit.NetworkKit';
 host?: NetAddress
 ```
 
-IP address of the host.
+IP address of the device that provides the MDNS service. The IP address is not effective when an MDNS service is added or removed.
 
 **Type:** NetAddress
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,18 +35,18 @@ IP address of the host.
 ## port
 
 ```TypeScript
-port?: number
+port?: int
 ```
 
-Port number.
+Service port number. The value range is [0, 65535].
 
-**Type:** number
+**Type:** int
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-LocalServiceInfo-port?: number--><!--Device-LocalServiceInfo-port?: number-End-->
+<!--Device-LocalServiceInfo-port?: int--><!--Device-LocalServiceInfo-port?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -56,11 +56,11 @@ Port number.
 serviceAttribute?: Array<ServiceAttribute>
 ```
 
-DNS-SD TXT record pairs.
+MDNS service attribute information.
 
 **Type:** Array&lt;[ServiceAttribute](arkts-network-mdns-serviceattribute-i.md)&gt;
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,11 +74,11 @@ DNS-SD TXT record pairs.
 serviceName: string
 ```
 
-Service name.
+MDNS service name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,11 +92,11 @@ Service name.
 serviceType: string
 ```
 
-Service type. Use an underscore (_) as the prefix, for example, _http._tcp.
+MDNS service type. The value is in the format of **_&lt;name&gt;.&lt;_tcp/_udp&gt;**, where **name** contains a maximum of 63 characters excluding periods (.).
 
 **Type:** string
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

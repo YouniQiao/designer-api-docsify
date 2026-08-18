@@ -12,7 +12,7 @@ import { dragController } from '@kit.ArkUI';
 function getDragPreview(): DragPreview
 ```
 
-Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#dragcontroller) object > associated with the current UI context.
+Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object > associated with the current UI context.
 
 **Since:** 11
 

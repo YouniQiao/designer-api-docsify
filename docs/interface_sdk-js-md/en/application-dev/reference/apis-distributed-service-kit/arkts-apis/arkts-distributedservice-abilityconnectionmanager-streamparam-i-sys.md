@@ -14,7 +14,6 @@ Streaming configuration parameters.
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bitrate

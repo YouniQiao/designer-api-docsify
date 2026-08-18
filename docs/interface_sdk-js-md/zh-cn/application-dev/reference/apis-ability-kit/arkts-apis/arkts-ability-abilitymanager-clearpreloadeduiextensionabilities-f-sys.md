@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## clearPreloadedUIExtensionAbilities
@@ -11,7 +12,7 @@
 function clearPreloadedUIExtensionAbilities(): Promise<void>
 ```
 
-清除当前进程中所有已经预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)实例。使用Promise异步回调。
+清除当前进程中所有已经预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例。使用Promise异步回调。
 
 **起始版本：** 23
 

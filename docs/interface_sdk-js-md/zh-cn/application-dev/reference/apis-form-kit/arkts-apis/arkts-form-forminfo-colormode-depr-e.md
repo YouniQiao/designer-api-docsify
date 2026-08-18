@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ColorMode](arkts-form-forminfo-colormode-e.md#colormode)
+**替代接口：** [ColorMode](arkts-form-forminfo-colormode-e.md)
 
 <!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
 
@@ -24,7 +24,7 @@ MODE_AUTO = -1
 
 **废弃版本：** 9
 
-**替代接口：** [MODE_AUTO](arkts-form-forminfo-colormode-e.md#modeauto)
+**替代接口：** [MODE_AUTO](arkts-form-forminfo-colormode-e.md#mode_auto)
 
 <!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
@@ -42,7 +42,7 @@ MODE_DARK = 0
 
 **废弃版本：** 9
 
-**替代接口：** [MODE_DARK](arkts-form-forminfo-colormode-e.md#modedark)
+**替代接口：** [MODE_DARK](arkts-form-forminfo-colormode-e.md#mode_dark)
 
 <!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
 
@@ -60,7 +60,7 @@ MODE_LIGHT = 1
 
 **废弃版本：** 9
 
-**替代接口：** [MODE_LIGHT](arkts-form-forminfo-colormode-e.md#modelight)
+**替代接口：** [MODE_LIGHT](arkts-form-forminfo-colormode-e.md#mode_light)
 
 <!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
 

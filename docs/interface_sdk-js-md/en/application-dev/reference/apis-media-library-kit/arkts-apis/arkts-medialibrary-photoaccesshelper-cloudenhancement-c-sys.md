@@ -87,7 +87,7 @@ Cancels cloud enhancement tasks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | Array of [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) objects whose cloud enhancement tasks are to be canceled. |
+| photoAssets | Array&lt;PhotoAsset&gt; | Yes | Array of [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) objects whose cloud enhancement tasks are to be canceled. |
 
 **Return value:**
 
@@ -253,7 +253,7 @@ Obtains the photo after cloud enhancement.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) for which the cloud-enhanced photo is to be obtained. |
+| asset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) for which the cloud-enhanced photo is to be obtained. |
 
 **Return value:**
 
@@ -322,7 +322,7 @@ Prioritizes a cloud enhancement task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) whose cloud enhancement priority needs to be escalated. |
+| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) whose cloud enhancement priority needs to be escalated. |
 
 **Return value:**
 
@@ -391,7 +391,7 @@ Queries information about a cloud enhancement task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) whose cloud enhancement task information is to be queried. |
+| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) whose cloud enhancement task information is to be queried. |
 
 **Return value:**
 
@@ -486,7 +486,7 @@ Submits cloud enhancement tasks. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) to enhance. |
+| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) to enhance. |
 | hasCloudWatermark | boolean | Yes | Whether to add a cloud enhancement watermark to the enhanced images. |
 
 **Return value:**
@@ -558,7 +558,7 @@ Submits cloud enhancement tasks. You can select the trigger mode of the cloud en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) to enhance. |
+| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) to enhance. |
 | hasCloudWatermark | boolean | Yes | Whether to add a cloud watermark to the enhanced image. **true** to add, **false** otherwise. |
 | triggerMode | int | No | Trigger mode of the cloud enhancement task. <br>**- 0**: manually triggered. <br>**- 1**: automatically triggered. <br>The default value is **0**. |
 

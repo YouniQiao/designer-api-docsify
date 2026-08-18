@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## updateReminder
@@ -25,7 +26,7 @@ function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderId | int | 是 | 需要更新的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
+| reminderId | int | 是 | 需要更新的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) 时作为返回值返回。 |
 | reminderReq | ReminderRequest | 是 | 代理提醒对象实例，用于设置提醒类型、响铃时长等具体信息。 |
 
 **返回值：**

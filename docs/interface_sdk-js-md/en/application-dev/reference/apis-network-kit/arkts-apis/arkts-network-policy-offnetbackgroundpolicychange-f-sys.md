@@ -6,13 +6,13 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## off_netBackgroundPolicyChange
+## off_netBackgroundPolicyChange('netBackgroundPolicyChange')
 
 ```TypeScript
 function off(type: 'netBackgroundPolicyChange', callback?: Callback<boolean>): void
 ```
 
-Unregister network background policy change listener.
+Unsubscribes from background network policy changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Unregister network background policy change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netBackgroundPolicyChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | the callback of off. |
+| type | 'netBackgroundPolicyChange' | Yes | Event type. The value **netBackgroundPolicyChange** indicates a background network policy change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result. It is called when the registered background network policy changes. |
 
 **Error codes:**
 

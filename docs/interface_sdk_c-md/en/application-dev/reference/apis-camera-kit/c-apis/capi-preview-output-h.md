@@ -42,8 +42,7 @@ The file declares the preview output concepts.
 | [Camera_ErrorCode OH_PreviewOutput_DeleteFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)](#oh_previewoutput_deleteframerates) | - | Deletes the frame rate list. |
 | [Camera_ErrorCode OH_PreviewOutput_SetFrameRate(Camera_PreviewOutput* previewOutput, int32_t minFps, int32_t maxFps)](#oh_previewoutput_setframerate) | - | Sets the frame rates for a PreviewOutput instance. |
 | [Camera_ErrorCode OH_PreviewOutput_GetActiveFrameRate(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)](#oh_previewoutput_getactiveframerate) | - | Obtains the active frame rates of a PreviewOutput instance. |
-| [Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)
-	](#oh_previewoutput_isbandwidthcompressionsupported) | - | Checks whether preview bandwidth compression is supported. This involves reducing data volume throughencoding to minimize bandwidth usage during transmission. |
+| [Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported) ](#oh_previewoutput_isbandwidthcompressionsupported) | - | Checks whether preview bandwidth compression is supported. This involves reducing data volume throughencoding to minimize bandwidth usage during transmission. |
 | [Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutput* previewOutput, bool enabled)](#oh_previewoutput_enablebandwidthcompression) | - | Enables preview bandwidth compression.This function must be called prior to {@link OH_CaptureSession_CommitConfig()}. Otherwise, the preview output streamformat will be affected. |
 | [bool OH_PreviewOutput_IsLogViewAssistSupported(const Camera_PreviewOutput* previewOutput)](#oh_previewoutput_islogviewassistsupported) | - | Checks whether log video view assistance is supported. |
 | [Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)](#oh_previewoutput_setlogviewassistenable) | - | Log video view assistance toggle.Before enabling this feature, you can call[isLogViewAssistSupported]{@link camera.PreviewOutput.isLogViewAssistSupported} to check whetherthe device supports log video view assistance. |
@@ -67,7 +66,7 @@ Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-pre
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_PreviewOutput\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
 
 ### OH_PreviewOutput_OnFrameEnd()
 
@@ -85,7 +84,7 @@ Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-pre
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_PreviewOutput\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
 | int32_t frameCount | Number of frames to be included in the callback. |
 
 ### OH_PreviewOutput_OnError()
@@ -104,7 +103,7 @@ Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-pre
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_PreviewOutput\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)\* previewOutput | Pointer to the PreviewOutput instance that transfers the callback. |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) errorCode | Error code reported during preview output. |
 
 **Reference**:
@@ -135,7 +134,7 @@ Registers a callback to listen for preview output events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_PreviewOutput_UnregisterCallback()
 
@@ -160,7 +159,7 @@ Unregisters the callback used to listen for preview output events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_PreviewOutput_Start()
 
@@ -184,7 +183,7 @@ Starts preview output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_Stop()
 
@@ -208,7 +207,7 @@ Stops preview output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_Release()
 
@@ -232,7 +231,7 @@ Releases a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_GetActiveProfile()
 
@@ -257,7 +256,7 @@ Obtains the profile of a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_DeleteProfile()
 
@@ -281,7 +280,7 @@ Deletes the profile of a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_PreviewOutput_GetPreviewRotation()
 
@@ -307,7 +306,7 @@ Obtains the preview rotation angle.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_GetPreviewRotationWithoutDisplayRotation()
 
@@ -332,7 +331,7 @@ Obtains the preview rotation angle.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_SetPreviewRotation()
 
@@ -358,7 +357,7 @@ Sets the preview rotation angle.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_GetSupportedFrameRates()
 
@@ -384,7 +383,7 @@ Obtains the list of frame rates supported by a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_DeleteFrameRates()
 
@@ -409,7 +408,7 @@ Deletes the frame rate list.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_PreviewOutput_SetFrameRate()
 
@@ -435,7 +434,7 @@ Sets the frame rates for a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_PreviewOutput_GetActiveFrameRate()
 
@@ -460,13 +459,12 @@ Obtains the active frame rates of a PreviewOutput instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_IsBandwidthCompressionSupported()
 
 ```c
-Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)
-	
+Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported) 
 ```
 
 **Description**
@@ -486,7 +484,7 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_EnableBandwidthCompression()
 
@@ -511,7 +509,7 @@ Enables preview bandwidth compression.This function must be called prior to {@li
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_PreviewOutput_IsLogViewAssistSupported()
 
@@ -560,7 +558,7 @@ Log video view assistance toggle.Before enabling this feature, you can call[isLo
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul><li>[CAMERA_OK](capi-camera-h.md#camera_errorcode): The operation is successful.</li><br>     <li>[CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED](capi-camera-h.md#camera_errorcode): The capability is not supported.</li><br>     <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode): A parameter is missing or the parameter type is incorrect.</li><br>     <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode): The camera session is not configured.</li><br>     <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode): The camera service is abnormal.</li></ul> |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul><li>[CAMERA_OK](capi-camera-h.md#camera_errorcode): The operation is successful.</li>      <li>[CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED](capi-camera-h.md#camera_errorcode): The capability is not supported.</li>      <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode): A parameter is missing or the parameter type is incorrect.</li>      <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode): The camera session is not configured.</li>      <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode): The camera service is abnormal.</li></ul> |
 
 ### OH_PreviewOutput_AddDeferredSurface()
 
@@ -585,6 +583,6 @@ add surface for preview output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 

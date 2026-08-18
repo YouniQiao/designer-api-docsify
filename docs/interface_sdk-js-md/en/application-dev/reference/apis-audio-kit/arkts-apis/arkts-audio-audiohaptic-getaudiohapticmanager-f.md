@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { audioHaptic } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioHapticManager
@@ -13,7 +12,7 @@ import { audioHaptic } from '@kit.AudioKit';
 function getAudioHapticManager(): AudioHapticManager
 ```
 
-Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md#audiohapticmanager) instance. This object is singleton in one process.
+Obtains an [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) instance. This object is singleton in one process.
 
 **Since:** 23
 

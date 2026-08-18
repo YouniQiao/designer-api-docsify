@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getQuerySqlInfo

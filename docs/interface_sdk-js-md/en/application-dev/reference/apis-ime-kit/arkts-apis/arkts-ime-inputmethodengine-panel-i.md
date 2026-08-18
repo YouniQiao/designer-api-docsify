@@ -12,7 +12,6 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -137,7 +136,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#panelflag)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#paneltype) panels.
+Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
 
 **Since:** 23
 
@@ -338,7 +337,7 @@ Hides this panel. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -392,7 +391,7 @@ panel.hide().then(() => {
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#panelflag) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -406,7 +405,7 @@ Moves this input method panel to the specified position. This API uses an asynch
 | --- | --- | --- | --- |
 | x | int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
 | y | int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -434,7 +433,7 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#panelflag) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 23
 
@@ -491,7 +490,7 @@ Unregisters panel hide event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback to Unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback to Unregister. |
 
 ## offShow
 
@@ -511,7 +510,7 @@ Unregisters panel show event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
 
 ## offSizeChange
 
@@ -533,7 +532,7 @@ Unsubscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel 
 | --- | --- | --- | --- |
 | callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
 
-## off_hide
+## off_hide('hide')
 
 ```TypeScript
 off(type: 'hide', callback?: () => void): void
@@ -566,7 +565,7 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 panel.off('hide');
 ```
 
-## off_show
+## off_show('show')
 
 ```TypeScript
 off(type: 'show', callback?: () => void): void
@@ -599,13 +598,13 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 panel.off('show');
 ```
 
-## off_sizeChange
+## off_sizeChange('sizeChange')
 
 ```TypeScript
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustpanelrect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#keyboardarea) type is added to > the callback function of this API.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustpanelrect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to > the callback function of this API.
 
 **Since:** 12
 
@@ -648,7 +647,7 @@ Registers panel hide event. &lt;p&gt;The "hide" events are triggered when the pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
 
 ## onShow
 
@@ -668,7 +667,7 @@ Registers panel show event. &lt;p&gt;The "show" events are triggered when the pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
 
 ## onSizeChange
 
@@ -690,7 +689,7 @@ Subscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel wi
 | --- | --- | --- | --- |
 | callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
 
-## on_hide
+## on_hide('hide')
 
 ```TypeScript
 on(type: 'hide', callback: () => void): void
@@ -719,7 +718,7 @@ panel.on('hide', () => {
 });
 ```
 
-## on_show
+## on_show('show')
 
 ```TypeScript
 on(type: 'show', callback: () => void): void
@@ -748,13 +747,13 @@ panel.on('show', () => {
 });
 ```
 
-## on_sizeChange
+## on_sizeChange('sizeChange')
 
 ```TypeScript
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustpanelrect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#keyboardarea) type is added to > the callback function of this API.
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustpanelrect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to > the callback function of this API.
 
 **Since:** 12
 
@@ -804,7 +803,7 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | width | long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
 | height | long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1090,7 +1089,7 @@ Loads content from a page to this input method panel. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1176,7 +1175,7 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page linked to LocalStorage. |
 | storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1265,7 +1264,7 @@ Shows this input method panel. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 

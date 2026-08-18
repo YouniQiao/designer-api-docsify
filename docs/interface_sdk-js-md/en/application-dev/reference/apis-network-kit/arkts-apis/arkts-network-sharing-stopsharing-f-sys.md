@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void
 ```
 
-Stop network sharing for given type.
+Disables sharing of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Stop network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of startSharing. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Sharing type. The value **0** means Wi-Fi hotspot sharing, **1** means USB sharing, and **2** means Bluetooth sharing. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -39,7 +39,7 @@ Stop network sharing for given type.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
+| [2202005](../errorcode-net-sharing.md#2202005-wi-fi-sharing-failure) | WiFi sharing failed. |
 | [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
 | [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -65,7 +65,7 @@ sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
 function stopSharing(type: SharingIfaceType): Promise<void>
 ```
 
-Stop network sharing for given type.
+Disables sharing of a specified type. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -81,13 +81,13 @@ Stop network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Sharing type. The value **0** means Wi-Fi hotspot sharing, **1** means USB sharing, and **2** means Bluetooth sharing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -97,7 +97,7 @@ Stop network sharing for given type.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
+| [2202005](../errorcode-net-sharing.md#2202005-wi-fi-sharing-failure) | WiFi sharing failed. |
 | [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
 | [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |

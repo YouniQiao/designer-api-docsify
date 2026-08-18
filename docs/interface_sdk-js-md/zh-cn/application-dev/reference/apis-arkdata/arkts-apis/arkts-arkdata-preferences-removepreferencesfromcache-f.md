@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { preferences } from '@kit.ArkData';
 ```
 
 ## removePreferencesFromCache
@@ -11,7 +12,7 @@
 function removePreferencesFromCache(context: Context, name: string, callback: AsyncCallback<void>): void
 ```
 
-从缓存中移除指定的Preferences实例，通过name进行参数设置，使用callback异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
+从缓存中移除指定的Preferences实例，通过name进行参数设置，使用callback异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
 **起始版本：** 23
 
@@ -25,9 +26,9 @@ function removePreferencesFromCache(context: Context, name: string, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 |
+| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | name | string | 是 | Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -102,7 +103,7 @@ class EntryAbility extends UIAbility {
 function removePreferencesFromCache(context: Context, options: Options, callback: AsyncCallback<void>): void
 ```
 
-从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用callback异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
+从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用callback异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
 **起始版本：** 23
 
@@ -116,9 +117,9 @@ function removePreferencesFromCache(context: Context, options: Options, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 |
+| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | options | Options | 是 | 与Preferences实例相关的配置选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当移除成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -198,7 +199,7 @@ class EntryAbility extends UIAbility {
 function removePreferencesFromCache(context: Context, name: string): Promise<void>
 ```
 
-从缓存中移除指定的Preferences实例，通过name进行参数设置，使用Promise异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
+从缓存中移除指定的Preferences实例，通过name进行参数设置，使用Promise异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
 **起始版本：** 23
 
@@ -212,7 +213,7 @@ function removePreferencesFromCache(context: Context, name: string): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 |
+| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | name | string | 是 | Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 |
 
 **返回值：**
@@ -290,7 +291,7 @@ class EntryAbility extends UIAbility {
 function removePreferencesFromCache(context: Context, options: Options): Promise<void>
 ```
 
-从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用Promise异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
+从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用Promise异步回调。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
 **起始版本：** 23
 
@@ -304,7 +305,7 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 |
+| context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
 | options | Options | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function factoryReset(): Promise<void>
 ```
 
-factory reset network settings To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Resets the network settings to the factory defaults. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ factory reset network settings To invoke this method, you must have the {@code o
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

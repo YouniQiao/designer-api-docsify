@@ -1,6 +1,6 @@
 # Stat
 
-Obtains detailed information of a file, including attributes such as the file size, permission mode, access time, and modification time. Before calling an API of the **Stat** class, use [stat()](arkts-na-fileio-stat-f.md#stat) to create a **Stat** instance.
+Obtains detailed information of a file, including attributes such as the file size, permission mode, access time, and modification time. Before calling an API of the **Stat** class, use [stat()](arkts-na-fileio-stat-f.md) to create a **Stat** instance.
 
 **Since:** 23
 

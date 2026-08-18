@@ -14,7 +14,6 @@ Represents the access records of a permission.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## accessCount

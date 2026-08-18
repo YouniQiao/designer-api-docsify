@@ -6,7 +6,7 @@ Defines the options for creating an image or video asset.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#photocreateoptions-system-api)
+**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md)
 
 <!--Device-userFileManager-interface PhotoCreateOptions--><!--Device-userFileManager-interface PhotoCreateOptions-End-->
 

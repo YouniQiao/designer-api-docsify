@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## predicates
@@ -21,7 +23,7 @@
 predicates: Record<string, string>
 ```
 
-指定模板的谓词。当调用 [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) 的回调时，谓词用于生成数据。仅适用于rdb存储数据。
+指定模板的谓词。当调用 [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#on_datachangedatachange) 的回调时，谓词用于生成数据。仅适用于rdb存储数据。
 
 **类型：** Record&lt;string, string&gt;
 
@@ -61,7 +63,7 @@ scheduler: string
 update?: string
 ```
 
-指定模板的update sql语句，未定义时默认值为空字符串。当调用 [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#ondatachange) 的回调时，update参数用于更新数据。仅适用于rdb存储数据。
+指定模板的update sql语句，未定义时默认值为空字符串。当调用 [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#on_datachangedatachange) 的回调时，update参数用于更新数据。仅适用于rdb存储数据。
 
 **类型：** string
 

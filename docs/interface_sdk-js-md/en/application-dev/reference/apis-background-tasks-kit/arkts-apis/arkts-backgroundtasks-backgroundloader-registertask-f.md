@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { backgroundLoader } from '@kit.BackgroundTasksKit';
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## registerTask

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function hasDefaultNet(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the default data network is activated.
+Checks whether there is an available network. This API uses an asynchronous callback to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Checks whether the default data network is activated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} if the default data network is activated; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return whether there is an available network. The value **true** indicates that a network is available, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ connection.hasDefaultNet((error: BusinessError, data: boolean) => {
 function hasDefaultNet(): Promise<boolean>
 ```
 
-Checks whether the default data network is activated.
+Checks whether there is an available network. This API uses a promise to return the result. If there is an available network, [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) can be used to obtain the default network handle. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Checks whether the default data network is activated.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return whether there is an available network. The value **true** indicates that a network is available, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

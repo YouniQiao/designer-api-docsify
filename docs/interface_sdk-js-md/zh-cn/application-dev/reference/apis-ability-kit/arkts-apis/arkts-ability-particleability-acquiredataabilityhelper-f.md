@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## acquireDataAbilityHelper

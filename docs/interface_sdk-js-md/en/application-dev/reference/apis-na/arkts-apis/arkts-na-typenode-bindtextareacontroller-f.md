@@ -22,7 +22,7 @@ Bind the controller of FrameNode which type is TextArea.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | the target FrameNode. |
 | controller | TextAreaController | Yes | the controller which is bind to the target FrameNode. |
 
 **Error codes:**

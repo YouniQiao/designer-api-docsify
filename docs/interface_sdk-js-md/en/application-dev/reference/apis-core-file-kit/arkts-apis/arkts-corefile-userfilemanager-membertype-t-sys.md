@@ -10,7 +10,7 @@ Represents the type of a file asset member.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md#membertype)
+**Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md)
 
 <!--Device-userFileManager-type MemberType = number | string | boolean--><!--Device-userFileManager-type MemberType = number | string | boolean-End-->
 

@@ -2,7 +2,7 @@
 
 Defines the Extendable Toggle.
 
-**继承/实现关系：** ExtendableToggle implements [ToggleAttribute](arkts-na-toggle-toggleattribute-i.md#toggleattribute)
+**继承/实现关系：** ExtendableToggle implements [ToggleAttribute](arkts-na-toggle-toggleattribute-i.md)
 
 **起始版本：** 26.0.0
 

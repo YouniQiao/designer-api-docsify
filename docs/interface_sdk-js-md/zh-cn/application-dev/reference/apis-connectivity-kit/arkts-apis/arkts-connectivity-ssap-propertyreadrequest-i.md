@@ -11,6 +11,7 @@ SSAP客户端属性读请求参数说明。
 ## 导入模块
 
 ```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -73,7 +74,7 @@ requestId: int
 serviceUuid: string
 ```
 
-属性所属的[Service](arkts-connectivity-ssap-service-i.md#service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 <br>不允许使用NearLink标准UUID。
+属性所属的[Service](arkts-connectivity-ssap-service-i.md)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 <br>不允许使用NearLink标准UUID。
 
 **类型：** string
 

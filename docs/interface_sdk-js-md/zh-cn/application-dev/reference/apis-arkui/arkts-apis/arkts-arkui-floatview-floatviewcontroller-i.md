@@ -1,6 +1,6 @@
 # FloatViewController
 
-标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。 下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md#create)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
+标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。 下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getWindowProperties
@@ -73,7 +74,7 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
 
 **错误码：**
 
@@ -114,7 +115,7 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩 形区域变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩 形区域变化的监听。 |
 
 **错误码：**
 
@@ -155,7 +156,7 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态 变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态 变化的监听。 |
 
 **错误码：**
 
@@ -196,7 +197,7 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
 
 **错误码：**
 
@@ -238,7 +239,7 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
 
 **错误码：**
 
@@ -280,7 +281,7 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | 是 | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
 
 **错误码：**
 
@@ -550,7 +551,7 @@ export struct Hello {
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通 过[onRectChange](#onrectchange)接口监 听。使用Promise异步回调。
+设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通 过[onRectChange](#onrectchange)接口监 听。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -564,7 +565,7 @@ setWindowSize(size: window.Size): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | window.Size | 是 | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口返回的限制。 |
+| size | window.Size | 是 | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
 
 **返回值：**
 
@@ -706,7 +707,7 @@ try {
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本 接口。窗口实际大小变化可通过 [onRectChange](#onrectchange)接口监听 。使用Promise异步回调。
+切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本 接口。窗口实际大小变化可通过 [onRectChange](#onrectchange)接口监听 。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -720,7 +721,7 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | 是 | 表示需要切换的窗口模板类型及大小。建议大小满足 [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口返回的限制。 |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | 是 | 表示需要切换的窗口模板类型及大小。建议大小满足 [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口返回的限制。 |
 
 **返回值：**
 

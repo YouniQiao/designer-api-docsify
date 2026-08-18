@@ -26,7 +26,7 @@ Subscribe satellite status changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the satellite status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the satellite status. |
 
 **Error codes:**
 

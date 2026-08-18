@@ -23,7 +23,7 @@ arrow?: OperateIconV2
 
 设置箭头。
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -43,7 +43,7 @@ button?: OperateButtonV2
 
 设置按钮。
 
-**类型：** [OperateButtonV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**类型：** [OperateButtonV2](arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -63,7 +63,7 @@ checkbox?: OperateCheckV2
 
 设置多选框。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -83,7 +83,7 @@ icon?: OperateIconV2
 
 设置图标
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -123,7 +123,7 @@ radio?: OperateCheckV2
 
 设置单选框。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -143,7 +143,7 @@ subIcon?: OperateIconV2
 
 设置子图标。
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -203,7 +203,7 @@ toggle?: OperateCheckV2
 
 设置开关。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 

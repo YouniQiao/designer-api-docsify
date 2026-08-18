@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## clearPreloadedUIExtensionAbility
@@ -13,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>
 ```
 
-Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance. This API uses a promise to return the result.
+Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -31,7 +30,7 @@ Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiext
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preloadId | int | Yes | ID of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance. |
+| preloadId | int | Yes | ID of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance. |
 
 **Return value:**
 

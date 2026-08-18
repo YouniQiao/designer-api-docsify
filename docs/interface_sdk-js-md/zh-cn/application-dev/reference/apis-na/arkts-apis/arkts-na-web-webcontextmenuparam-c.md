@@ -76,7 +76,7 @@ Returns the type of context node.
 getEditStateFlags(): int
 ```
 
-Returns the context editable flags [ContextMenuEditStateFlags](arkts-na-web-contextmenueditstateflags-e.md#contextmenueditstateflags).
+Returns the context editable flags [ContextMenuEditStateFlags](arkts-na-web-contextmenueditstateflags-e.md).
 
 **起始版本：** 23
 

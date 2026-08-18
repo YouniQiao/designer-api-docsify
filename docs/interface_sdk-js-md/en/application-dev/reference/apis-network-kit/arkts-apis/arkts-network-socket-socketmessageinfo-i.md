@@ -20,7 +20,7 @@ import { socket } from '@kit.NetworkKit';
 message: ArrayBuffer
 ```
 
-Receive the message event.
+Received **message** event.
 
 **Type:** ArrayBuffer
 

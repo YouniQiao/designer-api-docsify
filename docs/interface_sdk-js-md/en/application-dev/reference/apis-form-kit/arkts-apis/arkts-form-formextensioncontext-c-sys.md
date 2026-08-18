@@ -1,6 +1,6 @@
 # FormExtensionContext
 
-The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability). You can use the APIs of this module to start a FormExtensionAbility. > **NOTE：**> - The APIs of this module can be used only in the stage model.
+The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md). You can use the APIs of this module to start a FormExtensionAbility. > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormExtensionContext extends ExtensionContext
 
@@ -49,8 +49,8 @@ Connects this ability to a ServiceExtensionAbility.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
@@ -127,7 +127,7 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | long | Yes | Number returned after [connectServiceExtensionAbility](#connectserviceextensionability) is called. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is disconnected, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is disconnected, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -269,7 +269,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the ability to start, such as the bundle name, ability name, and custom parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is undefined; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is undefined; otherwise, **err** is an error object. |
 
 **Error codes:**
 

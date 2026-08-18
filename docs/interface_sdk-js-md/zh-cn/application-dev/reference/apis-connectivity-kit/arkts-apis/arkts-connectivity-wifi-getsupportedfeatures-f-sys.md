@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedFeatures
@@ -17,7 +21,7 @@ function getSupportedFeatures(): number
 
 **废弃版本：** 9
 
-**替代接口：** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getsupportedfeatures系统接口)
+**替代接口：** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 

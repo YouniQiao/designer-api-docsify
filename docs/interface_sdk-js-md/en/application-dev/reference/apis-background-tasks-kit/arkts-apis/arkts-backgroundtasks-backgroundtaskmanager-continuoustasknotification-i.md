@@ -12,7 +12,6 @@ Describes the information about a continuous-task notification.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## contentType

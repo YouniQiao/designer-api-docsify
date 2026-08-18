@@ -12,7 +12,6 @@ A color picker class used to obtain the main color from image data. It is suitab
 
 ```TypeScript
 import { effectKit } from '@kit.ArkGraphics2D';
-import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree

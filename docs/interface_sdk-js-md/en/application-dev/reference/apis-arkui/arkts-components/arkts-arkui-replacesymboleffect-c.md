@@ -2,7 +2,7 @@
 
 Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
+**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 

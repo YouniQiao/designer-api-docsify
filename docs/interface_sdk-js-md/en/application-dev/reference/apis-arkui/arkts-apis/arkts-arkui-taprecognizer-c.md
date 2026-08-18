@@ -1,8 +1,8 @@
 # TapRecognizer
 
-Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer).
+Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
-**Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
+**Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
 

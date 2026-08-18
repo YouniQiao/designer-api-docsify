@@ -2,7 +2,7 @@
 
 用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。 > **说明：** > > 部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
-**继承/实现关系：** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**继承/实现关系：** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **起始版本：** 23
 

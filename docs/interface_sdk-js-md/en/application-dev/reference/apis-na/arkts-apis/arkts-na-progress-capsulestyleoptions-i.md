@@ -2,7 +2,7 @@
 
 Defines the capsule style Options.
 
-**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ borderRadius?: LengthMetrics
 
 Set border rounded corner radius. Default value: min(width, height) / 2.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** min(width, height) / 2
 

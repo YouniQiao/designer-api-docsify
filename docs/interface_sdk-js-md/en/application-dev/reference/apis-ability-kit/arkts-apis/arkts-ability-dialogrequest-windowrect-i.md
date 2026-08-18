@@ -12,7 +12,6 @@ Defines the location attributes of a modal dialog box.
 
 ```TypeScript
 import { dialogRequest } from '@kit.AbilityKit';
-import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## height

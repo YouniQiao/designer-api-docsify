@@ -2,7 +2,7 @@
 
 Provides APIs for creating resources, such as cameras and light sources, used in 3D scenes. This class inherits from RenderResourceFactory.
 
-**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md#renderresourcefactory)
+**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md)
 
 **Since:** 23
 

@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_streamChange
+## off_streamChange('streamChange')
 
 ```TypeScript
 function off(type: 'streamChange', callback?: Callback<number>): void
@@ -36,5 +36,5 @@ Unsubscribe Wi-Fi stream change events. &lt;p&gt;All callback functions will be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 

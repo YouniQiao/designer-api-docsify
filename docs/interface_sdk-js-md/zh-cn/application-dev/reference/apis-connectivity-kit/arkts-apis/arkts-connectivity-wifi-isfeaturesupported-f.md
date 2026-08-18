@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## isFeatureSupported
@@ -17,7 +21,7 @@ function isFeatureSupported(featureId: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isfeaturesupported)
+**替代接口：** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 

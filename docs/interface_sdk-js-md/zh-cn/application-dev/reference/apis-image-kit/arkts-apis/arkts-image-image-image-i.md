@@ -1,6 +1,6 @@
 # Image
 
-Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。 调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。 Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md#imagereceiver)发送图片数据的发送方实 际写入的内容为准。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该 实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
+Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。 调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和 [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。 Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md)发送图片数据的发送方实 际写入的内容为准。 由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该 实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，�
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -54,7 +55,7 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | componentType | ComponentType | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
 
 ## getComponent
 
@@ -135,7 +136,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
 
 ## release
 

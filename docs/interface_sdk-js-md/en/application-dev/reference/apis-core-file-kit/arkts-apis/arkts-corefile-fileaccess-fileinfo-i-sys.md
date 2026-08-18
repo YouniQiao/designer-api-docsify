@@ -30,7 +30,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listfile)
+**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -46,7 +46,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -151,7 +151,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 

@@ -1,8 +1,8 @@
 # Beauty（系统接口）
 
-Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquery系统接口) Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides APIs to obtain and set the beauty effect.
 
-**继承/实现关系：** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquery系统接口)
+**继承/实现关系：** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquer
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getBeauty
@@ -77,7 +79,7 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 setBeauty(type: BeautyType, value: int): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype系统接口) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes) are disabled.
 
 **起始版本：** 23
 

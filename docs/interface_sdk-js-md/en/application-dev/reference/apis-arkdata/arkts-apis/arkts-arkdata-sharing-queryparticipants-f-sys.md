@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## queryParticipants
@@ -28,7 +27,7 @@ Queries the participants of the specified shared data. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
 
 **Error codes:**
 

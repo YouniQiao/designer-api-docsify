@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getPacFileUrl(): string
 ```
 
-Obtain the URL pacFileUrl of the current PAC script.
+Obtains the URL of the current PAC script.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ Obtain the URL pacFileUrl of the current PAC script.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the URL of the current PAC script or empty string if there is no PAC script. |
+| string | URL of the current PAC script. If no PAC script is available, an empty string is returned. |
 
 **Error codes:**
 

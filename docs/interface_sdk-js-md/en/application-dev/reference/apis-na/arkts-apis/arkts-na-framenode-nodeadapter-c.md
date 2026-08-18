@@ -32,8 +32,8 @@ Add a NodeAdapter to bind to the node.A node can only be bound to one NodeAdapte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adapter | [NodeAdapter](../../apis-arkui/arkts-apis/arkts-arkui-framenode-nodeadapter-c.md) | Yes | Define lazy loading classes. |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
+| adapter | [NodeAdapter](arkts-na-framenode-nodeadapter-c.md) | Yes | Define lazy loading classes. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | The bound FrameNode node. |
 
 **Return value:**
 
@@ -81,7 +81,7 @@ Remove the bound NodeAdapter from the node.A node can only be bound to one NodeA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | Unbind the FrameNode node. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | Unbind the FrameNode node. |
 
 ## dispose
 
@@ -123,7 +123,7 @@ Obtain all data results.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md)&gt; | Return all valid FrameNode collections. |
+| Array&lt;[FrameNode](arkts-na-framenode-c.md)&gt; | Return all valid FrameNode collections. |
 
 ## insertItem
 
@@ -221,7 +221,7 @@ This callback will be triggered when a FrameNode is bound.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The bound FrameNode node. |
+| target | [FrameNode](arkts-na-framenode-c.md) | Yes | The bound FrameNode node. |
 
 ## onCreateChild
 
@@ -251,7 +251,7 @@ Call this callback when loading for the first time or when a new node slides in.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns the FrameNode node that loads the node. |
+| [FrameNode](arkts-na-framenode-c.md) | Returns the FrameNode node that loads the node. |
 
 ## onDetachFromNode
 
@@ -294,7 +294,7 @@ Called when the child node is about to be destroyed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | int | Yes | The child node ID that is about to be destroyed. |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The FrameNode node that is about to be destroyed. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | The FrameNode node that is about to be destroyed. |
 
 ## onGetChildId
 
@@ -349,7 +349,7 @@ Call this callback when reloading or reusing.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | int | Yes | The child node ID that is about to be reloaded. |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | Reused FrameNode nodes. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | Reused FrameNode nodes. |
 
 ## reloadAllItems
 

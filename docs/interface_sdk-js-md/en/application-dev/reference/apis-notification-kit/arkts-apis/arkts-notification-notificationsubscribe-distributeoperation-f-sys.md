@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -46,7 +45,7 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600021](../errorcode-notification.md#1600021-crossdevice-communication-timeout) | Distributed operation timed out. |
+| [1600021](../errorcode-notification.md#1600021-cross-device-communication-timeout) | Distributed operation timed out. |
 
 **Examples**
 

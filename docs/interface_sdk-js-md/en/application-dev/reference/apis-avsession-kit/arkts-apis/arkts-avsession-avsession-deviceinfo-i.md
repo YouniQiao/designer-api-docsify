@@ -12,7 +12,6 @@ Device Information Definition
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## audioCapabilities
@@ -39,7 +38,7 @@ Audio capabilities supported by the device.
 castCategory: AVCastCategory
 ```
 
-The playback type supported by the device. See [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md#avcastcategory)
+The playback type supported by the device. See [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
 **Type:** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
@@ -165,7 +164,7 @@ The drm capability supported by current device, each drm is represented by uuid.
 supportedProtocols?: int
 ```
 
-The protocols supported by current device, can be union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype).
+The protocols supported by current device, can be union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md).
 
 **Type:** int
 

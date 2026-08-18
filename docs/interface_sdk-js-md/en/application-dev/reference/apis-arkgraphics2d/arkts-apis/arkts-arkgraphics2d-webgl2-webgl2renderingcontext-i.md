@@ -2,7 +2,7 @@
 
 WebGL 2.0
 
-**Inheritance/Implementation:** WebGL2RenderingContext extends [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md#webgl2renderingcontextbase), [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md#webgl2renderingcontextoverloads), [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md#webglrenderingcontextbase)
+**Inheritance/Implementation:** WebGL2RenderingContext extends [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md), [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md), [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md)
 
 **Since:** 7
 

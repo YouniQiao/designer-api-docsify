@@ -11,6 +11,8 @@ UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## close
@@ -621,7 +623,7 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 | --- | --- | --- | --- |
 | wide | int | 是 | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
 | height | int | 是 | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
-| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md#resizedirection)的形式传入窗口调整的方向。 |
+| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md)的形式传入窗口调整的方向。 |
 
 **返回值：**
 

@@ -26,7 +26,7 @@ Subscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMET
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated accelerometer data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated accelerometer data. |
 | options | Options | No | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **Error codes:**

@@ -6,7 +6,7 @@ Defines the reminder to publish.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
+**Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 <!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
 
@@ -16,7 +16,6 @@ Defines the reminder to publish.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

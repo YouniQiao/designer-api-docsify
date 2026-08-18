@@ -1,6 +1,6 @@
 # BlanklessFrameInterpolationInfo
 
-White-Screen-Free Loading frame interpolation status information, which is used as the callback input parameter in [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md#blanklessloadingparam).
+White-Screen-Free Loading frame interpolation status information, which is used as the callback input parameter in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { webview } from '@kit.ArkWeb';
 key: string
 ```
 
-Key value that uniquely identifies the page where the frame is interpolated. The value is the same as the key value of [setBlanklessLoadingWithParams](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setblanklessloadingwithparams).
+Key value that uniquely identifies the page where the frame is interpolated. The value is the same as the key value of [setBlanklessLoadingWithParams](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithparams).
 
 **Type:** string
 
@@ -58,7 +58,7 @@ state: BlanklessFrameInterpolationState
 
 Current frame interpolation state.
 
-**Type:** [BlanklessFrameInterpolationState](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationstate-e.md)
+**Type:** [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
 
 **Since:** 23
 

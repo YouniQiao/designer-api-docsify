@@ -94,7 +94,7 @@ Agent的类别。用于对Agent进行分类管理，常见的类别包括："pro
 defaultInputModes: Array<string>
 ```
 
-Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md#agentskill)上支持的输入模式集。使用MIME类型格式定义支持的输入媒体类型，例如["text/plain"]表示纯文本输入，["application/json"]表 示JSON结构化数据输入，["image/png"]表示图片输入。[AgentSkill](arkts-ability-agentcard-agentskill-i.md#agentskill)级别的inputModes会覆盖此默认设置。
+Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md)上支持的输入模式集。使用MIME类型格式定义支持的输入媒体类型，例如["text/plain"]表示纯文本输入，["application/json"]表 示JSON结构化数据输入，["image/png"]表示图片输入。[AgentSkill](arkts-ability-agentcard-agentskill-i.md)级别的inputModes会覆盖此默认设置。
 
 **类型：** Array&lt;string&gt;
 
@@ -114,7 +114,7 @@ Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md#agentskill)�
 defaultOutputModes: Array<string>
 ```
 
-Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md#agentskill)上支持的输出模式集。使用MIME类型格式定义支持的输出媒体类型，例如["text/plain"]表示纯文本输出，["application/html"]表 示HTML格式输出，["application/json"]表示JSON数据输出。[AgentSkill](arkts-ability-agentcard-agentskill-i.md#agentskill)级别的outputModes会覆盖此默认设置。
+Agent在所有[AgentSkill](arkts-ability-agentcard-agentskill-i.md)上支持的输出模式集。使用MIME类型格式定义支持的输出媒体类型，例如["text/plain"]表示纯文本输出，["application/html"]表 示HTML格式输出，["application/json"]表示JSON数据输出。[AgentSkill](arkts-ability-agentcard-agentskill-i.md)级别的outputModes会覆盖此默认设置。
 
 **类型：** Array&lt;string&gt;
 
@@ -274,7 +274,7 @@ Agent提供的功能集合。描述Agent可以执行的特定功能或技能，�
 type?: agentConstant.AgentCardType
 ```
 
-AgentCard的类型。&lt;!--Del--&gt;当 [agentConstant.AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md#agentcardtype) 的枚举值为LOW_CODE时，对应的应用必须是系统应用，否则Agent卡片无法注册、安装或更新。&lt;!--DelEnd--&gt;如果未指定，默认为APP类型。
+AgentCard的类型。<!--Del-->当 [agentConstant.AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) 的枚举值为LOW_CODE时，对应的应用必须是系统应用，否则Agent卡片无法注册、安装或更新。<!--DelEnd-->如果未指定，默认为APP类型。
 
 **类型：** agentConstant.AgentCardType
 

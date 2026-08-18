@@ -1,6 +1,6 @@
 # ConnectCallback（系统接口）
 
-通过[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback系统接口)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调 用。
+通过[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调 用。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## onDisconnect

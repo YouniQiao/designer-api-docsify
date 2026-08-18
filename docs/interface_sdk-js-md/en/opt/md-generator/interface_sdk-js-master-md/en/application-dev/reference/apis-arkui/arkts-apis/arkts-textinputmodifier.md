@@ -1,3 +1,0 @@
-# TextInputModifier
-
-## Summary

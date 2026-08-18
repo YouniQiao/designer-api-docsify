@@ -4,7 +4,7 @@
 export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo
 ```
 
-Defines the entry icon and name of an application. &lt;!--no_check--&gt;
+Defines the entry icon and name of an application. <!--no_check-->
 
 **Since:** 23
 

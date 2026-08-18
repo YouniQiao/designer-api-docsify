@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setProxyMode(mode: ProxyMode): Promise<void>
 ```
 
-Set the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#proxymode-system-api).
+Sets the proxy mode. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ Set the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#proxy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | Yes | Indicates the proxy mode. |
+| mode | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | Yes | Specified proxy mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

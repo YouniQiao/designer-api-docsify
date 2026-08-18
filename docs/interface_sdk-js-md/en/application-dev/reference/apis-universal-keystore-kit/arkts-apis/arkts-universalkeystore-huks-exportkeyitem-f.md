@@ -13,7 +13,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Exports a key. This API uses an asynchronous callback to return the result. > **NOTE：**> > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Exports a key. This API uses an asynchronous callback to return the result. > **NOTE：**> > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -30,8 +30,8 @@ Exports a key. This API uses an asynchronous callback to return the result. > **
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Property of the key to be exported. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be exported,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **outData** in **HuksReturnResult** returns the public key exported from HUKS. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Property of the key to be exported. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be exported,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **outData** in **HuksReturnResult** returns the public key exported from HUKS. |
 
 **Error codes:**
 
@@ -81,7 +81,7 @@ huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
 function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Exports a key. This API uses a promise to return the result. > **NOTE：**> > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Exports a key. This API uses a promise to return the result. > **NOTE：**> > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

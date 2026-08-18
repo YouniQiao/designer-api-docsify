@@ -1,6 +1,6 @@
 # OnWindowNewEvent
 
-定义网页要求用户创建窗口时触发的回调。从API version 23开始，如需获取更多窗口信息，可使用[OnWindowNewExtEvent](arkts-arkweb-onwindownewextevent-i.md#onwindownewextevent)。
+定义网页要求用户创建窗口时触发的回调。从API version 23开始，如需获取更多窗口信息，可使用[OnWindowNewExtEvent](arkts-arkweb-onwindownewextevent-i.md)。
 
 **起始版本：** 12
 
@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## handler

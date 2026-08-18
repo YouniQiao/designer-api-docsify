@@ -1,8 +1,8 @@
 # AutoExposure
 
-AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery)。 自动曝光类，对设备自动曝光（AE）操作。
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。 自动曝光类，对设备自动曝光（AE）操作。
 
-**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery)
+**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureMeteringMode

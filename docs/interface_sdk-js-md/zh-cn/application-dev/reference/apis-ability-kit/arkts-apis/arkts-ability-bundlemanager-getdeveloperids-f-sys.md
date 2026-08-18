@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getDeveloperIds
@@ -11,7 +12,7 @@
 function getDeveloperIds(appDistributionType?: int): Array<string>
 ```
 
-根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md#appdistributiontype系统接口)获取当前用户下的所有开发者ID列表。
+根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。
 
 **起始版本：** 23
 

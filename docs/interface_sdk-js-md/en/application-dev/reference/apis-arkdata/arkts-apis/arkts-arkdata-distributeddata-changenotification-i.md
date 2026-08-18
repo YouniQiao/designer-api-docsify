@@ -16,7 +16,6 @@ Defines the content of data change notifications, including inserted data, updat
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## deleteEntries

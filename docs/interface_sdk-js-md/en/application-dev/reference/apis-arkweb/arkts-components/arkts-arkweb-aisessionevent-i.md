@@ -1,6 +1,6 @@
 # AISessionEvent
 
-Custom AI session configuration object, used to define the lifecycle callbacks of an AI session, including creation, execution, and destruction. &lt;!--no_check--&gt;
+Custom AI session configuration object, used to define the lifecycle callbacks of an AI session, including creation, execution, and destruction. <!--no_check-->
 
 **Since:** 26.0.0
 

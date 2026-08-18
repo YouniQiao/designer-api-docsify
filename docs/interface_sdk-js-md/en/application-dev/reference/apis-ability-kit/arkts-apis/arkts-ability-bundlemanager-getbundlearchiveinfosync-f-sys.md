@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfoSync

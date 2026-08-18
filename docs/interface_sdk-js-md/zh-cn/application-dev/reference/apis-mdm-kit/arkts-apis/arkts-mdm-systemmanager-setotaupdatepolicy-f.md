@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## setOtaUpdatePolicy
@@ -11,7 +12,7 @@
 function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 ```
 
-设置升级策略。设置成功后，系统将按照指定的策略类型进行OTA升级处理，不同策略类型对应不同的升级行为。内网升级场景下，需要先调用 [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages)接口通知系统更新包，再调用该接口设置升级策略。
+设置升级策略。设置成功后，系统将按照指定的策略类型进行OTA升级处理，不同策略类型对应不同的升级行为。内网升级场景下，需要先调用 [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md)接口通知系统更新包，再调用该接口设置升级策略。
 
 **起始版本：** 12
 

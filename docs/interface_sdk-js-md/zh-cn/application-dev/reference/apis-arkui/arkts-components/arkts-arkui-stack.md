@@ -30,4 +30,9 @@ Stack(options?: StackOptions)
 
 ## 汇总
 
-- [StackOptions](arkts-arkui-stackoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [StackOptions](arkts-arkui-stackoptions-i.md) | 设置堆叠容器的子组件对齐方式。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

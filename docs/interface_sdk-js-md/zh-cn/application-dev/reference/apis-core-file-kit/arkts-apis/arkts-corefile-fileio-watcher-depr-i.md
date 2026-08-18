@@ -6,7 +6,7 @@ Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或�
 
 **废弃版本：** 10
 
-**替代接口：** [Watcher](../../apis-na/arkts-apis/arkts-na-watcher-t.md#watcher)
+**替代接口：** [Watcher](../../apis-na/arkts-apis/arkts-na-watcher-t.md)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
@@ -75,7 +75,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以异步方法关闭watcher监听之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以异步方法关闭watcher监听之后的回调。 |
 
 **示例**
 

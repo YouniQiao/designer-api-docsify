@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
-## on_sessionCreate
+## on_sessionCreate('sessionCreate')
 
 ```TypeScript
 function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => void): void

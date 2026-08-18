@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## accessSync
@@ -25,14 +28,14 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件或目录应用沙箱路径。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
 | mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 否 | 文件或目录校验的权限。不填该参数则默认校验文件或目录是否存在。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true，表示文件存在；返回false，表示文件不存在。 |
+| boolean | 返回true，表示文件或目录存在；返回false，表示文件或目录不存在。 |
 
 **错误码：**
 
@@ -70,7 +73,7 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件应用沙箱路径。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
 | mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 是 | 文件或目录校验的权限。 |
 | flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | 是 | 文件或目录校验的位置。 |
 
@@ -78,7 +81,7 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true，表示文件在本地且校验权限存在；返回false，表示文件不存在或者文件在云端或其他分布式设备上。 |
+| boolean | 返回true，表示文件或目录在本地且校验权限存在；返回false，表示文件或目录不存在或者文件或目录在云端或其他分布式设备上。 |
 
 **错误码：**
 

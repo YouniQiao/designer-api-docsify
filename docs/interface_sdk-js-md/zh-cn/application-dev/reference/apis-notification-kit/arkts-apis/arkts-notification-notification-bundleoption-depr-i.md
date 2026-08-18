@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md#bundleoption)
+**替代接口：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 <!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
@@ -16,8 +16,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -36,7 +34,7 @@ bundle: string
 
 **废弃版本：** 9
 
-**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#bundleoption)
+**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
@@ -56,7 +54,7 @@ uid?: number
 
 **废弃版本：** 9
 
-**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#bundleoption)
+**替代接口：** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 <!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 

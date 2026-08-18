@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumUri
@@ -95,7 +96,7 @@ gridLevel?: GridLevel
 recommendationType: int
 ```
 
-用户上次选择时设置的推荐内容枚举值，参考[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#recommendationtype)值定义。 上次选择时未设置推荐时，默认为0。
+用户上次选择时设置的推荐内容枚举值，参考[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)值定义。 上次选择时未设置推荐时，默认为0。
 
 **类型：** int
 
@@ -113,7 +114,7 @@ recommendationType: int
 selectedRecommendationType: int
 ```
 
-用户上次选择时选中的推荐内容枚举值，参考[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#recommendationtype)值定义。 当上次选择未选中推荐项，选中"全部"时，默认为0。
+用户上次选择时选中的推荐内容枚举值，参考[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)值定义。 当上次选择未选中推荐项，选中"全部"时，默认为0。
 
 **类型：** int
 

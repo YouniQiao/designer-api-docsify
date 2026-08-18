@@ -1,6 +1,6 @@
 # FontCollection
 
-Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance ( [getGlobalInstance](#getglobalinstance)) and local instances ( [getLocalInstance](#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through [loadFontSync](#loadfontsync) or [loadFont](#loadfont).
+Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance ( [getGlobalInstance](#getglobalinstance)) and local instances ( [getLocalInstance](#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through [loadFontSync](#loadfontsync) or [loadFont](#loadfont).
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 
@@ -133,7 +132,7 @@ let fontCollection = text.FontCollection.getLocalInstance();
 loadFont(name: string, path: string | Resource): Promise<void>
 ```
 
-Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)**. The supported font file formats are TTF and OTF.
+Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF and OTF.
 
 **Since:** 23
 
@@ -197,7 +196,7 @@ struct RenderTest {
 loadFontSync(name: string, path: string | Resource): void
 ```
 
-Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)**. The supported font file formats are TTF and OTF.
+Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF and OTF.
 
 **Since:** 23
 
@@ -258,7 +257,7 @@ struct RenderTest {
 loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void
 ```
 
-Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)**. The supported font file formats are TTF, OTF, and TTC.
+Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 
@@ -335,7 +334,7 @@ struct Index {
 loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<void>
 ```
 
-Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)**. The supported font file formats are TTF, OTF, and TTC.
+Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 

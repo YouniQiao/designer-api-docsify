@@ -38,6 +38,6 @@ Checks whether the notification of the specified application is enabled.
 
 | Type | Description |
 | -- | -- |
-| bool | true  - Notification is enabled for the specified application.<br>         false - Notification is not enabled for the specified application. |
+| bool | true  - Notification is enabled for the specified application.          false - Notification is not enabled for the specified application. |
 
 

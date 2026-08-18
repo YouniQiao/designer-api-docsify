@@ -11,6 +11,7 @@ WebviewController是Web组件各种行为的核心控制器，提供网页加载
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -235,7 +236,7 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 ## clearClientAuthenticationCache
 
@@ -522,7 +523,7 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 | 生成PDF所需参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 | 回调返回网页PDF数据流。 |
 
 **错误码：**
 
@@ -1020,7 +1021,7 @@ getBackForwardEntries(): BackForwardList
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#blanklessinfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。 必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。 需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。 > 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#blanklessinfo)极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。 > 增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， > 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。 必须与[setBlanklessLoadingWithKey](#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。 需在`WebViewController`与Web组件绑定后才能使用。 > **说明：** > > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。 > 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。 > > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)极低，请确认key值是否传递正确。 > > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。 > > - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。 > 增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。 > > - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO， > 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -1044,7 +1045,7 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 ## getCertificate
 
@@ -1052,7 +1053,7 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 getCertificate(): Promise<Array<cert.X509Cert>>
 ```
 
-获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md#x509cert)定义），便于开发者展示网站证书信息。
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)定义），便于开发者展示网站证书信息。
 
 **起始版本：** 10
 
@@ -1080,7 +1081,7 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 ```
 
-获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md#x509cert)），便于开发者展示网站证书信息。
+获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)），便于开发者展示网站证书信息。
 
 **起始版本：** 10
 
@@ -1094,7 +1095,7 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | 是 | 通过AsyncCallback异步返回当前网站的X509格式证书。 |
 
 **错误码：**
 
@@ -1864,7 +1865,7 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查找页面是否存在图像。 <br> true表示页面存在图像；false表示页面不存在图像。 |
 
 **错误码：**
 
@@ -2178,7 +2179,7 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid. |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
 
-## off_controllerAttachStateChange
+## off_controllerAttachStateChange('controllerAttachStateChange')
 
 ```TypeScript
 off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachState>): void
@@ -2197,7 +2198,7 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 | WebViewController绑定状态发生改变时的回调函数，默认情况下不填写回调函数。如果填写了Callback， 将仅取消注册该特定的回调。如果不填写Callback，将取消注册所有回调。 <br>传入null或undefined时会抛出异常错误码401。 |
 
 ## onActive
 
@@ -2265,7 +2266,7 @@ onInactive(): void
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
-## on_controllerAttachStateChange
+## on_controllerAttachStateChange('controllerAttachStateChange')
 
 ```TypeScript
 on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState>): void
@@ -2284,7 +2285,7 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 | 表示注册WebViewController绑定状态事件，固定为"controllerAttachStateChange"。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 | WebViewController绑定状态改变时的回调函数。 |
 
 ## pageDown
 
@@ -2966,7 +2967,7 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string | 是 | JavaScript脚本。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调执行JavaScript脚本结果。JavaScript脚本若执行失败或无返回值时，返回null。 |
 
 **错误码：**
 
@@ -3032,7 +3033,7 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 | JavaScript脚本。<br>**起始版本：** 12 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 | 回调执行JavaScript脚本结果。 |
 
 **错误码：**
 
@@ -3368,7 +3369,7 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 ## setBlanklessLoadingWithKey
 
@@ -3401,7 +3402,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | This functionality is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 ## setBlanklessLoadingWithParams
 
@@ -3673,7 +3674,7 @@ setNetworkAvailable(enable: boolean): void
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
+设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式： 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)获取），例如： * /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example 当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
 
 **起始版本：** 12
 
@@ -3700,7 +3701,7 @@ setPathAllowingUniversalAccess(pathList: Array<string>): void
 setPrintBackground(enable: boolean): void
 ```
 
-设置是否打印网页背景，该接口与[PrintAttributes](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-print-printattributes-i.md#printattributes)打印参数配置不一致时，本接口设置优先级高于打印参数。
+设置是否打印网页背景，该接口与[PrintAttributes](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printattributes-i.md)打印参数配置不一致时，本接口设置优先级高于打印参数。
 
 **起始版本：** 12
 
@@ -3787,7 +3788,7 @@ setScrollable(enable: boolean, type?: ScrollType): void
 static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
-在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#scrollbarmode)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
+在Web页面场景，设置全局滚动条模式。不显式调用时，默认为[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md)（非常驻滚动条）。 > **说明：** > > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。 > > - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。 > > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
 
@@ -3836,7 +3837,7 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的渲染进程中，减少跨域攻击面。例如：PC等设备上，在未启用站点隔离模式时，原有进程模型是每一个Tab对应一个渲染进程，开启站点隔离后，一个Tab下不同源的Iframe可在独 立的渲染进程中运行。 对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离 [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md#siteisolationmode)，Phone默认部分站点隔离 [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md#siteisolationmode)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用 严格站点隔离。 > **说明：** > > 不能在单子进程模式下设置严格站点隔离。 > > 接口只能在初始化时调用一次，不支持反复修改。
+设置站点隔离模式。站点隔离机制将不同源的网站隔离在不同的渲染进程中，减少跨域攻击面。例如：PC等设备上，在未启用站点隔离模式时，原有进程模型是每一个Tab对应一个渲染进程，开启站点隔离后，一个Tab下不同源的Iframe可在独 立的渲染进程中运行。 对于仅加载可信网页的第三方应用，可以关闭此功能，以提升性能并减少内存占用，同时减少跨域访问的拦截。默认值根据不同的设备而定，PC/Table采用严格站点隔离 [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md)，Phone默认部分站点隔离 [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md)。[坚盾守护模式](../../../web/web-secure-shield-mode.md)下采用 严格站点隔离。 > **说明：** > > 不能在单子进程模式下设置严格站点隔离。 > > 接口只能在初始化时调用一次，不支持反复修改。
 
 **起始版本：** 21
 
@@ -3957,7 +3958,7 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error, possible causes: 1. Mandatory parameters are left unspecified 2. JSON string exceeds 10MB limit 3. JSON parsing failed (syntax errors, etc.) 4. UrlPermissionList field is missing 5. URL rule validation failed: - scheme must be http or https - host cannot be empty - port must be between 0-65535 - path length cannot exceed 65536 characters |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Initialization error. The WebviewController must be associated with a Web component. |
 
 ## setUserAgentClientHintsEnabled
@@ -4083,7 +4084,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 static setWebDestroyMode(mode: WebDestroyMode): void
 ```
 
-设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值： [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（普通模式），由系统决定销毁时机。应用可设置 [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（快速模式），以立即销毁资源，从而提升特定场景的性能。 > **说明：** > > [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用 > WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md#webdestroymode)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑 > 定的异常（17100001），建议应用捕捉异常，或者通过[getAttachState](#getattachstate)方法查询是否绑定状态，来避免稳定性问 > 题。
+设置Web组件的销毁模式。当Web组件销毁时，销毁模式会影响Web内核资源释放的时机，例如JavaScript运行上下文、渲染上下文等。默认值： [WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式），由系统决定销毁时机。应用可设置 [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式），以立即销毁资源，从而提升特定场景的性能。 > **说明：** > > [WebDestroyMode.FAST_MODE](arkts-arkweb-webview-webdestroymode-e.md)（快速模式）会改变Web组件销毁时机，应用需关注依赖Web组件销毁时机的错误实现，例如：Web组件销毁后仍调用 > WebviewController的未定义行为，与[WebDestroyMode.NORMAL_MODE](arkts-arkweb-webview-webdestroymode-e.md)（普通模式）相比，销毁时机提前，有更高的几率触发未关联绑 > 定的异常（17100001），建议应用捕捉异常，或者通过[getAttachState](#getattachstate)方法查询是否绑定状态，来避免稳定性问 > 题。
 
 **起始版本：** 20
 
@@ -4103,7 +4104,7 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 ```
 
-为Web组件设置[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md#webschemehandler), [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md#webschemehandler)类用于 拦截指定scheme的请求。
+为Web组件设置[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md), [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md)类用于 拦截指定scheme的请求。
 
 **起始版本：** 12
 
@@ -4353,7 +4354,7 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 | --- | --- | --- | --- |
 | baseName | string | 是 | 生成的离线网页存储位置，该值不能为空。 |
 | autoName | boolean | 是 | 决定是否自动生成文件名。 <br>false表示按baseName的文件名存储，true表示根据当前URL自动生成文件名，并按baseName的文件目录存储。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回文件存储路径，保存网页失败会返回null。 |
 
 **错误码：**
 
@@ -4423,7 +4424,7 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 waitForAttached(timeout: number): Promise<ControllerAttachState>
 ```
 
-异步等待WebViewController与Web组件绑定完成，绑定完成或超时触发回调，通过Promise方式返回当前 [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md#controllerattachstate)状态。
+异步等待WebViewController与Web组件绑定完成，绑定完成或超时触发回调，通过Promise方式返回当前 [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)状态。
 
 **起始版本：** 20
 
@@ -4492,7 +4493,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 | 全量绘制结果入参。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 | 全量绘制回调结果。 |
 
 ## zoom
 

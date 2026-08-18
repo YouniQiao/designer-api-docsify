@@ -14,8 +14,6 @@ Defines the callback of the authentication widget. The authentication widget use
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 

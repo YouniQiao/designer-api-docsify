@@ -11,11 +11,11 @@
 
 | Name | Description |
 | --- | --- |
-| [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md) | Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle). |
+| [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md) | Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md). |
 | [ContentTransition](arkts-arkui-contenttransition-c.md) | Defines the base class for text transitions. |
-| [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md) | Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle). |
-| [NumericTextTransition](arkts-arkui-numerictexttransition-c.md) | Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition). |
-| [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md) | Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle). |
+| [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md) | Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md). |
+| [NumericTextTransition](arkts-arkui-numerictexttransition-c.md) | Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md). |
+| [RadialGradientStyle](arkts-arkui-radialgradientstyle-c.md) | Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md). |
 | [ShaderStyle](arkts-arkui-shaderstyle-c.md) | Defines the base class for text shader effects. |
 | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Defines the unique identifier for a custom menu item. It is used to identify menu items. The IDs for built-in menu items are listed in the table below. |
 
@@ -47,14 +47,14 @@
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | Defines a text selection controller. |
 | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Provides information about the text before and after a change, including the selection ranges. |
 | [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the Text and RichEditor components. |
-| [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller. Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md#textbasecontroller). |
+| [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller. Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md). |
 | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | Defines the text layout options. |
 | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | TextMenuItem |
 | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | Provides the options for customizing the context menu on selection. |
 | [TextRange](arkts-arkui-textrange-i.md) | Defines the text range. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -83,7 +83,7 @@
 | [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) | Defines the vertical alignment mode of text. The default value is **BASELINE** (aligning along the baseline). |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

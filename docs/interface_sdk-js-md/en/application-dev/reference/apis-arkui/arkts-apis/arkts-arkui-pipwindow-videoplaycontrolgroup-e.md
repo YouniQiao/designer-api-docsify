@@ -1,6 +1,6 @@
 # VideoPlayControlGroup
 
-Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#piptemplatetype) is set to **VIDEO_PLAY**.
+Enumerates the video playback component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_PLAY**.
 
 **Since:** 26.0.0
 

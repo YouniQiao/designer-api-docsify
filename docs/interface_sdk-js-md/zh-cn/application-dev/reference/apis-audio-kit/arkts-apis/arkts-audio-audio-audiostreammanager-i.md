@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectInfoArray
@@ -32,7 +34,7 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
 
 **错误码：**
 
@@ -125,7 +127,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -185,7 +187,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -282,7 +284,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
 
 ## isActive
 
@@ -642,7 +644,7 @@ Unsubscribes to audio capturer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
 
 **错误码：**
 
@@ -668,7 +670,7 @@ Unsubscribes to audio renderer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
 
 **错误码：**
 
@@ -676,7 +678,7 @@ Unsubscribes to audio renderer change events.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_audioCapturerChange
+## off_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
@@ -695,7 +697,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
 
 **错误码：**
 
@@ -703,7 +705,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_audioRendererChange
+## off_audioRendererChange('audioRendererChange')
 
 ```TypeScript
 off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
@@ -722,7 +724,7 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
 
 **错误码：**
 
@@ -748,7 +750,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
 
 **错误码：**
 
@@ -774,7 +776,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
 
 **错误码：**
 
@@ -782,7 +784,7 @@ Listens for audio renderer change events. When there is any audio renderer chang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_audioCapturerChange
+## on_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
@@ -801,7 +803,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当音频录制流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 
@@ -810,7 +812,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_audioRendererChange
+## on_audioRendererChange('audioRendererChange')
 
 ```TypeScript
 on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
@@ -829,7 +831,7 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当音频播放流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频渲染器信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频渲染器信息。 |
 
 **错误码：**
 

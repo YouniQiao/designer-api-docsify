@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 ```
 
-Remove the custom DNS rule of the host for current application.
+Removes the custom DNS rules of the specified host from the current application. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-connection-function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void--><!--Device-connection-function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void-End-->
 
@@ -28,8 +28,8 @@ Remove the custom DNS rule of the host for current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback of removeCustomDnsRule. |
+| host | string | Yes | Name of the host for which DNS rules are to be deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the DNS rules are removed successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -63,13 +63,13 @@ connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
 function removeCustomDnsRule(host: string): Promise<void>
 ```
 
-Remove the custom DNS rule of the host for current application.
+Removes the custom DNS rules of the specified host from the current application. This API uses a promise to return the result. > **NOTE：**> > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-connection-function removeCustomDnsRule(host: string): Promise<void>--><!--Device-connection-function removeCustomDnsRule(host: string): Promise<void>-End-->
 
@@ -79,13 +79,13 @@ Remove the custom DNS rule of the host for current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Name of the host for which DNS rules are to be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

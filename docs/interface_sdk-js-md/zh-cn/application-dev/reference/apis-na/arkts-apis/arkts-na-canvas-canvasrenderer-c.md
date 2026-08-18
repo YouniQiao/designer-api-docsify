@@ -2,7 +2,7 @@
 
 Canvas渲染器，用于绘制形状、文本、图片等对象。
 
-**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-na-canvas-canvaspath-c.md#canvaspath)
+**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-na-canvas-canvaspath-c.md)
 
 **起始版本：** 23
 

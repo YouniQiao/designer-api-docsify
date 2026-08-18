@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SaveButton](arkts-arkui-savebutton-savebutton-f.md#savebutton) | Set a save button. |
+| [SaveButton](arkts-arkui-savebutton-savebutton-f.md) | Set a save button. |
 
 ### Interfaces
 
@@ -24,7 +24,7 @@
 | [SaveIconStyle](arkts-arkui-savebutton-saveiconstyle-e.md) | Enumerates the icon styles. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

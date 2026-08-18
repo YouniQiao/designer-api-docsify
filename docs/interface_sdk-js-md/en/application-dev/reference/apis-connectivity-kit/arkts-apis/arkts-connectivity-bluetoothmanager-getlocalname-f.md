@@ -18,7 +18,7 @@ Obtains the Bluetooth local name of a device. On API 10 and above, the permissio
 
 **Deprecated since:** 10
 
-**Substitutes:** [getLocalName](arkts-connectivity-connection-getlocalname-f.md#getlocalname)
+**Substitutes:** [getLocalName](arkts-connectivity-connection-getlocalname-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

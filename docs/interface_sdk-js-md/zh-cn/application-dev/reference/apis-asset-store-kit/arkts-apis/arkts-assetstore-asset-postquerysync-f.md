@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## postQuerySync
@@ -11,7 +12,7 @@
 function postQuerySync(handle: AssetMap): void
 ```
 
-查询的后置处理，用于需要用户认证的关键资产。需与[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync)函数成对出现。使用同步方式返回结果。
+查询的后置处理，用于需要用户认证的关键资产。需与[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md)函数成对出现。使用同步方式返回结果。
 
 **起始版本：** 12
 
@@ -25,7 +26,7 @@ function postQuerySync(handle: AssetMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 | 待处理的查询句柄，包含[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync)执行成功返回的挑战值。 |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | 是 | 待处理的查询句柄，包含[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md)执行成功返回的挑战值。 |
 
 **错误码：**
 

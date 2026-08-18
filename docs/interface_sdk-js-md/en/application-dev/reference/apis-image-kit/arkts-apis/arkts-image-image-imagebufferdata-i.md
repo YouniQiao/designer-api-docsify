@@ -12,7 +12,6 @@ Describes the image buffer data.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## byteBuffer

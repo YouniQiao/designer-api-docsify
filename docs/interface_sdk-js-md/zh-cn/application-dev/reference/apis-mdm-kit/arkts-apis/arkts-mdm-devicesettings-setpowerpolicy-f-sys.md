@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## setPowerPolicy
@@ -17,7 +18,7 @@ function setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerP
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue)
+**替代接口：** [setValue](arkts-mdm-devicesettings-setvalue-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

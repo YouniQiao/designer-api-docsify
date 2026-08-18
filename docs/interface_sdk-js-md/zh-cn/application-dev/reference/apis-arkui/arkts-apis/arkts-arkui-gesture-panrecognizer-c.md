@@ -1,8 +1,8 @@
 # PanRecognizer
 
-滑动手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#gesturerecognizer)。
+滑动手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)。
 
-**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#gesturerecognizer)
+**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # ClientCert
 
-The clientCert field of the client certificate, which includes three attributes: client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword).
+Defines the client certificate type.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { webSocket } from '@kit.NetworkKit';
 certPath: string
 ```
 
-The path to the client certificate file.
+Path of the certificate file.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ The path to the client certificate file.
 keyPassword?: string
 ```
 
-Client certificate password.
+Password of the certificate key file. The default value is an empty string.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ Client certificate password.
 keyPath: string
 ```
 
-The path of the client certificate private key file.
+Path of the certificate key file.
 
 **Type:** string
 

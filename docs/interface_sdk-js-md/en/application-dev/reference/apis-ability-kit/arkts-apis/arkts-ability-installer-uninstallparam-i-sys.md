@@ -14,7 +14,6 @@ Defines the parameters required for the uninstall of a shared bundle.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## bundleName

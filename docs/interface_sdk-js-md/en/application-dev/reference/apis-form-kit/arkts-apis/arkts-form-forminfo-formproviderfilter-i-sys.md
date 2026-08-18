@@ -14,7 +14,6 @@ Information about a running form.
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName

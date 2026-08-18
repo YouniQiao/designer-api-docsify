@@ -4,7 +4,7 @@
 export type TlsV13SpecificCipherSuite = 'TLS_AES_128_GCM_SHA256' | 'TLS_AES_256_GCM_SHA384' | 'TLS_CHACHA20_POLY1305_SHA256'
 ```
 
-Cipher suite which TLS1.3+ support. The framework has a built-in preference order, but your choice will be recorded.
+Enumerates cipher suites supported by TLS 1.3 or later.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Cipher suite which TLS1.3+ support. The framework has a built-in preference orde
 
 | Type | Description |
 | --- | --- |
-| 'TLS_AES_128_GCM_SHA256' |  |
-| 'TLS_AES_256_GCM_SHA384' |  |
-| 'TLS_CHACHA20_POLY1305_SHA256' |  |
+| 'TLS_AES_128_GCM_SHA256' | Supported cipher suite: TLS_AES_128_GCM_SHA256. The value is a string. |
+| 'TLS_AES_256_GCM_SHA384' | Supported cipher suite: TLS_AES_256_GCM_SHA384. The value is a string. |
+| 'TLS_CHACHA20_POLY1305_SHA256' | Supported cipher suite: TLS_CHACHA20_POLY1305_SHA256. The value is a string. |
 

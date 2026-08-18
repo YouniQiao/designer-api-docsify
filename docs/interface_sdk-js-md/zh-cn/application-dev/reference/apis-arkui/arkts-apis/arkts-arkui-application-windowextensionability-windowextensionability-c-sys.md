@@ -15,6 +15,7 @@ WindowExtensionAbility类。
 ## 导入模块
 
 ```TypeScript
+import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## onConnect

@@ -24,7 +24,7 @@ Get l2cap socket psm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten). |
+| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
 
 **Return value:**
 

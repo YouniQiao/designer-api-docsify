@@ -16,7 +16,7 @@
 | [CustomDialogControllerOptions](arkts-na-customdialogcontroller-customdialogcontrolleroptions-i.md) | Defines the options of CustomDialogController. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

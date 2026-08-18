@@ -18,7 +18,7 @@ Starts scanning Bluetooth devices. On API 10 and above, the permission required 
 
 **Deprecated since:** 10
 
-**Substitutes:** [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md#startbluetoothdiscovery)
+**Substitutes:** [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

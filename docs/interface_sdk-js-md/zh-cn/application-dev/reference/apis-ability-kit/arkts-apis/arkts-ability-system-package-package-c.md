@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -27,7 +28,7 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canopenlink)
+**替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md)
 
 <!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 

@@ -101,7 +101,7 @@ Combines another transition effect
 | --- | --- |
 | [TransitionEffect](arkts-na-common-transitioneffect-c.md) | combined transition effect |
 
-## constructor
+## constructor('identity' | 'slideSwitch')
 
 ```TypeScript
 constructor(type: 'identity' | 'slideSwitch', effect: undefined)
@@ -126,7 +126,7 @@ identity or slideSwitch TransitionEffect constructor
 | type | 'identity' \| 'slideSwitch' | Yes | transition type |
 | effect | undefined | Yes | transition options |
 
-## constructor
+## constructor('opacity')
 
 ```TypeScript
 constructor(type: 'opacity', effect: double)
@@ -151,7 +151,7 @@ opacity TransitionEffect constructor
 | type | 'opacity' | Yes | transition type |
 | effect | double | Yes | transition options |
 
-## constructor
+## constructor('move')
 
 ```TypeScript
 constructor(type: 'move', effect: TransitionEdge)
@@ -176,7 +176,7 @@ move TransitionEffect constructor
 | type | 'move' | Yes | transition type |
 | effect | [TransitionEdge](arkts-na-common-transitionedge-e.md) | Yes | transition options |
 
-## constructor
+## constructor('translate')
 
 ```TypeScript
 constructor(type: 'translate', effect: TranslateOptions)
@@ -201,7 +201,7 @@ translate TransitionEffect constructor
 | type | 'translate' | Yes | transition type |
 | effect | [TranslateOptions](arkts-na-common-translateoptions-i.md) | Yes | transition options |
 
-## constructor
+## constructor('rotate')
 
 ```TypeScript
 constructor(type: 'rotate', effect: RotateOptions)
@@ -226,7 +226,7 @@ rotate TransitionEffect constructor
 | type | 'rotate' | Yes | transition type |
 | effect | [RotateOptions](arkts-na-common-rotateoptions-i.md) | Yes | transition options |
 
-## constructor
+## constructor('scale')
 
 ```TypeScript
 constructor(type: 'scale', effect: ScaleOptions)
@@ -251,7 +251,7 @@ scale TransitionEffect constructor
 | type | 'scale' | Yes | transition type |
 | effect | [ScaleOptions](arkts-na-common-scaleoptions-i.md) | Yes | transition options |
 
-## constructor
+## constructor('asymmetric')
 
 ```TypeScript
 constructor(type: 'asymmetric', effect: AsymmetricTransitionOption)

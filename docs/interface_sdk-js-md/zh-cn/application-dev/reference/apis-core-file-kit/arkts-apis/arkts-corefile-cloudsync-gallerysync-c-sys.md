@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -59,7 +61,7 @@ Unsubscribes from sync progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
 
 **错误码：**
 
@@ -141,7 +143,7 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress)，返 回值为void。 |
+| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)，返 回值为void。 |
 
 **错误码：**
 
@@ -233,7 +235,7 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
 
 **错误码：**
 
@@ -283,7 +285,7 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | evt | 'progress' | 是 | 订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress)，返 回值为void。 |
+| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)，返 回值为void。 |
 
 **错误码：**
 
@@ -398,7 +400,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
 
 **错误码：**
 
@@ -527,7 +529,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
 
 **错误码：**
 

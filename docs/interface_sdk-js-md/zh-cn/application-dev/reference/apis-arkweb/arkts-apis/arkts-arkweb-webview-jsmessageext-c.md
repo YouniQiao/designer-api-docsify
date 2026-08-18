@@ -11,6 +11,7 @@ JsMessageExt是ArkWeb框架中用于封装 [runJavaScriptExt](arkts-arkweb-webvi
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

@@ -12,7 +12,7 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
 ```
 
-Stops an asynchronous trace with the trace output level specified. The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace).
+Stops an asynchronous trace with the trace output level specified. The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md).
 
 **Since:** 23
 

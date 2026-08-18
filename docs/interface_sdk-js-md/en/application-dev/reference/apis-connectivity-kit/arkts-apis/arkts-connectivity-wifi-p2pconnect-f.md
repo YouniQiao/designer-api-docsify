@@ -21,7 +21,7 @@ Initiates a P2P connection to a device with the specified configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect)
+**Substitutes:** [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

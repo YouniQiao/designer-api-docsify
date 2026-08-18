@@ -40,7 +40,7 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 | --- | --- |
 | [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
 | [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
 | [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
@@ -97,7 +97,7 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 | --- | --- |
 | [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
 | [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
 | [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
@@ -143,7 +143,7 @@ Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thr
 | --- | --- |
 | [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
 | [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) | Napi interface call exception. |
 | [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
 | [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
 | [11400106](../errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |

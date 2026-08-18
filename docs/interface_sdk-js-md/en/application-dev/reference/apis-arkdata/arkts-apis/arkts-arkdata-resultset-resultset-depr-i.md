@@ -6,7 +6,7 @@ A result set is a set of results returned after the relational database (RDB) qu
 
 **Deprecated since:** 9
 
-**Substitutes:** [relationalStore](arkts-data-relationalstore.md#ohosdatarelationalstore)
+**Substitutes:** [relationalStore](arkts-data-relationalstore.md)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 

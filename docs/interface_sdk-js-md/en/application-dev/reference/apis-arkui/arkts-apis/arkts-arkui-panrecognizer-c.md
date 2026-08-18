@@ -2,7 +2,7 @@
 
 Gesture recognizer object.
 
-**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#gesturerecognizer)
+**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 12
 

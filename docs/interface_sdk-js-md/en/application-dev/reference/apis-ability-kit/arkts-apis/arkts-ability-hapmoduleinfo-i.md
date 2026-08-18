@@ -14,7 +14,7 @@ The module defines the HAP module information.
 readonly abilitiesInfo: Array<AbilityInfo>
 ```
 
-Information about all ability components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+Information about all ability components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-i.md)&gt;
 
@@ -122,7 +122,7 @@ Array of [device types](../../../quick-start/module-configuration-file.md#device
 readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 ```
 
-Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)&gt;
 
@@ -140,7 +140,7 @@ Information about all ExtensionAbility components of the current module. The inf
 readonly fileContextMenuConfig: string
 ```
 
-File menu configuration of the module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+File menu configuration of the module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** string
 
@@ -284,7 +284,7 @@ Name of the UIAbility or ExtensionAbility that serves as the entry of the curren
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -354,7 +354,7 @@ Preloaded modules in the atomic service.
 readonly routerMap: Array<RouterItem>
 ```
 
-[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 

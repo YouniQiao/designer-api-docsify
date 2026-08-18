@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## mkdtempSync
@@ -11,7 +14,7 @@
 declare function mkdtempSync(prefix: string): string
 ```
 
-以同步的方法创建临时目录。
+以同步方法创建临时目录。
 
 **起始版本：** 9
 

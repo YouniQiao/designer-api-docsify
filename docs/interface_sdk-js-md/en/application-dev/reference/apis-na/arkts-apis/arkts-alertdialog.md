@@ -15,7 +15,7 @@
 | [AlertDialogTextStyleOptions](arkts-na-alertdialog-alertdialogtextstyleoptions-i.md) | Defines TextStyle in the AlertDialog. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

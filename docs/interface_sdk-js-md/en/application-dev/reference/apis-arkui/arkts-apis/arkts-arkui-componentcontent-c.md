@@ -1,6 +1,6 @@
 # ComponentContent
 
-You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development: **ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode. **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md#reactivebuildernode). > **NOTE：**> > - **ComponentContent** and **ReactiveComponentContent** are not available in DevEco Studio Previewer. > > - ComponentContent objects do not support JSON serialization.
+You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development: **ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode. **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md). > **NOTE：**> > - **ComponentContent** and **ReactiveComponentContent** are not available in DevEco Studio Previewer. > > - ComponentContent objects do not support JSON serialization.
 
 **Inheritance/Implementation:** ComponentContent extends Content
 
@@ -687,7 +687,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#configuration). > **NOTE：**> > The updateConfiguration API is used to notify an object of updating the current system environment change.
+Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md). > **NOTE：**> > The updateConfiguration API is used to notify an object of updating the current system environment change.
 
 **Since:** 12
 

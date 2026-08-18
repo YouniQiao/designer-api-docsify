@@ -1,6 +1,6 @@
 # EthernetDeviceInfos (System API)
 
-Defines the device information of the Ethernet.
+Defines Ethernet device information.
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ Device connection mode.
 deviceName: string
 ```
 
-Ethernet device name.
+Device name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Ethernet device name.
 ifaceName: string
 ```
 
-Ethernet interface name.
+Interface name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Ethernet interface name.
 maximumRate: string
 ```
 
-Maximum Rate of device.
+Maximum connection rate.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ Maximum Rate of device.
 productName: string
 ```
 
-Product name of device.
+Product name.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ Product name of device.
 supplierId: string
 ```
 
-Supplier id of device.
+Supplier ID.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ Supplier id of device.
 supplierName: string
 ```
 
-Supplier name of device.
+Vendor name.
 
 **Type:** string
 

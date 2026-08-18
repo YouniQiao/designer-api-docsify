@@ -12,7 +12,6 @@ Defines watermark properties.
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
-import { securityManager } from '@kit.MDMKit';
 ```
 
 ## intervalsCol

@@ -82,7 +82,7 @@ onTotalCount?(): number
 memoryOptimizationStrategy?: RepeatMemOptStrategy
 ```
 
-Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动态修改。 默认值：[DEFAULT](arkts-arkui-repeatmemoptstrategy-e.md#repeatmemoptstrategy)
+Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动态修改。 默认值：[DEFAULT](arkts-arkui-repeatmemoptstrategy-e.md)
 
 **类型：** [RepeatMemOptStrategy](arkts-arkui-repeatmemoptstrategy-e.md)
 

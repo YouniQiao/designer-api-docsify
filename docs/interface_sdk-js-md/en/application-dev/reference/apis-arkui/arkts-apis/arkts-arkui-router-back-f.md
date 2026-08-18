@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function back(options?: RouterOptions): void
 ```
 
-Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 8
 
@@ -45,7 +45,7 @@ this.getUIContext().getRouter().back({ url: 'pages/detail' });
 function back(index: number, params?: Object): void
 ```
 
-Returns to the specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Returns to the specified page, which deletes all pages between the current page and the target page. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 12
 

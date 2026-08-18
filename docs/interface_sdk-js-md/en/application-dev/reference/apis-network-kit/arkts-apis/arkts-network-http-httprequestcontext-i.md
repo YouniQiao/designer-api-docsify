@@ -1,8 +1,8 @@
 # HttpRequestContext
 
-The request data.
+Defines HTTP request context data. The object instance is passed as a parameter in the [interceptorHandle](arkts-network-http-httpinterceptor-i.md#interceptorhandle) method of the interceptor. You can use this object to obtain and modify the information about the HTTP request.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-http-export interface HttpRequestContext--><!--Device-http-export interface HttpRequestContext-End-->
 
@@ -24,9 +24,9 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Type:** Object
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpRequestContext-body: Object--><!--Device-HttpRequestContext-body: Object-End-->
 
@@ -42,9 +42,9 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Type:** Object
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpRequestContext-header: Object--><!--Device-HttpRequestContext-header: Object-End-->
 
@@ -60,9 +60,9 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpRequestContext-url: string--><!--Device-HttpRequestContext-url: string-End-->
 

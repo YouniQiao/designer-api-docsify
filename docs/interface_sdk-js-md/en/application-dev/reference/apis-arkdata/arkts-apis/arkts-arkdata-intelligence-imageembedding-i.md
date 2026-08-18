@@ -12,7 +12,6 @@ Describes the image embedding functions of the multi-modal embedding model.
 
 ```TypeScript
 import { intelligence } from '@kit.ArkData';
-import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding

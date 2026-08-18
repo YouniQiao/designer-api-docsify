@@ -1,18 +1,6 @@
 # @ohos.arkui.performanceMonitor
 
-/*
- Copyright (C) 2023 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **performanceMonitor** module provides APIs for monitoring performance metrics related to user scenes. By calling the **begin** and **end** APIs at the start and end of a scene respectively, you can obtain relevant performance metrics such as response latency, completion latency, and frame drops. > **NOTE：**> > The APIs of this module are supported since API version 10. Updates will be marked with a superscript to indicate > their > > The APIs provided by this module are system APIs.
 
 **Since:** 10
 
@@ -33,17 +21,17 @@ import { performanceMonitor } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | Marks the start of a user scene. Call this API when the scene begins. |
-| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | Marks the end of a user scene. Call this API when the scene ends. |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) | Records the trigger event type and time before the start of the animation scene. |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md) | Marks the start of a user scene. Call this API when the scene begins. |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md) | Marks the end of a user scene. Call this API when the scene ends. |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | Records the trigger event type and time before the start of the animation scene. |
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

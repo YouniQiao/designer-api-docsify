@@ -1,6 +1,6 @@
 # LightStatus (System API)
 
-Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#onerror).
+Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#on_errorerror).
 
 **Since:** 23
 

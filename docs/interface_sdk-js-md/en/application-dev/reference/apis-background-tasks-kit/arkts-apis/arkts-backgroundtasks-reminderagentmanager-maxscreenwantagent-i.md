@@ -12,7 +12,6 @@ Describes the information about the ability that is started automatically and di
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

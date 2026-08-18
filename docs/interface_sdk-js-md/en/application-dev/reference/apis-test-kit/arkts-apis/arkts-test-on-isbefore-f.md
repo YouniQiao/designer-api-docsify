@@ -13,7 +13,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 export function isBefore(on: On): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [On](arkts-test-uitest-on-c.md#on) object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given [On](arkts-test-uitest-on-c.md) object,used to locate Component relatively.
 
 **Since:** 23
 

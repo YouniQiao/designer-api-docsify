@@ -139,6 +139,6 @@ Obtains data. Used to obtain the specific content of the message, supporting the
 
 | Type | Description |
 | -- | -- |
-| void* | Pointer to the message data. The data length is returned via the dataLength output parameter. The<br>         lifecycle of the returned pointer is bound to the message object. The pointer becomes invalid after the<br>         message is destroyed, and the caller should not free this memory. |
+| void* | Pointer to the message data. The data length is returned via the dataLength output parameter. The          lifecycle of the returned pointer is bound to the message object. The pointer becomes invalid after the          message is destroyed, and the caller should not free this memory. |
 
 

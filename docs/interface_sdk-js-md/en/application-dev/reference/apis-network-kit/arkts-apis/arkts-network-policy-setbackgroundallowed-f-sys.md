@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback<void>): void
 ```
 
-Control if applications can use data on background.
+Sets whether background applications are allowed to access the network. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Control if applications can use data on background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAllowed | boolean | Yes | Allow applications to use data on background. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setBackgroundAllowed. |
+| isAllowed | boolean | Yes | Whether background applications are allowed to use mobile data. The value **true** indicates that background applications are allowed to use mobile data, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ policy.setBackgroundAllowed(true, (error: BusinessError) => {
 function setBackgroundAllowed(isAllowed: boolean): Promise<void>
 ```
 
-Control if applications can use data on background.
+Sets whether background applications are allowed to access the network. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -75,13 +75,13 @@ Control if applications can use data on background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAllowed | boolean | Yes | Allow applications to use data on background. |
+| isAllowed | boolean | Yes | Whether background applications are allowed to use mobile data. The value **true** indicates that background applications are allowed to use mobile data, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## linkType
@@ -19,7 +20,7 @@
 linkType: LinkType
 ```
 
-代理通道的链路类型，取值范围见[LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md#linktype)，目前仅支持LINK_BR（蓝牙BR协议）。
+代理通道的链路类型，取值范围见[LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)，目前仅支持LINK_BR（蓝牙BR协议）。
 
 **类型：** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 

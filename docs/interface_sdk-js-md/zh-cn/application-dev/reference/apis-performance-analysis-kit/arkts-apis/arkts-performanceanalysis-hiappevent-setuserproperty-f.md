@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserProperty
@@ -11,7 +12,7 @@
 function setUserProperty(name: string, value: string): void
 ```
 
-设置用户属性值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md#processor)数据处理者时进行关联。
+设置用户属性值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md)数据处理者时进行关联。
 
 **起始版本：** 23
 

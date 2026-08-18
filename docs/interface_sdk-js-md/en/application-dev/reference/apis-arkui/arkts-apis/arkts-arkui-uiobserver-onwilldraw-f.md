@@ -6,7 +6,7 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_willDraw
+## on_willDraw('willDraw')
 
 ```TypeScript
 export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void
@@ -30,7 +30,7 @@ Listens for drawing instruction dispatch in each frame.
 | --- | --- | --- | --- |
 | type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

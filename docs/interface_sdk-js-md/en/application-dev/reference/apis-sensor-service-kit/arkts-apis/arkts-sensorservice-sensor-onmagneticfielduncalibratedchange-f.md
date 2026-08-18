@@ -24,7 +24,7 @@ Subscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated magnetic field data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated magnetic field data. |
 | options | Options | No | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **Error codes:**

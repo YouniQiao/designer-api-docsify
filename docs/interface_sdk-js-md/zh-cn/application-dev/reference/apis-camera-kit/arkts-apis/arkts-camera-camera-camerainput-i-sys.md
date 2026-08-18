@@ -1,6 +1,6 @@
 # CameraInput
 
-相机设备输入对象。 会话中[Session](arkts-camera-camera-session-i.md#session)使用的相机信息。
+相机设备输入对象。 会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## closeDelayed
@@ -86,7 +88,7 @@ Control auxiliary.
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-## off_cameraOcclusionDetection
+## off_cameraOcclusionDetection('cameraOcclusionDetection')
 
 ```TypeScript
 off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
@@ -109,7 +111,7 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可 触发该事件并返回结果。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否 则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否 则取消所有callback。 |
 
 **错误码：**
 
@@ -117,7 +119,7 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 22 |
 
-## on_cameraOcclusionDetection
+## on_cameraOcclusionDetection('cameraOcclusionDetection')
 
 ```TypeScript
 on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void
@@ -140,7 +142,7 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可 触发该事件并返回结果。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
 
 **错误码：**
 

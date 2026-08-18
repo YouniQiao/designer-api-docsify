@@ -1,8 +1,8 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)。 闪光灯类，对设备闪光灯操作。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。 闪光灯类，对设备闪光灯操作。
 
-**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)
+**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)。 �
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableLcdFlash

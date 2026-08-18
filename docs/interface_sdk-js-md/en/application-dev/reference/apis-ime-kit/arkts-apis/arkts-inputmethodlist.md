@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## Summary

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ValueType, ValuesBucket } from '@kit.ArkData';
 ```
 
 ## 汇总

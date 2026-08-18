@@ -12,7 +12,6 @@ Used to indicate the playback state of the current media. If the playback state 
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activeItemId
@@ -109,7 +108,7 @@ Current Favorite Status
 loopMode?: LoopMode
 ```
 
-Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.md#loopmode)
+Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
@@ -163,7 +162,7 @@ Current muted status
 position?: PlaybackPosition
 ```
 
-Current playback position of this media. See [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md#playbackposition)
+Current playback position of this media. See [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
 **Type:** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
@@ -199,7 +198,7 @@ Current playback speed
 state?: PlaybackState
 ```
 
-Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackstate-e.md#playbackstate)
+Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
 **Type:** PlaybackState
 

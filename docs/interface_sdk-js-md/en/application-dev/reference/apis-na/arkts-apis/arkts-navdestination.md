@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [NavDestination](arkts-na-navdestination-navdestination-f.md#navdestination) | Defines NavDestination Component |
+| [NavDestination](arkts-na-navdestination-navdestination-f.md) | Defines NavDestination Component |
 
 ### Interfaces
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## offActiveStateChange
@@ -15,7 +14,7 @@ function offActiveStateChange(
     callback?: Callback<ActiveChangeResponse>): void
 ```
 
-Unsubscribes from permission usage status change events for a specified permission list. After a successful unsubscription, status change notifications for the specified permission list will no longer be received. When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch. > **NOTE：**> This API is typically used in conjunction with [onActiveStateChange](arkts-ability-privacymanager-onactivestatechange-f-sys.md#onactivestatechange) to cancel the listening relationship created by onActiveStateChange.
+Unsubscribes from permission usage status change events for a specified permission list. After a successful unsubscription, status change notifications for the specified permission list will no longer be received. When unsubscribing, if no callback function is passed in, all callback functions under the permissionList are deleted in batch. > **NOTE：**> This API is typically used in conjunction with onActiveStateChange to cancel the listening relationship created by onActiveStateChange.
 
 **Since:** 23
 
@@ -34,7 +33,7 @@ Unsubscribes from permission usage status change events for a specified permissi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, unsubscribes from all permission status changes. Must be consistent with the input of on. <br>Value constraint: The array length cannot exceed 1024. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | No | Callback used to return the object for unsubscribing from the status change event of the specified tokenId and permission names. Must be consistent with the callback passed to onActiveStateChange. If this parameter is not provided, all callback functions under permissionList will be deleted in batch. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | No | Callback used to return the object for unsubscribing from the status change event of the specified tokenId and permission names. Must be consistent with the callback passed to onActiveStateChange. If this parameter is not provided, all callback functions under permissionList will be deleted in batch. |
 
 **Error codes:**
 

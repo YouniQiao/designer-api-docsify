@@ -1,3 +1,0 @@
-# PatternLockModifier
-
-## Summary

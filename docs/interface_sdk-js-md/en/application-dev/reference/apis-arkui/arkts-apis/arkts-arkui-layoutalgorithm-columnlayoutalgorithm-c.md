@@ -2,7 +2,7 @@
 
 Vertical linear layout algorithm class. > **NOTE：**> > The object of the **ColumnLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Constructs the vertical linear layout algorithm class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ColumnLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the vertical linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
+| option | [ColumnLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the vertical linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
 ## alignItems
 
@@ -110,7 +110,7 @@ Vertical alignment mode of all child components. Default value: **FlexAlign.Star
 
 Vertical spacing between elements in a vertical layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

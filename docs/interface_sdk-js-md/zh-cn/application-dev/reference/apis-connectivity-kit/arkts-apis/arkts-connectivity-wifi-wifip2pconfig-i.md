@@ -6,7 +6,7 @@ P2P配置。
 
 **废弃版本：** 9
 
-**替代接口：** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md#wifip2pconfig)
+**替代接口：** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md)
 
 <!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
@@ -15,6 +15,10 @@ P2P配置。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress

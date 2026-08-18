@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Button](../../apis-na/arkts-apis/arkts-na-promptaction-button-i.md#button)
+**替代接口：** [Button](../../apis-na/arkts-apis/arkts-na-promptaction-button-i.md)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## color

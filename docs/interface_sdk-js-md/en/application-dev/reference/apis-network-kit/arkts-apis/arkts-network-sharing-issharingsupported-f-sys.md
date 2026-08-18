@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function isSharingSupported(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this device allows for network sharing.
+Checks whether network sharing is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Checks whether this device allows for network sharing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} indicating network sharing is supported; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ sharing.isSharingSupported((error: BusinessError, data: boolean) => {
 function isSharingSupported(): Promise<boolean>
 ```
 
-Checks whether this device allows for network sharing.
+Checks whether network sharing is supported. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -75,7 +75,7 @@ Checks whether this device allows for network sharing.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
 
 **Error codes:**
 

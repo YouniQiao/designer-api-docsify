@@ -12,8 +12,6 @@ This interface implements audio volume management. Before calling any API in Aud
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -461,7 +459,7 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Distributed deice net work id |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -694,7 +692,7 @@ Unsubscribes from active volume type changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -725,7 +723,7 @@ Unsubscribes to the app volume change events..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -755,7 +753,7 @@ Unsubscribes to the system volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -786,7 +784,7 @@ Unsubscribes from the system volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used in the subscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used in the subscription. |
 
 **Error codes:**
 
@@ -815,7 +813,7 @@ Unsubscribes from system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
@@ -824,7 +822,7 @@ Unsubscribes from system volume percentage change events.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## off_activeVolumeTypeChange
+## off_activeVolumeTypeChange('activeVolumeTypeChange')
 
 ```TypeScript
 off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
@@ -845,7 +843,7 @@ Unsubscribes from active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -854,7 +852,7 @@ Unsubscribes from active volume type changes.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## off_appVolumeChangeForUid
+## off_appVolumeChangeForUid('appVolumeChangeForUid')
 
 ```TypeScript
 off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void
@@ -877,7 +875,7 @@ Unsubscribes to the app volume change events..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -887,7 +885,7 @@ Unsubscribes to the app volume change events..
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## off_systemVolumeChange
+## off_systemVolumeChange('systemVolumeChange')
 
 ```TypeScript
 off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void
@@ -908,7 +906,7 @@ Unsubscribes to the system volume change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -937,7 +935,7 @@ Subscribes to active volume type changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -969,7 +967,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | The app's uid. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
@@ -999,7 +997,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 
@@ -1031,7 +1029,7 @@ Subscribes to system volume change events. When the system volume for the target
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | Yes | Filter for system volume changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback to receive information about the system volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback to receive information about the system volume. |
 
 **Error codes:**
 
@@ -1060,7 +1058,7 @@ Subscribes to system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
@@ -1069,7 +1067,7 @@ Subscribes to system volume percentage change events.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## on_activeVolumeTypeChange
+## on_activeVolumeTypeChange('activeVolumeTypeChange')
 
 ```TypeScript
 on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
@@ -1090,7 +1088,7 @@ Subscribes to active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -1099,7 +1097,7 @@ Subscribes to active volume type changes.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## on_appVolumeChangeForUid
+## on_appVolumeChangeForUid('appVolumeChangeForUid')
 
 ```TypeScript
 on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void
@@ -1123,7 +1121,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | Yes | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | int | Yes | The app's uid. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
@@ -1133,7 +1131,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-## on_systemVolumeChange
+## on_systemVolumeChange('systemVolumeChange')
 
 ```TypeScript
 on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void
@@ -1154,7 +1152,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 

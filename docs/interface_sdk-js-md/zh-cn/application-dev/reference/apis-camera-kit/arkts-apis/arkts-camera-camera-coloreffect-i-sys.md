@@ -1,8 +1,8 @@
 # ColorEffect（系统接口）
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery系统接口) Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) Provides the APIs to obtain and set the lens color effect.
 
-**继承/实现关系：** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery系统接口)
+**继承/实现关系：** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getColorEffect

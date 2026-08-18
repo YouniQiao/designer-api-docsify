@@ -6,7 +6,7 @@ Location subsystem command structure
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md#locationcommand)
+**Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -90,7 +90,7 @@ Formats the region of interest (ROI) configuration from an OH_AVFormat handleint
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.<br>     <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the string is successfully formatted and appended.<br>     <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if the roiStrInOut pointer or format handle is NULL,<br>     or if the format lacks required ROI keys.<br>     <br>Returns [AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode) if internal memory allocation or reallocation fails. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.      <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the string is successfully formatted and appended.      <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if the roiStrInOut pointer or format handle is NULL,      or if the format lacks required ROI keys.      <br>Returns [AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode) if internal memory allocation or reallocation fails. |
 
 ### OH_VideoMetadata_GetRoiCount()
 
@@ -115,7 +115,7 @@ Pre-parses the ROI string to obtain the number of valid ROI regions contained wi
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.<br>     <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the operation is successful.<br>     <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if the roiStr or outCount pointer is NULL. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.      <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the operation is successful.      <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if the roiStr or outCount pointer is NULL. |
 
 ### OH_VideoMetadata_ParseRoiString()
 
@@ -149,6 +149,6 @@ Parses the ROI string and populates the caller-provided OH_AVFormat array.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.<br>     <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the operation is successful.<br>     <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if roiStr, outOwnedFormats, or outCount is NULL. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | Result code.      <br>Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the operation is successful.      <br>Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if roiStr, outOwnedFormats, or outCount is NULL. |
 
 

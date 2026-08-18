@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains active notifications of this application. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications)
+**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md)
 
 <!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
 
@@ -32,7 +30,7 @@ Obtains active notifications of this application. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getActiveNotifications
@@ -47,7 +45,7 @@ Obtains active notifications of this application. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md#getactivenotifications)
+**Substitutes:** [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md)
 
 <!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 

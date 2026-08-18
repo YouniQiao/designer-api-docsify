@@ -435,7 +435,7 @@ Obtains sensor data. The data length and content depend on the sensor type.The f
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>SENSOR_SUCCESS</b> if the operation is successful;<br> returns an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
+| int32_t | Returns <b>SENSOR_SUCCESS</b> if the operation is successful;  returns an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise. |
 
 ### OH_Sensor_CreateSubscriptionId()
 
@@ -545,7 +545,7 @@ Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribut
 
 | Type | Description |
 | -- | -- |
-| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful; NULL<br> otherwise. |
+| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful; NULL  otherwise. |
 
 ### OH_Sensor_DestroySubscriptionAttribute()
 
@@ -637,7 +637,7 @@ Defines the callback function used to report sensor data.
 
 | Parameter | Description |
 | -- | -- |
-| (Sensor_Event \*event | Pointer to the sensor data information. |
+| [Sensor_Event](capi-sensor-sensor-event.md) \*event | Pointer to the sensor data information. |
 
 ### OH_Sensor_CreateSubscriber()
 

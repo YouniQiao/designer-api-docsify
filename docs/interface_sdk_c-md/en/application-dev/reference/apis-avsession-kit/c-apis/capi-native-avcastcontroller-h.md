@@ -74,7 +74,7 @@ Declaring the callback struct for playback state change
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | OH_AVSession_AVPlaybackState\* playbackState | the [OH_AVSession_AVPlaybackState](capi-ohavsession-oh-avsession-avplaybackstate.md)pointer variable which will be set the changed playback state. |
 | userdata | userdata which is passed by register. |
 
@@ -94,7 +94,7 @@ Declaring the callback struct for media item change
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md)\* avQueueItem | the [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md)pointer variable which will be set the changed media item info. |
 | userdata | userdata which is passed by register |
 
@@ -114,7 +114,7 @@ Declaring the callback struct for Play Next
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | userdata | userdata which is passed by register. |
 
 ### OH_AVCastControllerCallback_PlayPrevious()
@@ -133,7 +133,7 @@ Declaring the callback struct for Play Previous
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | userdata | userdata which is passed by register. |
 
 ### OH_AVCastControllerCallback_SeekDone()
@@ -152,7 +152,7 @@ Declaring the callback struct for seekDone
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | int32_t position | position value after seek. |
 | userdata | userdata which is passed by register. |
 
@@ -172,7 +172,7 @@ Declaring the callback struct for EndOfStream
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | userdata | userdata which is passed by register. |
 
 ### OH_AVCastControllerCallback_Error()
@@ -191,7 +191,7 @@ Declaring the callback struct for cast play error
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCastController\* avcastcontroller | the OH_AVCastController instance pointer. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
 | userdata | userdata which is passed by register. |
 | [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) error | cast play error code |
 
@@ -217,7 +217,7 @@ Request to destroy the avcastcontroller.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode) The param of avcastcontroller is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode) The param of avcastcontroller is nullptr. |
 
 ### OH_AVCastController_GetPlaybackState()
 
@@ -242,7 +242,7 @@ Get the playback status of the current player.Do not release the playbackState p
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of playbackState is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of playbackState is nullptr. |
 
 ### OH_AVCastController_RegisterPlaybackStateChangedCallback()
 
@@ -269,7 +269,7 @@ Request to register playback state changed callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr.<br>                                                 3. filter is invalid |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr.                                                  3. filter is invalid |
 
 ### OH_AVCastController_UnregisterPlaybackStateChangedCallback()
 
@@ -294,7 +294,7 @@ Request to unregister playback state changed callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code：<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code：          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterMediaItemChangedCallback()
 
@@ -320,7 +320,7 @@ Request to register current media changed callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterMediaItemChangedCallback()
 
@@ -345,7 +345,7 @@ Request to unregister current media item changed callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterPlayNextCallback()
 
@@ -371,7 +371,7 @@ Request to register playnext callback send by remote side or media center.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterPlayNextCallback()
 
@@ -396,7 +396,7 @@ Request to unregister playnext callback send by remote side or media center.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterPlayPreviousCallback()
 
@@ -422,7 +422,7 @@ Request to register playprevious command callback send by remote side or media c
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterPlayPreviousCallback()
 
@@ -447,7 +447,7 @@ Request to unregister playprevious command callback send by remote side or media
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterSeekDoneCallback()
 
@@ -473,7 +473,7 @@ Request to register seek done callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterSeekDoneCallback()
 
@@ -498,7 +498,7 @@ Request to unregister seek done callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterEndOfStreamCallback()
 
@@ -524,7 +524,7 @@ Request to register end of stream callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterEndOfStreamCallback()
 
@@ -549,7 +549,7 @@ Request to unregister end of stream callback.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterErrorCallback()
 
@@ -575,7 +575,7 @@ Request to register listener for playback error events.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterErrorCallback()
 
@@ -600,7 +600,7 @@ Request to unregister listener for playback error events.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of callback is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_SendCommonCommand()
 
@@ -625,7 +625,7 @@ Request to send common command to Remote, only support to send play pause stop p
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode) The param of avcastcontroller is nullptr.<br>         [AV_SESSION_ERR_CODE_COMMAND_INVALID](capi-native-avsession-errors-h.md#avsession_errcode) The param of avCastControlcommand is invalid.<br>         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode) The param of avcastcontroller is nullptr.          [AV_SESSION_ERR_CODE_COMMAND_INVALID](capi-native-avsession-errors-h.md#avsession_errcode) The param of avCastControlcommand is invalid.          [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_SendSeekCommand()
 
@@ -650,7 +650,7 @@ Request to send seek command to Remote.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>        [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>        [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>        [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                               1. The param of avcastcontroller is nullptr.<br>                                               2. seekTimeMS invalid.<br>        [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                1. The param of avcastcontroller is nullptr.                                                2. seekTimeMS invalid.         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_SendFastForwardCommand()
 
@@ -675,7 +675,7 @@ Request to send forward command to Remote.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>        [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>        [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>        [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                1. The param of avcastcontroller is nullptr.<br>                                                2. forwardTimeS invalid.<br>        [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                 1. The param of avcastcontroller is nullptr.                                                 2. forwardTimeS invalid.         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_SendRewindCommand()
 
@@ -700,7 +700,7 @@ Request to send rewind command to Remote.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>        [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>        [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>        [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                1. The param of avcastcontroller is nullptr.<br>                                                2. rewindTimeS invalid.<br>        [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                 1. The param of avcastcontroller is nullptr.                                                 2. rewindTimeS invalid.         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_SendSetSpeedCommand()
 
@@ -725,7 +725,7 @@ Request to send set speed command to Remote.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. speed invalid.<br>         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. speed invalid.          [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_SendVolumeCommand()
 
@@ -750,7 +750,7 @@ Request to send volume command to Remote.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. volume invalid.<br>         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. volume invalid.          [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_Prepare()
 
@@ -775,7 +775,7 @@ Request to prepare the current player item, this is needed for sink media inform
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of avqueueItem is nullptr.<br>         [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of avqueueItem is nullptr.          [AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST](capi-native-avsession-errors-h.md#avsession_errcode) The remote connection is not established. |
 
 ### OH_AVCastController_Start()
 
@@ -800,6 +800,6 @@ Request to Play the current item, should contain media uri otherwise the playbac
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1. The param of avcastcontroller is nullptr.<br>                                                 2. The param of avqueueItem is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_SERVICE_EXCEPTION](capi-native-avsession-errors-h.md#avsession_errcode) Internal server error.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of avqueueItem is nullptr. |
 
 

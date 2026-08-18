@@ -18,7 +18,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -31,7 +31,7 @@ Obtain current location
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -63,7 +63,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -75,7 +75,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -106,7 +106,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

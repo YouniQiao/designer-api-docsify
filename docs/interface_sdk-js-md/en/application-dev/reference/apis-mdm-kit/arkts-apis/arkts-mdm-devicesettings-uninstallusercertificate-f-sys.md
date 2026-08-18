@@ -18,7 +18,7 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallusercertificate)
+**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -35,8 +35,8 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installusercertificate-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md#uninstallusercertificate)
+**Substitutes:** [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -101,7 +101,7 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md#installusercertificate-system-api). |
+| certUri | string | Yes | Certificate URI, which is set and returned by the user certification installation API [installUserCertificate](arkts-mdm-devicesettings-installusercertificate-f-sys.md). |
 
 **Return value:**
 

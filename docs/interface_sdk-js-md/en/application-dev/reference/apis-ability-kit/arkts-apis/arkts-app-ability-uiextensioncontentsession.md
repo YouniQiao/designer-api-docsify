@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -16,7 +15,7 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -24,7 +23,7 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

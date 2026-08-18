@@ -6,7 +6,7 @@ Enumerates the audio content types.
 
 **Deprecated since:** 10
 
-**Substitutes:** [StreamUsage](arkts-audio-audio-streamusage-e.md#streamusage)
+**Substitutes:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 <!--Device-audio-enum ContentType--><!--Device-audio-enum ContentType-End-->
 
@@ -24,7 +24,7 @@ Unknown content.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_UNKNOWN](arkts-audio-audio-streamusage-e.md#streamusageunknown)
+**Substitutes:** [STREAM_USAGE_UNKNOWN](arkts-audio-audio-streamusage-e.md#stream_usage_unknown)
 
 <!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0--><!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0-End-->
 
@@ -42,7 +42,7 @@ Speech.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#streamusagevoicecommunication)
+**Substitutes:** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#stream_usage_voice_communication)
 
 <!--Device-ContentType-CONTENT_TYPE_SPEECH = 1--><!--Device-ContentType-CONTENT_TYPE_SPEECH = 1-End-->
 
@@ -60,7 +60,7 @@ Music.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusagemusic)
+**Substitutes:** [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#stream_usage_music)
 
 <!--Device-ContentType-CONTENT_TYPE_MUSIC = 2--><!--Device-ContentType-CONTENT_TYPE_MUSIC = 2-End-->
 
@@ -78,7 +78,7 @@ Movie.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusagemovie)
+**Substitutes:** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#stream_usage_movie)
 
 <!--Device-ContentType-CONTENT_TYPE_MOVIE = 3--><!--Device-ContentType-CONTENT_TYPE_MOVIE = 3-End-->
 
@@ -96,7 +96,7 @@ Notification tone.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#streamusagenotification)
+**Substitutes:** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#stream_usage_notification)
 
 <!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4--><!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4-End-->
 
@@ -114,7 +114,7 @@ Ringtone.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_RINGTONE](arkts-audio-audio-streamusage-e.md#streamusageringtone)
+**Substitutes:** [STREAM_USAGE_RINGTONE](arkts-audio-audio-streamusage-e.md#stream_usage_ringtone)
 
 <!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5--><!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5-End-->
 

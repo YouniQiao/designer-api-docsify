@@ -14,7 +14,6 @@ Defines the clearance configuration of a device-cloud synergy database.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## dbInfo

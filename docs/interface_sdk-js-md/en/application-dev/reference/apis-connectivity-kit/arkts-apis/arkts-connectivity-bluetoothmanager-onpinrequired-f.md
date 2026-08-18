@@ -6,7 +6,7 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_pinRequired
+## on_pinRequired('pinRequired')
 
 ```TypeScript
 function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void
@@ -33,7 +33,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 

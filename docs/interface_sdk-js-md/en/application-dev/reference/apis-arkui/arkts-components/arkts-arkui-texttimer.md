@@ -26,9 +26,14 @@ Create TextTimer component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | No | Parameters of the **TextTimer** component. The default value is inherited from [TextTimerOptions](arkts-arkui-texttimeroptions-i.md#texttimeroptions). |
+| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | No | Parameters of the **TextTimer** component. The default value is inherited from [TextTimerOptions](arkts-arkui-texttimeroptions-i.md). |
 
 ## Summary
 
-- [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)
-- [TextTimerOptions](arkts-arkui-texttimeroptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | Defines the **TextTimer** configuration used by the **ContentModifier** API. You need a custom class to implement the **ContentModifier** API. |
+| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | Sets the options used to build the **TextTimer** component. |
+

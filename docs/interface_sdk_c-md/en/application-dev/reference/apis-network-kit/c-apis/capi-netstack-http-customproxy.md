@@ -20,8 +20,6 @@ Defines the custom proxy configuration.
 
 | Name | Description |
 | -- | -- |
-| const char *host;
-    int32_t port;
-    const char *exclusionLists | Host name of the proxy server. If no port is explicitly set, the port number is defaulted to **1080**. |
+| const char *host; int32_t port; const char *exclusionLists | Host name of the proxy server. If no port is explicitly set, the port number is defaulted to **1080**. |
 
 

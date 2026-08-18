@@ -12,7 +12,6 @@ Defines the predicates for an RDB store. This class determines whether the condi
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and

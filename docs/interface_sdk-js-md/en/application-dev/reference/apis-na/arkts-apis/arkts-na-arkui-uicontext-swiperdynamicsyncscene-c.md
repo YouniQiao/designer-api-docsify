@@ -2,7 +2,7 @@
 
 Represents a dynamic synchronization scene of Swiper.
 
-**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md#dynamicsyncscene)
+**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
 **Since:** 23
 

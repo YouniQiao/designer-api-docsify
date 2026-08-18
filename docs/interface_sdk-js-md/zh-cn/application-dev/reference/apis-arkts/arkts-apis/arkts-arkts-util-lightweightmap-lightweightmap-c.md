@@ -11,6 +11,8 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 ## 导入模块
 
 ```TypeScript
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
 ```
 
 ## $_iterator

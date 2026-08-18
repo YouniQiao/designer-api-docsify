@@ -238,9 +238,9 @@ distributedOption?: DistributedOptions
 extraInfo?: Record<string, RecordData>
 ```
 
-扩展参数。为应用提供定制服务。默认为空。 以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#want) 中的uri字段，使用 [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) 接口获取该信息。
+扩展参数。为应用提供定制服务。默认为空。 以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。 - 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用 [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) 接口获取该信息。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -302,7 +302,7 @@ id?: int
 isAlertOnce?: boolean
 ```
 
-发布或更新该通知时，是否只进行一次通知提醒，默认值为false。 - true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#slotlevel)。 - false：每次均按照配置的通知提醒方式进行提醒。
+发布或更新该通知时，是否只进行一次通知提醒，默认值为false。 - true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md)。 - false：每次均按照配置的通知提醒方式进行提醒。
 
 **类型：** boolean
 
@@ -430,7 +430,7 @@ largeIcon?: image.PixelMap
 notificationFlags?: NotificationFlags
 ```
 
-通知标志位设置，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-notificationmanager-slottype-e.md#slottype)时，该参数设置不生效。
+通知标志位设置，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为 [LIVE_VIEW](arkts-notification-notificationmanager-slottype-e.md)时，该参数设置不生效。
 
 **类型：** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
@@ -462,7 +462,7 @@ notificationSlotType?: notificationManager.SlotType
 priorityNotificationType?: notificationManager.PriorityNotificationType
 ```
 
-通知优先级类型，默认值为OTHER。设置该参数可使通知置顶，并且在通知中心以突出方式显示。&lt;!--RP2--&gt;&lt;!--RP2End--&gt;实际显示效果依赖于设备能力和通知中心UI样式。
+通知优先级类型，默认值为OTHER。设置该参数可使通知置顶，并且在通知中心以突出方式显示。<!--RP2--><!--RP2End-->实际显示效果依赖于设备能力和通知中心UI样式。
 
 **类型：** notificationManager.PriorityNotificationType
 
@@ -480,7 +480,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 removalWantAgent?: WantAgent
 ```
 
-封装了应用的行为意图，移除通知时触发该行为，默认为空。 当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-wantagentinfo-i.md#wantagentinfo)的actionType字段取值为4）。
+封装了应用的行为意图，移除通知时触发该行为，默认为空。 当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-wantagentinfo-i.md)的actionType字段取值为4）。
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
@@ -548,7 +548,7 @@ smallIcon?: image.PixelMap
 sound?: string
 ```
 
-应用通知自定义铃声资源路径，默认为空。支持两种音频资源来源： - 资源文件：应用预置的音频文件，资源文件必须放在resources/rawfile目录下，使用时直接传入文件名。 - 沙箱文件：网络下载或者用户生成的音频文件，必须放在沙箱文件目录EL1区域的files目录或 者其子目录下，传入格式为uri::{fileUri}，其中fileUri是通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)获取的路径。例如，应用 将下载的音频资源demo.mp3传入沙箱文件目录/data/storage/el1/base/files/，通过getUriFromPath获取的路径为file://{bundleName}/data/storage/el1/ base/files/demo.mp3，使用该路径发布通知即可播放应用下载的音频资源。 支持m4a、aac、mp3、ogg、wav、flac、amr等格式。
+应用通知自定义铃声资源路径，默认为空。支持两种音频资源来源： - 资源文件：应用预置的音频文件，资源文件必须放在resources/rawfile目录下，使用时直接传入文件名。 - 沙箱文件：网络下载或者用户生成的音频文件，必须放在沙箱文件目录EL1区域的files目录或 者其子目录下，传入格式为uri::{fileUri}，其中fileUri是通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)获取的路径。例如，应用 将下载的音频资源demo.mp3传入沙箱文件目录/data/storage/el1/base/files/，通过getUriFromPath获取的路径为file://{bundleName}/data/storage/el1/ base/files/demo.mp3，使用该路径发布通知即可播放应用下载的音频资源。 支持m4a、aac、mp3、ogg、wav、flac、amr等格式。
 
 **类型：** string
 

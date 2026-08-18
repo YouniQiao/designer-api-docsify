@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formObserver } from '@kit.FormKit';
-import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfosByFilter
@@ -81,7 +80,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formProviderFilter | formInfo.FormProviderFilter | Yes | Indicates the form provider app info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback of getFormInstancesByFilter. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback of getFormInstancesByFilter. |
 
 **Error codes:**
 

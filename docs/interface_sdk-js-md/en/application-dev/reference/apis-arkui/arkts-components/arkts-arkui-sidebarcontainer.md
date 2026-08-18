@@ -28,7 +28,17 @@ Creates a sidebar container.
 
 ## Summary
 
-- [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
-- [ButtonStyle](arkts-arkui-buttonstyle-i.md)
-- [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md)
-- [SideBarPosition](arkts-arkui-sidebarposition-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. > **NOTE：**> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Describes the style of the sidebar control button. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | Enumerates the types of sidebar containers. |
+| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Enumerates the positions of the sidebar. |
+

@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -33,5 +30,5 @@ Unsubscribes from the "senior mode" change event of the app itself. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback for the senior mode state change event. It must be the same as the callback in [accessibility.onSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md#onseniormodestatechangeforself). If not specified, all registered events are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback for the senior mode state change event. It must be the same as the callback in [accessibility.onSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md). If not specified, all registered events are unregistered. |
 

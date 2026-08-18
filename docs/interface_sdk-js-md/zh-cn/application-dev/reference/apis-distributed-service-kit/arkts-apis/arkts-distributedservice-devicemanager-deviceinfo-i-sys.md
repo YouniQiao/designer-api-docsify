@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)
+**替代接口：** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authForm

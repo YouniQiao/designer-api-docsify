@@ -25,7 +25,7 @@
 | [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) | Defines UserDataSpan. Used to store and obtain user data. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -66,7 +66,7 @@
 | [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | Defines the StyledString style type. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

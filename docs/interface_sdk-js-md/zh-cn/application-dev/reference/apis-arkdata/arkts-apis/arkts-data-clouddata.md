@@ -5,6 +5,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## 汇总

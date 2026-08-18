@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
-import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getSecurityPatchTag
@@ -19,7 +18,7 @@ Queries the security patch tag of a device.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md#getsecuritystatus)
+**Substitutes:** [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

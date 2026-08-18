@@ -2,7 +2,7 @@
 
 垂直方向线性布局算法类。 > **说明：** > > ColumnLayoutAlgorithm类对象可以作为 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
 
-**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md#layoutalgorithm)
+**继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **起始版本：** 24
 
@@ -96,7 +96,7 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 
 纵向布局元素垂直方向间距。 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
 

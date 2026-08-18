@@ -19,7 +19,7 @@ Parameters of the shared element transition animation. > **NOTE：**> > **motion
 curve?: Curve | string | ICurve
 ```
 
-Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#animateparam). Default value: **Curve.Linear**
+Animation curve. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md). Default value: **Curve.Linear**
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 

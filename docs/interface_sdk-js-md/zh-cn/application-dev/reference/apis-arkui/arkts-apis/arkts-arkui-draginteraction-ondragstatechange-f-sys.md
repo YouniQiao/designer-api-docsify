@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## onDragStateChange
@@ -25,7 +26,7 @@ Listens for dragging state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | 是 | Indicates the callback to receive the changed dragging state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | 是 | Indicates the callback to receive the changed dragging state. |
 
 **错误码：**
 

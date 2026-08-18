@@ -1,6 +1,6 @@
 # VpnConnection
 
-Defines a VPN connection.
+Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling **vpnExt.createVpnConnection**.
 
 **Since:** 11
 
@@ -17,14 +17,14 @@ import { vpnExtension } from '@kit.NetworkKit';
 ## create
 
 ```TypeScript
-create(config: VpnConfig): Promise<number>
+create(config: VpnConfig): Promise<int>
 ```
 
-Create a VPN network using the VpnConfig.
+Creates a VPN based on the specified configuration. This API uses a promise to return the result. > **NOTE：**> > You are advised to call [destroy()](#destroy) or > [destroy(vpnId: string)](#destroy) to destroy the VPN and clear > resources when the VPN is not needed.
 
 **Since:** 11
 
-<!--Device-VpnConnection-create(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<number>-End-->
+<!--Device-VpnConnection-create(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -32,13 +32,13 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md#vpnconfig) configuration of the VPN network. |
+| config | VpnConfig | Yes | VPN configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns file descriptor of VPN interface. |
+| Promise&lt;int&gt; | Promise used to return the result, which is the file descriptor of the virtual network interface card (vNIC). |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 destroy(): Promise<void>
 ```
 
-Destroy the VPN network.
+Destroys a VPN. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -148,7 +148,7 @@ Destroy the VPN network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -185,7 +185,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 destroy(vpnId: string): Promise<void>
 ```
 
-Destroy the VPN network.
+Destroys a VPN based on the specified VPN ID. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -197,13 +197,13 @@ Destroy the VPN network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vpnId | string | Yes | vpn id. |
+| vpnId | string | Yes | Unique VPN ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -239,7 +239,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-generate vpn id.
+Generates a unique VPN ID. This API uses a promise to return the result. To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**. > **NOTE：**> > Currently, the multi-VPN capability of the system supports only IPv4.
 
 **Since:** 20
 
@@ -251,7 +251,7 @@ generate vpn id.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returns vpn id. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -283,14 +283,14 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 ## protect
 
 ```TypeScript
-protect(socketFd: number): Promise<void>
+protect(socketFd: int): Promise<void>
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
+Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API uses a promise to return the result.
 
 **Since:** 11
 
-<!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
+<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -298,13 +298,13 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketFd | number | Yes | File descriptor of socket, this socket from @ohos.net.socket. |
+| socketFd | int | Yes | Socket file descriptor. It can be obtained through [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -354,7 +354,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 protectProcessNet(): Promise<void>
 ```
 
-Protect all socket of the VPN process. After executing this function, all sockets subsequently created by the current process will be protected, while previously created sockets will not be protected.
+Protects application processes against a VPN connection. The data sent through the protected processes is transmitted over the physical network without traversing the VPN. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -366,7 +366,7 @@ Protect all socket of the VPN process. After executing this function, all socket
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

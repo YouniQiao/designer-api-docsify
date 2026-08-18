@@ -30,8 +30,23 @@ Creates a check box group for controlling the select-all or deselect-all state o
 
 ## Summary
 
-- [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md)
-- [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md)
-- [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md)
-- [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md)
-- [SelectStatus](arkts-arkui-selectstatus-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md) | You must customize this class to implement the ContentModifier interface. For details, see contentModifier. |
+| [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | Information about the check box group. |
+| [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | Name and status of a check box group. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Information about the check box group. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SelectStatus](arkts-arkui-selectstatus-e.md) | Enumerates the selection states of check boxes in the check box group. |
+

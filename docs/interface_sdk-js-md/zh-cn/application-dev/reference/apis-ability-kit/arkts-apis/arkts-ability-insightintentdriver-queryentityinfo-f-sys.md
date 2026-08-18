@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## queryEntityInfo
@@ -77,7 +78,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Record
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | Returns the insight intent entity information. |
 
 **错误码：**
 

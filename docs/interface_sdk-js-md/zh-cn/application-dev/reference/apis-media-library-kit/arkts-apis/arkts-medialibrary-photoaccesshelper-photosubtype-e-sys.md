@@ -1,6 +1,6 @@
 # PhotoSubtype（系统接口）
 
-PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)类型的枚举。
+PhotoSubtype是不同[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)类型的枚举。
 
 **起始版本：** 23
 

@@ -43,7 +43,7 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 当前处于显示状态的Swiper子组件的信息。
 
-**类型：** Array&lt;[SwiperItemInfo](arkts-na-arkui-uicontext-swiperiteminfo-i.md)&gt;
+**类型：** Array&lt;[SwiperItemInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swiperiteminfo-i.md)&gt;
 
 **起始版本：** 23
 

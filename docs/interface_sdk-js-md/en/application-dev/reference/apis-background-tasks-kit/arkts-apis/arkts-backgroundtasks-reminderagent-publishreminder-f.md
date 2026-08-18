@@ -5,7 +5,6 @@
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## publishReminder
@@ -33,7 +32,7 @@ Publishes a reminder through the reminder agent. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | Yes | Reminder to be published. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
 
 **Examples**
 

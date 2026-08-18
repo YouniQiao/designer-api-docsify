@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ContainerSpan](arkts-arkui-containerspan-containerspan-f.md#containerspan) | Defines ContainerSpan Component. |
+| [ContainerSpan](arkts-arkui-containerspan-containerspan-f.md) | Defines ContainerSpan Component. |
 
 ### Interfaces
 

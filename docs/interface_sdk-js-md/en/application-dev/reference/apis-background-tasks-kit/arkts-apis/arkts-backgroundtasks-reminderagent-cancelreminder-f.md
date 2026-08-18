@@ -5,7 +5,6 @@
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminder
@@ -31,7 +30,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderId | number | Yes | ID of the reminder. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

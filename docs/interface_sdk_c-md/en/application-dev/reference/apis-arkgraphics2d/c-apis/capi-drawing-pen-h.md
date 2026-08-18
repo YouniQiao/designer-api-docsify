@@ -143,7 +143,7 @@ Creates a copy of the [OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) object.Th
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Pen*](capi-drawing-oh-drawing-pen.md) | Returns the pointer to the [OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) object created. If NULL is returned, the creation fails.<br> The possible failure cause is that no memory is available or pen is NULL. |
+| [OH_Drawing_Pen*](capi-drawing-oh-drawing-pen.md) | Returns the pointer to the [OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) object created. If NULL is returned, the creation fails.  The possible failure cause is that no memory is available or pen is NULL. |
 
 ### OH_Drawing_PenDestroy()
 
@@ -319,7 +319,7 @@ Sets the color for a pen, which is used to outline a shape.The color is in ARGB 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if pen is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if pen is NULL. |
 
 ### OH_Drawing_PenGetAlphaFloat()
 
@@ -344,7 +344,7 @@ Obtains the alpha value of the pen color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if pen or a is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if pen or a is NULL. |
 
 ### OH_Drawing_PenGetRedFloat()
 
@@ -369,7 +369,7 @@ Obtains the red component of the pen color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if pen or r is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if pen or r is NULL. |
 
 ### OH_Drawing_PenGetGreenFloat()
 
@@ -394,7 +394,7 @@ Obtains the green component of the pen color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if pen or g is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if pen or g is NULL. |
 
 ### OH_Drawing_PenGetBlueFloat()
 
@@ -419,7 +419,7 @@ Obtains the blue component of the pen color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if pen or b is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if pen or b is NULL. |
 
 ### OH_Drawing_PenGetWidth()
 

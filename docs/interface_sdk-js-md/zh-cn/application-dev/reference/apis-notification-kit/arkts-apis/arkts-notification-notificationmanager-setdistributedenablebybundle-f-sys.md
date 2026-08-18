@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnableByBundle
@@ -19,7 +18,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)(bundle: BundleOption, deviceType: string, enable: boolean)
+**替代接口：** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md)(bundle: BundleOption, deviceType: string, enable: boolean)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -35,7 +34,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | enable | boolean | 是 | 指定应用是否支持分布式通知（true：支持，false：不支持）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置指定应用是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置指定应用是否支持分布式通知的回调函数。 |
 
 **错误码：**
 
@@ -105,7 +104,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)(bundle: BundleOption, deviceType: string, enable: boolean)
+**替代接口：** [setDistributedEnabledByBundle](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md)(bundle: BundleOption, deviceType: string, enable: boolean)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

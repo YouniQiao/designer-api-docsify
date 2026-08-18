@@ -2,7 +2,7 @@
 
 Definition of base custom dialog class.
 
-**继承/实现关系：** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#extendablecomponent)
+**继承/实现关系：** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md)
 
 **起始版本：** 23
 

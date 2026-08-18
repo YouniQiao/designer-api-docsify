@@ -17,7 +17,7 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-system-api)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md)
 
 <!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
 
@@ -29,7 +29,7 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the check is successful, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the check is successful, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## isSystemReady
@@ -44,7 +44,7 @@ Checks whether the system is ready. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-system-api)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md)
 
 <!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 

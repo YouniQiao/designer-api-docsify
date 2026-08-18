@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { OpenLinkOptions } from '@kit.AbilityKit';
-import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## Summary

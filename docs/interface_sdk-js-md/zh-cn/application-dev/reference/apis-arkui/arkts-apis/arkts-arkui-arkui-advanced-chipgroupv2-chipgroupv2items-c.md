@@ -1,6 +1,6 @@
 # ChipGroupV2Items
 
-ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md#chipgroupv2item)&gt;。
+ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;。
 
 **继承/实现关系：** ChipGroupV2Items extends Array<ChipGroupV2Item>
 
@@ -13,6 +13,7 @@ ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGro
 ## 导入模块
 
 ```TypeScript
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## constructor

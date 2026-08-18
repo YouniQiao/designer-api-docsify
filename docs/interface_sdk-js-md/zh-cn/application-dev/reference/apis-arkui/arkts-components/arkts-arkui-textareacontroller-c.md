@@ -1,6 +1,6 @@
 # TextAreaController
 
-TextArea组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible&lt;!--Del--&gt;以及系统接口 getText&lt;!--DelEnd--&gt;。
+TextArea组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible<!--Del-->以及系统接口 getText<!--DelEnd-->。
 
 ## 导入对象 ```ts controller: TextAreaController = new TextAreaController(); ```
 

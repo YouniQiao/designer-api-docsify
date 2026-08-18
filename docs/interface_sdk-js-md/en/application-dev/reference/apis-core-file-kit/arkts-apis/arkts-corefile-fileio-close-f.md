@@ -17,7 +17,7 @@ Closes a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](arkts-corefile-file-fs-close-f.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-close-f.md)
 
 <!--Device-unnamed-declare function close(fd: number): Promise<void>--><!--Device-unnamed-declare function close(fd: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](arkts-corefile-file-fs-close-f.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-close-f.md)
 
 <!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -59,5 +59,5 @@ Closes a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to close. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is closed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is closed asynchronously. |
 

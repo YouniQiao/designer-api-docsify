@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>
 ```
 
-Query a network trace route.
+Queries the network route tracing information. This API uses a promise to return the result. > **NOTE：**> > To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to > [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1 > End-->, the caller needs to apply for both **ohos.permission.APPROXIMATELY_LOCATION** and > **ohos.permission.LOCATION**.
 
 **Since:** 26.0.0
 
@@ -28,14 +28,14 @@ Query a network trace route.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| destination | string | Yes | the destination domain or address. |
-| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | No | the trace route option. |
+| destination | string | Yes | Target domain name or IP address, for example, www.example.com or 8.8.8.8. |
+| option | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | No | Options for route tracing. If this parameter is not specified, the default configuration is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; | The promise returned by the function. |
+| Promise&lt;[TraceRouteInfo](arkts-network-connection-tracerouteinfo-i.md)[]&gt; | Promise used to return the array of route tracing information. |
 
 **Error codes:**
 

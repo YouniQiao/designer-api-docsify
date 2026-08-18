@@ -24,7 +24,7 @@ Obtain the maximum data size that can be received through this socket channel.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppconnect). |
+| clientSocket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md). |
 
 **Return value:**
 

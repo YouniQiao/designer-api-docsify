@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displaybadge系统接口)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -38,7 +36,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | enable | boolean | 是 | 使能状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
 
 
 ## displayBadge
@@ -53,7 +51,7 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displaybadge系统接口)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

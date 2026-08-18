@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## getSystemResourceManager
@@ -17,7 +18,7 @@ export function getSystemResourceManager(): ResourceManager
 
 **废弃版本：** 20
 
-**替代接口：** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager)
+**替代接口：** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

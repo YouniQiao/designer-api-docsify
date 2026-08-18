@@ -1,6 +1,6 @@
 # NetworkAccessPolicy (System API)
 
-Network policies that limit the specified UID of application to access the network.
+Network access policy.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { policy } from '@kit.NetworkKit';
 allowCellular?: boolean
 ```
 
-Indicate whether the application can be allowed to access the network by cellular.
+Whether the application is allowed to access the cellular network. The value **true** indicates that the application is allowed to access the cellular network, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ Indicate whether the application can be allowed to access the network by cellula
 allowWiFi?: boolean
 ```
 
-Indicate whether the application can be allowed to access the network by wifi.
+Whether the application is allowed to access the Wi-Fi network. The value **true** indicates that the application is allowed to access the Wi-Fi network, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -58,7 +58,7 @@ Indicate whether the application can be allowed to access the network by wifi.
 alwaysAllowCellular?: boolean
 ```
 
-Indicate whether the application can be always allowed to access the network by cellular and users cannot set it.
+Whether the application is always allowed to access the cellular network. The value **true** indicates that the application is always allowed to access the cellular network, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ Indicate whether the application can be always allowed to access the network by 
 alwaysAllowWiFi?: boolean
 ```
 
-Indicate whether the application can be always allowed to access the network by wifi and users cannot set it.
+Whether the application is always allowed to access the Wi-Fi network. The value **true** indicates that the application is always allowed to access the Wi-Fi network, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

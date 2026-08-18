@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## logicalOrientation

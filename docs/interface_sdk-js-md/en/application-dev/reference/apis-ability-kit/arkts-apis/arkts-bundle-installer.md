@@ -14,23 +14,22 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller) | Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result. |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller-system-api) | Obtains a BundleInstaller object. This API uses a promise to return the result. |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) | Obtains a BundleInstaller object. This API is a synchronous API. |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result. |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | Obtains a BundleInstaller object. This API uses a promise to return the result. |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md) | Obtains a BundleInstaller object. This API is a synchronous API. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

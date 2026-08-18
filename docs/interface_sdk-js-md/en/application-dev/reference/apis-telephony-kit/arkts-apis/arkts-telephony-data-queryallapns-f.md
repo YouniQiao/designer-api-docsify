@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function queryAllApns(): Promise<Array<ApnInfo>>
 ```
 
-Query all APN info.
+Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Query all APN info.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; | Returns all APN info of default cellular data card. |
+| Promise&lt;Array&lt;[ApnInfo](arkts-telephony-data-apninfo-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -30,7 +30,7 @@ Sets the short message service center (SMSC) address. This API uses an asynchron
 | --- | --- | --- | --- |
 | slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | smscAddr | string | Yes | SMSC address. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

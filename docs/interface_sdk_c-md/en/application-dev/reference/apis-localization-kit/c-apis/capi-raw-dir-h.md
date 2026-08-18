@@ -53,7 +53,7 @@ Obtains the file name in the `rawfile` directory by index. When you need to trav
 
 | Type | Description |
 | -- | -- |
-| const char * | Pointer to the file name string, which can be used as an input parameter of<br>     {@link OH_ResourceManager_OpenRawFile}.<br>     <br>`NULL` is returned upon failure. Possible causes include `rawDir` being `NULL`, `index` being out of the<br>     valid range, or the directory being empty.<br>     <br>After [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) is called, this pointer is also released. If the file name<br>     needs to be preserved, you must copy the string content in a timely manner. |
+| const char * | Pointer to the file name string, which can be used as an input parameter of      {@link OH_ResourceManager_OpenRawFile}.      <br>`NULL` is returned upon failure. Possible causes include `rawDir` being `NULL`, `index` being out of the      valid range, or the directory being empty.      <br>After [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) is called, this pointer is also released. If the file name      needs to be preserved, you must copy the string content in a timely manner. |
 
 **Reference**:
 
@@ -82,7 +82,7 @@ Obtains the number of subdirectories and files under `rawfile`. When traversal o
 
 | Type | Description |
 | -- | -- |
-| int | Number of rawfile subdirectories and files, without recursively counting files and directories within<br>     `rawfile` subdirectories. `0` is returned if `rawDir` is `NULL` or the directory is empty. |
+| int | Number of rawfile subdirectories and files, without recursively counting files and directories within      `rawfile` subdirectories. `0` is returned if `rawDir` is `NULL` or the directory is empty. |
 
 **Reference**:
 

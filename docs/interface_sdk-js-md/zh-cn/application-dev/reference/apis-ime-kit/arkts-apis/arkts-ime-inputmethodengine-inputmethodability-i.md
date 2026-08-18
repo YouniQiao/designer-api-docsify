@@ -1,6 +1,6 @@
 # InputMethodAbility
 
-InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过 [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取该实例。 下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取到InputMethodAbility实例后，通过实例调用。
+InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过 [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)获取该实例。 下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)获取到InputMethodAbility实例后，通过实例调用。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -19,7 +20,7 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability)（输入法扩展能力）类中调用。使 用callback异步回调。
+创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使 用callback异步回调。
 
 **起始版本：** 23
 
@@ -33,7 +34,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
 | info | PanelInfo | 是 | 输入法面板信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，返回当前创建的输入法面板对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，返回当前创建的输入法面板对象。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability)类中调用。使用promise异 步回调。
+创建输入法面板，仅支持输入法应用在 [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异 步回调。
 
 **起始版本：** 23
 
@@ -155,7 +156,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | panel | Panel | 是 | 要销毁的面板对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -313,7 +314,7 @@ offCallingDisplayDidChange(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -347,7 +348,7 @@ offDiscardTypingText(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -411,7 +412,7 @@ offInputStop(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to terminate itself. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to terminate itself. |
 
 **示例**
 
@@ -440,7 +441,7 @@ offKeyboardHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -472,7 +473,7 @@ offKeyboardShow(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -505,7 +506,7 @@ offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 回调函数，返回向输入法应用发送的私有数据。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 回调函数，返回向输入法应用发送的私有数据。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
@@ -547,7 +548,7 @@ offSecurityModeChange(callback?: Callback<SecurityMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -578,7 +579,7 @@ offSetCallingWindow(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -607,7 +608,7 @@ offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to switch subtype. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to switch subtype. |
 
 **示例**
 
@@ -620,7 +621,7 @@ inputMethodAbility!.offSetSubtype((inputMethodSubtype: InputMethodSubtype) => {
 });
 ```
 
-## off_callingDisplayDidChange
+## off_callingDisplayDidChange('callingDisplayDidChange')
 
 ```TypeScript
 off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
@@ -639,7 +640,7 @@ off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | 是 | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -649,7 +650,7 @@ inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (displa
 });
 ```
 
-## off_discardTypingText
+## off_discardTypingText('discardTypingText')
 
 ```TypeScript
 off(type: 'discardTypingText', callback?: Callback<void>): void
@@ -668,7 +669,7 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。<br/> - 'discardTypingText'：表示取消订阅编辑框应用发送“清 空候选词”事件到输入法。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -678,7 +679,7 @@ inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
 });
 ```
 
-## off_inputStart
+## off_inputStart('inputStart')
 
 ```TypeScript
 off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void
@@ -705,7 +706,7 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 inputMethodEngine.getInputMethodAbility().off('inputStart');
 ```
 
-## off_inputStop
+## off_inputStop('inputStop')
 
 ```TypeScript
 off(type: 'inputStop', callback: () => void): void
@@ -734,7 +735,7 @@ inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
 });
 ```
 
-## off_keyboardHide
+## off_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -766,7 +767,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 });
 ```
 
-## off_keyboardShow
+## off_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -798,7 +799,7 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 });
 ```
 
-## off_privateCommand
+## off_privateCommand('privateCommand')
 
 ```TypeScript
 off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
@@ -817,7 +818,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
@@ -838,7 +839,7 @@ let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDat
 inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
 ```
 
-## off_securityModeChange
+## off_securityModeChange('securityModeChange')
 
 ```TypeScript
 off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
@@ -857,7 +858,7 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -871,7 +872,7 @@ inputMethodAbility.on('securityModeChange', securityChangeCallback);
 inputMethodAbility.off('securityModeChange', securityChangeCallback);
 ```
 
-## off_setCallingWindow
+## off_setCallingWindow('setCallingWindow')
 
 ```TypeScript
 off(type: 'setCallingWindow', callback: (wid: number) => void): void
@@ -900,7 +901,7 @@ inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (windowId: num
 });
 ```
 
-## off_setSubtype
+## off_setSubtype('setSubtype')
 
 ```TypeScript
 off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
@@ -947,7 +948,7 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
 
 **错误码：**
 
@@ -988,7 +989,7 @@ onDiscardTypingText(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1053,7 +1054,7 @@ onInputStop(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 系统要求输入法终止输入流程时触发的回调函数，无入参，用于执行输入停止后的清理逻辑（如隐藏键盘、释放资源等）。 to terminate itself. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 系统要求输入法终止输入流程时触发的回调函数，无入参，用于执行输入停止后的清理逻辑（如隐藏键盘、释放资源等）。 to terminate itself. |
 
 **示例**
 
@@ -1082,7 +1083,7 @@ onKeyboardHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1114,7 +1115,7 @@ onKeyboardShow(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1146,7 +1147,7 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **错误码：**
 
@@ -1190,7 +1191,7 @@ onSecurityModeChange(callback: Callback<SecurityMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
 
 **示例**
 
@@ -1220,7 +1221,7 @@ onSetCallingWindow(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回调用方窗口的Id。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回调用方窗口的Id。 |
 
 **示例**
 
@@ -1249,7 +1250,7 @@ onSetSubtype(callback: Callback<InputMethodSubtype>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 是 | 回调函数，返回设置的输入法子类型。 to switch subtype. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 是 | 回调函数，返回设置的输入法子类型。 to switch subtype. |
 
 **示例**
 
@@ -1262,7 +1263,7 @@ inputMethodAbility!.onSetSubtype((inputMethodSubtype: InputMethodSubtype) => {
 });
 ```
 
-## on_callingDisplayDidChange
+## on_callingDisplayDidChange('callingDisplayDidChange')
 
 ```TypeScript
 on(type: 'callingDisplayDidChange', callback: Callback<number>): void
@@ -1281,7 +1282,7 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | 是 | 设置监听类型，固定取值为'callingDisplayDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 回调函数，返回编辑框设置对应窗口屏幕ID。 |
 
 **错误码：**
 
@@ -1298,7 +1299,7 @@ inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', (display
 inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
 ```
 
-## on_discardTypingText
+## on_discardTypingText('discardTypingText')
 
 ```TypeScript
 on(type: 'discardTypingText', callback: Callback<void>): void
@@ -1317,7 +1318,7 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。<br/> - 'discardTypingText'：表示订阅编辑框应用发送“清空候 选词”事件到输入法。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1327,7 +1328,7 @@ inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
 });
 ```
 
-## on_inputStart
+## on_inputStart('inputStart')
 
 ```TypeScript
 on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void
@@ -1358,7 +1359,7 @@ inputMethodEngine.getInputMethodAbility()
     });
 ```
 
-## on_inputStop
+## on_inputStop('inputStop')
 
 ```TypeScript
 on(type: 'inputStop', callback: () => void): void
@@ -1387,7 +1388,7 @@ inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
 });
 ```
 
-## on_keyboardHide
+## on_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -1419,7 +1420,7 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 });
 ```
 
-## on_keyboardShow
+## on_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -1451,7 +1452,7 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 });
 ```
 
-## on_privateCommand
+## on_privateCommand('privateCommand')
 
 ```TypeScript
 on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
@@ -1470,7 +1471,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | 是 | 设置监听类型，固定取值为'privateCommand'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 回调函数，返回向输入法应用发送的私有数据。 |
 
 **错误码：**
 
@@ -1490,7 +1491,7 @@ let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDat
 inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
 ```
 
-## on_securityModeChange
+## on_securityModeChange('securityModeChange')
 
 ```TypeScript
 on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
@@ -1509,7 +1510,7 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
 
 **示例**
 
@@ -1520,7 +1521,7 @@ inputMethodEngine.getInputMethodAbility()
   });
 ```
 
-## on_setCallingWindow
+## on_setCallingWindow('setCallingWindow')
 
 ```TypeScript
 on(type: 'setCallingWindow', callback: (wid: number) => void): void
@@ -1549,7 +1550,7 @@ inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (windowId: numb
 });
 ```
 
-## on_setSubtype
+## on_setSubtype('setSubtype')
 
 ```TypeScript
 on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void

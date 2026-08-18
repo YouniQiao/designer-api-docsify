@@ -16,7 +16,6 @@ Represents the cloud asset information.
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## assetId

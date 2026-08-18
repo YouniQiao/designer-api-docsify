@@ -11,6 +11,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## 导入模块
 
 ```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -79,7 +80,7 @@ Called to notify the widget provider that a widget is being created.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md#formparam), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
 
 **返回值：**
 
@@ -261,7 +262,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. &lt;!--Del--&gt;Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.&lt;!--DelEnd--&gt;
+Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. <!--Del-->Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.<!--DelEnd-->
 
 **起始版本：** 23
 
@@ -577,7 +578,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
-Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md#updateform) of **formProvider** to update the widget data.
+Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md) of **formProvider** to update the widget data.
 
 **起始版本：** 23
 
@@ -653,7 +654,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). This API can be used in atomic services since API version 11.
 
 **类型：** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 

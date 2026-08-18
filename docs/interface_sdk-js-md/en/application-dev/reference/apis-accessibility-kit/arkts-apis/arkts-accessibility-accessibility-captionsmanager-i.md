@@ -1,6 +1,6 @@
 # CaptionsManager
 
-Manages captions configuration. Before calling any method of **CaptionsManager**, call [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) to obtain a **CaptionsManager** instance.
+Manages captions configuration. Before calling any method of **CaptionsManager**, call [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md) to obtain a **CaptionsManager** instance.
 
 **Since:** 23
 
@@ -12,9 +12,6 @@ Manages captions configuration. Before calling any method of **CaptionsManager**
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -39,7 +36,7 @@ Unregister the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No |  |
 
 ## offStyleChange
 
@@ -59,9 +56,9 @@ Unregister the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
 
-## off_enableChange
+## off_enableChange('enableChange')
 
 ```TypeScript
 off(type: 'enableChange', callback?: Callback<boolean>): void
@@ -82,7 +79,7 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -120,7 +117,7 @@ struct Index {
 }
 ```
 
-## off_styleChange
+## off_styleChange('styleChange')
 
 ```TypeScript
 off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
@@ -141,7 +138,7 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#onenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -197,7 +194,7 @@ Register the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes |  |
 
 ## onStyleChange
 
@@ -217,15 +214,15 @@ Register the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
 
-## on_enableChange
+## on_enableChange('enableChange')
 
 ```TypeScript
 on(type: 'enableChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [off('enableChange')](#offenablechange) > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** > lifecycle callback). Otherwise, a crash may occur.
+Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [off('enableChange')](#off_enablechangeenablechange) > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** > lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -240,7 +237,7 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
 
 **Error codes:**
 
@@ -273,13 +270,13 @@ struct Index {
 }
 ```
 
-## on_styleChange
+## on_styleChange('styleChange')
 
 ```TypeScript
 on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 ```
 
-Subscribes to captions style changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [off('styleChange')](#offenablechange) > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** > lifecycle callback). Otherwise, a crash may occur.
+Subscribes to captions style changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [off('styleChange')](#off_enablechangeenablechange) > is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** > lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -294,7 +291,7 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
 
 **Error codes:**
 

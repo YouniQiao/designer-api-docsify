@@ -12,7 +12,6 @@ Provides a callback for setting the modal dialog box request result.
 
 ```TypeScript
 import { dialogRequest } from '@kit.AbilityKit';
-import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult

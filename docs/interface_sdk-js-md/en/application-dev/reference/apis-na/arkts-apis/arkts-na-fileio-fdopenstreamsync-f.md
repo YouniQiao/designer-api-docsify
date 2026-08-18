@@ -11,7 +11,7 @@
 function fdopenStreamSync(fd: int, mode: string): Stream
 ```
 
-Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md#stream).
+Opens a stream based on an FD. This API returns the result synchronously. To close the stream, use **close()** of [Stream](arkts-na-fileio-stream-i.md).
 
 **Since:** 23
 

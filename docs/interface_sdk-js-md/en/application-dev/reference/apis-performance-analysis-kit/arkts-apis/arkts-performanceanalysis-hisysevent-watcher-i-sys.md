@@ -22,7 +22,7 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#syseventinfo-system-api)) => void
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void
 
 **Type:** (info: SysEventInfo) =&gt; void
 

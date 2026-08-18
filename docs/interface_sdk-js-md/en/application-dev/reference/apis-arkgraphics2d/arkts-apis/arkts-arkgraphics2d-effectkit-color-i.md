@@ -12,7 +12,6 @@ A color class used to store the color picking result. It is suitable for scenari
 
 ```TypeScript
 import { effectKit } from '@kit.ArkGraphics2D';
-import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## alpha

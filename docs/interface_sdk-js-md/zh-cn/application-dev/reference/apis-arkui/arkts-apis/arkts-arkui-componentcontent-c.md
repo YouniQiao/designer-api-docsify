@@ -1,6 +1,6 @@
 # ComponentContent
 
-有两种创建实体封装组件的方式。ComponentContent需要通过update接口手动更新内容，主要适用于弹窗等解耦封装场景；ReactiveComponentContent支持响应式数据自动更新、完整生命周期管理和组件复用，适用 于长列表等高性能渲染场景。开发者可根据实际需求从以下方式中选择。 ComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递，便于开发者对弹窗类组件进行解耦封装。其底层使用了BuilderNode，具体使用规格参考 BuilderNode。 ReactiveComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递。它支持响应式数据自动更新、完整的生命周期管理和组件复用，适用于长列表等需要高性能渲染的场景。其底层使用了 ReactiveBuilderNode，具体使用规格参考[ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md#reactivebuildernode)。 > **说明：** > > - 当前不支持在预览器中使用ComponentContent和ReactiveComponentContent。 > > - ComponentContent对象不支持使用JSON序列化。
+有两种创建实体封装组件的方式。ComponentContent需要通过update接口手动更新内容，主要适用于弹窗等解耦封装场景；ReactiveComponentContent支持响应式数据自动更新、完整生命周期管理和组件复用，适用 于长列表等高性能渲染场景。开发者可根据实际需求从以下方式中选择。 ComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递，便于开发者对弹窗类组件进行解耦封装。其底层使用了BuilderNode，具体使用规格参考 BuilderNode。 ReactiveComponentContent表示组件内容的实体封装，其对象支持在非UI组件中创建与传递。它支持响应式数据自动更新、完整的生命周期管理和组件复用，适用于长列表等需要高性能渲染的场景。其底层使用了 ReactiveBuilderNode，具体使用规格参考[ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md)。 > **说明：** > > - 当前不支持在预览器中使用ComponentContent和ReactiveComponentContent。 > > - ComponentContent对象不支持使用JSON序列化。
 
 **继承/实现关系：** ComponentContent extends Content
 
@@ -32,7 +32,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[]&gt; | 是 | 封装不带参builder函数的WrappedBuilder对象。 |
 
 ## constructor
@@ -57,7 +57,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[T]&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数，类型T需与`WrappedBuilder&lt;[T]&gt;`中指定的参数类型保持一致，用于将外部数据传递给builder函数以构建UI 内容。 |
 
@@ -83,7 +83,7 @@ ComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需要的UI上下文。 |
 | builder | WrappedBuilder&lt;[T]&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数，类型T需与`WrappedBuilder&lt;[T]&gt;`中指定的参数类型保持一致，用于将外部数据传递给builder函数以构建UI 内容。 |
 | options | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | 是 | 构建配置参数，用于配置Builder的构建行为，BuildOptions中所有属性都是可选的。 |
@@ -809,7 +809,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#configuration)。 > **说明：** > > updateConfiguration接口用于通知对象更新当前的系统环境变化。
+传递系统环境变化事件，触发节点的全量更新。适用于系统深浅色模式切换、语言变更、字体大小调整等需要节点响应系统配置变化的场景。系统环境变化的相关信息请参见 [@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。 > **说明：** > > updateConfiguration接口用于通知对象更新当前的系统环境变化。
 
 **起始版本：** 12
 

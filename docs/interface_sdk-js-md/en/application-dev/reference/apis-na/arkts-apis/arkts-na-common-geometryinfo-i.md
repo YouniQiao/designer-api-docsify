@@ -2,7 +2,7 @@
 
 Sub component layout info.
 
-**Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-na-common-sizeresult-i.md#sizeresult)
+**Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-na-common-sizeresult-i.md)
 
 **Since:** 23
 

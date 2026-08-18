@@ -28,7 +28,7 @@ Builds an X.509 certificate chain with a CertChainBuildParameters object. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | Yes | Object used to build the certificate chain.<br> The value of **maxLength** in [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md#certchainbuildparameters) must be less than the number of certificates in the certificate set. |
+| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | Yes | Object used to build the certificate chain.<br> The value of **maxLength** in [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) must be less than the number of certificates in the certificate set. |
 
 **Return value:**
 

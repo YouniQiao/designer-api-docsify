@@ -26,7 +26,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | long | Yes | Device ID, which can be obtained via [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). |
+| deviceId | long | Yes | Device ID, which can be obtained via [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md). |
 
 **Return value:**
 

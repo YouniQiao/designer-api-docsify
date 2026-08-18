@@ -17,7 +17,7 @@ Writes event information to the event file of the current day. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
+**Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
@@ -69,7 +69,7 @@ Writes event information to the event file of the current day. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
+**Substitutes:** [write](arkts-performanceanalysis-hiappevent-write-f.md)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
@@ -82,7 +82,7 @@ Writes event information to the event file of the current day. This API uses an 
 | eventName | string | Yes | Application event name. |
 | eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. |
 
 **Examples**
 

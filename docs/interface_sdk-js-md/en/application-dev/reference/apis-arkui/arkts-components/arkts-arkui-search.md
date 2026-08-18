@@ -28,10 +28,25 @@ Defines the constructor of Search.
 
 ## Summary
 
-- [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md)
-- [IconOptions](arkts-arkui-iconoptions-i.md)
-- [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md)
-- [SearchOptions](arkts-arkui-searchoptions-i.md)
-- [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md)
-- [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
-- [SearchType](arkts-arkui-searchtype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Defines the CancelButton options. |
+| [IconOptions](arkts-arkui-iconoptions-i.md) | Defines the icon options. |
+| [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | Defines the SearchButton options. |
+| [SearchOptions](arkts-arkui-searchoptions-i.md) | Describes the initialization options of the **Search** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | Called when the search icon, search button, or soft keyboard search button is clicked. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md) | Enum for the style of cancel button. |
+| [SearchType](arkts-arkui-searchtype-e.md) | Enumerates the text input types of a search box. |
+

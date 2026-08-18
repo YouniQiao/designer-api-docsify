@@ -1,6 +1,6 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor) to create an AVMetadataExtractor instance. For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance. For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
@@ -375,7 +375,7 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

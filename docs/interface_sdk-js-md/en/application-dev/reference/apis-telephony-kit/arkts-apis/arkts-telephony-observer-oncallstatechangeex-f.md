@@ -24,7 +24,7 @@ Callback when the telCall state corresponding to the monitored {@code slotId} is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | Yes | Indicates the callback for getting the telCall state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | Yes | Indicates the callback for getting the telCall state. |
 | options | ObserverOptions | No | Indicates the options for observer. |
 
 **Error codes:**

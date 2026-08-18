@@ -116,7 +116,7 @@ Obtains the key based on the specified index from the KV data.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns the pointer to the key obtained if the operation is successful; returns a null pointer if the<br> operation fails or invalid parameters are specified. |
+| const char * | Returns the pointer to the key obtained if the operation is successful; returns a null pointer if the  operation fails or invalid parameters are specified. |
 
 **Reference**:
 
@@ -146,7 +146,7 @@ Obtains the value based on the specified index from the KV pairs.
 
 | Type | Description |
 | -- | -- |
-| [const OH_PreferencesValue *](capi-preferences-oh-preferencesvalue.md) | Returns the pointer to the value obtained if the operation is successful; returns a null pointer if the<br> operation fails or invalid parameters are specified. |
+| [const OH_PreferencesValue *](capi-preferences-oh-preferencesvalue.md) | Returns the pointer to the value obtained if the operation is successful; returns a null pointer if the  operation fails or invalid parameters are specified. |
 
 **Reference**:
 
@@ -229,7 +229,7 @@ Obtains an integer from an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -259,7 +259,7 @@ Obtains a Boolean value from an [OH_PreferencesValue](capi-preferences-oh-prefer
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -290,7 +290,7 @@ Obtains a string from an [OH_PreferencesValue](capi-preferences-oh-preferencesva
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -366,7 +366,7 @@ Sets an integer value for an [OH_PreferencesValue](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -396,7 +396,7 @@ Sets a boolean value for an [OH_PreferencesValue](capi-preferences-oh-preference
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -426,7 +426,7 @@ Sets a string value for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -456,7 +456,7 @@ Sets an int64 value for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -486,7 +486,7 @@ Obtains an int64 value from an [OH_PreferencesValue](capi-preferences-oh-prefere
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -516,7 +516,7 @@ Sets a double value for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -546,7 +546,7 @@ Obtains a double value from an [OH_PreferencesValue](capi-preferences-oh-prefere
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -577,7 +577,7 @@ Sets an integer array for an [OH_PreferencesValue](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -608,7 +608,7 @@ Obtains an integer array from an [OH_PreferencesValue](capi-preferences-oh-prefe
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -639,7 +639,7 @@ Sets a boolean array for an [OH_PreferencesValue](capi-preferences-oh-preference
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -670,7 +670,7 @@ Obtains a boolean array from an [OH_PreferencesValue](capi-preferences-oh-prefer
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -701,7 +701,7 @@ Sets a string array for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -732,7 +732,7 @@ Obtains a string array of an [OH_PreferencesValue](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -763,7 +763,7 @@ Sets an int64 array for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -794,7 +794,7 @@ Obtains an int64 array from an [OH_PreferencesValue](capi-preferences-oh-prefere
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -825,7 +825,7 @@ Sets a double array for an [OH_PreferencesValue](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -856,7 +856,7 @@ Obtains a double array of an [OH_PreferencesValue](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -887,7 +887,7 @@ Sets a blob value for an [OH_PreferencesValue](capi-preferences-oh-preferencesva
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -918,7 +918,7 @@ Obtains a blob value from an [OH_PreferencesValue](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 

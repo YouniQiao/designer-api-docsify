@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function resetPolicies(simId: string, callback: AsyncCallback<void>): void
 ```
 
-Reset network policies\rules\quota policies\firewall rules.
+Restores all the policies (cellular network, background network, firewall, and application-specific network policies) for the specified SIM card. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Reset network policies\rules\quota policies\firewall rules.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | string | Yes | Specify the matched simId of quota policy. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of resetPolicies. |
+| simId | string | Yes | SIM card ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ policy.resetPolicies('1', (error: BusinessError) => {
 function resetPolicies(simId: string): Promise<void>
 ```
 
-Reset network policies\rules\quota policies\firewall rules.
+Resets the cellular network, background network policy, firewall policy, and app policy corresponding to the SIM card ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -75,13 +75,13 @@ Reset network policies\rules\quota policies\firewall rules.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | string | Yes | Specify the matched simId of quota policy. |
+| simId | string | Yes | SIM card ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

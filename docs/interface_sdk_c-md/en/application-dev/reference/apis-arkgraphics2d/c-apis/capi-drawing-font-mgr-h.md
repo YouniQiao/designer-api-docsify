@@ -127,7 +127,7 @@ Obtains the font family name based on an index. When the returned name is no lon
 
 | Type | Description |
 | -- | -- |
-| char* | Font family name corresponding to the index. When no longer needed, use<br>     [OH_Drawing_FontMgrDestroyFamilyName](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfamilyname) to release the memory occupied by the name. |
+| char* | Font family name corresponding to the index. When no longer needed, use      [OH_Drawing_FontMgrDestroyFamilyName](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfamilyname) to release the memory occupied by the name. |
 
 ### OH_Drawing_FontMgrDestroyFamilyName()
 
@@ -221,7 +221,7 @@ Obtains a font style set object based on a specified font family name. When the 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Pointer to the corresponding font style set object [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md). When no longer needed,<br>     use [OH_Drawing_FontMgrDestroyFontStyleSet](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfontstyleset) to release the object pointer. <br>NULL is returned if<br>     matching fails. |
+| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Pointer to the corresponding font style set object [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md). When no longer needed,      use [OH_Drawing_FontMgrDestroyFontStyleSet](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfontstyleset) to release the object pointer. <br>NULL is returned if      matching fails. |
 
 ### OH_Drawing_FontMgrMatchFamilyStyle()
 
@@ -249,7 +249,7 @@ Obtains a typeface object based on the specified font style information and font
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Pointer to the [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object corresponding to the font style. Use<br>     {@link OH_Drawing_TypefaceDestroy} to release the pointer when it is no longer needed. <br>NULL is returned if<br>     the match fails. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Pointer to the [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object corresponding to the font style. Use      {@link OH_Drawing_TypefaceDestroy} to release the pointer when it is no longer needed. <br>NULL is returned if      the match fails. |
 
 ### OH_Drawing_FontMgrMatchFamilyStyleCharacter()
 

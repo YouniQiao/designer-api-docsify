@@ -21,7 +21,7 @@ Obtains the features supported by this device. &lt;p&gt;To check whether this de
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getsupportedfeatures-system-api)
+**Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

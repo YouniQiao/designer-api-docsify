@@ -54,5 +54,15 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 ## Summary
 
-- [RouteInfo](arkts-arkui-routeinfo-i.md)
-- [NavRouteMode](arkts-arkui-navroutemode-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [RouteInfo](arkts-arkui-routeinfo-i.md) | Route information. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [NavRouteMode](arkts-arkui-navroutemode-e.md) | Defines the routing policy. > **NOTE：** |
+

@@ -4,9 +4,9 @@
 export type X509CertRawData = cert.EncodingBlob
 ```
 
-Deposit certificate
+Defines the certificate raw data.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-socket-export type X509CertRawData = cert.EncodingBlob--><!--Device-socket-export type X509CertRawData = cert.EncodingBlob-End-->
 

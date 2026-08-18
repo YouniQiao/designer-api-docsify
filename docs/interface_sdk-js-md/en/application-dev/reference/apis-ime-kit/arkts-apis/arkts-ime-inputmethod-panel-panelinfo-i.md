@@ -12,7 +12,6 @@ Defines the attributes of the input method panel.
 
 ```TypeScript
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 ```
 
 ## flag

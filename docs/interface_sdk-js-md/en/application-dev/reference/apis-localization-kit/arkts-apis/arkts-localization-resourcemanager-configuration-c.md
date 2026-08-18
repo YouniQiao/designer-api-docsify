@@ -12,7 +12,6 @@ Defines the device configuration.
 
 ```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
-import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## colorMode

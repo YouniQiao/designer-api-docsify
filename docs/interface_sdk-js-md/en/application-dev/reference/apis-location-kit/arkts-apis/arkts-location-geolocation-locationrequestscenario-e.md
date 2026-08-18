@@ -6,7 +6,7 @@ Enum for location scenario
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md#locationrequestscenario)
+**Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -56,7 +56,7 @@ TRAJECTORY_TRACKING
 
 **Deprecated since:** 9
 
-**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectorytracking)
+**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
 
 <!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
 
@@ -72,7 +72,7 @@ CAR_HAILING
 
 **Deprecated since:** 9
 
-**Substitutes:** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#carhailing)
+**Substitutes:** [CAR_HAILING](arkts-location-geolocationmanager-locationrequestscenario-e.md#car_hailing)
 
 <!--Device-LocationRequestScenario-CAR_HAILING--><!--Device-LocationRequestScenario-CAR_HAILING-End-->
 
@@ -88,7 +88,7 @@ DAILY_LIFE_SERVICE
 
 **Deprecated since:** 9
 
-**Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#dailylifeservice)
+**Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#daily_life_service)
 
 <!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE-End-->
 
@@ -104,7 +104,7 @@ NO_POWER
 
 **Deprecated since:** 9
 
-**Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#nopower)
+**Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#no_power)
 
 <!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
 

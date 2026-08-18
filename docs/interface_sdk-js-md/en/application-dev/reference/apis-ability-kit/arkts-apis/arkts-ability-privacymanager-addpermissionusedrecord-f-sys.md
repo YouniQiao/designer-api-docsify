@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## addPermissionUsedRecord
@@ -19,7 +18,7 @@ function addPermissionUsedRecord(
   ): Promise<void>
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result. The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller. > **NOTE：**> The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus-system-api). When the toggle is off, calling this API will not generate a permission usage record.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result. The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller. > **NOTE：**> The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
 
 **Since:** 23
 
@@ -35,7 +34,7 @@ When an application protected by a permission is called by another service or ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
@@ -97,7 +96,7 @@ function addPermissionUsedRecord(
   ): void
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result. The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller. The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus-system-api). When the toggle is off, calling this API will not generate a permission usage record.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result. The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller. The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
 
 **Since:** 23
 
@@ -113,11 +112,11 @@ When an application protected by a permission is called by another service or ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

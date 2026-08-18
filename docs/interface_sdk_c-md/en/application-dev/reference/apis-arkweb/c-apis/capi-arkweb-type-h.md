@@ -135,7 +135,7 @@ Callback invoked when a Proxy method is executed (with a return value). It is us
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* webTag | Name of the **Web** component. |
+| const char\* webTag | Name of the **Web** component. |
 | [const ArkWeb_JavaScriptBridgeData](capi-web-arkweb-javascriptbridgedata.md)\* dataArray | Pointer to data array. |
 | size_t arraySize | Array size. |
 | void\* userData | Pointer to user-defined data. |
@@ -168,7 +168,7 @@ Callback invoked when the Web component scrolls.
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* webTag | Name of the **Web** component. |
+| const char\* webTag | Name of the **Web** component. |
 | void\* userData | Pointer to user-defined data. |
 | double x | X-axis scroll offset. Unit: vp. |
 | double y | Y-axis scroll offset. Unit: vp. |
@@ -189,7 +189,7 @@ Called when a post message is sent from the HTML page.
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* webTag | Name of the **Web** component. |
+| const char\* webTag | Name of the **Web** component. |
 | [const ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) port | Post message port. |
 | [const ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) message | Post message data. |
 | void\* userData | User-defined data. |

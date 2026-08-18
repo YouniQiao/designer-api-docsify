@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -19,5 +18,5 @@ import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@k
 
 | Name | Description |
 | --- | --- |
-| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) | WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext). |
+| [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md) | WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
 

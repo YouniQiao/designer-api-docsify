@@ -11,6 +11,7 @@ SelectionContainer组件的控制器。
 ## 导入模块
 
 ```TypeScript
+import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
 
 ## clearTextSelection

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityId
@@ -67,7 +68,7 @@ appIndex?: int
 backgroundModes: string[]
 ```
 
-[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#backgroundmode)。
+[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)。
 
 **类型：** string[]
 
@@ -83,7 +84,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md#backgroundsubmode)。
+[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md)。
 
 **类型：** string[]
 
@@ -211,7 +212,7 @@ uid: int
 wantAgentAbilityName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 
@@ -227,7 +228,7 @@ wantAgentAbilityName: string
 wantAgentBundleName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 

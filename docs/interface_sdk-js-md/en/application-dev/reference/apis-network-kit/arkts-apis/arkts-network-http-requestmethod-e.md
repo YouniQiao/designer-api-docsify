@@ -14,11 +14,11 @@ Defines an HTTP request method.
 OPTIONS = "OPTIONS"
 ```
 
-OPTIONS method.
+Describes the communication options of the target resource.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
 
@@ -30,11 +30,11 @@ OPTIONS method.
 GET = "GET"
 ```
 
-GET method.
+Requests the representation of the specified resource. The GET request should only retrieve data and should not contain the request content.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-GET = "GET"--><!--Device-RequestMethod-GET = "GET"-End-->
 
@@ -46,11 +46,11 @@ GET method.
 HEAD = "HEAD"
 ```
 
-HEAD method.
+Requests the same response (but does not have a response body) as the GET request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-HEAD = "HEAD"--><!--Device-RequestMethod-HEAD = "HEAD"-End-->
 
@@ -62,11 +62,11 @@ HEAD method.
 POST = "POST"
 ```
 
-POST method.
+Submits an entity to a specified resource, which usually causes a status change on the server.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-POST = "POST"--><!--Device-RequestMethod-POST = "POST"-End-->
 
@@ -78,11 +78,11 @@ POST method.
 PUT = "PUT"
 ```
 
-PUT method.
+Replaces all current representations of the target resource with the requested content.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-PUT = "PUT"--><!--Device-RequestMethod-PUT = "PUT"-End-->
 
@@ -94,11 +94,11 @@ PUT method.
 DELETE = "DELETE"
 ```
 
-DELETE method.
+Deletes the specified resource.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
@@ -110,11 +110,11 @@ DELETE method.
 TRACE = "TRACE"
 ```
 
-TRACE method.
+Performs a message loopback test along the path to the target resource.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-TRACE = "TRACE"--><!--Device-RequestMethod-TRACE = "TRACE"-End-->
 
@@ -126,11 +126,11 @@ TRACE method.
 CONNECT = "CONNECT"
 ```
 
-CONNECT method.
+Establishes a tunnel to the server identified by the target resource.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
 
@@ -142,7 +142,7 @@ CONNECT method.
 PATCH = "PATCH"
 ```
 
-PATCH method
+Modifies a resource partially. **Since**: 26.0.0
 
 **Since:** 26.0.0
 

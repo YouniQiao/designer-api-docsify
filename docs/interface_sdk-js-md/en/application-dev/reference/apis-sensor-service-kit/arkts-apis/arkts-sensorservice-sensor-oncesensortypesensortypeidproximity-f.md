@@ -29,5 +29,5 @@ Subscribes to only one data change of the proximity sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PROXIMITY**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | Yes | One-shot callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ProximityResponse&gt; | Yes | One-shot callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
 

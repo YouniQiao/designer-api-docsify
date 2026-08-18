@@ -16,7 +16,7 @@ Enumerates the DistributedField.
 ORIGIN = '#_origin'
 ```
 
-Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md#distributedorigin-system-api).
+Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md).
 
 **Since:** 24
 

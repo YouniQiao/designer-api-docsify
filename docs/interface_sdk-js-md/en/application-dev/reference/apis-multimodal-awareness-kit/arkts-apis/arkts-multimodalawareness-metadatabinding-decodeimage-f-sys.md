@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## decodeImage

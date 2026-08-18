@@ -12,7 +12,6 @@ Describes a region, which is used to describe the region where the shape can be 
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

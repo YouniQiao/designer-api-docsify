@@ -28,7 +28,7 @@ Callback when the cell information corresponding to the default sim card is upda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#cellinformation-system-api). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md). |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ Callback when the cell information corresponding to a monitored {@code slotId} i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md#cellinformation-system-api). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting an array of instances of the classes derived from [CellInformation](arkts-telephony-observer-cellinformation-t-sys.md). |
 
 **Error codes:**
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## pattern
@@ -19,7 +20,7 @@
 pattern: VibratorPattern
 ```
 
-振动事件数组。由[VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#vibratorpatternbuilder)的addContinuousEvent和addTransientEvent方法添加后 通过build方法生成。同一VibratorPattern中多个VibratorEvent的time值不能重叠。
+振动事件数组。由[VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md)的addContinuousEvent和addTransientEvent方法添加后 通过build方法生成。同一VibratorPattern中多个VibratorEvent的time值不能重叠。
 
 **类型：** [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)
 

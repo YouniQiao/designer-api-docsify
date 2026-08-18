@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { shortKey } from '@kit.InputKit';
+import { FingerprintEvent } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -22,7 +24,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration) | 设置快捷键拉起Ability的延迟时间，使用callback异步回调。 |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration系统接口) | 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。 |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用callback异步回调。 |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。 |
 <!--DelEnd-->
 

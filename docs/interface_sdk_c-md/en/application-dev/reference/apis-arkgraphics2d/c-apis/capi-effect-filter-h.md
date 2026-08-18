@@ -53,7 +53,7 @@ Creates an **OH_Filter** object to apply various filter effects (such as blur,br
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if pixelmap or filter is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if pixelmap or filter is NULL.</li>          </ul> |
 
 ### OH_Filter_Release()
 
@@ -77,7 +77,7 @@ Releases an **OH_Filter** object.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li>          </ul> |
 
 ### OH_Filter_Blur()
 
@@ -102,7 +102,7 @@ Creates a frosted glass filter effect and adds it to a filter effect chain.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer or radius is less than 0.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer or radius is less than 0.</li>          </ul> |
 
 ### OH_Filter_BlurWithTileMode()
 
@@ -128,7 +128,7 @@ Creates a frosted glass filter effect and adds it to a filter effect chain.It su
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer or radius is less than 0.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer or radius is less than 0.</li>          </ul> |
 
 ### OH_Filter_Brighten()
 
@@ -153,7 +153,7 @@ Creates a brightening effect and adds it to a filter effect chain.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer<br>         or brightness is outside the value range [0, 1].</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is a null pointer          or brightness is outside the value range [0, 1].</li>          </ul> |
 
 ### OH_Filter_GrayScale()
 
@@ -177,7 +177,7 @@ Creates a grayscale effect and adds it to a filter effect chain.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li>          </ul> |
 
 ### OH_Filter_Invert()
 
@@ -201,7 +201,7 @@ Creates an inverted color effect and adds it to a filter effect chain.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter is NULL.</li>          </ul> |
 
 ### OH_Filter_SetColorMatrix()
 
@@ -226,7 +226,7 @@ Creates a custom effect through a matrix and adds it to a filter effect chain,ap
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter or matrix is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter or matrix is NULL.</li>          </ul> |
 
 ### OH_Filter_GetEffectPixelMap()
 
@@ -251,6 +251,6 @@ Obtains the bitmap generated by the filter.
 
 | Type | Description |
 | -- | -- |
-| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul><br>         <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li><br>         <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter or pixelmap is NULL.</li><br>         </ul> |
+| [EffectErrorCode](capi-effect-types-h.md#effecterrorcode) | <ul>          <li>{@link EffectErrorCode#EFFECT_SUCCESS} if the operation is successful.</li>          <li>{@link EffectErrorCode#EFFECT_BAD_PARAMETER} if filter or pixelmap is NULL.</li>          </ul> |
 
 

@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#ispersistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) can be added in batches.
+Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission. Only assets with the same [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) can be added in batches.
 
 **Since:** 26.0.0
 
@@ -48,5 +48,5 @@ Adds assets in batches based on an attributes array. To set [IS_PERSISTENT](arkt
 | [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
 | [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#groupid) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#requireattrencrypted) in the array is not consistent. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of [GROUP_ID](arkts-assetstore-asset-tag-e.md#group_id) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#require_attr_encrypted) in the array is not consistent. |
 

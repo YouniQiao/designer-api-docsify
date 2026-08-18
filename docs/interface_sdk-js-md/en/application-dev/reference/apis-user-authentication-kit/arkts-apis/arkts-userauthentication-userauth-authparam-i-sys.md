@@ -12,8 +12,6 @@ Defines the user authentication parameters. This API is used to configure user a
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 

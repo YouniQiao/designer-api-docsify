@@ -6,7 +6,7 @@ Want是对象间信息传递的载体, 可以用于应用组件间的信息传�
 
 **废弃版本：** 9
 
-**替代接口：** [Want](arkts-ability-app-ability-want-want-c.md#want)
+**替代接口：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 <!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
 

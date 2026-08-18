@@ -19,7 +19,7 @@ Scan Wi-Fi hotspot.
 
 **Deprecated since:** 10
 
-**Substitutes:** [startScan](arkts-connectivity-wifimanager-startscan-f.md#startscan)
+**Substitutes:** [startScan](arkts-connectivity-wifimanager-startscan-f.md)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 

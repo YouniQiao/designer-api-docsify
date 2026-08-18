@@ -9,16 +9,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## getNetFirewallRules
 
 ```TypeScript
-function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>
+function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>
 ```
 
-Get firewall rules by userId, and it is necessary to specify the pagination query parameters.
+Obtains firewall rules by user ID. You need to specify the pagination query parameter when calling this API. Currently, firewall rules can be sorted by name. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NET_FIREWALL
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
-<!--Device-netFirewall-function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>--><!--Device-netFirewall-function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>-End-->
+<!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>--><!--Device-netFirewall-function getNetFirewallRules(userId: int, requestParam: RequestParam): Promise<FirewallRulePage>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,14 +26,14 @@ Get firewall rules by userId, and it is necessary to specify the pagination quer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes | Paging query input parameters. |
+| userId | int | Yes | System user ID, which must exist. |
+| requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes | Pagination query parameter. The **orderField** field can be sorted only by firewall rule name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[FirewallRulePage](arkts-network-netfirewall-firewallrulepage-i.md)&gt; | Paginated firewall rule list. |
+| Promise&lt;[FirewallRulePage](arkts-network-netfirewall-firewallrulepage-i.md)&gt; | Promise used to return the result, which is list of firewall rules. |
 
 **Error codes:**
 

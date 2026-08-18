@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## preloadUIExtensionAbility
@@ -11,7 +12,7 @@
 function preloadUIExtensionAbility(want: Want): Promise<int>
 ```
 
-预加载指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)并返回预加载UIExtensionAbility实例 的ID。使用Promise异步回调。
+预加载指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例 的ID。使用Promise异步回调。
 
 **起始版本：** 23
 

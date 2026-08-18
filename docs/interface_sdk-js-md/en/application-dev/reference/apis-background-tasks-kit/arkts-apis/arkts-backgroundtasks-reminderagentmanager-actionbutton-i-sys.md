@@ -12,7 +12,6 @@ Describes the button displayed for a reminder.
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## dataShareUpdate

@@ -1,6 +1,6 @@
 # UIExtensionContext
 
-UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
+UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
 
 **Inheritance/Implementation:** UIExtensionContext extends ExtensionContext
 
@@ -44,13 +44,13 @@ Connects this UIExtensionAbility to a ServiceExtensionAbility. It enables commun
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
@@ -96,7 +96,7 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
@@ -126,7 +126,7 @@ Disconnects from a ServiceExtensionAbility. Once the connection is terminated, s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by **connectServiceExtensionAbility**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -243,7 +243,7 @@ Opens an atomic service in an independent window and returns the result. This AP
 | --- | --- |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -273,7 +273,7 @@ Starts a UIAbility by using App Linking or Deep Linking. This API uses a promise
 | --- | --- | --- | --- |
 | link | string | Yes | URL to open, which must be in the standard format. |
 | options | [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | No | Options of the URL. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | No | Callback used to return the result. |
 
 **Return value:**
 
@@ -291,8 +291,8 @@ Starts a UIAbility by using App Linking or Deep Linking. This API uses a promise
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -324,7 +324,7 @@ Called when the window content associated with the UIExtensionAbility finishes d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the event is reported, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the event is reported, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -382,37 +382,37 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want required for starting the UIAbility, which contains information such as the name of the UIAbility to start. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the UIAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the UIAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
@@ -440,36 +440,36 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want required for starting the UIAbility, which contains information such as the name of the UIAbility to start. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Extra parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the UIAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the UIAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
@@ -508,30 +508,30 @@ Starts a UIAbility. This API uses a promise to return the result. > **NOTE：**>
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
@@ -558,37 +558,37 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want required for starting the UIAbility, which contains information such as the name of the UIAbility to start. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
@@ -616,36 +616,36 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want required for starting the UIAbility, which contains information such as the name of the UIAbility to start. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Extra parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
@@ -684,30 +684,30 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-third-party-applications-of-api-version-11-or-later) | Redirection to a third-party application is not allowed in API version greater than 11.<br>**Applicable version:** 12 and later |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found.<br>**Applicable version:** 12 and later |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-thirdparty-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000069](../errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) | The extension cannot start the third party application.<br>**Applicable version:** 12 and later |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000070](../errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) | The extension cannot start the service.<br>**Applicable version:** 12 and later |
 | [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | App clone is not supported.<br>**Applicable version:** 14 and later |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
+| [16000076](../errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid.<br>**Applicable version:** 14 and later |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit.<br>**Applicable version:** 14 and later |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
-| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified.<br>**Applicable version:** 14 and later |
 | [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
+| [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported.<br>**Applicable version:** 14 and later |
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid.<br>**Applicable version:** 12 and later |
 | [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
@@ -780,7 +780,7 @@ Destroys this UIExtensionAbility and closes the corresponding window. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -831,7 +831,7 @@ Destroys this UIExtensionAbility, closes the corresponding window, and returns t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the caller of the UIExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

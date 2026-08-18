@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drm } from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus
@@ -108,7 +109,7 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: in
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) 查询。 |
+| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
 | initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ on('mediaKeySystemInfoUpdate') ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
 | mediaKeyType | int | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。<br>传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
 | options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 | 可选数据。默认值为空数组。 |
@@ -123,8 +124,8 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
 ## generateOfflineReleaseRequest
@@ -322,7 +323,7 @@ Unregister vendorDefined event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_expirationUpdate
+## off_expirationUpdate('expirationUpdate')
 
 ```TypeScript
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
@@ -352,7 +353,7 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_keyExpired
+## off_keyExpired('keyExpired')
 
 ```TypeScript
 off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
@@ -382,7 +383,7 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_keyRequired
+## off_keyRequired('keyRequired')
 
 ```TypeScript
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -412,7 +413,7 @@ off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_keysChange
+## off_keysChange('keysChange')
 
 ```TypeScript
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -442,7 +443,7 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_vendorDefined
+## off_vendorDefined('vendorDefined')
 
 ```TypeScript
 off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
@@ -602,7 +603,7 @@ Register vendorDefined event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_expirationUpdate
+## on_expirationUpdate('expirationUpdate')
 
 ```TypeScript
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
@@ -632,7 +633,7 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_keyExpired
+## on_keyExpired('keyExpired')
 
 ```TypeScript
 on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
@@ -662,7 +663,7 @@ on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_keyRequired
+## on_keyRequired('keyRequired')
 
 ```TypeScript
 on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
@@ -692,7 +693,7 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_keysChange
+## on_keysChange('keysChange')
 
 ```TypeScript
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -722,7 +723,7 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_vendorDefined
+## on_vendorDefined('vendorDefined')
 
 ```TypeScript
 on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
@@ -845,7 +846,7 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) 查询。 |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
 
 **返回值：**
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## channelId
@@ -37,7 +38,7 @@ channelId: int
 state: ChannelState
 ```
 
-通道的连接状态，取值范围见[ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md#channelstate)。建议根据不同状态值调整业务策略，如通道断开时暂停数据发送、通道恢复后重试业务。
+通道的连接状态，取值范围见[ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)。建议根据不同状态值调整业务策略，如通道断开时暂停数据发送、通道恢复后重试业务。
 
 **类型：** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 

@@ -12,7 +12,6 @@ Defines the RDB store configuration.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## autoCleanDeviceDirtyData

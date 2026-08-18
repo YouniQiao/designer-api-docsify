@@ -1,8 +1,8 @@
 # TimeOptions
 
-TimeOptions定义时间选择器的选项。 继承于[CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)。
+TimeOptions定义时间选择器的选项。 继承于[CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
-**继承/实现关系：** TimeOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
+**继承/实现关系：** TimeOptions extends [CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -25,7 +25,7 @@ format?: TimeFormat
 
 定义时间选择器的格式。 默认值：TimeFormat.HOUR_MINUTE
 
-**类型：** [TimeFormat](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
+**类型：** [TimeFormat](arkts-na-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **默认值：** TimeFormat.HOUR_MINUTE
 

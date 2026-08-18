@@ -1,6 +1,6 @@
 # CalendarManager
 
-Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) to obtain a **CalendarManager** object first.
+Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md) to obtain a **CalendarManager** object first.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Creates a Calendar object based on the calendar account information. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
 
@@ -383,7 +383,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
 
 **Error codes:**
 
@@ -495,7 +495,7 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
@@ -557,7 +557,7 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 

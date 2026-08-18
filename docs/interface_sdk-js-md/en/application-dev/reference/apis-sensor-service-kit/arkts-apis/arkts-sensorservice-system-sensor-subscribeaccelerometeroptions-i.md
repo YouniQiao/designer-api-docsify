@@ -34,7 +34,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -82,7 +82,7 @@ Callback invoked when the acceleration sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

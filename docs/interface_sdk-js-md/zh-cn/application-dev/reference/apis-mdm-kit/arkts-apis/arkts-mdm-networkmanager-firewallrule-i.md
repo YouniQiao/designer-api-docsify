@@ -1,6 +1,6 @@
 # FirewallRule
 
-防火墙过滤规则。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#logtype)。
+防火墙过滤规则。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action
@@ -19,7 +20,7 @@
 action?: Action
 ```
 
-接收或者丢弃数据包。 添加防火墙过滤规则时必填； 移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md#action)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入 空值。
+接收或者丢弃数据包。 添加防火墙过滤规则时必填； 移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入 空值。
 
 **类型：** Action
 
@@ -91,7 +92,7 @@ destPort?: string
 direction?: Direction
 ```
 
-规则链。 添加防火墙过滤规则时必填； 移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md#direction)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传 入空值。
+规则链。 添加防火墙过滤规则时必填； 移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传 入空值。
 
 **类型：** Direction
 

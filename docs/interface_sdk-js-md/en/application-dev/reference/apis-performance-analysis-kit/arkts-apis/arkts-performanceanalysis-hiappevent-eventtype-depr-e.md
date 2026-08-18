@@ -6,7 +6,7 @@ Enumerates the event types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md#eventtype)
+**Substitutes:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 

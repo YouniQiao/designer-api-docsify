@@ -519,7 +519,7 @@ let res: boolean = AppStorage.clear(); // true，已经没有订阅者
 static delete(propName: string): boolean
 ```
 
-在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中删除propName对应的属性。 仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。 属性的订阅者为： 1. [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)、[@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。 2. 通过[link](#link)、[prop](#prop)、[setAndLink](#setandlink)、[setAndProp](#setandprop)接口返回的SubscribedAbstractProperty的实例。 如需删除这些订阅者，可通过以下方式： 1. 删除\@StorageLink、\@StorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。 2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口。
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中删除propName对应的属性。 仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。 属性的订阅者为： 1. [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)、[@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。 2. 通过[link](#link)、[prop](#prop)、[setAndLink](#setandlink)、[setAndProp](#setandprop)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)的实例。 如需删除这些订阅者，可通过以下方式： 1. 删除\@StorageLink、\@StorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。 2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口。
 
 **起始版本：** 10
 
@@ -730,7 +730,7 @@ prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
 static ref<T>(propName: string): AbstractProperty<T> | undefined
 ```
 
-如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。否则，返 回undefined。 与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#abstractproperty)类型的变量。
+如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。否则，返 回undefined。 与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
 
 **起始版本：** 12
 
@@ -877,7 +877,7 @@ let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49
 static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-与[ref](#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则 返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。 与[setAndLink](#setandlink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#abstractproperty) 类型的变量。
+与[ref](#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则 返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。 与[setAndLink](#setandlink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md) 类型的变量。
 
 **起始版本：** 12
 

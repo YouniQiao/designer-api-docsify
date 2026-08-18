@@ -2,7 +2,7 @@
 
 Describes the normal live notification content. This API inherits from NotificationBasicContent.
 
-**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#notificationbasiccontent)
+**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ extraInfo?: Record<string, RecordData>
 
 Extra information of the live view. This parameter is left empty by default.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

@@ -14,7 +14,6 @@ Describes the progress information of data migration, including the progress per
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
-import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## progressPercentage

@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#devicestatechange)
+**替代接口：** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
 
 <!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
 

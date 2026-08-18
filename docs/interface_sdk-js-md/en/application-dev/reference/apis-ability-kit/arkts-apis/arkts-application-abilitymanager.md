@@ -6,7 +6,7 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md#ohosappabilityabilitymanager)
+**Substitutes:** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md)
 
 <!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 
@@ -22,7 +22,7 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
@@ -33,7 +33,7 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

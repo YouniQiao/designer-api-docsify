@@ -2,7 +2,7 @@
 
 Defines the dialog param with options.
 
-**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md#alertdialogparam)
+**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-na-alertdialog-alertdialogparam-i.md)
 
 **Since:** 23
 

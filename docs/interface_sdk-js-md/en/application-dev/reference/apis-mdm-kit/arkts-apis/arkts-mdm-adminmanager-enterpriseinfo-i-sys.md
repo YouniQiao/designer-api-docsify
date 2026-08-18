@@ -14,7 +14,6 @@ Represents the enterprise information of a device administrator application.
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
 ```
 
 ## description

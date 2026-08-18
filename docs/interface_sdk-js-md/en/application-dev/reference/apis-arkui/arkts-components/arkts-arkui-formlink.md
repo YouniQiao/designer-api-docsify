@@ -28,4 +28,9 @@ Init FormLink component with options.
 
 ## Summary
 
-- [FormLinkOptions](arkts-arkui-formlinkoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [FormLinkOptions](arkts-arkui-formlinkoptions-i.md) | Defines the FormLink options. |
+

@@ -52,7 +52,7 @@ Initializes a mutex attribute.After successful initialization, the mutex attribu
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex attribute is initialized;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute is initialized;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutexattr_settype()
 
@@ -77,7 +77,7 @@ Sets the type of a mutex attribute.The type can be `ffrt_mutex_normal` (a regula
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex attribute type is set successfully;<br>         `ffrt_error_inval` if attr is a null pointer or<br>         the mutex attribute type is not `ffrt_mutex_normal` or `ffrt_mutex_recursive`. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute type is set successfully;          `ffrt_error_inval` if attr is a null pointer or          the mutex attribute type is not `ffrt_mutex_normal` or `ffrt_mutex_recursive`. |
 
 **Reference**:
 
@@ -107,7 +107,7 @@ Gets the type of a mutex attribute.After a successful call, the type value is wr
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex attribute type is retrieved successfully;<br>         `ffrt_error_inval` if attr or type is a null pointer. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute type is retrieved successfully;          `ffrt_error_inval` if attr or type is a null pointer. |
 
 ### ffrt_mutexattr_destroy()
 
@@ -131,7 +131,7 @@ Destroys a mutex attribute.The mutex attribute must have been initialized by [ff
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex attribute is destroyed;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute is destroyed;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutex_init()
 
@@ -156,7 +156,7 @@ Initializes a mutex.The mutex must later be destroyed by [ffrt_mutex_destroy](ca
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex is initialized;<br>         `ffrt_error_inval` if `mutex` is null, or `attr` is non-null but does not specify<br>         a valid mutex type. |
+| FFRT_C_API int | `ffrt_success` if the mutex is initialized;          `ffrt_error_inval` if `mutex` is null, or `attr` is non-null but does not specify          a valid mutex type. |
 
 ### ffrt_mutex_lock()
 
@@ -180,7 +180,7 @@ Locks a mutex.If the mutex is already held by another thread, blocks the calling
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex is locked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is locked;          `ffrt_error_inval` otherwise. |
 
 **Reference**:
 
@@ -209,7 +209,7 @@ Unlocks a mutex.The mutex must be held by the calling thread, having been previo
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex is unlocked;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is unlocked;          `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutex_trylock()
 
@@ -233,7 +233,7 @@ Attempts to lock a mutex.This is a non-blocking operation: if the mutex is heldb
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex is locked;<br>         `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is locked;          `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
 
 **Reference**:
 
@@ -262,6 +262,6 @@ Destroys a mutex.After a successful call, the resources occupied by the mutex ar
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the mutex is destroyed;<br>         `ffrt_error_inval` otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is destroyed;          `ffrt_error_inval` otherwise. |
 
 

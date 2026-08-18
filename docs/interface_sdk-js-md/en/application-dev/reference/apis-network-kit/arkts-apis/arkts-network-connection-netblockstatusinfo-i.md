@@ -1,6 +1,6 @@
 # NetBlockStatusInfo
 
-Get network status information.
+Obtains the network block status information.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 blocked: boolean
 ```
 
-Check whether the current state is blocked.
+Whether the current network is blocked. The value **true** indicates that the network is congested, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ Check whether the current state is blocked.
 netHandle: NetHandle
 ```
 
-Defines the handle of the data network.
+Network handle.
 
 **Type:** NetHandle
 

@@ -12,7 +12,6 @@ Describes a coordinate point.
 
 ```TypeScript
 import { common2D } from '@kit.ArkGraphics2D';
-import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## x

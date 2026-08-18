@@ -6,7 +6,7 @@ Defines the response of ShowDialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#showdialogsuccessresponse)
+**Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 

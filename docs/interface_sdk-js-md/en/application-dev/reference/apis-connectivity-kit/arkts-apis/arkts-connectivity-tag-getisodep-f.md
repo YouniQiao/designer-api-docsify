@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function getIsoDep(tagInfo: TagInfo): IsoDepTag
 ```
 
-Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#isodeptag) object based on the tag information. During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#isodeptag) object will be created based on the tag information.
+Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) object based on the tag information. During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) object will be created based on the tag information.
 
 **Since:** 23
 

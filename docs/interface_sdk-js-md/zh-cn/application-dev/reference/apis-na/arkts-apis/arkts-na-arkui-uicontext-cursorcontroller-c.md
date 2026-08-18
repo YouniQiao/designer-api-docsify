@@ -55,7 +55,7 @@ setCursor(value: PointerStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PointerStyle](arkts-na-pointerstyle-t.md) | 是 | cursor style enum. |
+| value | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | cursor style enum. |
 
 ## setCustomCursor
 

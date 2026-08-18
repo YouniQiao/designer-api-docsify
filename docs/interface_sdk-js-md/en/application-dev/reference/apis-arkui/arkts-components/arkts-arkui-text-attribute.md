@@ -104,7 +104,7 @@ Sets the color of the text selection handle, also known as the caret, in the tex
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE：**> > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Sets whether to enable leading punctuation compression. > **NOTE：**> > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -318,7 +318,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 enableDataDetector(enable: boolean)
 ```
 
-Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**. The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added. > **NOTE：**> > - This API takes effect only when the device has an underlying text detection capability. > > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity > detection is not performed. &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**. The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added. > **NOTE：**> > - This API takes effect only when the device has an underlying text detection capability. > > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity > detection is not performed. <!--RP2--><!--RP2End-->
 
 **Since:** 11
 
@@ -635,7 +635,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions)
 ```
 
-Sets the text font weight, with support for font settings. It is only effective for the **Text** component, not for its child components.&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
+Sets the text font weight, with support for font settings. It is only effective for the **Text** component, not for its child components.<!--RP4--><!--RP4End-->
 
 **Since:** 12
 
@@ -1247,7 +1247,7 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](#wordbreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
+Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default. Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](#wordbreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -1560,7 +1560,7 @@ Sets the indent of the first line text.
 textOverflow(options: TextOverflowOptions)
 ```
 
-Sets the display mode for overflowing text. When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#textoverflowoptions) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**: - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines. - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...). - This must be used with [maxLines](#maxlines) for the settings to take effect. - Line breaking behavior is controlled by [wordBreak](#wordbreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**. - Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported. - Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow) and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) &lt;!--RP1--&gt;&lt;!--RP1End--&gt;. When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**: - Text scrolls horizontally within a single line. - [maxLines](#maxlines) and[copyOption](#copyoption) are ignored. - The clip attribute of the **Text** component defaults to **true**. - CustomSpan is not supported in marquee mode. - Behavior of [textAlign](#textalign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored. - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
+Sets the display mode for overflowing text. When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**: - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines. - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...). - This must be used with [maxLines](#maxlines) for the settings to take effect. - Line breaking behavior is controlled by [wordBreak](#wordbreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**. - Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported. - Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow) and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->. When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**: - Text scrolls horizontally within a single line. - [maxLines](#maxlines) and[copyOption](#copyoption) are ignored. - The clip attribute of the **Text** component defaults to **true**. - CustomSpan is not supported in marquee mode. - Behavior of [textAlign](#textalign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored. - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
 
 **Since:** 7
 

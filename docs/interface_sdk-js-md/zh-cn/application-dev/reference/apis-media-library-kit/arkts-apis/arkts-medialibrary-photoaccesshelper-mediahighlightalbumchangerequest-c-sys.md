@@ -1,8 +1,8 @@
 # MediaHighlightAlbumChangeRequest（系统接口）
 
-时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自 [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest系统接口)。
+时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自 [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)。
 
-**继承/实现关系：** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest系统接口)
+**继承/实现关系：** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor

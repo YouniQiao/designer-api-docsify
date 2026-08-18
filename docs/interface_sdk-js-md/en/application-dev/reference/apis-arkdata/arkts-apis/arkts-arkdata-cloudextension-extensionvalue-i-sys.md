@@ -14,7 +14,6 @@ Represents additional information about a data record.
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createTime

@@ -4,7 +4,7 @@
 export type AuthenticationType = 'basic' | 'ntlm' | 'digest'
 ```
 
-The server's authentication type.
+Enumerates server authentication modes in a session.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ The server's authentication type.
 
 | Type | Description |
 | --- | --- |
-| 'basic' |  |
-| 'ntlm' |  |
-| 'digest' |  |
+| 'basic' | Basic authentication mode. This field has a fixed value of **basic**. |
+| 'ntlm' | NTLM authentication mode. This field has a fixed value of **ntlm**. |
+| 'digest' | Digest authentication mode. This field has a fixed value of **digest**. |
 

@@ -6,7 +6,7 @@ Specifies whether the device that houses the sensor is worn.
 
 **Deprecated since:** 8
 
-**Substitutes:** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md#weardetectionresponse)
+**Substitutes:** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)
 
 <!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
 

@@ -2,7 +2,7 @@
 
 Material resource, which inherits from SceneResource.
 
-**Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
+**Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
 **Since:** 23
 

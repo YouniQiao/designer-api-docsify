@@ -96,7 +96,7 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 

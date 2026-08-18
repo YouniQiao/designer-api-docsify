@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllPluginInfo
@@ -28,7 +29,7 @@ function getAllPluginInfo(hostBundleName: string, userId?: int): Promise<Array<P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hostBundleName | string | 是 | 表示安装插件的应用包名。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户ID。取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户ID。取值范围：大于等于0。 |
 
 **返回值：**
 

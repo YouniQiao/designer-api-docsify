@@ -14,7 +14,6 @@ The autoFillManager module provides APIs for saving accounts and passwords. Unli
 
 ```TypeScript
 import { autoFillManager } from '@kit.AbilityKit';
-import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -23,9 +22,9 @@ import { autoFillManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md#requestautofill) | Trigger an auto fill request. |
-| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestautosave) | Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete. |
-| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestautosave) | Trigger an auto save request. |
+| [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md) | Trigger an auto fill request. |
+| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md) | Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete. |
+| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md) | Trigger an auto save request. |
 
 ### Interfaces
 
@@ -45,7 +44,7 @@ import { autoFillManager } from '@kit.AbilityKit';
 | [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md) | Called when auto-save is successful. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

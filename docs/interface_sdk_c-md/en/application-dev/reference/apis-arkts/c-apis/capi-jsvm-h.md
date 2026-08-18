@@ -24,9 +24,7 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 
 | Name | Description |
 | -- | -- |
-| [JSVM_EXTERN __declspec(dllexport)
-#elif defined(__wasm__)
- JSVM_EXTERN                                           \](#__declspec) | externally visible. |
+| [JSVM_EXTERN __declspec(dllexport) #elif defined(__wasm__)  JSVM_EXTERN \](#__declspec) | externally visible. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_Init(const JSVM_InitOptions* options)](#oh_jsvm_init) | Init a JavaScript vm. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateVM(const JSVM_CreateVMOptions* options, JSVM_VM* result)](#oh_jsvm_createvm) | This API create a new VM instance. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetMicrotaskPolicy(JSVM_VM vm, JSVM_MicrotaskPolicy policy)](#oh_jsvm_setmicrotaskpolicy) | This function controls how Microtasks are invoked of the vm. If the method is notcalled, the default microtask policy of vm is JSVM_MicrotaskPolicy::JSVM_MICROTASK_AUTO. |
@@ -145,7 +143,7 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 | [JSVM_EXTERN JSVM_Status OH_JSVM_GetElement(JSVM_Env env, JSVM_Value object, uint32_t index, JSVM_Value* result)](#oh_jsvm_getelement) | This API gets the element at the requested index. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_HasElement(JSVM_Env env, JSVM_Value object, uint32_t index, bool* result)](#oh_jsvm_haselement) | This API returns if the Object passed in has an elementat the requested index. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_DeleteElement(JSVM_Env env, JSVM_Value object, uint32_t index, bool* result)](#oh_jsvm_deleteelement) | This API attempts to delete the specified index from object. |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_DefineProperties(JSVM_Env env, JSVM_Value object, size_t propertyCount, const JSVM_PropertyDescriptor* properties)](#oh_jsvm_defineproperties) | This method allows the efficient definition of multiple propertieson a given object.  The properties are defined using property descriptors.Given an array of such property descriptors, this API will set the propertieson the object one at a time, as defined by DefineOwnProperty(). |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_DefineProperties(JSVM_Env env, JSVM_Value object, size_t propertyCount, const JSVM_PropertyDescriptor* properties)](#oh_jsvm_defineproperties) | This method allows the efficient definition of multiple propertieson a given object. The properties are defined using property descriptors.Given an array of such property descriptors, this API will set the propertieson the object one at a time, as defined by DefineOwnProperty(). |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_ObjectFreeze(JSVM_Env env, JSVM_Value object)](#oh_jsvm_objectfreeze) | This method freezes a given object. This prevents new propertiesfrom being added to it, existing properties from being removed, preventschanging the enumerability, configurability, or writability of existingproperties, and prevents the values of existing properties from being changed.It also prevents the object's prototype from being changed. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_ObjectSeal(JSVM_Env env, JSVM_Value object)](#oh_jsvm_objectseal) | This method seals a given object. This prevents new propertiesfrom being added to it, as well as marking all existing properties as non-configurable. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CallFunction(JSVM_Env env, JSVM_Value recv, JSVM_Value func, size_t argc, const JSVM_Value* argv, JSVM_Value* result)](#oh_jsvm_callfunction) | This method allows a JavaScript function object to be called froma native add-on. This is the primary mechanism of calling back from theadd-on's native code into JavaScript. |
@@ -154,7 +152,7 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 | [JSVM_EXTERN JSVM_Status OH_JSVM_GetNewTarget(JSVM_Env env, JSVM_CallbackInfo cbinfo, JSVM_Value* result)](#oh_jsvm_getnewtarget) | This API returns the new.target of the constructor call. If thecurrent callback is not a constructor call, the result is NULL. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_NewInstance(JSVM_Env env, JSVM_Value constructor, size_t argc, const JSVM_Value* argv, JSVM_Value* result)](#oh_jsvm_newinstance) | his method is used to instantiate a new JavaScript value usinga given JSVM_Value that represents the constructor for the object. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_DefineClass(JSVM_Env env, const char* utf8name, size_t length, JSVM_Callback constructor, size_t propertyCount, const JSVM_PropertyDescriptor* properties, JSVM_Value* result)](#oh_jsvm_defineclass) | When wrapping a C++ class, the C++ constructor callback passed via constructorshould be a static method on the class that calls the actual class constructor, thenwraps the new C++ instance in a JavaScript object, and returns the wrapper object. |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_Wrap(JSVM_Env env, JSVM_Value jsObject, void* nativeObject, JSVM_Finalize finalizeCb, void* finalizeHint, JSVM_Ref* result)](#oh_jsvm_wrap) | Wraps a native instance in a JavaScript object.  The native instance canbe retrieved later using OH_JSVM_Unwrap(). |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_Wrap(JSVM_Env env, JSVM_Value jsObject, void* nativeObject, JSVM_Finalize finalizeCb, void* finalizeHint, JSVM_Ref* result)](#oh_jsvm_wrap) | Wraps a native instance in a JavaScript object. The native instance canbe retrieved later using OH_JSVM_Unwrap(). |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_Unwrap(JSVM_Env env, JSVM_Value jsObject, void** result)](#oh_jsvm_unwrap) | When JavaScript code invokes a method or property accessor on the class, the correspondingJSVM_Callback is invoked. If the callback is for an instance method or accessor, then the thisargument to the callback is the wrapper object; the wrapped C++ instance that is the target ofthe call can be obtained then by calling OH_JSVM_Unwrap() on the wrapper object. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_RemoveWrap(JSVM_Env env, JSVM_Value jsObject, void** result)](#oh_jsvm_removewrap) | Retrieves a native instance that was previously wrapped in the JavaScript object jsObjectusing OH_JSVM_Wrap() and removes the wrapping. If a finalize callback was associated with the wrapping,it will no longer be called when the JavaScript object becomes garbage-collected. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_TypeTagObject(JSVM_Env env, JSVM_Value value, const JSVM_TypeTag* typeTag)](#oh_jsvm_typetagobject) | Associates the value of the typeTag pointer with the JavaScript object or external.OH_JSVM_CheckObjectTypeTag() can then be used to compare the tag that was attached to theobject with one owned by the addon to ensure that the object has the right type.If the object already has an associated type tag, this API will return JSVM_INVALID_ARG. |
@@ -261,9 +259,7 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 ### __declspec()
 
 ```c
-JSVM_EXTERN __declspec(dllexport)
-#elif defined(__wasm__)
- JSVM_EXTERN                                           \
+JSVM_EXTERN __declspec(dllexport) #elif defined(__wasm__)  JSVM_EXTERN \
 ```
 
 **Description**
@@ -294,7 +290,7 @@ Init a JavaScript vm.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the execution fails, it means that the current process has completed<br>                                       JSVM initialization and there is no need to repeat the execution. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the execution fails, it means that the current process has completed                                        JSVM initialization and there is no need to repeat the execution.\n |
 
 ### OH_JSVM_CreateVM()
 
@@ -319,7 +315,7 @@ This API create a new VM instance.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n |
 
 ### OH_JSVM_SetMicrotaskPolicy()
 
@@ -344,7 +340,7 @@ This function controls how Microtasks are invoked of the vm. If the method is no
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If `vm` is NULL or `policy` is out of range. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If `vm` is NULL or `policy` is out of range.\n |
 
 ### OH_JSVM_DestroyVM()
 
@@ -368,7 +364,7 @@ Destroys VM instance.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If `vm` is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If `vm` is NULL.\n |
 
 ### OH_JSVM_CreateProxy()
 
@@ -395,7 +391,7 @@ This API allocates a default JavaScript Proxy. It is the equivalent ofdoing new 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. <br>         [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if target or handler is not Javascript Object. <br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.  |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n          [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if target or handler is not Javascript Object. \n          [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n |
 
 ### OH_JSVM_IsProxy()
 
@@ -421,7 +417,7 @@ This API checks if the value passed in is a Proxy.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL.  |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n |
 
 ### OH_JSVM_ProxyGetTarget()
 
@@ -447,7 +443,7 @@ This API gets target from proxy.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. <br>         [JSVM_INVALID_TYPE](capi-jsvm-types-h.md#jsvm_status) if value is not a Javascript Proxy.  |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n          [JSVM_INVALID_TYPE](capi-jsvm-types-h.md#jsvm_status) if value is not a Javascript Proxy. \n |
 
 ### OH_JSVM_OpenVMScope()
 
@@ -472,7 +468,7 @@ This API open a new VM scope for the VM instance.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CloseVMScope()
 
@@ -497,7 +493,7 @@ This function close the VM scope for the VM instance.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateEnv()
 
@@ -524,7 +520,7 @@ This function create a new environment with optional properties for the context 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateEnvFromSnapshot()
 
@@ -550,7 +546,7 @@ This function create a new environment from the start snapshot of the vm.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the snapshot context for `index` could not be created. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the snapshot context for `index` could not be created.\n |
 
 ### OH_JSVM_DestroyEnv()
 
@@ -574,7 +570,7 @@ This function destroys the environment.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_OpenEnvScope()
 
@@ -599,7 +595,7 @@ This function open a new environment scope.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CloseEnvScope()
 
@@ -624,7 +620,7 @@ This function closes the environment scope of the environment.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetVM()
 
@@ -649,7 +645,7 @@ This function retrieves the VM instance of the given environment.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases.\n |
 
 ### OH_JSVM_CompileScript()
 
@@ -679,7 +675,7 @@ This function compiles a string of JavaScript code and returns the compiled scri
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. <br>         Returns [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If `script` is not a string.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If compilation failed (e.g. compiler returned empty).<br>         Returns [JSVM_CANNOT_RUN_JS](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. <br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n          Returns [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If `script` is not a string.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If compilation failed (e.g. compiler returned empty).\n          Returns [JSVM_CANNOT_RUN_JS](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n |
 
 ### OH_JSVM_CompileScriptWithOrigin()
 
@@ -710,7 +706,7 @@ This function compiles a string of JavaScript code with the source code informat
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. <br>         Returns [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If `script` is not a string.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If compilation failed.<br>         Returns [JSVM_CANNOT_RUN_JS](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. <br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the any of the input arguments is NULL. \n          Returns [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If `script` is not a string.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If compilation failed.\n          Returns [JSVM_CANNOT_RUN_JS](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n |
 
 ### OH_JSVM_CreateCodeCache()
 
@@ -737,7 +733,7 @@ This function creates code cache for the compiled script.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_RunScript()
 
@@ -784,7 +780,7 @@ This API associates data with the currently running JSVM environment. data can l
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetInstanceData()
 
@@ -809,7 +805,7 @@ This API retrieves data that was previously associated with the currently runnin
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetLastErrorInfo()
 
@@ -834,7 +830,7 @@ This API retrieves a JSVM_ExtendedErrorInfo structure with information about the
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Throw()
 
@@ -859,7 +855,7 @@ This API throws the JavaScript value provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ThrowError()
 
@@ -885,7 +881,7 @@ This API throws a JavaScript Error with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ThrowTypeError()
 
@@ -911,7 +907,7 @@ This API throws a JavaScript TypeError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ThrowRangeError()
 
@@ -937,7 +933,7 @@ This API throws a JavaScript RangeError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ThrowSyntaxError()
 
@@ -963,7 +959,7 @@ This API throws a JavaScript SyntaxError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsError()
 
@@ -989,7 +985,7 @@ This API queries a JSVM_Value to check if it represents an error object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateError()
 
@@ -1016,7 +1012,7 @@ This API returns a JavaScript Error with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateTypeError()
 
@@ -1043,7 +1039,7 @@ This API returns a JavaScript TypeError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateRangeError()
 
@@ -1070,7 +1066,7 @@ This API returns a JavaScript RangeError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateSyntaxError()
 
@@ -1097,7 +1093,7 @@ This API returns a JavaScript SyntaxError with the text provided.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetAndClearLastException()
 
@@ -1122,7 +1118,7 @@ This API returns a JavaScript exception if one is pending, NULL otherwise.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsExceptionPending()
 
@@ -1147,7 +1143,7 @@ This API returns true if an exception is pending, false otherwise.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_OpenHandleScope()
 
@@ -1172,7 +1168,7 @@ This API opens a new scope.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CloseHandleScope()
 
@@ -1197,7 +1193,7 @@ This API closes the scope passed in. Scopes must be closed in the reverseorder f
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_OpenEscapableHandleScope()
 
@@ -1222,7 +1218,7 @@ This API opens a new scope from which one object can be promoted to the outer sc
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CloseEscapableHandleScope()
 
@@ -1247,7 +1243,7 @@ This API closes the scope passed in. Scopes must be closed in the reverse orderf
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_EscapeHandle()
 
@@ -1274,7 +1270,7 @@ This API promotes the handle to the JavaScript object so that it is valid for th
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateReference()
 
@@ -1301,7 +1297,7 @@ This API creates a new reference with the specified reference count to the value
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DeleteReference()
 
@@ -1326,7 +1322,7 @@ his API deletes the reference passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ReferenceRef()
 
@@ -1352,7 +1348,7 @@ his API increments the reference count for the reference passed in andreturns th
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ReferenceUnref()
 
@@ -1378,7 +1374,7 @@ This API decrements the reference count for the reference passed in andreturns t
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetReferenceValue()
 
@@ -1404,7 +1400,7 @@ If still valid, this API returns the JSVM_Value representing theJavaScript value
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateArray()
 
@@ -1429,7 +1425,7 @@ This API returns a JSVM-API value corresponding to a JavaScript Array type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateArrayWithLength()
 
@@ -1455,7 +1451,7 @@ This API returns a JSVM-API value corresponding to a JavaScript Array type. The 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateArraybuffer()
 
@@ -1482,7 +1478,7 @@ This API returns a JSVM-API value corresponding to a JavaScript ArrayBuffer. Arr
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_AllocateArrayBufferBackingStoreData()
 
@@ -1508,7 +1504,7 @@ This API allocate the memory of array buffer backing store.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if allocation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if allocation failed. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if allocation succeed.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if allocation failed.\n |
 
 ### OH_JSVM_FreeArrayBufferBackingStoreData()
 
@@ -1532,7 +1528,7 @@ This API release the memory of an array buffer backing store.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if run succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if run succeed.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer.\n |
 
 ### OH_JSVM_CreateArrayBufferFromBackingStoreData()
 
@@ -1561,7 +1557,7 @@ This API create an array buffer using the backing store data.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the following condition reached:<br>         1. offset + arrayBufferSize > backingStoreSize<br>         2. backingStoreSize or arrayBufferSize equals zero<br>         3. data or result is null pointer |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeed.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the following condition reached:\n          1. offset + arrayBufferSize > backingStoreSize\n          2. backingStoreSize or arrayBufferSize equals zero          3. data or result is null pointer |
 
 ### OH_JSVM_CreateDate()
 
@@ -1587,7 +1583,7 @@ This API does not observe leap seconds; they are ignored, as ECMAScript aligns w
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateExternal()
 
@@ -1615,7 +1611,7 @@ This API allocates a JavaScript value with external data attached to it. This is
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateObject()
 
@@ -1640,7 +1636,7 @@ This API allocates a default JavaScript Object. It is the equivalent of doing ne
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateSymbol()
 
@@ -1666,7 +1662,7 @@ This API creates a JavaScript symbol value from a UTF8-encoded C string.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_SymbolFor()
 
@@ -1693,7 +1689,7 @@ This API searches in the global registry for an existing symbol with the given d
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateTypedarray()
 
@@ -1722,7 +1718,7 @@ This API creates a JavaScript TypedArray object over an existing ArrayBuffer. Ty
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateDataview()
 
@@ -1750,7 +1746,7 @@ This API creates a JavaScript DataView object over an existing ArrayBuffer. Data
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateInt32()
 
@@ -1776,7 +1772,7 @@ This API is used to convert from the C int32_t type to the JavaScript number typ
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateUint32()
 
@@ -1802,7 +1798,7 @@ This API is used to convert from the C uint32_t type to the JavaScript number ty
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateInt64()
 
@@ -1828,7 +1824,7 @@ This API is used to convert from the C int64_t type to the JavaScript number typ
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateDouble()
 
@@ -1854,7 +1850,7 @@ This API is used to convert from the C double type to the JavaScript number type
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateBigintInt64()
 
@@ -1880,7 +1876,7 @@ This API converts the C int64_t type to the JavaScript BigInt type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateBigintUint64()
 
@@ -1906,7 +1902,7 @@ This API converts the C uint64_t type to the JavaScript BigInt type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateBigintWords()
 
@@ -1934,7 +1930,7 @@ This API converts an array of unsigned 64-bit words into a single BigInt value.T
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateStringLatin1()
 
@@ -1961,7 +1957,7 @@ This API creates a JavaScript string value from an ISO-8859-1-encoded Cstring. T
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateStringUtf16()
 
@@ -1988,7 +1984,7 @@ This API creates a JavaScript string value from a UTF16-LE-encoded Cstring. The 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateStringUtf8()
 
@@ -2015,7 +2011,7 @@ This API creates a JavaScript string value from a UTF8-encoded Cstring. The nati
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetArrayLength()
 
@@ -2041,7 +2037,7 @@ This API returns the length of an array.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetArraybufferInfo()
 
@@ -2068,7 +2064,7 @@ This API is used to retrieve the underlying data buffer of an ArrayBuffer and it
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetPrototype()
 
@@ -2094,7 +2090,7 @@ This API returns the length of an array.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetTypedarrayInfo()
 
@@ -2124,7 +2120,7 @@ This API returns various properties of a typed array.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetDataviewInfo()
 
@@ -2153,7 +2149,7 @@ Any of the out parameters may be NULL if that property is unneeded.This API retu
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetDateValue()
 
@@ -2179,7 +2175,7 @@ Returns JSVM_OK if the function executed successfully. If a non-date JSVM_Value 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_DATE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-date JSVM_Value is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_DATE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-date JSVM_Value is passed in it.\n |
 
 ### OH_JSVM_GetValueBool()
 
@@ -2205,7 +2201,7 @@ This API returns the C boolean primitive equivalent of the given JavaScript Bool
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_BOOLEAN_EXPECTED](capi-jsvm-types-h.md#jsvm_status)If a non-boolean JSVM_Value is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_BOOLEAN_EXPECTED](capi-jsvm-types-h.md#jsvm_status)If a non-boolean JSVM_Value is passed in it.\n |
 
 ### OH_JSVM_GetValueDouble()
 
@@ -2231,7 +2227,7 @@ This API returns the C double primitive equivalent of the given JavaScript numbe
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueBigintInt64()
 
@@ -2258,7 +2254,7 @@ This API returns the C int64_t primitive equivalent of the given JavaScript BigI
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-BigInt is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-BigInt is passed in it.\n |
 
 ### OH_JSVM_GetValueBigintUint64()
 
@@ -2285,7 +2281,7 @@ This API returns the C uint64_t primitive equivalent of the given JavaScript Big
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-BigInt is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-BigInt is passed in it.\n |
 
 ### OH_JSVM_GetValueBigintWords()
 
@@ -2313,7 +2309,7 @@ This API converts a single BigInt value into a sign bit, 64-bit little-endian ar
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetValueExternal()
 
@@ -2339,7 +2335,7 @@ This API retrieves the external data pointer that was previously passed to OH_JS
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If a non-external JSVM_Value is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If a non-external JSVM_Value is passed in it.\n |
 
 ### OH_JSVM_GetValueInt32()
 
@@ -2365,7 +2361,7 @@ This API returns the C int32 primitive equivalent of the given JavaScript number
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueInt64()
 
@@ -2391,7 +2387,7 @@ This API returns the C int64 primitive equivalent of the given JavaScript number
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueStringLatin1()
 
@@ -2419,7 +2415,7 @@ This API returns the ISO-8859-1-encoded string corresponding the value passed in
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueStringUtf8()
 
@@ -2447,7 +2443,7 @@ This API returns the UTF8-encoded string corresponding the value passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueStringUtf16()
 
@@ -2475,7 +2471,7 @@ This API returns the UTF16-encoded string corresponding the value passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-string JSVM_Value is passed in.\n |
 
 ### OH_JSVM_GetValueUint32()
 
@@ -2501,7 +2497,7 @@ This API returns the C primitive equivalent of the given JSVM_Value as a uint32_
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_NUMBER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-number JSVM_Value is passed in it.\n |
 
 ### OH_JSVM_GetBoolean()
 
@@ -2527,7 +2523,7 @@ This API is used to return the JavaScript singleton object that is used to repre
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetGlobal()
 
@@ -2552,7 +2548,7 @@ This API returns the global object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetNull()
 
@@ -2577,7 +2573,7 @@ This API returns the null object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetUndefined()
 
@@ -2602,7 +2598,7 @@ This API returns the Undefined object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CoerceToBool()
 
@@ -2628,7 +2624,7 @@ This API implements the abstract operation ToBoolean()
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CoerceToNumber()
 
@@ -2654,7 +2650,7 @@ This API implements the abstract operation ToNumber() as defined. Thisfunction p
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CoerceToObject()
 
@@ -2680,7 +2676,7 @@ This API implements the abstract operation ToObject().
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CoerceToString()
 
@@ -2706,7 +2702,7 @@ This API implements the abstract operation ToString().Thisfunction potentially r
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Typeof()
 
@@ -2732,7 +2728,7 @@ This API represents behavior similar to invoking the typeof Operatoron the objec
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Instanceof()
 
@@ -2759,7 +2755,7 @@ This API represents invoking the instanceof Operator on the object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsArray()
 
@@ -2785,7 +2781,7 @@ This API represents invoking the IsArray operation on the object
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsArraybuffer()
 
@@ -2811,7 +2807,7 @@ This API checks if the Object passed in is an array buffer.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsDate()
 
@@ -2837,7 +2833,7 @@ This API checks if the Object passed in is a date.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsTypedarray()
 
@@ -2863,7 +2859,7 @@ This API checks if the Object passed in is a typed array.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsDataview()
 
@@ -2889,7 +2885,7 @@ This API checks if the Object passed in is a DataView.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_StrictEquals()
 
@@ -2916,7 +2912,7 @@ This API represents the invocation of the Strict Equality algorithm.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Equals()
 
@@ -2943,7 +2939,7 @@ This API represents the invocation of the Relaxed Equality algorithm.Returns tru
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DetachArraybuffer()
 
@@ -2968,7 +2964,7 @@ This API represents the invocation of the ArrayBuffer detach operation.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_DETACHABLE_ARRAYBUFFER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-detachable ArrayBuffer is passed in it. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_DETACHABLE_ARRAYBUFFER_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If a non-detachable ArrayBuffer is passed in it.\n |
 
 ### OH_JSVM_IsDetachedArraybuffer()
 
@@ -2994,7 +2990,7 @@ This API represents the invocation of the ArrayBuffer IsDetachedBuffer operation
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetPropertyNames()
 
@@ -3020,7 +3016,7 @@ This API returns the names of the enumerable properties of object as an array of
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetAllPropertyNames()
 
@@ -3049,7 +3045,7 @@ This API returns an array containing the names of the available propertiesof thi
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_SetProperty()
 
@@ -3076,7 +3072,7 @@ This API set a property on the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetProperty()
 
@@ -3103,7 +3099,7 @@ This API gets the requested property from the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_HasProperty()
 
@@ -3130,7 +3126,7 @@ This API checks if the Object passed in has the named property.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DeleteProperty()
 
@@ -3157,7 +3153,7 @@ This API attempts to delete the key own property from object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_HasOwnProperty()
 
@@ -3184,7 +3180,7 @@ This API checks if the Object passed in has the named own property.key must be a
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_SetNamedProperty()
 
@@ -3211,7 +3207,7 @@ This method is equivalent to calling OH_JSVM_SetProperty witha JSVM_Value create
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetNamedProperty()
 
@@ -3238,7 +3234,7 @@ This method is equivalent to calling OH_JSVM_SetProperty witha JSVM_Value create
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_HasNamedProperty()
 
@@ -3265,7 +3261,7 @@ This method is equivalent to calling OH_JSVM_SetProperty witha JSVM_Value create
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_SetElement()
 
@@ -3292,7 +3288,7 @@ This API sets an element on the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetElement()
 
@@ -3319,7 +3315,7 @@ This API gets the element at the requested index.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_HasElement()
 
@@ -3346,7 +3342,7 @@ This API returns if the Object passed in has an elementat the requested index.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DeleteElement()
 
@@ -3373,7 +3369,7 @@ This API attempts to delete the specified index from object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DefineProperties()
 
@@ -3383,7 +3379,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_DefineProperties(JSVM_Env env, JSVM_Value object
 
 **Description**
 
-This method allows the efficient definition of multiple propertieson a given object.  The properties are defined using property descriptors.Given an array of such property descriptors, this API will set the propertieson the object one at a time, as defined by DefineOwnProperty().
+This method allows the efficient definition of multiple propertieson a given object. The properties are defined using property descriptors.Given an array of such property descriptors, this API will set the propertieson the object one at a time, as defined by DefineOwnProperty().
 
 **Since**: 11
 
@@ -3400,7 +3396,7 @@ This method allows the efficient definition of multiple propertieson a given obj
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ObjectFreeze()
 
@@ -3425,7 +3421,7 @@ This method freezes a given object. This prevents new propertiesfrom being added
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ObjectSeal()
 
@@ -3450,7 +3446,7 @@ This method seals a given object. This prevents new propertiesfrom being added t
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CallFunction()
 
@@ -3479,7 +3475,7 @@ This method allows a JavaScript function object to be called froma native add-on
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateFunction()
 
@@ -3507,7 +3503,7 @@ This API allows an add-on author to create a function object in nativecode. This
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetCbInfo()
 
@@ -3536,7 +3532,7 @@ This method is used within a callback function to retrieve details aboutthe call
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetNewTarget()
 
@@ -3562,7 +3558,7 @@ This API returns the new.target of the constructor call. If thecurrent callback 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_NewInstance()
 
@@ -3590,7 +3586,7 @@ his method is used to instantiate a new JavaScript value usinga given JSVM_Value
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_DefineClass()
 
@@ -3620,7 +3616,7 @@ When wrapping a C++ class, the C++ constructor callback passed via constructorsh
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Wrap()
 
@@ -3630,7 +3626,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_Wrap(JSVM_Env env, JSVM_Value jsObject, void* na
 
 **Description**
 
-Wraps a native instance in a JavaScript object.  The native instance canbe retrieved later using OH_JSVM_Unwrap().
+Wraps a native instance in a JavaScript object. The native instance canbe retrieved later using OH_JSVM_Unwrap().
 
 **Since**: 11
 
@@ -3649,7 +3645,7 @@ Wraps a native instance in a JavaScript object.  The native instance canbe retri
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_Unwrap()
 
@@ -3675,7 +3671,7 @@ When JavaScript code invokes a method or property accessor on the class, the cor
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_RemoveWrap()
 
@@ -3701,7 +3697,7 @@ Retrieves a native instance that was previously wrapped in the JavaScript object
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_TypeTagObject()
 
@@ -3727,7 +3723,7 @@ Associates the value of the typeTag pointer with the JavaScript object or extern
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the object already has an associated type tag. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the object already has an associated type tag.\n |
 
 ### OH_JSVM_CheckObjectTypeTag()
 
@@ -3754,7 +3750,7 @@ Compares the pointer given as typeTag with any that can be found on js object.If
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_AddFinalizer()
 
@@ -3783,7 +3779,7 @@ This API can be called multiple times on a single JavaScript object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetVersion()
 
@@ -3808,7 +3804,7 @@ This API returns the highest JSVM-API version supported by the JSVM runtime.JSVM
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetVMInfo()
 
@@ -3832,7 +3828,7 @@ Return information of the VM.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_AdjustExternalMemory()
 
@@ -3858,7 +3854,7 @@ This function gives V8 an indication of the amount of externallyallocated memory
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_MemoryPressureNotification()
 
@@ -3883,7 +3879,7 @@ This function notifies the VM that the system is running low on memoryand option
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreatePromise()
 
@@ -3909,7 +3905,7 @@ This API creates a deferred object and a JavaScript promise.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ResolveDeferred()
 
@@ -3935,7 +3931,7 @@ This API resolves a JavaScript promise by way of the deferred object withwhich i
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_RejectDeferred()
 
@@ -3961,7 +3957,7 @@ This API rejects a JavaScript promise by way of the deferred object withwhich it
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsPromise()
 
@@ -3987,7 +3983,7 @@ This API return indicating whether promise is a native promise object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_PromiseRegisterHandler()
 
@@ -4015,7 +4011,7 @@ This API register a resolution/rejection handler with a promise.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the arguments are invalid. <br>         [JSVM_INVALID_TYPE](capi-jsvm-types-h.md#jsvm_status) if the arguments are invalid Javascript type. <br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. <br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if the API failed.  |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the arguments are invalid. \n          [JSVM_INVALID_TYPE](capi-jsvm-types-h.md#jsvm_status) if the arguments are invalid Javascript type. \n          [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. \n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if the API failed. \n |
 
 ### OH_JSVM_JsonParse()
 
@@ -4041,7 +4037,7 @@ This API parses a JSON string and returns it as value if successful.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_JsonStringify()
 
@@ -4067,7 +4063,7 @@ This API stringifies the object and returns it as string if successful.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_CreateSnapshot()
 
@@ -4095,7 +4091,7 @@ This API create the startup snapshot of the VM.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_GetHeapStatistics()
 
@@ -4120,7 +4116,7 @@ This function returns a set of statistics data of the heap of the VM.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases.\n |
 
 ### OH_JSVM_StartCpuProfiler()
 
@@ -4145,7 +4141,7 @@ This function creates and starts a CPU profiler.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases.\n |
 
 ### OH_JSVM_StopCpuProfiler()
 
@@ -4172,7 +4168,7 @@ This function stops the CPU profiler and output to the stream.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases.\n |
 
 ### OH_JSVM_TakeHeapSnapshot()
 
@@ -4198,7 +4194,7 @@ This function takes the current heap snapshot and output to the stream.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) in all cases.\n |
 
 ### OH_JSVM_TakeRawHeapSnapshot()
 
@@ -4224,7 +4220,7 @@ This function takes the current heap snapshot and outputs it to thestream in raw
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         Returns JSVM_INVALID_ARG if vm or stream is NULL.<br>         Returns JSVM_OK in all other cases. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          Returns JSVM_INVALID_ARG if vm or stream is NULL.          Returns JSVM_OK in all other cases. |
 
 ### OH_JSVM_SetHeapThresholdCallback()
 
@@ -4251,7 +4247,7 @@ Set a heap threshold callback for vm and the vm can only have one heapthreshold 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         Returns JSVM_OK if the function executed successfully.<br>         Returns JSVM_INVALID_ARG if vm or callback is NULL, or if threshold<br>         is zero or exceeds heapSizeLimit, or if a heap threshold callback<br>         has already been registered for the VM. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          Returns JSVM_OK if the function executed successfully.          Returns JSVM_INVALID_ARG if vm or callback is NULL, or if threshold          is zero or exceeds heapSizeLimit, or if a heap threshold callback          has already been registered for the VM. |
 
 ### OH_JSVM_ClearHeapThresholdCallback()
 
@@ -4278,7 +4274,7 @@ Clear the heap threshold callback previously registered for vm.This API is not t
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         Returns JSVM_OK if the function executed successfully.<br>         Returns JSVM_INVALID_ARG if vm or callback is NULL, or if the<br>         (threshold, callback, data) does not match registered callback. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          Returns JSVM_OK if the function executed successfully.          Returns JSVM_INVALID_ARG if vm or callback is NULL, or if the          (threshold, callback, data) does not match registered callback. |
 
 ### OH_JSVM_OpenInspector()
 
@@ -4304,7 +4300,7 @@ This functiong activates insepctor on host and port.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n |
 
 ### OH_JSVM_CloseInspector()
 
@@ -4328,7 +4324,7 @@ This function attempts to close all remaining inspector connections.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n |
 
 ### OH_JSVM_WaitForDebugger()
 
@@ -4353,7 +4349,7 @@ This function will block until a client (existing or connected later)has sent Ru
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n |
 
 ### OH_JSVM_DefineClassWithPropertyHandler()
 
@@ -4385,7 +4381,7 @@ Define a JavaScript class with given class name, constructor, properties, callba
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsLocked()
 
@@ -4410,7 +4406,7 @@ Determines whether the current thread holds the lock for the specified environme
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_AcquireLock()
 
@@ -4434,7 +4430,7 @@ Acquire the lock for the specified environment. Only threads that hold locks can
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_ReleaseLock()
 
@@ -4458,7 +4454,7 @@ Release the lock for the specified environment. Only threads that hold locks can
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_PumpMessageLoop()
 
@@ -4483,7 +4479,7 @@ Starts the running of the task queue inside the VM.This task queue can be execut
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_PerformMicrotaskCheckpoint()
 
@@ -4507,7 +4503,7 @@ Check to see if there are any microtasks waiting in the queue, and if there are,
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsCallable()
 
@@ -4533,7 +4529,7 @@ This API checks if the value passed in is callable.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the function executed successfully.\n |
 
 ### OH_JSVM_IsUndefined()
 
@@ -4559,7 +4555,7 @@ This API checks if the value passed in is undefined.This equals to `value === un
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsNull()
 
@@ -4585,7 +4581,7 @@ This API checks if the value passed in is a null object.This equals to `value ==
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsNullOrUndefined()
 
@@ -4611,7 +4607,7 @@ This API checks if the value passed in is either a null or an undefined object.T
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsBoolean()
 
@@ -4637,7 +4633,7 @@ This API checks if the value passed in is a boolean.This equals to `typeof value
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsNumber()
 
@@ -4663,7 +4659,7 @@ This API checks if the value passed in is a number.This equals to `typeof value 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsString()
 
@@ -4689,7 +4685,7 @@ This API checks if the value passed in is a string.This equals to `typeof value 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsSymbol()
 
@@ -4715,7 +4711,7 @@ This API checks if the value passed in is a symbol.This equals to `typeof value 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsFunction()
 
@@ -4741,7 +4737,7 @@ This API checks if the value passed in is a function.This equals to `typeof valu
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsObject()
 
@@ -4767,7 +4763,7 @@ This API checks if the value passed in is an object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_IsBigInt()
 
@@ -4793,7 +4789,7 @@ This API checks if the value passed in is a bigInt.This equals to `typeof value 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) This API will not trigger any exception.\n |
 
 ### OH_JSVM_CreateMap()
 
@@ -4818,7 +4814,7 @@ This API returns a JSVM-API value corresponding to a JavaScript Map type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_IsMap()
 
@@ -4844,7 +4840,7 @@ This API checks if the value passed in is a Map.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_CreateSet()
 
@@ -4869,7 +4865,7 @@ This API returns a JSVM-API value corresponding to a JavaScript Set type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_IsSet()
 
@@ -4895,7 +4891,7 @@ This API checks if the value passed in is a Set.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_CompileScriptWithOptions()
 
@@ -4923,7 +4919,7 @@ This function compiles a string of JavaScript code with the compile optionsand r
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If there are parameters passed in that are not of type string.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If there is an unknown reason causing execution failure.<br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If a JS exception occurs during the execution process. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If there are parameters passed in that are not of type string.\n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If there is an unknown reason causing execution failure.\n          [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If a JS exception occurs during the execution process.\n |
 
 ### OH_JSVM_CoerceToBigInt()
 
@@ -4949,7 +4945,7 @@ This API implements the abstract operation ToBigInt().
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>         [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the JavaScript value fails to coerce. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n          [JSVM_BIGINT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the JavaScript value fails to coerce.\n |
 
 ### OH_JSVM_IsRegExp()
 
@@ -4975,7 +4971,7 @@ This API checks if the value passed in is a regExp.This equals to `value instanc
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_IsConstructor()
 
@@ -5001,7 +4997,7 @@ This API checks if the value passed in is a constructor.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_CreateRegExp()
 
@@ -5028,7 +5024,7 @@ This API returns the JavaScript value of the regular expressioncorresponding to 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the value of 'value' is not a string.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If create RegExp failed.<br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If the API throws an exception during runtime. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the value of 'value' is not a string.\n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If create RegExp failed.\n          [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If the API throws an exception during runtime.\n |
 
 ### OH_JSVM_ObjectGetPrototypeOf()
 
@@ -5054,7 +5050,7 @@ This API returns the Object prototype.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_ObjectSetPrototypeOf()
 
@@ -5080,7 +5076,7 @@ This API set the prototype on the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n |
 
 ### OH_JSVM_CreateFunctionWithScript()
 
@@ -5110,7 +5106,7 @@ Creates a function with a given script as its body.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.<br>          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the input script fails to be compiled. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM function's result code.           [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.           [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.\n           [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If the input script fails to be compiled.\n |
 
 ### OH_JSVM_RetainScript()
 
@@ -5135,7 +5131,7 @@ This function keep persistently save a JSVM_Script and extend its lifecyclebeyon
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the script is empty or already retained. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the script is empty or already retained. \n |
 
 ### OH_JSVM_ReleaseScript()
 
@@ -5160,7 +5156,7 @@ This function release the script retained by OH_JSVM_RetainScript
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the script is empty or not retained. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the API succeeded. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the script is empty or not retained. \n |
 
 ### OH_JSVM_OpenInspectorWithName()
 
@@ -5186,7 +5182,7 @@ This function activates insepctor with pid and alias it.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n |
 
 ### OH_JSVM_CompileWasmModule()
 
@@ -5216,7 +5212,7 @@ Compile WebAssembly bytecode into a WebAssembly module.If WebAssembly cache prov
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of env, wasmBytecode is NULL, or data length is invalid.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if compile failed.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.<br>         Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of env, wasmBytecode is NULL, or data length is invalid.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if compile failed.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n          Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode.\n |
 
 ### OH_JSVM_CompileWasmFunction()
 
@@ -5243,7 +5239,7 @@ Compile the function with the specified index in the WebAssembly moduleinto the 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env is NULL, or wasmModule is NULL or is not a WebAssembly module.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if functionIndex out of range or compile failed.<br>         Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.<br>         Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env is NULL, or wasmModule is NULL or is not a WebAssembly module.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if functionIndex out of range or compile failed.\n          Returns [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) if an exception occurs.\n          Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode.\n |
 
 ### OH_JSVM_IsWasmModuleObject()
 
@@ -5269,7 +5265,7 @@ Check whether the given JSVM_Value is a WebAssembly module.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the input arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the input arguments is NULL.\n |
 
 ### OH_JSVM_CreateWasmCache()
 
@@ -5296,7 +5292,7 @@ Create cache for compiled WebAssembly module.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the input arguments is NULL.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if create wasm cache failed.<br>         Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the input arguments is NULL.\n          Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if create wasm cache failed.\n          Returns [JSVM_JIT_MODE_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if run in jitless mode.\n |
 
 ### OH_JSVM_ReleaseCache()
 
@@ -5322,7 +5318,7 @@ Release cache data with specified cache type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL or cacheType is illegal. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL or cacheType is illegal.\n |
 
 ### OH_JSVM_CreateExternalStringLatin1()
 
@@ -5352,7 +5348,7 @@ This API creates an external JavaScript string value from an ISO-8859-1-encoded 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if one of env, str and copied is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if one of env, str and copied is NULL.\n |
 
 ### OH_JSVM_CreateExternalStringUtf16()
 
@@ -5382,7 +5378,7 @@ This API creates an external JavaScript string value from an UTF16-LE-encoded Cs
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if one of env, str and copied is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if one of env, str and copied is NULL.\n |
 
 ### OH_JSVM_CreatePrivate()
 
@@ -5408,7 +5404,7 @@ This API creates a JavaScript private key.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env or result is NULL.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if the description is not a string. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env or result is NULL.\n          [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) if the description is not a string.\n |
 
 ### OH_JSVM_SetPrivate()
 
@@ -5435,7 +5431,7 @@ This API set a private property on the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.<br>         [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to set the private key but no exception is pending.<br>         {@link JSVM_PENDING_EXCPTION } if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.\n          [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.\n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to set the private key but no exception is pending.\n          {@link JSVM_PENDING_EXCPTION } if an exception occurs.\n |
 
 ### OH_JSVM_GetPrivate()
 
@@ -5462,7 +5458,7 @@ This API gets the requested private property from the Object passed in.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.<br>         [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to get the private key but no exception is pending.<br>         {@link JSVM_PENDING_EXCPTION } if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.\n          [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.\n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to get the private key but no exception is pending.\n          {@link JSVM_PENDING_EXCPTION } if an exception occurs.\n |
 
 ### OH_JSVM_DeletePrivate()
 
@@ -5488,7 +5484,7 @@ This API attempts to delete the property of the private key from object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.<br>         [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to delete the private key but no exception is pending.<br>         {@link JSVM_PENDING_EXCPTION } if an exception occurs. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the arguments is NULL or the key is not a private key.\n          [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) object passed in is not a real object.\n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if failed to delete the private key but no exception is pending.\n          {@link JSVM_PENDING_EXCPTION } if an exception occurs.\n |
 
 ### OH_JSVM_CreateDataReference()
 
@@ -5515,7 +5511,7 @@ This API creates a new reference with the specified reference count to the data 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any parameter is null or the value of initialRefcount is 0. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any parameter is null or the value of initialRefcount is 0.\n |
 
 ### OH_JSVM_GetReferenceData()
 
@@ -5541,7 +5537,7 @@ If still valid, this API returns the JSVM_Data representing theJavaScript data a
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any parameter is null or the ref is not a reference to JSVM_Data. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any parameter is null or the ref is not a reference to JSVM_Data.\n |
 
 ### OH_JSVM_IsBigIntObject()
 
@@ -5567,7 +5563,7 @@ Check whether the given JSVM_Value is a BigInt Object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_IsBooleanObject()
 
@@ -5593,7 +5589,7 @@ Check whether the given JSVM_Value is a Boolean Object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_IsStringObject()
 
@@ -5619,7 +5615,7 @@ Check whether the given JSVM_Value is a String Object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_IsNumberObject()
 
@@ -5645,7 +5641,7 @@ Check whether the given JSVM_Value is a Number Object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_IsSymbolObject()
 
@@ -5671,7 +5667,7 @@ Check whether the given JSVM_Value is a Symbol Object.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolAsyncIterator()
 
@@ -5696,7 +5692,7 @@ This API returns the Symbol.asyncIterator of Well-Known Symbols.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolHasInstance()
 
@@ -5721,7 +5717,7 @@ This API returns the Symbol.hasInstance of Well-Known Symbols.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolIsConcatSpreadable()
 
@@ -5746,7 +5742,7 @@ This API returns the Symbol.isConcatSpreadable of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolMatch()
 
@@ -5771,7 +5767,7 @@ This API returns the Symbol.match of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolReplace()
 
@@ -5796,7 +5792,7 @@ This API returns the Symbol.replace of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolSearch()
 
@@ -5821,7 +5817,7 @@ This API returns the Symbol.search of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolSplit()
 
@@ -5846,7 +5842,7 @@ This API returns the Symbol.split of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolToPrimitive()
 
@@ -5871,7 +5867,7 @@ This API returns the Symbol.toPrimitive of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolUnscopables()
 
@@ -5896,7 +5892,7 @@ This API returns the Symbol.unscopables of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolToStringTag()
 
@@ -5921,7 +5917,7 @@ This API returns the Symbol.toStringTag of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_GetSymbolIterator()
 
@@ -5946,7 +5942,7 @@ This API returns the Symbol.iterator of Well-Known Symbols
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_TraceStart()
 
@@ -5973,7 +5969,7 @@ Trace start with specified categories for all JSVM VM.(Non-thread-safe)
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if categories or count is illegal. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if categories or count is illegal.\n |
 
 ### OH_JSVM_TraceStop()
 
@@ -5998,7 +5994,7 @@ Trace stop for specified categories for all JSVM VM.(Non-thread-safe)
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if stream or streamData is NULL |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if stream or streamData is NULL\n |
 
 ### OH_JSVM_SetHandlerForOOMError()
 
@@ -6023,7 +6019,7 @@ Set Handler For OOM Error. If this function is invoked repeatedly,only the last 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL.\n |
 
 ### OH_JSVM_SetDebugOption()
 
@@ -6049,7 +6045,7 @@ This API is used to enable/disable the given debug option for a certain JSVM_Env
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if env is NULL.\n |
 
 ### OH_JSVM_SetHandlerForFatalError()
 
@@ -6074,7 +6070,7 @@ Set Handler For Fatal Error. If this function is invoked repeatedly,only the las
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL.\n |
 
 ### OH_JSVM_SetHandlerForPromiseReject()
 
@@ -6099,7 +6095,7 @@ Set Handler For Promise Reject. If this function is invoked repeatedly,only the 
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if vm is NULL.\n |
 
 ### OH_JSVM_DefineClassWithOptions()
 
@@ -6132,7 +6128,7 @@ When wrapping a C++ class, the C++ constructor callback passed via constructorsh
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully. <br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. <br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if the input utf8name | constructor | properties is invalid. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM functions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully. \n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. \n          [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if the input utf8name | constructor | properties is invalid. \n |
 
 ### OH_JSVM_AddHandlerForGC()
 
@@ -6160,7 +6156,7 @@ Add VM GC Callback.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the vm or the handler is NULL or the handler has been added before. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the vm or the handler is NULL or the handler has been added before.\n |
 
 ### OH_JSVM_RemoveHandlerForGC()
 
@@ -6187,7 +6183,7 @@ Remove VM GC Callback.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the vm or the handler is NULL, or the handler has been removed,<br> or the handler has never been added. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if the vm or the handler is NULL, or the handler has been removed,  or the handler has never been added.\n |
 
 ### OH_JSVM_BackgroundDeserialize()
 
@@ -6213,7 +6209,7 @@ Deserialize JavaScript code cache in thread pool, and releaseJSVM_DeserializeRes
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_ReleaseDeserializeResult()
 
@@ -6237,7 +6233,7 @@ Release deserialize result.
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if the function executed successfully.\n          [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the pointer arguments is NULL.\n |
 
 ### OH_JSVM_CreateArrayBufferFromExternalMemory()
 
@@ -6267,6 +6263,6 @@ Creates a JavaScript ArrayBuffer whose content is initialized from user-provided
 
 | Type | Description |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeeded.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if result is null, externalData is null when<br>         byteLength > 0, externalData is not 8-byte aligned, or byteLength exceeds the<br>         engine's maximum ArrayBuffer size. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.          Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeeded.\n          Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if result is null, externalData is null when          byteLength > 0, externalData is not 8-byte aligned, or byteLength exceeds the          engine's maximum ArrayBuffer size.\n |
 
 

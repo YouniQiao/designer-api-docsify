@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## defaultFocus

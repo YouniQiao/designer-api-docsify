@@ -2,7 +2,7 @@
 
 Defines the TimePickerDialogOptions for Data Picker Dialog.
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-na-timepicker-timepickeroptions-i.md#timepickeroptions)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-na-timepicker-timepickeroptions-i.md)
 
 **Since:** 23
 

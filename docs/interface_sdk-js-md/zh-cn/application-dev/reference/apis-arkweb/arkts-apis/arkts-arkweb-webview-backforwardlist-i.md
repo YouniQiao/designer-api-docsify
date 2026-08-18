@@ -11,6 +11,7 @@ BackForwardList是ArkWeb框架中用于访问Web组件浏览历史列表的接�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getItemAtIndex

@@ -19,7 +19,7 @@ Obtain the scanned sta list.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
@@ -54,7 +54,7 @@ Obtain the scanned sta list.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
@@ -66,7 +66,7 @@ Obtain the scanned sta list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

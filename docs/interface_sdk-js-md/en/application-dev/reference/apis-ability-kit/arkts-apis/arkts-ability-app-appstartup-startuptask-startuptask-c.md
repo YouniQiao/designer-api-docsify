@@ -12,7 +12,6 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 ```TypeScript
 import { StartupTask } from '@kit.AbilityKit';
-import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -35,7 +34,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Context environment of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). |
 
 **Return value:**
 

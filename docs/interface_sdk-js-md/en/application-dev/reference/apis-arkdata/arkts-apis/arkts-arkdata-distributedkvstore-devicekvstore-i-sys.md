@@ -2,7 +2,7 @@
 
 Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used. Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object.
 
-**Inheritance/Implementation:** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#singlekvstore)
+**Inheritance/Implementation:** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
 
 **Since:** 23
 
@@ -39,7 +39,7 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the local device ID and specified {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the local device ID and specified {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ Obtains the KVStoreResultSet object matching a specified Device ID and Predicate
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the ID of the device to which the results belong. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified deviceId and {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified deviceId and {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 

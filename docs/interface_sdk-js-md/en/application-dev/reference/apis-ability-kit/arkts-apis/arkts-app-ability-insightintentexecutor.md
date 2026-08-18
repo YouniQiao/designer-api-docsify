@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { InsightIntentExecutor } from '@kit.AbilityKit';
-import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## Summary

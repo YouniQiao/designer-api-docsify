@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { effectKit } from '@kit.ArkGraphics2D';
-import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## createEffect

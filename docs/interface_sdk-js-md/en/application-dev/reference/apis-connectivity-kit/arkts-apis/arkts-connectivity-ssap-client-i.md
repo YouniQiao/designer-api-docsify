@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance.
 
 **Since:** 26.0.0
 
@@ -156,7 +156,7 @@ Unsubscribes from client connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
 
 ## offMtuChange
 
@@ -178,7 +178,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
 
 ## offPropertyChange
 
@@ -200,7 +200,7 @@ Unsubscribe property value changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No | Callback used to listen for the property value changed event. |
 
 ## onConnectionStateChange
 
@@ -222,7 +222,7 @@ Subscribes to client connection state changed events. This event is accessible o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
 
 ## onMtuChange
 
@@ -244,7 +244,7 @@ Subscribes to MTU changed events. This event is accessible only to applications 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
 
 ## onPropertyChange
 
@@ -266,7 +266,7 @@ Subscribe property value changed event. This event is accessible only to applica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to listen for the property value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes | Callback used to listen for the property value changed event. |
 
 ## readProperty
 

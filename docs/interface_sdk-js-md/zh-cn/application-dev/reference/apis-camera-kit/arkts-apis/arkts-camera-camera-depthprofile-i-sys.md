@@ -1,6 +1,6 @@
 # DepthProfile（系统接口）
 
-Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#profile).
+Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md).
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ Describes the profile of depth data. It inherits from [Profile](arkts-camera-cam
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## dataAccuracy

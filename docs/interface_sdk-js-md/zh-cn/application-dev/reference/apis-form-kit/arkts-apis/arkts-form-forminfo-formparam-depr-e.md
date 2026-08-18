@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [FormParam](arkts-form-forminfo-formparam-e.md#formparam)
+**替代接口：** [FormParam](arkts-form-forminfo-formparam-e.md)
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -24,7 +24,7 @@ DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'
 
 **废弃版本：** 9
 
-**替代接口：** [DIMENSION_KEY](arkts-form-forminfo-formparam-e.md#dimensionkey)
+**替代接口：** [DIMENSION_KEY](arkts-form-forminfo-formparam-e.md#dimension_key)
 
 <!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'--><!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'-End-->
 
@@ -42,7 +42,7 @@ NAME_KEY = 'ohos.extra.param.key.form_name'
 
 **废弃版本：** 9
 
-**替代接口：** [NAME_KEY](arkts-form-forminfo-formparam-e.md#namekey)
+**替代接口：** [NAME_KEY](arkts-form-forminfo-formparam-e.md#name_key)
 
 <!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'--><!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'-End-->
 
@@ -60,7 +60,7 @@ MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'
 
 **废弃版本：** 9
 
-**替代接口：** [MODULE_NAME_KEY](arkts-form-forminfo-formparam-e.md#modulenamekey)
+**替代接口：** [MODULE_NAME_KEY](arkts-form-forminfo-formparam-e.md#module_name_key)
 
 <!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'--><!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'-End-->
 
@@ -78,7 +78,7 @@ WIDTH_KEY = 'ohos.extra.param.key.form_width'
 
 **废弃版本：** 9
 
-**替代接口：** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#widthkey)
+**替代接口：** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#width_key)
 
 <!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'--><!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'-End-->
 
@@ -96,7 +96,7 @@ HEIGHT_KEY = 'ohos.extra.param.key.form_height'
 
 **废弃版本：** 9
 
-**替代接口：** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#heightkey)
+**替代接口：** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#height_key)
 
 <!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'--><!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'-End-->
 
@@ -114,7 +114,7 @@ TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'
 
 **废弃版本：** 9
 
-**替代接口：** [TEMPORARY_KEY](arkts-form-forminfo-formparam-e.md#temporarykey)
+**替代接口：** [TEMPORARY_KEY](arkts-form-forminfo-formparam-e.md#temporary_key)
 
 <!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'--><!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'-End-->
 

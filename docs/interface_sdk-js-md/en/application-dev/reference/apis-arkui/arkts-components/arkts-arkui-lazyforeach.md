@@ -64,20 +64,35 @@ Enter the value to obtain the LazyForEach.
 
 ## Summary
 
-- [DataAddOperation](arkts-arkui-dataaddoperation-i.md)
-- [DataChangeListener](arkts-arkui-datachangelistener-i.md)
-- [DataChangeOperation](arkts-arkui-datachangeoperation-i.md)
-- [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md)
-- [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md)
-- [DataMoveOperation](arkts-arkui-datamoveoperation-i.md)
-- [DataReloadOperation](arkts-arkui-datareloadoperation-i.md)
-- [ExchangeIndex](arkts-arkui-exchangeindex-i.md)
-- [ExchangeKey](arkts-arkui-exchangekey-i.md)
-- [IDataSource](arkts-arkui-idatasource-i.md)
-- [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)
-- [MoveIndex](arkts-arkui-moveindex-i.md)
-- [DataOperation](arkts-arkui-dataoperation-t.md)
-- [DataOperationType](arkts-arkui-dataoperationtype-e.md)
-- [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
-- [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md)
-- [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | Represents an operation for adding data. |
+| [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Listener for data changes. > **NOTE：**> > In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value > is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside > the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**, > the value of **index** can equal the data source length.) |
+| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | Represents an operation for changing data. |
+| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | Represents an operation for deleting data. |
+| [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | Represents an operation for exchanging data. |
+| [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) | Represents an operation for moving data. |
+| [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) | Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD** operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator** to perform a comparison of keys with their corresponding values. |
+| [ExchangeIndex](arkts-arkui-exchangeindex-i.md) | Defines position of exchange data. |
+| [ExchangeKey](arkts-arkui-exchangekey-i.md) | Defines new key of exchange data. |
+| [IDataSource](arkts-arkui-idatasource-i.md) | Data source of **LazyForEach**. |
+| [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | Defines the options for LazyForEach. |
+| [MoveIndex](arkts-arkui-moveindex-i.md) | Defines position of moved data. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [DataOperation](arkts-arkui-dataoperation-t.md) | All data operation types. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [DataOperationType](arkts-arkui-dataoperationtype-e.md) | Enumerates the data operation types. |
+| [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md) | Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach. |
+| [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md) | Defines a type for memory optimization strategy. |
+| [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md) | Enumerates the release strategies for LazyForEach discarded nodes. |
+

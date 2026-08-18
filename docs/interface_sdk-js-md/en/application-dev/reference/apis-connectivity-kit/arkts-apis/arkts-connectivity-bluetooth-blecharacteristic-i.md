@@ -6,7 +6,7 @@ Describes the Gatt characteristic.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#blecharacteristic)
+**Substitutes:** [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md)
 
 <!--Device-bluetooth-interface BLECharacteristic--><!--Device-bluetooth-interface BLECharacteristic-End-->
 
@@ -81,7 +81,7 @@ The value of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#bledescriptor) contained in the characteristic
+The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -101,7 +101,7 @@ The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#bled
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#gattservice) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md) instance to which the characteristic belongs
 
 **Type:** string
 

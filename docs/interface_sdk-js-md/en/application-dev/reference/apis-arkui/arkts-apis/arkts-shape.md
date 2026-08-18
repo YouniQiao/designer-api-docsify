@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Shape](arkts-arkui-shape-shape-f.md#shape) | Shape is returned when the parameter is transferred. |
+| [Shape](arkts-arkui-shape-shape-f.md) | Shape is returned when the parameter is transferred. |
 
 ### Interfaces
 

@@ -12,7 +12,6 @@ Represents the deferred task information, which is used to set the trigger condi
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

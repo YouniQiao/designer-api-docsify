@@ -20,7 +20,7 @@ import { a2dp } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md#createa2dpsrcprofile) | create the instance of a2dp profile. |
+| [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md) | create the instance of a2dp profile. |
 
 ### Interfaces
 
@@ -31,7 +31,7 @@ import { a2dp } from '@kit.ConnectivityKit';
 | [CodecInfoList](arkts-connectivity-a2dp-codecinfolist-i.md) | Describes the codec information. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

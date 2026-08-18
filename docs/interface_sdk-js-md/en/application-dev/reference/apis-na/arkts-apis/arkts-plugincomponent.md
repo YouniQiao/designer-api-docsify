@@ -3,16 +3,16 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#plugincomponent-system-api) | Defines PluginComponent Component. |
-| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md#plugincomponent-system-api) | Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md) | Defines PluginComponent Component. |
+| [PluginComponent](arkts-na-plugincomponent-plugincomponent-f-sys.md) | Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -22,7 +22,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

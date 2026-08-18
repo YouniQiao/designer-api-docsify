@@ -24,7 +24,7 @@ Subscribe to gravity sensor data, {@code SensorId.GRAVITY}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | callback gravity data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | callback gravity data. |
 | options | Options | No | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **Error codes:**

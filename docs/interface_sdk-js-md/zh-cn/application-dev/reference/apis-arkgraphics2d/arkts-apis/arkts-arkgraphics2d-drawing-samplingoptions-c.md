@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -19,7 +20,7 @@
 constructor()
 ```
 
-构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#filtermode)的默认值为FILTER_MODE_NEAREST。
+构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md)的默认值为FILTER_MODE_NEAREST。
 
 **起始版本：** 23
 

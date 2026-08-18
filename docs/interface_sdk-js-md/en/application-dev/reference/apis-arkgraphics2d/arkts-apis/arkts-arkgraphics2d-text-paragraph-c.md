@@ -1,6 +1,6 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder) class to create a **Paragraph** object.
+Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing. Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Implements a carrier that stores the text content and style. You can perform ope
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 
@@ -802,7 +801,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#ellipsismode)). **NOTE：**The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set): | Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)). **NOTE：**The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set): | Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 

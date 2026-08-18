@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyForEach](arkts-na-lazyforeach-lazyforeach-f.md#lazyforeach) | Defines LazyForEach Component. It requires calling setLazyForEachOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
+| [LazyForEach](arkts-na-lazyforeach-lazyforeach-f.md) | Defines LazyForEach Component. It requires calling setLazyForEachOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 

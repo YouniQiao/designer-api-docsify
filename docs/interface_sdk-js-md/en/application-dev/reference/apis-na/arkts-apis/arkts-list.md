@@ -21,7 +21,7 @@
 | [VisibleListContentInfo](arkts-na-list-visiblelistcontentinfo-i.md) | Defines the visible list content info. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -40,7 +40,7 @@
 | [StickyStyle](arkts-na-list-stickystyle-e.md) | Declare item group sticky style. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

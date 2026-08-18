@@ -123,7 +123,7 @@ Create an audio OH_AVFormat handle pointer to read and write data
 
 | Type | Description |
 | -- | -- |
-| [struct OH_AVFormat *](capi-core-oh-avformat.md) | Pointer to the OH_AVFormat instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of mimeType is NULL.<br>     <br>2. System resources are insufficient. |
+| [struct OH_AVFormat *](capi-core-oh-avformat.md) | Pointer to the OH_AVFormat instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of mimeType is NULL.      <br>2. System resources are insufficient. |
 
 ### OH_AVFormat_CreateVideoFormat()
 
@@ -149,7 +149,7 @@ Create a video OH_AVFormat handle pointer to read and write data
 
 | Type | Description |
 | -- | -- |
-| [struct OH_AVFormat *](capi-core-oh-avformat.md) | Pointer to the OH_AVFormat instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of mimeType is NULL.<br>     <br>2. System resources are insufficient. |
+| [struct OH_AVFormat *](capi-core-oh-avformat.md) | Pointer to the OH_AVFormat instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of mimeType is NULL.      <br>2. System resources are insufficient. |
 
 ### OH_AVFormat_Destroy()
 
@@ -192,7 +192,7 @@ Copies an OH_AVFormat instance.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The input parameter is nullptr.<br>     <br>2. The value of OH_AVFormat fails parameter structure verification. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The input parameter is nullptr.      <br>2. The value of OH_AVFormat fails parameter structure verification. |
 
 ### OH_AVFormat_SetIntValue()
 
@@ -218,7 +218,7 @@ Assigns a value of the int type to a {@link key} in an OH_AVFormat instance. Thi
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetUintValue()
 
@@ -244,7 +244,7 @@ Assigns an unsigned int value to the key of an OH_AVFormat instance. This API ca
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr. |
 
 ### OH_AVFormat_SetLongValue()
 
@@ -270,7 +270,7 @@ Assigns a value of the long type to a {@link key} in an OH_AVFormat instance. Th
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetFloatValue()
 
@@ -296,7 +296,7 @@ Assigns a value of the float type to a {@link key} in an OH_AVFormat instance. T
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetDoubleValue()
 
@@ -322,7 +322,7 @@ Assigns a value of the double type to a {@link key} in an OH_AVFormat instance. 
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetStringValue()
 
@@ -348,7 +348,7 @@ Assigns a value of the string type to a {@link key} in an OH_AVFormat instance. 
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The passed-in value of value is a null pointer.<br>     <br>5. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The passed-in value of value is a null pointer.      <br>5. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_SetBuffer()
 
@@ -375,7 +375,7 @@ Writes data blocks of a specified length to an OH_AVFormat instance. This functi
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of addr is nullptr.<br>     <br>5. The size is 0 or exceeds the upper limit 1 MB.<br>     <br>6. The value type corresponding to the key is incorrect. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of addr is nullptr.      <br>5. The size is 0 or exceeds the upper limit 1 MB.      <br>6. The value type corresponding to the key is incorrect. |
 
 ### OH_AVFormat_GetIntValue()
 
@@ -401,7 +401,7 @@ Obtains the value of the int type of a {@link key} in an OH_AVFormat instance.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr.<br>     <br>5. The obtained key does not exist or is not set. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr.      <br>5. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_GetUintValue()
 
@@ -427,7 +427,7 @@ Obtains the value of the unsigned int type from an OH_AVFormat instance using a 
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr. |
 
 ### OH_AVFormat_GetLongValue()
 
@@ -453,7 +453,7 @@ Obtains the value of the long type of a {@link key} in an OH_AVFormat instance.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr.<br>     <br>5. The obtained key does not exist or is not set. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr.      <br>5. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_GetFloatValue()
 
@@ -479,7 +479,7 @@ Obtains the value of the float type of a {@link key} in an OH_AVFormat instance.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr.<br>     <br>5. The obtained key does not exist or is not set. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr.      <br>5. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_GetDoubleValue()
 
@@ -505,7 +505,7 @@ Obtains the value of the double type of a {@link key} in an OH_AVFormat instance
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr.<br>     <br>5. The obtained key does not exist or is not set. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr.      <br>5. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_GetStringValue()
 
@@ -531,7 +531,7 @@ Obtains the value of the string type of a {@link key} in an OH_AVFormat instance
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of out is nullptr.<br>     <br>5. The system resources are insufficient.<br>     <br>6. The obtained key does not exist or is not set.<br>     <br>7. The length of the out data exceeds 256 bytes. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of out is nullptr.      <br>5. The system resources are insufficient.      <br>6. The obtained key does not exist or is not set.      <br>7. The length of the out data exceeds 256 bytes. |
 
 ### OH_AVFormat_GetBuffer()
 
@@ -558,7 +558,7 @@ Reads data blocks of a specified length from an OH_AVFormat instance.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of addr is nullptr.<br>     <br>5. The value of size is nullptr.<br>     <br>6. The obtained key does not exist or is not set. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of addr is nullptr.      <br>5. The value of size is nullptr.      <br>6. The obtained key does not exist or is not set. |
 
 ### OH_AVFormat_DumpInfo()
 
@@ -582,7 +582,7 @@ Returns a string consisting of key-value pairs in an OH_AVFormat instance. A str
 
 | Type | Description |
 | -- | -- |
-| const char * | A string consisting of key-value pairs. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1.  The value of format is NULL.<br>     <br>2. System resources are insufficient. |
+| const char * | A string consisting of key-value pairs. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1.  The value of format is NULL.      <br>2. System resources are insufficient. |
 
 ### OH_AVFormat_GetIntBuffer()
 
@@ -609,7 +609,7 @@ Reads an array of int32_t data from an OH_AVFormat instance.Note that the buffer
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of addr is nullptr.<br>     <br>5. The value of size is nullptr. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of addr is nullptr.      <br>5. The value of size is nullptr. |
 
 ### OH_AVFormat_SetIntBuffer()
 
@@ -636,7 +636,7 @@ Writes data blocks of the int32_t type with a specified length to an OH_AVFormat
 
 | Type | Description |
 | -- | -- |
-| bool | true if the operation is successful; false otherwise.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of format is nullptr.<br>     <br>2. The value of format fails parameter structure verification.<br>     <br>3. The value of key is nullptr.<br>     <br>4. The value of addr is nullptr.<br>     <br>5. The value of size is 0. |
+| bool | true if the operation is successful; false otherwise.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of format is nullptr.      <br>2. The value of format fails parameter structure verification.      <br>3. The value of key is nullptr.      <br>4. The value of addr is nullptr.      <br>5. The value of size is 0. |
 
 ### OH_AVFormat_GetKeyCount()
 

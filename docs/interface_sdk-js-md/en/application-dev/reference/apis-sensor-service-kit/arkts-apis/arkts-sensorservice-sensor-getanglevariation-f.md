@@ -27,7 +27,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 | --- | --- | --- | --- |
 | currentRotationMatrix | Array&lt;double&gt; | Yes | Current rotation matrix. |
 | preRotationMatrix | Array&lt;double&gt; | Yes | The other rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 

@@ -20,17 +20,17 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | Pushes the component and data to the component user. |
-| [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | Requests the component from the component provider. |
-| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#onstring) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
+| [push](arkts-arkui-plugincomponentmanager-push-f.md) | Pushes the component and data to the component user. |
+| [request](arkts-arkui-plugincomponentmanager-request-f.md) | Requests the component from the component provider. |
+| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#on_string) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-system-api) | Plugin component push method used to send the information of the template it provides. |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-system-api) | Plugin component request method used to send a request for the information of the template it wants. |
+| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md) | Plugin component push method used to send the information of the template it provides. |
+| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -43,7 +43,7 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 | [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

@@ -6,7 +6,7 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 
 **Deprecated since:** 9
 
-**Substitutes:** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#kvstoreresultset)
+**Substitutes:** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)
 
 <!--Device-distributedData-interface KvStoreResultSet--><!--Device-distributedData-interface KvStoreResultSet-End-->
 
@@ -15,7 +15,6 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
 import { distributedDataObject } from '@kit.ArkData';
 ```
 

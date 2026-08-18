@@ -17,7 +17,7 @@ Opens a directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listfilesync)
+**Substitutes:** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md)
 
 <!--Device-unnamed-declare function opendirSync(path: string): Dir--><!--Device-unnamed-declare function opendirSync(path: string): Dir-End-->
 

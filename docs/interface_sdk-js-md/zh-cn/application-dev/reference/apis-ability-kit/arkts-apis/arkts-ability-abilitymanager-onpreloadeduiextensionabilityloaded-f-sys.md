@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## onPreloadedUIExtensionAbilityLoaded
@@ -11,7 +12,7 @@
 function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-监听当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)实例的加载事件。
+监听当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的加载事件。
 
 **起始版本：** 23
 
@@ -29,7 +30,7 @@ function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbili
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | 是 | 用于接收被加载的预加载 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)实例ID的回调函数。 |
+| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | 是 | 用于接收被加载的预加载 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例ID的回调函数。 |
 
 **错误码：**
 

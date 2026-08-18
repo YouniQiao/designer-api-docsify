@@ -2,7 +2,7 @@
 
 对话框的消息选项。
 
-**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#dialogtextstyleoptions)
+**继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)
 
 **起始版本：** 26.1.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## content

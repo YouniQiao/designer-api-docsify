@@ -29,5 +29,5 @@ Subscribes to only one data change of the humidity sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HUMIDITY**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes | One-shot callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes | One-shot callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
 

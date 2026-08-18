@@ -1,8 +1,8 @@
 # SystemDefinedForm
 
-Represents the service widget data defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#systemdefinedrecord).
+Represents the service widget data defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md).
 
-**Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#systemdefinedrecord)
+**Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ Represents the service widget data defined by the system. It is a child class of
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

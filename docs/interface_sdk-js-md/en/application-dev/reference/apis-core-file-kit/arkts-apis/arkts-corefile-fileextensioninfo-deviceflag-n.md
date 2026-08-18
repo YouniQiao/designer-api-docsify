@@ -23,11 +23,11 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 ## Summary
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supportsread) | The device supports read. |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supportswrite) | The device supports write. |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | The device supports read. |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | The device supports write. |
 <!--DelEnd-->
 

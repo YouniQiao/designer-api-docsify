@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## releaseDeviceManager

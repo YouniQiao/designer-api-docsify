@@ -17,7 +17,7 @@ Creates a **FormBindingData** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata)
+**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
 
 <!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
 

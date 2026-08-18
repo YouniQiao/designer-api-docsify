@@ -1,8 +1,8 @@
 # ChipV2CloseIcon
 
-ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括无障碍功能属性。 继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md#chipv2accessibility)。
+ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括无障碍功能属性。 继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)。
 
-**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md#chipv2accessibility)
+**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@ ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括�
 ## 导入模块
 
 ```TypeScript
+import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUI';
 ```
 
 ## constructor

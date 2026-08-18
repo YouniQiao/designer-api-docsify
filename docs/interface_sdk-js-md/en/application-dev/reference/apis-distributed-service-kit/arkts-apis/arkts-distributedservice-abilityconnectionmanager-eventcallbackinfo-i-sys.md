@@ -12,7 +12,6 @@ Defines the event callback information.
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## image

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { ContentFormCard, FormType } from '@kit.ArkData';
-import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
 ## Summary

@@ -10888,7 +10888,7 @@ Resolves a promise.This function resolves a promise by way of the resolver with 
 
 | Type | Description |
 | -- | -- |
-| ani_status | Returns a status code of type `ani_status` indicating success or failure.<br>     The `resolver` is freed upon successful completion. |
+| ani_status | Returns a status code of type `ani_status` indicating success or failure.      The `resolver` is freed upon successful completion. |
 
 ### PromiseResolver_Reject()
 
@@ -10915,7 +10915,7 @@ Rejects a promise.This function rejects a promise by way of the resolver with wh
 
 | Type | Description |
 | -- | -- |
-| ani_status | Returns a status code of type `ani_status` indicating success or failure.<br>     The `resolver` is freed upon successful completion. |
+| ani_status | Returns a status code of type `ani_status` indicating success or failure.      The `resolver` is freed upon successful completion. |
 
 ### Class_BindStaticNativeMethods()
 

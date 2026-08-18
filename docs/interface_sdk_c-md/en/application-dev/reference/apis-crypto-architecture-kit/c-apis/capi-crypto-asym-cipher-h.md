@@ -90,7 +90,7 @@ Creates an asymmetric cipher context based on the given algorithm name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -121,7 +121,7 @@ Initializes the asymmetric cipher context with the given cipher mode and key.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or key is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher init fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or key is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher init fails.</li>          </ul> |
 
 **Reference**:
 
@@ -152,7 +152,7 @@ Finishes the cipher operation.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, in, or out is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher final fails. Possible causes:<br>            RSA encryption where plaintext exceeds the maximum length allowed by the key size and<br>            padding mode; RSA decryption with incorrect key or corrupted ciphertext; SM2 decryption<br>            with incorrect key or corrupted ciphertext; SM2 ciphertext with invalid ASN.1 structure.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, in, or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher final fails. Possible causes:             RSA encryption where plaintext exceeds the maximum length allowed by the key size and             padding mode; RSA decryption with incorrect key or corrupted ciphertext; SM2 decryption             with incorrect key or corrupted ciphertext; SM2 ciphertext with invalid ASN.1 structure.</li>          </ul> |
 
 ### OH_CryptoAsymCipher_Destroy()
 
@@ -195,7 +195,7 @@ Creates an SM2 ciphertext specification.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if parsing SM2 ciphertext fails. Possible causes:<br>            the input data is not valid DER-encoded SM2 ciphertext.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if parsing SM2 ciphertext fails. Possible causes:             the input data is not valid DER-encoded SM2 ciphertext.</li>          </ul> |
 
 **Reference**:
 
@@ -227,7 +227,7 @@ Obtains the specified item of the SM2 ciphertext.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSm2CiphertextSpec_SetItem()
 
@@ -253,7 +253,7 @@ Sets the specified item of the SM2 ciphertext specification.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or in is NULL,<br>            in->data is NULL, or in->len is 0.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for deep copy fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or in is NULL,             in->data is NULL, or in->len is 0.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for deep copy fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -283,7 +283,7 @@ Encodes the SM2 ciphertext specification to DER format ciphertext.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL,<br>            or SM2 ciphertext fields (C1X, C1Y, C2, C3) have not been set, or C3 (hashData)<br>            length is not 32 bytes.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if encoding fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL,             or SM2 ciphertext fields (C1X, C1Y, C2, C3) have not been set, or C3 (hashData)             length is not 32 bytes.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if encoding fails.</li>          </ul> |
 
 ### OH_CryptoSm2CiphertextSpec_Destroy()
 

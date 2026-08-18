@@ -6,7 +6,7 @@ Provides util functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [I18NUtil](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#i18nutil)
+**Substitutes:** [I18NUtil](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -15,7 +15,6 @@ Provides util functions.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 import { i18n } from '@kit.LocalizationKit';
 ```
 

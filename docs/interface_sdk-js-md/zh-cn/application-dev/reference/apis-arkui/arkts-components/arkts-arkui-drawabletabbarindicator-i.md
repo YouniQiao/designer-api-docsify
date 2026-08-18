@@ -41,7 +41,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。 支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md#pixelmapdrawabledescriptor)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#layereddrawabledescriptor)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#animateddrawabledescriptor)类型。当传入无效图源时将显示默认的实线型下划 线。
+下划线的图源。 支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划 线。
 
 **类型：** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 

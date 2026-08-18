@@ -6,15 +6,15 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-## on_interfaceSharingStateChange
+## on_interfaceSharingStateChange('interfaceSharingStateChange')
 
 ```TypeScript
 function on(type: 'interfaceSharingStateChange', callback: Callback<InterfaceSharingStateInfo>): void
 ```
 
-Register a callback for the interface network sharing state change.
+Subscribes to network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 9
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -28,8 +28,8 @@ Register a callback for the interface network sharing state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'interfaceSharingStateChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | Yes | the callback function that returns the message. |
+| type | 'interfaceSharingStateChange' | Yes | Event type.<br/> The value **interfaceSharingStateChange** indicates a network sharing status change event of the NIC. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | Yes | Callback used to return the result. It is called when the network sharing state of a specified NIC changes.<br>**Since:** 11 |
 
 **Error codes:**
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraUris
@@ -51,7 +52,7 @@ ChangeData的通知类型。
 uris: Array<string>
 ```
 
-相同[NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifytype)的所有uri，可以是PhotoAsset或Album。
+相同[NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md)的所有uri，可以是PhotoAsset或Album。
 
 **类型：** Array&lt;string&gt;
 

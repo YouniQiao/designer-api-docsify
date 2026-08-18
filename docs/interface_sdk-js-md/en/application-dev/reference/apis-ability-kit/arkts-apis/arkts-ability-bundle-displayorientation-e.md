@@ -1,12 +1,12 @@
 # DisplayOrientation
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#displayorientation) instead. Enumerates display orientations.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead. Enumerates display orientations.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#displayorientation)
+**Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
 
 <!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
@@ -78,7 +78,7 @@ Orientation same as that of the nearest ability in the stack.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#followrecent)
+**Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#follow_recent)
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 

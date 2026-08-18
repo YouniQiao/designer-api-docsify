@@ -2,7 +2,7 @@
 
 Defines PanGesture.
 
-**Inheritance/Implementation:** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**Inheritance/Implementation:** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23
 

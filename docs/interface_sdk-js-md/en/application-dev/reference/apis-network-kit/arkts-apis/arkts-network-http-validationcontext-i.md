@@ -1,6 +1,6 @@
 # ValidationContext
 
-The validation context of [ValidationCallback](arkts-network-http-validationcallback-t.md#validationcallback)
+The validation context of [ValidationCallback](arkts-network-http-validationcallback-t.md)
 
 **Since:** 26.0.0
 

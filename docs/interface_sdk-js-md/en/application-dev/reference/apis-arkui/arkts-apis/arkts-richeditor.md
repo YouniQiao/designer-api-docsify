@@ -56,7 +56,7 @@
 | [SelectionMenuOptions](arkts-arkui-richeditor-selectionmenuoptions-i.md) | Defines the selection menu options. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

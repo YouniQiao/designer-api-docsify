@@ -1,6 +1,6 @@
 # UIServiceExtensionContext (System API)
 
-The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext). UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability. > **NOTE：**> > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
+The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md). UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability. > **NOTE：**> > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
 
 **Inheritance/Implementation:** UIServiceExtensionContext extends ExtensionContext
 
@@ -18,7 +18,7 @@ The UIServiceExtensionContext module provides the context environment for a [UIS
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) and returns the connection ID. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -48,13 +48,13 @@ Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -125,7 +125,7 @@ struct Page_UIServiceExtensionAbility {
 disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability). This API is opposite to [connectServiceExtensionAbility](#connectserviceextensionability) . This API uses a promise to return the result.
+Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](#connectserviceextensionability) . This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -236,14 +236,14 @@ Starts an ability. This API uses a promise to return the result. > **NOTE：**> 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
@@ -295,7 +295,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -396,7 +396,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -413,7 +413,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiabilit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
@@ -435,7 +435,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiabilit
 terminateSelf(): Promise<void>
 ```
 
-Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api). This API uses a promise to return the result.
+Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
 
 **Since:** 23
 

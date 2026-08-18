@@ -1,8 +1,8 @@
 # ApplicationDefinedRecord
 
-Represents the custom data type for applications only. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord) and a base class of custom data types of applications. Applications can extend custom data types based on this class.
+Represents the custom data type for applications only. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of custom data types of applications. Applications can extend custom data types based on this class.
 
-**Inheritance/Implementation:** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord)
+**Inheritance/Implementation:** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ Represents the custom data type for applications only. It is a child class of [U
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

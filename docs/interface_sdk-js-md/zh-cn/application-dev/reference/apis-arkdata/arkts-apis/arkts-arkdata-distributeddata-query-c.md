@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## and
@@ -119,7 +120,7 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为key的前缀。 > **说明：** > > 其中deviceId通过调用&lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
+添加设备ID作为key的前缀。 > **说明：** > > 其中deviceId通过调用<!--RP1--> > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **起始版本：** 8
 

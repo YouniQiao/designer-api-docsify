@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

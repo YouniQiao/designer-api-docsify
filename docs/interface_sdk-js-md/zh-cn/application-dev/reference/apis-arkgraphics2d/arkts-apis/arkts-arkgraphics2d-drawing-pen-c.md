@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -139,7 +140,7 @@ getColor(): common2D.Color | undefined
 getColor4f(): common2D.Color4f
 ```
 
-获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
 
@@ -159,7 +160,7 @@ getColor4f(): common2D.Color4f
 getColor4f(): common2D.Color4f | undefined
 ```
 
-获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md#color4f)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 24
 
@@ -696,7 +697,7 @@ setMaskFilter(filter: MaskFilter | null): void
 setMiterLimit(miter: double): void
 ```
 
-设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#joinstyle)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN 绘制。
+设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN 绘制。
 
 **起始版本：** 23
 

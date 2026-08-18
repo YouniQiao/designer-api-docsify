@@ -104,7 +104,7 @@ Parses an [ImageNative](capi-image-imagenative-.md) object at the native layer f
 
 | Type | Description |
 | -- | -- |
-| [ImageNative*](capi-image-imagenative-.md) | Returns an [ImageNative](capi-image-imagenative-.md) pointer object if the operation is successful<br> returns a null pointer otherwise. |
+| [ImageNative*](capi-image-imagenative-.md) | Returns an [ImageNative](capi-image-imagenative-.md) pointer object if the operation is successful  returns a null pointer otherwise. |
 
 **Reference**:
 
@@ -134,7 +134,7 @@ Obtains [OhosImageRect](capi-image-ohosimagerect.md) of an [ImageNative](capi-im
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -164,7 +164,7 @@ Obtains [OhosImageSize](capi-image-ohosimagesize.md) of an [ImageNative](capi-im
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -194,7 +194,7 @@ Obtains the image format of an [ImageNative](capi-image-imagenative-.md) object 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -225,7 +225,7 @@ Obtains [OhosImageComponent](capi-image-ohosimagecomponent.md) of an [ImageNativ
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -254,7 +254,7 @@ Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 

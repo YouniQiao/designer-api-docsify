@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## grantUriPermission
@@ -37,7 +36,7 @@ Provides grant uri permission for app
 | uri | string | Yes | uri |
 | bundleName | string | Yes | bundleName |
 | flag | wantConstant.Flags | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
 

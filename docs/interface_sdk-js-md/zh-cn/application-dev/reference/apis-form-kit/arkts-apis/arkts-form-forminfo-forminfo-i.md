@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -93,7 +94,7 @@ customizeData: Record<string, string>
 defaultDimension: int
 ```
 
-卡片规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension)。 **说明：** 数值为[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
+卡片规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。 **说明：** 数值为[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
 
 **类型：** int
 
@@ -327,7 +328,7 @@ scheduledUpdateTime: string
 supportDimensions: Array<int>
 ```
 
-卡片支持的规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension)。 **说明：** 最大长度为9，数值取值范围[1, 9]的整数的数组，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
+卡片支持的规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。 **说明：** 最大长度为9，数值取值范围[1, 9]的整数的数组，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
 
 **类型：** Array&lt;int&gt;
 
@@ -345,7 +346,7 @@ supportDimensions: Array<int>
 supportedShapes: Array<int>
 ```
 
-卡片支持的形状。具体可选形状参考[FormShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-form-forminfo-formshape-e.md#formshape) **说明：** 1代表方形，2代表圆形。
+卡片支持的形状。具体可选形状参考[FormShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-form-forminfo-formshape-e.md) **说明：** 1代表方形，2代表圆形。
 
 **类型：** Array&lt;int&gt;
 

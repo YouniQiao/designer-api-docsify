@@ -26,7 +26,7 @@ Subscribe to heart rate sensor data once, {@code SensorId.HEART_RATE}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes | callback heart rate data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HeartRateResponse&gt; | Yes | callback heart rate data. |
 
 **Error codes:**
 

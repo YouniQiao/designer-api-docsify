@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## Summary

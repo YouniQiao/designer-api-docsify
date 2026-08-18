@@ -6,7 +6,7 @@ Wi-Fi IP information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md#ipinfo)
+**Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md)
 
 <!--Device-wifi-interface IpInfo--><!--Device-wifi-interface IpInfo-End-->
 

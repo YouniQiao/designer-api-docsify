@@ -6,7 +6,7 @@ Defines a button displayed in the reminder notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#actionbutton)
+**Substitutes:** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md)
 
 <!--Device-reminderAgent-interface ActionButton--><!--Device-reminderAgent-interface ActionButton-End-->
 
@@ -16,7 +16,6 @@ Defines a button displayed in the reminder notification.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

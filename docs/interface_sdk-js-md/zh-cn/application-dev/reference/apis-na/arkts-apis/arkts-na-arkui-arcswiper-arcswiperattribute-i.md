@@ -225,7 +225,7 @@ onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [AnimationEndHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationendhandler-t.md) \| undefined | 是 |  |
+| handler | [AnimationEndHandler](arkts-na-animationendhandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -249,7 +249,7 @@ onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [AnimationStartHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationstarthandler-t.md) \| undefined | 是 |  |
+| handler | [AnimationStartHandler](arkts-na-animationstarthandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -273,7 +273,7 @@ onChange(handler: IndexChangedHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [IndexChangedHandler](../../apis-arkui/arkts-apis/arkts-arkui-indexchangedhandler-t.md) \| undefined | 是 |  |
+| handler | [IndexChangedHandler](arkts-na-indexchangedhandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -297,7 +297,7 @@ onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [GestureSwipeHandler](../../apis-arkui/arkts-apis/arkts-arkui-gestureswipehandler-t.md) \| undefined | 是 |  |
+| handler | [GestureSwipeHandler](arkts-na-gestureswipehandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -321,7 +321,7 @@ setArcSwiperOptions(controller?: ArcSwiperController): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 |  |
+| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | 否 |  |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： - **输入法变化订阅**：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 - **输入法列表查询**：通过 [getInputMethods](#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listinputmethodsubtype) 查询指定输入法的子类型列表。 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取InputMethodSetting实例后使用。 下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取到InputMethodSetting实例后，通过实例调用。
+InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： - **输入法变化订阅**：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 - **输入法列表查询**：通过 [getInputMethods](#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listinputmethodsubtype) 查询指定输入法的子类型列表。 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取InputMethodSetting实例后使用。 下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取到InputMethodSetting实例后，通过实例调用。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 ## 导入模块
 
 ```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## displayOptionalInputMethod
@@ -25,7 +31,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
@@ -35,7 +41,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法选择对话框显示成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法选择对话框显示成功。err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -63,7 +69,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
 
@@ -105,7 +111,7 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回所有输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回所有输入法列表。 |
 
 **错误码：**
 
@@ -305,7 +311,7 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已激活/未激活输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已激活/未激活输入法列表。 |
 
 **错误码：**
 
@@ -466,7 +472,7 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，返回当前输入法应用的所有子类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，返回当前输入法应用的所有子类型。 |
 
 **错误码：**
 
@@ -590,7 +596,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已安装的输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已安装的输入法列表。 |
 
 **示例**
 
@@ -664,7 +670,7 @@ listInputMethodSubtype(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 是 | 输入法应用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，返回指定输入法应用的所有子类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，返回指定输入法应用的所有子类型。 |
 
 **错误码：**
 
@@ -822,7 +828,7 @@ let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting(
 inputMethodSetting.offImeChange();
 ```
 
-## off_imeChange
+## off_imeChange('imeChange')
 
 ```TypeScript
 off(
@@ -883,7 +889,7 @@ inputMethodSetting.onImeChange((inputMethodProperty: inputMethod.InputMethodProp
 });
 ```
 
-## on_imeChange
+## on_imeChange('imeChange')
 
 ```TypeScript
 on(
@@ -931,7 +937,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 18
 
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
@@ -941,7 +947,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当输入法选择对话框显示成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当输入法选择对话框显示成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -979,7 +985,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 **废弃版本：** 18
 
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 

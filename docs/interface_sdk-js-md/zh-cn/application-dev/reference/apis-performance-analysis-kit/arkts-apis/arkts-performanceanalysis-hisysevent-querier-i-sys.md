@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete
@@ -39,7 +40,7 @@ onComplete: (reason: int, total: int) => void
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#syseventinfo系统接口)[]) => void。
+返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) => void。
 
 **类型：** (infos: SysEventInfo[]) =&gt; void
 

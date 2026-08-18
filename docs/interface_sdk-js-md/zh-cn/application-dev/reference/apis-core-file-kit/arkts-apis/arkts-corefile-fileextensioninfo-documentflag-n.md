@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -26,9 +27,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#representsfile) | 代表文件。 |
-| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#representsdir) | 代表目录。 |
-| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supportsread) | 此设备支持读。 |
-| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supportswrite) | 此设备支持写。 |
+| [REPRESENTS_FILE](arkts-corefile-documentflag-con-sys.md#represents_file) | 代表文件。 |
+| [REPRESENTS_DIR](arkts-corefile-documentflag-con-sys.md#represents_dir) | 代表目录。 |
+| [SUPPORTS_READ](arkts-corefile-documentflag-con-sys.md#supports_read) | 此设备支持读。 |
+| [SUPPORTS_WRITE](arkts-corefile-documentflag-con-sys.md#supports_write) | 此设备支持写。 |
 <!--DelEnd-->
 

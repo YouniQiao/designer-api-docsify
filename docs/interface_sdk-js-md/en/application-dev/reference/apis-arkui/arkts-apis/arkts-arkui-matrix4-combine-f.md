@@ -18,7 +18,7 @@ Combines the effects of two matrices to generate a new matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
+**Substitutes:** [combine](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md#combine)
 
 <!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
 

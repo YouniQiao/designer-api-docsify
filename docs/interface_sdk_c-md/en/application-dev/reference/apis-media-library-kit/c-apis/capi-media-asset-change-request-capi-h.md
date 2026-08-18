@@ -50,7 +50,7 @@ Creates an [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetchan
 
 | Type | Description |
 | -- | -- |
-| [OH_MediaAssetChangeRequest*](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [OH_MediaAssetChangeRequest*](capi-mediaassetmanager-oh-mediaassetchangerequest.md) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAssetChangeRequest_AddResourceWithUri()
 
@@ -76,7 +76,7 @@ Adds a resource of the given URI.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_NO_SUCH_FILE if file does not exist.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_NO_SUCH_FILE if file does not exist.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
 
 ### OH_MediaAssetChangeRequest_AddResourceWithBuffer()
 
@@ -103,7 +103,7 @@ Adds a resource using ArrayBuffer data.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
 
 ### OH_MediaAssetChangeRequest_GetWriteCacheHandler()
 
@@ -130,7 +130,7 @@ Obtains the handler used for writing a file to cache.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.<br>     <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.      <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
 
 ### OH_MediaAssetChangeRequest_SaveCameraPhoto()
 
@@ -155,7 +155,7 @@ Saves the photo taken by the camera.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
 
 ### OH_MediaAssetChangeRequest_DiscardCameraPhoto()
 
@@ -179,7 +179,7 @@ Discards the photo taken by the camera.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported. |
 
 ### OH_MediaAssetChangeRequest_Release()
 
@@ -203,6 +203,6 @@ Releases an [OH_MediaAssetChangeRequest](capi-mediaassetmanager-oh-mediaassetcha
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed. |
 
 

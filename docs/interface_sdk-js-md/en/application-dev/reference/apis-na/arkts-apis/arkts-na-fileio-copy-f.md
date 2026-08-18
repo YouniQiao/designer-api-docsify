@@ -89,7 +89,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
 | options | [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the copy is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

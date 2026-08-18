@@ -98,7 +98,7 @@ ERR_SIGNIFICANT_CHANGE = -5
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#blanklessloadingparam)设置的插帧持续时间超出范围。
+在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的插帧持续时间超出范围。
 
 **起始版本：** 23
 
@@ -114,7 +114,7 @@ ERR_DURATION_OUT_OF_RANGE = -6
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#blanklessloadingparam)设置的历史帧失效时间超出范围。
+在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。
 
 **起始版本：** 23
 

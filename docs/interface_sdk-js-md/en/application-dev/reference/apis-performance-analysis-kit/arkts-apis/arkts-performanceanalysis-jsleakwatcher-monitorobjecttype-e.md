@@ -4,7 +4,7 @@ Enumerates the types of component objects to be monitored.
 
 **Since:** 26.1.0
 
-<!--Device-jsLeakWatcher-export declare enum MonitorObjectType--><!--Device-jsLeakWatcher-export declare enum MonitorObjectType-End-->
+<!--Device-jsLeakWatcher-export enum MonitorObjectType--><!--Device-jsLeakWatcher-export enum MonitorObjectType-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 

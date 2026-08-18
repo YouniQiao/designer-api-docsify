@@ -1,6 +1,6 @@
 # ChildProcessArgs
 
-The module describes the parameters transferred to the child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md#ohosappabilitychildprocessmanager), you can transfer parameters to the child process through **ChildProcessArgs**.
+The module describes the parameters transferred to the child process. When starting a child process through [childProcessManager](arkts-app-ability-childprocessmanager.md), you can transfer parameters to the child process through **ChildProcessArgs**.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ The module describes the parameters transferred to the child process. When start
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from '@kit.AbilityKit';
 import { ChildProcessArgs } from '@kit.AbilityKit';
 ```
 

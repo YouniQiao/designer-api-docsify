@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisecuritytype)
+**替代接口：** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
 
 <!--Device-wifi-enum WifiSecurityType--><!--Device-wifi-enum WifiSecurityType-End-->
 
@@ -24,7 +24,7 @@ WIFI_SEC_TYPE_INVALID = 0
 
 **废弃版本：** 9
 
-**替代接口：** [WIFI_SEC_TYPE_INVALID](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypeinvalid)
+**替代接口：** [WIFI_SEC_TYPE_INVALID](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_invalid)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_INVALID = 0-End-->
 
@@ -42,7 +42,7 @@ WIFI_SEC_TYPE_OPEN = 1
 
 **废弃版本：** 9
 
-**替代接口：** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypeopen)
+**替代接口：** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_open)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
 
@@ -60,7 +60,7 @@ WIFI_SEC_TYPE_WEP = 2
 
 **废弃版本：** 9
 
-**替代接口：** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypewep)
+**替代接口：** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_wep)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
 
@@ -78,7 +78,7 @@ WIFI_SEC_TYPE_PSK = 3
 
 **废弃版本：** 9
 
-**替代接口：** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypepsk)
+**替代接口：** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_psk)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3-End-->
 
@@ -96,7 +96,7 @@ WIFI_SEC_TYPE_SAE = 4
 
 **废弃版本：** 9
 
-**替代接口：** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifisectypesae)
+**替代接口：** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_sae)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4-End-->
 

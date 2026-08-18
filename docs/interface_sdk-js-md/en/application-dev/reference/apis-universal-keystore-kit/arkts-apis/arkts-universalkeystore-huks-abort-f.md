@@ -19,7 +19,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -31,7 +31,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -137,7 +137,7 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle: number, options: HuksOptions)
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 

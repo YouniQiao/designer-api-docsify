@@ -4,7 +4,7 @@
 export type RemoteValidation = 'system' | 'skip' | ValidationCallback
 ```
 
-Remote Validation Type.
+Enumerates the identity verification modes of the remote server.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Remote Validation Type.
 
 | Type | Description |
 | --- | --- |
-| 'system' | use system validation. |
-| 'skip' | skip validation. |
-| ValidationCallback | [since 26.0.0] use custom validation. |
+| 'system' | Use of the system CA. This field is defaulted to **system** when the value is not set. |
+| 'skip' | Skipping of CA verification. This field has a fixed value of **skip**. |
+| ValidationCallback | use custom validation. [since 26.0.0] |
 

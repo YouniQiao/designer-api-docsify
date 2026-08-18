@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## updateData
@@ -29,7 +30,7 @@ function updateData(options: Options, data: UnifiedData, callback: AsyncCallback
 | --- | --- | --- | --- |
 | options | Options | 是 | 配置项参数，参数中key字段必填，不填时会返回401错误码；intention参数仅支持DATA_HUB；其他字段是否填写均不影响接口的使用。 |
 | data | UnifiedData | 是 | 目标数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新数据成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当更新数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

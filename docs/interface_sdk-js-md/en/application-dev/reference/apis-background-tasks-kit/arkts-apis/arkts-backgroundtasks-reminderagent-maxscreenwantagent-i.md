@@ -6,7 +6,7 @@ Provides the information about the target package and ability to start automatic
 
 **Deprecated since:** 9
 
-**Substitutes:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#maxscreenwantagent)
+**Substitutes:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 <!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
 
@@ -16,7 +16,6 @@ Provides the information about the target package and ability to start automatic
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

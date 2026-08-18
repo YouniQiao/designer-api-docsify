@@ -14,7 +14,6 @@ Get All Volumes.
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## description

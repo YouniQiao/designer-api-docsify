@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## cancel
@@ -11,7 +12,7 @@
 function cancel(task: Task): void
 ```
 
-取消任务池中的任务。 - 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#taskresult)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
+取消任务池中的任务。 - 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 9
 
@@ -42,7 +43,7 @@ function cancel(task: Task): void
 function cancel(group: TaskGroup): void
 ```
 
-取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#taskresult)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
+取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 10
 
@@ -111,7 +112,7 @@ concurrentFunc();
 function cancel(taskId: number): void
 ```
 
-通过任务ID取消任务池中的任务。 - 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#taskresult)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
+通过任务ID取消任务池中的任务。 - 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt; [taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # LimitAction (System API)
 
-The action when quota policy hit the limit.
+Enumerates the actions that can be taken when the data volume quota is reached.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The action when quota policy hit the limit.
 LIMIT_ACTION_NONE = -1
 ```
 
-Default action, do nothing.
+No action is taken. This is the default value.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Default action, do nothing.
 LIMIT_ACTION_ACCESS_DISABLED = 0
 ```
 
-When the quota policy reaches the limit, the system prohibits users from accessing the network.
+Internet access is disabled.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ When the quota policy reaches the limit, the system prohibits users from accessi
 LIMIT_ACTION_ALERT_ONLY = 1
 ```
 
-When the quota policy reaches the upper limit, the system notifies the user.
+An alarm is generated when the quota limit is reached.
 
 **Since:** 10
 

@@ -28,5 +28,5 @@ Registers a callback function to be called when the router page is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
 

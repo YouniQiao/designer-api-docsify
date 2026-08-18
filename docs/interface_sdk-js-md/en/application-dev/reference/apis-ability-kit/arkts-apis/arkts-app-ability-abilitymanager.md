@@ -12,7 +12,6 @@ The AbilityManager module provides APIs for obtaining, adding, and updating abil
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -21,49 +20,49 @@ import { abilityManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos) | Obtains the UIAbility running information. This API uses a promise to return the result. > **NOTE：**> > If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility > running information of all applications; otherwise, it can obtain the UIAbility running information of the > current application. |
-| [isEmbeddedUIExtensionSupported](arkts-ability-abilitymanager-isembeddeduiextensionsupported-f.md#isembeddeduiextensionsupported) | Indicates whether the current device supports EmbeddedUIExtensionAbility. |
-| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice) | Restarts the current atomic service. > **NOTE：**> > - Currently, atomic services can be started only in an independent window. > > - If you call this API, > ApplicationContext.restartApp(), or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds > after a successful call to this API, the system returns error code 16000064. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md) | Obtains the UIAbility running information. This API uses a promise to return the result. > **NOTE：**> > If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility > running information of all applications; otherwise, it can obtain the UIAbility running information of the > current application. |
+| [isEmbeddedUIExtensionSupported](arkts-ability-abilitymanager-isembeddeduiextensionsupported-f.md) | Indicates whether the current device supports EmbeddedUIExtensionAbility. |
+| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md) | Restarts the current atomic service. > **NOTE：**> > - Currently, atomic services can be started only in an independent window. > > - If you call this API, > ApplicationContext.restartApp(), or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds > after a successful call to this API, the system returns error code 16000064. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md#acquiresharedata) | Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result. |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md#acquiresharedata-system-api) | Acquire the shared data from target ability. |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md#acquiresharedata-system-api) | Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses a promise to return the result. |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md#acquiresharedata-system-api) | Acquire the shared data from target ability. |
-| [clearPreloadedUIExtensionAbilities](arkts-ability-abilitymanager-clearpreloadeduiextensionabilities-f-sys.md#clearpreloadeduiextensionabilities) | Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instances in the current process. This API uses a promise to return the result. |
-| [clearPreloadedUIExtensionAbility](arkts-ability-abilitymanager-clearpreloadeduiextensionability-f-sys.md#clearpreloadeduiextensionability) | Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance. This API uses a promise to return the result. |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f-sys.md#getabilityrunninginfos-system-api) | Obtains the UIAbility running information. This API uses an asynchronous callback to return the result. |
-| [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getextensionrunninginfos) | Obtains the ExtensionAbility running information. This API uses a promise to return the result. |
-| [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getextensionrunninginfos-system-api) | Obtains the ExtensionAbility running information. This API uses an asynchronous callback to return the result. |
-| [getForegroundUIAbilities](arkts-ability-abilitymanager-getforegrounduiabilities-f-sys.md#getforegrounduiabilities) | Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses an asynchronous callback to return the result. |
-| [getForegroundUIAbilities](arkts-ability-abilitymanager-getforegrounduiabilities-f-sys.md#getforegrounduiabilities-system-api) | Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses a promise to return the result. |
-| [getTopAbility](arkts-ability-abilitymanager-gettopability-f-sys.md#gettopability) | Obtains the top ability, which is the ability that has the window focus. This API uses a promise to return the result. |
-| [getTopAbility](arkts-ability-abilitymanager-gettopability-f-sys.md#gettopability-system-api) | Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to return the result. |
-| [isEmbeddedOpenAllowed](arkts-ability-abilitymanager-isembeddedopenallowed-f-sys.md#isembeddedopenallowed) | Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability) can be started in embedded mode. This API uses a promise to return the result. |
-| [notifyDebugAssertResult](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md#notifydebugassertresult) | Notifies the application of the assertion result. This API uses a promise to return the result. |
-| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult) | Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result. |
-| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult-system-api) | Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md#ohosdlppermission) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result. |
-| [offAbilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md#offabilityforegroundstate) | Unregister Ability foreground or background state observer. |
-| [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md#offpreloadeduiextensionabilitydestroyed) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process. |
-| [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md#offpreloadeduiextensionabilityloaded) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process. |
-| [off_abilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md#offabilityforegroundstate) | Unregisters the observer used to listen for ability start or exit events. |
-| [onAbilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md#onabilityforegroundstate) | Register Ability foreground or background state observer. |
-| [onPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-onpreloadeduiextensionabilitydestroyed-f-sys.md#onpreloadeduiextensionabilitydestroyed) | Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process. |
-| [onPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-onpreloadeduiextensionabilityloaded-f-sys.md#onpreloadeduiextensionabilityloaded) | Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process. |
-| [on_abilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md#onabilityforegroundstate) | Registers an observer to listen for ability start or exit events. |
-| [preloadUIExtensionAbility](arkts-ability-abilitymanager-preloaduiextensionability-f-sys.md#preloaduiextensionability) | Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance and returns the instance ID. This API uses a promise to return the result. |
-| [queryAtomicServiceStartupRule](arkts-ability-abilitymanager-queryatomicservicestartuprule-f-sys.md#queryatomicservicestartuprule) | Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801. |
-| [setResidentProcessEnabled](arkts-ability-abilitymanager-setresidentprocessenabled-f-sys.md#setresidentprocessenabled) | Enables or disables the resident process of an application. |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration) | Updates the configuration. This API uses an asynchronous callback to return the result. |
-| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration-system-api) | Updates the configuration. This API uses a promise to return the result. |
+| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) | Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses an asynchronous callback to return the result. |
+| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) | Acquire the shared data from target ability. |
+| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) | Called by a system dialog box to obtain shared data, which is set by the target UIAbility through [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare). This API uses a promise to return the result. |
+| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) | Acquire the shared data from target ability. |
+| [clearPreloadedUIExtensionAbilities](arkts-ability-abilitymanager-clearpreloadeduiextensionabilities-f-sys.md) | Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instances in the current process. This API uses a promise to return the result. |
+| [clearPreloadedUIExtensionAbility](arkts-ability-abilitymanager-clearpreloadeduiextensionability-f-sys.md) | Clears a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance. This API uses a promise to return the result. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f-sys.md) | Obtains the UIAbility running information. This API uses an asynchronous callback to return the result. |
+| [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md) | Obtains the ExtensionAbility running information. This API uses a promise to return the result. |
+| [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md) | Obtains the ExtensionAbility running information. This API uses an asynchronous callback to return the result. |
+| [getForegroundUIAbilities](arkts-ability-abilitymanager-getforegrounduiabilities-f-sys.md) | Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses an asynchronous callback to return the result. |
+| [getForegroundUIAbilities](arkts-ability-abilitymanager-getforegrounduiabilities-f-sys.md) | Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses a promise to return the result. |
+| [getTopAbility](arkts-ability-abilitymanager-gettopability-f-sys.md) | Obtains the top ability, which is the ability that has the window focus. This API uses a promise to return the result. |
+| [getTopAbility](arkts-ability-abilitymanager-gettopability-f-sys.md) | Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to return the result. |
+| [isEmbeddedOpenAllowed](arkts-ability-abilitymanager-isembeddedopenallowed-f-sys.md) | Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) can be started in embedded mode. This API uses a promise to return the result. |
+| [notifyDebugAssertResult](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md) | Notifies the application of the assertion result. This API uses a promise to return the result. |
+| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) | Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result. |
+| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) | Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result. |
+| [offAbilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md) | Unregister Ability foreground or background state observer. |
+| [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
+| [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
+| off_abilityForegroundState | Unregisters the observer used to listen for ability start or exit events. |
+| [onAbilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md) | Register Ability foreground or background state observer. |
+| [onPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-onpreloadeduiextensionabilitydestroyed-f-sys.md) | Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
+| [onPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-onpreloadeduiextensionabilityloaded-f-sys.md) | Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
+| on_abilityForegroundState | Registers an observer to listen for ability start or exit events. |
+| [preloadUIExtensionAbility](arkts-ability-abilitymanager-preloaduiextensionability-f-sys.md) | Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result. |
+| [queryAtomicServiceStartupRule](arkts-ability-abilitymanager-queryatomicservicestartuprule-f-sys.md) | Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801. |
+| [setResidentProcessEnabled](arkts-ability-abilitymanager-setresidentprocessenabled-f-sys.md) | Enables or disables the resident process of an application. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md) | Updates the configuration. This API uses an asynchronous callback to return the result. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md) | Updates the configuration. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -74,10 +73,10 @@ import { abilityManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md) | Enumerates the ability states. This enum can be used together with [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md#abilityrunninginfo) to return the ability state. |
+| [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md) | Enumerates the ability states. This enum can be used together with [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) to return the ability state. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -92,13 +91,13 @@ import { abilityManager } from '@kit.AbilityKit';
 | [AbilityStateData](arkts-ability-abilitymanager-abilitystatedata-t.md) | The ability state data. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | The ability foreground state observer. |
 | [ExtensionRunningInfo](arkts-ability-abilitymanager-extensionrunninginfo-t-sys.md) | Defines the level-2 module ExtensionRunningInfo. |
-| [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance is destroyed. |
-| [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance is loaded. |
+| [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is destroyed. |
+| [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is loaded. |
 <!--DelEnd-->
 

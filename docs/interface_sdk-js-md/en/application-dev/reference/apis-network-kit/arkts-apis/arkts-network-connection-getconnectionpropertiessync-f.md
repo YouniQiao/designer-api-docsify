@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties
 ```
 
-Queries the connection properties of a network. This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,13 +26,13 @@ Queries the connection properties of a network. This method requires the {@code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ConnectionProperties](arkts-network-connection-connectionproperties-i.md) | Returns the connection properties of a network. |
+| [ConnectionProperties](arkts-network-connection-connectionproperties-i.md) | Network connection information. |
 
 **Error codes:**
 

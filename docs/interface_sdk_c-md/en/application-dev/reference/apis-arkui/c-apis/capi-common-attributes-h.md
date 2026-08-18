@@ -36,7 +36,7 @@ Defines the common property and method types for the native module.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()](#oh_arkui_createsnapshotoptions) | Creates a snapshot option object, which must be released using {@link OH_ArkUI_DestroySnapshotOptions()} whenno longer in use. |
+| [ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()](#oh_arkui_createsnapshotoptions) | Creates a snapshot option object, which must be released using [OH_ArkUI_DestroySnapshotOptions()](capi-common-attributes-h.md#oh_arkui_destroysnapshotoptions()) whenno longer in use. |
 | [void OH_ArkUI_DestroySnapshotOptions(ArkUI_SnapshotOptions* snapshotOptions)](#oh_arkui_destroysnapshotoptions) | Destroys a snapshot option object. |
 | [int32_t OH_ArkUI_SnapshotOptions_SetScale(ArkUI_SnapshotOptions* snapshotOptions, float scale)](#oh_arkui_snapshotoptions_setscale) | Sets the scale property in the snapshot options. |
 | [int32_t OH_ArkUI_SnapshotOptions_SetColorMode(ArkUI_SnapshotOptions* snapshotOptions, int32_t colorSpace, bool isAuto)](#oh_arkui_snapshotoptions_setcolormode) | Sets the color space in the screenshot options. |
@@ -175,7 +175,7 @@ ArkUI_SnapshotOptions* OH_ArkUI_CreateSnapshotOptions()
 
 **Description**
 
-Creates a snapshot option object, which must be released using {@link OH_ArkUI_DestroySnapshotOptions()} whenno longer in use.
+Creates a snapshot option object, which must be released using [OH_ArkUI_DestroySnapshotOptions()](capi-common-attributes-h.md#oh_arkui_destroysnapshotoptions()) whenno longer in use.
 
 **Since**: 15
 
@@ -183,7 +183,7 @@ Creates a snapshot option object, which must be released using {@link OH_ArkUI_D
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_SnapshotOptions*](capi-arkui-nativemodule-arkui-snapshotoptions.md) | Pointer to the created snapshot option object. If a null pointer is returned, creation failed, possibly due<br>    to insufficient memory. |
+| [ArkUI_SnapshotOptions*](capi-arkui-nativemodule-arkui-snapshotoptions.md) | Pointer to the created snapshot option object. If a null pointer is returned, creation failed, possibly due     to insufficient memory. |
 
 ### OH_ArkUI_DestroySnapshotOptions()
 
@@ -226,7 +226,7 @@ Sets the scale property in the snapshot options.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>A possible cause is that mandatory parameters are left unspecified. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.     <br>A possible cause is that mandatory parameters are left unspecified. |
 
 ### OH_ArkUI_SnapshotOptions_SetColorMode()
 
@@ -252,7 +252,7 @@ Sets the color space in the screenshot options.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_SnapshotOptions_SetDynamicRangeMode()
 
@@ -278,7 +278,7 @@ Sets the dynamic range mode in the screenshot options.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_VisibleAreaEventOptions_Create()
 
@@ -340,7 +340,7 @@ Sets the threshold ratios for visible area changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>A possible cause is that mandatory parameters are left unspecified. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.     <br>A possible cause is that mandatory parameters are left unspecified. |
 
 ### OH_ArkUI_VisibleAreaEventOptions_SetExpectedUpdateInterval()
 
@@ -365,7 +365,7 @@ Sets the expected update interval for visible area changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>A possible cause is that mandatory parameters are left unspecified. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.     <br>A possible cause is that mandatory parameters are left unspecified. |
 
 ### OH_ArkUI_VisibleAreaEventOptions_SetMeasureFromViewport()
 
@@ -390,7 +390,7 @@ Sets the visible area calculation mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>A possible cause is that mandatory parameters are left unspecified. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.     <br>A possible cause is that mandatory parameters are left unspecified. |
 
 ### OH_ArkUI_VisibleAreaEventOptions_GetRatios()
 
@@ -416,7 +416,7 @@ Obtains the threshold ratios for visible area changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} if the buffer size is insufficient.<br>    <br>A possible cause is that mandatory parameters are left unspecified. |
+| int32_t | Result code.     <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.     <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.     <br>Returns {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} if the buffer size is insufficient.     <br>A possible cause is that mandatory parameters are left unspecified. |
 
 ### OH_ArkUI_VisibleAreaEventOptions_GetExpectedUpdateInterval()
 
@@ -464,6 +464,6 @@ Obtains the visible area calculation mode.
 
 | Type | Description |
 | -- | -- |
-| bool | Visible area calculation mode.<br>    <br>true: The calculation takes the parent component's NODE_CLIP attribute into account. If the parent<br>    component's NODE_CLIP attribute is false: Child components can render beyond the parent component's<br>    bounds, and the out-of-bounds area is counted as part of the visible area. If the parent component's NODE_CLIP<br>     attribute is true: Child components are clipped to the parent component's bounds, and the out-of-bounds<br>    area is treated as invisible. false: The area beyond the parent component's bounds is directly treated as<br>    invisible, ignoring the parent component's NODE_CLIP attribute.<br>    <br>Default value: false. |
+| bool | Visible area calculation mode.     <br>true: The calculation takes the parent component's NODE_CLIP attribute into account. If the parent     component's NODE_CLIP attribute is false: Child components can render beyond the parent component's     bounds, and the out-of-bounds area is counted as part of the visible area. If the parent component's NODE_CLIP      attribute is true: Child components are clipped to the parent component's bounds, and the out-of-bounds     area is treated as invisible. false: The area beyond the parent component's bounds is directly treated as     invisible, ignoring the parent component's NODE_CLIP attribute.     <br>Default value: false. |
 
 

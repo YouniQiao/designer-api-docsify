@@ -10,7 +10,7 @@ Enumerates the authentication types.
 
 **Deprecated since:** 8
 
-**Substitutes:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md#userauthtype)
+**Substitutes:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 <!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'--><!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'-End-->
 

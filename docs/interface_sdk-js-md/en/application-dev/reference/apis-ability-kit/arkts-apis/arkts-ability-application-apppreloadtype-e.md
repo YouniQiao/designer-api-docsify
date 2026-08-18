@@ -46,7 +46,7 @@ Preloads the process up to the point of process creation completion.
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage) creation completion.
+Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) creation completion.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability
 TYPE_CREATE_WINDOW_STAGE = 3
 ```
 
-Preloads the process up to the point of [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md#window) creation completion.
+Preloads the process up to the point of [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md) creation completion.
 
 **Since:** 23
 

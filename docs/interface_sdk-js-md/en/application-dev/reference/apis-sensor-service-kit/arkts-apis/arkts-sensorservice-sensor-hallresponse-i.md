@@ -1,8 +1,8 @@
 # HallResponse
 
-Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

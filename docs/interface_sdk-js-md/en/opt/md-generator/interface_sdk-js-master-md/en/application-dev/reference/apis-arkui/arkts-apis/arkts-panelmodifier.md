@@ -1,3 +1,0 @@
-# PanelModifier
-
-## Summary

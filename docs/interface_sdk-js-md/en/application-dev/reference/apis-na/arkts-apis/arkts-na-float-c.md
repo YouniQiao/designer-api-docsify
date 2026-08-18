@@ -2,7 +2,7 @@
 
 Represents boxed float value and related operations.
 
-**Inheritance/Implementation:** Float extends [Floating](arkts-na-numeric-floating-c.md#floating) and implements Comparable<Float>
+**Inheritance/Implementation:** Float extends [Floating](arkts-na-numeric-floating-c.md) and implements Comparable<Float>
 
 **Since:** 26.0.0
 

@@ -12,16 +12,10 @@ The **inputMethod** module is oriented to common foreground applications (system
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
@@ -31,35 +25,35 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller) | Input method controller |
-| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod) | Get current input method |
-| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md#getcurrentinputmethodsubtype) | Get the current input method subtype |
-| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getdefaultinputmethod) | Get default input method |
-| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md#getinputmethodcontroller) | Input method controller |
-| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md#getinputmethodsetting) | Input method setting |
-| [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) | Input method setting |
-| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getsysteminputmethodconfigability) | Get system input method config ability |
-| [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md#offattachmentdidfail) | Unsubscribe the attachment failure event. |
-| [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md#onattachmentdidfail) | Subscribe the attachment failure event. |
-| [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md#setsimplekeyboardenabled) | Set simple keyboard mode. |
-| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchcurrentinputmethodandsubtype) | Switch input method and subtype. The caller must be the current inputmethod. |
-| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchcurrentinputmethodandsubtype) | Switch input method and subtype. The caller must be the current inputmethod. |
-| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype) | Switch current input method subtype. The caller must be the current inputmethod. |
-| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype) | Switch current input method subtype. The caller must be the current inputmethod. |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod) | Switch input method. The caller must be the current inputmethod. |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod) | Switch input method. The caller must be the current inputmethod. |
+| [getController](arkts-ime-inputmethod-getcontroller-f.md) | Input method controller |
+| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md) | Get current input method |
+| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md) | Get the current input method subtype |
+| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md) | Get default input method |
+| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md) | Input method controller |
+| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md) | Input method setting |
+| [getSetting](arkts-ime-inputmethod-getsetting-f.md) | Input method setting |
+| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md) | Get system input method config ability |
+| [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md) | Unsubscribe the attachment failure event. |
+| [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md) | Subscribe the attachment failure event. |
+| [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md) | Set simple keyboard mode. |
+| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md) | Switch input method and subtype. The caller must be the current inputmethod. |
+| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md) | Switch input method and subtype. The caller must be the current inputmethod. |
+| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md) | Switch current input method subtype. The caller must be the current inputmethod. |
+| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md) | Switch current input method subtype. The caller must be the current inputmethod. |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md) | Switch input method. The caller must be the current inputmethod. |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md) | Switch input method. The caller must be the current inputmethod. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f-sys.md#getcurrentinputmethod-system-api) | Get the current input method of a specified user. |
-| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f-sys.md#getcurrentinputmethodsubtype-system-api) | Get the current input method subtype of a specified user. |
-| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f-sys.md#getdefaultinputmethod-system-api) | Get the default input method of a specified user. |
-| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f-sys.md#getsysteminputmethodconfigability-system-api) | Get the system input method config ability of a specified user. |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f-sys.md#switchinputmethod-system-api) | Switches to another input method. This API uses a promise to return the result. |
-| [switchInputMethodWithUserId](arkts-ime-inputmethod-switchinputmethodwithuserid-f-sys.md#switchinputmethodwithuserid) | Switch input method and subtype of a specified user. |
+| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f-sys.md) | Get the current input method of a specified user. |
+| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f-sys.md) | Get the current input method subtype of a specified user. |
+| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f-sys.md) | Get the default input method of a specified user. |
+| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f-sys.md) | Get the system input method config ability of a specified user. |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f-sys.md) | Switches to another input method. This API uses a promise to return the result. |
+| [switchInputMethodWithUserId](arkts-ime-inputmethod-switchinputmethodwithuserid-f-sys.md) | Switch input method and subtype of a specified user. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -70,9 +64,9 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Information of Cursor. |
 | [FunctionKey](arkts-ime-inputmethod-functionkey-i.md) | FunctionKey of Input. |
 | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Attribute of Input. |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller). |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md). |
 | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | input method property |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
 | [InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md) | Information of input window. |
 | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | &lt;p&gt;Custom message handler.&lt;/p&gt; &lt;p&gt;Implement this interface to respond to custom messages.&lt;/p&gt; |
 | [Movement](arkts-ime-inputmethod-movement-i.md) | Movement of cursor. |
@@ -80,12 +74,12 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Config of editor. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i-sys.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller). |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i-sys.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i-sys.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md). |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i-sys.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
 | [InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i-sys.md) | Information of input window. |
 <!--DelEnd-->
 
@@ -114,7 +108,7 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | The callback of 'setPreviewText' event. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
@@ -125,5 +119,5 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md#maxtypenum) | Keyboard max number. Max value is 128. |
+| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md#max_type_num) | Keyboard max number. Max value is 128. |
 

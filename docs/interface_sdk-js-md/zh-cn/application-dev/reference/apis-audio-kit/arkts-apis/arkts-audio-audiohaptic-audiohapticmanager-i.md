@@ -1,6 +1,6 @@
 # AudioHapticManager
 
-管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager)创建实例。
+管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md)创建实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createPlayer
@@ -126,8 +127,8 @@ registerSource(audioUri: string, hapticUri: string): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioUri | string | 是 | 音频资源的Uri。 <br>- 对普通时延模式，音频资源格式和路径格式的支持可参考[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#avplayer)。 <br>- 对低时延模式，音频资源格式支持可参考[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md#soundpool)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 <br>- 对两种时延模式，均建议传入文件的绝对路径。 |
-| hapticUri | string | 是 | 振动资源的Uri。 <br>振动资源格式支持可参考[HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#hapticfiledescriptor)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 <br>建议传入文件的绝对路径。 |
+| audioUri | string | 是 | 音频资源的Uri。 <br>- 对普通时延模式，音频资源格式和路径格式的支持可参考[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 <br>- 对低时延模式，音频资源格式支持可参考[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md)的要求。 <br>- 对两种时延模式，均建议传入文件的绝对路径。 |
+| hapticUri | string | 是 | 振动资源的Uri。 <br>振动资源格式支持可参考[HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md)的要求。 <br>建议传入文件的绝对路径。 |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
-# RequestParam
+# RequestParam(Network Firewall)
 
-Pagination query input parameters.
+Defines query parameters.
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 orderField: NetFirewallOrderField
 ```
 
-Sort field.
+Sorting method. This parameter can be used to sort firewall rules only by name.
 
 **Type:** [NetFirewallOrderField](arkts-network-netfirewall-netfirewallorderfield-e.md)
 
@@ -36,7 +36,7 @@ Sort field.
 orderType: NetFirewallOrderType
 ```
 
-Sort Type: ascending or descending.
+Sorting order type.
 
 **Type:** [NetFirewallOrderType](arkts-network-netfirewall-netfirewallordertype-e.md)
 
@@ -49,32 +49,32 @@ Sort Type: ascending or descending.
 ## page
 
 ```TypeScript
-page: number
+page: int
 ```
 
-Page number: indicates the page number to be queried. The start value is 1.
+Page number. The value range is [1,1000].
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-RequestParam-page: number--><!--Device-RequestParam-page: number-End-->
+<!--Device-RequestParam-page: int--><!--Device-RequestParam-page: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: number
+pageSize: int
 ```
 
-Page size: indicates the number of data records to be queried at a time. The maximum value is 50.
+Page size. The value range is [1,50].
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-RequestParam-pageSize: number--><!--Device-RequestParam-pageSize: number-End-->
+<!--Device-RequestParam-pageSize: int--><!--Device-RequestParam-pageSize: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

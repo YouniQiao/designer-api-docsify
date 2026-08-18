@@ -31,7 +31,7 @@ Traffic filter and redirection subsystem - common types and error codes definiti
 | [OH_TrafficFilter_ProcessInfo](capi-trafficfilter-oh-trafficfilter-processinfo.md) | OH_TrafficFilter_ProcessInfo | Process information structure.Stores process information returned by {@link OH_TrafficFilter_QueryProcess}.Initialization rule:Before calling {@link OH_TrafficFilter_QueryProcess}, the caller must clear this structureto zero, for example by using memset, and then set {@link size} to the actual size of thestructure allocated by the caller, usually sizeof(OH_TrafficFilter_ProcessInfo).ABI compatibility rule:The library uses {@link size} to determine which output fields can be safely written.Only fields fully covered by {@link size} are written by the library. If {@link size} issmaller than the minimum size required to read the {@link size} field itself, the functionreturns [OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode). If {@link size} is larger than thesize known by the library, the extra fields are ignored.Output validity rule:When {@link OH_TrafficFilter_QueryProcess} returns [OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode), fieldscovered by {@link size} contain valid output values. When the function returns an error,the caller must not rely on the values of output fields other than {@link size}. |
 | [OH_TrafficFilter_RedirectRule](capi-trafficfilter-oh-trafficfilter-redirectrule.md) | OH_TrafficFilter_RedirectRule | Traffic redirection rule.Defines a TCP traffic redirection rule to redirect matched traffic to the specified proxy server.Initialization rule:Before calling {@link OH_TrafficFilter_AddRedirectRule}, the caller must clear this structureto zero, for example by using memset, and then set {@link size} to the actual size of thestructure allocated by the caller, usually sizeof(OH_TrafficFilter_RedirectRule).ABI compatibility rule:The library uses {@link size} to determine which fields can be safely read.If {@link size} is smaller than the minimum size required by the current API, the functionreturns [OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode). If {@link size} is larger than thesize known by the library, the extra fields are ignored. Newly added fields in futureversions should remain zero-initialized when not used.Failure rule:If {@link OH_TrafficFilter_AddRedirectRule} returns an error, the rule is not guaranteedto be added or applied. The caller should check the return value before assuming that therule takes effect. |
 | [OH_TrafficFilter_PacketDesc](capi-trafficfilter-oh-trafficfilter-packetdesc.md) | OH_TrafficFilter_PacketDesc | Packet descriptorContains five-tuple information and packet data |
-| [OH_TrafficFilter_Config](capi-trafficfilter-oh-trafficfilter-config.md) | OH_TrafficFilter_Config | NFQueue configuration structure- If `config` is **NULL**, the implementation applies the following default values:- `packetCopyLen` = 0xFFFF (copy entire packet)- `nfqueueMaxlen` = 0    (use system default, which is 1024)- `nfqueueFlags`  = OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN- If `config` is **non-NULL**, the caller **must**:1. Zero-initialize the entire structure (e.g., `memset(&cfg, 0, sizeof(cfg))`).2. Set `size` = `sizeof(OH_TrafficFilter_Config)`.3. Set all other fields to valid values within the defined ranges (see below).- **Failure** to follow this contract (e.g., incorrect `size`, out‑of‑range field values)will cause the API to return `OH_TRAFFICFILTER_ERROR_INVALID_PARAM`. |
+| [OH_TrafficFilter_Config](capi-trafficfilter-oh-trafficfilter-config.md) | OH_TrafficFilter_Config | NFQueue configuration structure- If `config` is **NULL**, the implementation applies the following default values:- `packetCopyLen` = 0xFFFF (copy entire packet)- `nfqueueMaxlen` = 0 (use system default, which is 1024)- `nfqueueFlags` = OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN- If `config` is **non-NULL**, the caller **must**:1. Zero-initialize the entire structure (e.g., `memset(&cfg, 0, sizeof(cfg))`).2. Set `size` = `sizeof(OH_TrafficFilter_Config)`.3. Set all other fields to valid values within the defined ranges (see below).- **Failure** to follow this contract (e.g., incorrect `size`, out‑of‑range field values)will cause the API to return `OH_TRAFFICFILTER_ERROR_INVALID_PARAM`. |
 | [OH_TrafficFilter_MACMatch](capi-trafficfilter-oh-trafficfilter-macmatch.md) | OH_TrafficFilter_MACMatch | MAC address match conditionMatches packets based on MAC addressOnly source MAC is supported |
 | [OH_TrafficFilter_TCPFlagsMatch](capi-trafficfilter-oh-trafficfilter-tcpflagsmatch.md) | OH_TrafficFilter_TCPFlagsMatch | TCP flags match conditionMatches TCP packets based on TCP flag settings |
 | [OH_TrafficFilter_ConntrackMatch](capi-trafficfilter-oh-trafficfilter-conntrackmatch.md) | OH_TrafficFilter_ConntrackMatch | Connection tracking match conditionMatches packets based on connection tracking states |
@@ -89,8 +89,7 @@ Traffic filter and redirection subsystem - common types and error codes definiti
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef OH_TrafficFilter_PacketDecision (\*OH_TrafficFilter_PacketCallback)(const OH_TrafficFilter_PacketDesc* packet, void* userData
-)](#oh_trafficfilter_packetcallback) | OH_TrafficFilter_PacketCallback | Packet callback function type |
+| [typedef OH_TrafficFilter_PacketDecision (\*OH_TrafficFilter_PacketCallback)(const OH_TrafficFilter_PacketDesc* packet, void* userData)](#oh_trafficfilter_packetcallback) | OH_TrafficFilter_PacketCallback | Packet callback function type |
 
 ## Enum type description
 
@@ -236,8 +235,7 @@ Packet copy mode enumeration
 ### OH_TrafficFilter_PacketCallback()
 
 ```c
-typedef OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)(const OH_TrafficFilter_PacketDesc* packet, void* userData
-)
+typedef OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)(const OH_TrafficFilter_PacketDesc* packet, void* userData)
 ```
 
 **Description**
@@ -250,7 +248,7 @@ Packet callback function type
 
 | Parameter | Description |
 | -- | -- |
-| (const OH_TrafficFilter_PacketDesc\* packet | Packet descriptor |
+| [const OH_TrafficFilter_PacketDesc](capi-trafficfilter-oh-trafficfilter-packetdesc.md)\* packet | Packet descriptor |
 | void\* userData | User data |
 
 **Returns**:

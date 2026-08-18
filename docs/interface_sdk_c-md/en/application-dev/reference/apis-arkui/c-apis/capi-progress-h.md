@@ -82,7 +82,7 @@ Create linear progress indicator style information.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Returns a <b>ProgressLinearStyleOption</b> instance.<br> <br> If the result returns nullptr, there may be out of memory. |
+| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Returns a <b>ProgressLinearStyleOption</b> instance.  <br> If the result returns nullptr, there may be out of memory. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_Destroy()
 

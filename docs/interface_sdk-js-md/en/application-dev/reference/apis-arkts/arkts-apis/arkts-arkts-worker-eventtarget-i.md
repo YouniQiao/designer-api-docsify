@@ -6,7 +6,7 @@ Specific event features.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
+**Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 

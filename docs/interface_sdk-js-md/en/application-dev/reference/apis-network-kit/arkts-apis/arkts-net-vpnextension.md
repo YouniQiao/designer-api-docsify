@@ -1,6 +1,6 @@
 # @ohos.net.vpnExtension
 
-Provides VPN related interfaces.
+This module implements virtual private network (VPN) management, such as starting and stopping a third-party VPN. Third-party VPNs refer to VPN services provided by third parties. They usually support more security and privacy functions and more comprehensive customization options. Currently, the VPN capabilities provided to third-party applications are primarily used for creating virtual NICs and configuring VPN routing information. The connection tunnel process and internal connection protocols need to be implemented by the applications themselves. > **NOTE：**> > The following modules cannot be referenced in the VpnExtensionAbility, as doing so may cause the program to exit > abnormally: > - [@ohos.contact (Contacts)](../../apis-contacts-kit/arkts-apis/arkts-contact.md) > - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-geolocation.md), > [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-geolocationmanager.md) > - [@ohos.multimedia.audio (Audio Management)](../../apis-audio-kit/arkts-apis/arkts-multimedia-audio.md) > - [@ohos.multimedia.camera (Camera Management)](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md) > - [@ohos.telephony.call (Call)](../../apis-telephony-kit/arkts-apis/arkts-telephony-call.md) > - [@ohos.telephony.sim (SIM Management)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sim.md) > - [@ohos.telephony.sms (SMS)](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms.md)
 
 **Since:** 11
 
@@ -20,34 +20,34 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection) | Create a VPN connection using the VpnExtensionContext. |
-| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver) | Create a VPN observer. |
-| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability) | Starts a new vpn extension ability. |
-| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability) | Stops a service within the same application. |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md) | Creates a **VpnConnection** object. > **NOTE：**> > Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function. |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md) | Creates a VPN observer object. It is used to listen for VPN-related events. |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) | Enables the VPN extension ability. This API uses a promise to return the result. |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md) | Stops the VPN extension ability. This API uses a promise to return the result. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md#isalwaysonvpnenabled) | Get the Always on VPN mode status for a device. |
-| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md#setalwaysonvpnenabled) | Set the Enable/Disable Always on VPN mode for a device. |
-| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md#updatevpnauthorizedstate) | Update a VPN dialog authorize information |
+| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md) | Obtains the status of the **always on** mode. This API uses a promise to return the result. |
+| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md) | Enables or disables the **always on** mode. This API uses a promise to return the result. |
+| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md) | Updates the VPN pop-up authorization status. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Define configuration of the VPN network. |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | Defines a VPN connection. |
-| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | Defines a VPN observer. |
+| [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Defines the VPN configuration. |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling **vpnExt.createVpnConnection**. |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | Defines a VPN observer object. It is used to listen for VPN-related events. Before calling **VpnObserver** APIs, you need to create a VPN connection object by calling [vpnExtension.createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md). |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | Get network link information. |
-| [RouteInfo](arkts-network-vpnextension-routeinfo-t.md) | Get network route information. |
-| [VpnExtensionContext](arkts-network-vpnextension-vpnextensioncontext-t.md) | The context of vpn extension. It allows access to serviceExtension-specific resources. |
+| [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | Defines the network link address information. |
+| [RouteInfo](arkts-network-vpnextension-routeinfo-t.md) | Defines the network route information. |
+| [VpnExtensionContext](arkts-network-vpnextension-vpnextensioncontext-t.md) | Defines the VPN extension context. It allows access to serviceExtension-specific resources. |
 

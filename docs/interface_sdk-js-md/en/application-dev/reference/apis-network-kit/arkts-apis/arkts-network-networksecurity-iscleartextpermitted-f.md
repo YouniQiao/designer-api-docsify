@@ -12,7 +12,7 @@ import { networkSecurity } from '@kit.NetworkKit';
 export function isCleartextPermitted(): boolean
 ```
 
-Checks whether the Cleartext traffic is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
+Checks whether plaintext HTTP access is allowed from the preset **network_config.json** file of the application. By default, plaintext HTTP access is allowed.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Checks whether the Cleartext traffic is permitted. To invoke this method, you mu
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the Cleartext traffic is permitted, else returns false. |
+| boolean | Boolean value indicating whether plaintext HTTP is allowed. The value **true** indicates that plaintext HTTP is allowed, and the value **false** indicates the opposite. The default value is **true**. |
 
 **Error codes:**
 

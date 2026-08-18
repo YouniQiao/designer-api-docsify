@@ -12,7 +12,6 @@ The hdrCapability module provides enums related to the High Dynamic Range (HDR) 
 
 ```TypeScript
 import { hdrCapability } from '@kit.ArkGraphics2D';
-import { hdrCapability } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

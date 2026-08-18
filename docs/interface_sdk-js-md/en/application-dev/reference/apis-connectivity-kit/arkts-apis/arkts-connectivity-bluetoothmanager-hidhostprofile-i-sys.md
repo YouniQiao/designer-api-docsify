@@ -2,13 +2,13 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md#hidhostprofile)
+**Substitutes:** [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md)
 
 <!--Device-bluetoothManager-interface HidHostProfile--><!--Device-bluetoothManager-interface HidHostProfile-End-->
 

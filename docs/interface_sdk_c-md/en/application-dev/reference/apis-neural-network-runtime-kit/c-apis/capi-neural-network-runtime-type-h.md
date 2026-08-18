@@ -19,7 +19,7 @@ Defines the structure and enumeration.include "neural_network_runtime/neural_net
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) | OH_NN_UInt32Array | This structure is used to store a 32-bit unsigned integer array. |
-| [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) | OH_NN_QuantParam | Quantization information.In quantization scenarios, the 32-bit floating-point data type is quantized intothe fixed-point data type according to the following formula: \f[    q = clamp(round(\frac{r}{s}+z), q_{min}, q_{max}) \f]s and z are quantization parameters, which are stored by <b>scale</b> and <b>zeroPoint</b>in [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md).r is a floating point number, q is the quantization result, q_min is the lower bound of the quantization result, andq_max is an upper bound of a quantization result. The calculation method is as follows: \f[  \text{clamp}(x,min,max) =  \begin{cases}       q_{min} = -(1 << (numBits - 1)) \        q_{max} = (1 << (numBits - 1)) \    \end{cases}<br> \f]The clamp function is defined as follows: \f[  \text{clamp}(x,min,max) =  \begin{cases}       \text{max} & \text{ if } x > \text{ max } \        \text{min} & \text{ if } x < \text{ min } \        x & \text{ otherwise } \    \end{cases}<br> \f](Deprecated in API11) |
+| [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) | OH_NN_QuantParam | Quantization information.In quantization scenarios, the 32-bit floating-point data type is quantized intothe fixed-point data type according to the following formula: \f[ q = clamp(round(\frac{r}{s}+z), q_{min}, q_{max}) \f]s and z are quantization parameters, which are stored by <b>scale</b> and <b>zeroPoint</b>in [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md).r is a floating point number, q is the quantization result, q_min is the lower bound of the quantization result, andq_max is an upper bound of a quantization result. The calculation method is as follows: \f[ \text{clamp}(x,min,max) = \begin{cases} q_{min} = -(1 << (numBits - 1)) \ q_{max} = (1 << (numBits - 1)) \ \end{cases}<br> \f]The clamp function is defined as follows: \f[ \text{clamp}(x,min,max) = \begin{cases} \text{max} & \text{ if } x > \text{ max } \ \text{min} & \text{ if } x < \text{ min } \ x & \text{ otherwise } \ \end{cases}<br> \f](Deprecated in API11) |
 | [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) | OH_NN_Tensor | Defines the tensor structure.It is usually used to construct data nodes and operator parameters in a model graph. When constructing a tensor,you need to specify the data type, number of dimensions, dimension information, and quantization information.(Deprecated in API11) |
 | [OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) | OH_NN_Memory | Defines the memory structure.(Deprecated in API11) |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) | OH_NNModel | Defines the handles of models. |
@@ -525,7 +525,7 @@ Defines the callback function handle for the post-process when the asynchronous 
 
 | Parameter | Description |
 | -- | -- |
-| (void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
+| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
 | [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) errCode | Error code [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) returned by the asynchronous execution. |
 | void \*outputTensor[] | An array of output tensors [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) of the model, which is the same as the argument<b>outputTensor</b> passed to {@link OH_NNExecutor_RunAsync}. |
 | int32_t outputCount | Output tensor count, which is the same as the argument <b>outputCount</b> passed to{@link OH_NNExecutor_RunAsync}. |
@@ -546,6 +546,6 @@ Defines the callback function handle for the post-process when the device driver
 
 | Parameter | Description |
 | -- | -- |
-| (void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
+| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
 
 

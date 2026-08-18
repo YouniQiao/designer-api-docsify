@@ -17,7 +17,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getuid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -30,7 +30,7 @@ Obtains the UID of a WantAgent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
 
 **Examples**
 
@@ -99,7 +99,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getuid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

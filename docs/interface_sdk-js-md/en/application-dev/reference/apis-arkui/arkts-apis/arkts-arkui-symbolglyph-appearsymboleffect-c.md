@@ -2,7 +2,7 @@
 
 Defines AppearSymbolEffect class.
 
-**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#symboleffect)
+**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md)
 
 **Since:** 23
 

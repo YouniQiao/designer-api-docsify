@@ -71,7 +71,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 

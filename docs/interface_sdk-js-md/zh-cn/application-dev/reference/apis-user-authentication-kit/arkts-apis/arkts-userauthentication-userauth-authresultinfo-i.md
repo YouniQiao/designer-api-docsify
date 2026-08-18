@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#userauthresult)
+**替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
 
 <!--Device-userAuth-interface AuthResultInfo--><!--Device-userAuth-interface AuthResultInfo-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## lockoutDuration

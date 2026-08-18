@@ -17,7 +17,7 @@ function isRamConstrainedDevice(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice)
+**替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md)
 
 <!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
 
@@ -55,7 +55,7 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice)
+**替代接口：** [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md)
 
 <!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
 
@@ -65,7 +65,7 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以回调方式返回接口运行结果及当前设备是否为RAM受限设备，可进行错误处理或其他自定义处理。true：当前设备为RAM受限设备，false：当前设备为非 RAM受限设备。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以回调方式返回接口运行结果及当前设备是否为RAM受限设备，可进行错误处理或其他自定义处理。true：当前设备为RAM受限设备，false：当前设备为非 RAM受限设备。 |
 
 **示例**
 

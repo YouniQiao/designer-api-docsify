@@ -17,7 +17,7 @@ function getArguments(): AbilityDelegatorArgs
 
 **废弃版本：** 9
 
-**替代接口：** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments)
+**替代接口：** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
 
 <!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
 

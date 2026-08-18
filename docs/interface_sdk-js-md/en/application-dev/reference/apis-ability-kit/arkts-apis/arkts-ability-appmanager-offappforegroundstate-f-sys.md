@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
-## off_appForegroundState
+## off_appForegroundState('appForegroundState')
 
 ```TypeScript
 function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void

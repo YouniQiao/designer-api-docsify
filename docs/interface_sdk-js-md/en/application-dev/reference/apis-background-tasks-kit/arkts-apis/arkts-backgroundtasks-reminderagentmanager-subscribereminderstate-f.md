@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## subscribeReminderState
@@ -29,7 +28,7 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | Yes | Callback used to return the agent-powered reminder state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | Yes | Callback used to return the agent-powered reminder state. |
 
 **Return value:**
 

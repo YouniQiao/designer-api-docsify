@@ -6,7 +6,7 @@ Enumerates the album types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#albumtype)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
 <!--Device-userFileManager-enum AlbumType--><!--Device-userFileManager-enum AlbumType-End-->
 

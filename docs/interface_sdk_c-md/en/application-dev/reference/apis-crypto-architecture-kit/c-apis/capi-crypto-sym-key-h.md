@@ -61,7 +61,7 @@ Creates a symmetric key generator based on the given algorithm name, e.g. AES256
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or algoName is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or algoName is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -92,7 +92,7 @@ Generates a symmetric key randomly.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or keyCtx is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. Possible causes:<br>            the algorithm does not support random key generation (e.g. RC2, RC4, Blowfish, CAST),<br>            use OH_CryptoSymKeyGenerator_Convert interface instead.[since 26.0.0]</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or keyCtx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. Possible causes:             the algorithm does not support random key generation (e.g. RC2, RC4, Blowfish, CAST),             use OH_CryptoSymKeyGenerator_Convert interface instead.[since 26.0.0]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSymKeyGenerator_Convert()
 
@@ -118,7 +118,7 @@ Converts symmetric key data to a symmetric key.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, keyData, or keyCtx is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, keyData, or keyCtx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSymKeyGenerator_GetAlgoName()
 
@@ -142,7 +142,7 @@ Obtains the algorithm name of the symmetric key generator.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns the symmetric key algorithm name. No need to free by the caller. Invalid after<br>     the generator is destroyed. |
+| const char * | Returns the symmetric key algorithm name. No need to free by the caller. Invalid after      the generator is destroyed. |
 
 ### OH_CryptoSymKeyGenerator_Destroy()
 
@@ -209,7 +209,7 @@ Obtains the symmetric key data from the symmetric key.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if keyCtx or out is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if keyCtx or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSymKey_Destroy()
 

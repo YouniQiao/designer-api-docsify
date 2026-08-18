@@ -72,7 +72,7 @@ Destroys an **OH_Drawing_Lattice** object and reclaims the memory occupied by th
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if OHDrawingLattice lattice is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if OHDrawingLattice lattice is a null pointer. |
 
 ### OH_Drawing_LatticeCreate()
 
@@ -105,6 +105,6 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> Returns OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER for any of the following reasons:<br> - xDivs or yDivs is a null pointer.<br> - rectTypes is not a null pointer, and rectTypeCount is not equal to (xCount + 1)(yCount + 1).<br> - colors is not a null pointer, and colorCount is not equal to (xCount + 1)(yCount + 1).<br> - rectTypes is a null pointer, and rectTypeCount is not equal to 0.<br> - colors is a null pointer, and colorCount is not equal to 0.<br> Returns OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE, indicating that the enumeration value in rectTypes exceeds<br> the valid enumeration range. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  Returns OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER for any of the following reasons:  - xDivs or yDivs is a null pointer.  - rectTypes is not a null pointer, and rectTypeCount is not equal to (xCount + 1)(yCount + 1).  - colors is not a null pointer, and colorCount is not equal to (xCount + 1)(yCount + 1).  - rectTypes is a null pointer, and rectTypeCount is not equal to 0.  - colors is a null pointer, and colorCount is not equal to 0.  Returns OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE, indicating that the enumeration value in rectTypes exceeds  the valid enumeration range. |
 
 

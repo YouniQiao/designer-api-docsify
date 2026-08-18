@@ -22,4 +22,9 @@ Creates a fixed container for a menu. This API does not have any parameters. > *
 
 ## Summary
 
-- [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md)
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Enumerates the submenu expanding modes. |
+

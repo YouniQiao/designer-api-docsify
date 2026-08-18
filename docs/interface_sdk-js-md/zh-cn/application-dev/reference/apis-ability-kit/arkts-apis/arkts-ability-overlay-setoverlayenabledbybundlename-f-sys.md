@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## setOverlayEnabledByBundleName
@@ -30,7 +31,7 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 | bundleName | string | 是 | 指定应用的bundle名称。 |
 | moduleName | string | 是 | 指定应用的overlay特征module的名称。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)。当设置指定应用的overlay module的禁用使能状态成功时， err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)。当设置指定应用的overlay module的禁用使能状态成功时， err为undefined，否则为错误对象。 |
 
 **错误码：**
 

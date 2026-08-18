@@ -24,8 +24,8 @@ Waits for a remote device to connect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
+| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

@@ -17,7 +17,7 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -29,7 +29,7 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用的上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见Context。 |
 | name | string | 是 | 数据库名称，不能为空字符串且不能包含路径分隔符/。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
 
 
 ## deleteRdbStore
@@ -44,7 +44,7 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 

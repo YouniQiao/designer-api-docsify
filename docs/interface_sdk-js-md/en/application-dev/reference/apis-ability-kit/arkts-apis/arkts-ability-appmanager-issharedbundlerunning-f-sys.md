@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## isSharedBundleRunning
@@ -88,7 +87,7 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the shared library. |
 | versionCode | long | Yes | Version number of the shared library. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 

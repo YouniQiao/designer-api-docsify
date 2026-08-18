@@ -18,7 +18,7 @@ Sets the confirmation of pairing with a certain device. On API 10 and above, the
 
 **Deprecated since:** 10
 
-**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation)
+**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH

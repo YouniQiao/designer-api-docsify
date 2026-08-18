@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -11,7 +12,7 @@
 function listFile(): Array<FileInfo>
 ```
 
-Lists the files and directories in the **Recently deleted** list.
+查询最近删除（回收站）列表中文件/目录信息。
 
 **起始版本：** 10
 
@@ -31,7 +32,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;FileInfo&gt; | Returns the next level FileInfo Object. |
+| Array&lt;FileInfo&gt; | 已获取的文件和目录列表。 |
 
 **错误码：**
 

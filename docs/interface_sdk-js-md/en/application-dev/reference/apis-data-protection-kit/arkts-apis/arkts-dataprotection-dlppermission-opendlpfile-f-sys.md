@@ -51,7 +51,7 @@ Opens a DLP file. After the API is successfully called, the **DLPFile** object i
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
@@ -120,7 +120,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | --- | --- | --- | --- |
 | ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 | appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |

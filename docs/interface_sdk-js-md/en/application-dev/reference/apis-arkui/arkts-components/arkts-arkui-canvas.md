@@ -77,17 +77,27 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 ## Summary
 
-- [CanvasParams](arkts-arkui-canvasparams-i.md)
-- [CanvasPattern](arkts-arkui-canvaspattern-i.md)
-- [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md)
-- [Size](arkts-arkui-size-i.md)
-- [TextMetrics](arkts-arkui-textmetrics-i.md)
-- [CanvasDirection](arkts-arkui-canvasdirection-t.md)
-- [CanvasFillRule](arkts-arkui-canvasfillrule-t.md)
-- [CanvasLineCap](arkts-arkui-canvaslinecap-t.md)
-- [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
-- [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
-- [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md)
-- [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
-- [FrameNode](arkts-arkui-framenode-t.md)
-- [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CanvasParams](arkts-arkui-canvasparams-i.md) | Defines the parameters of the **Canvas** component. |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. |
+| [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | Defines the specific configuration parameters for the rendering context. |
+| [Size](arkts-arkui-size-i.md) | Provides size information of the **DrawingRenderingContext** object. |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | Size information of the text. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [CanvasDirection](arkts-arkui-canvasdirection-t.md) | Defines the current text direction. The value type is a union of the types listed in the table below. |
+| [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | Defines the fill pattern algorithm used to determine whether a point is inside or outside a path. The value type is a union of the types listed in the table below. |
+| [CanvasLineCap](arkts-arkui-canvaslinecap-t.md) | Specifies the attribute of drawing the end of each line segment. |
+| [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md) | Defines the type of join between two non-zero-length segments (lines, arcs, and curves). The value type is a union of the types listed in the table below. |
+| [CanvasTextAlign](arkts-arkui-canvastextalign-t.md) | Defines the type of text alignment. The value type is a union of the types listed in the table below. |
+| [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md) | Defines the text baseline type. The value type is a union of the types listed in the table below. |
+| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Defines a canvas object for drawing content on the **XComponent** component. |
+| [FrameNode](arkts-arkui-framenode-t.md) | Import the frame node type object for Canvas. |
+| [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md) | Sets the image smoothness attribute. |
+

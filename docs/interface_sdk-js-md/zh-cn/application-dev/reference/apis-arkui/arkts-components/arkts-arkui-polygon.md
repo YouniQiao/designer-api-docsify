@@ -55,4 +55,9 @@ Polygon(options?: PolygonOptions)
 
 ## 汇总
 
-- [PolygonOptions](arkts-arkui-polygonoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [PolygonOptions](arkts-arkui-polygonoptions-i.md) | 用于描述Polygon组件绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

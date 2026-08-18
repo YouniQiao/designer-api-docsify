@@ -2,7 +2,9 @@
 
 监听状态改变，启动拖拽服务的对象。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 <!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
 
@@ -11,23 +13,24 @@
 ## 导入模块
 
 ```TypeScript
+import { dragController } from '@kit.ArkUI';
 ```
 
-## off_statusChange
+## offStatusChange
 
 ```TypeScript
-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
+offStatusChange(callback?: Callback<DragAndDropInfo>): void
 ```
 
 取消注册监听拖拽状态改变事件。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void--><!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void-End-->
+<!--Device-DragAction-offStatusChange(callback?: Callback<DragAndDropInfo>): void--><!--Device-DragAction-offStatusChange(callback?: Callback<DragAndDropInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,24 +38,23 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'statusChange' | 是 | for status changing |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 | with drag event and status information |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 |  |
 
-## on_statusChange
+## onStatusChange
 
 ```TypeScript
-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
+onStatusChange(callback: Callback<DragAndDropInfo>): void
 ```
 
 注册监听拖拽状态改变事件。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void--><!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void-End-->
+<!--Device-DragAction-onStatusChange(callback: Callback<DragAndDropInfo>): void--><!--Device-DragAction-onStatusChange(callback: Callback<DragAndDropInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,24 +62,23 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'statusChange' | 是 | for status changing |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 | with drag event and status information |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 |  |
 
 ## startDrag
 
 ```TypeScript
-startDrag(): Promise<void>
+startDrag(): Promise<void> | null
 ```
 
 启动拖拽服务。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DragAction-startDrag(): Promise<void>--><!--Device-DragAction-startDrag(): Promise<void>-End-->
+<!--Device-DragAction-startDrag(): Promise<void> | null--><!--Device-DragAction-startDrag(): Promise<void> | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

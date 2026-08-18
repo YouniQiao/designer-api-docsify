@@ -2,7 +2,7 @@
 
 Defines a shader with single color.
 
-**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#shaderstyle)
+**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **Since:** 24
 

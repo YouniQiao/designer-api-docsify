@@ -36,7 +36,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | No | callback of the listened event. |
 
 ## offLayoutChildren
 
@@ -60,9 +60,9 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
 
-## off_draw
+## off_draw('draw')
 
 ```TypeScript
 off(type: 'draw', callback?: () => void): void
@@ -87,7 +87,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | type | 'draw' | Yes | type of the listened event.<br>**Since:** 12 |
 | callback | () =&gt; void | No | callback of the listened event.<br>**Since:** 12 |
 
-## off_drawChildren
+## off_drawChildren('drawChildren')
 
 ```TypeScript
 off(type: 'drawChildren', callback?: Callback<void>): void
@@ -110,9 +110,9 @@ Deregisters a callback with the corresponding query condition by using the handl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
 
-## off_layout
+## off_layout('layout')
 
 ```TypeScript
 off(type: 'layout', callback?: () => void): void
@@ -159,7 +159,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | Yes | callback of the listened event. |
 
 ## onLayoutChildren
 
@@ -183,9 +183,9 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
 
-## on_draw
+## on_draw('draw')
 
 ```TypeScript
 on(type: 'draw', callback: () => void): void
@@ -210,7 +210,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | type | 'draw' | Yes | type of the listened event.<br>**Since:** 12 |
 | callback | () =&gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
 
-## on_drawChildren
+## on_drawChildren('drawChildren')
 
 ```TypeScript
 on(type: 'drawChildren', callback: Callback<void>): void
@@ -233,9 +233,9 @@ Registers a callback with the corresponding query condition by using the handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
 
-## on_layout
+## on_layout('layout')
 
 ```TypeScript
 on(type: 'layout', callback: () => void): void

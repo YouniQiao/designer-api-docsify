@@ -17,7 +17,7 @@ function getKeyItemProperties(
   ): void
 ```
 
-Obtains key properties. This API uses an asynchronous callback to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Obtains key properties. This API uses an asynchronous callback to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Obtains key properties. This API uses a promise to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission.
+Obtains key properties. This API uses a promise to return the result. > **NOTE：**> > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 

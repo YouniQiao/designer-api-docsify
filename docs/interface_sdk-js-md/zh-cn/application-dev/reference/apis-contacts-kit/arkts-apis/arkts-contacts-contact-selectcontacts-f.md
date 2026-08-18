@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## selectContacts
@@ -25,7 +26,7 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -91,7 +92,7 @@ promise.then((data) => {
 function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md#contactselectionoptions)）。使用callback异步回调。
+调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md)）。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -106,7 +107,7 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 

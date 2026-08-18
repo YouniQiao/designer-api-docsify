@@ -30,7 +30,12 @@ Creates a gauge.
 
 ## Summary
 
-- [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)
-- [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md)
-- [GaugeOptions](arkts-arkui-gaugeoptions-i.md)
-- [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+| [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Provides gauge indicator options. |
+| [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | Provides gauge options. |
+| [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Inherits from MultiShadowOptions and has all attributes of **MultiShadowOptions**. |
+

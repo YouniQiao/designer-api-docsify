@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount
@@ -21,7 +22,7 @@
 addLcdJumpCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-根据[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord系统接口)中的fileId给数据库中对应数据的LcdJumpCount加1。使用Promise异步回调。
+根据[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId给数据库中对应数据的LcdJumpCount加1。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -35,7 +36,7 @@ addLcdJumpCount(ids: Array<int>): Promise<Array<int>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ids | Array&lt;int&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord系统接口)中的fileId集合。 |
+| ids | Array&lt;int&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 
@@ -57,7 +58,7 @@ addLcdJumpCount(ids: Array<int>): Promise<Array<int>>
 addShareCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-根据[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord系统接口)中的fileId给数据库中对应数据的shareCount加1。使用Promise异步回调。
+根据[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId给数据库中对应数据的shareCount加1。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -71,7 +72,7 @@ addShareCount(ids: Array<int>): Promise<Array<int>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ids | Array&lt;int&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord系统接口)中的fileId集合。 |
+| ids | Array&lt;int&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 

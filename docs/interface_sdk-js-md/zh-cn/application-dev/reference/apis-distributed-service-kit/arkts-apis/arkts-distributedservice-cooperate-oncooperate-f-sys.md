@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-## on_cooperate
+## on_cooperate('cooperate')
 
 ```TypeScript
 function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
@@ -17,7 +18,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 **废弃版本：** 11
 
-**替代接口：** [on](#oncooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+**替代接口：** [on](#on_cooperatecooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
 
 <!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void--><!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void-End-->
 
@@ -30,7 +31,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cooperate' | 是 | 监听类型，取值为'cooperate' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
 
 **错误码：**
 

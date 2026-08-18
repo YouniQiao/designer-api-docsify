@@ -4,7 +4,7 @@
 type NetHandle = connection.NetHandle
 ```
 
-Get the handle of the data network.
+Defines the handle of the data network. Before calling the **NetHandle** function, call the **getNetHandle** function to obtain a **NetHandle** object.
 
 **Since:** 23
 

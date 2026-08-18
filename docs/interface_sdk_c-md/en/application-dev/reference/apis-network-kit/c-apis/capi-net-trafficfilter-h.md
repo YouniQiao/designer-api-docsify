@@ -18,22 +18,16 @@ Defines the APIs for traffic filtering.
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_TrafficFilter_CreateRedirector(uint32_t group_id, uint32_t priority, OH_TrafficFilter_Redirector** redirector
-)](#oh_trafficfilter_createredirector) | Creates a traffic redirection instanceCreates a traffic redirection instance for transparent TCP traffic redirection to proxy serverResource Management: You must call [OH_TrafficFilter_DestroyRedirector](capi-net-trafficfilter-h.md#oh_trafficfilter_destroyredirector) to release resources.If this function fails, no valid redirector is returned. |
+| [int32_t OH_TrafficFilter_CreateRedirector(uint32_t group_id, uint32_t priority, OH_TrafficFilter_Redirector** redirector)](#oh_trafficfilter_createredirector) | Creates a traffic redirection instanceCreates a traffic redirection instance for transparent TCP traffic redirection to proxy serverResource Management: You must call [OH_TrafficFilter_DestroyRedirector](capi-net-trafficfilter-h.md#oh_trafficfilter_destroyredirector) to release resources.If this function fails, no valid redirector is returned. |
 | [int32_t OH_TrafficFilter_DestroyRedirector(OH_TrafficFilter_Redirector* redirector)](#oh_trafficfilter_destroyredirector) | Destroys a traffic redirection instance.Destroys the redirection instance and releases related resources, including rules.The handle becomes invalid after this call. |
-| [int32_t OH_TrafficFilter_AddRedirectRule(OH_TrafficFilter_Redirector* redirector, const OH_TrafficFilter_RedirectRule* rule
-)](#oh_trafficfilter_addredirectrule) | Adds a redirection ruleAdds a TCP traffic redirection rule to redirect matched traffic to specified proxy serverTo clear redirect rules, you need to call [OH_TrafficFilter_ClearRedirectRule](capi-net-trafficfilter-h.md#oh_trafficfilter_clearredirectrule). |
+| [int32_t OH_TrafficFilter_AddRedirectRule(OH_TrafficFilter_Redirector* redirector, const OH_TrafficFilter_RedirectRule* rule)](#oh_trafficfilter_addredirectrule) | Adds a redirection ruleAdds a TCP traffic redirection rule to redirect matched traffic to specified proxy serverTo clear redirect rules, you need to call [OH_TrafficFilter_ClearRedirectRule](capi-net-trafficfilter-h.md#oh_trafficfilter_clearredirectrule). |
 | [int32_t OH_TrafficFilter_ClearRedirectRule(OH_TrafficFilter_Redirector* redirector)](#oh_trafficfilter_clearredirectrule) | Clear all redirection rule |
-| [int32_t OH_TrafficFilter_QueryProcess(const OH_TrafficFilter_ConnectionInfo* connection_info, OH_TrafficFilter_ProcessInfo* process_info
-)](#oh_trafficfilter_queryprocess) | Queries corresponding process information based on connection informationQueries corresponding process information based on five-tuple information |
-| [int32_t OH_TrafficFilter_AddPacketRule(OH_TrafficFilter_PacketController* controller, const OH_TrafficFilter_FilterRule* rule
-)](#oh_trafficfilter_addpacketrule) | Set packet filter ruleAdd a packet filter rule to controller chain.only packets matching the rule will be intercepted and sent to callback function. |
+| [int32_t OH_TrafficFilter_QueryProcess(const OH_TrafficFilter_ConnectionInfo* connection_info, OH_TrafficFilter_ProcessInfo* process_info)](#oh_trafficfilter_queryprocess) | Queries corresponding process information based on connection informationQueries corresponding process information based on five-tuple information |
+| [int32_t OH_TrafficFilter_AddPacketRule(OH_TrafficFilter_PacketController* controller, const OH_TrafficFilter_FilterRule* rule)](#oh_trafficfilter_addpacketrule) | Set packet filter ruleAdd a packet filter rule to controller chain.only packets matching the rule will be intercepted and sent to callback function. |
 | [int32_t OH_TrafficFilter_ClearPacketRule(OH_TrafficFilter_PacketController* controller)](#oh_trafficfilter_clearpacketrule) | Clear packet filter ruleClear all packet filter rules in controller. |
-| [int32_t OH_TrafficFilter_CreatePacketController(uint32_t groupId, uint32_t priority, const OH_TrafficFilter_Config* config, OH_TrafficFilter_PacketController** controller
-)](#oh_trafficfilter_createpacketcontroller) | Creates a packet controller instance.Creates a packet controller for intercepting and filtering network packetsResource Management: This instance occupies system resources.You must call [OH_TrafficFilter_DestroyPacketController](capi-net-trafficfilter-h.md#oh_trafficfilter_destroypacketcontroller) to release resources.If this function fails, no valid controller is returned. |
+| [int32_t OH_TrafficFilter_CreatePacketController(uint32_t groupId, uint32_t priority, const OH_TrafficFilter_Config* config, OH_TrafficFilter_PacketController** controller)](#oh_trafficfilter_createpacketcontroller) | Creates a packet controller instance.Creates a packet controller for intercepting and filtering network packetsResource Management: This instance occupies system resources.You must call [OH_TrafficFilter_DestroyPacketController](capi-net-trafficfilter-h.md#oh_trafficfilter_destroypacketcontroller) to release resources.If this function fails, no valid controller is returned. |
 | [int32_t OH_TrafficFilter_DestroyPacketController(OH_TrafficFilter_PacketController* controller)](#oh_trafficfilter_destroypacketcontroller) | Destroys a packet controller instance.Destroys the controller and releases related resources, including rules and callbacks.After calling this function, the handle is invalid. Do not use it again. |
-| [int32_t OH_TrafficFilter_RegisterPacketCallback(OH_TrafficFilter_PacketController* controller, OH_TrafficFilter_PacketCallback callback, void* userData
-)](#oh_trafficfilter_registerpacketcallback) | Register a packet callback function.Register a callback function to handle intercepted packets.The callback will be triggered when packets match the filter rule. |
+| [int32_t OH_TrafficFilter_RegisterPacketCallback(OH_TrafficFilter_PacketController* controller, OH_TrafficFilter_PacketCallback callback, void* userData)](#oh_trafficfilter_registerpacketcallback) | Register a packet callback function.Register a callback function to handle intercepted packets.The callback will be triggered when packets match the filter rule. |
 | [int32_t OH_TrafficFilter_UnregisterPacketCallback(OH_TrafficFilter_PacketController* controller)](#oh_trafficfilter_unregisterpacketcallback) | Unregister a packet callback function.Unregister the current packet callback function.After calling this, no more packets will be delivered to the callback. |
 
 ## Function description
@@ -41,8 +35,7 @@ Defines the APIs for traffic filtering.
 ### OH_TrafficFilter_CreateRedirector()
 
 ```c
-int32_t OH_TrafficFilter_CreateRedirector(uint32_t group_id, uint32_t priority, OH_TrafficFilter_Redirector** redirector
-)
+int32_t OH_TrafficFilter_CreateRedirector(uint32_t group_id, uint32_t priority, OH_TrafficFilter_Redirector** redirector)
 ```
 
 **Description**
@@ -59,13 +52,13 @@ Creates a traffic redirection instanceCreates a traffic redirection instance for
 | -- | -- |
 | uint32_t group_id | Redirection chain identifier.This is the logical grouping ID within the application.Multiple redirectors within the same application can use different group_id.The same group_id from different applications will be automatically isolated.The valid range is [{@link OH_TRAFFICFILTER_MIN_GROUP_ID}, {@link OH_TRAFFICFILTER_MAX_GROUP_ID}],including both boundaries. If group_id is outside this range, this function returns[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode). |
 | uint32_t priority | Priority.Determines execution order between different group_id chains. A smaller number executes first.Note: Redirector priority is higher than packet filter priority.The valid range is [{@link OH_TRAFFICFILTER_MIN_PRIORITY}, {@link OH_TRAFFICFILTER_MAX_PRIORITY}],including both boundaries. If priority is outside this range, this function returns[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode). |
-| redirector | Output parameter, the redirection handle on success. |
+| [OH_TrafficFilter_Redirector](capi-trafficfilter-oh-trafficfilter-redirector.md)** redirector | Output parameter, the redirection handle on success. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) when group_id already exists.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if priority is invalid.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if NFQueue initialization fails.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) when group_id already exists.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if priority is invalid.</li>      <li>[OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if NFQueue initialization fails.</li></ul> |
 
 ### OH_TrafficFilter_DestroyRedirector()
 
@@ -91,13 +84,12 @@ Destroys a traffic redirection instance.Destroys the redirection instance and re
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector is NULL.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if the specified redirector handle is not found.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector is NULL.</li>      <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if the specified redirector handle is not found.</li></ul> |
 
 ### OH_TrafficFilter_AddRedirectRule()
 
 ```c
-int32_t OH_TrafficFilter_AddRedirectRule(OH_TrafficFilter_Redirector* redirector, const OH_TrafficFilter_RedirectRule* rule
-)
+int32_t OH_TrafficFilter_AddRedirectRule(OH_TrafficFilter_Redirector* redirector, const OH_TrafficFilter_RedirectRule* rule)
 ```
 
 **Description**
@@ -113,13 +105,13 @@ Adds a redirection ruleAdds a TCP traffic redirection rule to redirect matched t
 | Parameter | Description |
 | -- | -- |
 | [OH_TrafficFilter_Redirector](capi-trafficfilter-oh-trafficfilter-redirector.md)* redirector | OH_TrafficFilter_Redirector handle |
-| rule | Redirection rule. Cannot be NULL. |
+| [const OH_TrafficFilter_RedirectRule](capi-trafficfilter-oh-trafficfilter-redirectrule.md)* rule | Redirection rule. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector or rule is NULL.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if too many rules added.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector or rule is NULL.</li>      <li>[OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if too many rules added.</li></ul> |
 
 ### OH_TrafficFilter_ClearRedirectRule()
 
@@ -145,13 +137,12 @@ Clear all redirection rule
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector is NULL.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if redirector is NULL.</li></ul> |
 
 ### OH_TrafficFilter_QueryProcess()
 
 ```c
-int32_t OH_TrafficFilter_QueryProcess(const OH_TrafficFilter_ConnectionInfo* connection_info, OH_TrafficFilter_ProcessInfo* process_info
-)
+int32_t OH_TrafficFilter_QueryProcess(const OH_TrafficFilter_ConnectionInfo* connection_info, OH_TrafficFilter_ProcessInfo* process_info)
 ```
 
 **Description**
@@ -167,19 +158,18 @@ Queries corresponding process information based on connection informationQueries
 | Parameter | Description |
 | -- | -- |
 | [const OH_TrafficFilter_ConnectionInfo](capi-trafficfilter-oh-trafficfilter-connectioninfo.md)* connection_info | Input connection information |
-| process_info | Output process information |
+| [OH_TrafficFilter_ProcessInfo](capi-trafficfilter-oh-trafficfilter-processinfo.md)* process_info | Output process information |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if input parameters are invalid.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if process not found.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if input parameters are invalid.</li>      <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if process not found.</li></ul> |
 
 ### OH_TrafficFilter_AddPacketRule()
 
 ```c
-int32_t OH_TrafficFilter_AddPacketRule(OH_TrafficFilter_PacketController* controller, const OH_TrafficFilter_FilterRule* rule
-)
+int32_t OH_TrafficFilter_AddPacketRule(OH_TrafficFilter_PacketController* controller, const OH_TrafficFilter_FilterRule* rule)
 ```
 
 **Description**
@@ -201,13 +191,13 @@ Set packet filter ruleAdd a packet filter rule to controller chain.only packets 
 | Parameter | Description |
 | -- | -- |
 | [OH_TrafficFilter_PacketController](capi-trafficfilter-oh-trafficfilter-packetcontroller.md)* controller | [in] OH_TrafficFilter_PacketController handle |
-| rule | [in] Filter rule. Cannot be NULL. |
+| [const OH_TrafficFilter_FilterRule](capi-trafficfilter-oh-trafficfilter-filterrule.md)* rule | [in] Filter rule. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller or rule is NULL.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if too many rules added.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller or rule is NULL.</li>      <li>[OH_TRAFFICFILTER_ERROR_TOO_MANY_RULES](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if too many rules added.</li></ul> |
 
 ### OH_TrafficFilter_ClearPacketRule()
 
@@ -233,13 +223,12 @@ Clear packet filter ruleClear all packet filter rules in controller.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li></ul> |
 
 ### OH_TrafficFilter_CreatePacketController()
 
 ```c
-int32_t OH_TrafficFilter_CreatePacketController(uint32_t groupId, uint32_t priority, const OH_TrafficFilter_Config* config, OH_TrafficFilter_PacketController** controller
-)
+int32_t OH_TrafficFilter_CreatePacketController(uint32_t groupId, uint32_t priority, const OH_TrafficFilter_Config* config, OH_TrafficFilter_PacketController** controller)
 ```
 
 **Description**
@@ -257,13 +246,13 @@ Creates a packet controller instance.Creates a packet controller for interceptin
 | uint32_t groupId | [in] Filter chain identifier.This is the logical grouping ID within the application.Multiple controllers within the same application can use different group_id.The same group_id from different applications will be automatically isolated. |
 | uint32_t priority | [in] Priority (determines execution order between different group_id chain,smaller number executes first) |
 | [const OH_TrafficFilter_Config](capi-trafficfilter-oh-trafficfilter-config.md)* config | [in] Configuration parameters (can be NULL to use default configuration) |
-| controller | [out] Output parameter, <ul><li>the packet controller handle on success.</li></ul> |
+| [OH_TrafficFilter_PacketController](capi-trafficfilter-oh-trafficfilter-packetcontroller.md)** controller | [out] Output parameter, <ul><li>the packet controller handle on success.</li></ul> |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) when group_id already exists.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if priority is invalid.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if NFQueue initialization fails.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_GROUP_ID_IN_USE](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) when group_id already exists.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if priority is invalid.</li>      <li>[OH_TRAFFICFILTER_ERROR_NFQUEUE_ERROR](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if NFQueue initialization fails.</li></ul> |
 
 ### OH_TrafficFilter_DestroyPacketController()
 
@@ -289,13 +278,12 @@ Destroys a packet controller instance.Destroys the controller and releases relat
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if the specified controller handle is not found.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li>      <li>[OH_TRAFFICFILTER_ERROR_NOT_FOUND](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if the specified controller handle is not found.</li></ul> |
 
 ### OH_TrafficFilter_RegisterPacketCallback()
 
 ```c
-int32_t OH_TrafficFilter_RegisterPacketCallback(OH_TrafficFilter_PacketController* controller, OH_TrafficFilter_PacketCallback callback, void* userData
-)
+int32_t OH_TrafficFilter_RegisterPacketCallback(OH_TrafficFilter_PacketController* controller, OH_TrafficFilter_PacketCallback callback, void* userData)
 ```
 
 **Description**
@@ -344,13 +332,13 @@ Register a packet callback function.Register a callback function to handle inter
 | -- | -- |
 | [OH_TrafficFilter_PacketController](capi-trafficfilter-oh-trafficfilter-packetcontroller.md)* controller | [in] OH_TrafficFilter_PacketController handle. Must not be NULL. |
 | [OH_TrafficFilter_PacketCallback](capi-net-trafficfilter-type-h.md#oh_trafficfilter_packetcallback) callback | [in] Callback function pointer. Cannot be NULL. |
-| userData | [in] User data (will be passed back in callback). |
+| void* userData | [in] User data (will be passed back in callback). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller or callback is NULL.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller or callback is NULL.</li></ul> |
 
 ### OH_TrafficFilter_UnregisterPacketCallback()
 
@@ -376,6 +364,6 @@ Unregister a packet callback function.Unregister the current packet callback fun
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li><br>     <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li></ul> |
+| int32_t | <ul><li>[OH_TRAFFICFILTER_OK](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) on success.</li>      <li>[OH_TRAFFICFILTER_ERROR_PERMISSION_DENIED](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if permission is denied.</li>      <li>[OH_TRAFFICFILTER_ERROR_INVALID_PARAM](capi-net-trafficfilter-type-h.md#oh_trafficfilter_errcode) if controller is NULL.</li></ul> |
 
 

@@ -30,19 +30,34 @@ Creates a list container.
 
 ## Summary
 
-- [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md)
-- [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md)
-- [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md)
-- [ListDividerOptions](arkts-arkui-listdivideroptions-i.md)
-- [ListOptions](arkts-arkui-listoptions-i.md)
-- [UIListEvent](arkts-arkui-uilistevent-i.md)
-- [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md)
-- [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md)
-- [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md)
-- [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md)
-- [ListItemAlign](arkts-arkui-listitemalign-e.md)
-- [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md)
-- [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
-- [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md)
-- [ScrollState](arkts-arkui-scrollstate-e.md)
-- [StickyStyle](arkts-arkui-stickystyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md) | Defines the chain animation options. |
+| [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | Implements the callbacks and events for the ListItem in the expanded state. |
+| [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) | Defines the system back button behavior of the **List** component. |
+| [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) | Defines the divider style of the list or list item group. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ListOptions](arkts-arkui-listoptions-i.md) | Defines the options of the **List** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [UIListEvent](arkts-arkui-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **List** node. |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Describes the details of the child components in the visible area of a list. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **List** component. |
+| [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | Triggered when a child component enters or leaves the list display area. When the **List** component changes from having child components to being empty, the values of the reported **start** and **end** parameters remain the same as those when the component had child components last time. If the values of **start** and **end** are both **0**, the **List** component contains only one child component. > **NOTE：**> > This API can be called within attributeModifier since API version 14. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md) | Declare edge effect of chain animation. |
+| [ListItemAlign](arkts-arkui-listitemalign-e.md) | Sets the alignment mode of child components in the cross-axis direction of the list. |
+| [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md) | Enumerates the areas of **ListItemGroup**. |
+| [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Enumerates the alignment modes of list items when scrolling ends. |
+| [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Enumerates the speeds of the snap animation for list scrolling. |
+| [ScrollState](arkts-arkui-scrollstate-e.md) | Enumerates the scrolling states. |
+| [StickyStyle](arkts-arkui-stickystyle-e.md) | Enumerates the sticky styles. |
+

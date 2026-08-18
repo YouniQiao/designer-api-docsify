@@ -2,7 +2,7 @@
 
 Defines the grid layout algorithm.
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
+| option | [GridLayoutAlgorithmOptions](arkts-na-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
 
 ## columnsGap
 
@@ -44,7 +44,7 @@ Constructor.
 
 The spacing between columns.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -88,7 +88,7 @@ This parameter specifies the number of columns in the current grid layout.
 
 The spacing between rows.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

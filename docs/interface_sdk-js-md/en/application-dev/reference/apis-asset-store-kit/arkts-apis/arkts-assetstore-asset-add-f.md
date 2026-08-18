@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function add(attributes: AssetMap): Promise<void>
 ```
 
-Adds an asset. This API uses a promise to return the result. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#ispersistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
+Adds an asset. This API uses a promise to return the result. To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 **Since:** 11
 

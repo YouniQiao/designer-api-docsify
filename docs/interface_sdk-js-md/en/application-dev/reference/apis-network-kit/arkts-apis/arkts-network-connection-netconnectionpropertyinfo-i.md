@@ -1,6 +1,6 @@
 # NetConnectionPropertyInfo
 
-Get information about network connections.
+Defines the network connection properties.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Defines the network connection properties.
 netHandle: NetHandle
 ```
 
-Defines the handle of the data network.
+Network handle.
 
 **Type:** NetHandle
 

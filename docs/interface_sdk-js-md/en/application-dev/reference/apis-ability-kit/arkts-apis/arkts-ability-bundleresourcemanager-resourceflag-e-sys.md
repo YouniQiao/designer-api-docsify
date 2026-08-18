@@ -96,7 +96,7 @@ The drawableDescriptor object of the application icon is obtained.
 GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
-The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo) and [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-system-api) APIs.
+The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md) and [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md) APIs.
 
 **Since:** 23
 

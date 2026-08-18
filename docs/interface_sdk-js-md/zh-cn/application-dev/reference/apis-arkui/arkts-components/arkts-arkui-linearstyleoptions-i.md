@@ -1,8 +1,8 @@
 # LinearStyleOptions
 
-线性样式选项。 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)。
+线性样式选项。 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **起始版本：** 10
 

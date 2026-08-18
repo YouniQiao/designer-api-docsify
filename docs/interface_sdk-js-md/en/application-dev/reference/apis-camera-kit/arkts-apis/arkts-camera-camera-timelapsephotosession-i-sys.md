@@ -1,8 +1,8 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#session).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md).
 
-**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md#session), [Focus](arkts-camera-camera-focus-i.md#focus), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#manualfocus-system-api), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [ManualExposure](arkts-camera-camera-manualexposure-i.md#manualexposure-system-api), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#manualiso-system-api), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect-system-api)
+**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-camera-session-i.md), [Focus](arkts-camera-camera-focus-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualIso](arkts-camera-camera-manualiso-i-sys.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
 **Since:** 23
 
@@ -274,7 +274,7 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the capture session errors. |
 
 **Error codes:**
 
@@ -302,7 +302,7 @@ Unsubscribes from exposure info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No | Callback used to get the exposure info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No | Callback used to get the exposure info. |
 
 **Error codes:**
 
@@ -330,7 +330,7 @@ Unsubscribes from focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to get the focus state change. |
 
 **Error codes:**
 
@@ -358,7 +358,7 @@ Unsubscribes from ISO info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback used to get the ISO info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback used to get the ISO info. |
 
 **Error codes:**
 
@@ -386,7 +386,7 @@ Unsubscribes from lumination info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | No | Callback used to get the lumination info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | No | Callback used to get the lumination info. |
 
 **Error codes:**
 
@@ -414,7 +414,7 @@ Unsubscribes from try AE info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | No | Callback used to get the try AE info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | No | Callback used to get the try AE info. |
 
 **Error codes:**
 
@@ -422,7 +422,7 @@ Unsubscribes from try AE info event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -443,7 +443,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -459,7 +459,7 @@ function unregisterSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSess
 }
 ```
 
-## off_exposureInfoChange
+## off_exposureInfoChange('exposureInfoChange')
 
 ```TypeScript
 off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void
@@ -480,7 +480,7 @@ Unsubscribes from exposure information change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('exposureInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('exposureInfoChange')**. |
 
 **Error codes:**
 
@@ -496,7 +496,7 @@ function unregisterExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhot
 }
 ```
 
-## off_focusStateChange
+## off_focusStateChange('focusStateChange')
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -517,7 +517,7 @@ Unsubscribes from focus state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -533,7 +533,7 @@ function unregisterFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhoto
 }
 ```
 
-## off_isoInfoChange
+## off_isoInfoChange('isoInfoChange')
 
 ```TypeScript
 off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void
@@ -554,7 +554,7 @@ Unsubscribes from automatic ISO change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('isoInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('isoInfoChange')**. |
 
 **Error codes:**
 
@@ -570,7 +570,7 @@ function unregisterIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSess
 }
 ```
 
-## off_luminationInfoChange
+## off_luminationInfoChange('luminationInfoChange')
 
 ```TypeScript
 off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void
@@ -591,7 +591,7 @@ Unsubscribes from illumination change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('luminationInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('luminationInfoChange')**. |
 
 **Error codes:**
 
@@ -607,7 +607,7 @@ function unregisterLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePh
 }
 ```
 
-## off_tryAEInfoChange
+## off_tryAEInfoChange('tryAEInfoChange')
 
 ```TypeScript
 off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void
@@ -628,7 +628,7 @@ Unsubscribes from Try AE change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tryAEInfoChange' | Yes | Event type. The value is fixed at **'tryAEInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('tryAEInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | No | Callback, which is optional and is used to match **callback** in **on('tryAEInfoChange')**. |
 
 **Error codes:**
 
@@ -664,7 +664,7 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the capture session errors. |
 
 **Error codes:**
 
@@ -692,7 +692,7 @@ Subscribes exposure info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes | Callback used to get the exposure info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes | Callback used to get the exposure info. |
 
 **Error codes:**
 
@@ -720,7 +720,7 @@ Subscribes focus state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to get the focus state change. |
 
 **Error codes:**
 
@@ -748,7 +748,7 @@ Subscribes ISO info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes | Callback used to get the ISO info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes | Callback used to get the ISO info. |
 
 **Error codes:**
 
@@ -776,7 +776,7 @@ Subscribes lumination info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | Yes | Callback used to get the lumination info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | Yes | Callback used to get the lumination info. |
 
 **Error codes:**
 
@@ -804,7 +804,7 @@ Subscribes try AE info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | Yes | Callback used to get the try AE info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | Yes | Callback used to get the try AE info. |
 
 **Error codes:**
 
@@ -812,7 +812,7 @@ Subscribes try AE info event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -833,7 +833,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-session-i.md#beginconfig), [commitConfig](arkts-camera-camera-session-i.md#commitconfig), and [addInput](arkts-camera-camera-session-i.md#addinput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -855,7 +855,7 @@ function registerSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
 }
 ```
 
-## on_exposureInfoChange
+## on_exposureInfoChange('exposureInfoChange')
 
 ```TypeScript
 on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
@@ -876,7 +876,7 @@ Subscribes to exposure information change events to obtain the exposure informat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes | Callback used to return the exposure information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | Yes | Callback used to return the exposure information. |
 
 **Error codes:**
 
@@ -902,7 +902,7 @@ function registerExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoS
 }
 ```
 
-## on_focusStateChange
+## on_focusStateChange('focusStateChange')
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -923,7 +923,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
 
 **Error codes:**
 
@@ -949,7 +949,7 @@ function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 }
 ```
 
-## on_isoInfoChange
+## on_isoInfoChange('isoInfoChange')
 
 ```TypeScript
 on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
@@ -970,7 +970,7 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes | Callback used to return the ISO information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | Yes | Callback used to return the ISO information. |
 
 **Error codes:**
 
@@ -996,7 +996,7 @@ function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
 }
 ```
 
-## on_luminationInfoChange
+## on_luminationInfoChange('luminationInfoChange')
 
 ```TypeScript
 on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
@@ -1017,7 +1017,7 @@ Subscribes to illumination change events to obtain real-time illumination inform
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | Yes | Callback used to return the illumination information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md)&gt; | Yes | Callback used to return the illumination information. |
 
 **Error codes:**
 
@@ -1043,7 +1043,7 @@ function registerLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhot
 }
 ```
 
-## on_tryAEInfoChange
+## on_tryAEInfoChange('tryAEInfoChange')
 
 ```TypeScript
 on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void
@@ -1064,7 +1064,7 @@ Subscribes to Try AE change events to obtain real-time Try AE parameters. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tryAEInfoChange' | Yes | Event type. The value is fixed at **'tryAEInfoChange'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | Yes | Callback used to return the Try AE parameters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md)&gt; | Yes | Callback used to return the Try AE parameters. |
 
 **Error codes:**
 

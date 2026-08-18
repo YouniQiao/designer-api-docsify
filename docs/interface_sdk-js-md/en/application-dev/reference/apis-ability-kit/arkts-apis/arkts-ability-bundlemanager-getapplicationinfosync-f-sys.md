@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfoSync
@@ -31,7 +30,7 @@ Obtains the application information based on the given bundle name, application 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | applicationFlags | int | Yes | Type of the application information to obtain. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 

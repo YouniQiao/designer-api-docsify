@@ -12,7 +12,6 @@ Defines the agent-powered reminder state information, for which notifications ar
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType

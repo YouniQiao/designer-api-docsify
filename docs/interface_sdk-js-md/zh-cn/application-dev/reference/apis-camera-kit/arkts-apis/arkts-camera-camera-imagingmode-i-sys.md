@@ -2,7 +2,7 @@
 
 Implements imaging mode.
 
-**继承/实现关系：** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#imagingmodequery系统接口)
+**继承/实现关系：** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -15,6 +15,8 @@ Implements imaging mode.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getImagingMode

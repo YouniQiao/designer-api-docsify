@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllDesktopShortcutInfo
@@ -27,7 +28,7 @@ function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | int | 是 | 被查询的用户id。可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| userId | int | 是 | 被查询的用户id。可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **返回值：**
 

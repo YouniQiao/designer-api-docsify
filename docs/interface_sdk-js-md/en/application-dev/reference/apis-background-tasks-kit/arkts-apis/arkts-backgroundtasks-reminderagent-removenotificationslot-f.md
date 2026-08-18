@@ -5,7 +5,6 @@
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## removeNotificationSlot
@@ -31,7 +30,7 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | Yes | Type of the reminder notification slot to remove. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

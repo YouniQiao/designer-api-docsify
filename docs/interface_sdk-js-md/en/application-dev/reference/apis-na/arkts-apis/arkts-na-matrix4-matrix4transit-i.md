@@ -115,7 +115,7 @@ Rotation function of the Matrix. You can add the x-axis, Y-axis, or Z-axis rotat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-rotateoption-i.md) | Yes |  |
+| options | [RotateOption](arkts-na-matrix4-rotateoption-i.md) | Yes |  |
 
 **Return value:**
 
@@ -145,7 +145,7 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-scaleoption-i.md) | Yes |  |
+| options | [ScaleOption](arkts-na-matrix4-scaleoption-i.md) | Yes |  |
 
 **Return value:**
 
@@ -175,7 +175,7 @@ Sets matrix to map src to dst.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | polyToPoly options |
+| options | [PolyToPolyOptions](arkts-na-matrix4-polytopolyoptions-i.md) | Yes | polyToPoly options |
 
 **Return value:**
 
@@ -272,7 +272,7 @@ Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-translateoption-i.md) | Yes |  |
+| options | [TranslateOption](arkts-na-matrix4-translateoption-i.md) | Yes |  |
 
 **Return value:**
 

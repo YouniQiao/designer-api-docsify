@@ -2,7 +2,7 @@
 
 Horizontal linear layout algorithm class. > **NOTE：**> > The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the > input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Constructs the horizontal linear layout algorithm class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
 ## alignItems
 
@@ -110,7 +110,7 @@ Horizontal alignment mode of all child components. Default value: **FlexAlign.St
 
 Horizontal spacing between elements in a horizontal layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

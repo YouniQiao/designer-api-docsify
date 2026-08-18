@@ -1,8 +1,8 @@
 # DataReceiveProgressInfo
 
-This interface is used to obtain the progress information of file upload or download.
+Defines the data receiving progress information.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-http-export interface DataReceiveProgressInfo--><!--Device-http-export interface DataReceiveProgressInfo-End-->
 
@@ -20,13 +20,13 @@ import { http } from '@kit.NetworkKit';
 receiveSize: int
 ```
 
-Number of data bytes received.
+Amount of data that has been received, in bytes.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DataReceiveProgressInfo-receiveSize: int--><!--Device-DataReceiveProgressInfo-receiveSize: int-End-->
 
@@ -38,13 +38,13 @@ Number of data bytes received.
 totalSize: int
 ```
 
-Total number of bytes to receive.
+Amount of data to be received, in bytes.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DataReceiveProgressInfo-totalSize: int--><!--Device-DataReceiveProgressInfo-totalSize: int-End-->
 

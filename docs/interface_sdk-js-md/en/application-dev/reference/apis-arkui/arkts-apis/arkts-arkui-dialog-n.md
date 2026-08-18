@@ -31,7 +31,7 @@ import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, Dial
 | [DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | Options for the custom-style dialog. The dialog content is provided as the first parameter of present() method, not inside this options object. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

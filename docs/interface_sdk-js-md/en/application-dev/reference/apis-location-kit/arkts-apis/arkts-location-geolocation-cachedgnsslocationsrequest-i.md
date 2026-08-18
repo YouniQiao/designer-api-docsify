@@ -6,7 +6,7 @@ Parameters for requesting to report cache location information
 
 **Deprecated since:** 9
 
-**Substitutes:** [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md#cachedgnsslocationsrequest)
+**Substitutes:** [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

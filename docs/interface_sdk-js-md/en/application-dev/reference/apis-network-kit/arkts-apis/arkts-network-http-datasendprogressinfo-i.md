@@ -1,8 +1,8 @@
 # DataSendProgressInfo
 
-This interface is used to monitor the progress of sending data.
+Defines the data sending progress information.
 
-**Since:** 26.0.0
+**Since:** 11
 
 <!--Device-http-export interface DataSendProgressInfo--><!--Device-http-export interface DataSendProgressInfo-End-->
 
@@ -20,13 +20,13 @@ import { http } from '@kit.NetworkKit';
 sendSize: int
 ```
 
-Used to specify the data size to be sent.
+Amount of data to be sent each time, in bytes.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DataSendProgressInfo-sendSize: int--><!--Device-DataSendProgressInfo-sendSize: int-End-->
 
@@ -38,13 +38,13 @@ Used to specify the data size to be sent.
 totalSize: int
 ```
 
-Total number of bytes to receive.
+Amount of data to be sent, in bytes.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DataSendProgressInfo-totalSize: int--><!--Device-DataSendProgressInfo-totalSize: int-End-->
 

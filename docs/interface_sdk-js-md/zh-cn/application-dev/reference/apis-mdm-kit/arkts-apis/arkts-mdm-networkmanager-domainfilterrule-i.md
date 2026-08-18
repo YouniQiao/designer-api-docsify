@@ -1,6 +1,6 @@
 # DomainFilterRule
 
-域名过滤规则。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#logtype)。
+域名过滤规则。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action
@@ -19,7 +20,7 @@
 action?: Action
 ```
 
-接收或者丢弃数据包。 添加域名过滤规则时必填； 移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md#action)规则的链，且domainName，appUid也必须传入空值。
+接收或者丢弃数据包。 添加域名过滤规则时必填； 移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且domainName，appUid也必须传入空值。
 
 **类型：** Action
 
@@ -55,7 +56,7 @@ appUid?: string
 direction?: Direction
 ```
 
-规则链。 添加域名过滤规则时非必填；当值为空，以及设为输出链或输入链时，实际效果为输出链。设为转发链时，appUid需设置为空，否则会报401错误码。 移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md#direction)链，且domainName，appUid也必须传入空值。
+规则链。 添加域名过滤规则时非必填；当值为空，以及设为输出链或输入链时，实际效果为输出链。设为转发链时，appUid需设置为空，否则会报401错误码。 移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
 
 **类型：** Direction
 

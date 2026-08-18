@@ -14,8 +14,6 @@ Sets the total optimization space and aging days.
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 

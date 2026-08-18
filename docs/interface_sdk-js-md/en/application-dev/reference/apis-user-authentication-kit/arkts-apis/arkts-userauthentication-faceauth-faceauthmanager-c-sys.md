@@ -14,7 +14,6 @@ Provides APIs for facial authentication management. It provides management featu
 
 ```TypeScript
 import { faceAuth } from '@kit.UserAuthenticationKit';
-import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor
@@ -47,7 +46,7 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-Sets the surface ID of the face preview page during face enrollment. This API must be used together with [addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential) to display the face preview page through the surface of the getXComponentSurfaceId component.
+Sets the surface ID of the face preview page during face enrollment. This API must be used together with [addCredential](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential) to display the face preview page through the surface of the getXComponentSurfaceId component.
 
 **Since:** 23
 

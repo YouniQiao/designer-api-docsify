@@ -2,7 +2,7 @@
 
 Class PageSwitchActionProposal. The default page switch direction is forward.
 
-**Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#targetedgestureproposal)
+**Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
 **Since:** 26.0.0
 

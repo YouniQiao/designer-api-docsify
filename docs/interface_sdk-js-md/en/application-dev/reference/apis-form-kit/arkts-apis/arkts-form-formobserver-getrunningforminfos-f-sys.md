@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formObserver } from '@kit.FormKit';
-import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfos
@@ -29,7 +28,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 
 **Error codes:**
@@ -69,7 +68,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return the RunningFormInfo. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 

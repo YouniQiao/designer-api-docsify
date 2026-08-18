@@ -30,4 +30,9 @@ Defines the constructor of Span.
 
 ## Summary
 
-- [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Define the background style of span. |
+

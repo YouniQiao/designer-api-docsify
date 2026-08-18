@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## hasCall
@@ -23,7 +24,7 @@ function hasCall(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前存在通话，false表示当前不存在通话。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前存在通话，false表示当前不存在通话。 |
 
 **示例**
 

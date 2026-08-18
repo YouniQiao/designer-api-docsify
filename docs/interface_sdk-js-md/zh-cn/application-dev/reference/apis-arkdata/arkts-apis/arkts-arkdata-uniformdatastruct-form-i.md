@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -127,7 +128,7 @@ module: string
 readonly uniformDataType: 'openharmony.form'
 ```
 
-统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。
+统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'openharmony.form'
 

@@ -1,6 +1,6 @@
 # AccessibilityGrid (System API)
 
-Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement).
+Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md).
 
 **Since:** 23
 

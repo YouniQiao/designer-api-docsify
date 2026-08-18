@@ -14,7 +14,7 @@ Enumerates the ellipsis styles. **EllipsisMode.START** and **EllipsisMode.MIDDLE
 START = 0
 ```
 
-Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Ellipsis at the beginning. This enumerated value is valid only when **maxLines**
 MIDDLE = 1
 ```
 
-Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Ellipsis in the middle. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 END = 2
 ```
 
-Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ Ellipsis at the end. This enumerated value is valid when **maxLines** is set to 
 MULTILINE_START = 3
 ```
 
-Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Ellipsis at the beginning. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 24
 
@@ -78,7 +78,7 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 MULTILINE_MIDDLE = 4
 ```
 
-Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle).
+Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 24
 

@@ -20,7 +20,7 @@ import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } fr
 static getInfo(): AppResponse
 ```
 
-Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**. This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) instead.
+Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**. This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) instead.
 
 **Since:** 3
 
@@ -358,7 +358,7 @@ struct Index {
 static terminate(): void
 ```
 
-Terminates the current ability. In the stage model, this API has no effect. This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#ohosabilityfeatureability) instead.
+Terminates the current ability. In the stage model, this API has no effect. This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md) instead.
 
 **Since:** 3
 

@@ -1,6 +1,6 @@
 # Parameter（系统接口）
 
-无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见 [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口)（无障碍节点元素可执行的操作）。
+无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见 [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@
 accessibilityFocusScene?: AccessibilityFocusScene
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).ACCESSIBILITY_FOCUS时配置，用于设置无障碍聚焦的场景。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).ACCESSIBILITY_FOCUS时配置，用于设置无障碍聚焦的场景。
 
 **类型：** [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)
 
@@ -36,7 +36,7 @@ accessibilityFocusScene?: AccessibilityFocusScene
 customAction?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).EXECUTE_CUSTOM_ACTION时配置，表示自定义操作的名称。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).EXECUTE_CUSTOM_ACTION时配置，表示自定义操作的名称。
 
 **类型：** string
 
@@ -56,7 +56,7 @@ customAction?: string
 injectActionType?: InjectActionType
 ```
 
-设置注入的动作类型，执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).INJECT_ACTION时配置。
+设置注入的动作类型，执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).INJECT_ACTION时配置。
 
 **类型：** [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md)
 
@@ -76,7 +76,7 @@ injectActionType?: InjectActionType
 offset?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SET_CURSOR_POSITION时配置，设置光标的字符偏移量，如：'1'。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_CURSOR_POSITION时配置，设置光标的字符偏移量，如：'1'。
 
 **类型：** string
 
@@ -94,7 +94,7 @@ offset?: string
 scrollType?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SCROLL_FORWARD或SCROLL_BACKWARD时配置，组件滚动类型。' fullScreen'表示全屏滚动；'halfScreen'表示半屏滚动。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SCROLL_FORWARD或SCROLL_BACKWARD时配置，组件滚动类型。' fullScreen'表示全屏滚动；'halfScreen'表示半屏滚动。
 
 **类型：** string
 
@@ -112,7 +112,7 @@ scrollType?: string
 selectTextBegin?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SET_SELECTION时配置，选定组件内文本时的起始坐标，如：'2'。需与 selectTextEnd和selectTextInForWard同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的起始坐标，如：'2'。需与 selectTextEnd和selectTextInForWard同时设置。
 
 **类型：** string
 
@@ -130,7 +130,7 @@ selectTextBegin?: string
 selectTextEnd?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SET_SELECTION时配置，选定组件内文本时的结束坐标，如：'8'。需与 selectTextBegin和selectTextInForWard同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的结束坐标，如：'8'。需与 selectTextBegin和selectTextInForWard同时设置。
 
 **类型：** string
 
@@ -148,7 +148,7 @@ selectTextEnd?: string
 selectTextInForWard?: boolean
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SET_SELECTION时配置，表示选定组件内文本时是否向前选择。true表示向前选 择，false表示向后选择。需与selectTextBegin和selectTextEnd同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，表示选定组件内文本时是否向前选择。true表示向前选 择，false表示向后选择。需与selectTextBegin和selectTextEnd同时设置。
 
 **类型：** boolean
 
@@ -166,7 +166,7 @@ selectTextInForWard?: boolean
 setText?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SET_TEXT时配置，设置组件文本时的文本内容。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_TEXT时配置，设置组件文本时的文本内容。
 
 **类型：** string
 
@@ -184,7 +184,7 @@ setText?: string
 spanId?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction系统接口).SPAN_CLICK时配置，对超链接文本进行点击操作时的文本编号。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SPAN_CLICK时配置，对超链接文本进行点击操作时的文本编号。
 
 **类型：** string
 

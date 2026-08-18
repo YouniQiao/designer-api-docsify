@@ -6,7 +6,7 @@ Represents the certificate information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#certblob)
+**Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 

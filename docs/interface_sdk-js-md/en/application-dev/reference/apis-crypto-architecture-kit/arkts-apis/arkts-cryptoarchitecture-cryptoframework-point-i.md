@@ -14,7 +14,6 @@ Defines a point on the elliptic curve.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## x

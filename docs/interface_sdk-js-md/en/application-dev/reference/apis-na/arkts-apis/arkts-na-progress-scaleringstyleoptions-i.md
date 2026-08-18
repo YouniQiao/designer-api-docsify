@@ -2,7 +2,7 @@
 
 Defines the ScaleRing style Options.
 
-**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **Since:** 23
 

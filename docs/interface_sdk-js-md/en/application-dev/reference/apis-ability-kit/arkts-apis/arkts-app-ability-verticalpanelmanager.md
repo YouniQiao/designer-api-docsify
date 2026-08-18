@@ -17,7 +17,7 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 | [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) | Defines a vertical domain panel manager. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

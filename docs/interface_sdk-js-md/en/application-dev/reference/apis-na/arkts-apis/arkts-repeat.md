@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Repeat](arkts-na-repeat-repeat-f.md#repeat) | Defines Repeat Component. It requires calling setRepeatOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
+| [Repeat](arkts-na-repeat-repeat-f.md) | Defines Repeat Component. It requires calling setRepeatOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 

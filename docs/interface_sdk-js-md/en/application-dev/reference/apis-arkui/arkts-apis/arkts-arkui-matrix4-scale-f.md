@@ -18,7 +18,7 @@ Scales this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
+**Substitutes:** [scale](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md#scale)
 
 <!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -28,7 +28,7 @@ Scales this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
+| options | [ScaleOption](../../apis-na/arkts-apis/arkts-na-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
 
 **Return value:**
 

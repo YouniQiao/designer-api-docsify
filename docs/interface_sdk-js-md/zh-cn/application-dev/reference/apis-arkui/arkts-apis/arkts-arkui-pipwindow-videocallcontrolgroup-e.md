@@ -1,6 +1,6 @@
 # VideoCallControlGroup
 
-视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#piptemplatetype) 为VIDEO_CALL时使用。
+视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_CALL时使用。
 
 **起始版本：** 26.0.0
 

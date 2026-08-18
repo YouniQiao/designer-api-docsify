@@ -1,6 +1,6 @@
 # FunctionIntentInfo（系统接口）
 
-@InsightIntentFunctionMethod 装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)。
+@InsightIntentFunctionMethod 装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。
 
 **起始版本：** 23
 
@@ -15,5 +15,6 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 

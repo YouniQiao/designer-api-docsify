@@ -6,7 +6,7 @@ Describes the contents of the scan results.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ScanResult](arkts-connectivity-ble-scanresult-i.md#scanresult)
+**Substitutes:** [ScanResult](arkts-connectivity-ble-scanresult-i.md)
 
 <!--Device-bluetoothManager-interface ScanResult--><!--Device-bluetoothManager-interface ScanResult-End-->
 

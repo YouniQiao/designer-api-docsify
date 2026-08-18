@@ -14,7 +14,6 @@ Represents the device-cloud sync statistics.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## inserted

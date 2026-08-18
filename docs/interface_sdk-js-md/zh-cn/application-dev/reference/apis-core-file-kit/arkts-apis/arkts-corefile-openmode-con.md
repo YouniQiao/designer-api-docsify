@@ -142,7 +142,7 @@ const TRUNC = 0o1000
 const UNCACHE = 0o10000000000
 ```
 
-UNCACHE IO。
+读写文件不进行页缓存。
 
 **起始版本：** 26.0.0
 

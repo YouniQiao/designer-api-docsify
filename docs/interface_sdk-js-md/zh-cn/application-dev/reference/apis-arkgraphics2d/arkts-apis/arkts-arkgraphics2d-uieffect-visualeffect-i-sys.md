@@ -1,6 +1,6 @@
 # VisualEffect
 
-VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。 在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect)创建一个VisualEffect实例。
+VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。 在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md)创建一个VisualEffect实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐�
 ## 导入模块
 
 ```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender

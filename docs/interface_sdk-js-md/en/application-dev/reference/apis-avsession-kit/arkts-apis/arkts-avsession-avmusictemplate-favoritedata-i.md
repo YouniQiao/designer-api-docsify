@@ -12,7 +12,6 @@ The definition of Favorite/Subscribe.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## favCounts

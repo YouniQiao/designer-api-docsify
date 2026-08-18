@@ -14,7 +14,6 @@ Bundle information configuration.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## bundleName

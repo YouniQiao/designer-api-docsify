@@ -1,6 +1,6 @@
-# NetFirewallOrderType
+# NetFirewallOrderType(Network Firewall)
 
-Pagination query sorting type.
+Enumerates the sorting order of firewall rules, which can be ascending or descending.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Pagination query sorting type.
 ORDER_ASC = 1
 ```
 
-Ascending order.
+Sorting in ascending order.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ Ascending order.
 ORDER_DESC = 100
 ```
 
-Descending order.
+Sorting in descending order.
 
 **Since:** 15
 

@@ -30,7 +30,7 @@ IDENTITY_KEY = "ohos.extra.param.key.form_identity"
 DIMENSION_KEY = "ohos.extra.param.key.form_dimension"
 ```
 
-卡片规格，规格尺寸参考[FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension)。
+卡片规格，规格尺寸参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。
 
 **起始版本：** 23
 
@@ -190,7 +190,7 @@ PARAM_FORM_CUSTOMIZE_KEY = "ohos.extra.param.key.form_customize"
 FORM_LOCATION_KEY = 'ohos.extra.param.key.form_location'
 ```
 
-卡片位置。 具体可选位置参考[FormLocation](arkts-form-forminfo-formlocation-e.md#formlocation系统接口)。
+卡片位置。 具体可选位置参考[FormLocation](arkts-form-forminfo-formlocation-e.md)。
 
 **起始版本：** 23
 

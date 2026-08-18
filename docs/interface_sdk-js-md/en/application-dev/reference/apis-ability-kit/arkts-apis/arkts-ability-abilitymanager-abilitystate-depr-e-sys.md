@@ -6,7 +6,7 @@ Enumerates the ability states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md#abilitystate)
+**Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
 
 <!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 

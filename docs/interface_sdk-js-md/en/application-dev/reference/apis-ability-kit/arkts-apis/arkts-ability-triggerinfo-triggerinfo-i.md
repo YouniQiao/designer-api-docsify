@@ -14,7 +14,7 @@ The module defines the information required for triggering the WantAgent. The in
 code: int
 ```
 
-Common event code. This field is valid only when OperationType of the WantAgent instance is **'SEND_COMMON_EVENT'**. The meaning of this field is the same as that of the **code** field set in [CommonEventPublishData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#commoneventpublishdata) when the publisher uses [commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish common events.
+Common event code. This field is valid only when OperationType of the WantAgent instance is **'SEND_COMMON_EVENT'**. The meaning of this field is the same as that of the **code** field set in [CommonEventPublishData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md) to publish common events.
 
 **Type:** int
 
@@ -34,7 +34,7 @@ extraInfo?: Record<string, RecordData>
 
 Extra information.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ extraInfos?: Record<string, RecordData>
 
 Extra information. You are advised to use this property to replace extraInfo. When this property is set, extraInfo does not take effect.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

@@ -17,7 +17,7 @@
 | [UIGridEvent](arkts-na-grid-uigridevent-i.md) | Defines a UIGridEvent which is used to set event to target component. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -39,7 +39,7 @@
 | [OnGridScrollIndexCallback](arkts-na-ongridscrollindexcallback-t.md) | Defines the callback type used in onScrollIndex. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

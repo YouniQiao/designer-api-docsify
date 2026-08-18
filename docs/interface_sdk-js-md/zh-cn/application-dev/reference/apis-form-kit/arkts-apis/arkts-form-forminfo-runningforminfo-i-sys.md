@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -65,7 +66,7 @@ readonly bundleName: string
 readonly dimension: int
 ```
 
-卡片尺寸，用于标识卡片的大小规格。取值及其对应含义请参考[FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension)。 **说明：** 取值范围[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。
+卡片尺寸，用于标识卡片的大小规格。取值及其对应含义请参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。 **说明：** 取值范围[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。
 
 **类型：** int
 

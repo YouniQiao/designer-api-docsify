@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getAppNetSync(): NetHandle
 ```
 
-Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).
+Obtains the network information bound to an application. This API returns the result synchronously.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-connection-function getAppNetSync(): NetHandle--><!--Device-connection-function getAppNetSync(): NetHandle-End-->
 
@@ -24,7 +24,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound
 
 | Type | Description |
 | --- | --- |
-| NetHandle | Returns the { |
+| NetHandle | Data network bound to the application. |
 
 **Error codes:**
 

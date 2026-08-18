@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## removeAll
@@ -30,7 +29,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -85,7 +84,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -137,7 +136,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

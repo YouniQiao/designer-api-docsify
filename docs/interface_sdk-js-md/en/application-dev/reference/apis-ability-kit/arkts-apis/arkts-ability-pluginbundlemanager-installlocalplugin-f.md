@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { pluginBundleManager } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## installLocalPlugin

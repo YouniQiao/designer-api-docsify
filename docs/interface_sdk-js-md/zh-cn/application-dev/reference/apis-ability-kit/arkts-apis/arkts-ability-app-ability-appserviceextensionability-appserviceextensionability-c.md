@@ -13,6 +13,7 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 ## 导入模块
 
 ```TypeScript
+import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -247,7 +248,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext)。
+AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
 
 **类型：** [AppServiceExtensionContext](../../apis-na/arkts-apis/arkts-na-appserviceextensioncontext-c.md)
 

@@ -6,7 +6,7 @@ Describes the criteria for filtering scanning results can be set.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md#scanfilter)
+**Substitutes:** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md)
 
 <!--Device-bluetoothManager-interface ScanFilter--><!--Device-bluetoothManager-interface ScanFilter-End-->
 

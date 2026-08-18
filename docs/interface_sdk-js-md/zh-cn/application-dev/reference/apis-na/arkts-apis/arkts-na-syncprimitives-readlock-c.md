@@ -2,7 +2,7 @@
 
 读锁，允许多个线程并发读取共享资源。
 
-**继承/实现关系：** ReadLock implements [Lock](arkts-na-syncprimitives-lock-i.md#lock)
+**继承/实现关系：** ReadLock implements [Lock](arkts-na-syncprimitives-lock-i.md)
 
 **起始版本：** 26.0.0
 

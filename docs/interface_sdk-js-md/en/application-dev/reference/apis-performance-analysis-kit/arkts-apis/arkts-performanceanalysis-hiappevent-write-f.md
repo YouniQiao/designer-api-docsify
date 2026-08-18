@@ -12,7 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function write(info: AppEventInfo): Promise<void>
 ```
 
-Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)).
+Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)).
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event).<br>**Since:** 11 |
+| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md).<br>**Since:** 11 |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ hiAppEvent.write({
 function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 ```
 
-Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)).
+Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)).
 
 **Since:** 23
 
@@ -92,8 +92,8 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

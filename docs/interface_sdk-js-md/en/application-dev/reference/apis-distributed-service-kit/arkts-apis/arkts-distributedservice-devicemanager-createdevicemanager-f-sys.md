@@ -18,7 +18,7 @@ Creates a **DeviceManager** instance.
 
 **Deprecated since:** 11
 
-**Substitutes:** [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager)
+**Substitutes:** [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
 
 <!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void--><!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void-End-->
 
@@ -31,7 +31,7 @@ Creates a **DeviceManager** instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. The value is a string of 1 to 255 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceManager&gt; | Yes | Callback used to return the **DeviceManager** instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceManager&gt; | Yes | Callback used to return the **DeviceManager** instance created. |
 
 **Error codes:**
 

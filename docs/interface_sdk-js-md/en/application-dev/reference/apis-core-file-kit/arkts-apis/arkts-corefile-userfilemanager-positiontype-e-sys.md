@@ -6,7 +6,7 @@ Enumerates the file location.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#positiontype-system-api)
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 <!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
@@ -37,7 +37,7 @@ Stored only on a local device.
 ## CLOUD
 
 ```TypeScript
-CLOUD
+CLOUD = 2
 ```
 
 Stored only on the cloud.
@@ -48,7 +48,7 @@ Stored only on the cloud.
 
 **Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#cloud)
 
-<!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
+<!--Device-PositionType-CLOUD = 2--><!--Device-PositionType-CLOUD = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ Stored only on the cloud.
 ## BOTH
 
 ```TypeScript
-BOTH
+BOTH = 3
 ```
 
 Stored both on a local device and the cloud.
@@ -66,9 +66,9 @@ Stored both on a local device and the cloud.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#localandcloud)
+**Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#local_and_cloud)
 
-<!--Device-PositionType-BOTH--><!--Device-PositionType-BOTH-End-->
+<!--Device-PositionType-BOTH = 3--><!--Device-PositionType-BOTH = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

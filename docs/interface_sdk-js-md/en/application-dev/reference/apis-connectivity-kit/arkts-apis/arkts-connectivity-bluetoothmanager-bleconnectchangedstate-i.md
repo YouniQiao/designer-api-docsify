@@ -6,7 +6,7 @@ Describes the Gatt profile connection state.
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md#bleconnectionchangestate)
+**Substitutes:** [BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)
 
 <!--Device-bluetoothManager-interface BLEConnectChangedState--><!--Device-bluetoothManager-interface BLEConnectChangedState-End-->
 

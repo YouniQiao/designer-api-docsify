@@ -1,6 +1,6 @@
 # PacketsType
 
-Enumerates packets types.
+Defines the type of network probe data packets.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Enumerates packets types.
 NETCONN_PACKETS_ICMP = 0
 ```
 
-ICMP.
+ICMP packet type.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ ICMP.
 NETCONN_PACKETS_UDP = 1
 ```
 
-UDP.
+UDP packet type.
 
 **Since:** 26.0.0
 

@@ -11,6 +11,8 @@ Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -67,7 +69,7 @@ async function demo() {
 click(x: int, y: int): Promise<void>
 ```
 
-在目标坐标点单击。使用Promise异步回调。
+在目标坐标点单击。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[clickAt](#clickat)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -183,7 +185,7 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -392,7 +394,7 @@ async function demo() {
 doubleClick(x: int, y: int): Promise<void>
 ```
 
-在目标坐标点双击。使用Promise异步回调。
+在目标坐标点双击。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[doubleClickAt](#doubleclickat)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -487,7 +489,7 @@ async function demo() {
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-从起始坐标点拖拽至目的坐标点。使用Promise异步回调。
+从起始坐标点拖拽至目的坐标点。仅支持在设备默认屏幕上操作，不支持自定义拖拽前长按时长，如需指定屏幕或长按时长请使用[dragBetween](#dragbetween)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -554,7 +556,7 @@ dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 | duration | int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -610,7 +612,7 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -739,7 +741,7 @@ async function demo() {
 findComponent(on: On): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI.
+Find the first matched [Component](arkts-test-uitest-component-c.md) on current UI.
 
 **起始版本：** 23
 
@@ -751,7 +753,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#component) o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 
 **返回值：**
 
@@ -831,7 +833,7 @@ async function demo() {
 findComponents(on: On): Promise<Array<Component> | null>
 ```
 
-Find all the matched [Component](arkts-test-uitest-component-c.md#component)s on current UI.
+Find all the matched [Component](arkts-test-uitest-component-c.md)s on current UI.
 
 **起始版本：** 23
 
@@ -843,7 +845,7 @@ Find all the matched [Component](arkts-test-uitest-component-c.md#component)s on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 
 **返回值：**
 
@@ -923,7 +925,7 @@ async function demo() {
 findWindow(filter: WindowFilter): Promise<UiWindow | null>
 ```
 
-Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow) window.
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 
 **起始版本：** 23
 
@@ -935,7 +937,7 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow) wind
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow). |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 是 | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md). |
 
 **返回值：**
 
@@ -1376,7 +1378,7 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-模拟指关节多点注入滑动操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
+模拟指关节多点注入滑动操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 23
 
@@ -1391,13 +1393,13 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。  **说明：**当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1525,8 +1527,8 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 **示例**
 
@@ -1621,7 +1623,7 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode)。  **说明：**  InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。  **说明：**  InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
 
 **返回值：**
 
@@ -1634,8 +1636,8 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function can not work correctly due to limited device capabilities. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 **示例**
 
@@ -1685,7 +1687,7 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration
 | on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 | duration | int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -1785,7 +1787,7 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promis
 | on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
@@ -1818,7 +1820,7 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-模拟指关节敲击屏幕操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，则调用本接口返回17000005错误码。
+模拟指关节敲击屏幕操作。使用Promise异步回调。 > **说明：** > > 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 23
 
@@ -1839,7 +1841,7 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1869,7 +1871,7 @@ async function demo() {
 longClick(x: int, y: int): Promise<void>
 ```
 
-在目标坐标点长按。使用Promise异步回调。
+在目标坐标点长按。仅支持在设备默认屏幕上操作且不支持自定义长按时长，如需指定屏幕或长按时长请使用[longClickAt](#longclickat)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1974,7 +1976,7 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2022,8 +2024,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。<br>**起始版本：** 11 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。<br>**起始版本：** 11 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -2072,8 +2074,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标双击的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
 
 **返回值：**
 
@@ -2228,7 +2230,7 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2280,8 +2282,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值 为0。 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值 为0。 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 
 **返回值：**
 
@@ -2330,8 +2332,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 | duration | int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -2478,8 +2480,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值 为0。<br>**起始版本：** 11 |
-| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值 为0。<br>**起始版本：** 11 |
+| key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
+| key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -2529,8 +2531,8 @@ mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int
 | p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | int | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
-| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。 |
-| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值为0。 |
+| key1 | int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
+| key2 | int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 | speed | int | 否 | 鼠标滚轮滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出401错误码。 |
 
 **返回值：**
@@ -2590,8 +2592,8 @@ penClick(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 **示例**
 
@@ -2637,8 +2639,8 @@ penDoubleClick(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 **示例**
 
@@ -2685,8 +2687,8 @@ penLongClick(point: Point, pressure?: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 **示例**
 
@@ -2735,8 +2737,8 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
 
 **示例**
 
@@ -3172,7 +3174,7 @@ async function demo() {
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-从起始坐标点滑向目的坐标点。使用Promise异步回调。
+从起始坐标点滑向目的坐标点。仅支持在设备默认屏幕上操作，如需指定屏幕请使用[swipeBetween](#swipebetween)。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -3239,7 +3241,7 @@ swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
-| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
+| speed | int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
@@ -3294,7 +3296,7 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3354,9 +3356,9 @@ touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) |  |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) |  |
 
 **示例**
 
@@ -3441,9 +3443,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
-| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
-| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)， 默认值为0。<br>**起始版本：** 11 |
+| key0 | number | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | number | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | number | 否 | 指定的第三个key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)， 默认值为0。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -3491,9 +3493,9 @@ triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key0 | int | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
-| key1 | int | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
-| key2 | int | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)，默认值 为0。 |
+| key0 | int | 是 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key1 | int | 是 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| key2 | int | 否 | 指定的第三个key值，取值范围：大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 | displayId | int | 否 | 指定的屏幕ID，取值范围：大于等于0的整数，默认值为设备默认屏幕ID。 |
 
 **返回值：**
@@ -3541,7 +3543,7 @@ triggerKey(keyCode: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
+| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **返回值：**
 
@@ -3589,7 +3591,7 @@ triggerKey(keyCode: int, displayId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
+| keyCode | int | 是 | 指定的key值，取值范围：大于等于0的整数。取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 | displayId | int | 是 | 指定的屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
@@ -3647,7 +3649,7 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3728,7 +3730,7 @@ async function demo() {
 waitForComponent(on: On, time: int): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI during the time given.
+Find the first matched [Component](arkts-test-uitest-component-c.md) on current UI during the time given.
 
 **起始版本：** 23
 
@@ -3740,7 +3742,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#component) o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | 是 | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 | time | int | 是 | duration of finding in milliseconds, not less than 0. |
 
 **返回值：**

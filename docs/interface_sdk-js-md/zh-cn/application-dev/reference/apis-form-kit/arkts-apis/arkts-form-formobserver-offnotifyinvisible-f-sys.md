@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## offNotifyInvisible
@@ -31,7 +32,7 @@ Cancels listening to the event of notifyInvisible type change. &lt;p&gt;You can 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hostBundleName | string | 否 | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 否 | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 否 | The callback is used to return the running form info. |
 
 **错误码：**
 

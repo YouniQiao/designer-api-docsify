@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -22,9 +23,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller) | 获取BundleInstaller对象。使用callback异步回调。 |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller系统接口) | 获取BundleInstaller对象。使用Promise异步回调。 |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) | 获取并返回BundleInstaller对象。 |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | 获取BundleInstaller对象。使用callback异步回调。 |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md) | 获取BundleInstaller对象。使用Promise异步回调。 |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md) | 获取并返回BundleInstaller对象。 |
 <!--DelEnd-->
 
 <!--Del-->

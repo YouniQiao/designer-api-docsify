@@ -12,16 +12,10 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
@@ -116,7 +110,7 @@ onTerminated: Callback<void>
 
 This method is called when a new message handler is set.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 23
 

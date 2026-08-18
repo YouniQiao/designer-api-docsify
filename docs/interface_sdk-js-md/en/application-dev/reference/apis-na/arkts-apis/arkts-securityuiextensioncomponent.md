@@ -3,15 +3,15 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [SecurityUIExtensionComponent](arkts-na-securityuiextensioncomponent-securityuiextensioncomponent-f-sys.md#securityuiextensioncomponent-system-api) | Defines SecurityUIExtensionComponent Component. |
+| [SecurityUIExtensionComponent](arkts-na-securityuiextensioncomponent-securityuiextensioncomponent-f-sys.md) | Defines SecurityUIExtensionComponent Component. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -20,7 +20,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -28,7 +28,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

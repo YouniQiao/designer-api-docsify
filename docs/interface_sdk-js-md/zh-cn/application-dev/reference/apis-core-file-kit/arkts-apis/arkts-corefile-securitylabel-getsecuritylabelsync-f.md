@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync
@@ -23,7 +24,7 @@ function getSecurityLabelSync(path: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件路径。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
 
 **返回值：**
 

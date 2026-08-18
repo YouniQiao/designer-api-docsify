@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAdditionalInfo
@@ -13,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAdditionalInfo(bundleName: string): string
 ```
 
-Obtains additional information about a bundle in synchronous mode. The return value is the **additionalInfo** field value in [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api) passed when **install** is called.
+Obtains additional information about a bundle in synchronous mode. The return value is the **additionalInfo** field value in [InstallParam](arkts-ability-installer-installparam-i-sys.md) passed when **install** is called.
 
 **Since:** 23
 

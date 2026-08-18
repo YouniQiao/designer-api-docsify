@@ -1,6 +1,6 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) method and then call the corresponding method through the instance. In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+Provides APIs for managing data in an RDB store. Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md) method and then call the corresponding method through the instance. In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Provides APIs for managing data in an RDB store. Before using the following APIs
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
 import { relationalStore } from '@kit.ArkData';
 ```
 
@@ -85,9 +84,9 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
@@ -119,8 +118,8 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md#progressdetails) result. |
+| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Return value:**
 
@@ -160,8 +159,8 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -182,7 +181,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -212,7 +211,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 
@@ -239,7 +238,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -297,8 +296,8 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -338,9 +337,9 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -379,7 +378,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 | columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
@@ -418,7 +417,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | No | The specified columns to query. |
 
 **Return value:**
@@ -445,7 +444,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -472,8 +471,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) is query result. |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
 
 **Error codes:**
 
@@ -493,7 +492,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -520,9 +519,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The specified columns to query. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset) is query result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The callback of querySharingResource. [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) is query result. |
 
 **Error codes:**
 
@@ -542,7 +541,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -589,7 +588,7 @@ Restores a database from a specified database file.
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -696,8 +695,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -718,7 +717,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -749,7 +748,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md#datasharepredicates-system-api). |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md). |
 
 **Return value:**
 
@@ -776,7 +775,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
@@ -806,7 +805,7 @@ Update distributed table log.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | DistributedInfo | Yes | Indicates the table log needs to be updated. |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates). |
+| predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 
 **Return value:**
 

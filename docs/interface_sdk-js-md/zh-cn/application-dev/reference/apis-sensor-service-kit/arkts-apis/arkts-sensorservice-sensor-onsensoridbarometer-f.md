@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorId.BAROMETER
@@ -24,7 +25,7 @@ function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.BAROMETER | 是 | 传感器类型，该值固定为SensorId.BAROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为BarometerResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为BarometerResponse。 |
 | options | Options | 否 | 可选参数列表，用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 
 **错误码：**

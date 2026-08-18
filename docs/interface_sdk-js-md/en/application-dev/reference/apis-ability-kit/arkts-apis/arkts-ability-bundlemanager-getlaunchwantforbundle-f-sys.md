@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLaunchWantForBundle
@@ -30,8 +29,8 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -92,7 +91,7 @@ Obtains the Want used to launch the bundle based on the given bundle name. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -151,7 +150,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

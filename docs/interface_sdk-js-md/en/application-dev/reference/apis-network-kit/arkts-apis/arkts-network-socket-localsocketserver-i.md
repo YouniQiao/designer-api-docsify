@@ -1,8 +1,8 @@
 # LocalSocketServer
 
-Defines a LocalSocket server connection.
+Defines a local socket server connection. Before calling LocalSocketServer APIs, you need to call [socket.constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md) to create a **LocalSocketServer** object.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-export interface LocalSocketServer--><!--Device-socket-export interface LocalSocketServer-End-->
 
@@ -20,9 +20,9 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-Close the LocalSocketServer. Close the LocalSocketServer listening port.
+Stops listening for events of the **LocalSocketServer** object and releases the port bound by [listen](#listen). This API uses a promise to return the result. > **NOTE：**> > This API does not close existing connections. To close the connection, call the [close] (#close11-1) API of > [LocalSocketConnection] (#localsocketconnection11).
 
-**Since:** 26.0.0
+**Since:** 20
 
 <!--Device-LocalSocketServer-close(): Promise<void>--><!--Device-LocalSocketServer-close(): Promise<void>-End-->
 
@@ -32,7 +32,7 @@ Close the LocalSocketServer. Close the LocalSocketServer listening port.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -74,9 +74,9 @@ localserver.listen(addr).then(() => {
 getExtraOptions(): Promise<ExtraOptionsBase>
 ```
 
-Gets other attributes of the LocalSocket connection.
+Obtains the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
 
@@ -86,7 +86,7 @@ Gets other attributes of the LocalSocket connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -126,9 +126,9 @@ server.getExtraOptions().then((options: socket.ExtraOptionsBase) => {
 getLocalAddress(): Promise<string>
 ```
 
-Obtains the local address of the LocalSocketServer connection.
+Obtains the local socket address of a **LocalSocketServer** connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-LocalSocketServer-getLocalAddress(): Promise<string>--><!--Device-LocalSocketServer-getLocalAddress(): Promise<string>-End-->
 
@@ -138,7 +138,7 @@ Obtains the local address of the LocalSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Obtains the local address of the LocalSocketServer connection.
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -181,9 +181,9 @@ server.listen(listenAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the LocalSocketServer.
+Obtains the file descriptor bound to the LocalSocketServer listening port. This API uses a promise to return the result. > **NOTE：**> > - This method can be called only after the [listen](#listen) method is > successfully called. > > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after > close is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly > operating the file descriptor.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-LocalSocketServer-getSocketFd(): Promise<int>--><!--Device-LocalSocketServer-getSocketFd(): Promise<int>-End-->
 
@@ -193,7 +193,7 @@ Obtains the file descriptor of the LocalSocketServer.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returns the file descriptor of the local socket server. |
+| Promise&lt;int&gt; | Promise used to return the socket file descriptor. |
 
 **Examples**
 
@@ -228,9 +228,9 @@ server.listen(listenAddr).then(() => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of the LocalSocketServer connection.
+Obtains the status of a local socket server connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>--><!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>-End-->
 
@@ -240,7 +240,7 @@ Obtains the status of the LocalSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -275,9 +275,9 @@ server.getState().then((data: socket.SocketStateBase) => {
 listen(address: LocalAddress): Promise<void>
 ```
 
-Binds the Local address. &lt;p&gt;Listens for a LocalSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Binds the address of the local socket file. The server listens to and accepts local socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result. > **NOTE：**> > The server uses this API to complete the **bind**, **listen**, and **accept** operations. If the address of the > local socket file is passed for binding, a socket file is automatically created when this API is called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>--><!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>-End-->
 
@@ -287,13 +287,13 @@ Binds the Local address. &lt;p&gt;Listens for a LocalSocket connection to be mad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | Yes | Network address information [LocalAddress](arkts-network-socket-localaddress-i.md#localaddress). |
+| address | [LocalAddress](arkts-network-socket-localaddress-i.md) | Yes | Destination address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -326,15 +326,15 @@ server.listen(addr).then(() => {
 });
 ```
 
-## off_connect
+## off_connect('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<LocalSocketConnection>): void
 ```
 
-Cancels listening for connect events of the LocalSocketServer connection.
+Unsubscribes from **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void-End-->
 
@@ -344,8 +344,8 @@ Cancels listening for connect events of the LocalSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | No | The callback of off. |
+| type | 'connect' | Yes | Event type.<br/> 'connect': connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -370,15 +370,15 @@ server.off('connect', callback);
 server.off('connect');
 ```
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Cancels listening for error events of the LocalSocketServer connection.
+Unsubscribes from **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -388,8 +388,8 @@ Cancels listening for error events of the LocalSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | The callback of off. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -412,15 +412,15 @@ server.off('error', callback);
 server.off('error');
 ```
 
-## on_connect
+## on_connect('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 ```
 
-Listens for connect events of the LocalSocketServer connection.
+Subscribes to **connect** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void-End-->
 
@@ -430,8 +430,8 @@ Listens for connect events of the LocalSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | Yes | The callback of on. |
+| type | 'connect' | Yes | Event type.<br/> **connect**: connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketConnection](arkts-network-socket-localsocketconnection-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -452,15 +452,15 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 });
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Listens for error events of the LocalSocketServer connection.
+Subscribes to **error** events of the **LocalSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -470,8 +470,8 @@ Listens for error events of the LocalSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | The callback of on. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -496,9 +496,9 @@ server.on('error', (err: Object) => {
 setExtraOptions(options: ExtraOptionsBase): Promise<void>
 ```
 
-Sets other attributes of the LocalSocketServer connection.
+Sets the socket properties of the **LocalSocketServer** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
 
@@ -508,13 +508,13 @@ Sets other attributes of the LocalSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | Yes | Parameters of the attributes [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#extraoptionsbase). |
+| options | [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md) | Yes | Other properties of the **LocalSocketServer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

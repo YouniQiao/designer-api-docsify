@@ -42,7 +42,7 @@ Indicates circular fence.
 gnssFenceType: int
 ```
 
-Indicates GNSS fence type. The value range of this field is as follows: [GnssFenceType](arkts-location-geolocationmanager-gnssfencetype-e-sys.md#gnssfencetype-system-api). The value range is all integers.
+Indicates GNSS fence type. The value range of this field is as follows: [GnssFenceType](arkts-location-geolocationmanager-gnssfencetype-e-sys.md). The value range is all integers.
 
 **Type:** int
 

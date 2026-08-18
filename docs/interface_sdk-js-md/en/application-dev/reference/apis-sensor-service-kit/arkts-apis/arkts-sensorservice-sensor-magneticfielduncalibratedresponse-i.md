@@ -1,8 +1,8 @@
 # MagneticFieldUncalibratedResponse
 
-Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

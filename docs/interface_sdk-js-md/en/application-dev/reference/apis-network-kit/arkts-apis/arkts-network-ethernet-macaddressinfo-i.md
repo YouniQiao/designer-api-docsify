@@ -1,6 +1,6 @@
 # MacAddressInfo
 
-Defines the mac address info of the Ethernet.
+Defines the name and MAC address of an Ethernet NIC.
 
 **Since:** 14
 
@@ -20,7 +20,7 @@ import { ethernet } from '@kit.NetworkKit';
 iface: string
 ```
 
-Ethernet interface name.
+Name of the Ethernet NIC.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Ethernet interface name.
 macAddress: string
 ```
 
-Ethernet specific mac address.
+MAC address of the Ethernet NIC.
 
 **Type:** string
 

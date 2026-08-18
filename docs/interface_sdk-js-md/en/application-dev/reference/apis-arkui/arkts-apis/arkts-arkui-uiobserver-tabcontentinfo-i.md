@@ -60,7 +60,7 @@ Index of the **TabContent** component. The index is zero-based.
 lastIndex?: number
 ```
 
-Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate).
+Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate).
 
 **Type:** number
 
@@ -82,7 +82,7 @@ state: TabContentState
 
 Enumerates the **TabContent** component states.
 
-**Type:** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
+**Type:** [TabContentState](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentstate-e.md)
 
 **Since:** 12
 

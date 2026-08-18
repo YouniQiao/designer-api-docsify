@@ -6,7 +6,7 @@ Provides APIs for reading and writing data in specific format. During RPC, the s
 
 **Deprecated since:** 9
 
-**Substitutes:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md#messagesequence)
+**Substitutes:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 <!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
 

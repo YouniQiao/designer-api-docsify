@@ -27,5 +27,5 @@ function getInspectorTree(): RecordData
 
 | 类型 | 说明 |
 | --- | --- |
-| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
+| [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
 

@@ -1,8 +1,8 @@
 # VideoSession
 
-VideoSession继承自[Session](arkts-camera-camera-session-i.md#session)、[Flash](arkts-camera-camera-flash-i.md#flash)、 [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance系统接口)、[Focus](arkts-camera-camera-focus-i.md#focus)、 [Zoom](arkts-camera-camera-zoom-i.md#zoom)、[Stabilization](arkts-camera-camera-stabilization-i.md#stabilization)、 [ColorManagement](arkts-camera-camera-colormanagement-i.md#colormanagement)、[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#autodeviceswitch)、 [Macro](arkts-camera-camera-macro-i-sys.md#macro系统接口)、[ControlCenter](arkts-camera-camera-controlcenter-i.md#controlcenter)、 [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、 [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、 [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、 [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、 [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。 普通录像模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、视频防抖、色彩空间、微距及控制器、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。 默认的视频录制模式，适用于一般场景。支持720P、1080p等多种分辨率的录制，可选择不同帧率（如30fps、60fps）。
+VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts-camera-camera-flash-i.md)、 [AutoExposure](arkts-camera-camera-autoexposure-i.md)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md)、[Focus](arkts-camera-camera-focus-i.md)、 [Zoom](arkts-camera-camera-zoom-i.md)、[Stabilization](arkts-camera-camera-stabilization-i.md)、 [ColorManagement](arkts-camera-camera-colormanagement-i.md)、[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md)、 [Macro](arkts-camera-camera-macro-i-sys.md)、[ControlCenter](arkts-camera-camera-controlcenter-i.md)、 [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、 [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、 [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、 [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、 [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。 普通录像模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、视频防抖、色彩空间、微距及控制器、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。 默认的视频录制模式，适用于一般场景。支持720P、1080p等多种分辨率的录制，可选择不同帧率（如30fps、60fps）。
 
-**继承/实现关系：** VideoSession extends [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance系统接口), [Focus](arkts-camera-camera-focus-i.md#focus), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [Stabilization](arkts-camera-camera-stabilization-i.md#stabilization), [ColorManagement](arkts-camera-camera-colormanagement-i.md#colormanagement), [ControlCenter](arkts-camera-camera-controlcenter-i.md#controlcenter), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#autodeviceswitch), [Macro](arkts-camera-camera-macro-i-sys.md#macro系统接口), [ManualExposure](arkts-camera-camera-manualexposure-i.md#manualexposure系统接口), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#manualfocus系统接口), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#manualiso系统接口), [OIS](arkts-camera-camera-ois-i.md#ois), [Aperture](arkts-camera-camera-aperture-i-sys.md#aperture系统接口)
+**继承/实现关系：** VideoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md), [ManualIso](arkts-camera-camera-manualiso-i-sys.md), [OIS](arkts-camera-camera-ois-i.md), [Aperture](arkts-camera-camera-aperture-i-sys.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md#session)、[Flas
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## canPreconfig
@@ -68,7 +70,7 @@ Unsubscribes to auto device switch status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | Callback used to return the result. |
 
 ## offControlCenterEffectStatusChange
 
@@ -88,7 +90,7 @@ Unsubscribes to control center effect status change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 否 | Callback used to get control center effect status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 否 | Callback used to get control center effect status. |
 
 ## offError
 
@@ -108,7 +110,7 @@ Unsubscribes from error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the capture session errors. |
 
 ## offExposureInfoChange
 
@@ -132,7 +134,7 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offFocusStateChange
 
@@ -152,7 +154,7 @@ Unsubscribes from focus state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | Callback used to get the focus state change. |
 
 ## offIsoInfoChange
 
@@ -176,7 +178,7 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | 回调函数，可选。 <br>如果指定callback参数则注销该callback监听，callback不可是匿名函数。 <br>如果未指定callback，则注销所有已存在的callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 | 回调函数，可选。 <br>如果指定callback参数则注销该callback监听，callback不可是匿名函数。 <br>如果未指定callback，则注销所有已存在的callback监听。 |
 
 ## offMacroStatusChanged
 
@@ -196,7 +198,7 @@ Unsubscribes camera macro status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
 
 ## offSmoothZoomInfoAvailable
 
@@ -216,7 +218,7 @@ Unsubscribes from zoom info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | Callback used to get the zoom info. |
 
 ## offSystemPressureLevelChange
 
@@ -236,9 +238,9 @@ Unsubscribes to system pressure level event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | Callback used to return the result. |
 
-## off_autoDeviceSwitchStatusChange
+## off_autoDeviceSwitchStatusChange('autoDeviceSwitchStatusChange')
 
 ```TypeScript
 off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
@@ -259,9 +261,9 @@ off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'autoDeviceSwitchStatusChange' | 是 | 监听事件，固定为'autoDeviceSwitchStatusChange'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
-## off_controlCenterEffectStatusChange
+## off_controlCenterEffectStatusChange('controlCenterEffectStatusChange')
 
 ```TypeScript
 off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCenterStatusInfo>): void
@@ -282,9 +284,9 @@ off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCen
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlCenterEffectStatusChange' | 是 | 注销监听事件，固定为'controlCenterEffectStatusChange'，session创建成功可触发此事 件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数 默认为空，取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数 默认为空，取消所有callback。 |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -305,9 +307,9 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_focusStateChange
+## off_focusStateChange('focusStateChange')
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -328,9 +330,9 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_smoothZoomInfoAvailable
+## off_smoothZoomInfoAvailable('smoothZoomInfoAvailable')
 
 ```TypeScript
 off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
@@ -351,9 +353,9 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'smoothZoomInfoAvailable' | 是 | 监听事件，固定为'smoothZoomInfoAvailable'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_systemPressureLevelChange
+## off_systemPressureLevelChange('systemPressureLevelChange')
 
 ```TypeScript
 off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLevel>): void
@@ -374,7 +376,7 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemPressureLevelChange' | 是 | 注销监听事件，固定为'systemPressureLevelChange'，session创建成功可触发此事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数默认为空，取消 所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback (callback对象不可是匿名函数)，否则参数默认为空，取消 所有callback。 |
 
 ## onAutoDeviceSwitchStatusChange
 
@@ -394,7 +396,7 @@ Subscribes to auto device switch status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | Callback used to return the result. |
 
 ## onControlCenterEffectStatusChange
 
@@ -414,7 +416,7 @@ Subscribes to control center effect status change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 是 | Callback used to get control center effect status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 是 | Callback used to get control center effect status. |
 
 ## onError
 
@@ -434,7 +436,7 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the capture session errors. |
 
 ## onExposureInfoChange
 
@@ -458,7 +460,7 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取曝光值变化信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取曝光值变化信息。 |
 
 ## onFocusStateChange
 
@@ -478,7 +480,7 @@ Subscribes focus state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | Callback used to get the focus state change. |
 
 ## onIsoInfoChange
 
@@ -502,7 +504,7 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取相机当前的ISO值。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 | 回调函数，用于获取相机当前的ISO值。 |
 
 ## onMacroStatusChanged
 
@@ -522,7 +524,7 @@ Subscribes camera macro status event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return macro detection result, true indicating macro scene is detected and can be enabled, false indicating no macro scene is detected, and macro should be disabled. |
 
 ## onSmoothZoomInfoAvailable
 
@@ -542,7 +544,7 @@ Subscribes zoom info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | Callback used to get the zoom info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | Callback used to get the zoom info. |
 
 ## onSystemPressureLevelChange
 
@@ -562,9 +564,9 @@ Subscribes to system pressure level event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | Callback used to return the result. |
 
-## on_autoDeviceSwitchStatusChange
+## on_autoDeviceSwitchStatusChange('autoDeviceSwitchStatusChange')
 
 ```TypeScript
 on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void
@@ -585,9 +587,9 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'autoDeviceSwitchStatusChange' | 是 | 监听事件，固定为'autoDeviceSwitchStatusChange'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | 回调函数，用于获取当前自动切换镜头的状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 | 回调函数，用于获取当前自动切换镜头的状态。 |
 
-## on_controlCenterEffectStatusChange
+## on_controlCenterEffectStatusChange('controlCenterEffectStatusChange')
 
 ```TypeScript
 on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCenterStatusInfo>): void
@@ -608,9 +610,9 @@ on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCente
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlCenterEffectStatusChange' | 是 | 监听事件，固定为'controlCenterEffectStatusChange'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取当前控制器激活状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取当前控制器激活状态。 |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -631,9 +633,9 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-session-i.md#beginconfig)， [commitConfig](arkts-camera-camera-session-i.md#commitconfig)， [addInput](arkts-camera-camera-session-i.md#addinput)等接口发生错误时返回错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
-## on_focusStateChange
+## on_focusStateChange('focusStateChange')
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -654,9 +656,9 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session创建成功可监听。仅当自动对焦模式时，且相机对焦状态发生改变时可触发该事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
 
-## on_smoothZoomInfoAvailable
+## on_smoothZoomInfoAvailable('smoothZoomInfoAvailable')
 
 ```TypeScript
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
@@ -677,9 +679,9 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'smoothZoomInfoAvailable' | 是 | 监听事件，固定为'smoothZoomInfoAvailable'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | 回调函数，用于获取当前平滑变焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 | 回调函数，用于获取当前平滑变焦状态。 |
 
-## on_systemPressureLevelChange
+## on_systemPressureLevelChange('systemPressureLevelChange')
 
 ```TypeScript
 on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void
@@ -700,7 +702,7 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemPressureLevelChange' | 是 | 监听事件，固定为'systemPressureLevelChange'，session创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | 回调函数，用于获取当前系统压力状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 | 回调函数，用于获取当前系统压力状态。 |
 
 ## preconfig
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## offSystemPrivateCommand
@@ -29,7 +28,7 @@ Unsubscribe from the event when the input method application sends private data 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | callback triggered when an input method application sends a private data command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | callback triggered when an input method application sends a private data command. |
 
 **Error codes:**
 

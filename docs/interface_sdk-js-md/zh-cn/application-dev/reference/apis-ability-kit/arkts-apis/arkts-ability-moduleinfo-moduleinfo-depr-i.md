@@ -40,7 +40,7 @@ readonly moduleName: string
 readonly moduleSourceDir: string
 ```
 
-安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager)访问资源。
+安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源。
 
 **类型：** string
 

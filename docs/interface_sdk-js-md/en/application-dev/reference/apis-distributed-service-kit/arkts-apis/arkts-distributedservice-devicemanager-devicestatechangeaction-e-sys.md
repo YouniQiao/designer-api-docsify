@@ -6,7 +6,7 @@ Enumerates the device states.
 
 **Deprecated since:** 11
 
-**Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#devicestatechange)
+**Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
 
 <!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
 

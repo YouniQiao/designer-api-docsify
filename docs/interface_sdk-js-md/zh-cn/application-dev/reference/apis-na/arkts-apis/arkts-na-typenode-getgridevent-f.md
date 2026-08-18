@@ -22,7 +22,7 @@ Get the event instance of Grid node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | the target FrameNode. |
+| node | [FrameNode](arkts-na-framenode-c.md) | 是 | the target FrameNode. |
 
 **返回值：**
 

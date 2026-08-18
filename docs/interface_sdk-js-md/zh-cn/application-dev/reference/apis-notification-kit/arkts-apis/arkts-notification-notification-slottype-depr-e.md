@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [SlotType](arkts-notification-notificationmanager-slottype-e.md#slottype)
+**替代接口：** [SlotType](arkts-notification-notificationmanager-slottype-e.md)
 
 <!--Device-notification-export enum SlotType--><!--Device-notification-export enum SlotType-End-->
 
@@ -24,7 +24,7 @@ UNKNOWN_TYPE = 0
 
 **废弃版本：** 9
 
-**替代接口：** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#unknowntype)
+**替代接口：** [UNKNOWN_TYPE](arkts-notification-notificationmanager-slottype-e.md#unknown_type)
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
@@ -42,7 +42,7 @@ SOCIAL_COMMUNICATION = 1
 
 **废弃版本：** 9
 
-**替代接口：** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#socialcommunication)
+**替代接口：** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#social_communication)
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -60,7 +60,7 @@ SERVICE_INFORMATION = 2
 
 **废弃版本：** 9
 
-**替代接口：** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#serviceinformation)
+**替代接口：** [SERVICE_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#service_information)
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -78,7 +78,7 @@ CONTENT_INFORMATION = 3
 
 **废弃版本：** 9
 
-**替代接口：** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#contentinformation)
+**替代接口：** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#content_information)
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -96,7 +96,7 @@ OTHER_TYPES = 0xFFFF
 
 **废弃版本：** 9
 
-**替代接口：** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#othertypes)
+**替代接口：** [OTHER_TYPES](arkts-notification-notificationmanager-slottype-e.md#other_types)
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 

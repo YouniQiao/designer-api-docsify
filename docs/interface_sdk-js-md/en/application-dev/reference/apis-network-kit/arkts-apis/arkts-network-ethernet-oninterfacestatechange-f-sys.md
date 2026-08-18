@@ -6,15 +6,15 @@
 import { ethernet } from '@kit.NetworkKit';
 ```
 
-## on_interfaceStateChange
+## on_interfaceStateChange('interfaceStateChange')
 
 ```TypeScript
 function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>): void
 ```
 
-Register a callback for the ethernet interface active state change.
+Registers the observer for NIC hot swap events. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 10
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -28,8 +28,8 @@ Register a callback for the ethernet interface active state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'interfaceStateChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceStateInfo](arkts-network-ethernet-interfacestateinfo-i-sys.md)&gt; | Yes | Including iface Indicates the ethernet interface, and active Indicates whether the interface is active. |
+| type | 'interfaceStateChange' | Yes | Event type. The value is **interfaceStateChange**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterfaceStateInfo](arkts-network-ethernet-interfacestateinfo-i-sys.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
 

@@ -12,7 +12,6 @@ Position definition of one component on which the menu will bind and popup.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## height

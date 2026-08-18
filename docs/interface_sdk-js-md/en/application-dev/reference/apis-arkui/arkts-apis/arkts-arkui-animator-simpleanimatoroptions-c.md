@@ -90,7 +90,7 @@ Sets the playback delay for this animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 **Examples**
 
@@ -143,7 +143,7 @@ Sets the playback direction for this animator animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## duration
 
@@ -173,7 +173,7 @@ Sets the animation duration.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 **Examples**
 
@@ -220,13 +220,13 @@ Sets the interpolation curve for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions).<br> Default value: **"ease" |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md).<br> Default value: **"ease" |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 **Examples**
 
@@ -279,7 +279,7 @@ Sets the fill mode for this animation.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 ## iterations
 
@@ -309,7 +309,7 @@ Sets the number of times that this animation is played.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | SimpleAnimatorOptions** object for animation parameters. |
 
 **Examples**
 

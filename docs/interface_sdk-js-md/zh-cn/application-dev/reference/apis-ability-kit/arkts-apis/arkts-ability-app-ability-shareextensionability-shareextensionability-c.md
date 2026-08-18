@@ -1,8 +1,8 @@
 # ShareExtensionAbility
 
-ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)，为开发者提供分享 详情页扩展能力。 该模块支持开发者创建接收分享内容的分享详情页面，将应用入口展示于系统分享面板的推荐应用区域。
+ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，为开发者提供分享 详情页扩展能力。 该模块支持开发者创建接收分享内容的分享详情页面，将应用入口展示于系统分享面板的推荐应用区域。
 
-**继承/实现关系：** ShareExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)
+**继承/实现关系：** ShareExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
 **起始版本：** 23
 
@@ -15,5 +15,6 @@ ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uie
 ## 导入模块
 
 ```TypeScript
+import { ShareExtensionAbility } from '@kit.AbilityKit';
 ```
 

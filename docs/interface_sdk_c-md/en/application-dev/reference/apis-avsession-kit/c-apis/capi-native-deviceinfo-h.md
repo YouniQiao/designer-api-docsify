@@ -56,7 +56,7 @@ Get Cast Category of the target device.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1.The param of deviceInfo is nullptr;<br>                                                 2.The param of aVCastCategory is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of aVCastCategory is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceId()
 
@@ -81,7 +81,7 @@ Get device Id of the target device.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1.The param of deviceInfo is nullptr;<br>                                                 2.The param of deviceId is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceId is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceName()
 
@@ -106,7 +106,7 @@ Get device name of the target device.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1.The param of deviceInfo is nullptr;<br>                                                 2.The param of deviceName is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceName is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceType()
 
@@ -131,7 +131,7 @@ Get device type of the target device.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1.The param of deviceInfo is nullptr;<br>                                                 2.The param of deviceType is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceType is nullptr. |
 
 ### OH_DeviceInfo_GetSupportedProtocols()
 
@@ -156,6 +156,6 @@ Get supported protocols of the target device.
 
 | Type | Description |
 | -- | -- |
-| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:<br>         [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.<br>         [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)<br>                                                 1.The param of deviceInfo is nullptr;<br>                                                 2.The param of deviceProtocolType is nullptr. |
+| [AVSession_ErrCode](capi-native-avsession-errors-h.md#avsession_errcode) | Function result code:          [AV_SESSION_ERR_SUCCESS](capi-native-avsession-errors-h.md#avsession_errcode) If the execution is successful.          [AV_SESSION_ERR_INVALID_PARAMETER](capi-native-avsession-errors-h.md#avsession_errcode)                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceProtocolType is nullptr. |
 
 

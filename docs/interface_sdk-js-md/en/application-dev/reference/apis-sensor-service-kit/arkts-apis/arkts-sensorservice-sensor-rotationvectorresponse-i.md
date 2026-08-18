@@ -1,8 +1,8 @@
 # RotationVectorResponse
 
-Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

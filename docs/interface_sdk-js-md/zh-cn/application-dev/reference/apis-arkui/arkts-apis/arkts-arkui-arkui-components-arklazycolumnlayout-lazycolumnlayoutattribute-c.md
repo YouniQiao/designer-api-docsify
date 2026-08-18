@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## alignItems
@@ -157,7 +158,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
 
 **返回值：**
 

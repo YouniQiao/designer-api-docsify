@@ -11,6 +11,7 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## callerPid
@@ -95,8 +96,6 @@ readonly localDeviceId: string
 
 **类型：** string
 
-**默认值：** @syscap SystemCapability.Communication.IPC.Core @FaAndStageModel
-
 **起始版本：** 23
 
 <!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
@@ -112,8 +111,6 @@ readonly remoteDeviceId: string
 对端设备的设备ID，仅RPC场景有效。
 
 **类型：** string
-
-**默认值：** @syscap SystemCapability.Communication.IPC.Core @FaAndStageModel
 
 **起始版本：** 23
 

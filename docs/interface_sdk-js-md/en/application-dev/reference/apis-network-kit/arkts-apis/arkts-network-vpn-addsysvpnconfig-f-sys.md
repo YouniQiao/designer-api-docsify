@@ -29,7 +29,7 @@ Add a system VPN network configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) | Yes | Indicates the [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api) configuration of the VPN network. |
+| config | [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) | Yes | Indicates the [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) configuration of the VPN network. |
 
 **Return value:**
 

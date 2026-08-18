@@ -4,9 +4,9 @@
 type HttpRequest = http.HttpRequest
 ```
 
-Get an HTTP request task.
+Defines an HTTP request, which can be created using [http.createHttp](arkts-network-http-createhttp-f.md).
 
-**Since:** 11
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

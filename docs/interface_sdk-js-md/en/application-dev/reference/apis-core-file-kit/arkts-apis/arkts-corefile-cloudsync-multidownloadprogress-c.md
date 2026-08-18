@@ -12,8 +12,6 @@ Represents the batch download progress of a file from the Drive Kit.
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 

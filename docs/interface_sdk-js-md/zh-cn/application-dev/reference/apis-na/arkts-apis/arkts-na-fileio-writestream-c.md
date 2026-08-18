@@ -1,8 +1,8 @@
 # WriteStream
 
-文件可写流，需要先通过[fileIo.createWriteStream](arkts-na-fileio-createwritestream-f.md#createwritestream)方法来构建一个WriteStream实例。WriteStream继承自数据流基类 [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)。
+文件可写流，需要先通过[fileIo.createWriteStream](arkts-na-fileio-createwritestream-f.md)方法来构建一个WriteStream实例。WriteStream继承自数据流基类 [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)。
 
-**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#writable)
+**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)
 
 **起始版本：** 23
 

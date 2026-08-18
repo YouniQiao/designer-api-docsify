@@ -22,7 +22,7 @@ import { pan } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md#createpanprofile) | create the instance of pan profile. |
+| [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md) | create the instance of pan profile. |
 
 ### Interfaces
 
@@ -31,7 +31,7 @@ import { pan } from '@kit.ConnectivityKit';
 | [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Manager pan host profile. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

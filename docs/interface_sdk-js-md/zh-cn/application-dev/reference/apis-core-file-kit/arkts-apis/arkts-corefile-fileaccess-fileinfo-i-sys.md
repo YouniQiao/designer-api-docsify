@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -29,7 +30,7 @@ listFile(filter?: Filter): FileIterator
 
 **废弃版本：** 23
 
-**替代接口：** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listfile)
+**替代接口：** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 

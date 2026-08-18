@@ -14,7 +14,6 @@ Describes the notification statistics of a specified application.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle

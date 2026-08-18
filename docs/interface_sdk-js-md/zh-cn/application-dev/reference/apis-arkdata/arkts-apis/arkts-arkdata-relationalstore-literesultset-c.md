@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close
@@ -35,7 +36,7 @@ close(): void
 getAsset(columnIndex: int): Asset
 ```
 
-以[Asset](arkts-arkdata-relationalstore-asset-i.md#asset)形式获取当前行中指定列的值。 如果当前列的数据类型为Asset类型，会以Asset类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Asset类型，则返回14800041。
+以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值。 如果当前列的数据类型为Asset类型，会以Asset类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Asset类型，则返回14800041。
 
 **起始版本：** 23
 
@@ -72,7 +73,7 @@ getAsset(columnIndex: int): Asset
 getAssets(columnIndex: int): Assets
 ```
 
-以[Assets](arkts-arkdata-relationalstore-assets-t.md#assets)形式获取当前行中指定列的值。 如果当前列的数据类型为Assets类型，会以Assets类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Assets类型，则返回14800041。
+以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值。 如果当前列的数据类型为Assets类型，会以Assets类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Assets类型，则返回14800041。
 
 **起始版本：** 23
 

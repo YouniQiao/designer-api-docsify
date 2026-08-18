@@ -69,12 +69,7 @@ Declare the Native API used for audio and video muxer,demuxer and basic encoding
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_AVCodecOnError)(OH_AVCodec *codec, int32_t errorCode, void *userData)](#oh_avcodeconerror) | OH_AVCodecOnError | Defines the pointer to the function that is called to report error information when an error occurs duringthe running of an OH_AVCodec instance.
-\| Use Case\| Error Code\|
-\| -------- \| -------- \|
-\| Audio encoding/decoding\| **AV_ERR_DRM_DECRYPT_FAILED**: DRM decryption failed. \|
-\| Video encoding/decoding\| **AV_ERROR_NO_MEMORY**: System resources are insufficient.<br>*AV_ERROR_UNKNOWN**: An unknown error occurs. Analyze the error based on specific logs.<br>*AV_ERR_SERVICE_DIED**: The service is dead. \|
-\| Video decoding\| **AV_ERR_VIDEO_UNSUPPORTED_COLOR_SPACE_CONVERSION**: The current input does not support CSC. \|<!--RP1--><!--RP1End--> |
+| [typedef void (\*OH_AVCodecOnError)(OH_AVCodec *codec, int32_t errorCode, void *userData)](#oh_avcodeconerror) | OH_AVCodecOnError | Defines the pointer to the function that is called to report error information when an error occurs duringthe running of an OH_AVCodec instance. \| Use Case\| Error Code\| \| -------- \| -------- \| \| Audio encoding/decoding\| **AV_ERR_DRM_DECRYPT_FAILED**: DRM decryption failed. \| \| Video encoding/decoding\| **AV_ERROR_NO_MEMORY**: System resources are insufficient.<br>*AV_ERROR_UNKNOWN**: An unknown error occurs. Analyze the error based on specific logs.<br>*AV_ERR_SERVICE_DIED**: The service is dead. \| \| Video decoding\| **AV_ERR_VIDEO_UNSUPPORTED_COLOR_SPACE_CONVERSION**: The current input does not support CSC. \|<!--RP1--><!--RP1End--> |
 | [typedef void (\*OH_AVCodecOnStreamChanged)(OH_AVCodec *codec, OH_AVFormat *format, void *userData)](#oh_avcodeconstreamchanged) | OH_AVCodecOnStreamChanged | Defines the pointer to the function that is called to report the new stream description when the resolutionof the input video stream being decoded or the output video stream that has been encoded changes.Starting from API version 15, this function pointer is called to report the new stream description when the streamsampling rate, number of audio channels, or audio sampling format changes during audio decoding. The decodingformats that can detect these changes include <!--RP3--><!--RP3End-->AAC, FLAC, MP3, and VORBIS.Note that the lifecycle of the pointer to the OH_AVFormat instance is valid only when the function pointer is beingcalled. Do not access the pointer to the instance after the function pointer is called. |
 | [typedef void (\*OH_AVCodecOnNeedInputData)(OH_AVCodec *codec, uint32_t index, OH_AVMemory *data, void *userData)](#oh_avcodeconneedinputdata) | OH_AVCodecOnNeedInputData | Defines the pointer to the function that is called when new input data is required during the running of anOH_AVCodec instance. The function carries a buffer to fill in new input data.(Deprecated in API11) |
 | [typedef void (\*OH_AVCodecOnNewOutputData)(OH_AVCodec *codec, uint32_t index, OH_AVMemory *data, OH_AVCodecBufferAttr *attr, void *userData)](#oh_avcodeconnewoutputdata) | OH_AVCodecOnNewOutputData | Defines the pointer to the function that is called when new output data is generated during the running of anOH_AVCodec instance. The function carries a buffer filled with new output data. Note that the lifecycle of thepointer to the OH_AVCodecBufferAttr instance is valid only when the function pointer is being called. Do not accessthe pointer to the instance after the function pointer is called.(Deprecated in API11) |
@@ -157,7 +152,7 @@ Declare the Native API used for audio and video muxer,demuxer and basic encoding
 | const char * OH_MD_KEY_AUD_CHANNEL_COUNT | Pointer to the key that describes the number of audio channels. The value type is int32_t.<br>**Since**: 9 |
 | const char * OH_MD_KEY_AUD_SAMPLE_RATE | Pointer to the key that describes the audio sampling rate. The value type is int32_t.<br>**Since**: 9 |
 | const char * OH_MD_KEY_I_FRAME_INTERVAL | Pointer to the key that describes the key frame interval, in milliseconds. The value type is int32_t. Thiskey is optional and is used only for video encoding.A negative value means that only the first frame is a keyframe. The value **0** means that all frames are keyframes.A positive value means one keyframe every (frameRate * value)/1000 frames. The default value is **1000**.<br>**Since**: 9 |
-| const char * OH_MD_KEY_VIDEO_TRANSFORM_TYPE | Key for video transform type, value type is int32_t, see {@link OH_NativeBuffer_TransformType}.This key is used to set the surface transform for video decoders (surface mode).If not specified, the default value is 0 ({@link NATIVEBUFFER_ROTATE_NONE}).This key and {@link OH_MD_KEY_ROTATION} are mutually exclusive. If both are provided,OH_MD_KEY_VIDEO_TRANSFORM_TYPE takes precedence.Note that the degrees specified in {@link OH_NativeBuffer_TransformType} represent counter-clockwise rotation,which are opposite to the direction of rotation defined by {@link OH_MD_KEY_ROTATION}.The correspondence is:- {@link NATIVEBUFFER_ROTATE_NONE}  => same as OH_MD_KEY_ROTATION = 0- {@link NATIVEBUFFER_ROTATE_90}    => same as OH_MD_KEY_ROTATION = 270- {@link NATIVEBUFFER_ROTATE_180}   => same as OH_MD_KEY_ROTATION = 180- {@link NATIVEBUFFER_ROTATE_270}   => same as OH_MD_KEY_ROTATION = 90<br>**Since**: 22 |
+| const char * OH_MD_KEY_VIDEO_TRANSFORM_TYPE | Key for video transform type, value type is int32_t, see {@link OH_NativeBuffer_TransformType}.This key is used to set the surface transform for video decoders (surface mode).If not specified, the default value is 0 ({@link NATIVEBUFFER_ROTATE_NONE}).This key and {@link OH_MD_KEY_ROTATION} are mutually exclusive. If both are provided,OH_MD_KEY_VIDEO_TRANSFORM_TYPE takes precedence.Note that the degrees specified in {@link OH_NativeBuffer_TransformType} represent counter-clockwise rotation,which are opposite to the direction of rotation defined by {@link OH_MD_KEY_ROTATION}.The correspondence is:- {@link NATIVEBUFFER_ROTATE_NONE} => same as OH_MD_KEY_ROTATION = 0- {@link NATIVEBUFFER_ROTATE_90} => same as OH_MD_KEY_ROTATION = 270- {@link NATIVEBUFFER_ROTATE_180} => same as OH_MD_KEY_ROTATION = 180- {@link NATIVEBUFFER_ROTATE_270} => same as OH_MD_KEY_ROTATION = 90<br>**Since**: 22 |
 | const char * OH_MD_KEY_ROTATION | Pointer to the key that describes the rotation angle of the surface, with a clockwise direction. The valuetype is int32_t, and the value range is {0, 90, 180, 270}. The default value is 0.This key is optional and is used only for video decoding in surface modeYou are advised to use the **OH_MD_KEY_VIDEO_TRANSFORM_TYPE** key to set the rotation angle of the surface for videodecoding.<br>**Since**: 9 |
 | const char * OH_MD_KEY_RANGE_FLAG | Pointer to the key that describes the video YUV value range flag. The value type is int32_t. The value **1means a full range, and **0** means a limited range. The default value is **0**. If this parameter is set to a non-zero value, the value **1** is used.<br>**Since**: 10 |
 | const char * OH_MD_KEY_COLOR_PRIMARIES | Pointer to the key that describes the video primary colors. The value type is int32_t. The default value is**COLOR_PRIMARY_UNSPECIFIED**. For details, see [OH_ColorPrimary](capi-native-avcodec-base-h.md#oh_colorprimary). The value complies with Table 2 in H.273.<br>**Since**: 10 |
@@ -1080,12 +1075,7 @@ typedef void (*OH_AVCodecOnError)(OH_AVCodec *codec, int32_t errorCode, void *us
 
 **Description**
 
-Defines the pointer to the function that is called to report error information when an error occurs duringthe running of an OH_AVCodec instance.
-\| Use Case\| Error Code\|
-\| -------- \| -------- \|
-\| Audio encoding/decoding\| **AV_ERR_DRM_DECRYPT_FAILED**: DRM decryption failed. \|
-\| Video encoding/decoding\| **AV_ERROR_NO_MEMORY**: System resources are insufficient.<br>*AV_ERROR_UNKNOWN**: An unknown error occurs. Analyze the error based on specific logs.<br>*AV_ERR_SERVICE_DIED**: The service is dead. \|
-\| Video decoding\| **AV_ERR_VIDEO_UNSUPPORTED_COLOR_SPACE_CONVERSION**: The current input does not support CSC. \|<!--RP1--><!--RP1End-->
+Defines the pointer to the function that is called to report error information when an error occurs duringthe running of an OH_AVCodec instance. \| Use Case\| Error Code\| \| -------- \| -------- \| \| Audio encoding/decoding\| **AV_ERR_DRM_DECRYPT_FAILED**: DRM decryption failed. \| \| Video encoding/decoding\| **AV_ERROR_NO_MEMORY**: System resources are insufficient.<br>*AV_ERROR_UNKNOWN**: An unknown error occurs. Analyze the error based on specific logs.<br>*AV_ERR_SERVICE_DIED**: The service is dead. \| \| Video decoding\| **AV_ERR_VIDEO_UNSUPPORTED_COLOR_SPACE_CONVERSION**: The current input does not support CSC. \|<!--RP1--><!--RP1End-->
 
 **Since**: 9
 
@@ -1093,7 +1083,7 @@ Defines the pointer to the function that is called to report error information w
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | int32_t errorCode | Error code. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
@@ -1113,7 +1103,7 @@ Defines the pointer to the function that is called to report the new stream desc
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | OH_AVFormat \*format | Pointer to the description information about the new output stream. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
@@ -1137,7 +1127,7 @@ Defines the pointer to the function that is called when new input data is requir
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
 | [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
@@ -1162,7 +1152,7 @@ Defines the pointer to the function that is called when new output data is gener
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
 | [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data filled in the new output buffer. |
 | OH_AVCodecBufferAttr \*attr | Pointer to the description information about the new output buffer. |
@@ -1184,7 +1174,7 @@ Defines the pointer to the function that is called when new input data is requir
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
 | OH_AVBuffer \*buffer | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
@@ -1205,7 +1195,7 @@ Defines the pointer to the function that is called when new output data is gener
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVCodec \*codec | Pointer to an OH_AVCodec instance. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
 | OH_AVBuffer \*buffer | Pointer to the data filled in the new output buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
@@ -1226,7 +1216,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
+| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 
@@ -1252,7 +1242,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
+| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 | void \*userData | Pointer to user-defined data. |

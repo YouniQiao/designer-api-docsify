@@ -12,11 +12,12 @@ import { data } from '@kit.TelephonyKit';
 function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 ```
 
-Obtain the connection state of the PS domain.
+Obtains the cellular data connection status. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**Required permissions:** 
+- API version 22+: ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void--><!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void-End-->
 
@@ -26,13 +27,13 @@ Obtain the connection state of the PS domain.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataConnectState&gt; | Yes | Indicates the callback for getting the connection state, which can be any of the following: &lt;ul&gt; &lt;li&gt;{@code DataConnectState#DATA_STATE_UNKNOWN} &lt;li&gt;{@code DataConnectState#DATA_STATE_DISCONNECTED} &lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTING} &lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTED} &lt;li&gt;{@code DataConnectState#DATA_STATE_SUSPENDED} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataConnectState&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -56,11 +57,12 @@ data.getCellularDataState((err: BusinessError, contextData: data.DataConnectStat
 function getCellularDataState(): Promise<DataConnectState>
 ```
 
-Obtain the connection state of the PS domain.
+Obtains the cellular data connection status. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_NETWORK_INFO
+**Required permissions:** 
+- API version 22+: ohos.permission.GET_NETWORK_INFO
 
 <!--Device-data-function getCellularDataState(): Promise<DataConnectState>--><!--Device-data-function getCellularDataState(): Promise<DataConnectState>-End-->
 
@@ -70,13 +72,13 @@ Obtain the connection state of the PS domain.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataConnectState&gt; | Returns the connection state, which can be any of the following: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;DataConnectState&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 22 and later |
 
 **Examples**
 

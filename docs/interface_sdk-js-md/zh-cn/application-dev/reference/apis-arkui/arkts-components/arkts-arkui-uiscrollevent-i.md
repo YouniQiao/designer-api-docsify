@@ -1,6 +1,6 @@
 # UIScrollEvent
 
-frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent) 方法的返回值，可用于给Scroll节点设置滚动事件。 UIScrollEvent继承于UIScrollableCommonEvent。
+frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) 方法的返回值，可用于给Scroll节点设置滚动事件。 UIScrollEvent继承于UIScrollableCommonEvent。
 
 **继承/实现关系：** UIScrollEvent extends UIScrollableCommonEvent
 

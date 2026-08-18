@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## queryAsUser
@@ -11,7 +12,7 @@
 function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-在指定用户空间中查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser系统接口)接口，在本函数后调用 [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser系统接口)接口，开发步骤请参考 [开发指导](../../../security/AssetStoreKit/asset-js-query-auth.md)。使用Promise异步回调。
+在指定用户空间中查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)接口，在本函数后调用 [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md)接口，开发步骤请参考 [开发指导](../../../security/AssetStoreKit/asset-js-query-auth.md)。使用Promise异步回调。
 
 **起始版本：** 12
 

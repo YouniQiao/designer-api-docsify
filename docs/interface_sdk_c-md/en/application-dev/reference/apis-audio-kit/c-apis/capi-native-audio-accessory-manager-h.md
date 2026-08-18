@@ -46,14 +46,14 @@ Callback for noise reduction mode change on an accessory.<b>When Called:</b> Whe
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory. |
 | OH_AudioNoiseReductionMode mode | [in] The noise reduction mode to set on the accessory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the requested mode is handled successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the requested mode is handled successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioManager_GetAccessoryManager()
 
@@ -77,7 +77,7 @@ Obtains the audio accessory manager instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if manager is null.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if manager is null.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_CreateInput()
 
@@ -105,7 +105,7 @@ Creates an input audio accessory instance and registers its capabilities.This fu
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if any parameter is null.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the manager is not initialized.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if any parameter is null.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the manager is not initialized.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_SetAssociatedMacAddresses()
 
@@ -132,7 +132,7 @@ Sets the list of associated MAC addresses for the audio accessory.This interface
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not created.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not created.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_RegisterNoiseReductionCapability()
 
@@ -159,7 +159,7 @@ Registers the noise reduction capability of an audio accessory.The framework per
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not created.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not created.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_SetNoiseReductionMode()
 
@@ -185,7 +185,7 @@ Sets the noise reduction mode of an audio accessory.This function allows the acc
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not connected.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_UNSUPPORTED} if the mode is not supported.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if parameters are invalid.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not connected.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_UNSUPPORTED} if the mode is not supported.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_Connected()
 
@@ -212,7 +212,7 @@ Connects the audio accessory to the audio framework.All required capabilities mu
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_PERMISSION_DENIED} if the caller does not have the<br>                  required permission.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if capabilities are not registered or<br>                  the accessory is already connected.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} if audio server process die.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_PERMISSION_DENIED} if the caller does not have the                   required permission.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if capabilities are not registered or                   the accessory is already connected.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} if audio server process die.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_Disconnected()
 
@@ -239,7 +239,7 @@ Disconnects the audio accessory from the audio framework.
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_PERMISSION_DENIED} if the caller does not have the<br>                  required permission.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not connected.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} if audio server process die.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_PERMISSION_DENIED} if the caller does not have the                   required permission.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is not connected.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_SYSTEM} if audio server process die.</li>          </ul> |
 
 ### OH_AudioAccessoryManager_Destroy()
 
@@ -264,6 +264,6 @@ Destroys the audio accessory instance.The accessory must be disconnected before 
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | <ul><br>         <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li><br>         <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is still connected.</li><br>         </ul> |
+| OH_AudioCommon_Result | <ul>          <li>{@link AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if accessory is null.</li>          <li>{@link AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE} if the accessory is still connected.</li>          </ul> |
 
 

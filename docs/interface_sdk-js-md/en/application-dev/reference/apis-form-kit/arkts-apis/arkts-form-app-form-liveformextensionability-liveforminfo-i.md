@@ -12,7 +12,6 @@ Provides information about a live form.
 
 ```TypeScript
 import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## borderRadius

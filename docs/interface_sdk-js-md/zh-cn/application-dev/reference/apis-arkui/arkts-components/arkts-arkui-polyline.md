@@ -54,4 +54,9 @@ Polyline(options?: PolylineOptions)
 
 ## 汇总
 
-- [PolylineOptions](arkts-arkui-polylineoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 用于描述Polyline组件绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

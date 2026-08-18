@@ -1,6 +1,6 @@
 # NetUidPolicy (System API)
 
-Uid Specifies the Internet access policy in background mode.
+Enumerates network access policies for the application.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Uid Specifies the Internet access policy in background mode.
 NET_POLICY_NONE = 0
 ```
 
-Default net policy.
+Default network policy.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Default net policy.
 NET_POLICY_ALLOW_METERED_BACKGROUND = 1 << 0
 ```
 
-Allow on metered networks when app in background.
+Background applications are allowed to access a metered network.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Allow on metered networks when app in background.
 NET_POLICY_REJECT_METERED_BACKGROUND = 1 << 1
 ```
 
-Reject on metered networks when app in background.
+Applications running in the background are not allowed to access a metered network.
 
 **Since:** 10
 

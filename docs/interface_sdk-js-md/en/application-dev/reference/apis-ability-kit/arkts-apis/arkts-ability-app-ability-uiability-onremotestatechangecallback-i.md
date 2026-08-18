@@ -12,7 +12,6 @@ Defines the callback that is invoked when the remote UIAbility state changes in 
 
 ```TypeScript
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## constructor

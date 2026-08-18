@@ -6,7 +6,7 @@ Provides the configuration items for application event logging.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md#configoption)
+**Substitutes:** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md)
 
 <!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 

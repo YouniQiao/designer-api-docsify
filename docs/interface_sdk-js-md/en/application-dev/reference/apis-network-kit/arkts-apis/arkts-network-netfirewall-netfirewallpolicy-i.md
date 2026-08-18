@@ -1,6 +1,6 @@
-# NetFirewallPolicy
+# NetFirewallPolicy(Network Firewall)
 
-Firewall policy.
+Defines the firewall policy, including the firewall switch status and default inbound or outbound action (allow or deny).
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 inAction: FirewallRuleAction
 ```
 
-Inbound connections are allowed or denied by default.
+Inbound action.
 
 **Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
@@ -36,7 +36,7 @@ Inbound connections are allowed or denied by default.
 isOpen: boolean
 ```
 
-Whether the firewall is open.
+Whether to enable the firewall. The value **true** means to enable the firewall, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -52,7 +52,7 @@ Whether the firewall is open.
 outAction: FirewallRuleAction
 ```
 
-Outbound connections are allowed or denied by default.
+Outbound action.
 
 **Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 

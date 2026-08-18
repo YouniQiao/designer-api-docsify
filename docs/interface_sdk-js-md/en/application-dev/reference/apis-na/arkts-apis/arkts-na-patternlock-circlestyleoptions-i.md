@@ -78,7 +78,7 @@ radius?: LengthMetrics
 
 The circle radius when cell is active state. Default value: 1.833 (11/6) times of circleRadius.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

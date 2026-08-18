@@ -6,7 +6,7 @@ The URLSearchParams interface defines some practical methods to process URL quer
 
 **Deprecated since:** 9
 
-**Substitutes:** [URLParams](arkts-arkts-url-urlparams-c.md#urlparams)
+**Substitutes:** [URLParams](arkts-arkts-url-urlparams-c.md)
 
 <!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
 

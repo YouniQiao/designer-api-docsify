@@ -12,7 +12,6 @@ Defines the callback of the registration message notification of the UIAbility.
 
 ```TypeScript
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## constructor

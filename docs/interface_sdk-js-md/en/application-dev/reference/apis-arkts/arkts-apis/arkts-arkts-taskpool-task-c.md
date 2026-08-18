@@ -104,7 +104,7 @@ A constructor used to create a **Task** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
 
@@ -146,7 +146,7 @@ A constructor used to create a **Task** instance, with the task name specified.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
 

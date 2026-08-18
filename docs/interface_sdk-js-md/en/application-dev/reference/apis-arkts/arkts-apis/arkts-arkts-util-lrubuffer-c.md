@@ -6,7 +6,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Deprecated since:** 9
 
-**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md#lrucache)
+**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md)
 
 <!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 

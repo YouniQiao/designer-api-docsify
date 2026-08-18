@@ -68,7 +68,7 @@ measureText(options: MeasureOptions): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | Options. |
+| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -98,7 +98,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | Options of measure area occupied by text. |
+| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | Options of measure area occupied by text. |
 
 **返回值：**
 

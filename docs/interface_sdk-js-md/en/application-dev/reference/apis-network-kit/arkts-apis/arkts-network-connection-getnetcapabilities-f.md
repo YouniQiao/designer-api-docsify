@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void-End-->
 
@@ -28,8 +28,8 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | the callback of getNetCapabilities.[NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities). |
+| netHandle | NetHandle | Yes | Network handle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -71,13 +71,13 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>-End-->
 
@@ -87,13 +87,13 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Promise used to return the network capability set. |
 
 **Error codes:**
 

@@ -12,7 +12,6 @@ Represents statistics about SQL statements executed by the database.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## executeTime

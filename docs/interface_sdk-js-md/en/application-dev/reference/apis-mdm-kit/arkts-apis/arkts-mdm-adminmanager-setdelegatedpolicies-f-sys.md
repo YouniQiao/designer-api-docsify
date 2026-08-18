@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
 ```
 
 ## setDelegatedPolicies
@@ -31,8 +30,8 @@ Delegates other applications to set device management policies. The applications
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the app to be delegated. The distribution type of the delegated app must be **enterprise_normal** or **enterprise_mdm**. You can call the [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) API to query the app **BundleInfo**. **BundleInfo.appInfo.appDistributionType** indicates the app distribution type. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can use [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) to obtain the user ID. |
+| bundleName | string | Yes | Bundle name of the app to be delegated. The distribution type of the delegated app must be **enterprise_normal** or **enterprise_mdm**. You can call the [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) API to query the app **BundleInfo**. **BundleInfo.appInfo.appDistributionType** indicates the app distribution type. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. You can use [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) to obtain the user ID. |
 | policies | Array&lt;string&gt; | Yes | [Delegable policy list](../../../mdm/mdm-kit-appendix.md#delegable-policy-list). |
 
 **Error codes:**

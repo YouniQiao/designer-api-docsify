@@ -12,7 +12,7 @@ import { dragController } from '@kit.ArkUI';
 function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. > **NOTE：**> > - Since API version 11, you can use the > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the > [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#dragcontroller) object associated with the current UI context. > > - For optimal drag and drop performance, limit the number of drag previews.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. > **NOTE：**> > - Since API version 11, you can use the > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the > [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context. > > - For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
 

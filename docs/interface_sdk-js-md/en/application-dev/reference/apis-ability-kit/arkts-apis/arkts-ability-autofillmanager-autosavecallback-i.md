@@ -12,7 +12,6 @@ Implements callbacks triggered when auto-save is complete.
 
 ```TypeScript
 import { autoFillManager } from '@kit.AbilityKit';
-import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## onFailure

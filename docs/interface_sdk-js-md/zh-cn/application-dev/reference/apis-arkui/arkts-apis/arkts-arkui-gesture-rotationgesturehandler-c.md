@@ -2,7 +2,7 @@
 
 旋转手势处理器对象类型。
 
-**继承/实现关系：** RotationGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**继承/实现关系：** RotationGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **起始版本：** 23
 

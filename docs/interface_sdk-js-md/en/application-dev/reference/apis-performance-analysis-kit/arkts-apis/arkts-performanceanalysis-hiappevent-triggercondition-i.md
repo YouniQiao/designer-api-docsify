@@ -1,6 +1,6 @@
 # TriggerCondition
 
-Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#watcher).
+Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md).
 
 **Since:** 23
 

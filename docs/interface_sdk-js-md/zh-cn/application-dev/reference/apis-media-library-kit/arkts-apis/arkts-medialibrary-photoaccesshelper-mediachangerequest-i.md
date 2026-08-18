@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## comment
@@ -19,7 +20,7 @@
 readonly comment: string
 ```
 
-用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#mediaalbumchangerequest)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

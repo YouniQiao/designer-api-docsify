@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offRotateChange
@@ -27,7 +28,7 @@ function offRotateChange(callback?: Callback<RotateEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | 否 | 要注销的回调函数。若不填，则取消该旋转事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | 否 | 要注销的回调函数。若不填，则取消该旋转事件的所有回调。 |
 
 **错误码：**
 

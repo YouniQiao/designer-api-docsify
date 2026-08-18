@@ -22,4 +22,9 @@ ColumnSplit()
 
 ## 汇总
 
-- [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) | 设置子组件与上下分割线的距离。 |
+

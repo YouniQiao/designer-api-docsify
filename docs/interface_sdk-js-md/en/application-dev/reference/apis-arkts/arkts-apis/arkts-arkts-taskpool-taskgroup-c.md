@@ -41,7 +41,7 @@ Adds the function to be executed to this task group. Before using this API, you 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
 
@@ -83,7 +83,7 @@ Adds a created task to this task group. Before using this API, you must create a
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 | [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 
 **Examples**

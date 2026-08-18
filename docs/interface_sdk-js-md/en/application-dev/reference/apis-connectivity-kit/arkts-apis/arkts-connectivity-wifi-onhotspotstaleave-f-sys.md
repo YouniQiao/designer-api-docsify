@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## on_hotspotStaLeave
+## on_hotspotStaLeave('hotspotStaLeave')
 
 ```TypeScript
 function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
@@ -36,5 +36,5 @@ Subscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | Yes | the callback of on |
 

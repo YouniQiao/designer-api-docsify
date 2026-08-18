@@ -1,12 +1,12 @@
 # BundleFlag
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag) instead. Enumerates the bundle flags, which indicate the type of bundle information to obtain. If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result. Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead. Enumerates the bundle flags, which indicate the type of bundle information to obtain. If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result. Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag)
+**Substitutes:** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
 
 <!--Device-bundle-enum BundleFlag--><!--Device-bundle-enum BundleFlag-End-->
 
@@ -24,7 +24,7 @@ Obtains the default application information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#getbundleinfodefault)
+**Substitutes:** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_default)
 
 <!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000-End-->
 
@@ -42,7 +42,7 @@ Obtains the bundle information with the ability information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#getbundleinfowithability)
+**Substitutes:** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_ability)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001-End-->
 
@@ -60,7 +60,7 @@ Obtains the ability information with the permission information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e-sys.md#getabilityinfowithpermission)
+**Substitutes:** [GET_ABILITY_INFO_WITH_PERMISSION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_permission)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002-End-->
 
@@ -78,7 +78,7 @@ Obtains the ability information with the application information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e-sys.md#getabilityinfowithapplication)
+**Substitutes:** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_application)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004-End-->
 
@@ -112,7 +112,7 @@ Obtains the bundle information with the information about the required permissio
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#getbundleinfowithrequestedpermission)
+**Substitutes:** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_requested_permission)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
@@ -146,7 +146,7 @@ Obtains the ability metadata information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e-sys.md#getabilityinfowithmetadata)
+**Substitutes:** [GET_ABILITY_INFO_WITH_METADATA](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_metadata)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020-End-->
 
@@ -180,7 +180,7 @@ Obtains the ability information of system applications.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e-sys.md#getabilityinfoonlysystemapp)
+**Substitutes:** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_only_system_app)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080--><!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080-End-->
 
@@ -198,7 +198,7 @@ Obtains information about disabled abilities.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e-sys.md#getabilityinfowithdisable)
+**Substitutes:** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e-sys.md#get_ability_info_with_disable)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100-End-->
 

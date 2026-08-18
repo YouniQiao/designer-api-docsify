@@ -1,8 +1,8 @@
 # PhotoOutput
 
-PhotoOutput implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput).
+PhotoOutput implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
-**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
+**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
 **Since:** 23
 
@@ -778,7 +778,7 @@ Unsubscribes deferred photo proxy available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | No | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | No | Callback used to get the DeferredPhotoProxy. |
 
 **Error codes:**
 
@@ -806,7 +806,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -834,9 +834,9 @@ Unsubscribes from camera thumbnail events. This method is valid only after enabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | No | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | No | Callback used to get the quick thumbnail. |
 
-## off_deferredPhotoProxyAvailable
+## off_deferredPhotoProxyAvailable('deferredPhotoProxyAvailable')
 
 ```TypeScript
 off(type: 'deferredPhotoProxyAvailable', callback?: AsyncCallback<DeferredPhotoProxy>): void
@@ -857,7 +857,7 @@ Unsubscribes from events indicating available thumbnail proxies.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -886,7 +886,7 @@ function unRegisterPhotoOutputDeferredPhotoProxyAvailable(photoOutput: camera.Ph
 }
 ```
 
-## off_offlineDeliveryFinished
+## off_offlineDeliveryFinished('offlineDeliveryFinished')
 
 ```TypeScript
 off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void
@@ -907,7 +907,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -915,7 +915,7 @@ Unsubscribes offline Delivery finished events. This method is valid only after e
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## off_quickThumbnail
+## off_quickThumbnail('quickThumbnail')
 
 ```TypeScript
 off(type: 'quickThumbnail', callback?: AsyncCallback<image.PixelMap>): void
@@ -936,7 +936,7 @@ Unsubscribes from quick thumbnail output events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Examples**
 
@@ -966,7 +966,7 @@ Subscribes deferred photo proxy available event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | Yes | Callback used to get the DeferredPhotoProxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | Yes | Callback used to get the DeferredPhotoProxy. |
 
 **Error codes:**
 
@@ -994,7 +994,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -1022,9 +1022,9 @@ Subscribes to camera thumbnail events. This method is valid only after enableQui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to get the quick thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to get the quick thumbnail. |
 
-## on_deferredPhotoProxyAvailable
+## on_deferredPhotoProxyAvailable('deferredPhotoProxyAvailable')
 
 ```TypeScript
 on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void
@@ -1045,7 +1045,7 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | Yes | Callback used to return the thumbnail proxy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | Yes | Callback used to return the thumbnail proxy. |
 
 **Error codes:**
 
@@ -1074,7 +1074,7 @@ function registerPhotoOutputDeferredPhotoProxyAvailable(photoOutput: camera.Phot
 }
 ```
 
-## on_offlineDeliveryFinished
+## on_offlineDeliveryFinished('offlineDeliveryFinished')
 
 ```TypeScript
 on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void
@@ -1095,7 +1095,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -1103,7 +1103,7 @@ Subscribes offline Delivery finished events. This method is valid only after ena
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## on_quickThumbnail
+## on_quickThumbnail('quickThumbnail')
 
 ```TypeScript
 on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void
@@ -1124,7 +1124,7 @@ Subscribes to quick thumbnail output events. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback that returns a PixelMap instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback that returns a PixelMap instance. |
 
 **Examples**
 

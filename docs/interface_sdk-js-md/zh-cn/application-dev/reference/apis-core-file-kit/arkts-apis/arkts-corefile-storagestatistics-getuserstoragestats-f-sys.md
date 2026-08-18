@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getUserStorageStats
@@ -88,7 +89,7 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 
@@ -226,7 +227,7 @@ function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | long | 是 | 用户id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 

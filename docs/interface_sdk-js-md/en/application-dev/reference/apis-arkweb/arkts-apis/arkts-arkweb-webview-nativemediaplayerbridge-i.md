@@ -1,6 +1,6 @@
 # NativeMediaPlayerBridge
 
-NativeMediaPlayerBridge is the return value type of the [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md#createnativemediaplayercallback) callback function. It is an interface class between the player that takes over web page media and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the app to take over web page media. This interface allows the app to use a custom media player to take over media content playback in web pages. It also supports player suspension and resumption mechanisms.
+NativeMediaPlayerBridge is the return value type of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback function. It is an interface class between the player that takes over web page media and the ArkWeb kernel. The ArkWeb kernel uses an object of this interface class to control the player created by the app to take over web page media. This interface allows the app to use a custom media player to take over media content playback in web pages. It also supports player suspension and resumption mechanisms.
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ Notifies the app to destroy the player and save its status information. This met
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SuspendType](../../apis-na/arkts-apis/arkts-na-webview-suspendtype-e.md) | Yes | Player suspension type, which specifies how the player is suspended. Different SuspendType values correspond to different suspension scenarios. |
+| type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Yes | Player suspension type, which specifies how the player is suspended. Different SuspendType values correspond to different suspension scenarios. |
 
 ## updateRect
 

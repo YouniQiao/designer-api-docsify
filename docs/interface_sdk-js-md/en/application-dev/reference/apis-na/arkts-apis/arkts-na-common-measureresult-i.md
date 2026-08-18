@@ -2,7 +2,7 @@
 
 Provides the measurement result of the component.
 
-**Inheritance/Implementation:** MeasureResult extends [SizeResult](arkts-na-common-sizeresult-i.md#sizeresult)
+**Inheritance/Implementation:** MeasureResult extends [SizeResult](arkts-na-common-sizeresult-i.md)
 
 **Since:** 23
 

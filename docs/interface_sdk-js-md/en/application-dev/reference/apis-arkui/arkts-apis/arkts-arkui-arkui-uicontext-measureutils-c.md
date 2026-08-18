@@ -1,6 +1,6 @@
 # MeasureUtils
 
-Provides APIs for measuring text metrics, such as text height and width. > **NOTE：**> > - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils) in > **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance. > > - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#paragraph) API. > > - Avoid using > [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale) > during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually > listen for font scale changes. > > - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies. > This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or > measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code > points. For details, see [Example 2 in measureTextSize](#measuretextsize).
+Provides APIs for measuring text metrics, such as text height and width. > **NOTE：**> > - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils) in > **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance. > > - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) API. > > - Avoid using > [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale) > during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually > listen for font scale changes. > > - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies. > This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or > measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code > points. For details, see [Example 2 in measureTextSize](#measuretextsize).
 
 **Since:** 12
 
@@ -23,7 +23,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-Converts a styled string into an array of corresponding [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#paragraph) objects based on text layout options.
+Converts a styled string into an array of corresponding [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) objects based on text layout options.
 
 **Since:** 20
 

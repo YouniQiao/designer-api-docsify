@@ -150,7 +150,7 @@ Get the FrameNode in BuilderNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode inside the BuilderNode, or null if not contained. |
+| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode inside the BuilderNode, or null if not contained. |
 
 ## inheritFreezeOptions
 
@@ -331,7 +331,7 @@ Reuse the BuilderNode based on the provided parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing BuilderNode. These parameters will be directly applied to the reuse of all top-level custom components in the BuilderNode. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the BuilderNode will directly use the data source from the construction phase. |
+| param | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing BuilderNode. These parameters will be directly applied to the reuse of all top-level custom components in the BuilderNode. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the BuilderNode will directly use the data source from the construction phase. |
 
 ## update
 

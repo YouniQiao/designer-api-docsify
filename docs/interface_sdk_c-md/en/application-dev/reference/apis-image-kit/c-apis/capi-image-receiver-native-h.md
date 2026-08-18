@@ -93,7 +93,7 @@ Creates an OH_ImageReceiverOptions object at the application layer.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
 
 ### OH_ImageReceiverOptions_GetSize()
 
@@ -118,7 +118,7 @@ Obtains the image size of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_SetSize()
 
@@ -143,7 +143,7 @@ Sets the image size of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_GetCapacity()
 
@@ -168,7 +168,7 @@ Obtains the image cache capacity of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_SetCapacity()
 
@@ -193,7 +193,7 @@ Sets the image cache capacity of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_Release()
 
@@ -217,7 +217,7 @@ Releases an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -247,7 +247,7 @@ Creates an OH_ImageReceiverNative object at the application layer.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
 
 ### OH_ImageReceiverNative_GetReceivingSurfaceId()
 
@@ -272,7 +272,7 @@ Obtains the surface ID through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error. |
 
 **Reference**:
 
@@ -302,7 +302,7 @@ Obtains the latest image through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
 
 **Reference**:
 
@@ -332,7 +332,7 @@ Obtains the next image through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - inner unknown error.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_ALLOC_FAILED - if alloc failed. |
 
 **Reference**:
 
@@ -362,7 +362,7 @@ Registers the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_i
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -391,7 +391,7 @@ Unregisters the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -421,7 +421,7 @@ Obtains the size of an **ImageReceiver** using **OH_ImageReceiverNative**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -451,7 +451,7 @@ Obtains the capacity of an **OH_ImageReceiverNative**.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -480,7 +480,7 @@ Releases an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -509,7 +509,7 @@ Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* rec
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS is returned if the operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_RECEIVER_INVALID_PARAMETER is returned if receiver or callback is null. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS is returned if the operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_RECEIVER_INVALID_PARAMETER is returned if receiver or callback is null. |
 
 ### OH_ImageReceiverNative_OffImageArrive()
 
@@ -532,6 +532,6 @@ Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* re
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - Operation succeeded.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_RECEIVER_INVALID_PARAMETER - <b>receiver</b> is empty or <b>callback</b> is not registered. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - Operation succeeded.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_RECEIVER_INVALID_PARAMETER - <b>receiver</b> is empty or <b>callback</b> is not registered. |
 
 

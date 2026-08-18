@@ -2,7 +2,7 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md#absalbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md)
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to add. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is added successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If an image or video is added successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the album properties are modified successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the album properties are modified successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ Removes image and video assets from a user album. The album and file resources m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to remove. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is removed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If an image or video is removed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

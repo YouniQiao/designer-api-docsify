@@ -1,6 +1,6 @@
 # WebNativeMessagingExtensionContext
 
-WebNativeMessagingExtensionContext is the runtime context of the native web message extension ( [WebNativeMessagingExtensionAbility](arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#webnativemessagingextensionability)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startability) to start another ability, call [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult) to start a UIAbility and receive the return result, call [terminateSelf](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateself) to terminate the current extension, or call [stopNativeConnection](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopnativeconnection) to stop a specified native web message connection.
+WebNativeMessagingExtensionContext is the runtime context of the native web message extension ( [WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)). It inherits from ExtensionContext and provides lifecycle management, ability startup, and native message connection control capabilities for the extension ability. In an extension that inherits from WebNativeMessagingExtensionAbility, developers can obtain this context through `this.context` and then call [startAbility](#startability) to start another ability, call [startAbilityForResult](#startabilityforresult) to start a UIAbility and receive the return result, call [terminateSelf](#terminateself) to terminate the current extension, or call [stopNativeConnection](#stopnativeconnection) to stop a specified native web message connection.
 
 **Inheritance/Implementation:** WebNativeMessagingExtensionContext extends ExtensionContext
 
@@ -22,7 +22,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result. To obtain the return result when the started UIAbility exits, use [startAbilityForResult](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult).
+Starts an ability. This API uses a promise to return the result. To obtain the return result when the started UIAbility exits, use [startAbilityForResult](#startabilityforresult).
 
 **Since:** 21
 
@@ -49,7 +49,7 @@ Starts an ability. This API uses a promise to return the result. To obtain the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
 | [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
@@ -60,13 +60,13 @@ Starts an ability. This API uses a promise to return the result. To obtain the r
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid. |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit. |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
+| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | App clone or multi-instance is not supported. |
+| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | App clone or multi-instance is not supported. |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 | [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
@@ -116,7 +116,7 @@ Starts a UIAbility. This API uses a promise to return the result when the starte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Information about the UIAbility to start, including attributes such as bundleName and abilityName, used to specify the target UIAbility. |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Start options for configuring the window mode of the UIAbility. Pass this parameter when custom start configuration is required; otherwise, the default system start configuration is used. For details about the default values of each field, see [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions). |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Start options for configuring the window mode of the UIAbility. Pass this parameter when custom start configuration is required; otherwise, the default system start configuration is used. For details about the default values of each field, see [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md). |
 
 **Return value:**
 
@@ -128,7 +128,7 @@ Starts a UIAbility. This API uses a promise to return the result when the starte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) | Instances cannot be created for other applications during inter-application startup. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
 | [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
@@ -139,13 +139,13 @@ Starts a UIAbility. This API uses a promise to return the result when the starte
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled by the AppGallery and cannot be started. |
-| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) | The app instance key is invalid. |
+| [16000076](../../apis-ability-kit/errorcode-ability.md#16000076-app_instance_key-does-not-exist) | The app instance key is invalid. |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by Enterprise Device Manager and cannot be started. |
 | [16000077](../../apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) | The number of app instances reaches the limit. |
-| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The application does not support multiple instances. |
-| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
+| [16000078](../../apis-ability-kit/errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The application does not support multiple instances. |
+| [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
 | [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) | The application does not support appClone and multi-instance mode in multiAppMode. |
+| [16000072](../../apis-ability-kit/errorcode-ability.md#16000072-multi-app-mode-is-not-supported) | The application does not support appClone and multi-instance mode in multiAppMode. |
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../../apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 | [16000010](../../apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |

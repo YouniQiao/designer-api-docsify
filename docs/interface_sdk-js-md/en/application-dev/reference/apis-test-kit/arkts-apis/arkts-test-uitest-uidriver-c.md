@@ -6,7 +6,7 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver](arkts-test-uitest-driver-c.md#driver)
+**Substitutes:** [Driver](arkts-test-uitest-driver-c.md)
 
 <!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
@@ -504,7 +504,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 

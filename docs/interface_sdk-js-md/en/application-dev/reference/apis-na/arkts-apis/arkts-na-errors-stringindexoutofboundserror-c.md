@@ -2,7 +2,7 @@
 
 Represents error that is thrown when provided string index is out of bounds
 
-**Inheritance/Implementation:** StringIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md#rangeerror)
+**Inheritance/Implementation:** StringIndexOutOfBoundsError extends [RangeError](arkts-na-errors-rangeerror-c.md)
 
 **Since:** 26.0.0
 

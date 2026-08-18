@@ -1,8 +1,8 @@
 # EllipseShape
 
-用于clipShape和maskShape接口的椭圆形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#baseshape)。
+用于clipShape和maskShape接口的椭圆形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
 
-**继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
+**继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -103,7 +103,7 @@ onCheckedChange?: Callback<boolean>
 
 Sets the ConfirmDialog CheckBox Callback.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **Since:** 18
 

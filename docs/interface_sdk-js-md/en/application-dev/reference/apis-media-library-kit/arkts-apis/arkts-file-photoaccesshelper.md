@@ -20,16 +20,16 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper-system-api) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper-system-api) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
 <!--DelEnd-->
 
 ### Classes
@@ -57,7 +57,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [VideoDurationFilter](arkts-medialibrary-photoaccesshelper-videodurationfilter-c.md) | Describes the configuration for video duration filtering. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -72,7 +72,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md) | Represents a media asset change request. |
 | [MediaAssetEditData](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md) | Represents the edited media asset data. |
 | [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md) | Represents a request for changing multiple assets. |
-| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest-system-api). |
+| [MediaHighlightAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediahighlightalbumchangerequest-c-sys.md) | Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md). |
 | [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | Provides APIs for custom user behavior recording for Gallery. |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c-sys.md) | Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space. |
 | [RecommendationOptions](arkts-medialibrary-photoaccesshelper-recommendationoptions-c-sys.md) | Defines the image recommendation options. The image recommendation feature depends on the image data analysis capability, which varies with devices. |
@@ -112,7 +112,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md) | Represents the text information about the recommended images. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -183,7 +183,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [OperationType](arkts-medialibrary-photoaccesshelper-operationtype-e.md) | Enumerates the predicates. |
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) | Defines the key information about an image or video file. |
 | [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md) | Enumeration of PhotoSource type |
-| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) types. |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types. |
 | [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) | Enumerates the media file types. |
 | [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md) | Enumerates the media file types. |
 | [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md) | Enumerates the Picker color modes. |
@@ -197,7 +197,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [VideoMode](arkts-medialibrary-photoaccesshelper-videomode-e.md) | Enumerates the log modes of video files. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -214,7 +214,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [CloudAssetDownloadCode](arkts-medialibrary-photoaccesshelper-cloudassetdownloadcode-e-sys.md) | Enumerates the status codes returned when adding an item to a batch download. |
 | [CloudAssetDownloadNotifyType](arkts-medialibrary-photoaccesshelper-cloudassetdownloadnotifytype-e-sys.md) | Enumerates the types of events reported during a cloud asset download. |
 | [CloudEnhancementState](arkts-medialibrary-photoaccesshelper-cloudenhancementstate-e-sys.md) | Enumerates the cloud enhancement states. |
-| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | Enumerates the cloud enhancement task states, which are returned by [CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md#cloudenhancement-system-api). |
+| [CloudEnhancementTaskStage](arkts-medialibrary-photoaccesshelper-cloudenhancementtaskstage-e-sys.md) | Enumerates the cloud enhancement task states, which are returned by [CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md). |
 | [CloudMediaAssetTaskStatus](arkts-medialibrary-photoaccesshelper-cloudmediaassettaskstatus-e-sys.md) | Enumerates the statuses of tasks used for downloading cloud media assets. |
 | [CloudMediaDownloadType](arkts-medialibrary-photoaccesshelper-cloudmediadownloadtype-e-sys.md) | Enumerates the types of download tasks. |
 | [CloudMediaRetainType](arkts-medialibrary-photoaccesshelper-cloudmediaretaintype-e-sys.md) | Enumerates the modes used for deleting cloud media assets. |
@@ -231,12 +231,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [HighlightAlbumChangeAttribute](arkts-medialibrary-photoaccesshelper-highlightalbumchangeattribute-e-sys.md) | Enumerates the attributes of a highlights album. |
 | [HighlightAlbumInfoType](arkts-medialibrary-photoaccesshelper-highlightalbuminfotype-e-sys.md) | Enumerates the types of the highlights album information. |
 | [HighlightUserActionType](arkts-medialibrary-photoaccesshelper-highlightuseractiontype-e-sys.md) | Enumerates the user behavior types of the highlights album. |
+| [LivePhoto4dStatus](arkts-medialibrary-photoaccesshelper-livephoto4dstatus-e-sys.md) | Enumerates the 4d livephoto status. |
 | [MovingPhotoEffectMode](arkts-medialibrary-photoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumerates the effects of a moving photo. |
 | [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e-sys.md) | Enumerates the types of changes that trigger the media asset or album change events. |
 | [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md) | Defines the key information about an image or video file. |
 | [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | Enumerates the types of permissions for accessing media assets. The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not. For the same media asset and application, the persistent read permission overwrites the temporary read permission. The temporary read permission does not overwrite the persistent read permission. |
 | [PhotoRiskStatus](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md) | Enumerates the risk types of images. |
-| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset) types. |
+| [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types. |
 | [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md) | Enumerates the file locations. |
 | [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md) | Enumerates related entity Ranking Method |
 | [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md) | Enumerates the types of recommended images. |
@@ -262,7 +263,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoAssetParams](arkts-medialibrary-photoaccesshelper-photoassetparams-t.md) | Defines the array of record types that map file property names to their values. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

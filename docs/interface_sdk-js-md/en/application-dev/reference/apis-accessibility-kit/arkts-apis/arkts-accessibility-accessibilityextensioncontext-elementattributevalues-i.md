@@ -238,7 +238,7 @@ Index of the current item. The value range is greater than or equal to 0. The de
 customComponentType?: string
 ```
 
-Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#accessibilityroletype) of the element. The default value is an empty string.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) of the element. The default value is an empty string.
 
 **Type:** string
 

@@ -2,7 +2,7 @@
 
 Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
+**Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
 **Since:** 9
 

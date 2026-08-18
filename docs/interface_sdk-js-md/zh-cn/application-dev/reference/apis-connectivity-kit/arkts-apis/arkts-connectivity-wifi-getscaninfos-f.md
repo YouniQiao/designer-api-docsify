@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getScanInfos
@@ -17,7 +21,7 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
+**替代接口：** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or ohos.permission.LOCATION)
 
@@ -44,7 +48,7 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
+**替代接口：** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or ohos.permission.LOCATION)
 
@@ -56,7 +60,7 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |  |
 
 **示例**
 

@@ -28,4 +28,9 @@ Called when content is added to a placeholder component
 
 ## Summary
 
-- [Content](arkts-arkui-content-t.md)
+### Types
+
+| Name | Description |
+| --- | --- |
+| [Content](arkts-arkui-content-t.md) | Defines a base class for **ComponentContent** and **NodeContent**. |
+

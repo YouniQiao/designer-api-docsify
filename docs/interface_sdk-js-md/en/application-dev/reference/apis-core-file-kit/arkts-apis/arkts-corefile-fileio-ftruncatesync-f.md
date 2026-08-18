@@ -17,7 +17,7 @@ Truncates a file based on the file descriptor. This API returns the result synch
 
 **Deprecated since:** 9
 
-**Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncatesync)
+**Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md)
 
 <!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void--><!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void-End-->
 

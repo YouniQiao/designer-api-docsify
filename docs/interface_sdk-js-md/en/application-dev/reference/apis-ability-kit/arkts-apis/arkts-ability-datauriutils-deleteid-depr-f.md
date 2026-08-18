@@ -17,7 +17,7 @@ Deletes the ID from the end of a given URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid)
+**Substitutes:** [deleteId](arkts-ability-datauriutils-deleteid-f.md)
 
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## addSlot
@@ -34,7 +33,7 @@ removeAllSlots removes all
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SlotType | Yes | Notification slot type to create. Different slot types correspond to different default SlotLevel values, which affect the notification alert method. For example, **SOCIAL_COMMUNICATION** corresponds to **LEVEL_HIGH** (status bar icon + banner + sound), and **CONTENT_INFORMATION** corresponds to **LEVEL_MIN** (no status bar icon + no banner + no sound). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

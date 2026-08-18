@@ -14,7 +14,6 @@ Session token. Used to judge the legitimacy of the session.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## pid

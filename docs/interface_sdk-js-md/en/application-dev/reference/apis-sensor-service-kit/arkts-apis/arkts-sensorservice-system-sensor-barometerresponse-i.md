@@ -6,7 +6,7 @@ Defines a **BarometerResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md#barometerresponse)
+**Substitutes:** [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 

@@ -14,11 +14,11 @@ Enumerates the response codes for an HTTP request.
 OK = 200
 ```
 
-The request was successful. Typically used for GET and POST requests.
+The request is successful. This return code is generally used for GET and POST requests.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
 
@@ -27,96 +27,96 @@ The request was successful. Typically used for GET and POST requests.
 ## CREATED
 
 ```TypeScript
-CREATED
+CREATED = 201
 ```
 
-Successfully requested and created a new resource.
+"Created." The request has been successfully sent and a new resource is created.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-CREATED--><!--Device-ResponseCode-CREATED-End-->
+<!--Device-ResponseCode-CREATED = 201--><!--Device-ResponseCode-CREATED = 201-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## ACCEPTED
 
 ```TypeScript
-ACCEPTED
+ACCEPTED = 202
 ```
 
-The request has been accepted but has not been processed completely.
+"Accepted." The request has been accepted for processing, but the processing has not been completed.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-ACCEPTED--><!--Device-ResponseCode-ACCEPTED-End-->
+<!--Device-ResponseCode-ACCEPTED = 202--><!--Device-ResponseCode-ACCEPTED = 202-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NOT_AUTHORITATIVE
 
 ```TypeScript
-NOT_AUTHORITATIVE
+NOT_AUTHORITATIVE = 203
 ```
 
-Unauthorized information. The request was successful.
+"Non-Authoritative Information." The request is successful.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NOT_AUTHORITATIVE--><!--Device-ResponseCode-NOT_AUTHORITATIVE-End-->
+<!--Device-ResponseCode-NOT_AUTHORITATIVE = 203--><!--Device-ResponseCode-NOT_AUTHORITATIVE = 203-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NO_CONTENT
 
 ```TypeScript
-NO_CONTENT
+NO_CONTENT = 204
 ```
 
-No content. The server successfully processed, but did not return content.
+"No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NO_CONTENT--><!--Device-ResponseCode-NO_CONTENT-End-->
+<!--Device-ResponseCode-NO_CONTENT = 204--><!--Device-ResponseCode-NO_CONTENT = 204-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## RESET
 
 ```TypeScript
-RESET
+RESET = 205
 ```
 
-Reset the content.
+"Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-RESET--><!--Device-ResponseCode-RESET-End-->
+<!--Device-ResponseCode-RESET = 205--><!--Device-ResponseCode-RESET = 205-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PARTIAL
 
 ```TypeScript
-PARTIAL
+PARTIAL = 206
 ```
 
-Partial content. The server successfully processed some GET requests.
+"Partial Content." The server has successfully fulfilled the partial GET request for a given resource.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-PARTIAL--><!--Device-ResponseCode-PARTIAL-End-->
+<!--Device-ResponseCode-PARTIAL = 206--><!--Device-ResponseCode-PARTIAL = 206-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -126,11 +126,11 @@ Partial content. The server successfully processed some GET requests.
 MULT_CHOICE = 300
 ```
 
-Multiple options.
+"Multiple Choices." The requested resource corresponds to any one of a set of representations.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
 
@@ -139,80 +139,80 @@ Multiple options.
 ## MOVED_PERM
 
 ```TypeScript
-MOVED_PERM
+MOVED_PERM = 301
 ```
 
-&lt;p&gt;Permanently move. The requested resource has been permanently moved to a new URI, and the returned information will include the new URI. The browser will automatically redirect to the new URI.&lt;/p&gt;
+"Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-MOVED_PERM--><!--Device-ResponseCode-MOVED_PERM-End-->
+<!--Device-ResponseCode-MOVED_PERM = 301--><!--Device-ResponseCode-MOVED_PERM = 301-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## MOVED_TEMP
 
 ```TypeScript
-MOVED_TEMP
+MOVED_TEMP = 302
 ```
 
-Temporary movement.
+"Moved Temporarily." The requested resource is moved temporarily to a different URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-MOVED_TEMP--><!--Device-ResponseCode-MOVED_TEMP-End-->
+<!--Device-ResponseCode-MOVED_TEMP = 302--><!--Device-ResponseCode-MOVED_TEMP = 302-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## SEE_OTHER
 
 ```TypeScript
-SEE_OTHER
+SEE_OTHER = 303
 ```
 
-View other addresses.
+"See Other." The response to the request can be found under a different URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-SEE_OTHER--><!--Device-ResponseCode-SEE_OTHER-End-->
+<!--Device-ResponseCode-SEE_OTHER = 303--><!--Device-ResponseCode-SEE_OTHER = 303-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NOT_MODIFIED
 
 ```TypeScript
-NOT_MODIFIED
+NOT_MODIFIED = 304
 ```
 
-Not modified.
+"Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NOT_MODIFIED--><!--Device-ResponseCode-NOT_MODIFIED-End-->
+<!--Device-ResponseCode-NOT_MODIFIED = 304--><!--Device-ResponseCode-NOT_MODIFIED = 304-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## USE_PROXY
 
 ```TypeScript
-USE_PROXY
+USE_PROXY = 305
 ```
 
-Using proxies.
+"Use Proxy." The requested resource can only be accessed through the proxy.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-USE_PROXY--><!--Device-ResponseCode-USE_PROXY-End-->
+<!--Device-ResponseCode-USE_PROXY = 305--><!--Device-ResponseCode-USE_PROXY = 305-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -222,11 +222,11 @@ Using proxies.
 BAD_REQUEST = 400
 ```
 
-The server cannot understand the syntax error error requested by the client.
+"Bad Request." The request could not be understood by the server due to incorrect syntax.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
 
@@ -235,256 +235,256 @@ The server cannot understand the syntax error error requested by the client.
 ## UNAUTHORIZED
 
 ```TypeScript
-UNAUTHORIZED
+UNAUTHORIZED = 401
 ```
 
-Request for user authentication.
+"Unauthorized." The request requires user authentication.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-UNAUTHORIZED--><!--Device-ResponseCode-UNAUTHORIZED-End-->
+<!--Device-ResponseCode-UNAUTHORIZED = 401--><!--Device-ResponseCode-UNAUTHORIZED = 401-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PAYMENT_REQUIRED
 
 ```TypeScript
-PAYMENT_REQUIRED
+PAYMENT_REQUIRED = 402
 ```
 
-Reserved for future use.
+"Payment Required." This code is reserved for future use.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-PAYMENT_REQUIRED--><!--Device-ResponseCode-PAYMENT_REQUIRED-End-->
+<!--Device-ResponseCode-PAYMENT_REQUIRED = 402--><!--Device-ResponseCode-PAYMENT_REQUIRED = 402-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## FORBIDDEN
 
 ```TypeScript
-FORBIDDEN
+FORBIDDEN = 403
 ```
 
-The server understands the request from the requesting client, but refuses to execute it.
+"Forbidden." The server understands the request but refuses to process it.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-FORBIDDEN--><!--Device-ResponseCode-FORBIDDEN-End-->
+<!--Device-ResponseCode-FORBIDDEN = 403--><!--Device-ResponseCode-FORBIDDEN = 403-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NOT_FOUND
 
 ```TypeScript
-NOT_FOUND
+NOT_FOUND = 404
 ```
 
-The server was unable to find resources (web pages) based on the client's request.
+"Not Found." The server does not find anything matching the Request-URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NOT_FOUND--><!--Device-ResponseCode-NOT_FOUND-End-->
+<!--Device-ResponseCode-NOT_FOUND = 404--><!--Device-ResponseCode-NOT_FOUND = 404-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## BAD_METHOD
 
 ```TypeScript
-BAD_METHOD
+BAD_METHOD = 405
 ```
 
-The method in the client request is prohibited.
+"Method Not Allowed." The method specified in the request is not allowed for the resource identified by the Request-URI.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-BAD_METHOD--><!--Device-ResponseCode-BAD_METHOD-End-->
+<!--Device-ResponseCode-BAD_METHOD = 405--><!--Device-ResponseCode-BAD_METHOD = 405-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NOT_ACCEPTABLE
 
 ```TypeScript
-NOT_ACCEPTABLE
+NOT_ACCEPTABLE = 406
 ```
 
-The server is unable to complete the request based on the content characteristics requested by the client.
+"Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NOT_ACCEPTABLE--><!--Device-ResponseCode-NOT_ACCEPTABLE-End-->
+<!--Device-ResponseCode-NOT_ACCEPTABLE = 406--><!--Device-ResponseCode-NOT_ACCEPTABLE = 406-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PROXY_AUTH
 
 ```TypeScript
-PROXY_AUTH
+PROXY_AUTH = 407
 ```
 
-Request authentication of the proxy's identity.
+"Proxy Authentication Required." The request requires user authentication with the proxy.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-PROXY_AUTH--><!--Device-ResponseCode-PROXY_AUTH-End-->
+<!--Device-ResponseCode-PROXY_AUTH = 407--><!--Device-ResponseCode-PROXY_AUTH = 407-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## CLIENT_TIMEOUT
 
 ```TypeScript
-CLIENT_TIMEOUT
+CLIENT_TIMEOUT = 408
 ```
 
-The request took too long and timed out.
+"Request Timeout." The client fails to generate a request within the timeout period.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-CLIENT_TIMEOUT--><!--Device-ResponseCode-CLIENT_TIMEOUT-End-->
+<!--Device-ResponseCode-CLIENT_TIMEOUT = 408--><!--Device-ResponseCode-CLIENT_TIMEOUT = 408-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## CONFLICT
 
 ```TypeScript
-CONFLICT
+CONFLICT = 409
 ```
 
-&lt;p&gt;The server may have returned this code when completing the client's PUT request, as there was a conflict when the server was processing the request.&lt;/p&gt;
+"Conflict." The request cannot be fulfilled due to a conflict with the current state of the resource. Conflicts are most likely to occur in response to a PUT request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-CONFLICT--><!--Device-ResponseCode-CONFLICT-End-->
+<!--Device-ResponseCode-CONFLICT = 409--><!--Device-ResponseCode-CONFLICT = 409-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## GONE
 
 ```TypeScript
-GONE
+GONE = 410
 ```
 
-The resource requested by the client no longer exists.
+"Gone." The requested resource has been deleted permanently and is no longer available.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-GONE--><!--Device-ResponseCode-GONE-End-->
+<!--Device-ResponseCode-GONE = 410--><!--Device-ResponseCode-GONE = 410-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## LENGTH_REQUIRED
 
 ```TypeScript
-LENGTH_REQUIRED
+LENGTH_REQUIRED = 411
 ```
 
-The server is unable to process request information sent by the client without Content Length.
+"Length Required." The server refuses to process the request without a defined Content-Length.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-LENGTH_REQUIRED--><!--Device-ResponseCode-LENGTH_REQUIRED-End-->
+<!--Device-ResponseCode-LENGTH_REQUIRED = 411--><!--Device-ResponseCode-LENGTH_REQUIRED = 411-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PRECON_FAILED
 
 ```TypeScript
-PRECON_FAILED
+PRECON_FAILED = 412
 ```
 
-The prerequisite for requesting information from the client is incorrect.
+"Precondition Failed." The precondition in the request is incorrect.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-PRECON_FAILED--><!--Device-ResponseCode-PRECON_FAILED-End-->
+<!--Device-ResponseCode-PRECON_FAILED = 412--><!--Device-ResponseCode-PRECON_FAILED = 412-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## ENTITY_TOO_LARGE
 
 ```TypeScript
-ENTITY_TOO_LARGE
+ENTITY_TOO_LARGE = 413
 ```
 
-The request was rejected because the requested entity was too large for the server to process.
+"Request Entity Too Large." The server refuses to process a request because the request entity is larger than the server is able to process.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-ENTITY_TOO_LARGE--><!--Device-ResponseCode-ENTITY_TOO_LARGE-End-->
+<!--Device-ResponseCode-ENTITY_TOO_LARGE = 413--><!--Device-ResponseCode-ENTITY_TOO_LARGE = 413-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## REQ_TOO_LONG
 
 ```TypeScript
-REQ_TOO_LONG
+REQ_TOO_LONG = 414
 ```
 
-The requested URI is too long (usually a URL) and the server cannot process it.
+"Request-URI Too Long." The Request-URI is too long for the server to process.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-REQ_TOO_LONG--><!--Device-ResponseCode-REQ_TOO_LONG-End-->
+<!--Device-ResponseCode-REQ_TOO_LONG = 414--><!--Device-ResponseCode-REQ_TOO_LONG = 414-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## UNSUPPORTED_TYPE
 
 ```TypeScript
-UNSUPPORTED_TYPE
+UNSUPPORTED_TYPE = 415
 ```
 
-The server is unable to process the requested format.
+"Unsupported Media Type." The server is unable to process the media format in the request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-UNSUPPORTED_TYPE--><!--Device-ResponseCode-UNSUPPORTED_TYPE-End-->
+<!--Device-ResponseCode-UNSUPPORTED_TYPE = 415--><!--Device-ResponseCode-UNSUPPORTED_TYPE = 415-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## RANGE_NOT_SATISFIABLE
 
 ```TypeScript
-RANGE_NOT_SATISFIABLE
+RANGE_NOT_SATISFIABLE = 416
 ```
 
-The server cannot process the requested data range.
+"Range Not Satisfiable." The server cannot serve the requested ranges.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE-End-->
+<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -494,11 +494,11 @@ The server cannot process the requested data range.
 INTERNAL_ERROR = 500
 ```
 
-Internal server error, unable to complete the request.
+"Internal Server Error." The server encounters an unexpected error that prevents it from fulfilling the request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResponseCode-INTERNAL_ERROR = 500--><!--Device-ResponseCode-INTERNAL_ERROR = 500-End-->
 
@@ -507,80 +507,80 @@ Internal server error, unable to complete the request.
 ## NOT_IMPLEMENTED
 
 ```TypeScript
-NOT_IMPLEMENTED
+NOT_IMPLEMENTED = 501
 ```
 
-The server does not support the requested functionality and cannot complete the request.
+"Not Implemented." The server does not support the function required to fulfill the request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-NOT_IMPLEMENTED--><!--Device-ResponseCode-NOT_IMPLEMENTED-End-->
+<!--Device-ResponseCode-NOT_IMPLEMENTED = 501--><!--Device-ResponseCode-NOT_IMPLEMENTED = 501-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## BAD_GATEWAY
 
 ```TypeScript
-BAD_GATEWAY
+BAD_GATEWAY = 502
 ```
 
-The server acting as a gateway or proxy received an invalid request from the remote server.
+"Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-BAD_GATEWAY--><!--Device-ResponseCode-BAD_GATEWAY-End-->
+<!--Device-ResponseCode-BAD_GATEWAY = 502--><!--Device-ResponseCode-BAD_GATEWAY = 502-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## UNAVAILABLE
 
 ```TypeScript
-UNAVAILABLE
+UNAVAILABLE = 503
 ```
 
-Due to overload or system maintenance, the server is temporarily unable to process client requests.
+"Service Unavailable." The server is currently unable to process the request due to a temporary overload or system maintenance.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-UNAVAILABLE--><!--Device-ResponseCode-UNAVAILABLE-End-->
+<!--Device-ResponseCode-UNAVAILABLE = 503--><!--Device-ResponseCode-UNAVAILABLE = 503-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## GATEWAY_TIMEOUT
 
 ```TypeScript
-GATEWAY_TIMEOUT
+GATEWAY_TIMEOUT = 504
 ```
 
-The server acting as a gateway or proxy did not obtain requests from the remote server in a timely manner.
+"Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-GATEWAY_TIMEOUT--><!--Device-ResponseCode-GATEWAY_TIMEOUT-End-->
+<!--Device-ResponseCode-GATEWAY_TIMEOUT = 504--><!--Device-ResponseCode-GATEWAY_TIMEOUT = 504-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## VERSION
 
 ```TypeScript
-VERSION
+VERSION = 505
 ```
 
-The version of the HTTP protocol requested by the server.
+The server does not support the HTTP protocol version used in the client request.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ResponseCode-VERSION--><!--Device-ResponseCode-VERSION-End-->
+<!--Device-ResponseCode-VERSION = 505--><!--Device-ResponseCode-VERSION = 505-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

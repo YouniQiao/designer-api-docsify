@@ -1,8 +1,8 @@
 # USBDeviceInfo（系统接口）
 
-USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#deviceinfo系统接口)。
+USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)。
 
-**继承/实现关系：** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#deviceinfo系统接口)
+**继承/实现关系：** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@ USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemana
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## interfaceDescList

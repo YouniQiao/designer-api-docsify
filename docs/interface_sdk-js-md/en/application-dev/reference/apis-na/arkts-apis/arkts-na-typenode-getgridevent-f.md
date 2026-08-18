@@ -22,7 +22,7 @@ Get the event instance of Grid node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

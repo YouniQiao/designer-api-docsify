@@ -30,7 +30,7 @@ Get the lazy layout direction.
 
 | Type | Description |
 | --- | --- |
-| [LazyLayoutDirection](../../apis-na/arkts-apis/arkts-na-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
 
 ## getViewEnd
 

@@ -1,8 +1,8 @@
 # ECFieldFp
 
-Defines the prime field of the elliptic curve. It is a child class of [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md#ecfield).
+Defines the prime field of the elliptic curve. It is a child class of [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md).
 
-**Inheritance/Implementation:** ECFieldFp extends [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md#ecfield)
+**Inheritance/Implementation:** ECFieldFp extends [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)
 
 **Since:** 23
 
@@ -15,7 +15,6 @@ Defines the prime field of the elliptic curve. It is a child class of [ECField](
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 

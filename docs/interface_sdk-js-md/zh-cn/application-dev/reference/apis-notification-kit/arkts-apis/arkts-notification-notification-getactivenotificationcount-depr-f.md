@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md#getactivenotificationcount)
+**替代接口：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)
 
 <!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void--><!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void-End-->
 
@@ -32,7 +30,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取未删除通知数回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取未删除通知数回调函数。 |
 
 
 ## getActiveNotificationCount
@@ -47,7 +45,7 @@ function getActiveNotificationCount(): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md#getactivenotificationcount)
+**替代接口：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)
 
 <!--Device-notification-function getActiveNotificationCount(): Promise<number>--><!--Device-notification-function getActiveNotificationCount(): Promise<number>-End-->
 

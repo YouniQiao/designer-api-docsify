@@ -134,7 +134,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Same-site policy of the cookie.
 
-**Type:** [WebHttpCookieSameSitePolicy](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
+**Type:** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
 

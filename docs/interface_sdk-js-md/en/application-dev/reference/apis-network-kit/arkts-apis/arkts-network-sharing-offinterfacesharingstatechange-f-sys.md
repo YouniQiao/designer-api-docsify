@@ -6,15 +6,15 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-## off_interfaceSharingStateChange
+## off_interfaceSharingStateChange('interfaceSharingStateChange')
 
 ```TypeScript
 function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceSharingStateInfo>): void
 ```
 
-Unregister a callback for the interface network sharing state change.
+Unsubscribes from network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 9
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -28,8 +28,8 @@ Unregister a callback for the interface network sharing state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'interfaceSharingStateChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | No | the callback function that returns the message. |
+| type | 'interfaceSharingStateChange' | Yes | Event type. The value **interfaceSharingStateChange** indicates a network sharing status change event of the NIC. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | No | Callback used to return the result.<br>**Since:** 11 |
 
 **Error codes:**
 

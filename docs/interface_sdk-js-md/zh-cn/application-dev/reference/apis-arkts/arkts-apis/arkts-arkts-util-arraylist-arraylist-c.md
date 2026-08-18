@@ -11,6 +11,10 @@ ArrayList是一种线性数据结构，底层基于数组实现，解决了固�
 ## 导入模块
 
 ```TypeScript
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

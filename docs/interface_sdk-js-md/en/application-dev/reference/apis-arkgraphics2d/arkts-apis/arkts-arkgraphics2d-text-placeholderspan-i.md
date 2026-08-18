@@ -12,7 +12,6 @@ Describes the placeholder style.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## align

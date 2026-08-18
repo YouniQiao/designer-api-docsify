@@ -12,7 +12,6 @@ Records the number of affected data rows and the result set.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## changed

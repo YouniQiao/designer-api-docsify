@@ -1,8 +1,8 @@
 # CapsuleStyleOptions
 
-胶囊样式选项。 继承自[ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#scaneffectoptions)和[CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)。
+胶囊样式选项。 继承自[ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ borderRadius?: LengthMetrics
 
 Capsule进度条圆角半径（不支持百分比设置）。 默认值：min(width, height) / 2。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** min(width, height) / 2
 

@@ -15,7 +15,6 @@ You can use this module to reference the ability public module class.
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { common } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,7 +24,7 @@ import { common } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AbilityResult](arkts-ability-common-abilityresult-t.md) | Defines the result code and data returned when a started ability is terminated. |
-| [AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | Defines the context environment for the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). It inherits from Context. |
+| [AbilityStageContext](arkts-ability-common-abilitystagecontext-t.md) | Defines the context environment for the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). It inherits from Context. |
 | [AbilityStartCallback](arkts-ability-common-abilitystartcallback-t.md) | Defines the callback invoked to return the UIExtensionAbility startup result. It is usually used as an input parameter in [UIAbilityContext.startAbilityByType](arkts-ability-uiabilitycontext-c.md#startabilitybytype) or [UIExtensionContext.startAbilityByType](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#startabilitybytype) . |
 | [AgentAppInfo](arkts-ability-common-agentappinfo-t.md) | Application-related information for the agent. |
 | [AgentCapabilities](arkts-ability-common-agentcapabilities-t.md) | Capabilities in an AgentCard represent the specific skills, services, and functions that an agent can perform or provide within the system. |
@@ -34,27 +33,27 @@ import { common } from '@kit.AbilityKit';
 | [AgentHostProxy](arkts-ability-common-agenthostproxy-t.md) | The AgentHostProxy is a proxy object for the client connected to the Agent, through which it can communicate with the Agent's connection counterpart. |
 | [AgentProvider](arkts-ability-common-agentprovider-t.md) | The Provider in an AgentCard refers to the organization or platform that issues and manages the agent's credentials. |
 | [AgentSkill](arkts-ability-common-agentskill-t.md) | Skills in an AgentCard represent the specific abilities, expertise, and proficiencies that an agent possesses for performing tasks or solving problems. |
-| [AppServiceExtensionContext](arkts-ability-common-appserviceextensioncontext-t.md) | Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability) . It inherits from Context. |
+| [AppServiceExtensionContext](arkts-ability-common-appserviceextensioncontext-t.md) | Defines the context environment for the [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md) . It inherits from Context. |
 | [ApplicationContext](arkts-ability-common-applicationcontext-t.md) | Defines the application context. It inherits from Context. |
 | [BaseContext](arkts-ability-common-basecontext-t.md) | Defines the parent class of all context types. |
 | [ConnectOptions](arkts-ability-common-connectoptions-t.md) | Defines the connection options. It is used as an input parameter for connection to a background service, to receive the connection status with the background service. |
 | [Context](arkts-ability-common-context-t.md) | Defines the context base class for the [stage model](../../../application-models/ability-terminology.md#stage-model). |
-| [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md) | Defines the context environment for the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability). It inherits from Context. |
+| [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md) | Defines the context environment for the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). It inherits from Context. |
 | [EventHub](arkts-ability-common-eventhub-t.md) | Defines EventHub, which is an event communication mechanism based on the publish-subscribe pattern. |
-| [ExtensionContext](arkts-ability-common-extensioncontext-t.md) | Defines the context environment for the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability). It inherits from Context. |
+| [ExtensionContext](arkts-ability-common-extensioncontext-t.md) | Defines the context environment for the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It inherits from Context. |
 | [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md) | The context of form edit extension. It allows access to formEditExtension-specific resources. |
 | [FormExtensionContext](arkts-ability-common-formextensioncontext-t.md) | The context of form extension. It allows access to formExtension-specific resources. |
 | [LiveFormExtensionContext](arkts-ability-common-liveformextensioncontext-t.md) | The context of live form extension. It allows access to liveFormExtension-specific resources. |
 | [PacMap](arkts-ability-common-pacmap-t.md) | Defines the container of basic data types. |
 | [PhotoEditorExtensionContext](arkts-ability-common-photoeditorextensioncontext-t.md) | The context of an photo editor extension ability. |
-| [UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | Defines the context environment for the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability). It inherits from Context. |
-| [UIExtensionContext](arkts-ability-common-uiextensioncontext-t.md) | Defines the context environment for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability). It inherits from Context. |
+| [UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md) | Defines the context environment for the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md). It inherits from Context. |
+| [UIExtensionContext](arkts-ability-common-uiextensioncontext-t.md) | Defines the context environment for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It inherits from Context. |
 | [UIServiceExtensionConnectCallback](arkts-ability-common-uiserviceextensionconnectcallback-t.md) | Defines the connection callback. It is used as an input parameter for connection to a UIServiceExtensionAbility, to provide the callback for the connection. |
 | [UIServiceProxy](arkts-ability-common-uiserviceproxy-t.md) | Defines the capability for data communication with the UIServiceExtensionAbility. UIServiceExtensionAbility is a special type of ExtensionAbility provided by the system and is used to provide extended capabilities related to floating windows. |
 | [VpnExtensionContext](arkts-ability-common-vpnextensioncontext-t.md) | The context of vpn extension. It allows access to vpnExtension-specific resources. The class of auto startup info. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

@@ -1,12 +1,12 @@
 # Stat
 
-文件具体信息，在调用Stat的方法前，需要先通过[stat()](arkts-corefile-fileio-stat-f.md#stat)方法（同步或异步）来构建一个Stat实例。
+文件具体信息，在调用Stat的方法前，需要先通过[stat()](arkts-corefile-fileio-stat-f.md)方法（同步或异步）来构建一个Stat实例。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md#stat)
+**替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 

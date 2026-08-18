@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { motion } from '@kit.MultimodalAwarenessKit';
-import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offPickupChange
@@ -29,7 +28,7 @@ Unsubscribe to pick up sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md)&gt; | No | Callback used for pick up event unsubscription. <br> If this parameter is not specified, all callbacks of the pick up event are unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md)&gt; | No | Callback used for pick up event unsubscription. <br> If this parameter is not specified, all callbacks of the pick up event are unsubscribed from. |
 
 **Error codes:**
 

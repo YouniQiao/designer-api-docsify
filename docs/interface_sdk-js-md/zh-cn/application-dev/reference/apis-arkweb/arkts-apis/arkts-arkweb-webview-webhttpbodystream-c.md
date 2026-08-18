@@ -1,6 +1,6 @@
 # WebHttpBodyStream
 
-WebHttpBodyStream是HTTP请求体数据流对象，用于在自定义scheme拦截场景中读取POST、PUT等请求的请求体数据。该对象通过WebSchemeHandlerRequest的getHttpBodyStream方 法获取，支持BYTES、FILE、BLOB、CHUNKED类型的数据。开发者可以通过该接口在自定义协议拦截器中读取上行数据，实现对请求体的检视或转发。注意本类中的其他接口需要在 [initialize](#initialize)成功后才能调用。 WebHttpBodyStream与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md#webschemehandlerrequest)配合使用：WebSchemeHandlerRequest代表被拦截 的请求，WebHttpBodyStream代表该请求的HTTP body数据流。通过读取流中的数据，开发者可以获取完整的请求体内容。
+WebHttpBodyStream是HTTP请求体数据流对象，用于在自定义scheme拦截场景中读取POST、PUT等请求的请求体数据。该对象通过WebSchemeHandlerRequest的getHttpBodyStream方 法获取，支持BYTES、FILE、BLOB、CHUNKED类型的数据。开发者可以通过该接口在自定义协议拦截器中读取上行数据，实现对请求体的检视或转发。注意本类中的其他接口需要在 [initialize](#initialize)成功后才能调用。 WebHttpBodyStream与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md)配合使用：WebSchemeHandlerRequest代表被拦截 的请求，WebHttpBodyStream代表该请求的HTTP body数据流。通过读取流中的数据，开发者可以获取完整的请求体内容。
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@ WebHttpBodyStream是HTTP请求体数据流对象，用于在自定义scheme拦�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getPosition

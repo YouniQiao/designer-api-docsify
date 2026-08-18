@@ -88,7 +88,7 @@ Sets the scales of the [NN_QuantParam](capi-neuralnetworkruntime-nn-quantparam.m
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set scales of quant parameters successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set scales of quant parameters. The possible reason for failure<br>         is that the <b>quantParams</b> or <b>scales</b> is nullptr, or <b>quantCount</b> is 0. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set scales of quant parameters successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set scales of quant parameters. The possible reason for failure          is that the <b>quantParams</b> or <b>scales</b> is nullptr, or <b>quantCount</b> is 0.\n |
 
 ### OH_NNQuantParam_SetZeroPoints()
 
@@ -114,7 +114,7 @@ Sets the zero points of the [NN_QuantParam](capi-neuralnetworkruntime-nn-quantpa
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set zero points of quant parameters successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set zero points of quant parameters. The possible reason for failure<br>         is that the <b>quantParams</b> or <b>zeroPoints</b> is nullptr, or <b>quantCount</b> is 0. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set zero points of quant parameters successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set zero points of quant parameters. The possible reason for failure          is that the <b>quantParams</b> or <b>zeroPoints</b> is nullptr, or <b>quantCount</b> is 0.\n |
 
 ### OH_NNQuantParam_SetNumBits()
 
@@ -140,7 +140,7 @@ Sets the number bits of the [NN_QuantParam](capi-neuralnetworkruntime-nn-quantpa
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set num bits of quant parameters successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set num bits of quant parameters. The possible reason for failure<br>         is that the <b>quantParams</b> or <b>numBits</b> is nullptr, or <b>quantCount</b> is 0. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set num bits of quant parameters successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set num bits of quant parameters. The possible reason for failure          is that the <b>quantParams</b> or <b>numBits</b> is nullptr, or <b>quantCount</b> is 0.\n |
 
 ### OH_NNQuantParam_Destroy()
 
@@ -164,7 +164,7 @@ Releases a [NN_QuantParam](capi-neuralnetworkruntime-nn-quantparam.md) instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy quant parameters object successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy quant parameters object. The possible reason for failure<br>         is that the <b>quantParams</b> or <b>quantParams</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy quant parameters object successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy quant parameters object. The possible reason for failure          is that the <b>quantParams</b> or <b>quantParams</b> is nullptr.\n |
 
 ### OH_NNModel_Construct()
 
@@ -207,7 +207,7 @@ Adds a tensor to the model instance.The data node and operator parameters in the
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add tensor to model successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure<br>         is that the <b>model</b> or <b>tensorDesc</b> is nullptr.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add tensor to model successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure          is that the <b>model</b> or <b>tensorDesc</b> is nullptr.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 ### OH_NNModel_SetTensorData()
 
@@ -234,7 +234,7 @@ Sets the tensor value.For tensors with constant values (such as model weights), 
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor data successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data. The possible reason for failure is that the<br>         <b>model</b> or <b>dataBuffer</b> is nullptr, or <b>length</b> is 0, or <b>index</b> is out of range.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor data successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data. The possible reason for failure is that the          <b>model</b> or <b>dataBuffer</b> is nullptr, or <b>length</b> is 0, or <b>index</b> is out of range.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNModel_SetTensorQuantParams()
 
@@ -260,7 +260,7 @@ Sets the quantization parameter of a tensor.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor quant parameters successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor quant parameters. The possible reason for failure<br>         is that the <b>model</b> or <b>quantParam</b> is nullptr, or <b>index</b> is out of range.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor quant parameters. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor quant parameters successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor quant parameters. The possible reason for failure          is that the <b>model</b> or <b>quantParam</b> is nullptr, or <b>index</b> is out of range.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor quant parameters. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNModel_SetTensorType()
 
@@ -286,7 +286,7 @@ Sets the tensor type. See [OH_NN_TensorType](capi-neural-network-runtime-type-h.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor type successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor type. The possible reason for failure<br>         is that the <b>model</b> is nullptr, or <b>index</b> is out of range, or <b>tensorType</b> is invalid.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor type. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor type successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor type. The possible reason for failure          is that the <b>model</b> is nullptr, or <b>index</b> is out of range, or <b>tensorType</b> is invalid.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor type. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNModel_AddOperation()
 
@@ -314,7 +314,7 @@ Adds an operator to a model instance.This method is used to add an operator to a
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add operation to model successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add operation to model. The possible reason for failure is that the<br>         <b>model</b>, <b>paramIndices</b>, <b>inputIndices</b> or <b>outputIndices</b> is nullptr, or parameters are<br>         invalid.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add operation to model. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add operation to model successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add operation to model. The possible reason for failure is that the          <b>model</b>, <b>paramIndices</b>, <b>inputIndices</b> or <b>outputIndices</b> is nullptr, or parameters are          invalid.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add operation to model. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNModel_SpecifyInputsAndOutputs()
 
@@ -340,7 +340,7 @@ Specifies the inputs and outputs of a model.A tensor must be specified as the en
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) specify inputs and outputs successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to specify inputs and outputs. The possible reason for failure is that<br>         the <b>model</b>, <b>inputIndices</b> or <b>outputIndices</b> is nullptr, or parameters are invalid.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to specify inputs and outputs. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) specify inputs and outputs successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to specify inputs and outputs. The possible reason for failure is that          the <b>model</b>, <b>inputIndices</b> or <b>outputIndices</b> is nullptr, or parameters are invalid.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to specify inputs and outputs. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNModel_Finish()
 
@@ -364,7 +364,7 @@ Completes model composition.After the model topology is set up, call this method
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the composition is complete successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure<br>         is that the <b>model</b> is nullptr, or parameters set before are invalid.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure<br>         is that the model is invalid.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the composition is complete successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure          is that the <b>model</b> is nullptr, or parameters set before are invalid.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure          is that the model is invalid.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) composition failed. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 ### OH_NNModel_Destroy()
 
@@ -409,7 +409,7 @@ Queries whether the device supports operators in the model. The support status i
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get available operations successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure<br>         is that the <b>model</b>, <b>isSupported</b> or <b>opCount</b> is nullptr, or <b>isSupported</b> is<br>         not nullptr.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure<br>         is that the model is invalid.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure<br>         is that the <b>deviceID</b> is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get available operations successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure          is that the <b>model</b>, <b>isSupported</b> or <b>opCount</b> is nullptr, or <b>isSupported</b> is          not nullptr.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure          is that the model is invalid.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get available operations. The possible reason for failure          is that the <b>deviceID</b> is invalid.\n |
 
 ### OH_NNModel_AddTensor()
 
@@ -438,7 +438,7 @@ Adds a tensor to a model instance.The data node and operator parameters in the N
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add tensor to model successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure<br>         is that the <b>model</b> or <b>tensor</b> is nullptr.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure<br>         is that the model is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add tensor to model successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure          is that the <b>model</b> or <b>tensor</b> is nullptr.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add tensor to model. The possible reason for failure          is that the model is invalid.\n |
 
 ### OH_NNExecutor_SetInput()
 
@@ -470,7 +470,7 @@ Sets the single input data for a model.This method copies the data whose length 
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set model input successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model input. The possible reason for failure<br>         is that the <b>executor</b>, <b>tensor</b> or <b>dataBuffer</b> is nullptr, or <b>inputIndex</b><br>         is out of range, or <b>length</b> is 0.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model input. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set model input successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model input. The possible reason for failure          is that the <b>executor</b>, <b>tensor</b> or <b>dataBuffer</b> is nullptr, or <b>inputIndex</b>          is out of range, or <b>length</b> is 0.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model input. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 ### OH_NNExecutor_SetOutput()
 
@@ -501,7 +501,7 @@ Sets the buffer for a single output of a model.This method binds the buffer to w
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set model output successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure<br>         is that the <b>executor</b>, <b>tensor</b> or <b>dataBuffer</b> is nullptr, or <b>outputIndex</b><br>         is out of range, or <b>length</b> is 0.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set model output successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure          is that the <b>executor</b>, <b>tensor</b> or <b>dataBuffer</b> is nullptr, or <b>outputIndex</b>          is out of range, or <b>length</b> is 0.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 ### OH_NNExecutor_Run()
 
@@ -529,7 +529,7 @@ Performs inference.Performs end-to-end inference and computing of the model on t
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run model successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run model. The possible reason for failure<br>         is that the <b>executor</b> is nullptr.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure<br>         is that the backend device failed to run model. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run model successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run model. The possible reason for failure          is that the <b>executor</b> is nullptr.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set model output. The possible reason for failure          is that the backend device failed to run model.\n |
 
 ### OH_NNExecutor_AllocateInputMemory()
 
@@ -668,7 +668,7 @@ Specifies the hardware shared memory pointed to by the [OH_NN_Memory](capi-neura
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set input with memory successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set input with memory. The possible reason for failure<br>         is that the <b>executor</b>, <b>tensor</b> or <b>memory</b> is nullptr, or <b>inputIndex</b> is out of range,<br>         or memory length is less than tensor length.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set input with memory. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set input with memory successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set input with memory. The possible reason for failure          is that the <b>executor</b>, <b>tensor</b> or <b>memory</b> is nullptr, or <b>inputIndex</b> is out of range,          or memory length is less than tensor length.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set input with memory. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 ### OH_NNExecutor_SetOutputWithMemory()
 
@@ -698,6 +698,6 @@ Specifies the hardware shared memory pointed to by the [OH_NN_Memory](capi-neura
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set output with memory successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set output with memory. The possible reason for failure<br>         is that the <b>executor</b>, <b>tensor</b> or <b>memory</b> is nullptr, or <b>outputIndex</b> is<br>         out of range, or memory length is less than tensor length.<br>         [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set output with memory. The possible reason for failure<br>         is that the memory error occurred such as failure to create an object. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set output with memory successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set output with memory. The possible reason for failure          is that the <b>executor</b>, <b>tensor</b> or <b>memory</b> is nullptr, or <b>outputIndex</b> is          out of range, or memory length is less than tensor length.\n          [OH_NN_MEMORY_ERROR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set output with memory. The possible reason for failure          is that the memory error occurred such as failure to create an object.\n |
 
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Select](arkts-na-select-select-f.md#select) | Defines Select Component. |
+| [Select](arkts-na-select-select-f.md) | Defines Select Component. |
 
 ### Interfaces
 

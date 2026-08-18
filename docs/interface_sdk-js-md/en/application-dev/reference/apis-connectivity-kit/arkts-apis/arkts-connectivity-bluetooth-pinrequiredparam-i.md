@@ -6,7 +6,7 @@ Describes the bond key param.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md#pinrequiredparam)
+**Substitutes:** [PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md)
 
 <!--Device-bluetooth-interface PinRequiredParam--><!--Device-bluetooth-interface PinRequiredParam-End-->
 

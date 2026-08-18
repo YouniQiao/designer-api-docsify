@@ -53,7 +53,7 @@ Specifies the type of the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tp | string | Yes | The type value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

@@ -20,7 +20,7 @@ Creates a child window. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,9 +32,9 @@ Creates a child window. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**
 
@@ -66,7 +66,7 @@ Creates a child window. This API uses a promise to return the result. The child 
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -78,7 +78,7 @@ Creates a child window. This API uses a promise to return the result. The child 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
 
 **Return value:**
@@ -115,7 +115,7 @@ Creates a system window. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -126,7 +126,7 @@ Creates a system window. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
 
 **Return value:**
@@ -163,7 +163,7 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 
@@ -174,9 +174,9 @@ Creates a system window. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md#configuration). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 | type | WindowType | Yes | Window type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**
 

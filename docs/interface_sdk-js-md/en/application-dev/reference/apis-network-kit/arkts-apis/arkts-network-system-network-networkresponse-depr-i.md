@@ -19,7 +19,7 @@ This module provides the Network Response.
 metered: boolean
 ```
 
-Whether the billing is based on the data volume.
+Whether to charge by traffic. The value **true** means to charge by traffic, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -35,7 +35,7 @@ Whether the billing is based on the data volume.
 type: string
 ```
 
-Network type. The values can be 2G, 3G, 4G, WiFi, or none.
+Network type. The value can be **2G**, **3G**, **4G**, **5G**, **WiFi**, or **none**.
 
 **Type:** string
 

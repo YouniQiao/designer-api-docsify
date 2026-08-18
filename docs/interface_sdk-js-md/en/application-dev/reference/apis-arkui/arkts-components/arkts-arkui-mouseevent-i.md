@@ -1,8 +1,8 @@
 # MouseEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#baseevent).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 8
 

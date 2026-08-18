@@ -17,7 +17,7 @@ declare function fdatasync(fd: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
+**替代接口：** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md)
 
 <!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>--><!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function fdatasync(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
+**替代接口：** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md)
 
 <!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -59,5 +59,5 @@ declare function fdatasync(fd: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 待同步文件的文件描述符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步将文件内容数据同步之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步将文件内容数据同步之后的回调。 |
 

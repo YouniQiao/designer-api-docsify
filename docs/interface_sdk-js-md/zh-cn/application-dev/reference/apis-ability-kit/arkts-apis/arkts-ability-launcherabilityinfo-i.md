@@ -1,6 +1,6 @@
 # LauncherAbilityInfo
 
-桌面应用的Ability信息，可以通过 [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) &lt;!--Del--&gt;或者 [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo系统接口) &lt;!--DelEnd--&gt;获取。
+桌面应用的Ability信息，可以通过 [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md) <!--Del-->或者 [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md) <!--DelEnd-->获取。
 
 **起始版本：** 23
 

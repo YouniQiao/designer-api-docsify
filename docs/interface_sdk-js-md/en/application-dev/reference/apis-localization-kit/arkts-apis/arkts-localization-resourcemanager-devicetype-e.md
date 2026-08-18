@@ -1,6 +1,6 @@
 # DeviceType
 
-Enumerates the device types. &lt;!--RP1--&gt; &lt;!--RP1End--&gt;
+Enumerates the device types. <!--RP1--> <!--RP1End-->
 
 **Since:** 23
 

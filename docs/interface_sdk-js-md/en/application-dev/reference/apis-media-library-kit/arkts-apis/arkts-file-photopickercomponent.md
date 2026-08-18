@@ -17,17 +17,17 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Represents basic image and video information. |
 | [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md) | Sets whether the asset with the specified URI is selected. |
 | [CompletedResult](arkts-medialibrary-file-photopickercomponent-completedresult-c.md) | Defines the information about the Picker's state from the last exit. |
-| [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md#baseiteminfo), adding the parameter **itemType**. Represents basic image and video information. |
+| [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | It inherits from [BaseItemInfo](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**. Represents basic image and video information. |
 | [MaxSelected](arkts-medialibrary-file-photopickercomponent-maxselected-c.md) | Represents the maximum number of media assets that can be selected at a time. |
 | [PhotoBrowserInfo](arkts-medialibrary-file-photopickercomponent-photobrowserinfo-c.md) | Represents information about the photo browser page. |
 | [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md) | Defines an instance used to send data to the **PhotoPickerComponent**. |
 | [PickerError](arkts-medialibrary-file-photopickercomponent-pickererror-c.md) | Describes the function name, error code, and message of the error returned when an error occurs during the use of the **PhotoPickerComponent** component. |
-| [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md) | Describes the configuration of a Picker. It inherits from [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions). |
+| [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md) | Describes the configuration of a Picker. It inherits from [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md). |
 | [PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md) | Describes the information about the preselected files and their corresponding **PhotoPickerComponent** index. |
 | [RecoveryResult](arkts-medialibrary-file-photopickercomponent-recoveryresult-c.md) | RecoveryResult |
 | [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md) | Represents the single-line display mode. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective. |
 | [UnselectableItemInfo](arkts-medialibrary-file-photopickercomponent-unselectableiteminfo-c.md) | UnselectableItemInfo |
-| [UpdatablePickerConfigs](arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md#pickeroptions). |
+| [UpdatablePickerConfigs](arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md). |
 
 ### Structs
 

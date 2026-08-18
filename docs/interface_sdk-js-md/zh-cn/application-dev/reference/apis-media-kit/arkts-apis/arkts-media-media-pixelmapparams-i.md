@@ -11,6 +11,7 @@ Defines the format parameters of the video thumbnail to be obtained.
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## height

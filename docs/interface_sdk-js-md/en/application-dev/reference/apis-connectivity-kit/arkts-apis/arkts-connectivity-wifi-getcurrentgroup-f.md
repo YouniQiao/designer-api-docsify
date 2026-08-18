@@ -21,7 +21,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup)
+**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -48,7 +48,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup)
+**Substitutes:** [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -60,7 +60,7 @@ Obtains information about the current group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pGroupInfo&gt; | Yes |  |
 
 **Examples**
 

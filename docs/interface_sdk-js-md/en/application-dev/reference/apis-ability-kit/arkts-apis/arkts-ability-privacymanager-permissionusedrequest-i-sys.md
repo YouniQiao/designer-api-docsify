@@ -14,7 +14,6 @@ Represents the request for querying permission usage records.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## beginTime

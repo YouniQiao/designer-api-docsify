@@ -2,7 +2,7 @@
 
 Button param used for AlertDialogParamWithOptions.
 
-**Inheritance/Implementation:** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-na-alertdialog-alertdialogbuttonbaseoptions-i.md#alertdialogbuttonbaseoptions)
+**Inheritance/Implementation:** AlertDialogButtonOptions extends [AlertDialogButtonBaseOptions](arkts-na-alertdialog-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 23
 

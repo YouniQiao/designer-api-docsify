@@ -9,16 +9,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## getNetFirewallPolicy
 
 ```TypeScript
-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>
+function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>
 ```
 
-Get firewall policy by userId.
+Queries the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NET_FIREWALL
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
-<!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>--><!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>-End-->
+<!--Device-netFirewall-function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>--><!--Device-netFirewall-function getNetFirewallPolicy(userId: int): Promise<NetFirewallPolicy>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,13 +26,13 @@ Get firewall policy by userId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
+| userId | int | Yes | System user ID, which must exist. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md)&gt; | Current user firewall policy. |
+| Promise&lt;[NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md)&gt; | Promise used to return the result, which is a firewall policy. |
 
 **Error codes:**
 

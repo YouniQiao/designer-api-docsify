@@ -109,7 +109,7 @@ Reset the options for current animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Options. |
+| options | [AnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
 
 **Error codes:**
 

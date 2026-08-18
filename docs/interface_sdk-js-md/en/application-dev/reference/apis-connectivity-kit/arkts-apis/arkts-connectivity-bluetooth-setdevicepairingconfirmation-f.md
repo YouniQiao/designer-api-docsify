@@ -35,7 +35,7 @@ Sets the confirmation of pairing with a certain device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation)
+**Substitutes:** [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH
 

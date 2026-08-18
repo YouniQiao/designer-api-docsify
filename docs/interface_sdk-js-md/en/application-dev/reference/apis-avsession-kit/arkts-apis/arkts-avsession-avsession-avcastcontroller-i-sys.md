@@ -12,7 +12,6 @@ AVCastController definition used to implement a remote control when a cast is co
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## setDisplaySurface
@@ -36,7 +35,7 @@ Set a surface instance to display playing view, used at sink side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id, video player will use this id get a surface instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when set surface completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when set surface completed. |
 
 **Error codes:**
 

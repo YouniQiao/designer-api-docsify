@@ -25,7 +25,7 @@ Unsubscribe to gravity sensor data, {@code SensorId.GRAVITY}.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | No | callback gravity data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | No | callback gravity data. |
 
 **Error codes:**
 

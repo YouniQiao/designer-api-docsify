@@ -17,7 +17,7 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo-system-api)
+**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +31,7 @@ Obtains the widget information provided by all applications on the device. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 
 ## getAllFormsInfo
@@ -46,7 +46,7 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo-system-api)
+**Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

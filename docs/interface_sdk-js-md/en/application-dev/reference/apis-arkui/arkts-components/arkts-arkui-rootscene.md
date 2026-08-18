@@ -28,4 +28,9 @@ Called when the RootScene is used.
 
 ## Summary
 
-- [RootSceneSession](arkts-arkui-rootscenesession-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [RootSceneSession](arkts-arkui-rootscenesession-i.md) | Defines the session of RootScene. |
+

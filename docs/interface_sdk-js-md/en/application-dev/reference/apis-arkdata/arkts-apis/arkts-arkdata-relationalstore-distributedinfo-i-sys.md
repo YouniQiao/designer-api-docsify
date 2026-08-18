@@ -14,7 +14,6 @@ Manages the distributed info of the table.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## flag

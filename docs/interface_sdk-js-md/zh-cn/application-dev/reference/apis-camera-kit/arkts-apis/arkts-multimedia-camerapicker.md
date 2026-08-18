@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## 汇总
@@ -19,7 +20,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [pick](arkts-camera-camerapicker-pick-f.md#pick) | 拉起相机选择器，根据媒体类型进入相应的模式。使用Promise异步回调。 |
+| [pick](arkts-camera-camerapicker-pick-f.md) | 拉起相机选择器，根据媒体类型进入相应的模式。使用Promise异步回调。 |
 
 ### 类
 

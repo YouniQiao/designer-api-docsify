@@ -11,6 +11,7 @@ SIM卡类型和状态。
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## reason

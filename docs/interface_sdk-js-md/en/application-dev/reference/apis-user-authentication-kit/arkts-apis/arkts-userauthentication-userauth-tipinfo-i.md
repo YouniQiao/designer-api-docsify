@@ -6,7 +6,7 @@ Represents the tip information displayed during the authentication, which is use
 
 **Deprecated since:** 11
 
-**Substitutes:** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md#authtipinfo)
+**Substitutes:** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
 
 <!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
 
@@ -16,8 +16,6 @@ Represents the tip information displayed during the authentication, which is use
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 

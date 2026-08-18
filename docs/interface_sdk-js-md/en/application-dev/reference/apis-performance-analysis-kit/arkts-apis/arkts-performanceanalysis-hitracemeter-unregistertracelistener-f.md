@@ -26,7 +26,7 @@ Unregisters the callback function used to notify whether the trace capture is en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) is successfully called. |
+| index | int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md) is successfully called. |
 
 **Return value:**
 

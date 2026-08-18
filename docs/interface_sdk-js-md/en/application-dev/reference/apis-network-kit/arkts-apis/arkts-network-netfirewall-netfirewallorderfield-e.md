@@ -1,6 +1,6 @@
-# NetFirewallOrderField
+# NetFirewallOrderField(Network Firewall)
 
-Pagination query sorting field.
+Enumerates the sorting methods of firewall rules. > **Description** > > [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md) supports only the **ORDER_BY_RULE_NAME** field.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Pagination query sorting field.
 ORDER_BY_RULE_NAME = 1
 ```
 
-Sort rule names, it can be referenced only by the getNetFirewallRules interface.
+Sorting of firewall rules by name.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ Sort rule names, it can be referenced only by the getNetFirewallRules interface.
 ORDER_BY_RECORD_TIME = 100
 ```
 
-Sort the recorded time, it can be referenced only by the getNetFirewallRules interface.
+Sorting of firewall rules by time.
 
 **Since:** 15
 

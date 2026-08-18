@@ -1,6 +1,6 @@
 # UserAuthResult
 
-Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#iauthcallback).
+Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md).
 
 **Since:** 23
 
@@ -12,8 +12,6 @@ Represents the user authentication result. If the authentication is successful, 
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -23,7 +21,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 authType?: UserAuthType
 ```
 
-Authentication type that is actually used when the authentication is successful. If multiple authentication types are specified in the **authType** field of [AuthParam](arkts-userauthentication-userauth-authparam-i.md#authparam), this field identifies the authentication type that the user selects and completes.
+Authentication type that is actually used when the authentication is successful. If multiple authentication types are specified in the **authType** field of [AuthParam](arkts-userauthentication-userauth-authparam-i.md), this field identifies the authentication type that the user selects and completes.
 
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
@@ -59,7 +57,7 @@ Enrolled credential status returned when the authentication is successful. It co
 result: int
 ```
 
-User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows: - **FAIL(12500001)**: The authentication fails. - **CANCELED(12500003)**: The authentication is canceled. - **TIMEOUT(12500004)**: The authentication times out. - **LOCKED(12500009)**: The authenticator is locked. - **NOT_ENROLLED(12500010)**: The credential is not registered. - **PIN_EXPIRED(12500013)**: The screen lock PIN has expired. For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#userauthresultcode).
+User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows: - **FAIL(12500001)**: The authentication fails. - **CANCELED(12500003)**: The authentication is canceled. - **TIMEOUT(12500004)**: The authentication times out. - **LOCKED(12500009)**: The authenticator is locked. - **NOT_ENROLLED(12500010)**: The credential is not registered. - **PIN_EXPIRED(12500013)**: The screen lock PIN has expired. For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md).
 
 **Type:** int
 

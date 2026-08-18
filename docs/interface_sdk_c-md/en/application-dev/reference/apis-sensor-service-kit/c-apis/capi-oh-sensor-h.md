@@ -47,7 +47,7 @@ Obtains information about all sensors on the device.
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.<br> The error code can be:<br> - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the<br> parameter type is incorrect.<br> - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
+| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.  The error code can be:  - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
 
 ### OH_Sensor_Subscribe()
 
@@ -76,7 +76,7 @@ Subscribes to sensor data. The system will report sensor data to the subscriber 
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.<br> The error code can be:<br> - [SENSOR_PERMISSION_DENIED](capi-oh-sensor-type-h.md#sensor_result) if the permission verification fails.<br> - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the<br> parameter type is incorrect.<br> - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
+| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.  The error code can be:  - [SENSOR_PERMISSION_DENIED](capi-oh-sensor-type-h.md#sensor_result) if the permission verification fails.  - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
 
 ### OH_Sensor_Unsubscribe()
 
@@ -104,6 +104,6 @@ Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors,
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.<br> The error code can be:<br> - [SENSOR_PERMISSION_DENIED](capi-oh-sensor-type-h.md#sensor_result) if the permission verification fails.<br> - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the<br> parameter type is incorrect.<br> - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
+| [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) | SENSOR_SUCCESS if the operation is successful; an error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) otherwise.  The error code can be:  - [SENSOR_PERMISSION_DENIED](capi-oh-sensor-type-h.md#sensor_result) if the permission verification fails.  - [SENSOR_PARAMETER_ERROR](capi-oh-sensor-type-h.md#sensor_result) if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - [SENSOR_SERVICE_EXCEPTION](capi-oh-sensor-type-h.md#sensor_result) if the sensor service is abnormal. |
 
 

@@ -19,7 +19,7 @@
 style?: ProgressStyle
 ```
 
-指定进度条样式。 从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md#progresstype)替代。 默认值：ProgressStyle.Linear
+指定进度条样式。 从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。 默认值：ProgressStyle.Linear
 
 **类型：** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 

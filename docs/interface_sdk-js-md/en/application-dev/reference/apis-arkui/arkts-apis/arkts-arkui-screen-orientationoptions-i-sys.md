@@ -1,6 +1,6 @@
 # OrientationOptions (System API)
 
-The parameter of setting orientation
+The parameters for setting orientation
 
 **Since:** 26.0.0
 

@@ -13,6 +13,8 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## activeTime

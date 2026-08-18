@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#weardetection)
+**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 <!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## complete

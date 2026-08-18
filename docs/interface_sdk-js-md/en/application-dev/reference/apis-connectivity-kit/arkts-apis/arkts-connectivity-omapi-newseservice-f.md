@@ -6,7 +6,7 @@
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-## newSEService
+## newSEService('serviceState')
 
 ```TypeScript
 function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService
@@ -18,7 +18,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 **Deprecated since:** 12
 
-**Substitutes:** [createService](arkts-connectivity-omapi-createservice-f.md#createservice)
+**Substitutes:** [createService](arkts-connectivity-omapi-createservice-f.md)
 
 <!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService--><!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService-End-->
 
@@ -29,7 +29,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceState' | Yes | nfc serviceState |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | The callback to return the service. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes | The callback to return the service. |
 
 **Return value:**
 

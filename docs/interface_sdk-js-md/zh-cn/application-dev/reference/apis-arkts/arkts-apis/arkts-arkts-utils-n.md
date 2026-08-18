@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## 汇总
@@ -24,7 +25,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [isSendable](arkts-arkts-utils-issendable-f.md#issendable) | 检查ArkTS值是否为Sendable。 |
+| [isSendable](arkts-arkts-utils-issendable-f.md) | 检查ArkTS值是否为Sendable。 |
 
 ### 类
 

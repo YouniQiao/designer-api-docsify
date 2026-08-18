@@ -1,6 +1,6 @@
 # BlanklessFrameInterpolationInfo
 
-无白屏加载插帧状态信息，作为[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#blanklessloadingparam)中的回调入参使用。
+无白屏加载插帧状态信息，作为[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)中的回调入参使用。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## key

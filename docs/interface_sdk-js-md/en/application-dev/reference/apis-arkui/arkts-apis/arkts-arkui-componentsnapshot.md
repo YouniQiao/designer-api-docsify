@@ -24,7 +24,7 @@ import { componentSnapshot } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getSync](arkts-arkui-componentsnapshot-getsync-f.md#getsync) | Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown. |
+| [getSync](arkts-arkui-componentsnapshot-getsync-f.md) | Take a screenshot of the specified component in synchronous mode, this mode will block the main thread, please use it with caution, the maximum waiting time of the interface is 3s, if it does not return after 3s, an exception will be thrown. |
 
 ### Interfaces
 

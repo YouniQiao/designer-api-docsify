@@ -1,6 +1,6 @@
 # FilterAppStateType (System API)
 
-Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#appstatefilter-system-api) to filter the application state types you want to listen for.
+Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the application state types you want to listen for.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the types of application states to filter. It can be used with [AppSt
 CREATE = 1 << 0
 ```
 
-The application is initializing. It corresponds to the state whose value is **0** in [AppStateData](arkts-ability-appstatedata-c.md#appstatedata).
+The application is initializing. It corresponds to the state whose value is **0** in [AppStateData](arkts-ability-appstatedata-c.md).
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ The application is initializing. It corresponds to the state whose value is **0*
 FOREGROUND = 1 << 1
 ```
 
-The application is running in the foreground. It corresponds to the state whose value is **2** in [AppStateData](arkts-ability-appstatedata-c.md#appstatedata).
+The application is running in the foreground. It corresponds to the state whose value is **2** in [AppStateData](arkts-ability-appstatedata-c.md).
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ The application is running in the foreground. It corresponds to the state whose 
 BACKGROUND = 1 << 2
 ```
 
-The application is running in the background. It corresponds to the state whose value is **4** in [AppStateData](arkts-ability-appstatedata-c.md#appstatedata).
+The application is running in the background. It corresponds to the state whose value is **4** in [AppStateData](arkts-ability-appstatedata-c.md).
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ The application is running in the background. It corresponds to the state whose 
 DESTROY = 1 << 3
 ```
 
-The application has exited. It corresponds to the state whose value is **5** in [AppStateData](arkts-ability-appstatedata-c.md#appstatedata).
+The application has exited. It corresponds to the state whose value is **5** in [AppStateData](arkts-ability-appstatedata-c.md).
 
 **Since:** 23
 

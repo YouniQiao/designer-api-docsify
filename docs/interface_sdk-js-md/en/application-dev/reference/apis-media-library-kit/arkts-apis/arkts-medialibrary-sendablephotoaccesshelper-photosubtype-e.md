@@ -1,6 +1,6 @@
 # PhotoSubtype
 
-Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md#photoasset) types.
+Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types.
 
 **Since:** 14
 

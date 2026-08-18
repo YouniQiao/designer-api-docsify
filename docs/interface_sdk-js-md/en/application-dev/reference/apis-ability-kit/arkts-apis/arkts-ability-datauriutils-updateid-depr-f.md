@@ -17,7 +17,7 @@ Updates the ID in a given URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateId](arkts-ability-datauriutils-updateid-f.md#updateid)
+**Substitutes:** [updateId](arkts-ability-datauriutils-updateid-f.md)
 
 <!--Device-dataUriUtils-function updateId(uri: string, id: number): string--><!--Device-dataUriUtils-function updateId(uri: string, id: number): string-End-->
 

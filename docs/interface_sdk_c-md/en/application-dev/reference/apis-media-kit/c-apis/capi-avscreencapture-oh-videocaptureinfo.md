@@ -21,7 +21,7 @@ The struct describes the video capture information. When **videoFrameWidth** and
 | Name | Description |
 | -- | -- |
 | uint64_t displayId | Display id, should be set while captureMode = CAPTURE_SPECIFIED_SCREEN |
-| int32_t *missionIDs | The  ids of mission, should be set while captureMode = CAPTURE_SPECIFIED_WINDOW |
+| int32_t *missionIDs | The ids of mission, should be set while captureMode = CAPTURE_SPECIFIED_WINDOW |
 | int32_t missionIDsLen | Mission ids length, should be set while captureMode = CAPTURE_SPECIFIED_WINDOW |
 | int32_t videoFrameWidth | Video frame width of avscreeencapture, in px |
 | int32_t videoFrameHeight | Video frame height of avscreeencapture, in px |

@@ -1,6 +1,6 @@
 # AudioRenderer
 
-提供音频渲染的相关接口。 在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)获取AudioRenderer实例。 > **说明：** > > - 本Interface首批接口从API version 8开始支持。
+提供音频渲染的相关接口。 在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md)获取AudioRenderer实例。 > **说明：** > > - 本Interface首批接口从API version 8开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## drain
@@ -31,7 +33,7 @@ drain(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当检查缓冲区是否已被耗尽成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当检查缓冲区是否已被耗尽成功，err为undefined，否则为错误对象。 |
 
 ## drain
 
@@ -59,7 +61,7 @@ drain(): Promise<void>
 flush(): Promise<void>
 ```
 
-清空缓冲区（[AudioState](arkts-audio-audio-audiostate-e.md#audiostate)为STATE_RUNNING、STATE_PAUSED、STATE_STOPPED状态下可用）。使用Promise异步回调。
+清空缓冲区（[AudioState](arkts-audio-audio-audiostate-e.md)为STATE_RUNNING、STATE_PAUSED、STATE_STOPPED状态下可用）。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -97,7 +99,7 @@ getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | 是 | 回调函数。当获取当前音效模式成功，err为undefined，data为获取到的当前音效模式；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | 是 | 回调函数。当获取当前音效模式成功，err为undefined，data为获取到的当前音效模式；否则为错误对象。 |
 
 ## getAudioEffectMode
 
@@ -137,7 +139,7 @@ getAudioStreamId(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取音频流id成功，err为undefined，data为获取到的音频流id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取音频流id成功，err为undefined，data为获取到的音频流id；否则为错误对象。 |
 
 ## getAudioStreamId
 
@@ -197,7 +199,7 @@ getAudioTime(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取时间戳成功，err为undefined，data为获取到的时间戳；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取时间戳成功，err为undefined，data为获取到的时间戳；否则为错误对象。 |
 
 ## getAudioTime
 
@@ -309,7 +311,7 @@ getBufferSize(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。 <br>单位为字节。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。 <br>单位为字节。 |
 
 ## getBufferSize
 
@@ -369,7 +371,7 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频流输出设备信息成功，err为undefined，data为获取到的音频流输出设备信息； 否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频流输出设备信息成功，err为undefined，data为获取到的音频流输出设备信息； 否则为错误对象。 |
 
 ## getCurrentOutputDevices
 
@@ -485,7 +487,7 @@ getMaxStreamVolume(callback: AsyncCallback<double>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMaxStreamVolume
 
@@ -545,7 +547,7 @@ getMinStreamVolume(callback: AsyncCallback<double>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMinStreamVolume
 
@@ -609,7 +611,7 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | 是 | 回调函数。当获取当前渲染速率成功，err为undefined，data为获取到的当前渲染速率；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | 是 | 回调函数。当获取当前渲染速率成功，err为undefined，data为获取到的当前渲染速率；否则为错误对象。 |
 
 ## getRenderRate
 
@@ -677,7 +679,7 @@ getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器的信息成功，err为undefined，data为获取到的音频渲染器的信息；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器的信息成功，err为undefined，data为获取到的音频渲染器的信息；否则为错误对 象。 |
 
 ## getRendererInfo
 
@@ -777,7 +779,7 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | 是 | 回调函数。当获取音频流信息成功，err为undefined，data为获取到的音频流信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | 是 | 回调函数。当获取音频流信息成功，err为undefined，data为获取到的音频流信息；否则为错误对象。 |
 
 ## getStreamInfo
 
@@ -837,7 +839,7 @@ getUnderflowCount(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取当前播放音频流的欠载音频帧数量成功，err为undefined，data为获取到的当前播放音频流的欠载音频帧数量；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当获取当前播放音频流的欠载音频帧数量成功，err为undefined，data为获取到的当前播放音频流的欠载音频帧数量；否则为错误对 象。 |
 
 ## getUnderflowCount
 
@@ -917,7 +919,7 @@ Unsubscribes audio interrupt events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 否 | Callback used to listen for interrupt callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 否 | Callback used to listen for interrupt callback. |
 
 **错误码：**
 
@@ -943,7 +945,7 @@ Unsubscribes from mark reached events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
 
 ## offOutputDeviceChange
 
@@ -963,7 +965,7 @@ Unsubscribes output device change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -989,7 +991,7 @@ Unsubscribes output device change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -1015,7 +1017,7 @@ Unsubscribes from period reached events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Callback invoked when the event is triggered. |
 
 ## offStateChange
 
@@ -1035,7 +1037,7 @@ Unsubscribes audio state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | Callback invoked when state change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | Callback invoked when state change. |
 
 **错误码：**
 
@@ -1069,7 +1071,7 @@ Unsubscribes audio data callback.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_audioInterrupt
+## off_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
@@ -1088,7 +1090,7 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 事件回调类型，支持的事件为'audioInterrupt'，当取消监听音频中断事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 否 | 回调函数，返回中断事件信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 否 | 回调函数，返回中断事件信息。 |
 
 **错误码：**
 
@@ -1096,7 +1098,7 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_markReach
+## off_markReach('markReach')
 
 ```TypeScript
 off(type: 'markReach', callback?: Callback<long>): void
@@ -1115,9 +1117,9 @@ off(type: 'markReach', callback?: Callback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'markReach' | 是 | 事件回调类型，支持的事件为'markReach'，当取消监听标记到达事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | 回调函数，返回frame参数的值。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | 回调函数，返回frame参数的值。<br>**起始版本：** 18 |
 
-## off_outputDeviceChange
+## off_outputDeviceChange('outputDeviceChange')
 
 ```TypeScript
 off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
@@ -1136,7 +1138,7 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 | 事件回调类型，支持的事件为'outputDeviceChange'，当取消监听音频输出设备变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回当前音频流的输出设备描述信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回当前音频流的输出设备描述信息。 |
 
 **错误码：**
 
@@ -1145,7 +1147,7 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_outputDeviceChangeWithInfo
+## off_outputDeviceChangeWithInfo('outputDeviceChangeWithInfo')
 
 ```TypeScript
 off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void
@@ -1164,7 +1166,7 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | 是 | 事件回调类型，支持的事件为'outputDeviceChangeWithInfo'，当取消监听音频流输出设备变化及原因事件时，触发该 事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 否 | 回调函数，返回当前音频流的输出设备描述信息及变化原因。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 否 | 回调函数，返回当前音频流的输出设备描述信息及变化原因。 |
 
 **错误码：**
 
@@ -1173,7 +1175,7 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_periodReach
+## off_periodReach('periodReach')
 
 ```TypeScript
 off(type: 'periodReach', callback?: Callback<long>): void
@@ -1192,9 +1194,9 @@ off(type: 'periodReach', callback?: Callback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'periodReach' | 是 | 事件回调类型，支持的事件为'periodReach'，当取消监听标记到达事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | 回调函数，返回frame参数的值。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | 回调函数，返回frame参数的值。<br>**起始版本：** 18 |
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange', callback?: Callback<AudioState>): void
@@ -1213,7 +1215,7 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件回调类型，支持的事件为'stateChange'，当取消监听状态变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | 回调函数，返回当前音频的状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 | 回调函数，返回当前音频的状态。 |
 
 **错误码：**
 
@@ -1221,7 +1223,7 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_writeData
+## off_writeData('writeData')
 
 ```TypeScript
 off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
@@ -1240,7 +1242,7 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当取消监听音频数据写入回调事件时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#audiodatacallbackresult)。<br>**起始版本：** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -1267,7 +1269,7 @@ Listens for audio interrupt events. This method uses a callback to get interrupt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | Callback used to listen for interrupt callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | Callback used to listen for interrupt callback. |
 
 **错误码：**
 
@@ -1294,7 +1296,7 @@ Subscribes to mark reached events. When the number of frames rendered reaches th
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | frame | long | 是 | Number of frames to trigger the event. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
 
 ## onOutputDeviceChange
 
@@ -1314,7 +1316,7 @@ Subscribes output device change event callback. The event is triggered when outp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to listen device change event. |
 
 **错误码：**
 
@@ -1340,7 +1342,7 @@ Subscribes output device change event callback. The event is triggered when outp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 是 | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 是 | Callback used to listen device change event. |
 
 **错误码：**
 
@@ -1367,7 +1369,7 @@ Subscribes to period reached events. When the period of frame rendering reaches 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | frame | long | 是 | Period during which frame rendering is listened. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback invoked when the event is triggered. |
 
 ## onStateChange
 
@@ -1387,7 +1389,7 @@ Subscribes audio state change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | Callback invoked when state change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | Callback invoked when state change. |
 
 ## onWriteData
 
@@ -1415,13 +1417,13 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_audioInterrupt
+## on_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。 AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。 调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent)。建议应用根据 InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。 AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。 调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据 InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 9
 
@@ -1434,7 +1436,7 @@ on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | 回调函数，返回中断事件信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 | 回调函数，返回中断事件信息。 |
 
 **错误码：**
 
@@ -1443,7 +1445,7 @@ on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_markReach
+## on_markReach('markReach')
 
 ```TypeScript
 on(type: 'markReach', frame: long, callback: Callback<long>): void
@@ -1463,9 +1465,9 @@ on(type: 'markReach', frame: long, callback: Callback<long>): void
 | --- | --- | --- | --- |
 | type | 'markReach' | 是 | 事件回调类型，支持的事件为'markReach'，当渲染的帧数到达frame参数的值时，触发该事件。 |
 | frame | long | 是 | 触发事件的帧数。该值必须大于0。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | 回调函数，返回frame参数的值。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | 回调函数，返回frame参数的值。 |
 
-## on_outputDeviceChange
+## on_outputDeviceChange('outputDeviceChange')
 
 ```TypeScript
 on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
@@ -1484,7 +1486,7 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 | 事件回调类型，支持的事件为'outputDeviceChange'，当音频输出设备发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回当前音频流的输出设备描述信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回当前音频流的输出设备描述信息。 |
 
 **错误码：**
 
@@ -1493,7 +1495,7 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_outputDeviceChangeWithInfo
+## on_outputDeviceChangeWithInfo('outputDeviceChangeWithInfo')
 
 ```TypeScript
 on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void
@@ -1512,7 +1514,7 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | 是 | 事件回调类型，支持的事件为'outputDeviceChangeWithInfo'，当音频输出设备发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 是 | 回调函数，返回当前音频流的输出设备描述信息及变化原因。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 是 | 回调函数，返回当前音频流的输出设备描述信息及变化原因。 |
 
 **错误码：**
 
@@ -1521,7 +1523,7 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_periodReach
+## on_periodReach('periodReach')
 
 ```TypeScript
 on(type: 'periodReach', frame: long, callback: Callback<long>): void
@@ -1541,9 +1543,9 @@ on(type: 'periodReach', frame: long, callback: Callback<long>): void
 | --- | --- | --- | --- |
 | type | 'periodReach' | 是 | 事件回调类型，支持的事件为'periodReach'，当渲染的帧数达到frame参数的值时，触发该事件。 |
 | frame | long | 是 | 触发事件的帧数。该值必须大于 0。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | 回调函数，返回frame参数的值。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | 回调函数，返回frame参数的值。 |
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: Callback<AudioState>): void
@@ -1562,9 +1564,9 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件回调类型，支持的事件为'stateChange'，当AudioRenderer的状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | 回调函数，返回当前音频的状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 | 回调函数，返回当前音频的状态。 |
 
-## on_writeData
+## on_writeData('writeData')
 
 ```TypeScript
 on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
@@ -1583,7 +1585,7 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当需要写入音频数据时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#audiodatacallbackresult)。<br>**起始版本：** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md)。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -1610,7 +1612,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停渲染成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停渲染成功，err为undefined，否则为错误对象。 |
 
 ## pause
 
@@ -1650,7 +1652,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放音频渲染器成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放音频渲染器成功，err为undefined，否则为错误对象。 |
 
 ## release
 
@@ -1691,7 +1693,7 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md) | 是 | 音效模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置当前音效模式成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置当前音效模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1767,7 +1769,7 @@ setChannelBlendMode(mode: ChannelBlendMode): void
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-设置默认发声设备。使用Promise异步回调。 > **说明：** > > - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md#streamusage)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。 > > - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设 > 备。
+设置默认发声设备。使用Promise异步回调。 > **说明：** > > - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。 > > - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设 > 备。
 
 **起始版本：** 23
 
@@ -1816,7 +1818,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
-| behavior | int | 是 | 用于设置音频会话行为。 <br>该参数可以是单个标志，也可以是多个标志的按位OR组合。 <br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags)中定义的标志。 |
+| behavior | int | 是 | 用于设置音频会话行为。 <br>该参数可以是单个标志，也可以是多个标志的按位OR组合。 <br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -1844,7 +1846,7 @@ setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | 是 | 焦点模型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置应用的焦点模型成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置应用的焦点模型成功，err为undefined，否则为错误对象。 |
 
 ## setInterruptMode
 
@@ -1905,7 +1907,7 @@ setInterruptModeSync(mode: InterruptMode): void
 setLoudnessGain(loudnessGain: double): Promise<void>
 ```
 
-设置播放响度。使用Promise异步回调。 > **说明：** > > - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusage)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusage)或 > [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#streamusage)的音频流。 > > - 该接口不支持高清通路的响度设置。 > > - 由于音频框架与硬件之间存在缓冲区，响度调节实际生效存在延迟，时长取决于缓冲区长度。 > > - 建议在不同音频开始播放前预先设置响度，以实现最佳均衡效果。
+设置播放响度。使用Promise异步回调。 > **说明：** > > - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md)或 > [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md)的音频流。 > > - 该接口不支持高清通路的响度设置。 > > - 由于音频框架与硬件之间存在缓冲区，响度调节实际生效存在延迟，时长取决于缓冲区长度。 > > - 建议在不同音频开始播放前预先设置响度，以实现最佳均衡效果。
 
 **起始版本：** 23
 
@@ -1930,7 +1932,7 @@ setLoudnessGain(loudnessGain: double): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#streamusagemusic), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#streamusagemovie) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#streamusageaudiobook). |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#stream_usage_music), [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#stream_usage_movie) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#stream_usage_audiobook). |
 
 ## setRenderRate
 
@@ -1955,7 +1957,7 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 是 | 渲染的速率。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音频渲染速率成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音频渲染速率成功，err为undefined，否则为错误对象。 |
 
 ## setRenderRate
 
@@ -2053,7 +2055,7 @@ setVolume(volume: double, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volume | double | 是 | 音量值范围为[0.0, 1.0]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置应用的音量成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置应用的音量成功，err为undefined，否则为错误对象。 |
 
 ## setVolume
 
@@ -2127,7 +2129,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## start
 
@@ -2167,7 +2169,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止渲染成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止渲染成功，err为undefined，否则为错误对象。 |
 
 ## stop
 
@@ -2212,7 +2214,7 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 要写入缓冲区的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当写入缓冲区成功，err为undefined，data为获取到的写入的字节数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当写入缓冲区成功，err为undefined，data为获取到的写入的字节数；否则为错误对象。 |
 
 ## write
 

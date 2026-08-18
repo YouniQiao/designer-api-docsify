@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getRotationMatrix
@@ -24,7 +25,7 @@ function getRotationMatrix(rotationVector: Array<double>, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;double&gt; | 是 | 旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回3*3旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回3*3旋转矩阵。 |
 
 **错误码：**
 
@@ -182,7 +183,7 @@ function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>, c
 | --- | --- | --- | --- |
 | gravity | Array&lt;double&gt; | 是 | 重力矢量。 |
 | geomagnetic | Array&lt;double&gt; | 是 | 地磁矢量。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 | 回调函数，异步返回旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 | 回调函数，异步返回旋转矩阵。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 ```
 
-Sets the update policy. After the setting is successful, the system performs OTA updates based on the specified policy type. Different policy types correspond to different update behaviors. In intranet updates, call [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages) to notify the system of the update packages and then call this API to set the upgrade policy.
+Sets the update policy. After the setting is successful, the system performs OTA updates based on the specified policy type. Different policy types correspond to different update behaviors. In intranet updates, call [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md) to notify the system of the update packages and then call this API to set the upgrade policy.
 
 **Since:** 12
 

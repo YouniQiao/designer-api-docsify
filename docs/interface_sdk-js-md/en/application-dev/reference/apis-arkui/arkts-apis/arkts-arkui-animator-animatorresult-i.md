@@ -20,7 +20,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 cancel(): void
 ```
 
-Cancels the animation, triggering the [onCancel](../arkts-components/arkts-arkui-imageframeinfo-i.md#imageframeinfo) callback. This API is functionally identical to [finish](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
+Cancels the animation, triggering the [onCancel](../arkts-components/arkts-arkui-imageframeinfo-i.md) callback. This API is functionally identical to [finish](#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
 
 **Since:** 6
 
@@ -44,7 +44,7 @@ animator.cancel();
 finish(): void
 ```
 
-Ends the animation, triggering the [onFinish](../arkts-components/arkts-arkui-imageframeinfo-i.md#imageframeinfo) callback.
+Ends the animation, triggering the [onFinish](../arkts-components/arkts-arkui-imageframeinfo-i.md) callback.
 
 **Since:** 6
 
@@ -130,7 +130,7 @@ Resets the animation parameters of this animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Error codes:**
 
@@ -184,7 +184,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Resets the animation parameters of this animator. Compared with [reset](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md#reset), this API accepts parameters of the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#simpleanimatoroptions) type.
+Resets the animation parameters of this animator. Compared with [reset](#reset), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -200,7 +200,7 @@ Resets the animation parameters of this animator. Compared with [reset](../../ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Error codes:**
 
@@ -340,7 +340,7 @@ Updates this animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Examples**
 
@@ -396,7 +396,7 @@ Called when this animation is finished.
 onFrame: (progress: number) => void
 ```
 
-Called when a frame is received. **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md#animatoroptions). Default value range: [0, 1]
+Called when a frame is received. **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md). Default value range: [0, 1]
 
 **Type:** (progress: number) =&gt; void
 

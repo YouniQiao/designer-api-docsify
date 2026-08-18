@@ -23,7 +23,7 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 
 The ContentItem.
 
-**Type:** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
+**Type:** [ContentItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ The ContentItem.
 
 The OperateItem.
 
-**Type:** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
+**Type:** [OperateItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **Since:** 26.0.0
 

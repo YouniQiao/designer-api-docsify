@@ -29,6 +29,6 @@ Plugin component push method used to send the information of the template it pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [PushParameterForStage](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Plugin component push event callback. |
+| param | [PushParameterForStage](arkts-na-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Plugin component push event callback. |
 

@@ -6,7 +6,7 @@ Enum for location privacy type
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#locationprivacytype-system-api)
+**Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -56,7 +56,7 @@ CORE_LOCATION
 
 **Deprecated since:** 9
 
-**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#corelocation)
+**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
 
 <!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 

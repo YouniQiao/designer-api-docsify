@@ -11,6 +11,7 @@ WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getFrameUrl

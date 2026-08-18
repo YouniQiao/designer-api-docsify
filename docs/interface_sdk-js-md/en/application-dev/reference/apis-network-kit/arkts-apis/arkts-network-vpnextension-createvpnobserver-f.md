@@ -12,7 +12,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function createVpnObserver(): VpnObserver
 ```
 
-Create a VPN observer.
+Creates a VPN observer object. It is used to listen for VPN-related events.
 
 **Since:** 26.0.0
 
@@ -26,5 +26,5 @@ Create a VPN observer.
 
 | Type | Description |
 | --- | --- |
-| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | The VpnObserver instance. |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | VPN observer object. |
 

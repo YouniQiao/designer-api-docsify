@@ -1,6 +1,6 @@
 # CertType
 
-Enum for certificate types
+Enumerates certificate types.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enum for certificate types
 PEM = 'PEM'
 ```
 
-PEM format certificate
+PEM certificate.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ PEM format certificate
 DER = 'DER'
 ```
 
-DER format certificate
+DER certificate.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ DER format certificate
 P12 = 'P12'
 ```
 
-P12 format certificate
+P12 certificate.
 
 **Since:** 23
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## deleteApn
@@ -28,7 +29,7 @@ function deleteApn(admin: Want, apnId: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnId | string | 是 | 需要删除的APN ID。设置后系统将移除该APN配置，对应的接入点将不再可用。可以通过 [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn)获取设备APN信息。 |
+| apnId | string | 是 | 需要删除的APN ID。设置后系统将移除该APN配置，对应的接入点将不再可用。可以通过 [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md)获取设备APN信息。 |
 
 **错误码：**
 

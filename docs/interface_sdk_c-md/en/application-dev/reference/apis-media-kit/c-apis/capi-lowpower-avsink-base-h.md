@@ -54,7 +54,7 @@ Appends data from an OH_AVBuffer instance to an OH_AVSamplesBuffer instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br> [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid.<br> AV_ERR_NO_MEMORY: The framePacketBuffer does not have sufficient remaining capacity to append an OH_AVBuffer.<br> AV_ERR_UNKNOWN: An unknown error occurs. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.  [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): An input parameter is nullptr or invalid.  AV_ERR_NO_MEMORY: The framePacketBuffer does not have sufficient remaining capacity to append an OH_AVBuffer.  AV_ERR_UNKNOWN: An unknown error occurs. |
 
 ### OH_AVSamplesBuffer_GetRemainedCapacity()
 
@@ -78,7 +78,7 @@ Obtains the remaining capacity available in an OH_AVSamplesBuffer instance.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Remaining capacity available in the OH_AVSamplesBuffer instance, in bytes. If sampleBuffer or data<br> pointer is nullptr or invalid, 3 is returned. |
+| int32_t | Remaining capacity available in the OH_AVSamplesBuffer instance, in bytes. If sampleBuffer or data  pointer is nullptr or invalid, 3 is returned. |
 
 ### OH_LowPowerAVSink_GetCapability()
 
@@ -96,6 +96,6 @@ Obtains the capability of the low-power player. It mainly helps you find out wha
 
 | Type | Description |
 | -- | -- |
-| [OH_LowPowerAVSink_Capability *](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability: The low-power player is supported.<br> nullptr: The low-power player is not supported or the capability fails to be obtained. |
+| [OH_LowPowerAVSink_Capability *](capi-avsinkbase-oh-lowpoweravsink-capability.md) | OH_LowPowerAVSink_Capability: The low-power player is supported.  nullptr: The low-power player is not supported or the capability fails to be obtained. |
 
 

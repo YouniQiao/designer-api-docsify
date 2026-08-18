@@ -31,7 +31,7 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
 
 **Error codes:**
 

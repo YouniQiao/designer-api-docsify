@@ -12,7 +12,6 @@ Defines a struct for statistics of device-cloud upload and download tasks of a d
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## download

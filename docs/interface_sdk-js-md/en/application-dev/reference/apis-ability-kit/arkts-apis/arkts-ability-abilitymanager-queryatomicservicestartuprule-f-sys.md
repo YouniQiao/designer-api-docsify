@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## queryAtomicServiceStartupRule
@@ -13,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
+Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
 
 **Since:** 23
 
@@ -29,7 +28,7 @@ Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-abilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**

@@ -52,4 +52,9 @@ Set the value.
 
 ## Summary
 
-- [EllipseOptions](arkts-arkui-ellipseoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | Describes the options of the ellipse. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability. |
+

@@ -2,7 +2,7 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#absalbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md)
 
 **Since:** 12
 

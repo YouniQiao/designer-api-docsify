@@ -23,7 +23,7 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
 
-**Type:** [ArcButtonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
 

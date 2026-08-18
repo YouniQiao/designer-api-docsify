@@ -19,7 +19,7 @@ import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFi
 | [ThreeFingersTap](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) | Defines a three-finger tap gesture event. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -34,7 +34,7 @@ import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFi
 | [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md) | Enumerates gesture event types. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

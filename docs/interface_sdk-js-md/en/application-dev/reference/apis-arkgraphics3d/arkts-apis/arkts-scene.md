@@ -11,7 +11,7 @@
 | [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md) | param config for soft shadow, control the algorithm type and its configuration |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -29,18 +29,18 @@
 | [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md) | Describes the rendering configuration. |
 | [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | Defines the context of all rendering resources. Multiple scenes created within the same render context can share rendering resources. |
 | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | Describes the rendering parameters. |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md#scene)) that share RenderContext. |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share RenderContext. |
 | [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties. |
 | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Describes the scene node parameters, which are used to provide the name and path in the scene node tree. |
 | [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | Provides APIs for creating resources, such as cameras and light sources, used in 3D scenes. This class inherits from RenderResourceFactory. |
 | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Describes the scene resource parameters (name and uri), which are used to provide the name of a scene resource and the path of the resource file required in the 3D scene. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i-sys.md) | Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md#scene)) that share RenderContext. |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i-sys.md) | Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share RenderContext. |
 | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Scene load parameters object, used to specify additional configuration options when loading 3D model resources. A typical use case is loading an embedded glb model from an MP4 container file. |
 <!--DelEnd-->
 

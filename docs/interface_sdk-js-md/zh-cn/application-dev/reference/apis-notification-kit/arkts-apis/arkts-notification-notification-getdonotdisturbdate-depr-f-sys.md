@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate系统接口)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,7 +34,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate
@@ -51,7 +49,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate系统接口)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -80,7 +78,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate系统接口)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -95,7 +93,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate
@@ -110,7 +108,7 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getdonotdisturbdate系统接口)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

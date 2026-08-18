@@ -39,7 +39,7 @@ onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback
 
 Callback when the current album is deleted
 
-**Type:** [CurrentAlbumDeletedCallback](arkts-medialibrary-currentalbumdeletedcallback-t.md)
+**Type:** [CurrentAlbumDeletedCallback](../../apis-na/arkts-apis/arkts-na-currentalbumdeletedcallback-t.md)
 
 **Since:** 13
 
@@ -93,7 +93,7 @@ onError?: ErrorCallback
 
 Callback when an error occurs in the PhotoPickerComponent.
 
-**Type:** [ErrorCallback](arkts-medialibrary-errorcallback-t.md)
+**Type:** [ErrorCallback](../../apis-na/arkts-apis/arkts-na-errorcallback-t.md)
 
 **Since:** 23
 
@@ -113,7 +113,7 @@ onExceedMaxSelected?: ExceedMaxSelectedCallback
 
 Callback when exceed max selected
 
-**Type:** [ExceedMaxSelectedCallback](arkts-medialibrary-exceedmaxselectedcallback-t.md)
+**Type:** [ExceedMaxSelectedCallback](../../apis-na/arkts-apis/arkts-na-exceedmaxselectedcallback-t.md)
 
 **Since:** 13
 
@@ -167,7 +167,7 @@ onItemClickedNotify?: ItemClickedNotifyCallback
 
 Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback. Must be used in conjunction with the addData method.
 
-**Type:** [ItemClickedNotifyCallback](arkts-medialibrary-itemclickednotifycallback-t.md)
+**Type:** [ItemClickedNotifyCallback](../../apis-na/arkts-apis/arkts-na-itemclickednotifycallback-t.md)
 
 **Since:** 23
 
@@ -187,7 +187,7 @@ onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback
 
 Callback when moving photo badge state changed
 
-**Type:** [MovingPhotoBadgeStateChangedCallback](arkts-medialibrary-movingphotobadgestatechangedcallback-t.md)
+**Type:** [MovingPhotoBadgeStateChangedCallback](../../apis-na/arkts-apis/arkts-na-movingphotobadgestatechangedcallback-t.md)
 
 **Since:** 22
 
@@ -205,7 +205,7 @@ onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback
 
 Callback when photo browser change start (upon user swipe release), will return targetPhotoInfo
 
-**Type:** [PhotoBrowserChangeStartCallback](arkts-medialibrary-photobrowserchangestartcallback-t.md)
+**Type:** [PhotoBrowserChangeStartCallback](../../apis-na/arkts-apis/arkts-na-photobrowserchangestartcallback-t.md)
 
 **Since:** 23
 
@@ -243,7 +243,7 @@ onPhotoBrowserZoom?: PhotoBrowserZoomCallback
 
 Callback when the zoom scale changes during large image browsing.
 
-**Type:** [PhotoBrowserZoomCallback](arkts-medialibrary-photobrowserzoomcallback-t.md)
+**Type:** [PhotoBrowserZoomCallback](../../apis-na/arkts-apis/arkts-na-photobrowserzoomcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -301,7 +301,7 @@ onPinchGridSwitched?: PinchGridSwitchedCallback
 
 Callback when the grid's level is switched via pinch gesture.
 
-**Type:** [PinchGridSwitchedCallback](arkts-medialibrary-pinchgridswitchedcallback-t.md)
+**Type:** [PinchGridSwitchedCallback](../../apis-na/arkts-apis/arkts-na-pinchgridswitchedcallback-t.md)
 
 **Since:** 23
 
@@ -321,7 +321,7 @@ onScrollStopAtEnd?: ScrollStopAtEndCallback
 
 Callback when the grid stops scrolling at the ending position.
 
-**Type:** [ScrollStopAtEndCallback](arkts-medialibrary-scrollstopatendcallback-t.md)
+**Type:** [ScrollStopAtEndCallback](../../apis-na/arkts-apis/arkts-na-scrollstopatendcallback-t.md)
 
 **Since:** 23
 
@@ -341,7 +341,7 @@ onScrollStopAtStart?: ScrollStopAtStartCallback
 
 Callback when the grid stops scrolling at the starting position.
 
-**Type:** [ScrollStopAtStartCallback](arkts-medialibrary-scrollstopatstartcallback-t.md)
+**Type:** [ScrollStopAtStartCallback](../../apis-na/arkts-apis/arkts-na-scrollstopatstartcallback-t.md)
 
 **Since:** 23
 
@@ -379,7 +379,7 @@ onSelectedItemsDeleted?: ItemsDeletedCallback
 
 Callback when selected items are deleted
 
-**Type:** [ItemsDeletedCallback](arkts-medialibrary-itemsdeletedcallback-t.md)
+**Type:** [ItemsDeletedCallback](../../apis-na/arkts-apis/arkts-na-itemsdeletedcallback-t.md)
 
 **Since:** 13
 
@@ -436,7 +436,7 @@ Callback when the video play state changed
 
 PickerController
 
-**Type:** [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md)
+**Type:** [PickerController](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercontroller-c.md)
 
 **Since:** 12
 
@@ -454,7 +454,7 @@ pickerOptions?: PickerOptions
 
 PickerOptions
 
-**Type:** [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md)
+**Type:** [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md)
 
 **Since:** 12
 

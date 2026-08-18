@@ -109,7 +109,7 @@ Defines the HTTP interceptor handler function.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_Http_Interceptor_Request \*request | Pointer to the HTTP request data packet (valid only in the request stage). |
+| [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) \*request | Pointer to the HTTP request data packet (valid only in the request stage). |
 | [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) \*response | Pointer to the HTTP response data packet (valid only in the response stage). |
 | int32_t \*isModified | Output parameter, which indicates whether the interceptor has modified the data packet. Thisparameter is invalid for the interceptor of the **OH_TYPE_READ_ONLY** type. |
 
@@ -117,6 +117,6 @@ Defines the HTTP interceptor handler function.
 
 | Type | Description |
 | -- | -- |
-| [OH_Interceptor_Result](capi-http-interceptor-type-h.md#oh_interceptor_result) | Interceptor processing result. - OH_CONTINUE: The processing continues. - OH_ABORT: The processing<br>     is aborted. |
+| [OH_Interceptor_Result](capi-http-interceptor-type-h.md#oh_interceptor_result) | Interceptor processing result. - OH_CONTINUE: The processing continues. - OH_ABORT: The processing      is aborted. |
 
 

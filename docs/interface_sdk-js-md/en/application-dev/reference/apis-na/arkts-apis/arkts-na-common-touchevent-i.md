@@ -2,7 +2,7 @@
 
 Touch Action Function Parameters
 
-**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **Since:** 23
 

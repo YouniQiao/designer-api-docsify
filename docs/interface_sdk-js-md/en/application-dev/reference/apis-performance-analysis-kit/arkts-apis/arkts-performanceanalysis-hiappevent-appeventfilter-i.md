@@ -1,6 +1,6 @@
 # AppEventFilter
 
-Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#watcher). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to. > **NOTE：**> > The subscription specifications of system events vary according to application types. For details, see > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
+Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to. > **NOTE：**> > The subscription specifications of system events vary according to application types. For details, see > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 domain: string
 ```
 
-Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#appeventinfo)) passed through the [Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API.
+Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)) passed through the [Write](arkts-performanceanalysis-hiappevent-write-f.md) API.
 
 **Type:** string
 

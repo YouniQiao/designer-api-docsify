@@ -6,7 +6,7 @@ WLAN IP类型枚举。
 
 **废弃版本：** 9
 
-**替代接口：** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md#iptype系统接口)
+**替代接口：** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
 
 <!--Device-wifi-enum IpType--><!--Device-wifi-enum IpType-End-->
 

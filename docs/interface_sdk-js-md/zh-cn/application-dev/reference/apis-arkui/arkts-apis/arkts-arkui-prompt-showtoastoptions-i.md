@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#showtoastoptions)
+**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md)
 
 <!--Device-prompt-interface ShowToastOptions--><!--Device-prompt-interface ShowToastOptions-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## bottom

@@ -1,6 +1,6 @@
 # WebDownloadManager
 
-WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，负责管理所有通过Web组件触发的文件下载流程。开发者可以通过该类设置下载委托以接收下载进度回调，以及恢复失败的下载任务。该类的所有方法均为静态 方法，在整个应用范围内全局生效。 WebDownloadManager与[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md#webdownloaddelegate)、 [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md#webdownloaditem)配合使用：WebDownloadManager负责下载任务的生命周期管理和委托设置，WebDownloadDelegate负责向应用层 报告下载进度和状态变更事件，WebDownloadItem代表单个下载任务实体，支持暂停、恢复、取消等操作。
+WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，负责管理所有通过Web组件触发的文件下载流程。开发者可以通过该类设置下载委托以接收下载进度回调，以及恢复失败的下载任务。该类的所有方法均为静态 方法，在整个应用范围内全局生效。 WebDownloadManager与[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md)、 [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)配合使用：WebDownloadManager负责下载任务的生命周期管理和委托设置，WebDownloadDelegate负责向应用层 报告下载进度和状态变更事件，WebDownloadItem代表单个下载任务实体，支持暂停、恢复、取消等操作。
 
 **起始版本：** 11
 
@@ -11,6 +11,7 @@ WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload

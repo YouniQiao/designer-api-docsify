@@ -8,7 +8,7 @@ Defines Navigator Modifier
 
 **Deprecated since:** 20
 
-**Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md#navigationmodifier)
+**Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md)
 
 <!--Device-unnamed-export declare class NavigatorModifier--><!--Device-unnamed-export declare class NavigatorModifier-End-->
 

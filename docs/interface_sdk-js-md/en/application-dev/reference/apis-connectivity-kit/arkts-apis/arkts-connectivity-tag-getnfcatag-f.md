@@ -12,13 +12,13 @@ import { tag } from '@kit.ConnectivityKit';
 function getNfcATag(tagInfo: TagInfo): NfcATag
 ```
 
-Obtains an [NfcATag](arkts-connectivity-tag-nfcatag-t.md#nfcatag) object based on the tag information. &lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an [NfcATag](arkts-connectivity-tag-nfcatag-t.md#nfcatag) object will be created based on the tag information.
+Obtains an [NfcATag](arkts-connectivity-tag-nfcatag-t.md) object based on the tag information. &lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an [NfcATag](arkts-connectivity-tag-nfcatag-t.md) object will be created based on the tag information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getNfcA](arkts-connectivity-tag-getnfca-f.md#getnfca)
+**Substitutes:** [getNfcA](arkts-connectivity-tag-getnfca-f.md)
 
 <!--Device-tag-function getNfcATag(tagInfo: TagInfo): NfcATag--><!--Device-tag-function getNfcATag(tagInfo: TagInfo): NfcATag-End-->
 

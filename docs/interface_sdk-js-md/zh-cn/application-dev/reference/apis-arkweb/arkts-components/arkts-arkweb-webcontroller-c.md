@@ -15,6 +15,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -203,7 +208,7 @@ getCookieManager(): WebCookie
 
 **废弃版本：** 9
 
-**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#webcookiemanager)
+**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 

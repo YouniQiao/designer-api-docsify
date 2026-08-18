@@ -1,6 +1,6 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) and [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#fontcollection) to the constructor, then set the text style through [pushStyle](#pushstyle), add text content through [addText](#addtext), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#paragraph) object for typesetting and drawing.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) and [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) to the constructor, then set the text style through [pushStyle](#pushstyle), add text content through [addText](#addtext), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) object for typesetting and drawing.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 
@@ -358,7 +357,7 @@ struct Index {
 popStyle(): void
 ```
 
-Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushstyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle) will be used as the default style.
+Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushstyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
 
 **Since:** 23
 

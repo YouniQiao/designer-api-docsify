@@ -74,7 +74,7 @@ The callback function of frame available.
 
 | Parameter | Description |
 | -- | -- |
-| (void \*context | User defined context, returned to the user in the callback function |
+| void \*context | User defined context, returned to the user in the callback function |
 
 ### OH_NativeImage_Create()
 
@@ -101,7 +101,7 @@ Create a <b>OH_NativeImage</b> related to an Opengl ES texture and target. <br> 
 
 | Type | Description |
 | -- | -- |
-| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, <br> returns <b>NULL</b> otherwise. |
+| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, \n  returns <b>NULL</b> otherwise. |
 
 ### OH_NativeImage_AcquireNativeWindow()
 
@@ -390,7 +390,7 @@ Obtains the transform matrix of the texture image by producer transform type.<br
 
 | Type | Description |
 | -- | -- |
-| int32_t | 0 - Success.<br>     40001000 - image is NULL. |
+| int32_t | 0 - Success.      40001000 - image is NULL. |
 
 ### OH_NativeImage_GetBufferMatrix()
 
@@ -417,7 +417,7 @@ Obtains the transform matrix that combines with crop rect.This API returns a tra
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL.<br>     {@link NATIVE_ERROR_MEM_OPERATION_ERROR} 30001000 - Memory operation error, failed to get transform matrix. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL.      {@link NATIVE_ERROR_MEM_OPERATION_ERROR} 30001000 - Memory operation error, failed to get transform matrix. |
 
 ### OH_NativeImage_AcquireNativeWindowBuffer()
 
@@ -445,7 +445,7 @@ Acquire an <b>OHNativeWindowBuffer</b> through an <b>OH_NativeImage</b> instance
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer, fenceFd is NULL.<br>     {@link NATIVE_ERROR_NO_BUFFER} 40601000 - No buffer for consume. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer, fenceFd is NULL.      {@link NATIVE_ERROR_NO_BUFFER} 40601000 - No buffer for consume. |
 
 ### OH_NativeImage_ReleaseNativeWindowBuffer()
 
@@ -473,7 +473,7 @@ Release the <b>OHNativeWindowBuffer</b> to the buffer queue through an<b>OH_Nati
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - nativeWindowBuffer state invalid.<br>     {@link NATIVE_ERROR_BUFFER_NOT_IN_CACHE} 41210000 - nativeWindowBuffer not in cache. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - nativeWindowBuffer state invalid.      {@link NATIVE_ERROR_BUFFER_NOT_IN_CACHE} 41210000 - nativeWindowBuffer not in cache. |
 
 ### OH_ConsumerSurface_Create()
 
@@ -493,7 +493,7 @@ Create a <b>OH_NativeImage</b> as a consumerSurface. <br> This interface is only
 
 | Type | Description |
 | -- | -- |
-| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, <br> returns <b>NULL</b> otherwise. |
+| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, \n  returns <b>NULL</b> otherwise. |
 
 ### OH_ConsumerSurface_SetDefaultUsage()
 
@@ -520,7 +520,7 @@ Set the default usage of the <b>OH_NativeImage</b>.<br> This interface is a non-
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
 
 ### OH_ConsumerSurface_SetDefaultSize()
 
@@ -548,7 +548,7 @@ Set the default size of the <b>OH_NativeImage</b>.<br> This interface is a non-t
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL or width, height less than or equal to 0. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL or width, height less than or equal to 0. |
 
 ### OH_NativeImage_SetDropBufferMode()
 
@@ -575,7 +575,7 @@ Set the rendering in drop buffer mode of the <b>OH_NativeImage</b>.<br> In this 
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
 
 ### OH_NativeImage_CreateWithSingleBufferMode()
 
@@ -603,7 +603,7 @@ Create a <b>OH_NativeImage</b> related to an Opengl ES texture and target with t
 
 | Type | Description |
 | -- | -- |
-| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, <br> returns <b>NULL</b> otherwise. |
+| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, \n  returns <b>NULL</b> otherwise. |
 
 ### OH_ConsumerSurface_CreateWithSingleBufferMode()
 
@@ -629,7 +629,7 @@ Create a <b>OH_NativeImage</b> as consumerSurface, and choose whether to set sin
 
 | Type | Description |
 | -- | -- |
-| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, <br> returns <b>NULL</b> otherwise. |
+| OH_NativeImage* | Returns the pointer to the <b>OH_NativeImage</b> instance created if the operation is successful, \n  returns <b>NULL</b> otherwise. |
 
 ### OH_NativeImage_ReleaseTextImage()
 
@@ -655,7 +655,7 @@ Release the <b>OH_NativeImage</b> in single buffer mode.<br> This interface sugg
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
 
 ### OH_NativeImage_GetColorSpace()
 
@@ -710,7 +710,7 @@ Acquire a latest <b>OHNativeWindowBuffer</b> through an <b>OH_NativeImage</b> in
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer, fenceFd is NULL.<br>     {@link NATIVE_ERROR_NO_BUFFER} 40601000 - No buffer for consume. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image, nativeWindowBuffer, fenceFd is NULL.      {@link NATIVE_ERROR_NO_BUFFER} 40601000 - No buffer for consume. |
 
 ### OH_NativeImage_IsReleased()
 
@@ -737,7 +737,7 @@ Check whether the texture releated to the <b>OH_NativeImage</b> has been release
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image or isReleased is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image or isReleased is NULL. |
 
 ### OH_NativeImage_Release()
 
@@ -763,6 +763,6 @@ Clean all <b>OHNativeWindowBuffer</b> caches of the <b>OHNativeWindow</b> for th
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - image is NULL. |
 
 

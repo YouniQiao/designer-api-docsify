@@ -1,6 +1,6 @@
 # Verify
 
-验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过 [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify)方法创建一个Verify实例。按序调用Verify实例中 的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 <br>Verify实例不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify实例并调用init初始化。 <br>业务方使用时，在createVerify时确定验签的模式，调用init接口设置密钥。 <br>当被签名的消息较短时，可在init初始化后，（无需update）直接调用verify接口传入被签名的消息和签名（signatureData）进行验签。 <br>当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只 支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。 <br>当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过 [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中 的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 <br>Verify实例不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify实例并调用init初始化。 <br>业务方使用时，在createVerify时确定验签的模式，调用init接口设置密钥。 <br>当被签名的消息较短时，可在init初始化后，（无需update）直接调用verify接口传入被签名的消息和签名（signatureData）进行验签。 <br>当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只 支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。 <br>当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getVerifySpec
@@ -91,7 +92,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 公钥对象，用于Verify的初始化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -335,7 +336,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 setVerifySpec(itemType: SignSpecItem, itemValue: int): void
 ```
 
-设置验签参数。常用的验签参数直接通过[createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) 来指定，剩余参数通过本接口指定。 <br>支持RSA算法和SM2算法，从API version 11开始，支持SM2算法设置签名验证参数。 <br>验签的参数应当与签名的参数保持一致。
+设置验签参数。常用的验签参数直接通过[createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md) 来指定，剩余参数通过本接口指定。 <br>支持RSA算法和SM2算法，从API version 11开始，支持SM2算法设置签名验证参数。 <br>验签的参数应当与签名的参数保持一致。
 
 **起始版本：** 10
 
@@ -539,7 +540,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 传入的消息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -647,7 +648,7 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 待验签的数据。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
 
 **错误码：**
 
@@ -683,7 +684,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
 
 **错误码：**
 

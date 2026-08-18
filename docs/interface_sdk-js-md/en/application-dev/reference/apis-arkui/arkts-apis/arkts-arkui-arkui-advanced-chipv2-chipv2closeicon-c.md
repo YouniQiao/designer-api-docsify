@@ -2,7 +2,7 @@
 
 Defines default close icon.
 
-**Inheritance/Implementation:** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md#chipv2accessibility)
+**Inheritance/Implementation:** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
 
 **Since:** 26.0.0
 

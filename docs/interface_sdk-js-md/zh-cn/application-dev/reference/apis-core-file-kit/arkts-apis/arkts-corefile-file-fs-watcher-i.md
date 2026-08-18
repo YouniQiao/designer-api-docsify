@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## start
@@ -19,7 +22,7 @@
 start(): void
 ```
 
-开启监听。
+开启监听文件或目录变动事件。
 
 **起始版本：** 10
 
@@ -61,7 +64,7 @@ watcher.stop();
 stop(): void
 ```
 
-停止监听并移除Watcher对象。
+停止监听文件或目录变动事件并移除Watcher对象。
 
 **起始版本：** 10
 

@@ -12,7 +12,6 @@ The definition of dialog action result.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clickedBtnId

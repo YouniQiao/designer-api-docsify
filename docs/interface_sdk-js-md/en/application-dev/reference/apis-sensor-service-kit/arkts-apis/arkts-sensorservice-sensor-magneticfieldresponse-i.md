@@ -1,8 +1,8 @@
 # MagneticFieldResponse
 
-Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

@@ -30,7 +30,7 @@ Disables the screen content access permission monitoring.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReadingScreenPermissionStatus](arkts-multimodalawareness-onscreen-readingscreenpermissionstatus-i-sys.md)&gt; | No | Callback to unregister. If this parameter <br> is not passed, all callbacks of the event are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReadingScreenPermissionStatus](arkts-multimodalawareness-onscreen-readingscreenpermissionstatus-i-sys.md)&gt; | No | Callback to unregister. If this parameter <br> is not passed, all callbacks of the event are unregistered. |
 
 **Error codes:**
 

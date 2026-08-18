@@ -14,7 +14,6 @@ Describes the information of the UIExtensionAbility bound to the [intent develop
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

@@ -18,7 +18,7 @@ dragBackgroundColor?: ColorMetrics
 
 添加builder单独拖拽时的背板背景颜色。不配置或者异常值时，颜色按系统默认配置。
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 23
 

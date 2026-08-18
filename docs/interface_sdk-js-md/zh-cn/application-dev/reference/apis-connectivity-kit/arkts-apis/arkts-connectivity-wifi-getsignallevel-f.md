@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getSignalLevel
@@ -17,7 +21,7 @@ function getSignalLevel(rssi: number, band: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getsignallevel)
+**替代接口：** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 

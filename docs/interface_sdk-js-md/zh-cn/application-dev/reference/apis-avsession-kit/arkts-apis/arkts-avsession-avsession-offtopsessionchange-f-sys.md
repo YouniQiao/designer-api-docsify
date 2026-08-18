@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
-## off_topSessionChange
+## off_topSessionChange('topSessionChange')
 
 ```TypeScript
 function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void

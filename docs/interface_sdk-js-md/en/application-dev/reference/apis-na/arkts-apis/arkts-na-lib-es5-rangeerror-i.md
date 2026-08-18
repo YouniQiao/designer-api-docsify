@@ -1,6 +1,6 @@
 # RangeError
 
-**Inheritance/Implementation:** RangeError extends [Error](arkts-na-lib-es5-error-i.md#error)
+**Inheritance/Implementation:** RangeError extends [Error](arkts-na-lib-es5-error-i.md)
 
 **Since:** -1
 

@@ -2,13 +2,13 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment
 
-**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#workerglobalscope)
+**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#threadworkerglobalscope)
+**Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md)
 
 <!--Device-unnamed-export interface DedicatedWorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope-End-->
 

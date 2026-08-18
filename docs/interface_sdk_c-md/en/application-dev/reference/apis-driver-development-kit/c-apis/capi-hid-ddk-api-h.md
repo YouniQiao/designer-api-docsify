@@ -65,7 +65,7 @@ Creates a device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | deviceID (a non-negative number) if the API call is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. The input hidDevice is a<br>     null pointer.<br>     2. The input hidEventProperties is a null pointer. 3. The length of properties exceeds 7 characters.<br>     4. The length of hidEventTypes exceeds 5 characters.<br>     5. The length of hidKeys exceeds 100 characters. 6. The length of hidAbs exceeds 26 characters. 7. The<br>     length of hidRelBits exceeds 13 characters. 8. The length of hidMiscellaneous exceeds 6 characters.<br>     [HID_DDK_FAILURE](capi-hid-ddk-types-h.md#hid_ddkerrcode): The number of devices reaches the maximum value 200. |
+| int32_t | deviceID (a non-negative number) if the API call is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. The input hidDevice is a      null pointer.      2. The input hidEventProperties is a null pointer. 3. The length of properties exceeds 7 characters.      4. The length of hidEventTypes exceeds 5 characters.      5. The length of hidKeys exceeds 100 characters. 6. The length of hidAbs exceeds 26 characters. 7. The      length of hidRelBits exceeds 13 characters. 8. The length of hidMiscellaneous exceeds 6 characters.      [HID_DDK_FAILURE](capi-hid-ddk-types-h.md#hid_ddkerrcode): The number of devices reaches the maximum value 200. |
 
 ### OH_Hid_EmitEvent()
 
@@ -93,7 +93,7 @@ Sends an event list to a device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The API call is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails or the caller is not the device creator.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. The device ID is less than 0.<br>     2. The length of the input parameter length exceeds 7 characters. 3. The input parameter items is a null<br>     pointer.<br>     [HID_DDK_NULL_PTR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The input device is a null pointer. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The API call is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails or the caller is not the device creator.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. The device ID is less than 0.      2. The length of the input parameter length exceeds 7 characters. 3. The input parameter items is a null      pointer.      [HID_DDK_NULL_PTR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The input device is a null pointer. |
 
 ### OH_Hid_DestroyDevice()
 
@@ -119,7 +119,7 @@ Destroys a device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The API call is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails or the caller is not the device creator.<br>     [HID_DDK_NULL_PTR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The corresponding device does not exist. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The API call is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): The hid_ddk service connection fails or the caller is not the device creator.      [HID_DDK_NULL_PTR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The corresponding device does not exist. |
 
 ### OH_Hid_Init()
 
@@ -139,7 +139,7 @@ Initializes an HID DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK initialization fails.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK initialization fails.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
 
 ### OH_Hid_Release()
 
@@ -159,7 +159,7 @@ Releases an HID DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
 
 ### OH_Hid_Open()
 
@@ -187,7 +187,7 @@ Opens the device specified by **deviceId** and **interfaceIndex**.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Memory allocation for the device fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The dev parameter or dev is null.<br>     [HID_DDK_DEVICE_NOT_FOUND](capi-hid-ddk-types-h.md#hid_ddkerrcode): No device is found based on deviceId and interfaceIndex. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Memory allocation for the device fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The dev parameter or dev is null.      [HID_DDK_DEVICE_NOT_FOUND](capi-hid-ddk-types-h.md#hid_ddkerrcode): No device is found based on deviceId and interfaceIndex. |
 
 ### OH_Hid_Close()
 
@@ -213,7 +213,7 @@ Closes an HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The dev parameter or dev is null. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The dev parameter or dev is null. |
 
 ### OH_Hid_Write()
 
@@ -242,7 +242,7 @@ Writes a report to an HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of length is 0; 4. The value of length<br>     exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesWritten is null.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of length is 0; 4. The value of length      exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesWritten is null.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails. |
 
 ### OH_Hid_ReadTimeout()
 
@@ -272,7 +272,7 @@ Reads a report from the HID device within the specified timeout interval.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0. 4. The value of bufSize<br>     exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_TIMEOUT](capi-hid-ddk-types-h.md#hid_ddkerrcode): The read operation times out. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0. 4. The value of bufSize      exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_TIMEOUT](capi-hid-ddk-types-h.md#hid_ddkerrcode): The read operation times out. |
 
 ### OH_Hid_Read()
 
@@ -301,7 +301,7 @@ Reads a report from the HID device. The blocking mode (that is, blocking remains
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0. 4. The value of bufSize<br>     exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_TIMEOUT](capi-hid-ddk-types-h.md#hid_ddkerrcode): The read operation times out. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0. 4. The value of bufSize      exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_TIMEOUT](capi-hid-ddk-types-h.md#hid_ddkerrcode): The read operation times out. |
 
 ### OH_Hid_SetNonBlocking()
 
@@ -328,7 +328,7 @@ Sets the device read mode to non-blocking mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. The value of nonBlock is not 1 or 0.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. The value of nonBlock is not 1 or 0.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails. |
 
 ### OH_Hid_GetRawInfo()
 
@@ -355,7 +355,7 @@ Obtains the original device information.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. rawDevInfo is null.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. rawDevInfo is null.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_GetRawName()
 
@@ -383,7 +383,7 @@ Obtains the original device name.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0.<br>     4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0.      4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_GetPhysicalAddress()
 
@@ -411,7 +411,7 @@ Obtains the physical address of the HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0.<br>     4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0.      4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_GetRawUniqueId()
 
@@ -439,7 +439,7 @@ Obtains the original unique identifier of a device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0.<br>     4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0.      4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_SendReport()
 
@@ -468,7 +468,7 @@ Sends a report to the HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of length is 0;<br>     4. The value of length exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of length is 0;      4. The value of length exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_GetReport()
 
@@ -497,7 +497,7 @@ Obtains a report from the HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. data is null. 3. The value of bufSize is 0.<br>     4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. data is null. 3. The value of bufSize is 0.      4. The value of bufSize exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 ### OH_Hid_GetReportDescriptor()
 
@@ -526,6 +526,6 @@ Obtains the report descriptor of the HID device.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.<br>     [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.<br>     [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.<br>     2. buf is null. 3. The value of bufSize is 0. 4. The value of bufSize<br>     exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.<br>     [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.<br>     [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.<br>     [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.<br>     [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.<br>     [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
+| int32_t | [HID_DDK_SUCCESS](capi-hid-ddk-types-h.md#hid_ddkerrcode): The operation is successful.      [HID_DDK_NO_PERM](capi-hid-ddk-types-h.md#hid_ddkerrcode): The permission verification fails.      [HID_DDK_INVALID_PARAMETER](capi-hid-ddk-types-h.md#hid_ddkerrcode): The parameter check fails. Possible causes: 1. dev is null.      2. buf is null. 3. The value of bufSize is 0. 4. The value of bufSize      exceeds {@link HID_MAX_REPORT_BUFFER_SIZE}. 5. bytesRead is null.      [HID_DDK_INIT_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The DDK is not initialized.      [HID_DDK_SERVICE_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): Communication with the DDK server fails.      [HID_DDK_MEMORY_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The memory data copy fails.      [HID_DDK_IO_ERROR](capi-hid-ddk-types-h.md#hid_ddkerrcode): The I/O operation fails.      [HID_DDK_INVALID_OPERATION](capi-hid-ddk-types-h.md#hid_ddkerrcode): This operation is not supported. |
 
 

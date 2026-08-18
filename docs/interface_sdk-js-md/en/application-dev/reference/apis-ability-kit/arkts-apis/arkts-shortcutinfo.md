@@ -9,7 +9,7 @@
 | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Describes the configuration information for a shortcut. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

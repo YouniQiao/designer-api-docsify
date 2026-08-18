@@ -24,7 +24,7 @@ Receives an ICC account change. This callback is invoked when the ICC account up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | including state Indicates the ICC account information, and reason Indicates the cause of the change. |
 
 **Error codes:**
 

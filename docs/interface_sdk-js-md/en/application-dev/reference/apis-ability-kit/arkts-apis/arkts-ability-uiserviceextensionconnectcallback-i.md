@@ -138,7 +138,7 @@ Called back when data is sent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the received data. |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the received data. |
 
 ## onDisconnect
 

@@ -12,7 +12,6 @@ Represents a custom communication object. > **NOTE：**> > You can register this
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -114,7 +113,7 @@ onTerminated: Callback<void>
 
 This method is called when a new message handler is set.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 23
 

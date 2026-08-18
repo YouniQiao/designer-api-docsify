@@ -4,7 +4,7 @@
 export type AbilityStageContext = _AbilityStageContext
 ```
 
-Defines the context environment for the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). It inherits from Context.
+Defines the context environment for the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). It inherits from Context.
 
 **Since:** 23
 

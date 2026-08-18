@@ -11,6 +11,11 @@ WebKeyboardController是ArkWeb提供的用于控制Web组件自定义键盘行�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## close
@@ -109,7 +114,7 @@ Web输入框中插入字符。
 sendFunctionKey(key: number): void
 ```
 
-插入功能按键，目前仅支持Enter键类型，取值见[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#enterkeytype)。
+插入功能按键，目前仅支持Enter键类型，取值见[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md)。
 
 **起始版本：** 12
 

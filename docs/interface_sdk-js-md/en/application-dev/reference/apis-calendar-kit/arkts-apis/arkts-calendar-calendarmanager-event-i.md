@@ -236,7 +236,7 @@ Reminder time of the event, in minutes. For example, if the value is 5, the remi
 service?: EventService
 ```
 
-&lt;!--RP1--&gt;Event service. If this parameter is not set, no one-click service is available. This function is not supported currently.&lt;!--RP1End--&gt;
+<!--RP1-->Event service. If this parameter is not set, no one-click service is available. This function is not supported currently.<!--RP1End-->
 
 **Type:** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
@@ -272,7 +272,7 @@ Start time of an event. The value is a 13-digit timestamp. For an all-day event,
 timeZone?: string
 ```
 
-Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone) to obtain the current system time zone.
+Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md) to obtain the current system time zone.
 
 **Type:** string
 

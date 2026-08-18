@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#i18nutil)
+**替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## unitConvert

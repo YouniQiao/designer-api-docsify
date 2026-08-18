@@ -309,6 +309,8 @@
   <!--Del-->
   - [HighlightUserActionType(system api)](arkts-medialibrary-photoaccesshelper-highlightuseractiontype-e-sys.md)<!--DelEnd-->
   - [ImageFileType](arkts-medialibrary-photoaccesshelper-imagefiletype-e.md)
+  <!--Del-->
+  - [LivePhoto4dStatus(system api)](arkts-medialibrary-photoaccesshelper-livephoto4dstatus-e-sys.md)<!--DelEnd-->
   - [MediaAssetPermissionState](arkts-medialibrary-photoaccesshelper-mediaassetpermissionstate-e.md)
   - [MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)
   <!--Del-->

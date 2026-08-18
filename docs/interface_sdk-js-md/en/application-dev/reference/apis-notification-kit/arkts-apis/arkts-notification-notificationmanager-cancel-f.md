@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## cancel
@@ -34,7 +33,7 @@ cancelGroup cancels notifications
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -91,7 +90,7 @@ cancelGroup cancels
 | --- | --- | --- | --- |
 | id | int | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
 | label | string | Yes | Notification label. This value is specified by the **label** field of NotificationRequest during the notification publishment. If the **label** field is empty, the published notification that matches the specified notification ID and has an empty label is canceled. If the **label** field is not empty, the published notification that matches both the specified notification ID and label is canceled. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

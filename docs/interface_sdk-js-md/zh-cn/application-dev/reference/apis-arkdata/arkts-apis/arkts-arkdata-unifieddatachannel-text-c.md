@@ -1,8 +1,8 @@
 # Text
 
-文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如 [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md#plaintext)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md#hyperlink)、 [HTML](arkts-arkdata-unifieddatachannel-html-c.md#html)等具体子类。
+文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如 [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md)、 [HTML](arkts-arkdata-unifieddatachannel-html-c.md)等具体子类。
 
-**继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord)
+**继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details

@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntent } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## parameters
@@ -21,7 +24,7 @@ parameters?: Record<string, RecordData>
 
 根据属性查询实体时的参数。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 26.0.0
 

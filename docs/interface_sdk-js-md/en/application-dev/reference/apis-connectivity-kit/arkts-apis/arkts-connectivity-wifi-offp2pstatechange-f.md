@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_p2pStateChange
+## off_p2pStateChange('p2pStateChange')
 
 ```TypeScript
 function off(type: 'p2pStateChange', callback?: Callback<number>): void
@@ -34,7 +34,7 @@ Unsubscribe P2P status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
 
 **Examples**
 

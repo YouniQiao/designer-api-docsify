@@ -12,7 +12,6 @@ Describes detail of the cloud sync {@code Progress}.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code

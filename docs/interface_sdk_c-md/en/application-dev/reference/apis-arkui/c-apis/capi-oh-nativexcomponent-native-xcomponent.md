@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the surface and touch event held by the ArkUI XComponent, which can be used for the EGL/OpenGL ES<br>        and media data input and displayed on the ArkUI XComponent.
+Describes the surface and touch event held by the ArkUI XComponent, which can be used for the EGL/OpenGL ES<br> and media data input and displayed on the ArkUI XComponent.
 
 **Since**: 8
 ## Files

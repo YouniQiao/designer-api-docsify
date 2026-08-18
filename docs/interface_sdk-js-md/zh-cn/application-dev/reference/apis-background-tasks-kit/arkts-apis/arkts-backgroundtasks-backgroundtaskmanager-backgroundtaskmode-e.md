@@ -1,6 +1,6 @@
 # BackgroundTaskMode
 
-长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md#backgroundtasksubmode)配合使用，对照关系请参考长时任务主类型与子类型 对照表，两者共同作为API version 21新增的 [申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)、 [更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)长时任务接口入参 ，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申 请ACL权限 [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system) ，其他场景无需申请该权限。
+长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型 对照表，两者共同作为API version 21新增的 [申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)、 [更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)长时任务接口入参 ，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申 请ACL权限 [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system) ，其他场景无需申请该权限。
 
 **起始版本：** 24
 
@@ -14,7 +14,7 @@
 MODE_DATA_TRANSFER = 1
 ```
 
-数据传输。 使用场景举例：非托管形式的上传、下载，如在浏览器后台上传或下载数据。 **说明：** 1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。 2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)中的示例。
+数据传输。 使用场景举例：非托管形式的上传、下载，如在浏览器后台上传或下载数据。 **说明：** 1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。 2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)中的示例。
 
 **起始版本：** 24
 
@@ -44,7 +44,7 @@ MODE_AUDIO_PLAYBACK = 2
 MODE_AUDIO_RECORDING = 3
 ```
 
-录制。 使用场景举例：录音、录屏退后台。&lt;!--Del--&gt; **说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
+录制。 使用场景举例：录音、录屏退后台。<!--Del--> **说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。<!--DelEnd-->
 
 **起始版本：** 24
 
@@ -104,7 +104,7 @@ MODE_MULTI_DEVICE_CONNECTION = 6
 MODE_VOIP = 8
 ```
 
-音视频通话。 使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。 &lt;!--Del--&gt; **说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
+音视频通话。 使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。 <!--Del--> **说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。<!--DelEnd-->
 
 **起始版本：** 24
 

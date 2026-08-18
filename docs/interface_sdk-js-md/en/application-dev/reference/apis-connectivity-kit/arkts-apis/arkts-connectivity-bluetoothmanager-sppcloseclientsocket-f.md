@@ -18,7 +18,7 @@ Disables an spp client socket and releases related resources.
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppcloseclientsocket)
+**Substitutes:** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md)
 
 <!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void--><!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void-End-->
 
@@ -28,7 +28,7 @@ Disables an spp client socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppconnect). |
+| socket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md) or [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md). |
 
 **Error codes:**
 

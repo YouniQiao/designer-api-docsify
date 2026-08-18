@@ -24,7 +24,7 @@ Disables an spp client socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppconnect). |
+| socket | int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md). |
 
 **Error codes:**
 

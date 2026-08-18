@@ -2,7 +2,7 @@
 
 定义AppIntentEntity。
 
-**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#intententity)
+**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,9 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntent } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity

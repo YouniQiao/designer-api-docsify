@@ -2,7 +2,7 @@
 
 The definition of pagination object.
 
-**Inheritance/Implementation:** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#operresult)
+**Inheritance/Implementation:** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ The definition of pagination object.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
 import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

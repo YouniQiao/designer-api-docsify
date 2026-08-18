@@ -1,6 +1,6 @@
 # ParagraphStyle
 
-Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder) constructor, and works together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) (which controls text-level styles) to determine the final typesetting result of the paragraph.
+Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) constructor, and works together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) (which controls text-level styles) to determine the final typesetting result of the paragraph.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Represents a paragraph style, which controls the overall layout behavior of a pa
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 
@@ -75,7 +74,7 @@ Text break strategy. The default value is **GREEDY**.
 compressHeadPunctuation?: boolean
 ```
 
-Sets whether to use punctuation compression at the beginning of a line in text layout. **true** means yes; **false** otherwise. The default value is **false**. **NOTE：**1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#fontfeature). Otherwise, compression cannot be performed. 2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature. Punctuation range at the beginning of a line. | Punctuation| Unicode Code Point| Unicode Name| |---------|---------|-------------| | 「| U+300C | LEFT CORNER BRACKET | | 『| U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （| U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《| U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈| U+3008 | LEFT ANGLE BRACKET | | 【| U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔| U+3014 | LEFT TORTOISE SHELL BRACKET | | ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
+Sets whether to use punctuation compression at the beginning of a line in text layout. **true** means yes; **false** otherwise. The default value is **false**. **NOTE：**1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md). Otherwise, compression cannot be performed. 2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature. Punctuation range at the beginning of a line. | Punctuation| Unicode Code Point| Unicode Name| |---------|---------|-------------| | 「| U+300C | LEFT CORNER BRACKET | | 『| U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （| U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《| U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈| U+3008 | LEFT ANGLE BRACKET | | 【| U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔| U+3014 | LEFT TORTOISE SHELL BRACKET | | ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
 
 **Type:** boolean
 
@@ -169,7 +168,7 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 lineSpacing?: double
 ```
 
-Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#paragraphstyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
+Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#paragraphstyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
 
 **Type:** double
 
@@ -205,7 +204,7 @@ Maximum number of lines. The value is an integer. The default value is **1e9**.
 orphanCharOptimization?: boolean
 ```
 
-Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#wordbreak) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) of the text to be typeset is "zh-Hans" or "zh-Hant" . The value **true** enables orphan character optimization, and **false** disables it. The default value is **false**.
+Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is "zh-Hans" or "zh-Hant" . The value **true** enables orphan character optimization, and **false** disables it. The default value is **false**.
 
 **Type:** boolean
 
@@ -263,7 +262,7 @@ Strut style. The default value is the initial **StrutStyle** object.
 tab?: TextTab
 ```
 
-Alignment mode and position of the text after the tab character in a paragraph. By default, the tab character is replaced with a space. This parameter is invalid when it is used together with the **align** parameter or the **ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle).
+Alignment mode and position of the text after the tab character in a paragraph. By default, the tab character is replaced with a space. This parameter is invalid when it is used together with the **align** parameter or the **ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).
 
 **Type:** [TextTab](arkts-arkgraphics2d-text-texttab-i.md)
 
@@ -373,7 +372,7 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 verticalAlign?: TextVerticalAlign
 ```
 
-Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s fontSize is set). If there is superscript or subscript text in the line (that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
+Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s fontSize is set). If there is superscript or subscript text in the line (that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
 
 **Type:** TextVerticalAlign
 

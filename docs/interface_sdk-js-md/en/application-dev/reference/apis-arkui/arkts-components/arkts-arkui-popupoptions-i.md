@@ -598,7 +598,7 @@ Whether to display the popup above the component. The default value is **false**
 popupColor?: Color | string | Resource | number
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
 **Type:** Color \| string \| Resource \| number
 

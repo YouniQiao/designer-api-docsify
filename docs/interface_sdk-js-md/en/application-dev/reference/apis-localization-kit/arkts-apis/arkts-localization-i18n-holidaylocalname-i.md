@@ -12,7 +12,6 @@ Represents the name of a holiday in different languages.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## language

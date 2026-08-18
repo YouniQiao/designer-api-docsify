@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { common } from '@kit.MDMKit';
 ```
 
 ## 汇总
@@ -21,7 +22,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。 该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps)接口 中作为入参使用。 |
+| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。 该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。 |
 | [InstallationResult](arkts-mdm-common-installationresult-i.md) | 应用安装结果。 该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。 |
 | [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | 策略变更事件。 该接口目前在 [onAdminPolicyChanged](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged) 接口中作为回调入参使用。 |
 
@@ -37,5 +38,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)。 |
+| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](../../apis-na/arkts-apis/arkts-na-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) 的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 |
 

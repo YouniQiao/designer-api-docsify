@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## queryParticipantsByInvitation
@@ -31,7 +30,7 @@ Queries the participants based on the sharing invitation code. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
 
 **Error codes:**
 

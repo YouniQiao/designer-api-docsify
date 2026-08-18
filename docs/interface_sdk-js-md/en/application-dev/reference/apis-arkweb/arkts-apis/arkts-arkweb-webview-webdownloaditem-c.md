@@ -1,6 +1,6 @@
 # WebDownloadItem
 
-WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md#webdownloaddelegate), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery. > **NOTE：**> > - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the > user can operate the download task through the WebDownloadItem parameter. > > - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255 > bytes&lt;!--RP1--&gt;&lt;!--RP1End--&gt;.
+WebDownloadItem is a class in the ArkWeb framework used to represent and manage a single download task. Through the callback parameters of [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md), an app can obtain a WebDownloadItem instance and then query and control the download task, including starting the download to a specified path, querying the download progress and status, pausing/resuming/canceling the task, and serializing failed tasks for later recovery. > **NOTE：**> > - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the > user can operate the download task through the WebDownloadItem parameter. > > - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255 > bytes<!--RP1--><!--RP1End-->.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ Deserializes the serialized byte array into a **WebDownloadItem** object.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | WebDownloadItem** object. |
 
 **Error codes:**
 
@@ -150,7 +150,7 @@ Obtains the download error code.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Error code when the download fails. |
 
 ## getMethod
 
@@ -304,7 +304,7 @@ Obtains the download state.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadState](../../apis-na/arkts-apis/arkts-na-webview-webdownloadstate-e.md) | Download state. |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Download state. |
 
 ## getSuggestedFileName
 

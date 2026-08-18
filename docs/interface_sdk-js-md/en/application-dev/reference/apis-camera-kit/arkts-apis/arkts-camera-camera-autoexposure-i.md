@@ -1,8 +1,8 @@
 # AutoExposure
 
-**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery). It provides APIs related to auto exposure.
+**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md). It provides APIs related to auto exposure.
 
-**Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery)
+**Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
 **Since:** 23
 
@@ -123,7 +123,7 @@ Unregisters the listener for exposure state change events. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onExposureStateChange
 
@@ -147,7 +147,7 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | Yes | Callback used to return the exposure state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | Yes | Callback used to return the exposure state. |
 
 ## setExposureBias
 
@@ -169,7 +169,7 @@ Sets an exposure compensation value (EV). Before the setting, you are advised to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | double | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. <br>Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. <br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| exposureBias | double | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. <br>Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. <br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

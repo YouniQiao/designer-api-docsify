@@ -1,6 +1,6 @@
 # ColorSpaceManager(Color Space Management)
 
-Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
+Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md) to create a color space manager.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Implements management of color space objects. Before calling any of the followin
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
 import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 

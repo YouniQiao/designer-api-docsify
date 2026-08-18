@@ -12,7 +12,6 @@ The definition of QueryMediaEntityParam.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## entityId

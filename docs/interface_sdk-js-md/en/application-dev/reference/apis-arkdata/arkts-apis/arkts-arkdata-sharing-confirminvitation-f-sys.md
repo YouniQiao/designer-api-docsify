@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## confirmInvitation
@@ -29,7 +28,7 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
 | state | State | Yes | Confirmation state. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

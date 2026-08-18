@@ -21,19 +21,19 @@ Provide APIs to set system uiAppearance.
 
 | Name | Description |
 | --- | --- |
-| [getDarkMode](arkts-na-uiappearance-getdarkmode-f.md#getdarkmode) | Acquire the current dark-mode. |
-| [getFontScale](arkts-na-uiappearance-getfontscale-f.md#getfontscale) | Acquire the current font-scale. |
-| [getFontWeightScale](arkts-na-uiappearance-getfontweightscale-f.md#getfontweightscale) | Acquire the current font-weight-scale. |
+| [getDarkMode](arkts-na-uiappearance-getdarkmode-f.md) | Acquire the current dark-mode. |
+| [getFontScale](arkts-na-uiappearance-getfontscale-f.md) | Acquire the current font-scale. |
+| [getFontWeightScale](arkts-na-uiappearance-getfontweightscale-f.md) | Acquire the current font-weight-scale. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [setDarkMode](arkts-na-uiappearance-setdarkmode-f-sys.md#setdarkmode-system-api) | Set the system dark-mode. |
-| [setDarkMode](arkts-na-uiappearance-setdarkmode-f-sys.md#setdarkmode-system-api) | Set the system dark-mode. |
-| [setFontScale](arkts-na-uiappearance-setfontscale-f-sys.md#setfontscale-system-api) | Set the system font-scale. |
-| [setFontWeightScale](arkts-na-uiappearance-setfontweightscale-f-sys.md#setfontweightscale-system-api) | Set the system font-weight-scale. |
+| [setDarkMode](arkts-na-uiappearance-setdarkmode-f-sys.md) | Set the system dark-mode. |
+| [setDarkMode](arkts-na-uiappearance-setdarkmode-f-sys.md) | Set the system dark-mode. |
+| [setFontScale](arkts-na-uiappearance-setfontscale-f-sys.md) | Set the system font-scale. |
+| [setFontWeightScale](arkts-na-uiappearance-setfontweightscale-f-sys.md) | Set the system font-weight-scale. |
 <!--DelEnd-->
 
 ### Enums

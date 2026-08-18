@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -37,7 +38,7 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 | --- | --- | --- | --- |
 | requestId | string | 是 | SA（System Ability）侧传递的本次请求的标识。无范围限制。 |
 | requestData | string | 是 | SA（System Ability）侧传递的数据。无范围限制。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | SA（System Ability）侧传递的接口，用于回调。无范围限制。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | SA（System Ability）侧传递的接口，用于回调。无范围限制。 |
 
 **错误码：**
 

@@ -6,7 +6,7 @@ WLAN IP配置信息。
 
 **废弃版本：** 9
 
-**替代接口：** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipconfig系统接口)
+**替代接口：** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
 
 <!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
 
@@ -17,6 +17,10 @@ WLAN IP配置信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers

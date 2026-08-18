@@ -11,6 +11,7 @@ Wi-Fi配置信息。
 ## 导入模块
 
 ```TypeScript
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## bssid

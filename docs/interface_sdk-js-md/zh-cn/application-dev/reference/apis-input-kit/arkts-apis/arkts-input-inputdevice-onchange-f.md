@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## onChange
@@ -23,7 +25,7 @@ Starts listening for an input device event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 是 | Callback for the input device event. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 是 | Callback for the input device event. |
 
 **错误码：**
 

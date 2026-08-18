@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## offCooperateMouseEvent
@@ -28,7 +29,7 @@ Disables listening for mouse pointer position information on the specified devic
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | Specified device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 否 | Callback for receiving reported events. <br> If no callback is specified, listening will be disabled for all **cooperateMouse**. <br> events of the device specified by **networkId**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 否 | Callback for receiving reported events. <br> If no callback is specified, listening will be disabled for all **cooperateMouse**. <br> events of the device specified by **networkId**. |
 
 **错误码：**
 

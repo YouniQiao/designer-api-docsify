@@ -26,7 +26,7 @@ Obtains the touchpad pinch switch state. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
 
 **Error codes:**
 

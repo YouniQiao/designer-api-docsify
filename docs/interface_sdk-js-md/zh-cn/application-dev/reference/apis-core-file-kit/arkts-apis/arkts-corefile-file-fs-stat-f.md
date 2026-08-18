@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## stat
@@ -11,7 +14,7 @@
 declare function stat(file: string | number): Promise<Stat>
 ```
 
-获取文件或目录详细属性信息，使用promise异步回调。
+获取文件或目录详细属性信息，返回包含文件大小、权限模式、访问时间、修改时间等属性的Stat对象。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -58,7 +61,7 @@ declare function stat(file: string | number): Promise<Stat>
 declare function stat(file: string | number, callback: AsyncCallback<Stat>): void
 ```
 
-获取文件或目录的详细属性信息，使用callback异步回调。
+获取文件或目录的详细属性信息，返回包含文件大小、权限模式、访问时间、修改时间等属性的Stat对象。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -73,7 +76,7 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。<br>**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件或目录的信息之后的回调。 |
 
 **错误码：**
 

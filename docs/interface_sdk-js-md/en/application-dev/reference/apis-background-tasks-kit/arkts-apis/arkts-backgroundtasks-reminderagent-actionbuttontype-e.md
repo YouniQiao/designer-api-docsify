@@ -6,7 +6,7 @@ Enumerates the button types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#actionbuttontype)
+**Substitutes:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 <!--Device-reminderAgent-export enum ActionButtonType--><!--Device-reminderAgent-export enum ActionButtonType-End-->
 

@@ -1,12 +1,12 @@
 # GattServer
 
-Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#creategattserver) to create an GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md) to create an GattServer instance.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [GattServer](arkts-connectivity-ble-gattserver-i.md#gattserver)
+**Substitutes:** [GattServer](arkts-connectivity-ble-gattserver-i.md)
 
 <!--Device-bluetoothManager-interface GattServer--><!--Device-bluetoothManager-interface GattServer-End-->
 
@@ -203,7 +203,7 @@ try {
 }
 ```
 
-## off_characteristicRead
+## off_characteristicRead('characteristicRead')
 
 ```TypeScript
 off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void
@@ -230,7 +230,7 @@ Unsubscribe characteristic read event. On API 10 and above, the permission requi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | No | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CharacteristicReadRequest&gt; | No | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ gattServer.off("characteristicRead");
 }
 ```
 
-## off_characteristicWrite
+## off_characteristicWrite('characteristicWrite')
 
 ```TypeScript
 off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void
@@ -279,7 +279,7 @@ Unsubscribe characteristic write event. On API 10 and above, the permission requ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | No | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CharacteristicWriteRequest&gt; | No | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -301,7 +301,7 @@ gattServer.off("characteristicWrite");
 }
 ```
 
-## off_connectStateChange
+## off_connectStateChange('connectStateChange')
 
 ```TypeScript
 off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
@@ -328,7 +328,7 @@ Unsubscribe server connection state changed event. On API 10 and above, the perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ gattServer.off("connectStateChange");
 }
 ```
 
-## off_descriptorRead
+## off_descriptorRead('descriptorRead')
 
 ```TypeScript
 off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void
@@ -377,7 +377,7 @@ Unsubscribe descriptor read event. On API 10 and above, the permission required 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DescriptorReadRequest&gt; | No | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -399,7 +399,7 @@ gattServer.off("descriptorRead");
 }
 ```
 
-## off_descriptorWrite
+## off_descriptorWrite('descriptorWrite')
 
 ```TypeScript
 off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void
@@ -426,7 +426,7 @@ Unsubscribe descriptor write event. On API 10 and above, the permission required
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DescriptorWriteRequest&gt; | No | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -448,7 +448,7 @@ gattServer.off("descriptorWrite");
 }
 ```
 
-## on_characteristicRead
+## on_characteristicRead('characteristicRead')
 
 ```TypeScript
 on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void
@@ -475,7 +475,7 @@ Subscribe characteristic read event. On API 10 and above, the permission require
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadRequest&gt; | Yes | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CharacteristicReadRequest&gt; | Yes | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -511,7 +511,7 @@ let gattServer = bluetoothManager.BLE.createGattServer();
 gattServer.on("characteristicRead", ReadCharacteristicReq);
 ```
 
-## on_characteristicWrite
+## on_characteristicWrite('characteristicWrite')
 
 ```TypeScript
 on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void
@@ -538,7 +538,7 @@ Subscribe characteristic write event. On API 10 and above, the permission requir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteRequest&gt; | Yes | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CharacteristicWriteRequest&gt; | Yes | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -577,7 +577,7 @@ let gattServer = bluetoothManager.BLE.createGattServer();
 gattServer.on("characteristicWrite", WriteCharacteristicReq);
 ```
 
-## on_connectStateChange
+## on_connectStateChange('connectStateChange')
 
 ```TypeScript
 on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
@@ -604,7 +604,7 @@ Subscribe server connection state changed event. On API 10 and above, the permis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -630,7 +630,7 @@ gattServer.on("connectStateChange", Connected);
 }
 ```
 
-## on_descriptorRead
+## on_descriptorRead('descriptorRead')
 
 ```TypeScript
 on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void
@@ -657,7 +657,7 @@ Subscribe descriptor read event. On API 10 and above, the permission required by
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadRequest&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DescriptorReadRequest&gt; | Yes | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -693,7 +693,7 @@ let gattServer = bluetoothManager.BLE.createGattServer();
 gattServer.on("descriptorRead", ReadDescriptorReq);
 ```
 
-## on_descriptorWrite
+## on_descriptorWrite('descriptorWrite')
 
 ```TypeScript
 on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void
@@ -720,7 +720,7 @@ Subscribe descriptor write event. On API 10 and above, the permission required b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteRequest&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DescriptorWriteRequest&gt; | Yes | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -837,7 +837,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md#serverresponse). |
+| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md). |
 
 **Error codes:**
 
@@ -886,7 +886,7 @@ Starts BLE advertising. On API 10 and above, the permission required by this int
 
 **Deprecated since:** 10
 
-**Substitutes:** [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising)
+**Substitutes:** [startAdvertising](arkts-connectivity-ble-startadvertising-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -975,7 +975,7 @@ Stops BLE advertising. On API 10 and above, the permission required by this inte
 
 **Deprecated since:** 10
 
-**Substitutes:** [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising)
+**Substitutes:** [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

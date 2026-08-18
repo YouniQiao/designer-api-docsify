@@ -12,7 +12,6 @@ Defines the properties of the data records in the unified data object, including
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## extras
@@ -23,7 +22,7 @@ extras?: Record<string, RecordData>
 
 extra property data. key-value pairs.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

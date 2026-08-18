@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [makeBuilderParameterProxy](arkts-na-builder-makebuilderparameterproxy-f.md#makebuilderparameterproxy) | Make Proxy for Builder parameter. |
+| [makeBuilderParameterProxy](arkts-na-builder-makebuilderparameterproxy-f.md) | Make Proxy for Builder parameter. |
 
 ### Types
 

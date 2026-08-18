@@ -24,7 +24,7 @@ Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes | callback significant motion data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes | callback significant motion data. |
 | options | Options | No | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **Error codes:**

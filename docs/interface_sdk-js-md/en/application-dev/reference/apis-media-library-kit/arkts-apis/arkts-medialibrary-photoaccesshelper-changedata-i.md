@@ -52,7 +52,7 @@ Notification type.
 uris: Array<string>
 ```
 
-All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifytype), which can be **PhotoAsset** or **Album**.
+All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md), which can be **PhotoAsset** or **Album**.
 
 **Type:** Array&lt;string&gt;
 

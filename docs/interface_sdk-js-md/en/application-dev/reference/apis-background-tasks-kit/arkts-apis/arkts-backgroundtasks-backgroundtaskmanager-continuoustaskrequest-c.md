@@ -1,6 +1,6 @@
 # ContinuousTaskRequest
 
-Specifies details of the continuous task being requested or updated. It is typically used as input for the [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning) and [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) APIs. Note that: 1. When requesting a continuous task via [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning), notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application, and the **combinedTaskNotification** value is **true** for both tasks. Otherwise, notifications will not be combined. 2. Notifications will not be combined if the continuous task has no notification. For details about whether notifications are sent for the continuous task, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#backgroundtaskmode). 3. Notifications cannot be combined if the continuous task includes data transmission. 4. Notifications that have been combined cannot be canceled. If notifications have been combined, they cannot be updated to uncombined. 5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task. If the update API is called, the redirection will target the UIAbility corresponding to the last updated continuous task. 6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails. 7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#backgroundtaskmode) type are supported since API version 22. This task type must be used independently and notifications cannot be combined. Specifically, when you request or update a continuous task, it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.
+Specifies details of the continuous task being requested or updated. It is typically used as input for the [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) and [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) APIs. Note that: 1. When requesting a continuous task via [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md), notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application, and the **combinedTaskNotification** value is **true** for both tasks. Otherwise, notifications will not be combined. 2. Notifications will not be combined if the continuous task has no notification. For details about whether notifications are sent for the continuous task, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md). 3. Notifications cannot be combined if the continuous task includes data transmission. 4. Notifications that have been combined cannot be canceled. If notifications have been combined, they cannot be updated to uncombined. 5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task. If the update API is called, the redirection will target the UIAbility corresponding to the last updated continuous task. 6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails. 7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md) type are supported since API version 22. This task type must be used independently and notifications cannot be combined. Specifically, when you request or update a continuous task, it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.
 
 **Since:** 24
 
@@ -11,7 +11,6 @@ Specifies details of the continuous task being requested or updated. It is typic
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
@@ -37,7 +36,7 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 
 **Return value:**
 
@@ -120,7 +119,7 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING. No e
 isModeSupported(): boolean
 ```
 
-Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#continuoustaskrequest) is supported. For details, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#backgroundtaskmode).
+Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#continuoustaskrequest) is supported. For details, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md).
 
 **Since:** 24
 
@@ -174,7 +173,7 @@ export default class EntryAbility extends UIAbility {
 requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 ```
 
-Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#backgroundtaskmode) type.
+Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md) type.
 
 **Since:** 24
 
@@ -190,8 +189,8 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
+| context | Context | Yes | Application context. <br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
 
 **Error codes:**
 
@@ -252,7 +251,7 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | App running context. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
@@ -268,7 +267,7 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 combinedTaskNotification?: boolean
 ```
 
-Whether to combine notifications. The value **true** means to combine notifications, and the value **false** ( default) means the opposite. Note: This property does not take effect in [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) API. If notifications need to be combined for an existing task, request the task again and set the value to **true**.
+Whether to combine notifications. The value **true** means to combine notifications, and the value **false** ( default) means the opposite. Note: This property does not take effect in [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API. If notifications need to be combined for an existing task, request the task again and set the value to **true**.
 
 **Type:** boolean
 
@@ -286,7 +285,7 @@ Whether to combine notifications. The value **true** means to combine notificati
 continuousTaskId?: number
 ```
 
-Continuous task ID. The default value is **-1**. Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist. Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) API. You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks) API to view information about all continuous tasks.
+Continuous task ID. The default value is **-1**. Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist. Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API. You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md) API to view information about all continuous tasks.
 
 **Type:** number
 

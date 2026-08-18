@@ -27,7 +27,7 @@ Launches the call screen and displays the dialed number. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

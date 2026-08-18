@@ -14,7 +14,6 @@ Brightness blender, used to add a brightness effect to a specified component. Be
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## cubicRate

@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function postQuerySync(handle: AssetMap): void
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync) together. This API returns the result synchronously.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md) together. This API returns the result synchronously.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync). |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md). |
 
 **Error codes:**
 

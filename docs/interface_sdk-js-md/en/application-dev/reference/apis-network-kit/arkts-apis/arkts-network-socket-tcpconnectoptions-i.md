@@ -1,8 +1,8 @@
 # TCPConnectOptions
 
-Defines TCPSocket connection parameters.
+Defines TCP socket connection parameters.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface TCPConnectOptions--><!--Device-socket-export interface TCPConnectOptions-End-->
 
@@ -24,7 +24,7 @@ Bound IP address and port number.
 
 **Type:** NetAddress
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPConnectOptions-address: NetAddress--><!--Device-TCPConnectOptions-address: NetAddress-End-->
 
@@ -36,7 +36,7 @@ Bound IP address and port number.
 proxy?: ProxyOptions
 ```
 
-Set this option for the proxy feature.
+Proxy option. By default, no proxy is used.
 
 **Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
@@ -49,16 +49,16 @@ Set this option for the proxy feature.
 ## timeout
 
 ```TypeScript
-timeout?: number
+timeout?: int
 ```
 
-Timeout duration of the TCPSocket connection, in milliseconds.
+Timeout duration of the TCP socket connection, in ms. The default value is **5000**.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-TCPConnectOptions-timeout?: number--><!--Device-TCPConnectOptions-timeout?: number-End-->
+<!--Device-TCPConnectOptions-timeout?: int--><!--Device-TCPConnectOptions-timeout?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

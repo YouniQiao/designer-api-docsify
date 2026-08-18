@@ -14,7 +14,7 @@
 | [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) | Describes the use scenario and timing of the permission, helping developers request and use permissions properly. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

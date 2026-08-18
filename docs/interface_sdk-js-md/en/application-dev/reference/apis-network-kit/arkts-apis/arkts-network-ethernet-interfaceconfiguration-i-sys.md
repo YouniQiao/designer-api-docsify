@@ -22,7 +22,7 @@ import { ethernet } from '@kit.NetworkKit';
 dnsServers: string
 ```
 
-The Ethernet connection is configured with the dns service address. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured, Multiple addresses are separated by ",")
+DNS server addresses of the Ethernet connection. The value must be an IPv4 address, which is a 32-bit number displayed in dotted decimal notation and each 8-bit field ranges from 0 to 255. This parameter does not need to be configured in DHCP mode. Multiple addresses are separated by commas (,).
 
 **Type:** string
 
@@ -40,7 +40,7 @@ The Ethernet connection is configured with the dns service address. The address 
 gateway: string
 ```
 
-Ethernet connection static configuration gateway information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
+Gateway of the Ethernet connection. The value must be an IPv4 address, which is a 32-bit number displayed in dotted decimal notation and each 8-bit field ranges from 0 to 255. This parameter does not need to be configured in DHCP mode.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Ethernet connection static configuration gateway information. The address value 
 httpProxy?: HttpProxy
 ```
 
-Indicates the HttpProxy settings, no proxy is to be used as default.
+HTTP proxy of the Ethernet connection. By default, no proxy is configured.
 
 **Type:** HttpProxy
 
@@ -76,7 +76,7 @@ Indicates the HttpProxy settings, no proxy is to be used as default.
 ipAddr: string
 ```
 
-Ethernet connection static configuration IP information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
+Static IP address of the Ethernet connection. The value must be an IPv4 address, which is a 32-bit number displayed in dotted decimal notation and each 8-bit field ranges from 0 to 255. This parameter does not need to be configured in Dynamic Host Configuration Protocol (DHCP) mode.
 
 **Type:** string
 
@@ -94,6 +94,8 @@ Ethernet connection static configuration IP information. The address value range
 mode: IPSetMode
 ```
 
+Configuration mode of the Ethernet connection.
+
 **Type:** [IPSetMode](arkts-network-ethernet-ipsetmode-e-sys.md)
 
 **Since:** 9
@@ -110,7 +112,7 @@ mode: IPSetMode
 netMask: string
 ```
 
-Ethernet connection static configuration netMask information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
+Subnet mask of the Ethernet connection. The value must be an IPv4 address, which is a 32-bit number displayed in dotted decimal notation and each 8-bit field ranges from 0 to 255. This parameter does not need to be configured in DHCP mode.
 
 **Type:** string
 
@@ -128,7 +130,7 @@ Ethernet connection static configuration netMask information. The address value 
 route: string
 ```
 
-Ethernet connection static configuration route information. The address value range is 0-255.0-255.0-255.0-255.0-255 (DHCP mode does not need to be configured)
+Route of the Ethernet connection. The value must be an IPv4 address, which is a 32-bit number displayed in dotted decimal notation and each 8-bit field ranges from 0 to 255. This parameter does not need to be configured in DHCP mode.
 
 **Type:** string
 

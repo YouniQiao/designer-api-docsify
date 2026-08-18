@@ -18,7 +18,7 @@ Obtain geocode service status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable)
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Obtain geocode service status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
 
 **Examples**
 
@@ -59,7 +59,7 @@ Obtain geocode service status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable)
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

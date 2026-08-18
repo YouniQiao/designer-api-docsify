@@ -14,7 +14,7 @@ Defines the type of a continuous task.
 DATA_TRANSFER = 1
 ```
 
-Data transfer. Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser. Note: During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled. The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning) .
+Data transfer. Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser. Note: During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled. The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) .
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ Audio and video playback. Use scenario: audio/video playback in the background a
 AUDIO_RECORDING = 3
 ```
 
-Audio recording. Use scenario: recording and screen capture in the background.&lt;!--Del--&gt; Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
+Audio recording. Use scenario: recording and screen capture in the background.<!--Del--> Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ Multi-device connection. Use scenario: distributed service connection and castin
 VOIP = 8
 ```
 
-Audio and video calls. Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls.&lt;!--Del--&gt; Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
+Audio and video calls. Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls.<!--Del--> Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
 
 **Since:** 23
 

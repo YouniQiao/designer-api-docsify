@@ -12,24 +12,23 @@ Provides methods for managing device standby, including the methods for querying
 
 ```TypeScript
 import { deviceStandby } from '@kit.BackgroundTasksKit';
-import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) | Returns the information about the specified exempted application. |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-system-api) | Returns the information about the specified exempted application. |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) | Releases exemption resources. |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) | Requests exemption resources. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | Returns the information about the specified exempted application. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | Returns the information about the specified exempted application. |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md) | Releases exemption resources. |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md) | Requests exemption resources. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -38,7 +37,7 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

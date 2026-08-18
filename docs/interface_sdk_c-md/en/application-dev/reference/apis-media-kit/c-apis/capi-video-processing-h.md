@@ -59,7 +59,7 @@ Initialize global environment for video processing.This function is optional. <b
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if initialization is successful. <br> [VIDEO_PROCESSING_ERROR_INITIALIZE_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode) if initialization is failed. <br> You can check if the device GPU is working properly. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if initialization is successful. \n  [VIDEO_PROCESSING_ERROR_INITIALIZE_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode) if initialization is failed. \n  You can check if the device GPU is working properly. |
 
 ### OH_VideoProcessing_DeinitializeEnvironment()
 
@@ -77,7 +77,7 @@ Deinitialize global environment for video processing.This function is required i
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if deinitialization is successful. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if some video processing instance is not destroyed or<br> [OH_VideoProcessing_InitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_initializeenvironment) is not called. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if deinitialization is successful. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if some video processing instance is not destroyed or  [OH_VideoProcessing_InitializeEnvironment](capi-video-processing-h.md#oh_videoprocessing_initializeenvironment) is not called. \n |
 
 ### OH_VideoProcessing_IsColorSpaceConversionSupported()
 
@@ -102,7 +102,7 @@ Query if the video color space conversion is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the video color space conversion is supported. <br> <b>false</b> if the video color space conversion is not supported. |
+| bool | <b>true</b> if the video color space conversion is supported. \n  <b>false</b> if the video color space conversion is not supported. |
 
 ### OH_VideoProcessing_IsMetadataGenerationSupported()
 
@@ -126,7 +126,7 @@ Query if the video metadata generation is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the video metadata generation is supported. <br> <b>false</b> if the video metadata generation is not supported. |
+| bool | <b>true</b> if the video metadata generation is supported. \n  <b>false</b> if the video metadata generation is not supported. |
 
 ### OH_VideoProcessing_Create()
 
@@ -151,7 +151,7 @@ Create a video processing instance.
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if creating a video processing instance successfully. <br> [VIDEO_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-video-processing-types-h.md#videoprocessing_errorcode) if the type is not supported. For example, if metadata<br> generation is not supported by vendor, it returns unsupported processing. <br> [VIDEO_PROCESSING_ERROR_CREATE_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode) if failed to create a video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or <b></b>instance is <b>not</b> null. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is invalid. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if creating a video processing instance successfully. \n  [VIDEO_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-video-processing-types-h.md#videoprocessing_errorcode) if the type is not supported. For example, if metadata  generation is not supported by vendor, it returns unsupported processing. \n  [VIDEO_PROCESSING_ERROR_CREATE_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode) if failed to create a video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or <b></b>instance is <b>not</b> null. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is invalid. |
 
 ### OH_VideoProcessing_Destroy()
 
@@ -175,7 +175,7 @@ Destroy the video processing instance.Stop the instance before destroying it. se
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the instance is destroyed successfully . <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if the instance is still running. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the instance is destroyed successfully . \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if the instance is still running. |
 
 ### OH_VideoProcessing_RegisterCallback()
 
@@ -201,7 +201,7 @@ Register callback object.Register the callback object before starting video proc
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is registered successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if video processing instance is running. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is registered successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if video processing instance is running. |
 
 ### OH_VideoProcessing_SetSurface()
 
@@ -226,7 +226,7 @@ Set the output surface for video processing.Set the output surface before starti
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if setting output surface successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if window is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if setting output surface successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if window is null. |
 
 ### OH_VideoProcessing_GetSurface()
 
@@ -251,7 +251,7 @@ Create an input surface.Create the input surface before starting video processin
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if operation is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if window is null or <b></b>window is <b>not</b> null. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if creating surface failed, input surface is already created<br> or video processing instance is running. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if operation is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if window is null or <b></b>window is <b>not</b> null. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if creating surface failed, input surface is already created  or video processing instance is running. |
 
 ### OH_VideoProcessing_SetParameter()
 
@@ -276,7 +276,7 @@ Set parameter for video processing.Add parameter identified by the specified par
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if setting parameter is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not an video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the parameter is null. <br> [VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if some property of the parameter is invalid. For example, the parameter<br> contains unsupported parameter key or value. <br> [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode) if memory allocation failed. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if setting parameter is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not an video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the parameter is null. \n  [VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if some property of the parameter is invalid. For example, the parameter  contains unsupported parameter key or value. \n  [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode) if memory allocation failed. |
 
 ### OH_VideoProcessing_GetParameter()
 
@@ -301,7 +301,7 @@ Get parameter of video processing.Get parameter identified by the specified para
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if getting parameter is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not an video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the parameter is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if getting parameter is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not an video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the parameter is null. \n |
 
 ### OH_VideoProcessing_Start()
 
@@ -325,7 +325,7 @@ Start video processing instance.After successfully calling this function, the st
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if output surface is not set, input surface is not created or<br> instance is already running. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if output surface is not set, input surface is not created or  instance is already running. |
 
 ### OH_VideoProcessing_Stop()
 
@@ -349,7 +349,7 @@ To stop video processing instance.After the video processing instance is stopped
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is already stopped. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is already stopped. |
 
 ### OH_VideoProcessing_RenderOutputBuffer()
 
@@ -374,7 +374,7 @@ Send the output buffer out.If the callback function [OH_VideoProcessingCallback_
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. <br> [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if index is invalid. <br> [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback {@link OH_VideoProcessing_OnNewOutputBuffer} is<br> not set or instance is stopped. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful. \n  [VIDEO_PROCESSING_ERROR_INVALID_INSTANCE](capi-video-processing-types-h.md#videoprocessing_errorcode) if instance is null or not a video processing instance. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if index is invalid. \n  [VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback {@link OH_VideoProcessing_OnNewOutputBuffer} is  not set or instance is stopped. |
 
 ### OH_VideoProcessingCallback_Create()
 
@@ -398,7 +398,7 @@ Create a video processing callback object.
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback object is created successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null or <b></b>callback is <b>not</b> null. <br> [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode) if out of memory. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback object is created successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null or <b></b>callback is <b>not</b> null. \n  [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode) if out of memory. |
 
 ### OH_VideoProcessingCallback_Destroy()
 
@@ -422,7 +422,7 @@ Destroy the callback object.The callback object can be destroyed after it is reg
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is successfully destroyed. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is successfully destroyed. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if callback is null. |
 
 ### OH_VideoProcessingCallback_BindOnError()
 
@@ -447,7 +447,7 @@ Bind the [OH_VideoProcessingCallback_OnError](capi-video-processing-types-h.md#o
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null or onError is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null or onError is null. |
 
 ### OH_VideoProcessingCallback_BindOnState()
 
@@ -472,7 +472,7 @@ Bind the [OH_VideoProcessingCallback_OnState](capi-video-processing-types-h.md#o
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null or onState is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null or onState is null. |
 
 ### OH_VideoProcessingCallback_BindOnNewOutputBuffer()
 
@@ -497,7 +497,7 @@ Bind the [OH_VideoProcessingCallback_OnNewOutputBuffer](capi-video-processing-ty
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. <br> [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null. |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | [VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the function is bound to callback object successfully. \n  [VIDEO_PROCESSING_ERROR_INVALID_PARAMETER](capi-video-processing-types-h.md#videoprocessing_errorcode) if the callback is null. |
 
 ### OH_VideoProcessing_IsAutoEffectSupported()
 
@@ -521,7 +521,7 @@ Query if the autoeffect is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><li><b>true</b> if the autoeffect is supported.</li><br>     <li><b>false</b> if the autoeffect is not supported.</li></ul> |
+| bool | <ul><li><b>true</b> if the autoeffect is supported.</li>      <li><b>false</b> if the autoeffect is not supported.</li></ul> |
 
 ### OH_VideoProcessing_UseAutoEffect()
 
@@ -547,7 +547,7 @@ Specifies whether the type effect is required in the XComponent named name that 
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li><br>     <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is not {@link VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR}<br>     or name is null.</li><br>     <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)<br>     returns false for the type, or the same name has already been registered by calling this function.</li></ul> |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li>      <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if type is not {@link VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR}      or name is null.</li>      <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)      returns false for the type, or the same name has already been registered by calling this function.</li></ul> |
 
 ### OH_VideoProcessing_SetAutoEffectParam()
 
@@ -573,6 +573,6 @@ Sets parameters for the automatic effect associated with the XComponent. Current
 
 | Type | Description |
 | -- | -- |
-| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li><br>     <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if the name is nullptr or the param value is invalid.</li><br>     <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)<br>     returns false for the type, or name does not match any registered name, or the VPE instance has not been<br>     created or [OH_VideoProcessing_UseAutoEffect](capi-video-processing-h.md#oh_videoprocessing_useautoeffect) has not been called for the name.</li><br>     <li>[VIDEO_PROCESSING_ERROR_UNKNOWN](capi-video-processing-types-h.md#videoprocessing_errorcode) if an internal algorithm error occurs.</li></ul> |
+| [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode) | <ul><li>[VIDEO_PROCESSING_SUCCESS](capi-video-processing-types-h.md#videoprocessing_errorcode) if the operation is successful.</li>      <li>[VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode) if the name is nullptr or the param value is invalid.</li>      <li>[VIDEO_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-video-processing-types-h.md#videoprocessing_errorcode) if [OH_VideoProcessing_IsAutoEffectSupported](capi-video-processing-h.md#oh_videoprocessing_isautoeffectsupported)      returns false for the type, or name does not match any registered name, or the VPE instance has not been      created or [OH_VideoProcessing_UseAutoEffect](capi-video-processing-h.md#oh_videoprocessing_useautoeffect) has not been called for the name.</li>      <li>[VIDEO_PROCESSING_ERROR_UNKNOWN](capi-video-processing-types-h.md#videoprocessing_errorcode) if an internal algorithm error occurs.</li></ul> |
 
 

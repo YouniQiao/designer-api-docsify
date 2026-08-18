@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## offRemove
@@ -27,7 +28,7 @@ function offRemove(callback?: Callback<BundleChangedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 注销监听的AsyncCallback，默认值：注销当前事件的所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 否 | 注销监听的AsyncCallback，默认值：注销当前事件的所有callback。 |
 
 **错误码：**
 

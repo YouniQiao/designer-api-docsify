@@ -1,6 +1,6 @@
 # ReadonlySystemEnvKey
 
-只读系统环境变量Key，继承自[SystemEnvKey](arkts-na-decorator-systemenvkey-c.md#systemenvkey)。
+只读系统环境变量Key，继承自[SystemEnvKey](arkts-na-decorator-systemenvkey-c.md)。
 
 **继承/实现关系：** ReadonlySystemEnvKey extends SystemEnvKey<T>
 

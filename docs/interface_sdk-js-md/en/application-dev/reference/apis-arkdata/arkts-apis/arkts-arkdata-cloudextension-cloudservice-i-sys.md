@@ -14,7 +14,6 @@ Provides APIs for interacting with the cloud sync service. You need to inherit t
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## connectAssetLoader

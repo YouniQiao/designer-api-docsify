@@ -11,6 +11,7 @@ XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过s
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -109,7 +110,7 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#eventtype))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#parseinfo)属性，默认值undefined，表示不解析。
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
 
 **类型：** (eventType: EventType, value: ParseInfo) =&gt; boolean
 

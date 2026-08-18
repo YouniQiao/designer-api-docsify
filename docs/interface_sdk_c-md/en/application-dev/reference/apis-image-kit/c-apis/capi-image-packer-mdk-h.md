@@ -56,7 +56,7 @@ Creates an <b>ImagePacker</b> object at the JavaScript native layer.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br> returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. |
 
 ### OH_ImagePacker_InitNative()
 
@@ -81,7 +81,7 @@ Parses an [ImagePacker_Native](capi-image-imagepacker-native-.md) object at the 
 
 | Type | Description |
 | -- | -- |
-| [ImagePacker_Native*](capi-image-imagepacker-native-.md) | Returns an [ImagePacker_Native](capi-image-imagepacker-native-.md) pointer object if the operation is successful<br> returns a null pointer otherwise. |
+| [ImagePacker_Native*](capi-image-imagepacker-native-.md) | Returns an [ImagePacker_Native](capi-image-imagepacker-native-.md) pointer object if the operation is successful  returns a null pointer otherwise. |
 
 **Reference**:
 
@@ -114,7 +114,7 @@ Encoding an <b>ImageSource</b> or a <b>PixelMap</b> into the data with required 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DATA_ABNORMAL - if output target abnormal<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MISMATCHED_FORMAT - if format mismatched<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MALLOC_ABNORMAL - if malloc internal buffer error<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DECODE_ABNORMAL - if init codec internal error<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_ENCODE_FAILED - if encoder occur error during encoding |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DATA_ABNORMAL - if output target abnormal   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MISMATCHED_FORMAT - if format mismatched   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MALLOC_ABNORMAL - if malloc internal buffer error   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DECODE_ABNORMAL - if init codec internal error   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_ENCODE_FAILED - if encoder occur error during encoding |
 
 **Reference**:
 
@@ -146,7 +146,7 @@ Encoding an <b>ImageSource</b> or a <b>PixelMap</b> into the a file with fd with
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DATA_ABNORMAL - if output target abnormal<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MISMATCHED_FORMAT - if format mismatched<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MALLOC_ABNORMAL - if malloc internal buffer error<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DECODE_ABNORMAL - if init codec internal error<br>  returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_ENCODE_FAILED - if encoder occur error during encoding |
+| int32_t | Returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_SUCCESS - if the operation is successful.   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DATA_ABNORMAL - if output target abnormal   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MISMATCHED_FORMAT - if format mismatched   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_MALLOC_ABNORMAL - if malloc internal buffer error   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_DECODE_ABNORMAL - if init codec internal error   returns [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode) ERR_IMAGE_ENCODE_FAILED - if encoder occur error during encoding |
 
 **Reference**:
 

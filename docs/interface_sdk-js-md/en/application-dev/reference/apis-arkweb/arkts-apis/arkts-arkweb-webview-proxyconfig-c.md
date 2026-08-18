@@ -1,6 +1,6 @@
 # ProxyConfig
 
-ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](../../apis-na/arkts-apis/arkts-na-webview-proxycontroller-c.md#proxycontroller) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
+ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](arkts-arkweb-webview-proxycontroller-c.md) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
 
 **Since:** 15
 
@@ -66,7 +66,7 @@ Reverses the bypass rule.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
+| reverse | boolean | Yes | Whether to reverse the bypass rule. The default value is **false**, indicating the bypass rule set in [insertBypassRule](#insertbypassrule) is not reversed. The value **true** indicates the opposite. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ Obtains proxy rules.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[ProxyRule](../../apis-na/arkts-apis/arkts-na-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | Proxy rule. Each ProxyRule object represents a configured proxy rule. |
 
 ## insertBypassRule
 
@@ -124,7 +124,7 @@ Obtains proxy rules.
 insertBypassRule(bypassRule: string): void
 ```
 
-Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
+Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
 
 **Since:** 15
 
@@ -152,7 +152,7 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 ```
 
-Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server. > **NOTE：**> > - Both [insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertbypassrule) and > [bypassHostnamesWithoutPeriod](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#bypasshostnameswithoutperiod) can also implement > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type > through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; > bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames > without a period. You can choose the appropriate method based on the URL range that needs direct connection.
+Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server. > **NOTE：**> > - Both [insertBypassRule](#insertbypassrule) and > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type > through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; > bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames > without a period. You can choose the appropriate method based on the URL range that needs direct connection.
 
 **Since:** 15
 
@@ -166,7 +166,7 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs to be directly connected to the server. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -195,7 +195,7 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxyRule | string | Yes | The specified proxy. |
-| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No | Filter used to specify URLs that use the proxy. <br>Default value: **MATCH_ALL_SCHEMES**. <br>If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -209,7 +209,7 @@ Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. I
 isReverseBypassEnabled(): boolean
 ```
 
-Obtains the value of [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass). For details, see [enableReverseBypass](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#enablereversebypass).
+Obtains the value of [enableReverseBypass](#enablereversebypass). For details, see [enableReverseBypass](#enablereversebypass).
 
 **Since:** 15
 

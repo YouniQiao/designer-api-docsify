@@ -6,7 +6,7 @@ P2P linked information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md#wifip2plinkedinfo)
+**Substitutes:** [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md)
 
 <!--Device-wifi-interface WifiP2pLinkedInfo--><!--Device-wifi-interface WifiP2pLinkedInfo-End-->
 

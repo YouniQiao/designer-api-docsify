@@ -746,7 +746,7 @@ Laser pointer This pointer can be used only when the stylus enters the air mouse
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle).
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md).
 
 **Since:** 23
 

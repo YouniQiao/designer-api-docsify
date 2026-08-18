@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## onNetworkStateChange
@@ -25,7 +26,7 @@ Callback when the network state corresponding to the default sim card is updated
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **错误码：**
 
@@ -68,7 +69,7 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ObserverOptions | 是 | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 是 | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **错误码：**
 

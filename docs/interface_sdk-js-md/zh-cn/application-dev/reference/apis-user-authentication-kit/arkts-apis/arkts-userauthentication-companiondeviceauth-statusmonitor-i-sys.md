@@ -1,6 +1,6 @@
 # StatusMonitor（系统接口）
 
-状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor系统接口)获取此对象。
+状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md)获取此对象。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getTemplateStatus

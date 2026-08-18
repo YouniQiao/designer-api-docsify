@@ -14,7 +14,6 @@ The directory information shared with the system by the application.
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

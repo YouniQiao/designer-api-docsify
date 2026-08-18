@@ -6,7 +6,7 @@ Defines the options for selecting images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#photoselectoptions)
+**Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 

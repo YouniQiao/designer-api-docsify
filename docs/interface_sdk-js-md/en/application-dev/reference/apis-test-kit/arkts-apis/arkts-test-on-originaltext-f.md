@@ -26,7 +26,7 @@ Specifies the original text for the target Component. If the accessibility prope
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | the original text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

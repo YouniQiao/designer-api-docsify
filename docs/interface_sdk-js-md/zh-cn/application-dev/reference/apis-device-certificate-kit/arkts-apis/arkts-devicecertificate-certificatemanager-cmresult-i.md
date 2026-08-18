@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## appUidList
@@ -69,7 +71,7 @@ credential?: Credential
 
 表示凭据详情。
 
-**类型：** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
+**类型：** Credential
 
 **起始版本：** 23
 
@@ -85,7 +87,7 @@ credentialDetailList?: Array<Credential>
 
 表示凭据详细信息。
 
-**类型：** Array&lt;[Credential](arkts-devicecertificate-certificatemanager-credential-i.md)&gt;
+**类型：** Array&lt;Credential&gt;
 
 **起始版本：** 23
 

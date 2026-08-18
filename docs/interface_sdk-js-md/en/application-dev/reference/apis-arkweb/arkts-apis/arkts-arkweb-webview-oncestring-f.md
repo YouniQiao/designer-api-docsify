@@ -27,7 +27,7 @@ Registers a one-time callback for web events of the specified type. Currently, o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the Web event. Currently, only **"webInited"** (Web engine initialization complete) is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the Web engine initialization is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the Web engine initialization is complete. |
 
 **Error codes:**
 

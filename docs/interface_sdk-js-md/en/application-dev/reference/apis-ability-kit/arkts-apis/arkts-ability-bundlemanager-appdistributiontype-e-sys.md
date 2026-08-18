@@ -64,7 +64,7 @@ Common enterprise application that can be installed on enterprise devices only t
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin-system-api) .
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md) .
 
 **Since:** 23
 

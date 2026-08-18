@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ContainerReader](arkts-na-arkui-components-containerreader-containerreader-f.md#containerreader) | Defines ContainerReader Component. |
+| [ContainerReader](arkts-na-arkui-components-containerreader-containerreader-f.md) | Defines ContainerReader Component. |
 
 ### Interfaces
 

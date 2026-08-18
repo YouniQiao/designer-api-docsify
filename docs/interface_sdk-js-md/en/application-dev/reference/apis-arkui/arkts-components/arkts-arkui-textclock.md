@@ -30,5 +30,10 @@ Create TextClock component.
 
 ## Summary
 
-- [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)
-- [TextClockOptions](arkts-arkui-textclockoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. |
+| [TextClockOptions](arkts-arkui-textclockoptions-i.md) | Options used to build the **TextClock** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+

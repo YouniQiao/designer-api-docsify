@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md#wantagent)
+**替代接口：** [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md)
 
 <!--Device-reminderAgent-interface WantAgent--><!--Device-reminderAgent-interface WantAgent-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

@@ -8,7 +8,7 @@ export type TripleLengthDetents = [
 ]
 ```
 
-Defines the detent array of a three-length.
+Defines the detent array of a three-length. TripleLengthDetents
 
 **Since:** 23
 

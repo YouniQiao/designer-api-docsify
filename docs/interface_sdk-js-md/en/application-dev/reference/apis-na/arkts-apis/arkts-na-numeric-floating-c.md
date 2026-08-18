@@ -2,7 +2,7 @@
 
 Common class for all Floating number
 
-**Inheritance/Implementation:** Floating extends [Numeric](arkts-na-numeric-c.md#numeric)
+**Inheritance/Implementation:** Floating extends [Numeric](arkts-na-numeric-c.md)
 
 **Since:** 26.0.0
 

@@ -14,7 +14,6 @@ Represents a time zone and city combination item.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## cityDisplayName

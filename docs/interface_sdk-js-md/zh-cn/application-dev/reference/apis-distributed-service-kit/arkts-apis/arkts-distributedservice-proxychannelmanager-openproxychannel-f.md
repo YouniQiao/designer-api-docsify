@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## openProxyChannel
@@ -11,7 +12,7 @@
 function openProxyChannel(channelInfo: ChannelInfo): Promise<int>
 ```
 
-打开代理通道，使用Promise异步回调。基于ChannelInfo中配置的链路类型和对端设备信息，通过蓝牙BR协议与对端设备协商建立双向数据通道，并返回唯一标识该通道的channelId。适用于手机侧应用需要与穿戴设备侧应用建立 双向数据通道的场景，例如消息通知转发等。调用此方法后，必须在不再使用代理通道时调用[closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel)关闭通道以释放资源。
+打开代理通道，使用Promise异步回调。基于ChannelInfo中配置的链路类型和对端设备信息，通过蓝牙BR协议与对端设备协商建立双向数据通道，并返回唯一标识该通道的channelId。适用于手机侧应用需要与穿戴设备侧应用建立 双向数据通道的场景，例如消息通知转发等。调用此方法后，必须在不再使用代理通道时调用[closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md)关闭通道以释放资源。
 
 **起始版本：** 23
 

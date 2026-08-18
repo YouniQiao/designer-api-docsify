@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## startCastDeviceDiscovery
@@ -27,7 +26,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -71,7 +70,7 @@ Start device discovery.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | int | Yes | device filter when discovering, can be an union of { |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
@@ -116,7 +115,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | int | No | device filter when discovering, can be an union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)<br>**Since:** 12 |
+| filter | int | No | device filter when discovering, can be an union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md)<br>**Since:** 12 |
 | drmSchemes | Array&lt;string&gt; | No | filter drm-enabled devices which are represented by uuid. It is effective when protocol type is TYPE_CAST_PLUS_STREAM.<br>**Since:** 12 |
 
 **Return value:**

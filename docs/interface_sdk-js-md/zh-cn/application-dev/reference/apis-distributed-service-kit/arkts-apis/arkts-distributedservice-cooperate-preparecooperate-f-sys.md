@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## prepareCooperate
@@ -27,7 +28,7 @@ function prepareCooperate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

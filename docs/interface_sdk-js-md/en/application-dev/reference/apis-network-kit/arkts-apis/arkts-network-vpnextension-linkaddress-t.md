@@ -4,7 +4,7 @@
 export type LinkAddress = connection.LinkAddress
 ```
 
-Get network link information.
+Defines the network link address information.
 
 **Since:** 11
 

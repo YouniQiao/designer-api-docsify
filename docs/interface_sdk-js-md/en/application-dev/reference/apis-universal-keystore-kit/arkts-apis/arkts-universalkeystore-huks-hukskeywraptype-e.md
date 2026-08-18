@@ -14,7 +14,7 @@ Enumerates the key encryption types (exporting or importing keys).
 HUKS_KEY_WRAP_TYPE_HUK_BASED = 2
 ```
 
-Hardware unique key encryption type. &lt;!--Del--&gt;(not supported currently)&lt;!--DelEnd--&gt;
+Hardware unique key encryption type. <!--Del-->(not supported currently)<!--DelEnd-->
 
 **Since:** 20
 

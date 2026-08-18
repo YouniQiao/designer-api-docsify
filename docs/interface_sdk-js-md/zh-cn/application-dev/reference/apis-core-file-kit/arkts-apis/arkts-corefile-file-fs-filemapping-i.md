@@ -1,6 +1,6 @@
 # FileMapping
 
-文件映射对象，在调用FileMapping的方法前，需要先通过mmap()方法（同步或异步）构建一个FileMapping实例。
+文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-file-fs-mmap-f.md)或方法[mmapSync()](arkts-corefile-file-fs-mmapsync-f.md)构建一个FileMapping实例。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## capacity
@@ -19,7 +22,7 @@
 capacity(): number
 ```
 
-获取文件映射区的容量，单位为Byte。
+获取文件映射区的容量。
 
 **起始版本：** 26.0.0
 
@@ -33,7 +36,7 @@ capacity(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Size of the file mapping area, in bytes. |
+| number | 文件映射区的容量，单位为Byte。 |
 
 **错误码：**
 
@@ -61,7 +64,7 @@ fileIo.closeSync(file);
 flip(): void
 ```
 
-模式翻转。即将 limit 属性设置为当前 position，再将当前 position 设置为0。
+翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。 推荐在一系列[write()](#write)操作完成后，调用此方法准备后续的[read()](#read)操作。
 
 **起始版本：** 26.0.0
 
@@ -146,7 +149,7 @@ fileIo.closeSync(file);
 getPosition(): number
 ```
 
-获取文件映射区的当前位置，单位为Byte。
+获取文件映射区的当前位置。
 
 **起始版本：** 26.0.0
 
@@ -160,7 +163,7 @@ getPosition(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Current location of the file mapping area. |
+| number | 文件映射区的当前位置，单位为Byte。 |
 
 **错误码：**
 
@@ -188,7 +191,7 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -268,7 +271,7 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -355,7 +358,7 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-以同步方法将整个文件映射区的脏页数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将整个文件映射区的数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -401,7 +404,7 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将文件映射区指定范围内的数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -469,7 +472,7 @@ read(buffer: ArrayBuffer, length?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| length | number | 否 | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
+| length | number | 否 | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **返回值：**
 
@@ -508,7 +511,7 @@ fileIo.closeSync(file);
 read(position: number, buffer: ArrayBuffer, length?: number): number
 ```
 
-从指定位置读取数据，不影响当前位置。
+从指定位置读取数据，当前位置不会发生移动。
 
 **起始版本：** 26.0.0
 
@@ -522,9 +525,9 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | number | 是 | 期望读取的起始位置。 |
+| position | number | 是 | 期望读取的起始位置，单位为Byte。 |
 | buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
-| length | number | 否 | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
+| length | number | 否 | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **返回值：**
 
@@ -563,7 +566,7 @@ fileIo.closeSync(file);
 remaining(): number
 ```
 
-获取从当前位置（pisition）到可读写区域的上界（limit）之间的剩余字节数。
+获取从当前位置（position）到可读写区域的上界（limit）之间的剩余字节数。
 
 **起始版本：** 26.0.0
 
@@ -608,7 +611,7 @@ fileIo.closeSync(file);
 setLimit(limit: number): void
 ```
 
-设置文件映射区可读写区域的上界。该上界不会超过映射区的总容量（0 ≤ limit ≤ capacity）。
+设置文件映射区可读写区域的上界。
 
 **起始版本：** 26.0.0
 
@@ -622,7 +625,7 @@ setLimit(limit: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| limit | number | 是 | 要设置的可读写区域上界值，单位为Byte。如果当前位置大于新上界，则会被自动调整为 limit。 |
+| limit | number | 是 | 要设置的可读写区域上界值，单位为Byte。取值需大于等于0，且小于等于当前[capacity](#capacity)。 若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **错误码：**
 
@@ -664,7 +667,7 @@ setPosition(position: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | number | 是 | 期望设置的目标位置，单位为Byte。必须为非负数且不大于当前可读写上限（limit）。 |
+| position | number | 是 | 期望设置的目标位置，单位为Byte。必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](#getlimit)获得可读写上界的limit。 |
 
 **错误码：**
 
@@ -692,7 +695,7 @@ fileIo.closeSync(file);
 unmap(): Promise<void>
 ```
 
-释放文件映射区，使用promise异步回调。
+释放文件映射区。使用Promise异步回调。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -764,7 +767,7 @@ mapping.unmap().then(() => {
 unmapSync(): void
 ```
 
-以同步方法释放文件映射区。
+以同步方法释放文件映射区。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -816,7 +819,7 @@ write(data: ArrayBuffer, length?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | ArrayBuffer | 是 | 待写入文件的缓冲区数据。 |
-| length | number | 否 | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
+| length | number | 否 | 期望写入数据的长度，单位为Byte。默认缓冲区长度。 |
 
 **返回值：**
 
@@ -857,7 +860,7 @@ fileIo.closeSync(file);
 write(position: number, data: ArrayBuffer, length?: number): number
 ```
 
-从指定位置写入数据，不影响当前位置。
+从指定位置写入数据，当前位置不会发生移动。
 
 **起始版本：** 26.0.0
 

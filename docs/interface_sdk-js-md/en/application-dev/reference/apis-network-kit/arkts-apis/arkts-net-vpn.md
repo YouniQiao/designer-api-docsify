@@ -1,6 +1,6 @@
 # @ohos.net.vpn
 
-Provides VPN related interfaces.
+This module is the built-in VPN function provided by the OS. It allows users to set up VPN connections through the network settings of the OS. Generally, this module provides only limited functions and is subject to strict restrictions.
 
 **Since:** 10
 
@@ -18,25 +18,25 @@ import { vpnExtension } from '@kit.NetworkKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [addSysVpnConfig](arkts-network-vpn-addsysvpnconfig-f-sys.md#addsysvpnconfig) | Add a system VPN network configuration. |
-| [createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md#createvpnconnection) | Create a VPN connection using the AbilityContext. |
-| [deleteSysVpnConfig](arkts-network-vpn-deletesysvpnconfig-f-sys.md#deletesysvpnconfig) | Delete the configuration of system VPN network by the specified vpnId. |
-| [getConnectedSysVpnConfig](arkts-network-vpn-getconnectedsysvpnconfig-f-sys.md#getconnectedsysvpnconfig) | Get the connected VPN network configuration. |
-| [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md#getconnectedvpnappinfo) | Get the connected VPN App Info. |
-| [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md#getsysvpnconfig) | Get the configuration of system VPN network by the specified vpnId. |
-| [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md#getsysvpnconfiglist) | Get all system VPN network configuration. |
-| [off_connect](arkts-network-vpn-offconnect-f-sys.md#offconnect) | Unsubscribes from vpn connect state changes. |
-| [off_connectMulti](arkts-network-vpn-offconnectmulti-f-sys.md#offconnectmulti) | Unsubscribes from vpn connect state changes. |
-| [on_connect](arkts-network-vpn-onconnect-f-sys.md#onconnect) | Subscribes to vpn connect state changes. |
-| [on_connectMulti](arkts-network-vpn-onconnectmulti-f-sys.md#onconnectmulti) | Subscribes to vpn connect state changes. |
+| [addSysVpnConfig](arkts-network-vpn-addsysvpnconfig-f-sys.md) | Add a system VPN network configuration. |
+| [createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md) | Creates a VPN connection. |
+| [deleteSysVpnConfig](arkts-network-vpn-deletesysvpnconfig-f-sys.md) | Delete the configuration of system VPN network by the specified vpnId. |
+| [getConnectedSysVpnConfig](arkts-network-vpn-getconnectedsysvpnconfig-f-sys.md) | Get the connected VPN network configuration. |
+| [getConnectedVpnAppInfo](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md) | Get the connected VPN App Info. |
+| [getSysVpnConfig](arkts-network-vpn-getsysvpnconfig-f-sys.md) | Get the configuration of system VPN network by the specified vpnId. |
+| [getSysVpnConfigList](arkts-network-vpn-getsysvpnconfiglist-f-sys.md) | Get all system VPN network configuration. |
+| [off_connect](arkts-network-vpn-offconnect-f-sys.md#off_connectconnect) | Unsubscribes from vpn connect state changes. |
+| [off_connectMulti](arkts-network-vpn-offconnectmulti-f-sys.md#off_connectmulticonnectmulti) | Unsubscribes from vpn connect state changes. |
+| [on_connect](arkts-network-vpn-onconnect-f-sys.md#on_connectconnect) | Subscribes to vpn connect state changes. |
+| [on_connectMulti](arkts-network-vpn-onconnectmulti-f-sys.md#on_connectmulticonnectmulti) | Subscribes to vpn connect state changes. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -44,12 +44,12 @@ import { vpnExtension } from '@kit.NetworkKit';
 | [L2tpVpnConfig](arkts-network-vpn-l2tpvpnconfig-i-sys.md) | Define configuration of the l2tp VPN network. |
 | [OpenVpnConfig](arkts-network-vpn-openvpnconfig-i-sys.md) | Define configuration of the open VPN network. |
 | [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md) | Define configuration of the system VPN network. |
-| [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md) | Define configuration of the VPN network. |
-| [VpnConnection](arkts-network-vpn-vpnconnection-i-sys.md) | Defines a VPN connection. |
+| [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md) | Defines the VPN configuration. |
+| [VpnConnection](arkts-network-vpn-vpnconnection-i-sys.md) | Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling [vpn.createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md). |
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -61,6 +61,6 @@ import { vpnExtension } from '@kit.NetworkKit';
 | Name | Description |
 | --- | --- |
 | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | The context of an ability. It allows access to ability-specific resources. |
-| [LinkAddress](arkts-network-vpn-linkaddress-t.md) | Get network link information. |
-| [RouteInfo](arkts-network-vpn-routeinfo-t.md) | Get network route information. |
+| [LinkAddress](arkts-network-vpn-linkaddress-t.md) | Defines the network link address information. |
+| [RouteInfo](arkts-network-vpn-routeinfo-t.md) | Defines the network route information. |
 

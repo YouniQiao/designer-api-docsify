@@ -1,6 +1,6 @@
 # AudioManager
 
-This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
+This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
 
 **Since:** 23
 
@@ -12,8 +12,6 @@ This interface implements audio volume and device management. Before calling any
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -94,7 +92,7 @@ Obtains a collaborative playback management instance.
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#audioeffectmanager-system-api) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) instance.
 
 **Since:** 23
 
@@ -174,7 +172,7 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
-## on_ringerModeChange
+## on_ringerModeChange('ringerModeChange')
 
 ```TypeScript
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
@@ -199,7 +197,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
 
 **Examples**
 
@@ -209,7 +207,7 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 });
 ```
 
-## on_volumeChange
+## on_volumeChange('volumeChange')
 
 ```TypeScript
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
@@ -234,7 +232,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
 **Examples**
 
@@ -267,7 +265,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | Yes | Audio scene mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

@@ -26,7 +26,7 @@ Specifies the hint for the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | the hint value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) |
 
 **Return value:**
 

@@ -1463,7 +1463,7 @@ Gets the top edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetLeft()
 
@@ -1507,7 +1507,7 @@ Gets the left edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetBottom()
 
@@ -1551,7 +1551,7 @@ Gets the bottom edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetRight()
 
@@ -1595,7 +1595,7 @@ Gets the right edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_Create()
 
@@ -1675,7 +1675,7 @@ Gets the top edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetStart()
 
@@ -1719,7 +1719,7 @@ Gets the start edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetBottom()
 
@@ -1763,7 +1763,7 @@ Gets the bottom edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetEnd()
 
@@ -1807,6 +1807,6 @@ Gets the end edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>      Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>      Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 

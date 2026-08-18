@@ -12,7 +12,7 @@ import { ethernet } from '@kit.NetworkKit';
 function getMacAddress(): Promise<Array<MacAddressInfo>>
 ```
 
-Get the ethernet mac address list.
+Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **Since:** 14
 
@@ -26,7 +26,7 @@ Get the ethernet mac address list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md)&gt;&gt; | the promise returned by the function. |
+| Promise&lt;Array&lt;[MacAddressInfo](arkts-network-ethernet-macaddressinfo-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

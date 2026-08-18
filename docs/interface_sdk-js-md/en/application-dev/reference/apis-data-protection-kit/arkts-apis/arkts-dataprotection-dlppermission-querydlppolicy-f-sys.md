@@ -12,7 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md#dlpproperty-system-api) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md#customproperty-system-api) information. This API uses a promise to return the result. This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration. > **NOTE：**> > This API can be called only by enterprise accounts.
+Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) information. This API uses a promise to return the result. This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration. > **NOTE：**> > This API can be called only by enterprise accounts.
 
 **Since:** 20
 
@@ -50,7 +50,7 @@ Parses the file header in a DLP file to obtain the DLP plaintext policy. The ret
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
 **Examples**

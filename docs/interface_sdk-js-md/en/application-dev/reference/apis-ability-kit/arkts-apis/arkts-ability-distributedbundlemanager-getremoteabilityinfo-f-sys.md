@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -30,7 +29,7 @@ Obtains information about the remote ability that matches the given element name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Target element name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RemoteAbilityInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 
@@ -163,7 +162,7 @@ Obtains information about the remote abilities that match the given element name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 
@@ -311,7 +310,7 @@ Obtains information about the remote ability that matches the given element name
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Target element name. |
 | locale | string | Yes | Target locale. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RemoteAbilityInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 
@@ -446,7 +445,7 @@ Obtains information about the remote abilities that match the given element name
 | --- | --- | --- | --- |
 | elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
 | locale | string | Yes | Target locale. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 

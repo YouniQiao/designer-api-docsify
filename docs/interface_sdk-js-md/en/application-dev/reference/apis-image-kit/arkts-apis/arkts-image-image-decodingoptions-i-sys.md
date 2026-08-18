@@ -12,7 +12,6 @@ Describes the image decoding options.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## resolutionQuality

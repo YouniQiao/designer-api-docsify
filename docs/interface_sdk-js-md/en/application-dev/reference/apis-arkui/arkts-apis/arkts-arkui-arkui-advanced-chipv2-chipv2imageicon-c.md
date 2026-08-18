@@ -2,7 +2,7 @@
 
 ChipV2 icon common option
 
-**Inheritance/Implementation:** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md#chipv2icon)
+**Inheritance/Implementation:** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## errCode
@@ -19,7 +20,7 @@
 errCode: WebBlanklessErrorCode
 ```
 
-无白屏加载的错误码，见[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#webblanklesserrorcode)定义。
+无白屏加载的错误码，见[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)定义。
 
 **类型：** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 

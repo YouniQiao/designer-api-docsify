@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getOperationType
@@ -28,7 +27,7 @@ Obtains the operation type of a WantAgent object. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the operation type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the operation type. |
 
 **Error codes:**
 

@@ -2,7 +2,7 @@
 
 Defines the GestureGroup handler.
 
-**Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

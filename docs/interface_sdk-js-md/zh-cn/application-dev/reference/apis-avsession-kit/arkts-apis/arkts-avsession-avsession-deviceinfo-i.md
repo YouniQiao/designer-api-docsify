@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## audioCapabilities
@@ -163,7 +164,7 @@ supportedDrmCapabilities?: Array<string>
 supportedProtocols?: int
 ```
 
-播放设备支持的协议。 默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)，可以是ProtocolType中的某个协议或者多个协议的组合。 设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
+播放设备支持的协议。 默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)，可以是ProtocolType中的某个协议或者多个协议的组合。 设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
 
 **类型：** int
 

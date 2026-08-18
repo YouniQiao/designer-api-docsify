@@ -1,6 +1,6 @@
-# NetFirewallDnsParams
+# NetFirewallDnsParams(Network Firewall)
 
-Firewall DNS parameters.
+Defines the DNS information of a firewall rule. > **Description** > > This parameter cannot be empty when **rule.type** of [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md) > is set to RULE_DNS.
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 primaryDns: string
 ```
 
-Primary DNS.
+Active DNS server.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Primary DNS.
 standbyDns?: string
 ```
 
-Backup DNS.
+Standby DNS server.
 
 **Type:** string
 

@@ -12,7 +12,6 @@ Describes the options for image encoding.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## backgroundColor

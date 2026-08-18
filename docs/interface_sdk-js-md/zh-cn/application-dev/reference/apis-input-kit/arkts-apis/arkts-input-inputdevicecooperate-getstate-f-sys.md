@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## getState
@@ -11,13 +12,13 @@
 function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void
 ```
 
-获取键鼠穿越开关的状态，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate系统接口) > 替代。
+获取键鼠穿越开关的状态，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate系统接口)
+**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
 
@@ -30,7 +31,7 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | 是 |  |
 
 **错误码：**
 
@@ -77,13 +78,13 @@ struct Index {
 function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 ```
 
-获取键鼠穿越开关的状态，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate系统接口)替 > 代。
+获取键鼠穿越开关的状态，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)替 > 代。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate系统接口)
+**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
 

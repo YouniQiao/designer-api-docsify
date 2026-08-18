@@ -6,7 +6,7 @@
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#certblob)
+**替代接口：** [CertBlob](arkts-mdm-securitymanager-certblob-i.md)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## alias

@@ -29,7 +29,7 @@ Set the card slot ID of the default voice service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDefaultVoiceSlotId. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setDefaultVoiceSlotId. |
 
 **Error codes:**
 

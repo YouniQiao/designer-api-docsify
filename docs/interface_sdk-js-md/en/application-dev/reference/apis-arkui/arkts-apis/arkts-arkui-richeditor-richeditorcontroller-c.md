@@ -2,7 +2,7 @@
 
 Provides Controller for RichEditor.
 
-**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#richeditorbasecontroller)
+**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)
 
 **Since:** 23
 

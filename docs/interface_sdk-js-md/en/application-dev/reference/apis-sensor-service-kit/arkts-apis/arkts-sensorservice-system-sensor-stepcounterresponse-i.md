@@ -6,7 +6,7 @@ Callback invoked when the step counter sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md#pedometerresponse)
+**Substitutes:** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

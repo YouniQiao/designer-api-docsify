@@ -32,7 +32,7 @@ Collapse the swipe action
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | The ListItem FrameNode. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ Expand the swipe action
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| node | [FrameNode](arkts-na-framenode-c.md) | Yes | The ListItem FrameNode. |
 | direction | [ListItemSwipeActionDirection](arkts-na-listitem-listitemswipeactiondirection-e.md) | Yes | The direction to expand. |
 
 **Error codes:**

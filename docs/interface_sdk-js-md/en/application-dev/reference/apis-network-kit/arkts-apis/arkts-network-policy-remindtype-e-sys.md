@@ -1,6 +1,6 @@
 # RemindType (System API)
 
-Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateremindpolicy-system-api).
+Enumerates the reminder types.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updaterem
 REMIND_TYPE_WARNING = 1
 ```
 
-Warning alerts when the limit is reached.
+Warning.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Warning alerts when the limit is reached.
 REMIND_TYPE_LIMIT = 2
 ```
 
-Limit alerts when the limit is reached.
+Limit.
 
 **Since:** 10
 

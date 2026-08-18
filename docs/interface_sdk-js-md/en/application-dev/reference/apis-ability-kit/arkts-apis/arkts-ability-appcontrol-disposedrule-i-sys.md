@@ -14,7 +14,6 @@ Defines a disposed rule.
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
 ```
 
 ## componentType
@@ -95,7 +94,7 @@ List of application components to be disposed of or exempted.
 pageJump?: PageJumpMode
 ```
 
-Specifies whether to jump to another page when the target application is blocked. The default value is [PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#pagejumpwindowshow).
+Specifies whether to jump to another page when the target application is blocked. The default value is [PAGE_JUMP_WINDOW_SHOW](arkts-ability-appcontrol-pagejumpmode-e-sys.md#page_jump_window_show).
 
 **Type:** [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md)
 

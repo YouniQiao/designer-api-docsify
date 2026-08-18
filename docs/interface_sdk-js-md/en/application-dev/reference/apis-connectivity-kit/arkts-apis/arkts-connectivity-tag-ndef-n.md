@@ -20,14 +20,14 @@ import { tag } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [makeUriRecord](arkts-connectivity-ndef-makeurirecord-f.md#makeurirecord) | Creates an NDEF record with uri data. |
-| [makeTextRecord](arkts-connectivity-ndef-maketextrecord-f.md#maketextrecord) | Creates an NDEF record with text data. |
-| [makeApplicationRecord](arkts-connectivity-ndef-makeapplicationrecord-f.md#makeapplicationrecord) | Creates an NDEF Record with OpenHarmony application bundle name. |
-| [makeMimeRecord](arkts-connectivity-ndef-makemimerecord-f.md#makemimerecord) | Creates an NDEF record with mime data. |
-| [makeExternalRecord](arkts-connectivity-ndef-makeexternalrecord-f.md#makeexternalrecord) | Creates an NDEF record with external data. |
-| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createndefmessage) | Creates an NDEF message with raw bytes. |
-| [createNdefMessageByData](arkts-connectivity-ndef-createndefmessagebydata-f.md#createndefmessagebydata) | Creates an NDEF message with raw bytes. |
-| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createndefmessage) | Creates an NDEF message with record list. |
-| [createNdefMessageByRecords](arkts-connectivity-ndef-createndefmessagebyrecords-f.md#createndefmessagebyrecords) | Creates an NDEF message with record list. |
-| [messageToBytes](arkts-connectivity-ndef-messagetobytes-f.md#messagetobytes) | Parses an NDEF message into raw bytes. |
+| [makeUriRecord](arkts-connectivity-ndef-makeurirecord-f.md) | Creates an NDEF record with uri data. |
+| [makeTextRecord](arkts-connectivity-ndef-maketextrecord-f.md) | Creates an NDEF record with text data. |
+| [makeApplicationRecord](arkts-connectivity-ndef-makeapplicationrecord-f.md) | Creates an NDEF Record with OpenHarmony application bundle name. |
+| [makeMimeRecord](arkts-connectivity-ndef-makemimerecord-f.md) | Creates an NDEF record with mime data. |
+| [makeExternalRecord](arkts-connectivity-ndef-makeexternalrecord-f.md) | Creates an NDEF record with external data. |
+| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message with raw bytes. |
+| [createNdefMessageByData](arkts-connectivity-ndef-createndefmessagebydata-f.md) | Creates an NDEF message with raw bytes. |
+| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message with record list. |
+| [createNdefMessageByRecords](arkts-connectivity-ndef-createndefmessagebyrecords-f.md) | Creates an NDEF message with record list. |
+| [messageToBytes](arkts-connectivity-ndef-messagetobytes-f.md) | Parses an NDEF message into raw bytes. |
 

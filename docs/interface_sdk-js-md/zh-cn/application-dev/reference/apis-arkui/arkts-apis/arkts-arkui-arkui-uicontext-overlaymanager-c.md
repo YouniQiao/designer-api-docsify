@@ -11,6 +11,10 @@ class OverlayManager
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## addComponentContent
@@ -128,7 +132,7 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent | 是 | OverlayManager新增节点需要添加的内容。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：。 <br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 &lt;/p&gt; |
-| options | [OrderOverlayOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
 
 **返回值：**
 

@@ -6,7 +6,7 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Deprecated since:** 9
 
-**Substitutes:** [Unicode](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#unicode)
+**Substitutes:** [Unicode](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -15,7 +15,6 @@ Provides the API for accessing unicode character properties. For example, determ
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 import { i18n } from '@kit.LocalizationKit';
 ```
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -51,7 +52,7 @@ autoCleanDirtyData?: boolean
 cryptoParam?: CryptoParam
 ```
 
-指定用户自定义的加密参数。 当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#cryptoparam)各参数默认值。 此配置只有在encrypt选项设置为true或密钥非空时才有效。 从API version 14开始，支持此可选参数。
+指定用户自定义的加密参数。 当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)各参数默认值。 此配置只有在encrypt选项设置为true或密钥非空时才有效。 从API version 14开始，支持此可选参数。
 
 **类型：** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
@@ -83,7 +84,7 @@ customDir?: string
 dataGroupId?: string
 ```
 
-应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。&lt;!--RP1End--&gt; **模型约束：** 此属性仅在Stage模型下可用。 从API version 10开始，支持此可选参数。dataGroupId共享沙箱的方式不支持多进程访问加密数据库，当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。
+应用组ID，<!--RP1-->暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。<!--RP1End--> **模型约束：** 此属性仅在Stage模型下可用。 从API version 10开始，支持此可选参数。dataGroupId共享沙箱的方式不支持多进程访问加密数据库，当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。
 
 **类型：** string
 

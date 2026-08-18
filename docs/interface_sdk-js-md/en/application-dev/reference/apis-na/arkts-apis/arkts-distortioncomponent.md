@@ -3,12 +3,12 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#distortioncomponent-system-api) | Defines a DistortionComponent that provides spatial distortion visual effects. |
-| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md#distortioncomponent-system-api) | Defines a DistortionComponent that provides spatial distortion visual effects. |
+| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md) | Defines a DistortionComponent that provides spatial distortion visual effects. |
+| [DistortionComponent](arkts-na-distortioncomponent-distortioncomponent-f-sys.md) | Defines a DistortionComponent that provides spatial distortion visual effects. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -18,7 +18,7 @@
 | [DistortionComponentAttribute](arkts-na-distortioncomponent-distortioncomponentattribute-i.md) | Defines the DistortionComponent attribute functions |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

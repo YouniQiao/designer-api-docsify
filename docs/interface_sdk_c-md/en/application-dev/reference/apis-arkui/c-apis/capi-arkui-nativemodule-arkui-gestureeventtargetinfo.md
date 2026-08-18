@@ -6,7 +6,7 @@ typedef struct ArkUI_GestureEventTargetInfo ArkUI_GestureEventTargetInfo
 
 ## Overview
 
-Defines a <b>GestureEventTargetInfo</b> object that provides information about a gesture event target.
+Defines gesture event target information.
 
 **Since**: 12
 

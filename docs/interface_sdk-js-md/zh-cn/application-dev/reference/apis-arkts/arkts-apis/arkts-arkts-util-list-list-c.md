@@ -11,6 +11,10 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 ## 导入模块
 
 ```TypeScript
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -402,7 +406,7 @@ equal(obj: RecordData): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 是 | 用于与此list比较的对象。 |
+| obj | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 是 | 用于与此list比较的对象。 |
 
 **返回值：**
 

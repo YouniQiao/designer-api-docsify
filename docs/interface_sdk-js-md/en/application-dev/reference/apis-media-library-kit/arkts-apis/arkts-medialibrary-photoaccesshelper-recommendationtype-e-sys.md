@@ -32,7 +32,7 @@ CAT = 13
 
 Cat images will be recommended.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ DOG = 14
 
 Dog images will be recommended.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +68,7 @@ ARCHITECTURE = 15
 
 Architecture images will be recommended.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +86,7 @@ LANDSCAPE = 16
 
 Landscape images will be recommended.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +104,7 @@ GAUSSIAN_SPLAT_3D = 17
 
 Images generated using the 3D Gaussian technology will be recommended.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

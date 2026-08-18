@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createAsrProcessingController
@@ -25,7 +27,7 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition). |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition). |
 
 **返回值：**
 
@@ -40,7 +42,7 @@ Create ASR processing controller on one audio capturer.
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#sourcetypewakeup), or this audio capturer is already released. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#source_type_wakeup), or this audio capturer is already released. |
 
 **示例**
 
@@ -97,7 +99,7 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition). |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition). |
 
 **返回值：**
 
@@ -111,7 +113,7 @@ Create ASR processing controller on one audio capturer.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#sourcetypevoicerecognition) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#sourcetypewakeup), or this audio capturer is already released. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#source_type_voice_recognition) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#source_type_wakeup), or this audio capturer is already released. |
 
 **示例**
 

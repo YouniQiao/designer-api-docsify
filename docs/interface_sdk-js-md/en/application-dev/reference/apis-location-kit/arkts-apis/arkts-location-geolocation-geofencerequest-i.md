@@ -6,7 +6,7 @@ Configuring parameters in geo fence requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md#geofencerequest)
+**Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

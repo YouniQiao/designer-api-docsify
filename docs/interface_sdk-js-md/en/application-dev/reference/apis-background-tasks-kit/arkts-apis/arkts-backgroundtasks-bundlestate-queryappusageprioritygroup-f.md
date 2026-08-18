@@ -26,7 +26,7 @@ Queries the usage priority group of the calling application. The priority define
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
 **Examples**
 

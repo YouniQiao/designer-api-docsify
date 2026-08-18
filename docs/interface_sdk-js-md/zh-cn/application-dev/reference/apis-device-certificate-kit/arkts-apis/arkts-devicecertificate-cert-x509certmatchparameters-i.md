@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## authorityKeyIdentifier
@@ -329,7 +332,7 @@ x509Cert?: X509Cert
 
 指定具体的证书对象。
 
-**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
+**类型：** X509Cert
 
 **起始版本：** 23
 

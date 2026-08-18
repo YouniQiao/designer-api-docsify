@@ -39,7 +39,7 @@ Initializes a fiber.This function initializes a fiber structure, preparing it fo
 
 | Parameter | Description |
 | -- | -- |
-| [ffrt_fiber_t](capi-ffrt-ffrt-fiber-t.md)\* fiber | Indicates the pointer to the fiber structure to be initialized. |
+| frt_fiber_t\* fiber | Indicates the pointer to the fiber structure to be initialized. |
 | void(\*func)(void\*) | Indicates the entry point function that the fiber will execute. |
 | void\* arg | Indicates the argument to be passed to the entry point function. |
 | void\* stack | Indicates the pointer to the memory region to be used as the fiber's stack. |
@@ -49,7 +49,7 @@ Initializes a fiber.This function initializes a fiber structure, preparing it fo
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `ffrt_success` if the fiber is initialized;<br>         `ffrt_error_inval` if `stack_size` is too small to hold the fiber context. |
+| FFRT_C_API int | `ffrt_success` if the fiber is initialized;          `ffrt_error_inval` if `stack_size` is too small to hold the fiber context. |
 
 ### ffrt_fiber_switch()
 

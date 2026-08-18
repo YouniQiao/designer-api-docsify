@@ -14,7 +14,7 @@ Enumerates the modes that define how the execution result of an intent is return
 CALLBACK = 0
 ```
 
-The intent execution result is returned through the [onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode) or [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability) API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#insightintentexecutor).
+The intent execution result is returned through the [onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode) or [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability) API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md).
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ The intent execution result is returned through the [onExecuteInUIAbilityForegro
 FUNCTION = 1
 ```
 
-The intent execution result is returned after the [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) or [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) API in [intent provider management](arkts-app-ability-insightintentprovider.md#ohosappabilityinsightintentprovider) is called.
+The intent execution result is returned after the [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) or [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) API in [intent provider management](arkts-app-ability-insightintentprovider.md) is called.
 
 **Since:** 23
 

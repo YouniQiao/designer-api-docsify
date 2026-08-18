@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDoNotDisturbDate
@@ -30,7 +29,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 
@@ -197,7 +196,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: Asyn
 | --- | --- | --- | --- |
 | date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
 | userId | int | 是 | 设置免打扰时间的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { ErrorCode } from '@kit.AbilityKit';
-import { ErrorCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

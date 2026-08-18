@@ -24,7 +24,7 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>-End-->
 
@@ -64,7 +64,7 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readtext)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void-End-->
 
@@ -76,5 +76,5 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file to read. |
 | options | {     position?: number;     length?: number;     encoding?: string;   } | Yes | The options are as follows:<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **encoding**: format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the file content read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the file content read. |
 

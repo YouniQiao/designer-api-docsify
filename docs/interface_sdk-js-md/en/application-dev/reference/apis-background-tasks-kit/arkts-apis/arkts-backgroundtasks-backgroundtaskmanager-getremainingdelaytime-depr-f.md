@@ -17,7 +17,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getremainingdelaytime)(requestId: int, callback: AsyncCallback&lt;int&gt;)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -28,7 +28,7 @@ Obtains the remaining duration before the application is suspended. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the remaining duration before the application is suspended, in milliseconds. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the remaining duration before the application is suspended, in milliseconds. |
 
 **Examples**
 
@@ -59,7 +59,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getremainingdelaytime)(requestId: int)
+**Substitutes:** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>-End-->
 

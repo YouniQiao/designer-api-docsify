@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## unregisterTraceListener
@@ -25,7 +26,7 @@ function unregisterTraceListener(index: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 已注册回调函数索引，取值范围[0, 9]，即 [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener)调用成功时的返回值。 |
+| index | int | 是 | 已注册回调函数索引，取值范围[0, 9]，即 [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md)调用成功时的返回值。 |
 
 **返回值：**
 

@@ -18,7 +18,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 
 **Deprecated since:** 10
 
-**Substitutes:** [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md#setbluetoothscanmode)
+**Substitutes:** [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -32,7 +32,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmode). |
+| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md). |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Error codes:**

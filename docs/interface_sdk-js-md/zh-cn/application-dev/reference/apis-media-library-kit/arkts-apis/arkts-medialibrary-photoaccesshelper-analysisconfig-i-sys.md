@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraInfos
@@ -41,7 +42,7 @@ JSON字符串格式的扩展信息。 长度范围：(0, 500]。
 types: AnalysisType[]
 ```
 
-智慧分析类型数组，数组大小上限为[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#analysistype系统接口)枚举定义成员数量。
+智慧分析类型数组，数组大小上限为[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)枚举定义成员数量。
 
 **类型：** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 

@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 ```
 
-Obtain the IP and MAC address correspondence table of the neighboring network.
+Obtains information about entries in the IP neighbor table of the local device, including IPv4 and IPv6 entries. Each entry contains an IP address, a MAC address, and a network adapter name. This API uses a promise to return the result. > **NOTE：**> > This interface is used to obtain the cached data of the IP neighbor table, not the data of all connections on the > LAN. > > This API is used to check network exceptions and parse the mapping between IP addresses and MAC addresses.
 
-**Since:** 26.0.0
+**Since:** 22
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
 
@@ -26,7 +26,7 @@ Obtain the IP and MAC address correspondence table of the neighboring network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md)&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;[NetIpMacInfo](arkts-network-connection-netipmacinfo-i.md)&gt;&gt; | Promise used to return information about entries in the IP neighbor table. |
 
 **Error codes:**
 

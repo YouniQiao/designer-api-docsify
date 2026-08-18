@@ -1,8 +1,8 @@
 # ColorReservation（系统接口）
 
-ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery系统接口) Provides API for obtaining and setting a color reservation type.
+ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type.
 
-**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md#colorreservationquery系统接口)
+**继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getColorReservation

@@ -54,7 +54,7 @@ Get ability instance ID from NativeAbilityWrapper.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or buffer is null,<br>         or the buffer size is less than 37. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.          [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.          [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or buffer is null,          or the buffer size is less than 37. |
 
 ### OH_AbilityRuntime_GetAbilityName()
 
@@ -81,7 +81,7 @@ Get ability name from NativeAbilityWrapper.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or writeLength is null,<br>         or the buffer is too small for the ability name.<br>         [ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the native ability wrapper is invalid or<br>         incomplete.<br>         [ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) inner error. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.          [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.          [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or writeLength is null,          or the buffer is too small for the ability name.          [ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the native ability wrapper is invalid or          incomplete.          [ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) inner error. |
 
 ### OH_AbilityRuntime_GetEnv()
 
@@ -106,6 +106,6 @@ Get napi_env from NativeAbilityWrapper.
 
 | Type | Description |
 | -- | -- |
-| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.<br>         [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.<br>         [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or env is null.<br>         [ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the native ability wrapper is invalid or<br>         incomplete. |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | The error code.          [ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the operation is successful.          [ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the nativeAbilityWrapper or env is null.          [ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) if the native ability wrapper is invalid or          incomplete. |
 
 

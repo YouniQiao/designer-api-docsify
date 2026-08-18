@@ -6,7 +6,7 @@ Defines a **DeviceOrientationResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#orientationresponse)
+**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)
 
 <!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
 

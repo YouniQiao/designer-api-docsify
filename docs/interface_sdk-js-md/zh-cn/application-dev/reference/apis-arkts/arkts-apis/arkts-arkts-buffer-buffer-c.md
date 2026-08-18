@@ -11,6 +11,7 @@ Buffer对象是处理二进制数据的缓冲区。
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -3025,7 +3026,7 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。<br>- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool)创 建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。<br>- 当Buffer直接分配内存时（如使用 [alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
+当前Buffer所在内存池的偏移量。<br>- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md)创 建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。<br>- 当Buffer直接分配内存时（如使用 [alloc](arkts-arkts-buffer-alloc-f.md)），返回值为0。
 
 **类型：** number
 

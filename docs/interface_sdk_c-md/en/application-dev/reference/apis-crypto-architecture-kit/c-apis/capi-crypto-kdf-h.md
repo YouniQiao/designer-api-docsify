@@ -91,7 +91,7 @@ Creates KDF parameters.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or params is NULL,<br>             algoName is not a supported KDF type.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or params is NULL,              algoName is not a supported KDF type.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -122,7 +122,7 @@ Sets KDF parameters.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if params or value is NULL,<br>            value->data is NULL, or type is not valid for the KDF algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for param copy fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if params or value is NULL,             value->data is NULL, or type is not valid for the KDF algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for param copy fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoKdfParams_Destroy()
 
@@ -165,7 +165,7 @@ Creates a KDF context based on the given algorithm name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -197,7 +197,7 @@ Derives a key.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, params, or key is NULL,<br>            or keyLen is less than or equal to 0, or required<br>            parameters are missing (e.g. HKDF key, Scrypt password or salt).</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key derivation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, params, or key is NULL,             or keyLen is less than or equal to 0, or required             parameters are missing (e.g. HKDF key, Scrypt password or salt).</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key derivation fails.</li>          </ul> |
 
 ### OH_CryptoKdf_Destroy()
 

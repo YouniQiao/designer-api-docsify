@@ -1,6 +1,6 @@
 # CallableFunction
 
-**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-lib-es5-function-i.md#function)
+**Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-lib-es5-function-i.md)
 
 **Since:** -1
 

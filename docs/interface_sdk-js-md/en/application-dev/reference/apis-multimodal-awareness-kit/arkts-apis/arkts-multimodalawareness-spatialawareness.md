@@ -21,18 +21,18 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offdistancemeasure) | Unsubscribe from distance measurement result data. |
-| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offindoororoutdooridentify) | Unsubscribe from the results of indoor and outdoor recognition. |
-| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#ondistancemeasure) | Subscribe to distance measurement result data. |
-| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onindoororoutdooridentify) | Subscribe to the results of indoorand outdoor identification. |
+| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md) | Unsubscribe from distance measurement result data. |
+| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md) | Unsubscribe from the results of indoor and outdoor recognition. |
+| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md) | Subscribe to distance measurement result data. |
+| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md) | Subscribe to the results of indoorand outdoor identification. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -42,7 +42,7 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

@@ -14,7 +14,6 @@ Defines device profile information filter options.
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceIdList

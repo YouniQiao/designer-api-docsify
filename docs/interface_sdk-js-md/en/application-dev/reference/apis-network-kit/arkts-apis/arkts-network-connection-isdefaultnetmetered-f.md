@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data traffic usage on the current network is metered.
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 26.0.0
+**Since:** 9
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -26,7 +26,7 @@ Checks whether data traffic usage on the current network is metered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Returns {@code true} if data traffic usage on the current network is metered; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the data traffic over the current network is metered, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -56,9 +56,9 @@ connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
 function isDefaultNetMetered(): Promise<boolean>
 ```
 
-Checks whether data traffic usage on the current network is metered.
+Checks whether the data traffic over the current default network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 26.0.0
+**Since:** 9
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -70,7 +70,7 @@ Checks whether data traffic usage on the current network is metered.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the data traffic over the current network is metered, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

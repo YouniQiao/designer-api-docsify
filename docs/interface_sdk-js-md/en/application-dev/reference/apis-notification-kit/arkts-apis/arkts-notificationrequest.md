@@ -11,7 +11,7 @@
 | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -26,7 +26,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

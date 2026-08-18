@@ -54,4 +54,9 @@ Path(options?: PathOptions)
 
 ## 汇总
 
-- [PathOptions](arkts-arkui-pathoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [PathOptions](arkts-arkui-pathoptions-i.md) | 用于描述Path组件绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

@@ -2,7 +2,7 @@
 
 此材质继承自Material，仅绘制材质表面阴影。材质启用Blend属性时，可与背景融合模拟透明效果。
 
-**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#material)
+**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **起始版本：** 23
 

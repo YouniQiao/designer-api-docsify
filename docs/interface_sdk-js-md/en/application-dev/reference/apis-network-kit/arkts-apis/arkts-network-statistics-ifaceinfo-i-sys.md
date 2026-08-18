@@ -1,6 +1,6 @@
 # IfaceInfo (System API)
 
-Parameters for obtaining detailed information on network interface traffic usage.
+Defines the parameters for querying historical traffic of an NIC.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { statistics } from '@kit.NetworkKit';
 endTime: int
 ```
 
-End time for querying traffic.
+End time of the query, which is a timestamp in seconds.
 
 **Type:** int
 
@@ -40,7 +40,7 @@ End time for querying traffic.
 iface: string
 ```
 
-Network interface for querying traffic.
+NIC name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ Network interface for querying traffic.
 startTime: int
 ```
 
-Start time for querying traffic.
+Start time of the query, which is a timestamp in seconds.
 
 **Type:** int
 

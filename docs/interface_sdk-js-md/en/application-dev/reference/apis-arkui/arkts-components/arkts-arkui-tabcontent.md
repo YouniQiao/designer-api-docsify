@@ -22,12 +22,27 @@ Creates the **TabContent** component, which represents the content associated wi
 
 ## Summary
 
-- [BoardStyle](arkts-arkui-boardstyle-i.md)
-- [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md)
-- [IndicatorStyle](arkts-arkui-indicatorstyle-i.md)
-- [LabelStyle](arkts-arkui-labelstyle-i.md)
-- [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md)
-- [TabBarOptions](arkts-arkui-tabbaroptions-i.md)
-- [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
-- [LayoutMode](arkts-arkui-layoutmode-e.md)
-- [SelectedMode](arkts-arkui-selectedmode-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [BoardStyle](arkts-arkui-boardstyle-i.md) | Represents a board style object. |
+| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Uses an image resource as the indicator. |
+| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Represents an indicator style object. |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) | Represents a style object for the label text and font. |
+| [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Represents a label icon style object. |
+| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Defines the input parameter object of the **drawable** attribute in the **DrawableTabBarIndicator** object. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [LayoutMode](arkts-arkui-layoutmode-e.md) | Enumerates the layout modes of the images and texts on the bottom tabs. |
+| [SelectedMode](arkts-arkui-selectedmode-e.md) | Enumerates the display modes of selected subtabs. |
+

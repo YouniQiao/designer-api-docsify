@@ -1,6 +1,6 @@
 # Screen（系统接口）
 
-[物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。 下列API示例中都需先使用[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens系统接口)、 [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createvirtualscreen系统接口) 中的任一方法获取到Screen实例，再通过此实例调用对应方法。
+[物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。 下列API示例中都需先使用[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md)、 [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) 中的任一方法获取到Screen实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { screen } from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## setDensityDpi
@@ -36,7 +38,7 @@ setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | densityDpi | double | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -247,7 +249,7 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -549,8 +551,8 @@ setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。索引为screen中 [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md#screenmodeinfo系统接口)属性的模式id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
+| modeIndex | long | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。索引为screen中 [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)属性的模式id。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

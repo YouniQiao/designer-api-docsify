@@ -2,7 +2,7 @@
 
 Represents the return result of exec(), containing detailed information of a single match.
 
-**Inheritance/Implementation:** RegExpExecArray extends [RegExpResultArray](arkts-na-regexp-regexpresultarray-c.md#regexpresultarray)
+**Inheritance/Implementation:** RegExpExecArray extends [RegExpResultArray](arkts-na-regexp-regexpresultarray-c.md)
 
 **Since:** 26.0.0
 

@@ -14,7 +14,6 @@ Represents the access records of an application or device.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName

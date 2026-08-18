@@ -2,7 +2,7 @@
 
 Defines the options of backgroundBlurStyle
 
-**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleoptions)
+**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
 
 **Since:** 10
 

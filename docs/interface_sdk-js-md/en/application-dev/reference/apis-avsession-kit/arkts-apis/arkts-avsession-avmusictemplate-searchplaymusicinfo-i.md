@@ -12,7 +12,6 @@ The definition of SearchPlayMusicInfo.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## description

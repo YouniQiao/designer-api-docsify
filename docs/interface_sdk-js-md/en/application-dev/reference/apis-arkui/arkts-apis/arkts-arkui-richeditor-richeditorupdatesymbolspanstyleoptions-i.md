@@ -2,7 +2,7 @@
 
 Defines symbol span style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#richeditorspanstyleoptions)
+**Inheritance/Implementation:** RichEditorUpdateSymbolSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)
 
 **Since:** 23
 

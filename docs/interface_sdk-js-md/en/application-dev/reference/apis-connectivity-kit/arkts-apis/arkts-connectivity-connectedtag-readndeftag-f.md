@@ -18,7 +18,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
+**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -58,7 +58,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md#read)
+**Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -70,7 +70,7 @@ Reads the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
 
 **Examples**
 

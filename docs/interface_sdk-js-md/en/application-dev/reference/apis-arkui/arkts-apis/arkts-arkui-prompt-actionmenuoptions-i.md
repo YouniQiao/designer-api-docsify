@@ -6,7 +6,7 @@ Defines the option of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#actionmenuoptions)
+**Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 

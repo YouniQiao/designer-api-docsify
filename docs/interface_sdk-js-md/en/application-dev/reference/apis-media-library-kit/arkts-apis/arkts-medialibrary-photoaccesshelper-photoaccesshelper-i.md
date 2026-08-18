@@ -112,7 +112,7 @@ Creates an image or video asset with the specified file type, file name extensio
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
 | options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | Yes | Options used for creation. Currently, only **title** is supported, for example , **{title: 'testPhoto'}**. <br>**NOTE：**<br>If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. <br>The file name must not contain any invalid characters, which are:.. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Creates an image or video asset with the specified file type and file name exten
 | --- | --- | --- | --- |
 | photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ Creates a dialog box for deleting media files. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. A maximum of 300 media files can be deleted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -457,7 +457,7 @@ Obtains albums based on the specified options and album type. This API uses an a
 | type | AlbumType | Yes | Type of the album. |
 | subtype | AlbumSubtype | Yes | Subtype of the album. |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -491,7 +491,7 @@ Obtains albums by type. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | type | AlbumType | Yes | Type of the album. |
 | subtype | AlbumSubtype | Yes | Subtype of the album. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -564,7 +564,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Yes | Callback function. If files from the album are obtained successfully, **err** is **undefined**, and **data** is the result set of the obtained image and video data ([FetchResult](arkts-file-photoaccesshelper.md#ohosfilephotoaccesshelper)). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Yes | Callback function. If files from the album are obtained successfully, **err** is **undefined**, and **data** is the result set of the obtained image and video data ([FetchResult](arkts-file-photoaccesshelper.md)). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -637,7 +637,7 @@ Obtains burst assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys). The string contains 36 bytes. |
+| burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md). The string contains 36 bytes. |
 | options | FetchOptions | Yes | Retrieval options. |
 
 **Return value:**
@@ -661,9 +661,9 @@ getPhotoPickerComponentDefaultAlbumName(): Promise<string>
 
 Obtains the name of the album that the **PhotoPickerComponent** shows by default. The name string is localized to match the current system language. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoAccessHelper-getPhotoPickerComponentDefaultAlbumName(): Promise<string>--><!--Device-PhotoAccessHelper-getPhotoPickerComponentDefaultAlbumName(): Promise<string>-End-->
 
@@ -689,9 +689,9 @@ getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>
 
 Obtains the information about the recent image or video when the application uses the **RecentPhotoComponent** to view recent images or videos. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoAccessHelper-getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>--><!--Device-PhotoAccessHelper-getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>-End-->
 
@@ -764,7 +764,7 @@ Unsubscribes to changes of medialibrary availability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | No | Callback used to return the MediaLibraryAvailability. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | No | Callback used to return the MediaLibraryAvailability. |
 
 **Error codes:**
 
@@ -793,7 +793,7 @@ Unsubscribes from album changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -801,7 +801,7 @@ Unsubscribes from album changes.
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offPhotoChange
 
@@ -823,7 +823,7 @@ Unsubscribes from changes of photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -831,7 +831,7 @@ Unsubscribes from changes of photos and videos.
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offSinglePhotoAlbumChange
 
@@ -854,7 +854,7 @@ Unregisters a listener for a single album. Note the following: 1. If no paramete
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | album | Album | No | Album for which the listener is unregistered. After the unregistration is complete, any change to the album is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **album** parameter are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **album** parameter are unregistered. |
 
 **Error codes:**
 
@@ -862,7 +862,7 @@ Unregisters a listener for a single album. Note the following: 1. If no paramete
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The same callback is unregistered repeatedly. <br>2. The uri of the album invalid. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## offSinglePhotoChange
 
@@ -885,7 +885,7 @@ Unregisters the listener for a single asset. Note the following: 1. If no parame
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | asset | PhotoAsset | No | Asset for which the listener is canceled. After the unregistration is complete, any change to the **asset** is no longer returned through the **callback**. If this parameter is not specified, all listeners for a single asset are unregistered. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **asset** parameter are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **asset** parameter are unregistered. |
 
 **Error codes:**
 
@@ -893,9 +893,9 @@ Unregisters the listener for a single asset. Note the following: 1. If no parame
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The same callback is unregistered repeatedly. <br>2. The uri of the asset invalid. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-## off_photoAlbumChange
+## off_photoAlbumChange('photoAlbumChange')
 
 ```TypeScript
 off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void
@@ -916,7 +916,7 @@ Unregisters a listener for the **'photoAlbumChange'** event to stop monitoring a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | Yes | Event type. The value is fixed at **'photoAlbumChange'**. After the unregistration is complete, any change to the albums is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoAlbumChange')](#onphotochange) . If this parameter is left unspecified, all listeners for the **'photoAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoAlbumChange')](#on_photochangephotochange) . If this parameter is left unspecified, all listeners for the **'photoAlbumChange'** event are unregistered. <br>**NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when an album changes. |
 
 **Error codes:**
 
@@ -924,9 +924,9 @@ Unregisters a listener for the **'photoAlbumChange'** event to stop monitoring a
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-## off_photoChange
+## off_photoChange('photoChange')
 
 ```TypeScript
 off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void
@@ -947,7 +947,7 @@ Unregisters the listener for the **'photoChange'** event to stop monitoring medi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoChange' | Yes | Event type. The value is fixed at **'photoChange'**. After the unregistration is complete, any change to the media assets is no longer returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoChange')](#onphotochange) . If this parameter is left unspecified, all listeners for the **'photoChange'** event are unregistered.<br> **NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a media asset changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Exact callback you previously registered with [on('photoChange')](#on_photochangephotochange) . If this parameter is left unspecified, all listeners for the **'photoChange'** event are unregistered.<br> **NOTE：**<br>Once a specific callback is unregistered, it will not be invoked when a media asset changes. |
 
 **Error codes:**
 
@@ -955,7 +955,7 @@ Unregisters the listener for the **'photoChange'** event to stop monitoring medi
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The type is not fixed at 'photoChange'; <br>2. The same callback is registered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onMediaLibraryAvailability
 
@@ -979,7 +979,7 @@ Subscribes to changes of medialibrary availability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | Yes | Callback used to return the MediaLibraryAvailability. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | Yes | Callback used to return the MediaLibraryAvailability. |
 
 **Error codes:**
 
@@ -1009,7 +1009,7 @@ Subscribes to album changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -1017,7 +1017,7 @@ Subscribes to album changes.
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onPhotoChange
 
@@ -1039,7 +1039,7 @@ Subscribes to changes of photos and videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to notify the application of the changes. |
 
 **Error codes:**
 
@@ -1047,7 +1047,7 @@ Subscribes to changes of photos and videos.
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onSinglePhotoAlbumChange
 
@@ -1070,7 +1070,7 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | album | Album | Yes | Album to be listened for. After the registration is complete, any change to the albums is returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the album information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md#photoassetchangeinfos). <br>**NOTE：**<br>This API can be used to register multiple different callbacks. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the album information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>This API can be used to register multiple different callbacks. |
 
 **Error codes:**
 
@@ -1078,7 +1078,7 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The same callback is registered repeatedly. 2. Album has been removed. 3. The uri of the a invalid. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## onSinglePhotoChange
 
@@ -1101,7 +1101,7 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | asset | PhotoAsset | Yes | Asset to be listened for. After the registration is complete, any change to the media assets is returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md#photoassetchangeinfos). <br>**NOTE：**<br>This API can be used to register multiple different callbacks. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>This API can be used to register multiple different callbacks. |
 
 **Error codes:**
 
@@ -1109,9 +1109,9 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The same callback is registered repeatedly. <br>2. Asset has been removed. <br>3. The uri of the asset invalid. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-## on_photoAlbumChange
+## on_photoAlbumChange('photoAlbumChange')
 
 ```TypeScript
 on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void
@@ -1132,7 +1132,7 @@ Registers a listener for the **'photoAlbumChange'** event to monitor album chang
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | Yes | Event type. The value is fixed at **'photoAlbumChange'**. After the registration is complete, any change to the albums is returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md#albumchangeinfos). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('photoAlbumChange')](#offphotochange) to unregister all listeners or a specific one. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the album information after change, which is [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('photoAlbumChange')](#off_photochangephotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -1140,9 +1140,9 @@ Registers a listener for the **'photoAlbumChange'** event to monitor album chang
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The type is not fixed at 'photoAlbumChange'; <br>2. The same callback is registered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-## on_photoChange
+## on_photoChange('photoChange')
 
 ```TypeScript
 on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void
@@ -1163,7 +1163,7 @@ Registers a listener for the **'photoChange'** event to monitor media asset chan
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoChange' | Yes | Event type. The value is fixed at **'photoChange'**. After the registration is complete, any change to the media assets is returned through the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md#photoassetchangeinfos). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('photoChange')](#offphotochange) to unregister all listeners or a specific one. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md). <br>**NOTE：**<br>You can register multiple listeners using this API, and you can call [off('photoChange')](#off_photochangephotochange) to unregister all listeners or a specific one. |
 
 **Error codes:**
 
@@ -1171,7 +1171,7 @@ Registers a listener for the **'photoChange'** event to monitor media asset chan
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. <br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The type is not fixed at 'photoChange'; <br>2. The same callback is registered repeatedly. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## registerChange
 
@@ -1191,9 +1191,9 @@ Registers listening for the specified URI. This API uses a callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the photo asset, URI of the album, or [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#defaultchangeuri). |
+| uri | string | Yes | URI of the photo asset, URI of the album, or [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md). |
 | forChildUris | boolean | Yes | Whether to perform fuzzy listening. <br> If **uri** is the URI of an album, the value **true** means to listen for the changes of the files in the album; the value **false** means to listen for the changes of the album only. <br>If **uri** is the URI of a photoAsset, there is no difference between **true** and false for **forChildUris**. <br>If **uri** is **DefaultChangeUri**, **forChildUris** must be set to **true**. If **forChildUris** is false, the URI cannot be found and no message can be received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md#changedata). **NOTE：**: Multiple callback listeners can be registered for a URI. You can use [unRegisterChange](#unregisterchange) to unregister all listeners for the URI or a specified callback listener. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md). **NOTE：**: Multiple callback listeners can be registered for a URI. You can use [unRegisterChange](#unregisterchange) to unregister all listeners for the URI or a specified callback listener. |
 
 **Error codes:**
 
@@ -1221,7 +1221,7 @@ Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1265,7 +1265,7 @@ Releases the **PhotoAccessHelper** instance. This API uses a promise to return t
 requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string>>
 ```
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;Grants the read permission for unauthorized URIs, returning a list of URIs that have been created and granted the permission.
+<!--RP1--><!--RP1End-->Grants the read permission for unauthorized URIs, returning a list of URIs that have been created and granted the permission.
 
 **Since:** 26.0.0
 
@@ -1409,11 +1409,11 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 Displays a dialog box for the user to confirm whether to save the images or videos. This API uses a promise to return the result. > **NOTE：**> > - If the user agrees, the list of created URIs with the save permission granted is returned. The list is > permanently valid and supports image or video writing. If the user rejects, an empty list is returned. > > - The application name and icon need to be displayed in the dialog box. The name and icon need to be configured > in the **label** and **icon** items in the **abilities** tag of the > [module.json5 configuration file](../../../quick-start/module-configuration-file.md). > > - When the passed URI is a sandbox path, images or videos can be saved properly, but the preview is not > displayed.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoAccessHelper-showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>--><!--Device-PhotoAccessHelper-showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<CreationSetting>): Promise<Array<string>>-End-->
 
@@ -1494,8 +1494,8 @@ Unregisters listening for the specified URI. Multiple callbacks can be registere
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the photo asset, URI of the album, or [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#defaultchangeuri). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | No | Callback to unregister. If this parameter is not specified, all the callbacks for listening for the URI will be canceled. **NOTE：**: The specified callback unregistered will not be invoked when the data changes. |
+| uri | string | Yes | URI of the photo asset, URI of the album, or [DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | No | Callback to unregister. If this parameter is not specified, all the callbacks for listening for the URI will be canceled. **NOTE：**: The specified callback unregistered will not be invoked when the data changes. |
 
 **Error codes:**
 

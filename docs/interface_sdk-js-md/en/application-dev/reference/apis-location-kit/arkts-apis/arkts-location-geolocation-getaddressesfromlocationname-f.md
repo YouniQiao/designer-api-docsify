@@ -18,7 +18,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -31,7 +31,7 @@ Obtain latitude and longitude info from location address
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
 **Examples**
 
@@ -61,7 +61,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

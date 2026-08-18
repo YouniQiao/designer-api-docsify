@@ -17,11 +17,11 @@ Profiler tools for inspectors.
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [registerVsyncCallback](arkts-na-profiler-registervsynccallback-f-sys.md#registervsynccallback-system-api) | Registers vsync callback for profiler. AnonyMous Object Rectification. |
-| [unregisterVsyncCallback](arkts-na-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback-system-api) | Unregisters vsync callback. |
+| [registerVsyncCallback](arkts-na-profiler-registervsynccallback-f-sys.md) | Registers vsync callback for profiler. AnonyMous Object Rectification. |
+| [unregisterVsyncCallback](arkts-na-profiler-unregistervsynccallback-f-sys.md) | Unregisters vsync callback. |
 <!--DelEnd-->
 

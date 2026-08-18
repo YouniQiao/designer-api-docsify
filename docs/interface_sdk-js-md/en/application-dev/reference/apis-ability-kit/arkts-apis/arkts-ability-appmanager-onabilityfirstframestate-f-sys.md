@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
-## on_abilityFirstFrameState
+## on_abilityFirstFrameState('abilityFirstFrameState')
 
 ```TypeScript
 function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void

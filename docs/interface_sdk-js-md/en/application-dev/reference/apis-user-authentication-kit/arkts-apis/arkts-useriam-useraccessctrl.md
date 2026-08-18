@@ -12,21 +12,20 @@ The **userAccessCtrl** module is a core component of the OpenHarmony user identi
 
 ```TypeScript
 import { userAccessCtrl } from '@kit.UserAuthenticationKit';
-import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md#verifyauthtoken) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter. |
+| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -34,7 +33,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

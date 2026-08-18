@@ -6,7 +6,7 @@ Configuring parameters in location requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md#locationrequest)
+**Substitutes:** [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';
-import { formProvider } from '@kit.FormKit';
 ```
 
 ## getFormsInfo
@@ -28,7 +27,7 @@ Obtains the application's widget information that meets a filter criterion on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | formInfo.FormInfoFilter | Yes | Filter criterion. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
 
 **Error codes:**
 
@@ -83,7 +82,7 @@ Obtains the application's widget information on the device. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
 
 **Error codes:**
 

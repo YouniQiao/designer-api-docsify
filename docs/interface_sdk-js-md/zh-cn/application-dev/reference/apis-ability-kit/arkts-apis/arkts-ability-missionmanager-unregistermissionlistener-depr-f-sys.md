@@ -17,7 +17,7 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)
+**替代接口：** off
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +32,7 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | listenerId | number | 是 | 系统任务状态监听器的index值，和监听器一一对应，由registerMissionListener方法返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **示例**
 
@@ -85,7 +85,7 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)
+**替代接口：** off
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

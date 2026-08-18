@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
 ```
 
 ## subscribeManagedEventSync
@@ -13,7 +12,7 @@ import { adminManager } from '@kit.MDMKit';
 function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs. Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md#managedevent) event.
+Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs. Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event.
 
 **Since:** 12
 
@@ -30,7 +29,7 @@ Subscribes to system management events. After the call is successful, the device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be subscribed to. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#managedevent) enumeration. Multiple event types can be subscribed to, such as application installation/uninstallation/start/stop events, system update events, and more. |
+| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | Yes | Array of system management events to be subscribed to. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md) enumeration. Multiple event types can be subscribed to, such as application installation/uninstallation/start/stop events, system update events, and more. |
 
 **Error codes:**
 

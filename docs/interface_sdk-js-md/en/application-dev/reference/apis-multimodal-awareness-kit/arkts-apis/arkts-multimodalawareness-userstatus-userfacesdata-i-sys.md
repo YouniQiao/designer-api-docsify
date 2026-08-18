@@ -2,7 +2,7 @@
 
 Defines user face data.
 
-**Inheritance/Implementation:** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#userstatusdata-system-api)
+**Inheritance/Implementation:** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,6 @@ Defines user face data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 

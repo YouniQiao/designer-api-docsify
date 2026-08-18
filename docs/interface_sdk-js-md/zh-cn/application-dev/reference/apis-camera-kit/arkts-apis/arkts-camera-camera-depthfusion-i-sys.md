@@ -1,8 +1,8 @@
 # DepthFusion（系统接口）
 
-Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#depthfusionquery系统接口).
+Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md).
 
-**继承/实现关系：** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#depthfusionquery系统接口)
+**继承/实现关系：** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-dept
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableDepthFusion

@@ -1,6 +1,6 @@
 # NetCapabilityInfo
 
-Receive information about changes in network capabilities.
+Provides an instance that bears data network capabilities.
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ import { connection } from '@kit.NetworkKit';
 netCap: NetCapabilities
 ```
 
-Defines the network capability set.
+Network transmission capabilities and bearer types of the data network.
 
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCapabilityInfo-netCap: NetCapabilities--><!--Device-NetCapabilityInfo-netCap: NetCapabilities-End-->
 
@@ -38,13 +38,13 @@ Defines the network capability set.
 netHandle: NetHandle
 ```
 
-Defines the handle of the data network.
+Network handle.
 
 **Type:** NetHandle
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCapabilityInfo-netHandle: NetHandle--><!--Device-NetCapabilityInfo-netHandle: NetHandle-End-->
 

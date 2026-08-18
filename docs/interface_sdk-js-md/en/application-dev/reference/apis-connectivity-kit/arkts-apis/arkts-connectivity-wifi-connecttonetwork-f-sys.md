@@ -21,7 +21,7 @@ Connects to Wi-Fi network.
 
 **Deprecated since:** 9
 
-**Substitutes:** [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md#connecttonetwork)
+**Substitutes:** [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 

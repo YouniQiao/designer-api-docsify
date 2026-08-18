@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { Environment } from '@kit.CoreFileKit';
-import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getExternalStorageDir

@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
-import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_globalUnhandledRejectionDetected
+## off_globalUnhandledRejectionDetected('globalUnhandledRejectionDetected')
 
 ```TypeScript
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void

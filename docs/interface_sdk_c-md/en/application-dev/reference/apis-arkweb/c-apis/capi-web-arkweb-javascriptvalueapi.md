@@ -53,6 +53,6 @@ Creates a JavaScript value to be returned to HTML. This function performs type c
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalue8h.md) | Created JavaScript value. NULL is returned when the input parameter is invalid or memory allocation<br>         fails. |
+| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalue8h.md) | Created JavaScript value. NULL is returned when the input parameter is invalid or memory allocation          fails. |
 
 

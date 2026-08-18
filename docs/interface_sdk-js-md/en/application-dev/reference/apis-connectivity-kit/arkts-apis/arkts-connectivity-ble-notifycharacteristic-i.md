@@ -80,7 +80,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#gattservice) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md) instance to which the characteristic belongs
 
 **Type:** string
 

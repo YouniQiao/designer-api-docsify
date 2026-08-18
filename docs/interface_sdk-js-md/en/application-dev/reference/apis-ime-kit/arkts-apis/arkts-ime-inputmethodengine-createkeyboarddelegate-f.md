@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createKeyboardDelegate
@@ -13,13 +12,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function createKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md#keyboarddelegate) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)()
+**Substitutes:** [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)()
 
 <!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
 

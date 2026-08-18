@@ -14,7 +14,6 @@ Defines the parameters of the key derivation function. When the key derivation f
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName

@@ -1,8 +1,8 @@
 # EapData
 
-Describes the EAP information.
+Defines the EAP data. ​
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
 
@@ -17,16 +17,16 @@ import { eap } from '@kit.NetworkKit';
 ## bufferLen
 
 ```TypeScript
-bufferLen: number
+bufferLen: int
 ```
 
-EAP packet length.
+Data length.
 
-**Type:** number
+**Type:** int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapData-bufferLen: number--><!--Device-EapData-bufferLen: number-End-->
+<!--Device-EapData-bufferLen: int--><!--Device-EapData-bufferLen: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -36,11 +36,11 @@ EAP packet length.
 eapBuffer: Uint8Array
 ```
 
-EAP packet buffer.
+Raw EAP data starting from the EAP header, which is not encrypted.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
 
@@ -49,16 +49,16 @@ EAP packet buffer.
 ## msgId
 
 ```TypeScript
-msgId: number
+msgId: int
 ```
 
-EAP message ID.
+Pseudo random number used to associate the EAP data before and after processing.
 
-**Type:** number
+**Type:** int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapData-msgId: number--><!--Device-EapData-msgId: number-End-->
+<!--Device-EapData-msgId: int--><!--Device-EapData-msgId: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 

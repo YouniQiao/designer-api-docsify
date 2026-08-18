@@ -12,7 +12,6 @@ Internationalization utility class, which provides the capabilities of unit conv
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier

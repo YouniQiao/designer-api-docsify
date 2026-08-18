@@ -2,7 +2,7 @@
 
 Use the PixelMapDrawableDescriptor class to get the resource of pixelmap or resource descriptor information.
 
-**Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
+**Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 23
 

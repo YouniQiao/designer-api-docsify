@@ -68,16 +68,12 @@ Provides type definitions for <b>NativeNode</b> APIs.
 | [void OH_ArkUI_NodeAdapter_Dispose(ArkUI_NodeAdapterHandle handle)](#oh_arkui_nodeadapter_dispose) | - | Destroys a component adapter. |
 | [int32_t OH_ArkUI_NodeAdapter_SetTotalNodeCount(ArkUI_NodeAdapterHandle handle, uint32_t size)](#oh_arkui_nodeadapter_settotalnodecount) | - | Sets the total number of elements in the specified adapter. |
 | [uint32_t OH_ArkUI_NodeAdapter_GetTotalNodeCount(ArkUI_NodeAdapterHandle handle)](#oh_arkui_nodeadapter_gettotalnodecount) | - | Obtains the total number of elements in the specified adapter. |
-| [int32_t OH_ArkUI_NodeAdapter_RegisterEventReceiver(
-ArkUI_NodeAdapterHandle handle, void* userData, void (\*receiver)(ArkUI_NodeAdapterEvent* event))](#oh_arkui_nodeadapter_registereventreceiver) | - | Registers an event callback for the adapter. |
+| [int32_t OH_ArkUI_NodeAdapter_RegisterEventReceiver( ArkUI_NodeAdapterHandle handle, void* userData, void (\*receiver)(ArkUI_NodeAdapterEvent* event))](#oh_arkui_nodeadapter_registereventreceiver) | - | Registers an event callback for the adapter. |
 | [void OH_ArkUI_NodeAdapter_UnregisterEventReceiver(ArkUI_NodeAdapterHandle handle)](#oh_arkui_nodeadapter_unregistereventreceiver) | - | Deregisters an event callback for the adapter. |
 | [int32_t OH_ArkUI_NodeAdapter_ReloadAllItems(ArkUI_NodeAdapterHandle handle)](#oh_arkui_nodeadapter_reloadallitems) | - | Instructs the specified adapter to reload all elements. |
-| [int32_t OH_ArkUI_NodeAdapter_ReloadItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_reloaditem) | - | Instructs the specified adapter to reload certain elements. |
-| [int32_t OH_ArkUI_NodeAdapter_RemoveItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_removeitem) | - | Instructs the specified adapter to remove certain elements. |
-| [int32_t OH_ArkUI_NodeAdapter_InsertItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_insertitem) | - | Instructs the specified adapter to insert certain elements. |
+| [int32_t OH_ArkUI_NodeAdapter_ReloadItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_reloaditem) | - | Instructs the specified adapter to reload certain elements. |
+| [int32_t OH_ArkUI_NodeAdapter_RemoveItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_removeitem) | - | Instructs the specified adapter to remove certain elements. |
+| [int32_t OH_ArkUI_NodeAdapter_InsertItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh_arkui_nodeadapter_insertitem) | - | Instructs the specified adapter to insert certain elements. |
 | [int32_t OH_ArkUI_NodeAdapter_MoveItem(ArkUI_NodeAdapterHandle handle, uint32_t from, uint32_t to)](#oh_arkui_nodeadapter_moveitem) | - | Instructs the specified adapter to move certain elements. |
 | [int32_t OH_ArkUI_NodeAdapter_GetAllItems(ArkUI_NodeAdapterHandle handle, ArkUI_NodeHandle** items, uint32_t* size)](#oh_arkui_nodeadapter_getallitems) | - | Obtains all elements stored in the specified adapter.This API returns the pointer to the array of the elements. You need to manually release the memory datato which the pointer points. |
 | [void* OH_ArkUI_NodeAdapterEvent_GetUserData(ArkUI_NodeAdapterEvent* event)](#oh_arkui_nodeadapterevent_getuserdata) | - | Obtains the custom data passed in during registration of the specified event. |
@@ -288,7 +284,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_HIT_TEST_BEHAVIOR | Defines the hit test behavior attribute, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: hit test mode. The parameter type is {@link ArkUI_HitTestMode}. The default value is ARKUI_HIT_TEST_MODE_DEFAULT**.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: hit test mode. The parameter type is **ArkUI_HitTestMode**. The default value is ARKUI_HIT_TEST_MODE_DEFAULT**.</li></ul> |
 | NODE_POSITION | Defines the offset attribute, which specifies the offset of the component's upper left corner relativeto the parent container's. This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: X coordinate.</li><li>.value[1].f32: Y coordinate.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: X coordinate.</li><li>.value[1].f32: Y coordinate.</li></ul> |
 | NODE_SHADOW | Defines the shadow attribute, which can be set, reset, and obtained as required through APIs.Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0].i32: shadow effect. The parameter type is [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle). <br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].i32: shadow effect. The parameter type is [ArkUI_ShadowStyle](capi-native-type-visual-h.md#arkui_shadowstyle). <br> |
-| NODE_CUSTOM_SHADOW | Defines the custom shadow effect. This attribute can be set, reset, and obtained as required through APIs.Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0]?.f32: blur radius of the shadow, in px.<br> .value[1]?.i32: whether to enable the coloring strategy. The value <b>1</b> means to enable the coloringstrategy, and <b>0</b> (default value) means the opposite.<br> .value[2]?.f32: offset of the shadow along the x-axis, in px.<br> .value[3]?.f32: offset of the shadow along the y-axis, in px.<br> .value[4]?.i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>.<br> .value[5]?.u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red.<br> .value[6]?.u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b>means the opposite.<br>     <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: blur radius of the shadow, in px.<br> .value[1].i32: whether to enable the coloring strategy. <br> .value[2].f32: offset of the shadow along the x-axis, in px.<br> .value[3].f32: offset of the shadow along the y-axis, in px.<br> .value[4].i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>.<br> .value[5].u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red.<br> .value[6].u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b>means the opposite.<br> |
+| NODE_CUSTOM_SHADOW | Defines the custom shadow effect. This attribute can be set, reset, and obtained as required through APIs.Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0]?.f32: blur radius of the shadow, in px.<br> .value[1]?.i32: whether to enable the coloring strategy. The value <b>1</b> means to enable the coloringstrategy, and <b>0</b> (default value) means the opposite.<br> .value[2]?.f32: offset of the shadow along the x-axis, in px.<br> .value[3]?.f32: offset of the shadow along the y-axis, in px.<br> .value[4]?.i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>.<br> .value[5]?.u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red.<br> .value[6]?.u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b>means the opposite.<br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: blur radius of the shadow, in px.<br> .value[1].i32: whether to enable the coloring strategy. <br> .value[2].f32: offset of the shadow along the x-axis, in px.<br> .value[3].f32: offset of the shadow along the y-axis, in px.<br> .value[4].i32: shadow type [ArkUI_ShadowType](capi-native-type-visual-h.md#arkui_shadowtype). The default value is <b>ARKUI_SHADOW_TYPE_COLOR</b>.<br> .value[5].u32: shadow color, in 0xARGB format. For example, 0xFFFF0000 indicates red.<br> .value[6].u32: whether to fill the shadow. The value <b>1</b> means to fill the shadow, and <b>0</b>means the opposite.<br> |
 | NODE_BACKGROUND_IMAGE_SIZE | Defines the background image size attribute, which can be set, reset, and obtained as required throughAPIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: width of the image. The value range is [0, +∞), and the unit is vp.</li><li>.value[1].f32: height of the image. The value range is [0, +∞), and the unit is vp.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: width of the image, in vp.</li><li>.value[1].f32: height of the image, in vp.</li></ul> |
 | NODE_BACKGROUND_IMAGE_SIZE_WITH_STYLE | Defines the background image size with style. This attribute can be set, reset, and obtained as requiredthrough APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: size of the background image. The value is an enumerated value of [ArkUI_ImageSize](capi-image-h.md#arkui_imagesize).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: size of the background image. The value is an enumerated value of [ArkUI_ImageSize](capi-image-h.md#arkui_imagesize).</li></ul> |
 | NODE_BACKGROUND_BLUR_STYLE | Defines the background blur attribute, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: blue type. The value is an enum of [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle).</li><li>.value[1]?.i32: color mode. The value is an enum of [ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode).</li><li>.value[2]?.i32: adaptive color mode. The value is an enum of [ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor).</li><li>.value[3]?.f32: blur degree. The value range is [0.0, 1.0].</li><li>.value[4]?.f32: start boundary of grayscale blur.</li><li>.value[5]?.f32: end boundary of grayscale blur.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: blue type. The value is an enum of [ArkUI_BlurStyle](capi-native-type-visual-h.md#arkui_blurstyle).</li><li>.value[1].i32: color mode. The value is an enum of [ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode).</li><li>.value[2].i32: adaptive color mode. The value is an enum of [ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor).</li><li>.value[3].f32: blur degree. The value range is [0.0, 1.0].</li><li>.value[4].f32: start boundary of grayscale blur.</li><li>.value[5].f32: end boundary of grayscale blur.</li></ul> |
@@ -328,7 +324,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_FOCUS_STATUS | Defines the component focus status. This attribute can be set and obtained as required through APIs.<br>Note: Setting the parameter to **0** shifts focus from the currently focused component on the current levelof the page to the root container.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: The value **1** indicates that the component gains focus and **0** indicates that thecomponent loses focus.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The value **1** indicates that the component gains focus and **0** indicates that thecomponent loses focus.</li></ul> |
 | NODE_ASPECT_RATIO | Defines the aspect ratio attribute, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: aspect ratio of the component, in width/height format.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: aspect ratio of the component, in width/height format.</li></ul> |
 | NODE_LAYOUT_WEIGHT | Defines the weight of the component within its row, column, or flex container for proportionaldistribution of available space within the container.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: weight of the component along the main axis.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: weight of the component along the main axis.</li></ul> |
-| NODE_DISPLAY_PRIORITY | Sets the display priority for the component in the row, column, or flex  (single-line) container.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: display priority of the component in the container.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: display priority of the component in the container.</li></ul> |
+| NODE_DISPLAY_PRIORITY | Sets the display priority for the component in the row, column, or flex (single-line) container.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: display priority of the component in the container.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: display priority of the component in the container.</li></ul> |
 | NODE_OUTLINE_WIDTH | Sets the thickness of an element's outline.Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0].f32: thickness of the left outline. <br> .value[1].f32: thickness of the top outline. <br> .value[2].f32: thickness of the right outline. <br> .value[3].f32: thickness of the bottom outline. <br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: thickness of the left outline. <br> .value[1].f32: thickness of the top outline. <br> .value[2].f32: thickness of the right outline. <br> .value[3].f32: thickness of the bottom outline. <br> |
 | NODE_WIDTH_PERCENT | Defines the width attribute, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: width, in percentage.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: width, in percentage.</li></ul> |
 | NODE_HEIGHT_PERCENT | Defines the height attribute, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: height, in percentage.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: height, in percentage.</li></ul> |
@@ -362,7 +358,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_BACKGROUND_IMAGE_RESIZABLE_WITH_SLICE = 100 | Defines the background image resizable attribute, which can be set, reset,and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: width of the left edge. The unit is vp. </li><li>.value[1].f32: width of the top edge. The unit is vp. </li><li>.value[2].f32: width of the right edge. The unit is vp. </li><li>.value[3].f32: width of the bottom edge. The unit is vp.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: width of the left edge. The unit is vp. </li><li>.value[1].f32: width of the top edge. The unit is vp. </li><li>.value[2].f32: width of the right edge. The unit is vp. </li><li>.value[3].f32: width of the bottom edge. The unit is vp. </li></ul><br>**Since**: 19 |
 | NODE_NEXT_FOCUS = 101 | Sets the next focus node.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: focus movement direction, as defined in [ArkUI_FocusMove](capi-common-attributes-h.md#arkui_focusmove).</li><li>.object: next focus node. The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li></ul><br>**Since**: 18 |
 | NODE_VISIBLE_AREA_APPROXIMATE_CHANGE_RATIO = 102 | Sets the threshold ratio for triggering a visible area change event.<br>Note: The visible area change callback is not a real-time callback. The actual callback interval may differfrom the expected interval due to system load and other factors. The interval between two visible area changecallbacks will not be less than the expected update interval. If the provided expected interval is too short,the actual callback interval will be determined by the system load. By default, the interval threshold of thevisible area change callback includes 0. This means that, if the provided threshold is [0.5], the effectivethreshold will be [0.0, 0.5].**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: parameters for visible area change events. The parameter type is[ArkUI_VisibleAreaEventOptions](capi-arkui-nativemodule-arkui-visibleareaeventoptions.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: parameters for visible area change events. The parameter type is[ArkUI_VisibleAreaEventOptions](capi-arkui-nativemodule-arkui-visibleareaeventoptions.md).</li></ul><br>**Since**: 17 |
-| NODE_TRANSLATE_WITH_PERCENT = 103 | Defines the translate attribute, which supports for percentile translation input, and can be set, reset,and obtained as required through APIs.<br>     Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0].f32: distance to translate along the x-axis. The default unit is percentage.The unit is vp only if value[3] exists and value[3] is 0. The default value of value[0] is <b>0</b>.<br> .value[1].f32: distance to translate along the y-axis. The default unit is percentage.The unit is vp only if value[4] exists and value[4] is 0. The default value of value[1] is <b>0</b>.<br> .value[2].f32: distance to translate along the z-axis, in vp. The default value is <b>0</b>.<br> .value[3]?.i32: Whether the translation distance along the x-axis is specified as a percentage.The value can be 0 or 1. When the value is 1, it is specified as a percentage.For example, value[0].f32=0.1 and value[3].i32=1 indicates a 10% shift in the x direction.The default value is <b>1</b>.<br> .value[4]?.i32: Whether the translation distance along the y-axis is specified as a percentage.The value can be 0 or 1. When the value is 1, it is specified as a percentage.For example, value[1].f32=0.1 and value[4].i32=1 indicates a 10% shift in the y direction.The default value is <b>1</b>.<br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: distance to translate along the x-axis. The unit depends on value[3].<br> .value[1].f32: distance to translate along the y-axis. The unit depends on value[4].<br> .value[2].f32: distance to translate along the z-axis. The unit is vp.<br> .value[3].i32: Whether the unit of the X-axis translation distance is in percentage. When value[3].i32 is 0,the unit of the X-axis translation distance is vp; when value[3].i32 is 1, the unit of the X-axis translationdistance is percentage;<br> .value[4].i32: Whether the unit of the Y-axis translation distance is in percentage. When value[4].i32 is 0,the unit of the Y-axis translation distance is vp; when value[4].i32 is 1, the unit of the Y-axis translationdistance is percentage;<br><br>**Since**: 20 |
+| NODE_TRANSLATE_WITH_PERCENT = 103 | Defines the translate attribute, which supports for percentile translation input, and can be set, reset,and obtained as required through APIs.<br> Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0].f32: distance to translate along the x-axis. The default unit is percentage.The unit is vp only if value[3] exists and value[3] is 0. The default value of value[0] is <b>0</b>.<br> .value[1].f32: distance to translate along the y-axis. The default unit is percentage.The unit is vp only if value[4] exists and value[4] is 0. The default value of value[1] is <b>0</b>.<br> .value[2].f32: distance to translate along the z-axis, in vp. The default value is <b>0</b>.<br> .value[3]?.i32: Whether the translation distance along the x-axis is specified as a percentage.The value can be 0 or 1. When the value is 1, it is specified as a percentage.For example, value[0].f32=0.1 and value[3].i32=1 indicates a 10% shift in the x direction.The default value is <b>1</b>.<br> .value[4]?.i32: Whether the translation distance along the y-axis is specified as a percentage.The value can be 0 or 1. When the value is 1, it is specified as a percentage.For example, value[1].f32=0.1 and value[4].i32=1 indicates a 10% shift in the y direction.The default value is <b>1</b>.<br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: distance to translate along the x-axis. The unit depends on value[3].<br> .value[1].f32: distance to translate along the y-axis. The unit depends on value[4].<br> .value[2].f32: distance to translate along the z-axis. The unit is vp.<br> .value[3].i32: Whether the unit of the X-axis translation distance is in percentage. When value[3].i32 is 0,the unit of the X-axis translation distance is vp; when value[3].i32 is 1, the unit of the X-axis translationdistance is percentage;<br> .value[4].i32: Whether the unit of the Y-axis translation distance is in percentage. When value[4].i32 is 0,the unit of the Y-axis translation distance is vp; when value[4].i32 is 1, the unit of the Y-axis translationdistance is percentage;<br><br>**Since**: 20 |
 | NODE_ROTATE_ANGLE = 104 | Sets component rotation with multi-axis angle control. This attribute can be set, reset,and obtained as required through APIs.Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<br> .value[0].f32: x-axis rotation angle. The default value is <b>0</b>. <br> .value[1].f32: y-axis rotation angle. The default value is <b>0</b>. <br> .value[2].f32: z-axis rotation angle. The default value is <b>0</b>. <br> .value[3].f32: perspective distance from the viewpoint to the z=0 plane, in px. The default value is <b>0</b>. <br> <br> Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<br> .value[0].f32: x-axis rotation angle. The default value is <b>0</b>..value[1].f32: y-axis rotation angle. The default value is <b>0</b>. <br> .value[2].f32: z-axis rotation angle. The default value is <b>0</b>. <br> .value[3].f32: perspective distance from the viewpoint to the z=0 plane, in px. The default value is <b>0</b>. <br><br>**Since**: 20 |
 | NODE_WIDTH_LAYOUTPOLICY = 105 | Defines the width attribute with param type LayoutPolicy, which can be set, reset, and obtainedas required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: the LayoutPolicy that the width of the component follows. The parameter type is [ArkUI_LayoutPolicy](capi-layout-h.md#arkui_layoutpolicy).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: the LayoutPolicy that the width of the component follows. The parameter type is [ArkUI_LayoutPolicy](capi-layout-h.md#arkui_layoutpolicy).</li></ul><br>**Since**: 21 |
 | NODE_HEIGHT_LAYOUTPOLICY = 106 | Defines the height attribute with param type LayoutPolicy, which can be set, reset, and obtainedas required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: the LayoutPolicy that the height of the component follows. The parameter type is [ArkUI_LayoutPolicy](capi-layout-h.md#arkui_layoutpolicy).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: the LayoutPolicy that the height of the component follows. The parameter type is [ArkUI_LayoutPolicy](capi-layout-h.md#arkui_layoutpolicy).</li></ul><br>**Since**: 21 |
@@ -431,12 +427,12 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_TEXT_LINE_HEIGHT_MULTIPLE = 1042 | Defines line height multiple value of text, which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: line height multiple value of text.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: line height multiple value of text.</li></ul><br>**Since**: 22 |
 | NODE_TEXT_LAYOUT_MANAGER = 1043 | Get the text layout manager of the text.**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: the layout manager of text. The parameter type is {@link ArkUI_TextLayoutManager}.</li></ul><br>**Since**: 22 |
 | NODE_TEXT_EDIT_MENU_OPTIONS = 1044 | Set the edit menu options of the text.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the edit menu options of text. The parameter type is [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md).</li></ul><br>**Since**: 22 |
-| NODE_TEXT_BIND_SELECTION_MENU = 1045 | Bind the selection menu for text.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the custom selection menu of text.     The parameter type is {@link ArkUI_SelectionMenuOptions}.</li></ul><br>**Since**: 22 |
-| NODE_TEXT_TEXT_SELECTION = 1046 | Sets the text selection area, which will be highlighted.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: start position of the text selection.</li><li>.value[1].i32: end position of the text selection.</li><li>.object: selection options including the menu popup policy.     The parameter type is [ArkUI_SelectionOptions](capi-arkui-nativemodule-arkui-selectionoptions.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: start position of the text selection.</li><li>.value[1].i32: end position of the text selection.</li><li>.object: selection options including the menu popup policy.     The parameter type is [ArkUI_SelectionOptions](capi-arkui-nativemodule-arkui-selectionoptions.md).</li></ul><br>**Since**: 23 |
-| 	  NODE_TEXT_ORPHAN_CHAR_OPTIMIZATION = 1047 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
-| NODE_TEXT_COMPRESS_LEADING_PUNCTUATION = 1048 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
+| NODE_TEXT_BIND_SELECTION_MENU = 1045 | Bind the selection menu for text.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the custom selection menu of text. The parameter type is {@link ArkUI_SelectionMenuOptions}.</li></ul><br>**Since**: 22 |
+| NODE_TEXT_TEXT_SELECTION = 1046 | Sets the text selection area, which will be highlighted.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: start position of the text selection.</li><li>.value[1].i32: end position of the text selection.</li><li>.object: selection options including the menu popup policy. The parameter type is [ArkUI_SelectionOptions](capi-arkui-nativemodule-arkui-selectionoptions.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: start position of the text selection.</li><li>.value[1].i32: end position of the text selection.</li><li>.object: selection options including the menu popup policy. The parameter type is [ArkUI_SelectionOptions](capi-arkui-nativemodule-arkui-selectionoptions.md).</li></ul><br>**Since**: 23 |
+| 	  NODE_TEXT_ORPHAN_CHAR_OPTIMIZATION = 1047 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
+| NODE_TEXT_COMPRESS_LEADING_PUNCTUATION = 1048 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INCLUDE_FONT_PADDING = 1049 | Determines whether the layout adds extra padding at the top and bottom to make space for characters.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Enable include the font padding, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether include the font padding.</li></ul><br>**Since**: 23 |
-| NODE_TEXT_FALLBACK_LINE_SPACING = 1050 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
+| NODE_TEXT_FALLBACK_LINE_SPACING = 1050 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_MARQUEE_OPTIONS = 1051 | Set the marquee options of text.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the marquee options of text. The parameter type is [ArkUI_TextMarqueeOptions](capi-arkui-nativemodule-arkui-textmarqueeoptions.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: the marquee options of text. The parameter type is [ArkUI_TextMarqueeOptions](capi-arkui-nativemodule-arkui-textmarqueeoptions.md).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_DIRECTION = 1052 | Writing direction of the text.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: writing direction of the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: writing direction the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_SELECTED_DRAG_PREVIEW_STYLE = 1053 | Used to set the selected drag preview style.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul><br>**Since**: 23 |
@@ -528,10 +524,10 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_TEXT_INPUT_SHOW_COUNTER = 7040 | Defines the counter settings. This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: whether to show a character counter. The value <b>true</b> means to show a character counter.</li><li>.value[1]?.f32: threshold percentage for displaying the character counter. The character counter is displayed when the number of characters that have been entered is greater than the maximum number of characters multiplied by the threshold percentage value. The value range is 1 to 100. If the value is a decimal, it is rounded down.</li><li>.value[2]?.i32: whether to highlight the border when the number of entered characters reaches the maximum.</li><li>.object: counter configuration. The parameter type is [ArkUI_ShowCounterConfig](capi-arkui-nativemodule-arkui-showcounterconfig.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: whether to show a character counter.</li><li>.value[1].f32: threshold percentage for displaying the character counter. The character counter is displayed when the number of characters that have been entered is greater than the maximum number of characters multiplied by the threshold percentage value. The value range is 1 to 100.</li><li>.value[2].i32: whether to highlight the border when the number of entered characters reaches the maximum. The default value is <b>true</b>.</li><li>.object: counter configuration. The parameter type is [ArkUI_ShowCounterConfig](capi-arkui-nativemodule-arkui-showcounterconfig.md).</li></ul><br>**Since**: 22 |
 | NODE_TEXT_INPUT_TEXT_CONTENT_CONTROLLER_BASE = 7041 | Used to set or get the text content base controller.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the text content base controller. The parameter type is [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: the text content base controller. The parameter type is [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INPUT_ELLIPSIS_MODE = 7042 | Defines the ellipsis position.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: The parameter type is [ArkUI_EllipsisMode](capi-text-common-h.md#arkui_ellipsismode), the default value is ARKUI_ELLIPSIS_MODE_END.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The parameter type is [ArkUI_EllipsisMode](capi-text-common-h.md#arkui_ellipsismode).</li></ul> |
-| 	  NODE_TEXT_INPUT_ORPHAN_CHAR_OPTIMIZATION = 7043 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
-| NODE_TEXT_INPUT_COMPRESS_LEADING_PUNCTUATION = 7044 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
+| 	  NODE_TEXT_INPUT_ORPHAN_CHAR_OPTIMIZATION = 7043 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
+| NODE_TEXT_INPUT_COMPRESS_LEADING_PUNCTUATION = 7044 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INPUT_INCLUDE_FONT_PADDING = 7045 | Determines whether the layout adds extra padding at the top and bottom to make space for characters.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Enable include the font padding, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether include the font padding.</li></ul><br>**Since**: 23 |
-| NODE_TEXT_INPUT_FALLBACK_LINE_SPACING = 7046 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
+| NODE_TEXT_INPUT_FALLBACK_LINE_SPACING = 7046 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INPUT_DIRECTION = 7047 | Writing direction of the text.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: writing direction of the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: writing direction the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INPUT_SELECTED_DRAG_PREVIEW_STYLE = 7048 | Used to set the selected drag preview style.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_INPUT_TEXT_OVERFLOW = 7049 | Defines the textinput textOverflow attribute.which can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: display mode when the text is too long [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: display mode when the text is too long [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow).</li></ul> |
@@ -577,10 +573,10 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_TEXT_AREA_CUSTOM_KEYBOARD = 8036 | Sets up a custom keyboard.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: custom keyboard, The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li><li>.value[0]?.i32: Sets whether the custom keyboard supports the avoidance feature, default value false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: custom keyboard, The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li><li>.value[0].i32: Set whether the custom keyboard supports the avoidance function.</li></ul><br>**Since**: 22 |
 | NODE_TEXT_AREA_TEXT_CONTENT_CONTROLLER_BASE = 8037 | Used to set or get the text content base controller.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: the text content base controller. The parameter type is [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: the text content base controller. The parameter type is [ArkUI_TextContentBaseController](capi-arkui-nativemodule-arkui-textcontentbasecontroller.md).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_AREA_ELLIPSIS_MODE = 8038 | Defines the ellipsis position.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: The parameter type is [ArkUI_EllipsisMode](capi-text-common-h.md#arkui_ellipsismode), the default value is ARKUI_ELLIPSIS_MODE_END.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The parameter type is [ArkUI_EllipsisMode](capi-text-common-h.md#arkui_ellipsismode).</li></ul><br>**Since**: 24 |
-| NODE_TEXT_AREA_ORPHAN_CHAR_OPTIMIZATION = 8039 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
-| NODE_TEXT_AREA_COMPRESS_LEADING_PUNCTUATION = 8040 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
+| NODE_TEXT_AREA_ORPHAN_CHAR_OPTIMIZATION = 8039 | Whether to avoid an orphan word on the last line of the paragraph.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: The current state of this feature.</li></ul><br>**Since**: 26.0.0 |
+| NODE_TEXT_AREA_COMPRESS_LEADING_PUNCTUATION = 8040 | Whether to compress punctuation at the beginning of line.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether compress punctuation at the beginning of line.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_AREA_INCLUDE_FONT_PADDING = 8041 | Determines whether the layout adds extra padding at the top and bottom to make space for characters.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Enable include the font padding, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether include the font padding.</li></ul><br>**Since**: 23 |
-| NODE_TEXT_AREA_FALLBACK_LINE_SPACING = 8042 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32:  Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
+| NODE_TEXT_AREA_FALLBACK_LINE_SPACING = 8042 | Whether to include ascent/descent from fallback fonts to prevent overlapping lines.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable. The default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether fallback line spacing.</li></ul><br>**Since**: 23 |
 | NODE_TEXT_AREA_HORIZONTAL_SCROLLING = 8043 | Whether to enable horizontal scrolling when text is wider than the view.The default value is false, and text will be wrapped by the view.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether enable the feature, true means enable this feature, false means disable.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether enable the feature.</li></ul><br>**Since**: 24 |
 | NODE_TEXT_AREA_DIRECTION = 8044 | Writing direction of the text.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: writing direction of the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: writing direction the text. The value is an enum of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection).</li></ul><br>**Since**: 23 |
 | NODE_TEXT_AREA_SELECTED_DRAG_PREVIEW_STYLE = 8045 | Used to set the selected drag preview style.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: selected drag preview style configuration. The parameter type is [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md).</li></ul><br>**Since**: 23 |
@@ -639,7 +635,7 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_TEXT_PICKER_DEFAULT_PICKER_ITEM_HEIGHT | Defines the height of each item in the picker. This attribute can be set, reset, and obtained as requiredthrough APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: item height, in vp.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>value[0].f32: item height, in vp.</li></ul> |
 | NODE_TEXT_PICKER_ENABLE_HAPTIC_FEEDBACK = 15010 | Defines whether haptic feedback.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: whether to feedback. The value <b>true</b> means to feedback, and<b>false</b> means the opposite.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>value[0].i32: whether to feedback.</li></ul><br>**Since**: 18 |
 | NODE_TEXT_PICKER_SELECTED_BACKGROUND_STYLE = 15011 | Defines the background color and border radius of the selected items.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: background color, in 0xARGB format, for example, <b>0xFF1122FF</b>.</li><li>1: .value[1].f32: radius of the four corners.</li><li>2: .value[1].f32: radius of the upper left corner.</li><li>.value[2].f32: radius of the upper right corner.</li><li>.value[3].f32: radius of the lower left corner.</li><li>.value[4].f32: radius of the lower right corner.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: background color, in 0xARGB format, for example, <b>0xFF1122FF</b>.</li><li>.value[1].f32: radius of the upper left corner.</li><li>.value[2].f32: radius of the upper right corner.</li><li>.value[3].f32: radius of the lower left corner.</li><li>.value[4].f32: radius of the lower right corner.</li></ul><br>**Since**: 20 |
-| NODE_CALENDAR_PICKER_HINT_RADIUS = MAX_NODE_SCOPE_NUM * ARKUI_NODE_CALENDAR_PICKER | Defines the style of the background in the selected state of the calendar picker.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: style of the background in the selected state of the calendar picker.The value range is [0, +∞). If the value is <b>0</b>, the background is a rectangle with square corners.     If the value is in the 0–16 range, the background is a rectangle with rounded corners. If the value is equal toor greater than 16, the background is a circle.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: style of the background in the selected state of the calendar picker. The value range is [0, +∞).If the value is <b>0</b>, the background is a rectangle with square corners.     If the value is in the 0–16 range, the background is a rectangle with rounded corners. If the value is equal to orgreater than 16, the background is a circle.</li></ul> |
+| NODE_CALENDAR_PICKER_HINT_RADIUS = MAX_NODE_SCOPE_NUM * ARKUI_NODE_CALENDAR_PICKER | Defines the style of the background in the selected state of the calendar picker.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].f32: style of the background in the selected state of the calendar picker.The value range is [0, +∞). If the value is <b>0</b>, the background is a rectangle with square corners. If the value is in the 0–16 range, the background is a rectangle with rounded corners. If the value is equal toor greater than 16, the background is a circle.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].f32: style of the background in the selected state of the calendar picker. The value range is [0, +∞).If the value is <b>0</b>, the background is a rectangle with square corners. If the value is in the 0–16 range, the background is a rectangle with rounded corners. If the value is equal to orgreater than 16, the background is a circle.</li></ul> |
 | NODE_CALENDAR_PICKER_SELECTED_DATE | Defines the date of the selected item in the calendar picker.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: year of the selected date.</li><li>.value[1].u32: month of the selected date.</li><li>.value[2].u32: day of the selected date.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: year of the selected date.</li><li>.value[1].u32: month of the selected date.</li><li>.value[2].u32: day of the selected date.</li></ul> |
 | NODE_CALENDAR_PICKER_EDGE_ALIGNMENT | Defines how the calendar picker is aligned with the entry component.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: alignment mode. The parameter type is [ArkUI_CalendarAlignment](capi-picker-h.md#arkui_calendaralignment).</li><li>.value[1]?.f32: offset of the picker relative to the entry component along the x-axis after alignment based onthe specified alignment mode.</li><li>.value[2]?.f32: offset of the picker relative to the entry component along the y-axis after alignment based onthe specified alignment mode.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: alignment mode. The parameter type is [ArkUI_CalendarAlignment](capi-picker-h.md#arkui_calendaralignment).</li><li>.value[1]?.f32: offset of the picker relative to the entry component along the x-axis after alignment based onthe specified alignment mode.</li><li>.value[2]?.f32: offset of the picker relative to the entry component along the y-axis after alignment based onthe specified alignment mode.</li></ul> |
 | NODE_CALENDAR_PICKER_TEXT_STYLE | Defines the font color, font size, and font weight in the entry area of the calendar picker.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0]?.u32: font color of the entry area.</li><li>.value[1]?.f32: font size of the entry area, in fp.</li><li>.value[2]?.i32: font weight of the entry area. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: font color of the entry area.</li><li>.value[1].f32: font size of the entry area, in fp.</li><li>.value[2].i32: font weight of the entry area. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).</li></ul> |
@@ -659,11 +655,11 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_SLIDER_STYLE | Defines the style of the slider thumb and track. This attribute can be set, reset, and obtainedas required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.value[0].i32: style of the slider thumb and track. The parameter type is [ArkUI_SliderStyle](capi-slider-h.md#arkui_sliderstyle).</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.value[0].i32: style of the slider thumb and track. The parameter type is [ArkUI_SliderStyle](capi-slider-h.md#arkui_sliderstyle).</li></ul> |
 | NODE_SLIDER_TRACK_THICKNESS | Sets the track thickness of the slider.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.value[0].f32: track thickness of the slider, in vp. The default value is 4.0 vp when <b>NODE_SLIDER_STYLE</b>is set to <b>ARKUI_SLIDER_STYLE_OUT_SET</b> and 20.0 vp when <b>NODE_SLIDER_STYLE</b> is set to<b>ARKUI_SLIDER_STYLE_IN_SET</b>.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.value[0].f32: track thickness of the slider, in vp.</li> <br> </ul> |
 | NODE_SLIDER_ENABLE_HAPTIC_FEEDBACK = 17013 | Defines whether haptic feedback.This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.value[0].i32: whether to feedback. The value <b>true</b> means to feedback, and<b>false</b> means the opposite.</li><br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>value[0].i32: whether to feedback.<br> When enabling haptic feedback, you need to add "ohos.permission.VIBRATE" in therequestPermissions field of the module.json5 file to enable vibration permission.</li><br> </ul><br>**Since**: 18 |
-| NODE_SLIDER_PREFIX | Sets a custom component on the leading side of the Slider component.**Attribute setting method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter format:**<br> <ul><li>.object: Parameter type [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li></ul>The prefix component will be placed at the start position of the Slider，typically on the left side in LTR layouts.	 *<br>**Since**: 20 |
-| NODE_SLIDER_SUFFIX | Sets a custom component on the trailing side of the Slider component.**Attribute setting method {@link link ArkUI_AttributeItem} parameter format:**<br> <ul><li>.object: Parameter type [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li></ul>The suffix component will be placed at the end position of the Slider,typically on the right side in LTR layouts.	 *<br>**Since**: 20 |
-| NODE_SLIDER_BLOCK_LINEAR_GRADIENT_COLOR | Defines the color of the slider block. This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
-| NODE_SLIDER_TRACK_LINEAR_GRADIENT_COLOR | Defines the background color of the slider. This attribute can be set, reset, and obtained as requiredthrough APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
-| NODE_SLIDER_SELECTED_LINEAR_GRADIENT_COLOR | Defines the color of the selected part of the slider track. This attribute can be set, reset, and obtainedas required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li>  <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
+| NODE_SLIDER_PREFIX | Sets a custom component on the leading side of the Slider component.**Attribute setting method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter format:**<br> <ul><li>.object: Parameter type [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li></ul>The prefix component will be placed at the start position of the Slider，typically on the left side in LTR layouts. *<br>**Since**: 20 |
+| NODE_SLIDER_SUFFIX | Sets a custom component on the trailing side of the Slider component.**Attribute setting method {@link link ArkUI_AttributeItem} parameter format:**<br> <ul><li>.object: Parameter type [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li></ul>The suffix component will be placed at the end position of the Slider,typically on the right side in LTR layouts. *<br>**Since**: 20 |
+| NODE_SLIDER_BLOCK_LINEAR_GRADIENT_COLOR | Defines the color of the slider block. This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
+| NODE_SLIDER_TRACK_LINEAR_GRADIENT_COLOR | Defines the background color of the slider. This attribute can be set, reset, and obtained as requiredthrough APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
+| NODE_SLIDER_SELECTED_LINEAR_GRADIENT_COLOR | Defines the color of the selected part of the slider track. This attribute can be set, reset, and obtainedas required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.object: array of color stops, each of which consists of a color and its stop position.The parameter type is [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md). Invalid colors are automatically skipped.</li> <br> <li>colors: colors of the color stops.</li> <br> <li>stops: stop positions of the color stops.</li> <br> <li>size: number of colors.</li> <br> </ul><br>**Since**: 21 |
 | NODE_RADIO_CHECKED = MAX_NODE_SCOPE_NUM * ARKUI_NODE_RADIO | Set the selection status of an option button. Attribute setting,attribute resetting, and attribute obtaining are supported.**Attribute setting method {@Link ArkUI_AttributeItem} Parameter format:**<br> <ul><li>.value[0].i32: check status of an option button. The default value is false.</li></ul>**Attribute obtaining method return value {@Link ArkUI_AttributeItem} format:**<br> <ul><li>.value[0].i32: selection status of an option button.</li></ul> |
 | NODE_RADIO_STYLE | Set the styles of the selected and deselected states of the option button.The attribute setting, attribute resetting, and attribute obtaining are supported.**Attribute setting method {@Link ArkUI_AttributeItem} Parameter format:**<br> <ul><li>.value[0]?. u32: color of the mother board in enabled state. <br> The type is 0xARGB, and the default value is 0xFF007DFF.</li> <br> <li>.value[1]?. u32: stroke color in the close state. The type is 0xARGB, <br> and the default value is 0xFF182431.</li> <br> <li>.value[2]?. u32: color of the internal round pie in the enabled state. <br> The type is 0xARGB, and the default value is 0xFFFFFFFF.</li> <br> </ul>**Attribute obtaining method return value {@Link ArkUI_AttributeItem} format:**<br> <ul><li>.value[0]. u32: color of the mother board in enabled state. <br> The type is 0xARGB, and the default value is 0xFF007DFF.</li> <br> <li>.value[1]. u32: stroke color in the close state. The type is 0xARGB, <br> and the default value is 0xFF182431.</li> <br> <li>.value[2]. u32: color of the internal round pie in the enabled state. <br> The type is 0xARGB, and the default value is 0xFFFFFFF.</li> <br> </ul> |
 | NODE_RADIO_VALUE | Sets the value of the current radio.This attribute can be set, reset, and obtained as required through APIs.**Attribute setting method {@Link ArkUI_AttributeItem} Parameter format:**<br> <ul><li>.string: radio value.</li><br> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br> <ul><li>.string: radio value.</li><br> </ul> |
@@ -713,11 +709,11 @@ Defines the ArkUI style attributes that can be set on the native side.
 | NODE_TEXT_EDITOR_HORIZONTAL_SCROLLING | Sets whether to enable horizontal scrolling for the **TextEditor** component when the text width exceedsthe content area width. This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: Whether to enable horizontal scrolling. The value **1** means to enable, and **0** means the opposite. The default value is **0**.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: Whether horizontal scrolling is enabled.</li></ul><br>**Since**: 26.0.0 |
 | NODE_TEXT_EDITOR_PUNCTUATION_OVERFLOW | Sets whether to enable punctuation overflow at the end of a line.<br>This attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: whether to enable punctuation overflow, the default value is false.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: whether to enable punctuation overflow.</li></ul><br>**Since**: 26.0.0 |
 | NODE_ARC_ALPHABET_INDEXER_ARRAY = MAX_NODE_SCOPE_NUM * ARKUI_NODE_ARC_ALPHABET_INDEXER | Defines the index string array.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.object: array of the alphabet index. the type is string array.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.object: array of the alphabet index. the type is string array.</li></ul><br>**Since**: 26.1.0 |
-| NODE_ARC_ALPHABET_INDEXER_COLOR | Defines the index item text color in normal state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text,  in 0xARGB format, and the default value is 0x99182431.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text,  in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
-| NODE_ARC_ALPHABET_INDEXER_SELECTED_COLOR | Defines the index item text color in selected state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text,  in 0xARGB format, and the default value is 0xFF007DFF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text,  in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
-| NODE_ARC_ALPHABET_INDEXER_POPUP_COLOR | Defines the pop-up window text color.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text,  in 0xARGB format, and the default value is 0xFF007DFF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text,  in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
-| NODE_ARC_ALPHABET_INDEXER_SELECTED_BACKGROUND_COLOR | Defines the index item background color in selected state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the background,  in 0xARGB format, and the default value is 0xFF1F71FF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the background,  in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
-| NODE_ARC_ALPHABET_INDEXER_POPUP_BACKGROUND_COLOR | Defines the pop-up window background color.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the background,  in 0xARGB format, and the default value is 0xD8404040.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the background,  in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
+| NODE_ARC_ALPHABET_INDEXER_COLOR | Defines the index item text color in normal state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text, in 0xARGB format, and the default value is 0x99182431.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text, in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
+| NODE_ARC_ALPHABET_INDEXER_SELECTED_COLOR | Defines the index item text color in selected state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text, in 0xARGB format, and the default value is 0xFF007DFF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text, in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
+| NODE_ARC_ALPHABET_INDEXER_POPUP_COLOR | Defines the pop-up window text color.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the text, in 0xARGB format, and the default value is 0xFF007DFF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the text, in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
+| NODE_ARC_ALPHABET_INDEXER_SELECTED_BACKGROUND_COLOR | Defines the index item background color in selected state.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the background, in 0xARGB format, and the default value is 0xFF1F71FF.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the background, in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
+| NODE_ARC_ALPHABET_INDEXER_POPUP_BACKGROUND_COLOR | Defines the pop-up window background color.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].u32: color of the background, in 0xARGB format, and the default value is 0xD8404040.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].u32: color of the background, in 0xARGB format.</li></ul><br>**Since**: 26.1.0 |
 | NODE_ARC_ALPHABET_INDEXER_USE_POPUP | Defines whether to use a pop-up window.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.value[0].i32: whether to use a pop-up. The value <b>0</b> means not to use a pop-up,and <b>1</b> means to use a pop-up. The default value is <b>0</b>.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.value[0].i32: whether to use a pop-up.</li></ul><br>**Since**: 26.1.0 |
 | NODE_ARC_ALPHABET_SELECTED_FONT | Defines the font style of the selected index.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.string: font family. Use commas (,) to separate multiple fonts. Optional.The default value is <b>"HarmonyOS Sans"</b>.</li><li>.value[0].f32: font size, in fp. Optional. The default value is <b>13</b>.</li><li>.value[1].i32: font weight. Optional. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).The default value is <b>ARKUI_FONT_WEIGHT_W500</b>.</li><li>.value[2].i32: font style. Optional. The parameter type is [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle).The default value is <b>ARKUI_FONT_STYLE_NORMAL</b>.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.string: font family. Use commas (,) to separate multiple fonts.</li><li>.value[0].f32: font size, in fp.</li><li>.value[1].i32: font weight. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).</li><li>.value[2].i32: font style. The parameter type is [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle).</li></ul><br>**Since**: 26.1.0 |
 | NODE_ARC_ALPHABET_INDEXER_POPUP_FONT | Defines the font style of the pop-up window.The attribute can be set, reset, and obtained as required through APIs.**Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:<ul><li>.string: font family. Use commas (,) to separate multiple fonts. Optional.The default value is <b>"HarmonyOS Sans"</b>.</li><li>.value[0].f32: font size, in fp. Optional. The default value is <b>19</b>.</li><li>.value[1].i32: font weight. Optional. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).The default value is <b>ARKUI_FONT_WEIGHT_W500</b>.</li><li>.value[2].i32: font style. Optional. The parameter type is [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle).The default value is <b>ARKUI_FONT_STYLE_NORMAL</b>.</li></ul>**Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):<ul><li>.string: font family. Use commas (,) to separate multiple fonts.</li><li>.value[0].f32: font size, in fp.</li><li>.value[1].i32: font weight. The parameter type is [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight).</li><li>.value[2].i32: font style. The parameter type is [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle).</li></ul><br>**Since**: 26.1.0 |
@@ -925,7 +921,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_ON_CLICK | Defines the click event.This event is triggered when the component is clicked. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains 12 parameters:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].f32</b>: X coordinate of the click relative to the upper left corner of theclicked component's original area, in vp.</li><li>ArkUI_NodeComponentEvent.data[1].f32</b>: Y coordinate of the click relative to the upper left corner of theclicked component's original area, in vp.</li><li>ArkUI_NodeComponentEvent.data[2].f32</b>: event timestamp. It is the interval between the time when the eventis triggered and the time when the system starts, in microseconds.</li><li>ArkUI_NodeComponentEvent.data[3].i32</b>: event input device. The value <b>1</b> indicates the mouse,<li>2</b> indicates the touchscreen, and <b>4</b> indicates the key.</li><li>ArkUI_NodeComponentEvent.data[4].f32</b>: X coordinate of the click relative to the upper left corner of theapplication window, in vp.</li><li>ArkUI_NodeComponentEvent.data[5].f32</b>: Y coordinate of the click relative to the upper left corner of theapplication window, in vp.</li><li>ArkUI_NodeComponentEvent.data[6].f32</b>: X coordinate of the click relative to the upper left corner of theapplication screen, in vp.</li><li>ArkUI_NodeComponentEvent.data[7].f32</b>: Y coordinate of the click relative to the upper left corner of theapplication screen, in vp.</li></ul> |
 | NODE_ON_TOUCH_INTERCEPT | Defines event interception.This event is triggered when the component is touched. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br> |
 | NODE_EVENT_ON_VISIBLE_AREA_CHANGE | Defines the visible area change event.This event is triggered when the ratio of the component's visible area to its total area is greater than or lessthan the threshold.Before registering this event, you must set <b>NODE_VISIBLE_AREA_CHANGE_RATIO</b>. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].i32</b>: how the ratio of the component's visible area to its total areachanges compared to the previous one. The value <b>1</b> indicates an increase, and <b>0</b> indicates adecrease.</li><li>ArkUI_NodeComponentEvent.data[1].f32</b>: ratio of the component's visible area to its total area when thiscallback is invoked.</li></ul> |
-| NODE_ON_HOVER | Defines the event triggered when the mouse pointer is moved over or away from the component.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].i32</b>: whether the mouse pointer is hovered over the component.The value <b>1</b> indicates that the mouse pointer is hovered over the component, and <b>0</b> indicates thatthe mouse pointer is moved away from the component.</li></ul> |
+| NODE_ON_HOVER | Defines the event triggered when the mouse pointer is moved over or away from the component. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].i32</b>: whether the mouse pointer is hovered over the component.The value <b>1</b> indicates that the mouse pointer is hovered over the component, and <b>0</b> indicates thatthe mouse pointer is moved away from the component.</li></ul> |
 | NODE_ON_MOUSE | Defines the click event.This event is triggered when the component is clicked by a mouse device button or when the mouse pointer moveswithin the component. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br> |
 | NODE_EVENT_ON_ATTACH | Defines the attach event.This event is triggered when the component is attached. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) does not contain parameters. |
 | NODE_EVENT_ON_DETACH | Defines the detach event.This event is triggered when the component is detached. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) does not contain parameters. |
@@ -933,7 +929,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_ON_PRE_DRAG = 14 | Notifies the listener of the interaction state prior to a drop and drop operation.This event is triggered when a drag operation is about to start on a draggable item. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].i32</b>: corresponds to {@link ArkUI_PreDragStatus}.</li></ul> |
 | NODE_ON_DRAG_START = 15 | Called when the user starts to drag an iteA drag operation is recognized only when the dragged item is moved far enough. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
 | NODE_ON_DRAG_ENTER = 16 | Called when a dragged item enters the boundaries of the current component.The current component refers to the component that listens for this event. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
-| NODE_ON_DRAG_MOVE = 17 | Called  when a dragged item moves in the current component.The current component refers to the component that listens for this event. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
+| NODE_ON_DRAG_MOVE = 17 | Called when a dragged item moves in the current component.The current component refers to the component that listens for this event. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
 | NODE_ON_DRAG_LEAVE = 18 | Called when a dragged item leaves the boundaries of the current component.The current component refers to the component that listens for this event. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
 | NODE_ON_DROP = 19 | Called when a dragged item is dropped on the current component.The component can obtain the drag data for processing through the callback.The current component refers to the component that listens for this event. <br> When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
 | NODE_ON_DRAG_END = 20 | Called when a drag operation ends.The drag source can obtain the drag result by registering this callback.A drag operation ends when the dragged item is released.When the event callback occurs, the {@link ArkUI_DragEvent} object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br> |
@@ -942,7 +938,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_ON_FOCUS_AXIS = 23 | Defines the event triggered when the bound component receives a focus axis event after gaining focus.The event callback is triggered by interactions with a joystick and a focused component. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br><br>**Since**: 15 |
 | NODE_DISPATCH_KEY_EVENT = 24 | Dispatch key event on the component node.When the component node receives a key event, this callback will be triggered instead of dispatching event to itschildren. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br><br>**Since**: 15 |
 | NODE_ON_AXIS = 25 | Defines the event triggered when the bound component receives an axis event.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br><br>**Since**: 17 |
-| NODE_ON_CLICK_EVENT = 26 | Defines the event triggered when the bound component is clicked.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md).  <br><br>**Since**: 18 |
+| NODE_ON_CLICK_EVENT = 26 | Defines the event triggered when the bound component is clicked.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br><br>**Since**: 18 |
 | NODE_ON_HOVER_EVENT = 27 | Defines the event triggered when the mouse pointer hovers over or moves away from a component.This event is triggered when the mouse pointer enters or leaves the component's bounding box. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md). <br> |
 | NODE_VISIBLE_AREA_APPROXIMATE_CHANGE_EVENT = 28 | Sets the callback for the NODE_EVENT_ON_VISIBLE_AREA_CHANGE event, which limits the callback interval.The callback is triggered when the ratio of the component's visible area to its total area is greater than orless than the threshold. Before registering the callback, you must configure the threshold and update intervalusing <b>NODE_VISIBLE_AREA_APPROXIMATE_CHANGE_RATIO</b>. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<br> <ul><li>ArkUI_NodeComponentEvent.data[0].i32</b>: how the ratio of the component's visible area to its total areachanges compared to the previous one. The value <b>1</b> indicates an increase, and <b>0</b> indicatesa decrease.</li><li>ArkUI_NodeComponentEvent.data[1].f32</b>: ratio of the component's visible area to its total areawhen this callback is invoked.</li></ul><br>**Since**: 17 |
 | NODE_ON_HOVER_MOVE = 29 | Defines the hover event.The event is triggered when the pointer is hovered by a pen device.within the component. <br> When the event callback occurs, the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object can be obtained from the[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md) object. <br><br>**Since**: 15 |
@@ -953,7 +949,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_ON_CUSTOM_OVERFLOW_SCROLL = 34 | Defines the event is triggered when the <b>ARKUI_NODE_CUSTOM</b> content is scrolled.The event is triggered when the component's content is scrolled. <br> When the event callback occurs, the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object can be obtained from the[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameters:<br> ArkUI_NodeComponentEvent.data[0].i32: id of scrolling child component. <br> ArkUI_NodeComponentEvent.data[1].f32: offset of the frame scrolling, measured in px.<br>**Since**: 24 |
 | NODE_ON_STACK_OVERFLOW_SCROLL = 35 | Defines the event is triggered when the <b>ARKUI_NODE_STACK</b> content is scrolled.The event is triggered when the component's content is scrolled. <br> When the event callback occurs, the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object can be obtained from the[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameters:<br> ArkUI_NodeComponentEvent.data[0].i32: id of scrolling child component. <br> ArkUI_NodeComponentEvent.data[1].f32: offset of the frame scrolling, measured in px.<br>**Since**: 24 |
 | NODE_ON_NEED_SOFTKEYBOARD = 36 | Defines the event triggered when the component is focused and need to decide whether softkeyboard is needed.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) does not contain parameters.<br>**Since**: 24 |
-| NODE_ON_GESTURE_COLLECT_INTERCEPT = 37 | This callback is invoked when the events and gestures on this node andhigher-priority nodes are collected. <br> This callback is used to intervene in the collection result of events and gestures. <br>     When the event callback occurs, the [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br><br>**Since**: 26.0.0 |
+| NODE_ON_GESTURE_COLLECT_INTERCEPT = 37 | This callback is invoked when the events and gestures on this node andhigher-priority nodes are collected. <br> This callback is used to intervene in the collection result of events and gestures. <br> When the event callback occurs, the [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) object can be obtained from the[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object. <br><br>**Since**: 26.0.0 |
 | NODE_TEXT_ON_DETECT_RESULT_UPDATE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TEXT | Triggers onDetectResultUpdate callbackwhen the text is set to TextDataDetectorConfig and recognized successfully.Trigger this event when TextDataDetectorConfig is set and recognized successfully.<br> When the event callback occurs, the event parameter[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)The union type in the object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md).<br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md)contains 1 parameter<ul><li>ArkUI_StringAsyncEvent.pStr: Indicates the result of text recognition, in Json format.</li></ul> |
 | NODE_TEXT_SPAN_ON_LONG_PRESS = 1001 | Defines the long press event for span.The event is triggered when the span is long pressed.When the event callback occurs, the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object can be obtained from the[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md) object.<br>**Since**: 20 |
 | NODE_TEXT_ON_TEXT_SELECTION_CHANGE = 1002 | Defines the event triggered when the text selection position changes.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: start position of the text selection area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: end position of the text selection area.</li></ul><br>**Since**: 26.0.0 |
@@ -963,11 +959,11 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_IMAGE_ON_ERROR | Defines the image loading failure event.This event is triggered when an error occurs during image loading. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: error code.<br><b>401</b>: The image could not be obtained becausethe image path is invalid.<br><b>103101</b>: The image format is not supported.</li></ul> |
 | NODE_IMAGE_ON_SVG_PLAY_FINISH | Defines the SVG animation playback completion event.This event is triggered when the animation playback in the loaded SVG image is complete. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) does not contain parameters. |
 | NODE_IMAGE_ON_DOWNLOAD_PROGRESS | Defines the image download progress event.This event is triggered when downloading webpage images from page components.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].u32: number of bytes downloaded.</li><li>ArkUI_NodeComponentEvent.data[1].u32: total number of bytes to download.</li></ul> |
-| NODE_TOGGLE_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TOGGLE | Defines the event triggered when the toggle status changes.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:** <br> <ul><li><b>ArkUI_NodeComponentEvent.data[0].i32</b>: toggle status. <b>1</b>: on; <b>0</b>: off.</li></ul> |
-| NODE_TEXT_INPUT_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TEXT_INPUT | Defines the event triggered when the text input content changes.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text input.</li></ul> |
-| NODE_TEXT_INPUT_ON_SUBMIT | Defines the event triggered when the Enter key of the text input method is pressed.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: Enter key type of the input method.</li></ul> |
-| NODE_TEXT_INPUT_ON_CUT | Defines the event triggered when the cut button on the pasteboard, which displays when the text boxis long pressed, is clicked.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is cut.</li></ul> |
-| NODE_TEXT_INPUT_ON_PASTE | Defines the event triggered when the paste button on the pasteboard, which displays when the text boxis long pressed, is clicked.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is pasted.</li></ul>Since 26.0.0, the callback can return whether the paste is allowed. |
+| NODE_TOGGLE_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TOGGLE | Defines the event triggered when the toggle status changes. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:** <br> <ul><li><b>ArkUI_NodeComponentEvent.data[0].i32</b>: toggle status. <b>1</b>: on; <b>0</b>: off.</li></ul> |
+| NODE_TEXT_INPUT_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TEXT_INPUT | Defines the event triggered when the text input content changes. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text input.</li></ul> |
+| NODE_TEXT_INPUT_ON_SUBMIT | Defines the event triggered when the Enter key of the text input method is pressed. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: Enter key type of the input method.</li></ul> |
+| NODE_TEXT_INPUT_ON_CUT | Defines the event triggered when the cut button on the pasteboard, which displays when the text boxis long pressed, is clicked. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is cut.</li></ul> |
+| NODE_TEXT_INPUT_ON_PASTE | Defines the event triggered when the paste button on the pasteboard, which displays when the text boxis long pressed, is clicked. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is pasted.</li></ul>Since 26.0.0, the callback can return whether the paste is allowed. |
 | NODE_TEXT_INPUT_ON_TEXT_SELECTION_CHANGE | Defines the event triggered when the text selection position changes.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: start position of the text selection area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: end position of the text selection area.</li></ul> |
 | NODE_TEXT_INPUT_ON_EDIT_CHANGE | Defines the event triggered when the input status changes.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: true indicates that text input is in progress.</li></ul> |
 | NODE_TEXT_INPUT_ON_CONTENT_SIZE_CHANGE | textInput This event is triggered when the input content changes.Conditions for triggering this event: When the input content changes. <br> When the event callback occurs, the union type in the event parameter[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains 2 parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].f32: Indicates the width of the text.</li><li>ArkUI_NodeComponentEvent.data[1].f32: Indicates the height of the text.</li></ul> |
@@ -982,12 +978,12 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_TEXT_INPUT_ON_COPY = 7015 | Defines the event triggered when the copy button on the pasteboard, which displays when text isselected, is clicked.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is copied.</li></ul><br>**Since**: 26.0.0 |
 | NODE_TEXT_INPUT_ON_WILL_COPY = 7016 | Defines the event triggered before copying text.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is copied.</li></ul><br>**Since**: 26.0.0 |
 | NODE_TEXT_INPUT_ON_WILL_CUT = 7017 | Defines the event triggered before cutting text.<br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is cut.</li></ul><br>**Since**: 26.0.0 |
-| NODE_TEXT_AREA_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TEXT_AREA | Defines the event triggered when the input in the text box changes.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text entered.</li></ul> |
-| NODE_TEXT_AREA_ON_PASTE | Defines the event triggered when the paste button on the pasteboard, which displays when the text box islong pressed, is clicked.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is pasted.</li></ul>Since 26.0.0, the callback can return whether the paste is allowed. |
-| NODE_TEXT_AREA_ON_TEXT_SELECTION_CHANGE | Defines the event triggered when the text selection position changes.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: start position of the text selection area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: end position of the text selection area.</li></ul> |
-| NODE_TEXT_AREA_ON_INPUT_FILTER_ERROR | Defines the event triggered when matching with the regular expression specified by<b>NODE_TEXT_AREA_INPUT_FILTER</b> fails.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: content that is filtered out when regular expression matching fails.</li></ul> |
-| NODE_TEXT_AREA_ON_CONTENT_SCROLL | This callback is triggered when the text content is scrolled.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: Indicates the horizontal offset of the text in the content area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: Indicates the vertical coordinate offset of the text in the content area.</li></ul> |
-| NODE_TEXT_AREA_ON_EDIT_CHANGE | Defines the event triggered when the input status changes.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: true indicates that text input is in progress.</li></ul> |
+| NODE_TEXT_AREA_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_TEXT_AREA | Defines the event triggered when the input in the text box changes. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text entered.</li></ul> |
+| NODE_TEXT_AREA_ON_PASTE | Defines the event triggered when the paste button on the pasteboard, which displays when the text box islong pressed, is clicked. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: text that is pasted.</li></ul>Since 26.0.0, the callback can return whether the paste is allowed. |
+| NODE_TEXT_AREA_ON_TEXT_SELECTION_CHANGE | Defines the event triggered when the text selection position changes. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: start position of the text selection area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: end position of the text selection area.</li></ul> |
+| NODE_TEXT_AREA_ON_INPUT_FILTER_ERROR | Defines the event triggered when matching with the regular expression specified by<b>NODE_TEXT_AREA_INPUT_FILTER</b> fails. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md). <br> **[ArkUI_StringAsyncEvent](capi-arkui-nativemodule-arkui-stringasyncevent.md) contains one parameter:<ul><li>ArkUI_StringAsyncEvent.pStr: content that is filtered out when regular expression matching fails.</li></ul> |
+| NODE_TEXT_AREA_ON_CONTENT_SCROLL | This callback is triggered when the text content is scrolled. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains two parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: Indicates the horizontal offset of the text in the content area.</li><li>ArkUI_NodeComponentEvent.data[1].i32: Indicates the vertical coordinate offset of the text in the content area.</li></ul> |
+| NODE_TEXT_AREA_ON_EDIT_CHANGE | Defines the event triggered when the input status changes. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: true indicates that text input is in progress.</li></ul> |
 | NODE_TEXT_AREA_ON_SUBMIT | Defines the event triggered when the Enter key on the keyboard is pressed for the multi-line text box.This event is not triggered when <b>keyType</b> is <b>ARKUI_ENTER_KEY_TYPE_NEW_LINE</b>. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: type of the Enter key.</li></ul> |
 | NODE_TEXT_AREA_ON_CONTENT_SIZE_CHANGE | textArea This event is triggered when the input content changes.Conditions for triggering this event: When the input content changes. <br> When the event callback occurs, the union type in the event parameter [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).<br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains 2 parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].f32: Indicates the width of the text.</li><li>ArkUI_NodeComponentEvent.data[1].f32: Indicates the height of the text.</li></ul> |
 | NODE_TEXT_AREA_ON_WILL_INSERT = 8008 | Defines the event triggered when text is about to be entered.**The event parameter is [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md).<ul><li>value.f32: position of the text, with the index of 0; obtained using OH_ArkUI_NodeEvent_GetNumberValue.</li><li>buffer: string value of the text, with the index of 0; obtained using OH_ArkUI_NodeEvent_GetStringValue.</li></ul> |
@@ -1031,7 +1027,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_SWIPER_EVENT_ON_CONTENT_DID_SCROLL | Define the <b>ARKUI_NODE_SWIPER</b> to listen for Swiper page slide events.Instruction: <br> 1. If the {@link ArkUI_SwiperDisplayModeType} attribute is set to <br> ARKUI_SWIPER_DISPLAY_MODE_AUTO_LINEAR, the interface does not take effect. <br> 2, circular scenario, set prevMargin and nextMargin attributes, <br> so that Swiper front and back end display the same page, the interface does not take effect. <br> 3. During page sliding, the ContentDidScrollCallback callback is <br> triggered frame-by-frame for all pages in the window. <br> For example, when there are two pages in the window with subscripts 0 and 1, <br> callbacks with index values 0 and 1 are triggered twice per frame. <br> 4, set the swipeByGroup parameter of the displayCount property to <br> true if at least one page in the same group is in the window, <br> A callback is triggered for all pages in the group. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains four parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: indicates the index of the Swiper component,which is consistent with the index change in the onChange event.</li><li>ArkUI_NodeComponentEvent.data[1].i32: The index of a page in the window.</li><li>ArkUI_NodeComponentEvent.data[2].f32: The proportion of page movement relative tothe start position of the Swiper spindle (selectedIndex corresponds to the start position of the page).</li><li>ArkUI_NodeComponentEvent.data[3].f32: The length of the page in the axis direction.</li></ul><br>**Since**: 12 |
 | NODE_SWIPER_EVENT_ON_SELECTED = 1001005 | Defines the event triggered when the selected index of the <b>ARKUI_NODE_SWIPER</b> changed.This event is triggered under the following scenarios: <br> 1. When the page switching animation starts after the user lifts their finger after swiping and the swipe meetsthe threshold for page turning. <br> 2. When the page is changed programmatically using either <b>NODE_SWIPER_INDEX</b> or<b>NODE_SWIPER_SWIPE_TO_INDEX</b>. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: index of the currently selected element.</li></ul><br>**Since**: 18 |
 | NODE_SWIPER_EVENT_ON_UNSELECTED = 1001006 | Defines the event triggered when the selected index of the <b>ARKUI_NODE_SWIPER</b> changed.This event is triggered under the following scenarios: <br> 1. When the page switching animation starts after the user lifts their finger after swiping and the swipe meetsthe threshold for page turning. <br> 2. When the page is changed programmatically using either <b>NODE_SWIPER_INDEX</b> or<b>NODE_SWIPER_SWIPE_TO_INDEX</b>. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: the index of the element becomes unselected.</li></ul><br>**Since**: 18 |
-| NODE_SWIPER_EVENT_ON_CONTENT_WILL_SCROLL = 1001007 | Defines the event triggered when content in the swiper component will scroll.Instructions: Before page scrolling, the </b>ContentWillScrollCallback</b> callback is invoked.  <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains three parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: the index value of the current child page.</li><li>ArkUI_NodeComponentEvent.data[1].i32: the index value of the child page that will display.</li><li>ArkUI_NodeComponentEvent.data[2].f32: the sliding offset of each frame.Positive numbers indicating slide backward(e.g. from index=1 to index=0), negative numbers indicatingslide forward(e.g. from index=0 to index=1).</li></ul><br>**Since**: 15 |
+| NODE_SWIPER_EVENT_ON_CONTENT_WILL_SCROLL = 1001007 | Defines the event triggered when content in the swiper component will scroll.Instructions: Before page scrolling, the </b>ContentWillScrollCallback</b> callback is invoked. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains three parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: the index value of the current child page.</li><li>ArkUI_NodeComponentEvent.data[1].i32: the index value of the child page that will display.</li><li>ArkUI_NodeComponentEvent.data[2].f32: the sliding offset of each frame.Positive numbers indicating slide backward(e.g. from index=1 to index=0), negative numbers indicatingslide forward(e.g. from index=0 to index=1).</li></ul><br>**Since**: 15 |
 | NODE_SWIPER_EVENT_ON_SCROLL_STATE_CHANGED = 1001008 | Defines the <b>ARKUI_NODE_SWIPER</b> scroll state change event.This event is triggered when the scroll state of the <b>Swiper</b> component changes during user dragging,during the animation phase after the user lifts their finger, or upon stopping of scrolling.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: current scroll state. The parameter type is[ArkUI_ScrollState](capi-scroll-h.md#arkui_scrollstate).</li></ul><br>**Since**: 20 |
 | NODE_SCROLL_EVENT_ON_SCROLL = MAX_NODE_SCOPE_NUM * ARKUI_NODE_SCROLL | Event triggered when scrolling occurs. This event is triggered under the following scenarios:<br>1. Scrolling is started by the scrollable component (supports keyboard, mouse, and other input methods thattrigger scrolling).<br>2. Scrolling is initiated by calling the controller API.<br>3. The out-of-bounds bounce effect is active.<br>When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).<br>[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains the following parameters:<br>*ArkUI_NodeComponentEvent.data[0].f32**: horizontal scrolling offset.<br>*ArkUI_NodeComponentEvent.data[1].f32**: vertical scrolling offset. |
 | NODE_SCROLL_EVENT_ON_SCROLL_FRAME_BEGIN | Event triggered when the scrollable container starts scrolling in each frame. The **List**, **Scroll**,and **WaterFlow** components support this event since API version 12, and the **Grid** component supports thisevent since API version 22.<br>This event is triggered under the following scenarios:<br>1. This event is triggered when scrolling is started by the scrollable component (supports keyboard, mouse,and other input methods that trigger scrolling).<br>2. This event is not triggered when the controller API is called.<br>3. This event is not triggered when the component bounces back out of bounds.<br>When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).<br>[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains the following parameters:<br>*ArkUI_NodeComponentEvent.data[0].f32**: amount to scroll by.<br>*ArkUI_NodeComponentEvent.data[1].i32**: current scroll state.<br>*::ArkUI_NodeComponentEvent** contains one return value:<br>*ArkUI_NodeComponentEvent.data[0].f32**: The event handler can work out the amount by which the componentneeds to scroll based on the real-world situation and return the result in this parameter. |
@@ -1080,7 +1076,7 @@ Enumerates the event types supported by the NativeNode component.
 | NODE_GRID_ON_ITEM_DROP = 1013008 | Event triggered when a dragged child component is released.<br>This event is triggered in the following scenario:<br>This event is triggered when a child component successfully dragged using **NODE_GRID_ON_ITEM_DRAG_STARTis released.<br>When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).<br>[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains the following parameters:<br>*ArkUI_NodeComponentEvent.data[0].f32**: x-coordinate of the current drag point relative to the **Gridcomponent, in vp.<br>*ArkUI_NodeComponentEvent.data[1].f32**: y-coordinate of the current drag point relative to the **Gridcomponent, in vp.<br>*ArkUI_NodeComponentEvent.data[2].i32**: index of the dragged child component in the source **Gridcomponent.<br>*ArkUI_NodeComponentEvent.data[3].i32**: index of the dragged child component in this **Grid** component.<br>*ArkUI_NodeComponentEvent.data[4].i32**: whether the dragged child component is successfully releasedwithin the **Grid** component's area. **1**: within the **Grid** component's area. **0**: outside the **Gridcomponent's area.<br>**Since**: 23 |
 | NODE_GRID_ON_EDIT_MODE_CHANGE = 1013009 | Defines the edit mode state change event of the <b>Grid</b> component.This event is triggered when the edit mode state changes, which occurs in the following cases:1. The [NODE_GRID_ENABLE_EDIT_MODE](capi-native-node-h.md#arkui_nodeattributetype) attribute is set to change the edit mode state.2. When [NODE_GRID_EDIT_MODE_OPTIONS](capi-native-node-h.md#arkui_nodeattributetype) has two-finger sliding multi-selection enabled,a two-finger sliding gesture triggers the change to multi-selection state.Registering this event callback is a prerequisite for entering multi-selection state viatwo-finger sliding. If this callback is not registered, two-finger sliding will not entermulti-selection state.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<b>ArkUI_NodeComponentEvent.data[0].i32</b>: edit mode state.<b>0</b>: not in edit mode. <b>1</b>: in edit mode.<br>**Since**: 26.0.0 |
 | NODE_GRID_ITEM_ON_SELECT = MAX_NODE_SCOPE_NUM * ARKUI_NODE_GRID_ITEM | Selected state change event of the **ARKUI_NODE_GRID_ITEM** component.<br>When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md).<br>[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains the following parameter:<br>*ArkUI_NodeComponentEvent.data[0].i32**: **0** (not selected) or **1** (selected).<br>**Since**: 23 |
-| NODE_PICKER_EVENT_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_PICKER | Defines the event triggered when an item is selected in the <b>ARKUI_NODE_PICKER</b> component.      <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <b>ArkUI_NodeComponentEvent.data[0...11].i32</b>: value of the selected item. <br><br>**Since**: 23 |
+| NODE_PICKER_EVENT_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_PICKER | Defines the event triggered when an item is selected in the <b>ARKUI_NODE_PICKER</b> component. <br> When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <b>ArkUI_NodeComponentEvent.data[0...11].i32</b>: value of the selected item. <br><br>**Since**: 23 |
 | NODE_PICKER_EVENT_ON_SCROLL_STOP = 1018001 | Defines the event triggered when an item is selected and scrolling has stopped in the<b>ARKUI_NODE_PICKER</b> component.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> [ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<br> <b>ArkUI_NodeComponentEvent.data[0...11].i32</b>: value of the selected item. <br><br>**Since**: 23 |
 | NODE_ARC_SWIPER_EVENT_ON_CHANGE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_ARC_SWIPER | Defines the event triggered when the index of the currently displayed element of this<b>ARKUI_NODE_ARC_SWIPER</b> instance changes.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains one parameter:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: index of the currently displayed element.</li></ul><br>**Since**: 26.1.0 |
 | NODE_ARC_SWIPER_EVENT_ON_ANIMATION_START | Defines the event triggered when the switching animation of this <b>ARKUI_NODE_ARC_SWIPER</b> instance starts.When the event callback occurs, the union type in the [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) object is[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md). <br> **[ArkUI_NodeComponentEvent](capi-arkui-nativemodule-arkui-nodecomponentevent.md) contains five parameters:<ul><li>ArkUI_NodeComponentEvent.data[0].i32: index of the currently displayed element.</li><li>ArkUI_NodeComponentEvent.data[1].i32: index of the target element to switch to.</li><li>ArkUI_NodeComponentEvent.data[2].f32: offset of the currently displayed element relative to thestart position of the swiper along the main axis.</li><li>ArkUI_NodeComponentEvent.data[3].f32: offset of the target element relative to the start positionof the swiper along the main axis.</li><li>ArkUI_NodeComponentEvent.data[4].f32: hand-off velocity.</li></ul><br>**Since**: 26.1.0 |
@@ -1378,7 +1374,7 @@ Obtains the numeric-type parameter of a component event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INDEX_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter length exceeds<br>         the limit.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the data does not exist in the component event. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INDEX_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter length exceeds          the limit.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the data does not exist in the component event. |
 
 ### OH_ArkUI_NodeEvent_GetStringValue()
 
@@ -1405,7 +1401,7 @@ Obtains the string-type parameter of a component event. The string data is valid
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INDEX_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter length exceeds<br>         the limit.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the data does not exist in the component event. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INDEX_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter length exceeds          the limit.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the data does not exist in the component event. |
 
 ### OH_ArkUI_NodeEvent_SetReturnNumberValue()
 
@@ -1431,7 +1427,7 @@ Sets the return value for a component event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_NO_RETURN](capi-error-code-h.md#arkui_errorcode) if the component event does not support return values.<br>         Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if data does not exist in the component event. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_NO_RETURN](capi-error-code-h.md#arkui_errorcode) if the component event does not support return values.          Returns [ARKUI_ERROR_CODE_NODE_EVENT_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if data does not exist in the component event. |
 
 ### OH_ArkUI_NodeEvent_GetTouchTestInfo()
 
@@ -1455,7 +1451,7 @@ Obtains the touch test information in a component event.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_TouchTestInfo* | Pointer to the [ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md) object. If the input parameter is invalid or is not touch test<br>     information, null is returned. |
+| ArkUI_TouchTestInfo* | Pointer to the [ArkUI_TouchTestInfo](capi-arkui-eventmodule-arkui-touchtestinfo.md) object. If the input parameter is invalid or is not touch test      information, null is returned. |
 
 ### OH_ArkUI_NodeEvent_GetTextEditorOnWillChangeEvent()
 
@@ -1479,7 +1475,7 @@ Obtains the text content change data of the **TextEditor** component in the comp
 
 | Type | Description |
 | -- | -- |
-| [OH_ArkUI_TextEditorChangeEvent*](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) | Returns the pointer to an <b>OH_ArkUI_TextEditorChangeEvent</b> object.<br>     Returns <b>null</b> if the input parameter is invalid or does not represent a text editor change event. |
+| [OH_ArkUI_TextEditorChangeEvent*](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) | Returns the pointer to an <b>OH_ArkUI_TextEditorChangeEvent</b> object.      Returns <b>null</b> if the input parameter is invalid or does not represent a text editor change event. |
 
 ### OH_ArkUI_NodeAdapter_Create()
 
@@ -1534,7 +1530,7 @@ Sets the total number of elements in the specified adapter.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_GetTotalNodeCount()
 
@@ -1563,8 +1559,7 @@ Obtains the total number of elements in the specified adapter.
 ### OH_ArkUI_NodeAdapter_RegisterEventReceiver()
 
 ```c
-int32_t OH_ArkUI_NodeAdapter_RegisterEventReceiver(
-ArkUI_NodeAdapterHandle handle, void* userData, void (*receiver)(ArkUI_NodeAdapterEvent* event))
+int32_t OH_ArkUI_NodeAdapter_RegisterEventReceiver( ArkUI_NodeAdapterHandle handle, void* userData, void (*receiver)(ArkUI_NodeAdapterEvent* event))
 ```
 
 **Description**
@@ -1585,7 +1580,7 @@ Registers an event callback for the adapter.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_UnregisterEventReceiver()
 
@@ -1627,13 +1622,12 @@ Instructs the specified adapter to reload all elements.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_ReloadItem()
 
 ```c
-int32_t OH_ArkUI_NodeAdapter_ReloadItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
+int32_t OH_ArkUI_NodeAdapter_ReloadItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
 ```
 
 **Description**
@@ -1654,13 +1648,12 @@ Instructs the specified adapter to reload certain elements.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_RemoveItem()
 
 ```c
-int32_t OH_ArkUI_NodeAdapter_RemoveItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
+int32_t OH_ArkUI_NodeAdapter_RemoveItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
 ```
 
 **Description**
@@ -1681,13 +1674,12 @@ Instructs the specified adapter to remove certain elements.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_InsertItem()
 
 ```c
-int32_t OH_ArkUI_NodeAdapter_InsertItem(
-ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
+int32_t OH_ArkUI_NodeAdapter_InsertItem( ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)
 ```
 
 **Description**
@@ -1708,7 +1700,7 @@ Instructs the specified adapter to insert certain elements.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_MoveItem()
 
@@ -1734,7 +1726,7 @@ Instructs the specified adapter to move certain elements.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapter_GetAllItems()
 
@@ -1760,7 +1752,7 @@ Obtains all elements stored in the specified adapter.This API returns the pointe
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapterEvent_GetUserData()
 
@@ -1899,7 +1891,7 @@ Sets the component to be added to the specified adapter.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeAdapterEvent_SetNodeId()
 
@@ -1924,7 +1916,7 @@ Sets the component ID to be generated.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeCustomEvent_GetLayoutConstraintInMeasure()
 
@@ -2117,7 +2109,7 @@ Obtains the measurement information of a custom span through a custom component 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>        <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| int32_t | Returns the result code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.         <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_NodeCustomEvent_SetCustomSpanMetrics()
 
@@ -2142,7 +2134,7 @@ Sets the measurement metrics of a custom span through a custom component event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>        <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| int32_t | Returns the result code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.         <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### OH_ArkUI_NodeCustomEvent_GetCustomSpanDrawInfo()
 
@@ -2167,7 +2159,7 @@ Obtains the drawing information of a custom span through a custom component even
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>        Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>        Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>        <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
+| int32_t | Returns the result code.         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.         <br> Possible causes: Parameter verification failed, the parameter should not be nullptr. |
 
 ### ArkUI_NodeContentCallback()
 
@@ -2204,7 +2196,7 @@ register a callback function to a node content.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeContentEvent_GetEventType()
 
@@ -2277,7 +2269,7 @@ Saves custom data on the specified node content.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeContent_GetUserData()
 
@@ -2326,7 +2318,7 @@ Adds an ArkUI component node to the specified **NodeContent** object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is<br>     supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is      supported since API version 22. |
 
 ### OH_ArkUI_NodeContent_RemoveNode()
 
@@ -2351,7 +2343,7 @@ Removes an ArkUI component node from the specified **NodeContent** object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeContent_InsertNode()
 
@@ -2377,7 +2369,7 @@ Inserts an ArkUI component node into a specific position of the specified **Node
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is<br>     supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is      supported since API version 22. |
 
 ### OH_ArkUI_NodeUtils_GetLayoutSize()
 
@@ -2402,7 +2394,7 @@ Get the size of the component layout area.The layout area size does not include 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetLayoutPosition()
 
@@ -2427,7 +2419,7 @@ Obtain the position of the component layout area relative to the parent componen
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetLayoutPositionInWindow()
 
@@ -2452,7 +2444,7 @@ Obtain the position of the component layout area relative to the window.The rela
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetLayoutPositionInScreen()
 
@@ -2477,7 +2469,7 @@ Obtain the position of the component layout area relative to the screen.The rela
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetLayoutPositionInGlobalDisplay()
 
@@ -2502,7 +2494,7 @@ Obtains the offset of a component relative to the global display.The relative po
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetPositionWithTranslateInWindow()
 
@@ -2527,7 +2519,7 @@ Obtain the position of the component in the window, including the properties of 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetPositionWithTranslateInScreen()
 
@@ -2552,7 +2544,7 @@ Obtain the position of the component on the screen, including the attributes of 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_AddCustomProperty()
 
@@ -2617,7 +2609,7 @@ Obtains the value of a custom property of the specified component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetParentInPageTree()
 
@@ -2666,7 +2658,7 @@ Obtains all active child nodes of the specified node. Spans are not counted as c
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetCurrentPageRootNode()
 
@@ -2714,7 +2706,7 @@ Checks whether the specified component is created with C APIs.
 
 | Type | Description |
 | -- | -- |
-| bool | Whether the node is created with the C API. The value true means that the node is created with the C API,<br>      and false means the opposite. |
+| bool | Whether the node is created with the C API. The value true means that the node is created with the C API,       and false means the opposite. |
 
 ### OH_ArkUI_NodeUtils_GetNodeType()
 
@@ -2738,7 +2730,7 @@ Obtains the type of the specified node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Type of the node. Returns -1 if the type is not supported yet. For details about the available types,<br>     see [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype). |
+| int32_t | Type of the node. Returns -1 if the type is not supported yet. For details about the available types,      see [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype). |
 
 ### OH_ArkUI_NodeUtils_GetWindowInfo()
 
@@ -2763,7 +2755,7 @@ Obtains the information about the window to which a node belongs.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
 
 ### OH_ArkUI_NodeUtils_GetFirstChildIndexWithoutExpand()
 
@@ -2788,7 +2780,7 @@ Obtains the index of the first child node of the target node in the tree without
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetLastChildIndexWithoutExpand()
 
@@ -2813,7 +2805,7 @@ Obtains the index of the last child node of the target node in the tree without 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetChildWithExpandMode()
 
@@ -2840,7 +2832,7 @@ Obtains a child node at the specified index using different expansion modes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_List_CloseAllSwipeActions()
 
@@ -2858,7 +2850,7 @@ Collapse the ListItem in its expanded state.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Node objects that need to be registered for events. |
+| rkUI_NodeHandle node | Node objects that need to be registered for events. |
 | void\* userData | Custom event parameters are carried back in the callback parameter when the event is triggered. |
 | void (\*onFinish)(void\* userData) | The callback triggered after the completion of the folding animation. |
 
@@ -2866,7 +2858,7 @@ Collapse the ListItem in its expanded state.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>         [ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) The component does not support this event. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.          [ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) The component does not support this event. |
 
 ### OH_ArkUI_GetContextByNode()
 
@@ -2890,7 +2882,7 @@ Obtain the UIContext pointer to the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) | The UIContext pointer.<br>        If a null pointer is returned, it may be because the node is empty. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) | The UIContext pointer.         If a null pointer is returned, it may be because the node is empty. |
 
 ### OH_ArkUI_RegisterSystemColorModeChangeEvent()
 
@@ -2908,7 +2900,7 @@ The event called when the system color mode changes.Only one system color change
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| rkUI_NodeHandle node | Indicates the target node. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*onColorModeChange)(ArkUI_SystemColorMode colorMode | Callback Events. |
 
@@ -2916,7 +2908,7 @@ The event called when the system color mode changes.Only one system color change
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>        [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>        [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_UnregisterSystemColorModeChangeEvent()
 
@@ -2952,7 +2944,7 @@ The event called when the system font style changes.Only one system font change 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| rkUI_NodeHandle node | Indicates the target node. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*onFontStyleChange)(ArkUI_SystemFontStyleEvent\* event | Callback Events. |
 
@@ -2960,7 +2952,7 @@ The event called when the system font style changes.Only one system font change 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>        [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>        [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_UnregisterSystemFontStyleChangeEvent()
 
@@ -3051,7 +3043,7 @@ Get the node handle by id.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_NodeUtils_MoveTo()
 
@@ -3077,7 +3069,7 @@ Moves a node to a target parent node as a child.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is<br>     supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NODE_IS_ADOPTED](capi-error-code-h.md#arkui_errorcode) if a child node has been accepted. This specification is      supported since API version 22. |
 
 ### OH_ArkUI_NativeModule_InvalidateAttributes()
 
@@ -3101,7 +3093,7 @@ Triggers the node attribute update in this frame.If the attributes of the curren
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_SetCrossLanguageOption()
 
@@ -3126,7 +3118,7 @@ Sets the cross-language option for the target node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeUtils_GetCrossLanguageOption()
 
@@ -3151,7 +3143,7 @@ Obtains the cross-language option of the target node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RegisterLayoutCallbackOnNodeHandle()
 
@@ -3169,7 +3161,7 @@ Registers a callback for node when layout is completed.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| rkUI_NodeHandle node | Indicates the target node. |
 | void\* userData | Indicates the custom data used in onLayoutCompleted callback function. |
 | void (\*onLayoutCompleted)(void\* userData) | Indicates the function when layout completed is callback. |
 
@@ -3177,7 +3169,7 @@ Registers a callback for node when layout is completed.
 
 | Type | Description |
 | -- | -- |
-| int32_t | error code<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
+| int32_t | error code          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
 
 ### OH_ArkUI_RegisterDrawCallbackOnNodeHandle()
 
@@ -3195,7 +3187,7 @@ Registers a callback for node when draw is completed.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| rkUI_NodeHandle node | Indicates the target node. |
 | void\* userData | Indicates the custom data used in onDrawCompleted callback function. |
 | void (\*onDrawCompleted)(void\* userData) | Indicates the function when draw completed is callback. |
 
@@ -3203,7 +3195,7 @@ Registers a callback for node when draw is completed.
 
 | Type | Description |
 | -- | -- |
-| int32_t | error code<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
+| int32_t | error code          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
 
 ### OH_ArkUI_UnregisterLayoutCallbackOnNodeHandle()
 
@@ -3227,7 +3219,7 @@ Unregisters the layout completed callback for node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | error code<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
+| int32_t | error code          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
 
 ### OH_ArkUI_UnregisterDrawCallbackOnNodeHandle()
 
@@ -3251,7 +3243,7 @@ Unregisters the draw completed callback for node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | error code<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
+| int32_t | error code          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter is incorrect. |
 
 ### OH_ArkUI_GetNodeSnapshot()
 
@@ -3277,7 +3269,7 @@ Obtains a snapshot of a given component. If the node is not in the component tre
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>         Returns [ARKUI_ERROR_CODE_INTERNAL_ERROR](capi-error-code-h.md#arkui_errorcode) if the snapshot fails, returning a null pointer.<br>         Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_TIMEOUT](capi-error-code-h.md#arkui_errorcode) if the snapshot operation times out.<br>         Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_MODE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the provided color space or<br>         dynamic range mode is not supported.<br>         Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_AUTO_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the isAuto parameter of the color<br>         space or dynamic range mode is set to true for offscreen node snapshot. |
+| int32_t | Result code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.          Returns [ARKUI_ERROR_CODE_INTERNAL_ERROR](capi-error-code-h.md#arkui_errorcode) if the snapshot fails, returning a null pointer.          Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_TIMEOUT](capi-error-code-h.md#arkui_errorcode) if the snapshot operation times out.          Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_MODE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the provided color space or          dynamic range mode is not supported.          Returns [ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_AUTO_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the isAuto parameter of the color          space or dynamic range mode is set to true for offscreen node snapshot. |
 
 ### OH_ArkUI_GetNodeSnapshotSizeLimitation()
 
@@ -3302,7 +3294,7 @@ Query the size limitation of the component snapshot.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Invalid function parameter. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Invalid function parameter. |
 
 ### OH_ArkUI_NodeUtils_GetPositionToParent()
 
@@ -3327,7 +3319,7 @@ Obtains the offset of a specific node relative to its parent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_AddSupportedUIStates()
 
@@ -3345,7 +3337,7 @@ Adds the UI state style supported by the component. To handle states change effi
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
+| rkUI_NodeHandle node | Target node. |
 | int32_t uiStates | Target UI states to be handled on the node.The combined result of all target UI states can be calculated using the <b>|</b> operator.Example: <b>targetUIStates = ArkUI_UIState::PRESSED | ArkUI_UIState::FOCUSED</b>. |
 | void (statesChangeHandler)(int32_t currentStates | Handler for UI state changes.It rturns the current UI status. The value is the result of combining all current state enum values using the<b>|</b> operator. You can determine the state using the <b>&</b> operator.Example: <b>if (currentStates & ArkUI_UIState::PRESSED == ArkUI_UIState::PRESSED)</b>.However, for checking the normal state, use the equality operator directly.Example: <b>if (currentStates == ArkUI_UIState::NORMAL)</b>. |
 | bool excludeInner | Whether to disable the default state styles. |
@@ -3355,7 +3347,7 @@ Adds the UI state style supported by the component. To handle states change effi
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RemoveSupportedUIStates()
 
@@ -3380,7 +3372,7 @@ Removes registered UI states. When all states registered using **OH_ArkUI_AddSup
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RunTaskInScope()
 
@@ -3398,7 +3390,7 @@ Executes the specified callback in the target UI context. For the implementation
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Pointer to the target UI context. |
+| rkUI_ContextHandle uiContext | Pointer to the target UI context. |
 | void\* userData | Pointer to the user-defined data for processing custom data within the callback function. You areresponsible for ensuring the validity of the data when the custom function is executed. |
 | void(\*callback)(void\* userData) | The custom function. |
 
@@ -3406,7 +3398,7 @@ Executes the specified callback in the target UI context. For the implementation
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the UIContext object is invalid.<br>     <br>Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the UIContext object is invalid.      <br>Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
 
 ### OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId()
 
@@ -3431,7 +3423,7 @@ Obtain a node by its unique ID.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_NodeUtils_GetNodeUniqueId()
 
@@ -3456,7 +3448,7 @@ Obtains the unique ID of the target node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_NativeModule_IsInRenderState()
 
@@ -3481,7 +3473,7 @@ Obtains whether a node is in the render state. If {@link RenderNode} of a node i
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_NativeModule_AdoptChild()
 
@@ -3506,7 +3498,7 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_HAS_PARENT](capi-error-code-h.md#arkui_errorcode) if the adopted node already has a parent node.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_CAN_NOT_BE_ADOPTED](capi-error-code-h.md#arkui_errorcode) if the node cannot be adopted as an affiliated node.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_CAN_NOT_ADOPT_TO](capi-error-code-h.md#arkui_errorcode) if the node cannot adopt other affiliated nodes. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NODE_HAS_PARENT](capi-error-code-h.md#arkui_errorcode) if the adopted node already has a parent node.      <br>Returns [ARKUI_ERROR_CODE_NODE_CAN_NOT_BE_ADOPTED](capi-error-code-h.md#arkui_errorcode) if the node cannot be adopted as an affiliated node.      <br>Returns [ARKUI_ERROR_CODE_NODE_CAN_NOT_ADOPT_TO](capi-error-code-h.md#arkui_errorcode) if the node cannot adopt other affiliated nodes. |
 
 ### OH_ArkUI_NativeModule_RemoveAdoptedChild()
 
@@ -3531,7 +3523,7 @@ Removes a previously-adopted affiliated node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_IS_NOT_IN_ADOPTED_CHILDREN](capi-error-code-h.md#arkui_errorcode) if the node is not an affiliated node<br>     adopted by the target node. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NODE_IS_NOT_IN_ADOPTED_CHILDREN](capi-error-code-h.md#arkui_errorcode) if the node is not an affiliated node      adopted by the target node. |
 
 ### OH_ArkUI_SetForceDarkConfig()
 
@@ -3549,7 +3541,7 @@ Sets the inverse color algorithm for components and instances.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Indicates the context in which the inverse color feature should take effect.If the value is null, the feature applies to the entire application process. |
+| rkUI_ContextHandle uiContext | Indicates the context in which the inverse color feature should take effect.If the value is null, the feature applies to the entire application process. |
 | bool forceDark | Indicates whether the inverse color feature is enabled. |
 | [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype) nodeType | Indicates the component type for which to enable the inverse color feature.If the value is ARKUI_NODE_UNDEFINED, enabling the feature for all components. |
 | uint32_t (\*colorInvertFunc)(uint32_t color) | Indicates the user-defined inverse color algorithm. |
@@ -3558,7 +3550,7 @@ Sets the inverse color algorithm for components and instances.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.<br>         Returns [ARKUI_ERROR_CODE_FORCE_DARK_CONFIG_INVALID](capi-error-code-h.md#arkui_errorcode) if force dark config is invalid. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.          Returns [ARKUI_ERROR_CODE_FORCE_DARK_CONFIG_INVALID](capi-error-code-h.md#arkui_errorcode) if force dark config is invalid. |
 
 ### OH_ArkUI_NativeModule_RegisterCommonEvent()
 
@@ -3576,7 +3568,7 @@ Registers a basic event callback for the target node.Currently, the following ev
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
+| rkUI_NodeHandle node | Target node. |
 | [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | Event type. |
 | void\* userData | User-defined data pointer for processing custom data within the callback function. You areresponsible for ensuring the validity of the data when the custom function is executed. |
 | void (\*callback)(ArkUI_NodeEvent\* event) | User-defined callback function. |
@@ -3585,7 +3577,7 @@ Registers a basic event callback for the target node.Currently, the following ev
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_UNSUPPORTED_EVENT_TYPE](capi-error-code-h.md#arkui_errorcode) if the event type is not supported. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_UNSUPPORTED_EVENT_TYPE](capi-error-code-h.md#arkui_errorcode) if the event type is not supported. |
 
 ### OH_ArkUI_NativeModule_UnregisterCommonEvent()
 
@@ -3610,7 +3602,7 @@ Unregisters the basic event callback for the target node.For details about the s
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_UNSUPPORTED_EVENT_TYPE](capi-error-code-h.md#arkui_errorcode) if the event type is not supported. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_UNSUPPORTED_EVENT_TYPE](capi-error-code-h.md#arkui_errorcode) if the event type is not supported. |
 
 ### OH_ArkUI_NativeModule_RegisterCommonVisibleAreaApproximateChangeEvent()
 
@@ -3628,7 +3620,7 @@ Registers a basic event callback for visible area changes with a constrained cal
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Target node. |
+| rkUI_NodeHandle node | Target node. |
 | float\* ratios | Array of threshold ratios, representing the visible area of the component. |
 | int32_t size | Size of the array of threshold ratios. |
 | float expectedUpdateInterval | Expected calculation interval. |
@@ -3639,7 +3631,7 @@ Registers a basic event callback for visible area changes with a constrained cal
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_UnregisterCommonVisibleAreaApproximateChangeEvent()
 
@@ -3663,7 +3655,7 @@ Unregisters the basic event callback for visible area changes with a constrained
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_ConvertPositionToWindow()
 
@@ -3689,7 +3681,7 @@ Converts the coordinates of a point from the coordinate system of a specified no
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
 
 ### OH_ArkUI_NativeModule_ConvertPositionFromWindow()
 
@@ -3715,7 +3707,7 @@ Converts the coordinates of a point from the current window's coordinate system 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_NODE_NOT_ON_MAIN_TREE](capi-error-code-h.md#arkui_errorcode) if the node is not mounted on the main component tree. |
 
 ### OH_ArkUI_Swiper_FinishAnimation()
 
@@ -3739,7 +3731,7 @@ Stop the animation being executed by the Swiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_PostAsyncUITask()
 
@@ -3757,7 +3749,7 @@ Submits the **asyncUITask** function to a non-UI thread provided by the ArkUI fr
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | Pointer to the UI instance object. |
+| rkUI_ContextHandle context | Pointer to the UI instance object. |
 | void\* asyncUITaskData | Pointer to the user-defined data, which is passed as the input parameter of **asyncUITaskand **onFinish**. A null pointer is allowed. |
 | void (\*asyncUITask)(void\* asyncUITaskData) | Function executed in the non-UI thread. |
 | void (\*onFinish)(void\* asyncUITaskData) | Function executed on the UI thread after **asyncUITask** is completed. A null pointer is allowed. |
@@ -3766,7 +3758,7 @@ Submits the **asyncUITask** function to a non-UI thread provided by the ArkUI fr
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the context object is invalid, or asyncUITask is a<br>     null pointer. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the context object is invalid, or asyncUITask is a      null pointer. |
 
 ### OH_ArkUI_PostUITask()
 
@@ -3784,7 +3776,7 @@ Submits the **task** function to the UI thread for execution.This is suitable fo
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | Pointer to the UI instance object. |
+| rkUI_ContextHandle context | Pointer to the UI instance object. |
 | void\* taskData | Pointer to the user-defined data, which is passed as the input parameter of **task**. A null pointeris allowed. |
 | void (\*task)(void\* taskData) | Function executed in the UI thread. |
 
@@ -3792,7 +3784,7 @@ Submits the **task** function to the UI thread for execution.This is suitable fo
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the context object is invalid, or task is a null<br>     pointer. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the context object is invalid, or task is a null      pointer. |
 
 ### OH_ArkUI_NativeModule_AtomicServiceMenuBarSetVisible()
 
@@ -3817,7 +3809,7 @@ set the visiblity of the menubar.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.<br>          for example, 1.uiContext is nullptr 2.can not get container by uiContext.<br>          3. the uiContext is not belong to atomic service. |
+| int32_t | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.           for example, 1.uiContext is nullptr 2.can not get container by uiContext.           3. the uiContext is not belong to atomic service. |
 
 ### OH_ArkUI_NativeModule_RegisterCommonAreaApproximateChangeEvent()
 
@@ -3835,7 +3827,7 @@ Registers a callback for listening for component dimension and area changes.This
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
+| rkUI_NodeHandle node | Pointer to [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md). |
 | float expectedUpdateInterval | Expected calculation interval, in milliseconds. |
 | void\* userData | Pointer to custom data. |
 | void (\*callback)(ArkUI_NodeEvent\* event) | Event callback. |
@@ -3844,7 +3836,7 @@ Registers a callback for listening for component dimension and area changes.This
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code. <br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. <br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code. \n          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. \n          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. \n |
 
 ### OH_ArkUI_NativeModule_UnregisterCommonAreaApproximateChangeEvent()
 
@@ -3868,7 +3860,7 @@ Unregisters the callback bound to the dimensions and area changes of a component
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code. <br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. <br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code. \n          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. \n          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. \n |
 
 ### OH_ArkUI_PostUITaskAndWait()
 
@@ -3886,7 +3878,7 @@ Post UI task to UI thread and wait until UI task finished.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | UIContext pointer of the page where the UI task located. |
+| rkUI_ContextHandle context | UIContext pointer of the page where the UI task located. |
 | void\* taskData | Parameter of task. |
 | void (\*task)(void\* taskData) | Function executed by UI thread. |
 
@@ -3894,7 +3886,7 @@ Post UI task to UI thread and wait until UI task finished.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if context or task is nullptr. |
+| int32_t | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if context or task is nullptr. |
 
 ### OH_ArkUI_Swiper_StartFakeDrag()
 
@@ -3919,7 +3911,7 @@ Start a fake drag of the Swiper node.Call OH_ArkUI_Swiper_FakeDragBy to simulate
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_Swiper_FakeDragBy()
 
@@ -3945,7 +3937,7 @@ Fake drag by an offset of the Swiper node.The OH_ArkUI_Swiper_StartFakeDrag must
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_Swiper_StopFakeDrag()
 
@@ -3970,7 +3962,7 @@ Stop a fake drag of the Swiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_Swiper_IsFakeDragging()
 
@@ -3995,7 +3987,7 @@ Get the fake drag state of the Swiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_Swiper_ShowPrevious()
 
@@ -4019,7 +4011,7 @@ Show the previous page of the Swiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_Swiper_ShowNext()
 
@@ -4043,7 +4035,7 @@ Show the next page of the Swiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_ArcSwiper_ShowPrevious()
 
@@ -4067,7 +4059,7 @@ Show the previous page of the ArcSwiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_ArcSwiper_ShowNext()
 
@@ -4091,7 +4083,7 @@ Show the next page of the ArcSwiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_ArcSwiper_FinishAnimation()
 
@@ -4115,7 +4107,7 @@ Stop the animation executed by the ArcSwiper node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
+| int32_t | Error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception. |
 
 ### OH_ArkUI_NativeModule_GetPageRootNodeHandleByContext()
 
@@ -4140,7 +4132,7 @@ Obtains the root node of the page of a specified instance.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if an instance error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if an instance error occurs.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo()
 
@@ -4164,7 +4156,7 @@ Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_GestureCollectInterceptInfo*](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | Returns the pointer to the <b>ArkUI_GestureCollectInterceptInfo</b> object.<br>         It is valid only during callback and does not need to be released.<br>         Returns <b>null</b> if the input parameter is invalid or the<br>         information is not gesture collection interception information. |
+| [ArkUI_GestureCollectInterceptInfo*](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | Returns the pointer to the <b>ArkUI_GestureCollectInterceptInfo</b> object.          It is valid only during callback and does not need to be released.          Returns <b>null</b> if the input parameter is invalid or the          information is not gesture collection interception information. |
 
 ### OH_ArkUI_NativeModule_SetChildMountPolicy()
 
@@ -4189,7 +4181,7 @@ Set the subnode mounting policy of the target node.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.<br>     <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 ### OH_ArkUI_NativeModule_GetChildMountPolicy()
 
@@ -4214,6 +4206,6 @@ Get the current child mount policy of the specified node.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.<br>     <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 

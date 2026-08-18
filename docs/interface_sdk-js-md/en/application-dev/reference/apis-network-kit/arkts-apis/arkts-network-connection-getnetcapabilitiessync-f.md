@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the network capability information of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities--><!--Device-connection-function getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities-End-->
 
@@ -28,13 +28,13 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#netcapab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NetCapabilities](arkts-network-connection-netcapabilities-i.md) | Returns the connection capabilities of a network. |
+| [NetCapabilities](arkts-network-connection-netcapabilities-i.md) | Network capability set. |
 
 **Error codes:**
 

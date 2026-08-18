@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -11,7 +12,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。 |
+| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。 |
 
 ### 枚举
 

@@ -2,7 +2,7 @@
 
 Material that is not affected by lighting. The shading value of the material is related only to the base color and is irrelevant to lighting conditions. It inherits from Material.
 
-**Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#material)
+**Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **Since:** 23
 

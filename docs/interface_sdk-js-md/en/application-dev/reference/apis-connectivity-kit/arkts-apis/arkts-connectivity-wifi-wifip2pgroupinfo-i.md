@@ -6,7 +6,7 @@ P2P group information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#wifip2pgroupinfo)
+**Substitutes:** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)
 
 <!--Device-wifi-interface WifiP2pGroupInfo--><!--Device-wifi-interface WifiP2pGroupInfo-End-->
 

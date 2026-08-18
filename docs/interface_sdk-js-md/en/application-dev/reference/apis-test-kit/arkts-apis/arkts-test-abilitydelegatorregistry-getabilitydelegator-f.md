@@ -12,7 +12,7 @@ import { abilityDelegatorRegistry } from '@kit.TestKit';
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#abilitydelegator) object.
+Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object.
 
 **Since:** 23
 

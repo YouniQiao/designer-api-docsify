@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## decodeMms
@@ -26,7 +27,7 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mmsFilePathName | string \| Array&lt;int&gt; | 是 | 彩信文件路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | 是 | 获取｛@code MmsInformation｝的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | 是 | 获取｛@code MmsInformation｝的回调函数。 |
 
 **错误码：**
 

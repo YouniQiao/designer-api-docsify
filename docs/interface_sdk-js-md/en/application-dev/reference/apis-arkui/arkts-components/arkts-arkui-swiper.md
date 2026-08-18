@@ -30,21 +30,36 @@ Creates a **Swiper** component.
 
 ## Summary
 
-- [ArrowStyle](arkts-arkui-arrowstyle-i.md)
-- [AutoPlayOptions](arkts-arkui-autoplayoptions-i.md)
-- [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md)
-- [IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)
-- [IndicatorStyle](arkts-arkui-indicatorstyle-i.md)
-- [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md)
-- [SwiperAutoFill](arkts-arkui-swiperautofill-i.md)
-- [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md)
-- [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)
-- [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md)
-- [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md)
-- [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md)
-- [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md)
-- [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md)
-- [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md)
-- [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md)
-- [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md)
-- [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ArrowStyle](arkts-arkui-arrowstyle-i.md) | Describes the left and right arrow attributes. |
+| [AutoPlayOptions](arkts-arkui-autoplayoptions-i.md) | Defines the properties for controlling the automatic playback behavior. |
+| [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | Describes the configuration options for child components to be preloaded. |
+| [IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md) | Set the indicator item's icon for a specified index. |
+| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Defines the style of the navigation indicator. |
+| [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Describes the animation information of the **Swiper** component. |
+| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | Describes the auto-fill attribute. |
+| [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | Provides the information about the custom page transition animation. |
+| [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing. |
+| [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | Triggered during the swipe action of the **Swiper** component. For details about the parameters, see [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md). |
+| [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) | Defines the callback triggered when the **Swiper** component is about to scroll. The return value indicates whether the scroll action is allowed. |
+| [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | Defines the callback triggered when the page transition animation ends. |
+| [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | Defines the callback triggered when the page transition animation starts. |
+| [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | Defines the callback triggered on a frame-by-frame basis when the page is turned by a swipe. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) | Enumerates the animation mode for moving to a specific page in the **Swiper** component. |
+| [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Enumerates the modes in which elements are displayed along the main axis. |
+| [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md) | Enumerates the nested scrolling modes of the **Swiper** component and its parent container. |
+

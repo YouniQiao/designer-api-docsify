@@ -2,7 +2,7 @@
 
 A custom geometry type that inherits from GeometryDefinition.
 
-**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#geometrydefinition)
+**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
 **Since:** 23
 

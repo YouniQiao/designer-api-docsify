@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## setSecurityLabelSync
@@ -11,7 +12,7 @@
 function setSecurityLabelSync(path: string, type: DataLevel): void
 ```
 
-以同步方法设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。
+以同步方法设置文件或目录的数据安全等级，用于实现文件的分级管理和访问控制。
 
 **起始版本：** 23
 
@@ -23,8 +24,8 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件路径。 |
-| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。<br>注意：数据安全等级仅可由低向高或同级设置。 |
 
 **错误码：**
 

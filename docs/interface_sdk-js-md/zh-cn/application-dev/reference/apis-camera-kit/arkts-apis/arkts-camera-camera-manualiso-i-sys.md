@@ -2,7 +2,7 @@
 
 ManualIso object.
 
-**继承/实现关系：** ManualIso extends [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md#manualisoquery系统接口)
+**继承/实现关系：** ManualIso extends [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ ManualIso object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getIso

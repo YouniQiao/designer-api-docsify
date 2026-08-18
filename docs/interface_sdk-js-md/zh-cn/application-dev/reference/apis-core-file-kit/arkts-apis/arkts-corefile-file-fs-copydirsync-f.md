@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## copyDirSync
@@ -25,7 +28,7 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| mode | number | 否 | 复制模式，默认值为0。<br/>- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录 下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#conflictfiles)&gt;形式提供。<br/>- mode为1，文件级别强制覆盖。目 标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
+| mode | number | 否 | 复制模式，默认值为0。<br/>- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录 下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;形式提供。<br/>- mode为1，文件级别强制覆盖。目 标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
 
 **错误码：**
 

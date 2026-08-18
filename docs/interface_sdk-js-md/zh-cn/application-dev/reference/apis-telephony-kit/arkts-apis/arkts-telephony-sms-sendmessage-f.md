@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## sendMessage
@@ -17,7 +18,7 @@ function sendMessage(options: SendMessageOptions): void
 
 **废弃版本：** 10
 
-**替代接口：** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage)
+**替代接口：** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md)
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -29,7 +30,7 @@ function sendMessage(options: SendMessageOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions)。 |
+| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md)。 |
 
 **错误码：**
 

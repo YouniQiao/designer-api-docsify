@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)实例，图片资源加载能力。
 
 **起始版本：** 10
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -45,7 +46,7 @@ getPixelMap(): image.PixelMap
 
 **示例**
 
-示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#layereddrawabledescriptor)中的示例代码。
+示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)中的示例代码。
 
 ## invalidate
 
@@ -53,7 +54,7 @@ getPixelMap(): image.PixelMap
 invalidate(): void
 ```
 
-重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#picturedrawabledescriptor)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触 发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -120,7 +121,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 **示例**
 
-示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)中的示例代码。
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
 
 ## loadSync
 
@@ -153,7 +154,7 @@ loadSync(): DrawableDescriptorLoadedResult
 
 **示例**
 
-示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)中的示例代码。
+示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
 
 ## release
 

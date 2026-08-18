@@ -4,13 +4,12 @@
 
 ```TypeScript
 import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

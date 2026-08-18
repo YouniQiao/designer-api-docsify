@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function setPacUrl(pacUrl: string): void
 ```
 
-Set the URL pacUrl of the current PAC script. To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission.
+Sets the URL of the system-level Proxy Auto Config (PAC) script. > **NOTE：**> > Only the script address can be set. The proxy function cannot be parsed or enabled. To set the script and enable > the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
 
-**Since:** 26.0.0
+**Since:** 15
 
 **Required permissions:** ohos.permission.SET_PAC_URL
 
@@ -26,7 +26,7 @@ Set the URL pacUrl of the current PAC script. To invoke this method, you must ha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pacUrl | string | Yes | Indicates the URL of the current PAC script. |
+| pacUrl | string | Yes | URL of the PAC script. Note that this URL will not be verified by the API. |
 
 **Error codes:**
 

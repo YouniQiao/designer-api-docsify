@@ -1,6 +1,6 @@
 # WebMessageType
 
-Enumerates the data types supported by the [WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#webmessageport) API.
+Enumerates the data types supported by the [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) API.
 
 **Since:** 10
 

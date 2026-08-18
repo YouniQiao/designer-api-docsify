@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## requestOverflow
@@ -11,7 +12,7 @@
 function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): Promise<void>
 ```
 
-卡片提供方发起互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise 异步回调。其中相关的方法为[cancelOverflow()](arkts-form-formprovider-canceloverflow-f.md#canceloverflow)：取消互动卡片动效请求，用于取消已发起的动效。 > **说明：** > > 1. 该接口在省电模式场景下不可使用，会报16501000错误码。 > > 2. 当设备热档位进入HOT场景并且没有点击事件的场景下，该接口会报16501000错误码；当热档位进入OVERHEATED时，任何情况下都会报16501000错误码。热档位信息具体可参考 > [热档位信息](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md#thermallevel)。
+卡片提供方发起互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise 异步回调。其中相关的方法为[cancelOverflow()](arkts-form-formprovider-canceloverflow-f.md)：取消互动卡片动效请求，用于取消已发起的动效。 > **说明：** > > 1. 该接口在省电模式场景下不可使用，会报16501000错误码。 > > 2. 当设备热档位进入HOT场景并且没有点击事件的场景下，该接口会报16501000错误码；当热档位进入OVERHEATED时，任何情况下都会报16501000错误码。热档位信息具体可参考 > [热档位信息](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md)。
 
 **起始版本：** 23
 

@@ -6,7 +6,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md#deviceclass)
+**Substitutes:** [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md)
 
 <!--Device-bluetooth-interface DeviceClass--><!--Device-bluetooth-interface DeviceClass-End-->
 

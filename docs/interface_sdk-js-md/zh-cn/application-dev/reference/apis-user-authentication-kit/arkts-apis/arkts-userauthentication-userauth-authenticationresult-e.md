@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#userauthresultcode)
+**替代接口：** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
 
 <!--Device-userAuth-export enum AuthenticationResult--><!--Device-userAuth-export enum AuthenticationResult-End-->
 
@@ -24,7 +24,7 @@ NO_SUPPORT = -1
 
 **废弃版本：** 8
 
-**替代接口：** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#typenotsupport)
+**替代接口：** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#type_not_support)
 
 <!--Device-AuthenticationResult-NO_SUPPORT = -1--><!--Device-AuthenticationResult-NO_SUPPORT = -1-End-->
 
@@ -148,7 +148,7 @@ INVALID_PARAMETERS = 6
 
 **废弃版本：** 8
 
-**替代接口：** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalidparameters)
+**替代接口：** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
 
 <!--Device-AuthenticationResult-INVALID_PARAMETERS = 6--><!--Device-AuthenticationResult-INVALID_PARAMETERS = 6-End-->
 
@@ -184,7 +184,7 @@ NOT_ENROLLED = 8
 
 **废弃版本：** 8
 
-**替代接口：** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#notenrolled)
+**替代接口：** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
 
 <!--Device-AuthenticationResult-NOT_ENROLLED = 8--><!--Device-AuthenticationResult-NOT_ENROLLED = 8-End-->
 
@@ -202,7 +202,7 @@ GENERAL_ERROR = 100
 
 **废弃版本：** 8
 
-**替代接口：** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#generalerror)
+**替代接口：** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#general_error)
 
 <!--Device-AuthenticationResult-GENERAL_ERROR = 100--><!--Device-AuthenticationResult-GENERAL_ERROR = 100-End-->
 

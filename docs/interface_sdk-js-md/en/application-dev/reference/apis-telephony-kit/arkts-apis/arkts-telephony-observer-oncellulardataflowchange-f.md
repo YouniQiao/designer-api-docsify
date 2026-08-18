@@ -24,7 +24,7 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ Callback when the uplink and downlink data flow state of cellular data services 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
 
 **Error codes:**
 

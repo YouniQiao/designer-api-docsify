@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { InputMethodExtensionContext } from '@kit.IMEKit';
-import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
 ## Summary
@@ -16,7 +15,7 @@ import { InputMethodExtensionContext } from '@kit.IMEKit';
 | [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md) | The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. > **NOTE：**> > - The APIs of this module can be used only in the stage model. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

@@ -1,6 +1,6 @@
 # TypeError
 
-**Inheritance/Implementation:** TypeError extends [Error](arkts-na-lib-es5-error-i.md#error)
+**Inheritance/Implementation:** TypeError extends [Error](arkts-na-lib-es5-error-i.md)
 
 **Since:** -1
 

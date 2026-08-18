@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## off_cachedGnssLocationsReporting
+## off_cachedGnssLocationsReporting('cachedGnssLocationsReporting')
 
 ```TypeScript
 function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void
@@ -31,7 +31,7 @@ Unsubscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
 
 **Examples**
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getShortcutInfoByAbility

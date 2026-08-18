@@ -12,7 +12,7 @@ import { ethernet } from '@kit.NetworkKit';
 function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>
 ```
 
-Get the ethernet mac address list.
+Obtains the device information (such as the vendor name, product name, and maximum connection rate) of the local Ethernet NIC. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ Get the ethernet mac address list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; | the promise returned by the function. |
+| Promise&lt;Array&lt;[EthernetDeviceInfos](arkts-network-ethernet-ethernetdeviceinfos-i-sys.md)&gt;&gt; | Promise used to return the result. If the operation is successful, the Ethernet device information list is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

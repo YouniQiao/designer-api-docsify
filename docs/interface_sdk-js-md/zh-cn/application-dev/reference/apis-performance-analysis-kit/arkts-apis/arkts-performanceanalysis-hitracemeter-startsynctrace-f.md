@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## startSyncTrace
@@ -11,7 +12,7 @@
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-标记一个同步跟踪耗时任务的开始，分级控制跟踪输出。适用于需要跟踪同步代码块执行耗时的场景，能够帮助开发者定位同步操作的耗时问题，优化应用响应 速度。具体示例可参考[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace)中的示例。
+标记一个同步跟踪耗时任务的开始，分级控制跟踪输出。适用于需要跟踪同步代码块执行耗时的场景，能够帮助开发者定位同步操作的耗时问题，优化应用响应 速度。具体示例可参考[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)中的示例。
 
 **起始版本：** 23
 

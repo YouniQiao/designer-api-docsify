@@ -1,8 +1,8 @@
 # PageIntentDecoratorInfo
 
-PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo) and describes the parameters supported by the @InsightIntentPage decorator, such as the name of [NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) of the target page.
+PageIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and describes the parameters supported by the @InsightIntentPage decorator, such as the name of [NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) of the target page.
 
-**Inheritance/Implementation:** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
+**Inheritance/Implementation:** PageIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
 **Since:** 20
 

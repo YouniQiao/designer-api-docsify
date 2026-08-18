@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getValidReminders
@@ -27,7 +29,7 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | 是 | 异步回调，返回当前应用已设置的所有有效（未过期）的提醒。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | 是 | 异步回调，返回当前应用已设置的所有有效（未过期）的提醒。 |
 
 **示例**
 

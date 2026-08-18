@@ -4,9 +4,9 @@
 export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy
 ```
 
-HTTP proxy configuration. system: means that use system proxy configuration. no-proxy: means do not use proxy. object of @type {connection.HttpProxy} means providing custom proxy settings
+Represents the HTTP proxy configuration.
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy--><!--Device-webSocket-export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy-End-->
 
@@ -14,7 +14,7 @@ HTTP proxy configuration. system: means that use system proxy configuration. no-
 
 | Type | Description |
 | --- | --- |
-| 'system' |  |
-| 'no-proxy' |  |
-| HttpProxy |  |
+| 'system' | The default network proxy is used. |
+| 'no-proxy' | No network proxy is used. |
+| HttpProxy | The specified network proxy is used. |
 

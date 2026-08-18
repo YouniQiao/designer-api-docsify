@@ -1,8 +1,8 @@
 # AxisEvent
 
-轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 17
 
@@ -21,7 +21,7 @@
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+获取鼠标光标位置相对于当前组件实时位置的左上角坐标。
 
 **起始版本：** 26.0.0
 
@@ -37,7 +37,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| Coordinate2D | 鼠标光标位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -247,7 +247,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
+鼠标光标在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 

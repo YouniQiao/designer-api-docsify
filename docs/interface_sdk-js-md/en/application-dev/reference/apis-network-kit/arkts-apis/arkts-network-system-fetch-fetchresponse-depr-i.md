@@ -1,6 +1,6 @@
 # FetchResponse
 
-This module provides the Fetch Response.
+**Table 2** Mapping between responseType and data in success callback | responseType | data | Description| | -------- | -------- | -------- | | N/A| string | When the type in the header returned by the server is **text/\***, **application/json**, **application/javascript**, or **application/xml**, the value is the text content.| | text | string | Text content.| | json | Object | A JSON object.|
 
 **Since:** 3
 
@@ -35,7 +35,7 @@ Server status code.
 data: string | object
 ```
 
-Data returned by the success function.
+The type of the returned data is determined by **responseType**. For details, see the mapping between **responseType** and **data** in **success** callback.
 
 **Type:** string \| object
 

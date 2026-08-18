@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## connectSystemChannel

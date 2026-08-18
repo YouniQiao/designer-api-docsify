@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -36,7 +33,7 @@ Sends an accessibility event. The event will be distributed to registered access
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | EventInfo | Yes | Accessibility event object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 

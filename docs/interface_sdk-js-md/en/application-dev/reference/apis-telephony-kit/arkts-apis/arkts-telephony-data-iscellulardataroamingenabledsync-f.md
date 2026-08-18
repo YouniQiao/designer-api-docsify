@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function isCellularDataRoamingEnabledSync(slotId: int): boolean
 ```
 
-Check whether roaming is enabled for cellular data services.
+Checks whether roaming is enabled for the cellular data service. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,21 +26,21 @@ Check whether roaming is enabled for cellular data services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Indicates the ID of a card slot. The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns { |
+| boolean | Whether roaming is enabled for the cellular data service. <br>**true**: Roaming is enabled for the cellular data service. <br>**false**: Roaming is disabled for the cellular data service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameters types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |

@@ -58,5 +58,10 @@ Rect(
 
 ## 汇总
 
-- [RectOptions](arkts-arkui-rectoptions-i.md)
-- [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [RectOptions](arkts-arkui-rectoptions-i.md) | 用于描述矩形绘制组件的绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | 用于描述圆角矩形绘制组件的绘制属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

@@ -1,6 +1,6 @@
 # ProxyMode (System API)
 
-Enumerates proxy modes.
+Enumerates the proxy modes. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates proxy modes.
 PROXY_MODE_OFF = 0
 ```
 
-Off proxy mode.
+Proxy disabled.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Off proxy mode.
 PROXY_MODE_AUTO = 1
 ```
 
-Auto proxy mode.
+Auto mode.
 
 **Since:** 20
 

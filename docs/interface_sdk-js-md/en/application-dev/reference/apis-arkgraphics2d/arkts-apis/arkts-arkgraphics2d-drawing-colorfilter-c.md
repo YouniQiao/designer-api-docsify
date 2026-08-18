@@ -12,7 +12,6 @@ Defines a color filter. > **NOTE：**> > - This module uses the physical pixel u
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendModeColorFilter

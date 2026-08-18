@@ -20,14 +20,14 @@ import { identifier } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid) | Obtains the OAID. This API uses an asynchronous callback to return the result. > **NOTE：**> > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
-| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid) | Obtains the OAID. This API uses a promise to return the result. > **NOTE：**> > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses an asynchronous callback to return the result. > **NOTE：**> > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses a promise to return the result. > **NOTE：**> > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid) | Resets the OAID. |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | Resets the OAID. |
 <!--DelEnd-->
 

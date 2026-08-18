@@ -24,4 +24,9 @@ ImageAnimator()
 
 ## 汇总
 
-- [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) | 图片帧信息集合。 |
+

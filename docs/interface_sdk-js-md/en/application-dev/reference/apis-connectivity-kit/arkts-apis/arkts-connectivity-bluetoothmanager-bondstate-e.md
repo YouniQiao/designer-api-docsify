@@ -6,7 +6,7 @@ The enum of bond state.
 
 **Deprecated since:** 10
 
-**Substitutes:** [BondState](arkts-connectivity-connection-bondstate-e.md#bondstate)
+**Substitutes:** [BondState](arkts-connectivity-connection-bondstate-e.md)
 
 <!--Device-bluetoothManager-enum BondState--><!--Device-bluetoothManager-enum BondState-End-->
 
@@ -24,7 +24,7 @@ Indicate the bond state is invalid
 
 **Deprecated since:** 10
 
-**Substitutes:** [BOND_STATE_INVALID](arkts-connectivity-connection-bondstate-e.md#bondstateinvalid)
+**Substitutes:** [BOND_STATE_INVALID](arkts-connectivity-connection-bondstate-e.md#bond_state_invalid)
 
 <!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
 
@@ -42,7 +42,7 @@ Indicate the bond state is bonding
 
 **Deprecated since:** 10
 
-**Substitutes:** [BOND_STATE_BONDING](arkts-connectivity-connection-bondstate-e.md#bondstatebonding)
+**Substitutes:** [BOND_STATE_BONDING](arkts-connectivity-connection-bondstate-e.md#bond_state_bonding)
 
 <!--Device-BondState-BOND_STATE_BONDING = 1--><!--Device-BondState-BOND_STATE_BONDING = 1-End-->
 
@@ -60,7 +60,7 @@ Indicate the bond state is bonded
 
 **Deprecated since:** 10
 
-**Substitutes:** [BOND_STATE_BONDED](arkts-connectivity-connection-bondstate-e.md#bondstatebonded)
+**Substitutes:** [BOND_STATE_BONDED](arkts-connectivity-connection-bondstate-e.md#bond_state_bonded)
 
 <!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
 

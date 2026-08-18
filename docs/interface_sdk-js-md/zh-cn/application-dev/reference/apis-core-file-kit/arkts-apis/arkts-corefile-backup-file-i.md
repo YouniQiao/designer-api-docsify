@@ -2,7 +2,7 @@
 
 文件对象，包含文件元数据、文件数据和清单文件信息。 用于客户端与备份服务进行IPC。
 
-**继承/实现关系：** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md#filemeta系统接口), [FileData](arkts-corefile-backup-filedata-i-sys.md#filedata系统接口), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#filemanifestdata系统接口)
+**继承/实现关系：** File extends [FileMeta](arkts-corefile-backup-filemeta-i-sys.md), [FileData](arkts-corefile-backup-filedata-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,5 +15,6 @@
 ## 导入模块
 
 ```TypeScript
+import { backup } from '@kit.CoreFileKit';
 ```
 

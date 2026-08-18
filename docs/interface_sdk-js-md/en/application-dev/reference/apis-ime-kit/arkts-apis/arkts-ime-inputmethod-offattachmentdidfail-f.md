@@ -4,16 +4,10 @@
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
@@ -35,7 +29,7 @@ Unsubscribe the attachment failure event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
 
 **Examples**
 

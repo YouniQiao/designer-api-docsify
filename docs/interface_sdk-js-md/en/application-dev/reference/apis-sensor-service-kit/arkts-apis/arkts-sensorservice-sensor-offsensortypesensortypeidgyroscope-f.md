@@ -18,7 +18,7 @@ Unsubscribes from sensor data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#offsensoridcolor)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_sensoridcolor)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -31,5 +31,5 @@ Unsubscribes from sensor data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_GYROSCOPE**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GyroscopeResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 

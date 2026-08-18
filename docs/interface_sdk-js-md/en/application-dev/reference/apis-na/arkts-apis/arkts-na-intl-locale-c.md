@@ -2,7 +2,7 @@
 
 Locale class for locale-sensitive operations.
 
-**Inheritance/Implementation:** Locale implements [LocaleOptions](arkts-na-intl-localeoptions-i.md#localeoptions)
+**Inheritance/Implementation:** Locale implements [LocaleOptions](arkts-na-intl-localeoptions-i.md)
 
 **Since:** 26.0.0
 

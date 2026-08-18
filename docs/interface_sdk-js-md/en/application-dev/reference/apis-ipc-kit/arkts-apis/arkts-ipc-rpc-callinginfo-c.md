@@ -96,8 +96,6 @@ Local device ID. This parameter is valid only in RPC scenarios. localDeviceId is
 
 **Type:** string
 
-**Default:** @syscap SystemCapability.Communication.IPC.Core @FaAndStageModel
-
 **Since:** 23
 
 <!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
@@ -113,8 +111,6 @@ readonly remoteDeviceId: string
 Remote device ID. This parameter is valid only in RPC scenarios. remoteDeviceId is valid only when the isLocalCalling is false. Otherwise remoteDeviceId is invalid.
 
 **Type:** string
-
-**Default:** @syscap SystemCapability.Communication.IPC.Core @FaAndStageModel
 
 **Since:** 23
 

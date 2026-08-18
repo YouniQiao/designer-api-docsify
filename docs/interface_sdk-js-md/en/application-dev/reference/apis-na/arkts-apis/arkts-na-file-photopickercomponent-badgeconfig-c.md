@@ -23,7 +23,7 @@ public badgeType?: BadgeType
 
 The type of the special badge.
 
-**Type:** [BadgeType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-badgetype-e.md)
+**Type:** [BadgeType](arkts-na-file-photopickercomponent-badgetype-e.md)
 
 **Since:** 26.1.0
 

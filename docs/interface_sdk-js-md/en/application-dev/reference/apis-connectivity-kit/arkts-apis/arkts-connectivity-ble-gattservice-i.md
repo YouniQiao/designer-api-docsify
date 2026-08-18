@@ -20,7 +20,7 @@ import { ble } from '@kit.ConnectivityKit';
 characteristics: Array<BLECharacteristic>
 ```
 
-The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#blecharacteristic) list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 

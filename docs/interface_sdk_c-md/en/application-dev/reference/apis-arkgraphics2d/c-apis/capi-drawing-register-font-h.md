@@ -54,7 +54,7 @@ Registers a custom font with the font manager. The supported font file formats a
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Result code.<br>     <br>Returns 0 if the operation is successful.<br>     <br>Returns 1 if the file does not exist.<br>     <br>Returns 2 if opening the file fails.<br>     <br>Returns 3 if reading the file fails.<br>     <br>Returns 4 if seeking the file fails.<br>     <br>Returns 5 if obtaining the file size fails.<br>     <br>Returns 8 if fontCollection is NULL.<br>     <br>Returns 9 if the file is corrupted. |
+| uint32_t | Result code.      <br>Returns 0 if the operation is successful.      <br>Returns 1 if the file does not exist.      <br>Returns 2 if opening the file fails.      <br>Returns 3 if reading the file fails.      <br>Returns 4 if seeking the file fails.      <br>Returns 5 if obtaining the file size fails.      <br>Returns 8 if fontCollection is NULL.      <br>Returns 9 if the file is corrupted. |
 
 ### OH_Drawing_RegisterFontBuffer()
 
@@ -83,7 +83,7 @@ Registers a font buffer in the font manager, supporting data read from ttf and o
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Result code.<br>     <br>Returns 0 if the operation is successful.<br>     <br>Returns 6 if fontBuffer is NULL.<br>     <br>Returns 7 if the buffer size is zero.<br>     <br>Returns 8 if fontCollection is NULL. |
+| uint32_t | Result code.      <br>Returns 0 if the operation is successful.      <br>Returns 6 if fontBuffer is NULL.      <br>Returns 7 if the buffer size is zero.      <br>Returns 8 if fontCollection is NULL. |
 
 ### OH_Drawing_RegisterFontByIndex()
 
@@ -110,7 +110,7 @@ Registers a custom font using a ttc/otc file, with the index parameter specifyin
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Result code. 0 indicates function execution is successful, 1 indicates file does not exist, 2 indicates file<br>     opening failure, 3 indicates file reading failure, 4 indicates file seeking failure, 5 indicates size obtaining<br>     failure, 8 indicates fontCollection is NULL, and 9 indicates file corruption. |
+| uint32_t | Result code. 0 indicates function execution is successful, 1 indicates file does not exist, 2 indicates file      opening failure, 3 indicates file reading failure, 4 indicates file seeking failure, 5 indicates size obtaining      failure, 8 indicates fontCollection is NULL, and 9 indicates file corruption. |
 
 ### OH_Drawing_RegisterFontBufferByIndex()
 
@@ -138,7 +138,7 @@ Registers a font using the font buffer of a TTC/OTC file.
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Result code.<br>     <br>Returns 0 the function is executed successfully.<br>     <br>Returns 6 if fontBuffer is NULL.<br>     <br>Returns 7 if the buffer size is zero.<br>     <br>Returns 8 if fontCollection is NULL.<br>     <br>Returns 9 if the file is corrupted. |
+| uint32_t | Result code.      <br>Returns 0 the function is executed successfully.      <br>Returns 6 if fontBuffer is NULL.      <br>Returns 7 if the buffer size is zero.      <br>Returns 8 if fontCollection is NULL.      <br>Returns 9 if the file is corrupted. |
 
 ### OH_Drawing_UnregisterFont()
 
@@ -165,7 +165,7 @@ Unregisters a custom font by font name.<br>Unregistering a font that is currentl
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Result code. Returns 0 if the function is executed successfully, 8 if the input parameter is invalid, and 1<br>     if the unregistration fails. |
+| uint32_t | Result code. Returns 0 if the function is executed successfully, 8 if the input parameter is invalid, and 1      if the unregistration fails. |
 
 ### OH_Drawing_IsFontSupportedFromPath()
 

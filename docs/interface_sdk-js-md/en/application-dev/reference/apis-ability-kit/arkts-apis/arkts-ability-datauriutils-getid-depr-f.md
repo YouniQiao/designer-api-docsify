@@ -17,7 +17,7 @@ Obtains the ID attached to the end of a given URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getId](arkts-ability-datauriutils-getid-f.md#getid)
+**Substitutes:** [getId](arkts-ability-datauriutils-getid-f.md)
 
 <!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
 

@@ -16,7 +16,7 @@ NavDestination自定义动画接口。
 curve?: Curve
 ```
 
-动画的曲线类型，默认值为[Curve.EaseInOut](../../apis-arkui/arkts-apis/arkts-arkui-curve-e.md#curve)。
+动画的曲线类型，默认值为[Curve.EaseInOut](../../apis-arkui/arkts-apis/arkts-arkui-curve-e.md)。
 
 **类型：** [Curve](../../apis-arkui/arkts-apis/arkts-arkui-curve-e.md)
 

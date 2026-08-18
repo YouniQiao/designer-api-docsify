@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## constructor
@@ -19,7 +20,7 @@
 constructor(watcherName: string)
 ```
 
-类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
+类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
 
 **起始版本：** 23
 
@@ -33,7 +34,7 @@ constructor(watcherName: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
+| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
 
 **示例**
 

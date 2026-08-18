@@ -35,7 +35,7 @@ Obtains the instance of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md#getprofileinstance)
+**Substitutes:** [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md)
 
 <!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile--><!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile-End-->
 

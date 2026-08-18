@@ -1,8 +1,8 @@
 # ColorShaderStyle
 
-Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle).
+Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
-**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle)
+**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 20
 

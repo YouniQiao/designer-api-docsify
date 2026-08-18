@@ -1,8 +1,8 @@
 # DiscoveryService
 
-Defines a DiscoveryService object for discovering mDNS services of the specified type.
+Defines a **DiscoveryService** object for discovering MDNS services of the specified type.
 
-**Since:** 11
+**Since:** 10
 
 <!--Device-mdns-export interface DiscoveryService--><!--Device-mdns-export interface DiscoveryService-End-->
 
@@ -14,15 +14,15 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 import { mdns } from '@kit.NetworkKit';
 ```
 
-## off_discoveryStart
+## off_discoveryStart('discoveryStart')
 
 ```TypeScript
 off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 ```
 
-Cancels listening for discoveryStart events of mDNS services.
+Disables listening for **discoveryStart** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +34,8 @@ Cancels listening for discoveryStart events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**. <br>**discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -63,15 +63,15 @@ discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 });
 ```
 
-## off_discoveryStop
+## off_discoveryStop('discoveryStop')
 
 ```TypeScript
 off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
 ```
 
-Cancels listening for discoveryStop events of mDNS services.
+Disables listening for **discoveryStop** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -83,18 +83,18 @@ Cancels listening for discoveryStop events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**. <br>**discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | Callback used to return the MDNS service and error information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
-## off_serviceFound
+## off_serviceFound('serviceFound')
 
 ```TypeScript
 off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 ```
 
-Cancels listening for serviceFound events of mDNS services.
+Disables listening for **serviceFound** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,8 +106,8 @@ Cancels listening for serviceFound events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**. <br>**serviceFound**: event indicating an MDNS service is found. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -138,15 +138,15 @@ discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## off_serviceLost
+## off_serviceLost('serviceLost')
 
 ```TypeScript
 off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 ```
 
-Cancels listening for serviceLost events of mDNS services.
+Disables listening for **serviceLost** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,8 +158,8 @@ Cancels listening for serviceLost events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**. <br>**serviceLost**: event indicating that an MDNS service is removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | MDNS service information. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -187,15 +187,15 @@ discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## on_discoveryStart
+## on_discoveryStart('discoveryStart')
 
 ```TypeScript
 on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 ```
 
-Enables listening for discoveryStart events of mDNS services.
+Enables listening for **discoveryStart** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -207,8 +207,8 @@ Enables listening for discoveryStart events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| type | 'discoveryStart' | Yes | Event type. This field has a fixed value of **discoveryStart**. <br>**discoveryStart**: event of starting discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
 
 **Examples**
 
@@ -232,15 +232,15 @@ discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_discoveryStop
+## on_discoveryStop('discoveryStop')
 
 ```TypeScript
 on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 ```
 
-Enables listening for discoveryStop events of mDNS services.
+Enables listening for **discoveryStop** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -252,8 +252,8 @@ Enables listening for discoveryStop events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| type | 'discoveryStop' | Yes | Event type. This field has a fixed value of **discoveryStop**. <br>**discoveryStop**: event of stopping discovery of MDNS services on the LAN. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | Callback used to return the MDNS service and error information.<br>**Since:** 11 |
 
 **Examples**
 
@@ -277,15 +277,15 @@ discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_serviceFound
+## on_serviceFound('serviceFound')
 
 ```TypeScript
 on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 ```
 
-Enables listening for serviceFound events of mDNS services.
+Enables listening for **serviceFound** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -297,8 +297,8 @@ Enables listening for serviceFound events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| type | 'serviceFound' | Yes | Event type. This field has a fixed value of **serviceFound**. <br>**serviceFound**: event indicating an MDNS service is found. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the MDNS service information. You need to call **resolveLocalService** to parse the information. |
 
 **Examples**
 
@@ -325,15 +325,15 @@ discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_serviceLost
+## on_serviceLost('serviceLost')
 
 ```TypeScript
 on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 ```
 
-Enables listening for serviceLost events of mDNS services.
+Enables listening for **serviceLost** events.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -345,8 +345,8 @@ Enables listening for serviceLost events of mDNS services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| type | 'serviceLost' | Yes | Event type. This field has a fixed value of **serviceLost**. <br>**serviceLost**: event indicating that an MDNS service is removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | MDNS service information. |
 
 **Examples**
 
@@ -376,9 +376,9 @@ discoveryService.stopSearchingMDNS();
 startSearchingMDNS(): void
 ```
 
-Starts searching for mDNS services on the LAN.
+Searches for MDNS services on the LAN.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -408,9 +408,9 @@ discoveryService.startSearchingMDNS();
 stopSearchingMDNS(): void
 ```
 
-Stops searching for mDNS services on the LAN.
+Stops searching for MDNS services on the LAN.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

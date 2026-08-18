@@ -1,6 +1,6 @@
-# NetFirewallRuleType
+# NetFirewallRuleType(Network Firewall)
 
-Indicates the firewall rule type.
+Enumerates the firewall rule types, including IP, Domain, and DNS.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Indicates the firewall rule type.
 RULE_IP = 1
 ```
 
-IP type rules.
+IP address-based firewall rule.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ IP type rules.
 RULE_DOMAIN = 2
 ```
 
-Domain type rules.
+Domain name-based rule.
 
 **Since:** 15
 
@@ -42,7 +42,7 @@ Domain type rules.
 RULE_DNS = 3
 ```
 
-DNS type rules.
+DNS-based firewall rule.
 
 **Since:** 15
 

@@ -23,7 +23,7 @@ import { wearDetection } from '@kit.ConnectivityKit';
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_sppRead
+## on_sppRead('sppRead')
 
 ```TypeScript
 function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void
@@ -47,7 +47,7 @@ Subscribe the event reported when data is read from the socket.
 | --- | --- | --- | --- |
 | type | 'sppRead' | Yes | Type of the spp read event to listen for. |
 | clientSocket | number | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to listen for the spp read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to listen for the spp read event. |
 
 **Examples**
 

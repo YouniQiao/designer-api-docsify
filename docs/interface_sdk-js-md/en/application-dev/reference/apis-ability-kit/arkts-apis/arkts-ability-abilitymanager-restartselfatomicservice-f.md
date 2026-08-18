@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -29,7 +28,7 @@ Restarts the current atomic service. > **NOTE：**> > - Currently, atomic servic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#uiabilitycontext) is supported.<br> |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.<br> |
 
 **Error codes:**
 

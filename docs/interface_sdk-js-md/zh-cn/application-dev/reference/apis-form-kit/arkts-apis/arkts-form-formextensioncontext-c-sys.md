@@ -1,6 +1,6 @@
 # FormExtensionContext
 
-FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext)。 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
+FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
 **继承/实现关系：** FormExtensionContext extends ExtensionContext
 
@@ -177,7 +177,7 @@ disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | long | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定的服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定的服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -399,7 +399,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 包含bundleName，abilityName以及用户自定义参数用于拉起Ability。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起一个应用的Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拉起一个应用的Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

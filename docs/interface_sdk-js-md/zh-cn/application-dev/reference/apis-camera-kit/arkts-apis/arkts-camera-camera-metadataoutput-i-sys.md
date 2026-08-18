@@ -1,8 +1,8 @@
 # MetadataOutput
 
-metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)。
+metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
-**继承/实现关系：** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
+**继承/实现关系：** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#camerao
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addMetadataObjectTypes

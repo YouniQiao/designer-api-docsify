@@ -16,7 +16,7 @@
 defaultValue: T
 ```
 
-当在[PersistentStorage](arkts-na-persistentstorage-persistentstorage-c.md#persistentstorage)和 AppStorage中未查询到key时，使用 defaultValue中。
+当在[PersistentStorage](arkts-na-persistentstorage-persistentstorage-c.md)和 AppStorage中未查询到key时，使用 defaultValue中。
 
 **类型：** T
 
@@ -36,7 +36,7 @@ defaultValue: T
 fromJson?: FromJSONType<T>
 ```
 
-默认值为undefined。见[FromJsonType](arkts-na-fromjsontype-t.md#fromjsontype)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列 化。
+默认值为undefined。见[FromJsonType](arkts-na-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列 化。
 
 **类型：** [FromJSONType](arkts-na-fromjsontype-t.md)&lt;T&gt;
 
@@ -76,7 +76,7 @@ key: string
 toJson?: ToJSONType<T>
 ```
 
-默认值为undefined。见[ToJsonType](arkts-na-tojsontype-t.md#tojsontype)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
+默认值为undefined。见[ToJsonType](arkts-na-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
 
 **类型：** [ToJSONType](arkts-na-tojsontype-t.md)&lt;T&gt;
 

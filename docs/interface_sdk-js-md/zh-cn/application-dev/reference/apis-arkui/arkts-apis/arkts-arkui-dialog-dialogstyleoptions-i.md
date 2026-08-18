@@ -2,7 +2,7 @@
 
 固定样式对话框的选项。
 
-**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md#dialogbaseoptions)
+**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
 **起始版本：** 26.1.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## buttonDirection

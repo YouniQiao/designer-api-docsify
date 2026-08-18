@@ -81,7 +81,7 @@ Obtains the corresponding Native API struct based on the API type passed in. It 
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_AnyNativeAPI*](capi-web-arkweb-anynativeapi.md) | Returns the pointer to the corresponding Native API struct based on the passed-in API type. The first member<br>     of the struct is the size of the current struct. It can be used to access specific Native API functions such as<br>     Controller, Component, and CookieManager. <br> If the passed-in API type is not supported in the current system<br>     version (for example, ARKWEB_NATIVE_JAVASCRIPT_VALUE is unavailable in versions earlier than 18), NULL is<br>     returned. |
+| [ArkWeb_AnyNativeAPI*](capi-web-arkweb-anynativeapi.md) | Returns the pointer to the corresponding Native API struct based on the passed-in API type. The first member      of the struct is the size of the current struct. It can be used to access specific Native API functions such as      Controller, Component, and CookieManager. <br> If the passed-in API type is not supported in the current system      version (for example, ARKWEB_NATIVE_JAVASCRIPT_VALUE is unavailable in versions earlier than 18), NULL is      returned. |
 
 ### OH_ArkWeb_RegisterScrollCallback()
 

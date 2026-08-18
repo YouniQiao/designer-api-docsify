@@ -26,7 +26,7 @@ import { baseProfile } from '@kit.ConnectivityKit';
 | [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md) | Profile state change parameters. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -41,7 +41,7 @@ import { baseProfile } from '@kit.ConnectivityKit';
 | [PanRole](arkts-connectivity-baseprofile-panrole-e.md) | Enum for PAN profile role. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

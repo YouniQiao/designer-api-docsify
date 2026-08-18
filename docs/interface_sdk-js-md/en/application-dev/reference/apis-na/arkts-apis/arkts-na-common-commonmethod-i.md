@@ -4810,7 +4810,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
+| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

@@ -12,7 +12,6 @@ Defines PixelMap initialization options.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## alphaType

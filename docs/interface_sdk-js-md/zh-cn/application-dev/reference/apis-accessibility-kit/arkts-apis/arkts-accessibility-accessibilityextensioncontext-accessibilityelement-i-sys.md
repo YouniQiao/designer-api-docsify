@@ -178,7 +178,7 @@ rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).th
 });
 ```
 
-## findElement
+## findElement('textType')
 
 ```TypeScript
 findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>
@@ -230,7 +230,7 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
 });
 ```
 
-## findElement
+## findElement('elementId')
 
 ```TypeScript
 findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
@@ -570,7 +570,7 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
-根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。 与[findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findelement)功能等价，推荐优先使用本 方法。
+根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。 与findElement('elementId')功能等价，推荐优先使用本 方法。
 
 **起始版本：** 23
 
@@ -977,7 +977,7 @@ getCursorPosition(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取光标位置成功，err为undefined，data为光标在文本中的位置索引；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取光标位置成功，err为undefined，data为光标在文本中的位置索引；否则为错误对象。 |
 
 **示例**
 
@@ -1588,7 +1588,7 @@ customActions?: Array<string>
 customComponentType?: string
 ```
 
-自定义组件类型。与元素的[AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#accessibilityroletype)类型所对应。
+自定义组件类型。与元素的[AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md)类型所对应。
 
 **类型：** string
 

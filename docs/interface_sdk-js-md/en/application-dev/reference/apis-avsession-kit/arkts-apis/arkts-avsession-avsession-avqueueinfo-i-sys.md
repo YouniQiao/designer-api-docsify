@@ -14,7 +14,6 @@ The play list information definition.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## avQueueId

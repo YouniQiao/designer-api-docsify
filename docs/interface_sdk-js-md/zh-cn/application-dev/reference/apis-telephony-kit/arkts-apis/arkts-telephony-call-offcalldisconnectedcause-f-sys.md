@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## offCallDisconnectedCause
@@ -27,7 +28,7 @@ Unsubscribe from the callDisconnectedCause event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 否 | Indicates the callback used to cancel the registration monitoring for obtaining the call end reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 否 | Indicates the callback used to cancel the registration monitoring for obtaining the call end reason. |
 
 **错误码：**
 

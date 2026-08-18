@@ -2,7 +2,7 @@
 
 Represents boxed byte value and related operations
 
-**Inheritance/Implementation:** Byte extends [Integral](arkts-na-numeric-integral-c.md#integral) and implements Comparable<Byte>
+**Inheritance/Implementation:** Byte extends [Integral](arkts-na-numeric-integral-c.md) and implements Comparable<Byte>
 
 **Since:** 26.0.0
 

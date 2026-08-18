@@ -1,6 +1,6 @@
 # VibratorInfo
 
-表示查询的马达信息。通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)返回此对象，用于获取设备马达能力和选择合适的马达触发振动。
+表示查询的马达信息。通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)返回此对象，用于获取设备马达能力和选择合适的马达触发振动。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId
@@ -19,7 +20,7 @@
 deviceId: int
 ```
 
-设备ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标设备。
+设备ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标设备。
 
 **类型：** int
 
@@ -83,7 +84,7 @@ isLocalVibrator: boolean
 vibratorId: int
 ```
 
-马达ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标马达。
+马达ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标马达。
 
 **类型：** int
 

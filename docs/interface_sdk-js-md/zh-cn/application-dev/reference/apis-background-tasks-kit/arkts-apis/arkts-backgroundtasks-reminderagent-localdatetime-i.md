@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#localdatetime)
+**替代接口：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
 <!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## day

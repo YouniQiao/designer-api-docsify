@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## getDeviceIdleTrustlist
 
 ```TypeScript
-function getDeviceIdleTrustlist(callback: AsyncCallback<Array<number>>): void
+function getDeviceIdleTrustlist(callback: AsyncCallback<Array<int>>): void
 ```
 
-Obtain the list of uids that are allowed to access the Internet in hibernation mode.
+Obtains the UID of applications that are on the device idle allowlist. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getDeviceIdleTrustlist(callback: AsyncCallback<Array<number>>): void--><!--Device-policy-function getDeviceIdleTrustlist(callback: AsyncCallback<Array<number>>): void-End-->
+<!--Device-policy-function getDeviceIdleTrustlist(callback: AsyncCallback<Array<int>>): void--><!--Device-policy-function getDeviceIdleTrustlist(callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ Obtain the list of uids that are allowed to access the Internet in hibernation m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | the callback of getDeviceIdleTrustlist. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -56,16 +56,16 @@ policy.getDeviceIdleTrustlist((error: BusinessError, data: number[]) => {
 ## getDeviceIdleTrustlist
 
 ```TypeScript
-function getDeviceIdleTrustlist(): Promise<Array<number>>
+function getDeviceIdleTrustlist(): Promise<Array<int>>
 ```
 
-Obtain the list of uids that are allowed to access the Internet in hibernation mode.
+Obtains the UID of applications that are on the device idle allowlist. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getDeviceIdleTrustlist(): Promise<Array<number>>--><!--Device-policy-function getDeviceIdleTrustlist(): Promise<Array<number>>-End-->
+<!--Device-policy-function getDeviceIdleTrustlist(): Promise<Array<int>>--><!--Device-policy-function getDeviceIdleTrustlist(): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -75,7 +75,7 @@ Obtain the list of uids that are allowed to access the Internet in hibernation m
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

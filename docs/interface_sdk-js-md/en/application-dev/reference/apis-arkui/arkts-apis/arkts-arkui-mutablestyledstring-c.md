@@ -1,8 +1,8 @@
 # MutableStyledString
 
-Inherits from the [StyledString](arkts-arkui-styledstring-c.md#styledstring) class. > **An exception is thrown in the following cases:** > > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. > > **styledKey** or **styledValue** is set to an invalid value or they do not match.
+Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class. > **An exception is thrown in the following cases:** > > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. > > **styledKey** or **styledValue** is set to an invalid value or they do not match.
 
-**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md#styledstring)
+**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
 
 **Since:** 12
 
@@ -125,7 +125,7 @@ Inserts a new styled string at the specified position.
 removeString(start: number, length: number): void
 ```
 
-Removes the string in the specified range of this styled string. This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md#customspan).
+Removes the string in the specified range of this styled string. This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md).
 
 **Since:** 12
 

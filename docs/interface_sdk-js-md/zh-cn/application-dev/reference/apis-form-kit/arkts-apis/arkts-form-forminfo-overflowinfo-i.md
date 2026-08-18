@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## area
@@ -37,7 +38,7 @@ area: Rect
 duration: int
 ```
 
-互动卡片动效持续时长，单位ms。取值为大于0的整数，&lt;!--Del--&gt;针对三方应用，&lt;!--DelEnd--&gt;取值要求不大于3500&lt;!--Del--&gt;，系统应用无此限制&lt;!--DelEnd--&gt;。
+互动卡片动效持续时长，单位ms。取值为大于0的整数，<!--Del-->针对三方应用，<!--DelEnd-->取值要求不大于3500<!--Del-->，系统应用无此限制<!--DelEnd-->。
 
 **类型：** int
 

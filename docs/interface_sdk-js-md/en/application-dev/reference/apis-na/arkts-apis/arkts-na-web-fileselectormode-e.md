@@ -1,6 +1,6 @@
 # FileSelectorMode
 
-Enum type supplied to [FileSelectorParam](arkts-na-web-fileselectorparam-c.md#fileselectorparam) when onFileSelectorShow being called.
+Enum type supplied to [FileSelectorParam](arkts-na-web-fileselectorparam-c.md) when onFileSelectorShow being called.
 
 **Since:** 23
 

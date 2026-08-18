@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [FormParam](arkts-form-forminfo-formparam-e.md#formparam)
+**替代接口：** [FormParam](arkts-form-forminfo-formparam-e.md)
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -24,7 +24,7 @@ Widget ID. This is a system API.
 
 **废弃版本：** 9
 
-**替代接口：** [IDENTITY_KEY](arkts-form-forminfo-formparam-e.md#identitykey)
+**替代接口：** [IDENTITY_KEY](arkts-form-forminfo-formparam-e.md#identity_key)
 
 <!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'--><!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'-End-->
 

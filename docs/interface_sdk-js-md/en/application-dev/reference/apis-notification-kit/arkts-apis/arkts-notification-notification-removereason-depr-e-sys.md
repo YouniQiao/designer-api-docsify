@@ -6,7 +6,7 @@ Reason for removing the notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md#removereason-system-api)
+**Substitutes:** [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md)
 
 <!--Device-notification-export enum RemoveReason--><!--Device-notification-export enum RemoveReason-End-->
 
@@ -26,7 +26,7 @@ The notification is removed after a click on it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CLICK_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#clickreasonremove)
+**Substitutes:** [CLICK_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#click_reason_remove)
 
 <!--Device-RemoveReason-CLICK_REASON_REMOVE = 1--><!--Device-RemoveReason-CLICK_REASON_REMOVE = 1-End-->
 
@@ -46,7 +46,7 @@ The notification is removed by the user.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CANCEL_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#cancelreasonremove)
+**Substitutes:** [CANCEL_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#cancel_reason_remove)
 
 <!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2--><!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2-End-->
 

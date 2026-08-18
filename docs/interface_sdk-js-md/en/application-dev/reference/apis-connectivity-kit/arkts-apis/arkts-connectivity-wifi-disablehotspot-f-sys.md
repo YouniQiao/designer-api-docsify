@@ -21,7 +21,7 @@ Disables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. If Wi-Fi is enab
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md#disablehotspot-system-api)
+**Substitutes:** [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

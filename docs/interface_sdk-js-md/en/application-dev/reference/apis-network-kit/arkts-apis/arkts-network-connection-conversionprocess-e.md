@@ -1,8 +1,8 @@
 # ConversionProcess
 
-Defines the flag of conversion operations.
+Enumerates the parameters of the ASCII/Unicode transcoding process.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-export enum ConversionProcess--><!--Device-connection-export enum ConversionProcess-End-->
 
@@ -14,9 +14,9 @@ Defines the flag of conversion operations.
 NO_CONFIGURATION = 0
 ```
 
-Indicates that no flag are configured.
+Only domain names with assigned Unicode code points can be converted. (Unicode assigns a unique number to each character. This number is called a code point.)
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ConversionProcess-NO_CONFIGURATION = 0--><!--Device-ConversionProcess-NO_CONFIGURATION = 0-End-->
 
@@ -28,9 +28,9 @@ Indicates that no flag are configured.
 ALLOW_UNASSIGNED = 1
 ```
 
-Indicates that the conversion allow unassigned code points.
+Allows the translation of domain names that contain unassigned Unicode code points (in a Unicode character set, not all code points are assigned characters, i.e., unassigned Unicode code points).
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1--><!--Device-ConversionProcess-ALLOW_UNASSIGNED = 1-End-->
 
@@ -42,9 +42,9 @@ Indicates that the conversion allow unassigned code points.
 USE_STD3_ASCII_RULES = 2
 ```
 
-Indicates that the conversion turn on the check against STD-3 ASCII rules.
+During the conversion, the STD-3 ASCII rule (RFC 1123 standard) is forcibly used to check the generated ASCII domain name.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2--><!--Device-ConversionProcess-USE_STD3_ASCII_RULES = 2-End-->
 

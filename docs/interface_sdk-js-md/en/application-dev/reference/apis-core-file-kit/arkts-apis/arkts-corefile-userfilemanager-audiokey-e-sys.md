@@ -6,7 +6,7 @@ Defines the key information about an audio file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
 <!--Device-userFileManager-enum AudioKey--><!--Device-userFileManager-enum AudioKey-End-->
 
@@ -17,7 +17,7 @@ Defines the key information about an audio file.
 ## URI
 
 ```TypeScript
-URI
+URI = 0
 ```
 
 URI of the file.
@@ -26,9 +26,9 @@ URI of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-URI--><!--Device-AudioKey-URI-End-->
+<!--Device-AudioKey-URI = 0--><!--Device-AudioKey-URI = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ URI of the file.
 ## DISPLAY_NAME
 
 ```TypeScript
-DISPLAY_NAME
+DISPLAY_NAME = 1
 ```
 
 File name displayed.
@@ -46,9 +46,9 @@ File name displayed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-DISPLAY_NAME--><!--Device-AudioKey-DISPLAY_NAME-End-->
+<!--Device-AudioKey-DISPLAY_NAME = 1--><!--Device-AudioKey-DISPLAY_NAME = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ File name displayed.
 ## DATE_ADDED
 
 ```TypeScript
-DATE_ADDED
+DATE_ADDED = 2
 ```
 
 Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -66,9 +66,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-DATE_ADDED--><!--Device-AudioKey-DATE_ADDED-End-->
+<!--Device-AudioKey-DATE_ADDED = 2--><!--Device-AudioKey-DATE_ADDED = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -77,7 +77,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 ## DATE_MODIFIED
 
 ```TypeScript
-DATE_MODIFIED
+DATE_MODIFIED = 3
 ```
 
 Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -86,9 +86,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-DATE_MODIFIED--><!--Device-AudioKey-DATE_MODIFIED-End-->
+<!--Device-AudioKey-DATE_MODIFIED = 3--><!--Device-AudioKey-DATE_MODIFIED = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -97,7 +97,7 @@ Date when the file content (not the file name) was last modified. The value is t
 ## TITLE
 
 ```TypeScript
-TITLE
+TITLE = 4
 ```
 
 Title of the file.
@@ -106,9 +106,9 @@ Title of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-TITLE--><!--Device-AudioKey-TITLE-End-->
+<!--Device-AudioKey-TITLE = 4--><!--Device-AudioKey-TITLE = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -117,7 +117,7 @@ Title of the file.
 ## ARTIST
 
 ```TypeScript
-ARTIST
+ARTIST = 5
 ```
 
 Author of the file.
@@ -126,9 +126,9 @@ Author of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-ARTIST--><!--Device-AudioKey-ARTIST-End-->
+<!--Device-AudioKey-ARTIST = 5--><!--Device-AudioKey-ARTIST = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -137,7 +137,7 @@ Author of the file.
 ## AUDIOALBUM
 
 ```TypeScript
-AUDIOALBUM
+AUDIOALBUM = 6
 ```
 
 Audio album.
@@ -146,9 +146,9 @@ Audio album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-AUDIOALBUM--><!--Device-AudioKey-AUDIOALBUM-End-->
+<!--Device-AudioKey-AUDIOALBUM = 6--><!--Device-AudioKey-AUDIOALBUM = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -157,7 +157,7 @@ Audio album.
 ## DURATION
 
 ```TypeScript
-DURATION
+DURATION = 7
 ```
 
 Duration, in ms.
@@ -166,9 +166,9 @@ Duration, in ms.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-DURATION--><!--Device-AudioKey-DURATION-End-->
+<!--Device-AudioKey-DURATION = 7--><!--Device-AudioKey-DURATION = 7-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -177,7 +177,7 @@ Duration, in ms.
 ## FAVORITE
 
 ```TypeScript
-FAVORITE
+FAVORITE = 8
 ```
 
 Whether the file is added to favorites.
@@ -186,9 +186,9 @@ Whether the file is added to favorites.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-AudioKey-FAVORITE--><!--Device-AudioKey-FAVORITE-End-->
+<!--Device-AudioKey-FAVORITE = 8--><!--Device-AudioKey-FAVORITE = 8-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

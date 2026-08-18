@@ -472,7 +472,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 弹窗避让键盘后，和键盘之间的距离。 **说明：** - 默认值：16vp。 - 默认单位：vp。 - 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -556,7 +556,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)。 取值范围：大于等于0的数字。 **说明：** - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-na-framenode-c.md#getuniqueid)。 取值范围：大于等于0的数字。 **说明：** - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** int
 

@@ -134,7 +134,7 @@ Execute a drag event.
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| DragItemInfo \| undefined | Yes | Object used for prompts displayed when the object is dragged. |
 | dragInfo | dragController.DragInfo | Yes | Information about the drag event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes | Callback that contains the drag event information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | Yes | Callback that contains the drag event information. |
 
 **Error codes:**
 

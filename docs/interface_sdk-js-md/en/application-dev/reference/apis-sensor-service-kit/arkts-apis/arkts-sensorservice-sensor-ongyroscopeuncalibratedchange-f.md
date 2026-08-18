@@ -26,7 +26,7 @@ Subscribe to uncalibrated gyroscope sensor data, {@code SensorId.GYROSCOPE_UNCAL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated gyroscope data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | Yes | callback uncalibrated gyroscope data. |
 | options | Options | No | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **Error codes:**

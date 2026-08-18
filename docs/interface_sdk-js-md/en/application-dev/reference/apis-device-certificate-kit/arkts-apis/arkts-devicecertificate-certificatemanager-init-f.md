@@ -29,7 +29,7 @@ Indicates the initialization of signature and signature verification using crede
 | --- | --- | --- | --- |
 | authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
 | spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -39,7 +39,7 @@ Indicates the initialization of signature and signature verification using crede
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
 
 **Examples**
 

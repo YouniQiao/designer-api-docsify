@@ -12,7 +12,6 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -147,7 +146,7 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) class. This API returns the result synchronously and does not support asynchronous callbacks. > **NOTE：**> > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 23
 
@@ -295,7 +294,7 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd- -&gt; runs in that process. Otherwise, a new process is created. If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback. &lt;!--Del--&gt; The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. &lt;!--DelEnd--&gt; > **NOTE：**> > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. &lt;!--Del--&gt;Starting > from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--&gt; > > - Starting from API version 20, this callback is not executed when > [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created. If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback. <!--Del--> The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. <!--DelEnd--> > **NOTE：**> > - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting > from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd--> > > - Starting from API version 20, this callback is not executed when > [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
 
 **Since:** 23
 
@@ -309,7 +308,7 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> name and bundle name. |
 
 **Return value:**
 
@@ -336,7 +335,7 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequestAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd- -&gt; runs in that process. Otherwise, a new process is created. &lt;!--Del--&gt; The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. &lt;!--DelEnd--&gt;
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created. <!--Del--> The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type. <!--DelEnd-->
 
 **Since:** 23
 
@@ -352,13 +351,13 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; runs in that process. Otherwise, a new process is created. |
+| Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> runs in that process. Otherwise, a new process is created. |
 
 **Examples**
 

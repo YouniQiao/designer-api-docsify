@@ -55,7 +55,7 @@ Creates a key agreement context based on the given algorithm name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if key agreement operation fails.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if key agreement operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -87,7 +87,7 @@ Generates a shared secret.
 
 | Type | Description |
 | -- | -- |
-| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, privkey, pubkey, or secret is NULL.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>         <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key agreement operation fails.<br>            Possible causes: the public key and private key do not belong to the same curve or<br>            algorithm, or the public key data is invalid.</li><br>         </ul> |
+| [OH_Crypto_ErrCode](capi-crypto-common-h.md#oh_crypto_errcode) | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, privkey, pubkey, or secret is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key agreement operation fails.             Possible causes: the public key and private key do not belong to the same curve or             algorithm, or the public key data is invalid.</li>          </ul> |
 
 ### OH_CryptoKeyAgreement_Destroy()
 

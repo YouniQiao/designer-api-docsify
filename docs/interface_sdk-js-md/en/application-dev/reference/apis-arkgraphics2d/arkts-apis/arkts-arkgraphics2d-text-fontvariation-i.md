@@ -12,7 +12,6 @@ Describes a font variation.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## axis

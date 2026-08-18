@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## changeConfirmation
@@ -29,7 +28,7 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
 | state | State | Yes | New confirmation state of the invitation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

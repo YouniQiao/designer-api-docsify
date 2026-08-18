@@ -6,7 +6,7 @@ Describes input parameters of audio interruption events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#audiorendereroptions)
+**Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
 
 <!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
@@ -16,8 +16,6 @@ Describes input parameters of audio interruption events.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 

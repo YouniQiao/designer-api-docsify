@@ -75,7 +75,7 @@ Sets the encryption and decryption engines to an operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if <b>operation</b> is null or <b>crypto</b> is invalid. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if <b>operation</b> is null or <b>crypto</b> is invalid. |
 
 ### TEE_SetObjectFlag()
 
@@ -100,6 +100,6 @@ Sets the encryption and decryption engines to an object.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if <b>object</b> is null or <b>crypto</b> is invalid. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if <b>object</b> is null or <b>crypto</b> is invalid. |
 
 

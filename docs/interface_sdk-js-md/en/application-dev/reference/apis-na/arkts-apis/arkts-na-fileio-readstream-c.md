@@ -1,8 +1,8 @@
 # ReadStream
 
-Defines a readable stream. You need to use [fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createreadstream) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+Defines a readable stream. You need to use [fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md). The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
-**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
+**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
 
 **Since:** 23
 

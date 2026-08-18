@@ -1,8 +1,8 @@
 # LinearAccelerometerResponse
 
-Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

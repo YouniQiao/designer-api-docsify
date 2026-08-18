@@ -3,10 +3,10 @@
 ## Summary
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [MissionInfo](arkts-ability-missioninfo-i-sys.md) | The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-system-api) . |
+| [MissionInfo](arkts-ability-missioninfo-i-sys.md) | The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md) . |
 <!--DelEnd-->
 

@@ -28,8 +28,23 @@ Creates a **WaterFlow** component.
 
 ## Summary
 
-- [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md)
-- [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md)
-- [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md)
-- [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md)
-- [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node. |
+| [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | Provides parameters of the **WaterFlow** component. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) | Obtains the main axis size of a specified water flow item based on its index. |
+| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **WaterFlow** component. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md) | Enumerates the layout modes of the **WaterFlow** component. |
+

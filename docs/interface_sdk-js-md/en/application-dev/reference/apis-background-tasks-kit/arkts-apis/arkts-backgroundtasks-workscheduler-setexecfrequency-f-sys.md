@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## setExecFrequency
@@ -37,8 +36,8 @@ Set the execution frequency.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700006 | Failed to check the frequency information. |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| 9700006 | Failed to check the execution frequency parameters. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. The work scheduler service is unavailable. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

@@ -6,7 +6,7 @@ Describes the widget state information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md#formstateinfo)
+**Substitutes:** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)
 
 <!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
 

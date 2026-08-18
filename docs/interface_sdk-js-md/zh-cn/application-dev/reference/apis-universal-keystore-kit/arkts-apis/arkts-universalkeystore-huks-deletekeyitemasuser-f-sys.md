@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKeyItemAsUser
@@ -29,7 +31,7 @@ function deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 密钥别名，应为生成key时传入的别名。 |
-| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除时指定密钥的属性TAG，如使用 [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于删除时指定密钥的属性TAG，如使用 [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需删除密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 

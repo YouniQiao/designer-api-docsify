@@ -20,5 +20,5 @@ Sets the callback for the ui extension to receive data from an ui extension comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the receive data callback to set. |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the receive data callback to set. |
 

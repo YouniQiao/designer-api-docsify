@@ -1,6 +1,6 @@
 # AtManager
 
-Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager).
+Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md).
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Program access control management class, providing capabilities such as permissi
 ## Modules to Import
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
@@ -35,7 +34,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync). |
+| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
@@ -86,7 +85,7 @@ Verifies whether an app has been granted the specified permission, and synchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync). |
+| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
@@ -173,7 +172,7 @@ offSelfPermissionStateChange(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [onSelfPermissionStateChange](#onselfpermissionstatechange) to cancel the monitoring relationship created through on.
+Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [onSelfPermissionStateChange](#on_selfpermissionstatechangeselfpermissionstatechange) to cancel the monitoring relationship created through on.
 
 **Since:** 23
 
@@ -187,8 +186,8 @@ Unsubscribes from permission status change events for the specified permission l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [onSelfPermissionStateChange](#onselfpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [onSelfPermissionStateChange](#on_selfpermissionstatechangeselfpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
 
@@ -197,7 +196,7 @@ Unsubscribes from permission status change events for the specified permission l
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'on'. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
-## off_selfPermissionStateChange
+## off_selfPermissionStateChange('selfPermissionStateChange')
 
 ```TypeScript
 off(
@@ -207,7 +206,7 @@ off(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) to cancel the monitoring relationship created through on.
+Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on_permissionstatechangepermissionstatechange) to cancel the monitoring relationship created through on.
 
 **Since:** 18
 
@@ -222,8 +221,8 @@ Unsubscribes from permission status change events for the specified permission l
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as 'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on_permissionstatechangepermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
 
@@ -256,7 +255,7 @@ onSelfPermissionStateChange(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [offSelfPermissionStateChange](#offselfpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [offSelfPermissionStateChange](#offselfpermissionstatechange). When monitoring is no longer needed, call offSelfPermissionStateChange to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange). When monitoring is no longer needed, call offSelfPermissionStateChange to unsubscribe.
 
 **Since:** 23
 
@@ -271,7 +270,7 @@ Subscribes to permission authorization status change events for a specified perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
 
 **Error codes:**
 
@@ -282,7 +281,7 @@ Subscribes to permission authorization status change events for a specified perm
 | [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
-## on_selfPermissionStateChange
+## on_selfPermissionStateChange('selfPermissionStateChange')
 
 ```TypeScript
 on(
@@ -292,7 +291,7 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange). When monitoring is no longer needed, call off to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange). When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
 
@@ -308,7 +307,7 @@ Subscribes to permission authorization status change events for a specified perm
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Event type. The value is **'selfPermissionStateChange'**, which indicates the changes in the permission states specific to this application alone. |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
 
 **Error codes:**
 
@@ -342,7 +341,7 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result. Applicable to scenarios where [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
+Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result. Applicable to scenarios where [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
 
 **Since:** 23
 
@@ -397,7 +396,7 @@ atManager.openPermissionOnSetting(context, 'ohos.permission.HOOK_KEY_EVENT').the
 requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 ```
 
-Used by UIAbility/UIExtensionAbility to bring up the global switch settings dialog box. After the call is successful, if the global switch is off, the global switch settings interface will pop up for the user to operate. If the global switch is already on, the dialog box will not be brought up and **true** will be returned. This API uses a promise to return the result. Applicable to scenarios that depend on system-level global switches (such as camera, microphone, and location) being turned on. When an app needs to use functions such as the camera, microphone, or location that require global switch control, if the corresponding global switch is turned off, the app can bring up this dialog box to request the user to turn on the corresponding function. If the current global switch status is on, the dialog box will not be brought up. &lt;!--RP5--&gt;  &lt;!--RP5End--&gt;
+Used by UIAbility/UIExtensionAbility to bring up the global switch settings dialog box. After the call is successful, if the global switch is off, the global switch settings interface will pop up for the user to operate. If the global switch is already on, the dialog box will not be brought up and **true** will be returned. This API uses a promise to return the result. Applicable to scenarios that depend on system-level global switches (such as camera, microphone, and location) being turned on. When an app needs to use functions such as the camera, microphone, or location that require global switch control, if the corresponding global switch is turned off, the app can bring up this dialog box to request the user to turn on the corresponding function. If the current global switch status is on, the dialog box will not be brought up. <!--RP5-->  <!--RP5End-->
 
 **Since:** 23
 
@@ -437,7 +436,7 @@ Used by UIAbility/UIExtensionAbility to bring up the global switch settings dial
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses. This API uses a promise to return the result. Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page. Before calling this API, the app needs to call [requestPermissionsFromUser](#requestpermissionsfromuser) first. If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box. &lt;!--RP4--&gt;  &lt;!--RP4End--&gt;
+Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses. This API uses a promise to return the result. Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page. Before calling this API, the app needs to call [requestPermissionsFromUser](#requestpermissionsfromuser) first. If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box. <!--RP4-->  <!--RP4End-->
 
 **Since:** 23
 
@@ -479,7 +478,7 @@ Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result. Applicable to scenarios where an app proactively applies for [user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant-user-authorization) permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization. &lt;!--RP3--&gt;  &lt;!--RP3End--&gt;
+Used by <!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result. Applicable to scenarios where an app proactively applies for [user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant-user-authorization) permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization. <!--RP3-->  <!--RP3End-->
 
 **Since:** 23
 
@@ -495,9 +494,9 @@ Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiabilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-t.md) | Yes | Context of the &lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt; requesting the permission. <br>If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
+| context | [Context](arkts-ability-context-t.md) | Yes | Context of the <!--RP1-->UIAbility<!--RP1End--> requesting the permission. <br>If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. It is recommended to pass in only the sensitive permissions necessary for the current business scenario, avoiding requesting too many permissions at once. <br>The minimum length is 1. Value constraint: The permission name can contain a maximum of 256 characters. |
-| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
+| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
 
 **Error codes:**
 
@@ -537,7 +536,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result. Applicable to scenarios where an app proactively applies for user_grant permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization.
+Used by <!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End--> to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result. Applicable to scenarios where an app proactively applies for user_grant permissions from the user before accessing protected resources for the first time. If the user denies authorization, the authorization dialog box cannot be brought up again through this API. The developer can guide the user to go to the system settings interface for manual authorization, or call [requestPermissionOnSetting](#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization.
 
 **Since:** 23
 
@@ -553,7 +552,7 @@ Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiabilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-t.md) | Yes | Context of the &lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt; requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
+| context | [Context](arkts-ability-context-t.md) | Yes | Context of the <!--RP1-->UIAbility<!--RP1End--> requesting the permission. If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. This array cannot be empty. It is recommended to pass in only the sensitive permissions necessary for the current business scenario and avoid requesting too many permissions at once. <br>The minimum length is 1. Value constraint: The length of a permission name cannot exceed 256 characters. |
 
 **Return value:**
@@ -610,7 +609,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync). |
+| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
@@ -657,7 +656,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync). |
+| tokenID | number | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
 | permissionName | string | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
@@ -699,7 +698,7 @@ Verifies whether an app has been granted the specified permission, and synchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync). |
+| tokenID | int | Yes | Identity identifier of the target app to be verified. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br> For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). <br>If verifying the current app, it can also be obtained through [bundleManager.getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be verified. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**

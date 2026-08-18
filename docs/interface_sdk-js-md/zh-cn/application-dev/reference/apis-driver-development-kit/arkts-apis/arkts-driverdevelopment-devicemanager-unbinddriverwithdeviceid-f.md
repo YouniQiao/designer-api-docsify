@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## unbindDriverWithDeviceId
@@ -11,7 +12,7 @@
 function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 ```
 
-解除设备绑定。使用Promise异步回调。
+解除设备绑定，调用前需要先通过bindDriverWithDeviceId绑定设备。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -25,7 +26,7 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | long | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 |
+| deviceId | long | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md)获得。 |
 
 **返回值：**
 

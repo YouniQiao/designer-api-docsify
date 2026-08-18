@@ -13,13 +13,13 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<RemoteDeviceDriver>): void
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) to obtain the peripheral device information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md) to obtain the peripheral device information and device.
 
 **Since:** 11
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#binddriverwithdeviceid)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -32,8 +32,8 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | Yes | Callback used to return the result. When the device driver is successfully bound, **err** is **undefined** and **data** is a [RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md#remotedevicedriver) object that contains the device ID and remote object. Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | Yes | Callback used to return the result. When the device driver is successfully bound, **err** is **undefined** and **data** is a [RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) object that contains the device ID and remote object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -72,13 +72,13 @@ try {
 function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) to obtain the peripheral device information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md) to obtain the peripheral device information and device.
 
 **Since:** 11
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#binddriverwithdeviceid)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -91,7 +91,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Return value:**
 

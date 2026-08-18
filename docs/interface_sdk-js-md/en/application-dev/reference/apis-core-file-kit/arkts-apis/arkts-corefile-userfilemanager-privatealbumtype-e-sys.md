@@ -1,12 +1,12 @@
 # PrivateAlbumType (System API)
 
-Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md#albumtype-system-api) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md#albumsubtype-system-api) instead.
+Enumerates the system album types. This API will be deprecated. Use [AlbumType](arkts-corefile-userfilemanager-albumtype-e-sys.md) and [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#albumsubtype)
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 <!--Device-userFileManager-enum PrivateAlbumType--><!--Device-userFileManager-enum PrivateAlbumType-End-->
 
@@ -17,7 +17,7 @@ Enumerates the system album types. This API will be deprecated. Use [AlbumType](
 ## TYPE_FAVORITE
 
 ```TypeScript
-TYPE_FAVORITE
+TYPE_FAVORITE = 0
 ```
 
 Favorites.
@@ -28,7 +28,7 @@ Favorites.
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
 
-<!--Device-PrivateAlbumType-TYPE_FAVORITE--><!--Device-PrivateAlbumType-TYPE_FAVORITE-End-->
+<!--Device-PrivateAlbumType-TYPE_FAVORITE = 0--><!--Device-PrivateAlbumType-TYPE_FAVORITE = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ Favorites.
 ## TYPE_TRASH
 
 ```TypeScript
-TYPE_TRASH
+TYPE_TRASH = 1
 ```
 
 Trash.
@@ -48,7 +48,7 @@ Trash.
 
 **Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
 
-<!--Device-PrivateAlbumType-TYPE_TRASH--><!--Device-PrivateAlbumType-TYPE_TRASH-End-->
+<!--Device-PrivateAlbumType-TYPE_TRASH = 1--><!--Device-PrivateAlbumType-TYPE_TRASH = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

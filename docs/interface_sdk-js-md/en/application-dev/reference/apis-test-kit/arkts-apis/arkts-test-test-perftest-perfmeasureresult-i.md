@@ -92,7 +92,7 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 readonly roundValues: Array<double>
 ```
 
-Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding [PerfMetric](arkts-test-test-perftest-perfmetric-e.md#perfmetric). If data collection fails, the value **-1** is returned.
+Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding [PerfMetric](arkts-test-test-perftest-perfmetric-e.md). If data collection fails, the value **-1** is returned.
 
 **Type:** Array&lt;double&gt;
 

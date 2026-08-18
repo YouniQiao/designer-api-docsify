@@ -14,7 +14,6 @@ Defines the user age group detection result.
 
 ```TypeScript
 import { userStatus } from '@kit.MultimodalAwarenessKit';
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## ageGroup

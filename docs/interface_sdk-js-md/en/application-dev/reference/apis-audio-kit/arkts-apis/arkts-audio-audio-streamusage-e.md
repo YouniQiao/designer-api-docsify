@@ -36,7 +36,7 @@ Media.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_AUDIOBOOK](#streamusageaudiobook)
+**Substitutes:** [STREAM_USAGE_AUDIOBOOK](#stream_usage_audiobook)
 
 <!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
 
@@ -134,7 +134,7 @@ Notification or ringtone usage.
 
 **Deprecated since:** 10
 
-**Substitutes:** [STREAM_USAGE_RINGTONE](#streamusageringtone)
+**Substitutes:** [STREAM_USAGE_RINGTONE](#stream_usage_ringtone)
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 

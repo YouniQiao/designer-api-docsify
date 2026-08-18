@@ -22,18 +22,18 @@ import { deviceInfo } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo) | Obtains device information. |
+| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md) | Obtains device information. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f-sys.md#getdevicename) | Obtains the device name. This API uses an asynchronous callback to return the result. |
-| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f-sys.md#getdevicename-system-api) | Obtains the device name. This API uses a promise to return the result. |
-| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md#getdeviceserial) | Obtains the device serial number. This API uses an asynchronous callback to return the result. |
-| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md#getdeviceserial-system-api) | Obtains the device serial number. This API uses a promise to return the result. |
-| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md#getdisplayversion) | Obtains the device version number. This API uses an asynchronous callback to return the result. |
-| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md#getdisplayversion-system-api) | Obtains the device version number. This API uses a promise to return the result. |
+| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f-sys.md) | Obtains the device name. This API uses an asynchronous callback to return the result. |
+| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f-sys.md) | Obtains the device name. This API uses a promise to return the result. |
+| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md) | Obtains the device serial number. This API uses an asynchronous callback to return the result. |
+| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md) | Obtains the device serial number. This API uses a promise to return the result. |
+| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md) | Obtains the device version number. This API uses an asynchronous callback to return the result. |
+| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md) | Obtains the device version number. This API uses a promise to return the result. |
 <!--DelEnd-->
 

@@ -14,7 +14,6 @@ This module defines the result information of monitoring install, update and uni
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## appIndex

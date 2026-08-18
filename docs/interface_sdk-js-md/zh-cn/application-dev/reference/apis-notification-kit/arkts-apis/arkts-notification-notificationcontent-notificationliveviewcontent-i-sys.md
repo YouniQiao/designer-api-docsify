@@ -1,8 +1,8 @@
 # NotificationLiveViewContent（系统接口）
 
-描述普通实况通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#notificationbasiccontent)。
+描述普通实况通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
 
-**继承/实现关系：** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#notificationbasiccontent)
+**继承/实现关系：** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ extraInfo?: Record<string, RecordData>
 
 实况通知附加内容。默认为空。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

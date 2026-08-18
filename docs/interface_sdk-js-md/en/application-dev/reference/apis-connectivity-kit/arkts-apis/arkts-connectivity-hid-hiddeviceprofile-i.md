@@ -2,7 +2,7 @@
 
 Manager HID device profile.
 
-**Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md)
 
 **Since:** 26.0.0
 
@@ -129,7 +129,7 @@ Unsubscribe from the event that a GET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -175,7 +175,7 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Unsubscribe from the event that a SET_PROTOCOL message is received from the peer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -267,7 +267,7 @@ Unsubscribe from the event that a SET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -313,7 +313,7 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -359,7 +359,7 @@ Subscribe to the event reported when GET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -404,7 +404,7 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -449,7 +449,7 @@ Subscribe to the event reported when SET_PROTOCOL message is received from the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -494,7 +494,7 @@ Subscribe to the event reported when SET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -539,7 +539,7 @@ Subscribe to the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -587,7 +587,7 @@ Application registers the HID Device capability. The application will only succe
 | sdp | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
 | inQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
 | outQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
 
 **Error codes:**
 

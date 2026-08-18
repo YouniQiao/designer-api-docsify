@@ -12,7 +12,6 @@ Packing image size limit.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## level

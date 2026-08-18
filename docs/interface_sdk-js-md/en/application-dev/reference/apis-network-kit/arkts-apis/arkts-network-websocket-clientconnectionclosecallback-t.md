@@ -1,14 +1,14 @@
 # ClientConnectionCloseCallback
 
 ```TypeScript
-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason: CloseResult) => void
+export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason :CloseResult) => void
 ```
 
-Callback function when a client connection is closed.
+Callback invoked when the WebSocketServer connection is closed.
 
-**Since:** 24
+**Since:** 23
 
-<!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason: CloseResult) => void--><!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason: CloseResult) => void-End-->
+<!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason :CloseResult) => void--><!--Device-webSocket-export type ClientConnectionCloseCallback = (clientConnection: WebSocketConnection, closeReason :CloseResult) => void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

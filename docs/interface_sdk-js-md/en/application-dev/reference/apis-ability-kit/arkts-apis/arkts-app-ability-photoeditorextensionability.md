@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

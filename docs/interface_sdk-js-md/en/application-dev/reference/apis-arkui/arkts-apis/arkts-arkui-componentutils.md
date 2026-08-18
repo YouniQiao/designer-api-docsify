@@ -21,11 +21,11 @@ import { componentUtils } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) | Get the image objects located within the selected area. |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md) | Get the image objects located within the selected area. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -40,7 +40,7 @@ import { componentUtils } from '@kit.ArkUI';
 | [TranslateResult](arkts-arkui-componentutils-translateresult-i.md) | Translation Result |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

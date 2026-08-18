@@ -1,6 +1,6 @@
 # RandomAccessFile
 
-随机读写文件流。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。
+随机读写文件流，提供基于偏移指针的随机读写能力。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。
 
 **起始版本：** 10
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -19,7 +22,7 @@
 close(): void
 ```
 
-以同步方式关闭RandomAccessFile对象。
+以同步方式关闭RandomAccessFile对象，关闭后不可再用于读写等操作。
 
 **起始版本：** 10
 
@@ -52,7 +55,7 @@ randomAccessFile.close();
 getReadStream(): ReadStream
 ```
 
-获取当前 RandomAccessFile 的一个 ReadStream 实例。
+获取当前RandomAccessFile的一个ReadStream实例，用于流式读取文件数据。
 
 **起始版本：** 12
 
@@ -93,7 +96,7 @@ randomAccessFile.close();
 getWriteStream(): WriteStream
 ```
 
-获取当前 RandomAccessFile 的一个 WriteStream 实例。
+获取当前RandomAccessFile的一个WriteStream实例，用于流式写入文件数据。
 
 **起始版本：** 12
 
@@ -137,7 +140,7 @@ read(
   ): Promise<number>
 ```
 
-从文件读取数据，使用promise异步回调。
+从文件读取数据，返回实际读取的字节数。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -232,7 +235,7 @@ randomAccessFile.read(arrayBuffer, readOption).then((readLength: long) => {
 read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 ```
 
-从文件读取数据，使用callback异步回调。
+从文件读取数据，返回实际读取的字节数。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -245,7 +248,7 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -321,7 +324,7 @@ read(
   ): void
 ```
 
-从文件读取数据，使用callback异步回调。
+从文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -335,7 +338,7 @@ read(
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
 | options | [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number 类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -418,7 +421,7 @@ readSync(
   ): number
 ```
 
-以同步方法从文件读取数据。
+以同步方法从文件读取数据，返回实际读取的字节数。
 
 **起始版本：** 10
 
@@ -488,7 +491,7 @@ fileIo.closeSync(file);
 setFilePointer(filePointer: number): void
 ```
 
-设置文件偏移指针。
+设置文件偏移指针，用于指定后续读写等操作的起始位置。
 
 **起始版本：** 10
 
@@ -530,7 +533,7 @@ write(
   ): Promise<number>
 ```
 
-将数据写入文件，使用promise异步回调。
+将数据写入文件。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -629,7 +632,7 @@ randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: long) => {
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-将数据写入文件，使用callback异步回调。
+将数据写入文件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -642,7 +645,7 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -719,7 +722,7 @@ write(
   ): void
 ```
 
-将数据写入文件，使用callback异步回调。
+将数据写入文件，支持配置写入选项。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -733,7 +736,7 @@ write(
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
 | options | [WriteOptions](../../apis-na/arkts-apis/arkts-na-file-fs-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据 是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回实际写入数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -881,7 +884,7 @@ randomAccessFile.close();
 readonly fd: number
 ```
 
-打开的文件描述符。
+已打开的文件描述符fd。
 
 **类型：** number
 
@@ -897,7 +900,7 @@ readonly fd: number
 readonly filePointer: number
 ```
 
-RandomAccessFile对象的偏移指针，单位为Byte。
+RandomAccessFile对象的偏移指针，表示当前读写位置，单位为Byte。
 
 **类型：** number
 

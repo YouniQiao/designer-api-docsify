@@ -1,6 +1,6 @@
 # @ohos.i18n
 
-This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities, such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The [intl](arkts-intl.md#ohosintl) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs are defined as follows: - Pattern string, which is a string consisting of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks. - Skeleton string: a string that consists of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text. > **NOTE：**> > - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The > processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the > [date and time formatting API](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md#simplenumberformat) is used only for UI display. Do not hardcode the > return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API > version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data > changes, see the official CLDR documentation. > > - Since API version 11, some APIs of this module are supported in ArkTS widgets.
+This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities, such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The [intl](arkts-intl.md) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs are defined as follows: - Pattern string, which is a string consisting of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks. - Skeleton string: a string that consists of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text. > **NOTE：**> > - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The > processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the > [date and time formatting API](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) is used only for UI display. Do not hardcode the > return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API > version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data > changes, see the official CLDR documentation. > > - Since API version 11, some APIs of this module are supported in ArkTS widgets.
 
 **Since:** 23
 
@@ -12,7 +12,6 @@ This module provides system-related and enhanced [i18n](../../../internationaliz
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## Summary
@@ -21,29 +20,29 @@ import { i18n } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addpreferredlanguage) | Adds a preferred language to the specified position on the preferred language list. |
-| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) | Obtains the **Calendar** object for the specified locale and calendar type. |
-| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) | Obtains the ChineseCalendar object for the specified locale. |
-| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getdisplaycountry) | Obtains the localized name of the specified country/region. |
-| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getdisplaylanguage) | Obtains the localized script for the specified language. |
-| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getfirstpreferredlanguage) | Obtains the first language in the preferred language list. |
-| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) | Creates an **IndexUtil** object. |
-| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) | Obtains a **BreakIterator** object. The **BreakIterator** object maintains an internal break iterator that can be used to access various line break points. |
-| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getpreferredlanguagelist) | Obtains the list of preferred languages. |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
-| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getsystemlanguage) | Obtains the system language. |
-| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getsystemlocale) | Obtains the system locale. |
-| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getsystemregion) | Obtains the system region. |
-| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) | Obtains the **TimeZone** object corresponding to the specified time zone ID. |
-| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24hourclock) | Checks whether the 24-hour clock is used. |
-| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) | Checks whether a language is an RTL language. For an RTL language, [UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required. |
-| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removepreferredlanguage) | Removes a preferred language from the specified position on the preferred language list. |
-| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24hourclock) | Sets the 24-hour clock. |
+| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md) | Adds a preferred language to the specified position on the preferred language list. |
+| [getCalendar](arkts-localization-i18n-getcalendar-f.md) | Obtains the **Calendar** object for the specified locale and calendar type. |
+| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md) | Obtains the ChineseCalendar object for the specified locale. |
+| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md) | Obtains the localized name of the specified country/region. |
+| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md) | Obtains the localized script for the specified language. |
+| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md) | Obtains the first language in the preferred language list. |
+| [getInstance](arkts-localization-i18n-getinstance-f.md) | Creates an **IndexUtil** object. |
+| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md) | Obtains a **BreakIterator** object. The **BreakIterator** object maintains an internal break iterator that can be used to access various line break points. |
+| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md) | Obtains the list of preferred languages. |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md) , see the examples in [SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format). |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md) | Obtains a **SimpleNumberFormat** object based on the specified skeleton. |
+| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md) | Obtains the system language. |
+| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md) | Obtains the system locale. |
+| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md) | Obtains the system region. |
+| [getTimeZone](arkts-localization-i18n-gettimezone-f.md) | Obtains the **TimeZone** object corresponding to the specified time zone ID. |
+| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md) | Checks whether the 24-hour clock is used. |
+| [isRTL](arkts-localization-i18n-isrtl-f.md) | Checks whether a language is an RTL language. For an RTL language, [UI mirroring](../../../internationalization/i18n-ui-design.md#ui-mirroring) is required. |
+| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md) | Removes a preferred language from the specified position on the preferred language list. |
+| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md) | Sets the 24-hour clock. |
 
 ### Classes
 
@@ -75,7 +74,7 @@ import { i18n } from '@kit.LocalizationKit';
 | [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Queries the time zone transition rule. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -105,7 +104,7 @@ import { i18n } from '@kit.LocalizationKit';
 | [Util](arkts-localization-i18n-util-i.md) | Provides util functions. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -124,7 +123,7 @@ import { i18n } from '@kit.LocalizationKit';
 | [WeekDay](arkts-localization-i18n-weekday-e.md) | Enumerates the first day of a week. The value ranges from Monday to Sunday. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

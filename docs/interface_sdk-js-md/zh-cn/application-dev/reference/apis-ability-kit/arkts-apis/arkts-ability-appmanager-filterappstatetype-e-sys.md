@@ -1,6 +1,6 @@
 # FilterAppStateType（系统接口）
 
-表示要监听的应用状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#appstatefilter系统接口)过滤想要监听的应用状态。
+表示要监听的应用状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的应用状态。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@
 CREATE = 1 << 0
 ```
 
-应用正在初始化，对应[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)中state 取值为0的状态。
+应用正在初始化，对应[AppStateData](arkts-ability-appstatedata-c.md)中state 取值为0的状态。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ CREATE = 1 << 0
 FOREGROUND = 1 << 1
 ```
 
-应用位于前台，对应[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)中state取 值为2的状态。
+应用位于前台，对应[AppStateData](arkts-ability-appstatedata-c.md)中state取 值为2的状态。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ FOREGROUND = 1 << 1
 BACKGROUND = 1 << 2
 ```
 
-应用位于后台，对应[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)中state取 值为4的状态。
+应用位于后台，对应[AppStateData](arkts-ability-appstatedata-c.md)中state取 值为4的状态。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ BACKGROUND = 1 << 2
 DESTROY = 1 << 3
 ```
 
-应用已退出，对应[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)中state取值 为5的状态。
+应用已退出，对应[AppStateData](arkts-ability-appstatedata-c.md)中state取值 为5的状态。
 
 **起始版本：** 23
 

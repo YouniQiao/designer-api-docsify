@@ -50,7 +50,7 @@ Callback for opening an input stream on an audio accessory.<b>When Called:</b> T
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory on which the stream is opened. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory on which the stream is opened. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the newly created input stream.Use this handle to register callbacks via Register...Callback. |
 | [OH_AudioStreamInfo](capi-ohaudio-oh-audiostreaminfo.md) \*streamInfo | [in] Pointer to the audio stream information of the streambeing opened. This parameter describes the requested stream format andcan be used by the accessory to configure its data path. |
 
@@ -58,7 +58,7 @@ Callback for opening an input stream on an audio accessory.<b>When Called:</b> T
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the stream is accepted.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the stream is accepted.</li>          <li>`false` otherwise.</li>          </ul> |
 
 **Reference**:
 
@@ -81,14 +81,14 @@ Callback for stream started event.<b>When Called:</b> After the stream is succes
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory that owns this stream. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory that owns this stream. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the input stream that is started. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the start event is handled successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the start event is handled successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStream_StopCallback()
 
@@ -106,14 +106,14 @@ Callback for stream stopped event.<b>When Called:</b> After the stream is stoppe
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory that owns this stream. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory that owns this stream. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the input stream that is stopped. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the stop event is handled successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the stop event is handled successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStream_ReleaseCallback()
 
@@ -131,14 +131,14 @@ Callback for stream released event.<b>When Called:</b> When the stream is being 
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory that owns this stream. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory that owns this stream. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the input stream that is released. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the release event is handled successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the release event is handled successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStream_GetLatencyCallback()
 
@@ -156,7 +156,7 @@ Callback for querying the current latency of the stream.<b>When Called:</b> When
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory that owns this stream. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory that owns this stream. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the input stream. |
 | int32_t \*latency | [out] Output parameter. Returns the latency, in milliseconds. |
 
@@ -164,7 +164,7 @@ Callback for querying the current latency of the stream.<b>When Called:</b> When
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the latency is obtained successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the latency is obtained successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStream_GetFramePositionCallback()
 
@@ -182,7 +182,7 @@ Callback for querying the current frame position of the stream.<b>When Called:</
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioAccessory \*accessory | [in] The audio accessory that owns this stream. |
+| [OH_AudioAccessory](capi-ohaudio-oh-audioaccessory.md) \*accessory | [in] The audio accessory that owns this stream. |
 | [OH_AudioAccessoryInputStream](capi-ohaudio-oh-audioaccessoryinputstream.md) \*stream | [in] Reference to the input stream. |
 | int64_t \*framePosition | [out] Output parameter. Returns the cumulative number of audioframes captured since the most recent successful start of this inputstream. |
 | int64_t \*timestamp | [out] Returns the capture timestamp corresponding to the frameposition reported through {@p framePosition}. The timestamp must use the{@link CLOCK_MONOTONIC} time base and is expressed in nanoseconds. It representsthe monotonic clock time at which the frame identified by {@p framePosition} was captured. |
@@ -191,7 +191,7 @@ Callback for querying the current frame position of the stream.<b>When Called:</
 
 | Type | Description |
 | -- | -- |
-| bool | <ul><br>         <li>`true` if the frame position is obtained successfully.</li><br>         <li>`false` otherwise.</li><br>         </ul> |
+| bool | <ul>          <li>`true` if the frame position is obtained successfully.</li>          <li>`false` otherwise.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_RegisterStartCallback()
 
@@ -216,7 +216,7 @@ Registers the callback for stream started event.<b>CRITICAL: Registration Timing
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside<br>                  [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside                   [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_RegisterStopCallback()
 
@@ -241,7 +241,7 @@ Registers the callback for stream stopped event.<b>CRITICAL: Registration Timing
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside<br>                  [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside                   [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_RegisterReleaseCallback()
 
@@ -266,7 +266,7 @@ Registers the callback for stream released event.<b>CRITICAL: Registration Timin
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside<br>                  [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside                   [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_RegisterLatencyCallback()
 
@@ -291,7 +291,7 @@ Registers the callback for stream latency query.<b>CRITICAL: Registration Timing
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside<br>                  [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside                   [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_RegisterFramePositionCallback()
 
@@ -316,7 +316,7 @@ Registers the callback for stream frame position query.<b>CRITICAL: Registration
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside<br>                  [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if called outside                   [OH_AudioAccessory_OpenInputStreamCallback](capi-native-audio-accessory-input-stream-manager-h.md#oh_audioaccessory_openinputstreamcallback) or stream is released.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_Write()
 
@@ -342,7 +342,7 @@ Writes audio data to the audio accessory input stream.This is a blocking interfa
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_FRAME_LENGTH_MISMATCH](capi-native-audio-common-h.md#oh_audiocommon_result) if dataSize does not correspond<br>                  to 20 ms of audio data under the current stream configuration.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if stream is not started or the required<br>                  stream callbacks are not fully registered.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) if audio server process die.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_FRAME_LENGTH_MISMATCH](capi-native-audio-common-h.md#oh_audiocommon_result) if dataSize does not correspond                   to 20 ms of audio data under the current stream configuration.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if stream is not started or the required                   stream callbacks are not fully registered.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) if audio server process die.</li>          </ul> |
 
 ### OH_AudioAccessoryInputStreamManager_GetWritableSize()
 
@@ -367,6 +367,6 @@ Obtains the writable size of the audio accessory input stream buffer.This functi
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul><br>         <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li><br>         <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if the stream is released.</li><br>         </ul> |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | <ul>          <li>[AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameters are null.</li>          <li>[AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE](capi-native-audio-common-h.md#oh_audiocommon_result) if the stream is released.</li>          </ul> |
 
 

@@ -1,6 +1,6 @@
 # LineTypeset
 
-保存文本内容及样式的载体，可用于计算单行排版信息。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder)类的 [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
+保存文本内容及样式的载体，可用于计算单行排版信息。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的 [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createLine

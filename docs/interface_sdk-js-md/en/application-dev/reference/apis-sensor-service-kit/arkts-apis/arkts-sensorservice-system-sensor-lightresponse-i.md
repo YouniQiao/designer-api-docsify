@@ -6,7 +6,7 @@ Defines a **LightResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md#lightresponse)
+**Substitutes:** [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)
 
 <!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 

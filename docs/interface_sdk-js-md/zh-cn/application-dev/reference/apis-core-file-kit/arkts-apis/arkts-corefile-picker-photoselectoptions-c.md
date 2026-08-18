@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#photoselectoptions)
+**替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## MIMEType

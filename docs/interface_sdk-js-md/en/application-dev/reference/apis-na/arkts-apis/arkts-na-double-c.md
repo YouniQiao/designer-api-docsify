@@ -2,7 +2,7 @@
 
 Represents boxed double value and related operations
 
-**Inheritance/Implementation:** Double extends [Floating](arkts-na-numeric-floating-c.md#floating) and implements Comparable<Double>
+**Inheritance/Implementation:** Double extends [Floating](arkts-na-numeric-floating-c.md) and implements Comparable<Double>
 
 **Since:** 24
 

@@ -35,7 +35,7 @@ Disables an spp server socket and releases related resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md#sppcloseserversocket)
+**Substitutes:** [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md)
 
 <!--Device-bluetooth-function sppCloseServerSocket(socket: number): void--><!--Device-bluetooth-function sppCloseServerSocket(socket: number): void-End-->
 
@@ -45,7 +45,7 @@ Disables an spp server socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#spplisten). |
+| socket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md). |
 
 **Examples**
 

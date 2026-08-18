@@ -68,7 +68,7 @@ Initializes a task attribute.After the call, the task attribute is set to its de
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the task attribute is initialized;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the task attribute is initialized;          `-1` otherwise. |
 
 ### ffrt_task_attr_set_name()
 
@@ -111,7 +111,7 @@ Gets the name of a task attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API const char* | A non-null pointer to the task name if the name is obtained;<br>         a null pointer otherwise. |
+| FFRT_C_API const char* | A non-null pointer to the task name if the name is obtained;          a null pointer otherwise. |
 
 ### ffrt_task_attr_destroy()
 
@@ -325,7 +325,7 @@ Updates the QoS of this task.Use this interface to adjust the scheduling priorit
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the QoS is updated, or if the new QoS is the same as the current QoS;<br>         `1` if the QoS map is not registered, the current task is null, or the<br>         current task is not a general-type task (i.e., not submitted through<br>         [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base)). |
+| FFRT_C_API int | `0` if the QoS is updated, or if the new QoS is the same as the current QoS;          `1` if the QoS map is not registered, the current task is null, or the          current task is not a general-type task (i.e., not submitted through          [ffrt_submit_base](capi-task-h.md#ffrt_submit_base) or [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base)). |
 
 **Reference**:
 
@@ -390,7 +390,7 @@ Allocates memory for the function execution structure.The allocated memory is us
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API void* | A non-null pointer if the memory is allocated;<br>         a null pointer otherwise. |
+| FFRT_C_API void* | A non-null pointer if the memory is allocated;          a null pointer otherwise. |
 
 **Reference**:
 
@@ -449,7 +449,7 @@ Submits a task, and obtains a task handle.The task is submitted to the FFRT sche
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;          a null pointer otherwise. |
 
 **Reference**:
 
@@ -509,7 +509,7 @@ Submits a task, and obtains a handle, simplified from the [ffrt_submit_h_base](c
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_task_handle_t | A non-null task handle if the task is submitted;          a null pointer otherwise. |
 
 **Reference**:
 
@@ -532,13 +532,13 @@ Increases the reference count of a task handle.The reference count of the task h
 
 | Parameter | Description |
 | -- | -- |
-| ffrt_task_handle_t handle | Indicates a task handle, obtained from [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) or [ffrt_submit_h_f](capi-task-h.md#ffrt_submit_h_f). |
+| [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) handle | Indicates a task handle, obtained from [ffrt_submit_h_base](capi-task-h.md#ffrt_submit_h_base) or [ffrt_submit_h_f](capi-task-h.md#ffrt_submit_h_f). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint32_t | The task handle reference count value before the increment;<br>         `UINT_MAX` if `handle` is null. |
+| FFRT_C_API uint32_t | The task handle reference count value before the increment;          `UINT_MAX` if `handle` is null. |
 
 ### ffrt_task_handle_dec_ref()
 
@@ -556,13 +556,13 @@ Decreases the reference count of a task handle.The reference count of the task h
 
 | Parameter | Description |
 | -- | -- |
-| ffrt_task_handle_t handle | Indicates a task handle. |
+| [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) handle | Indicates a task handle. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API uint32_t | The task handle reference count value before the decrement;<br>         `UINT_MAX` if `handle` is null. |
+| FFRT_C_API uint32_t | The task handle reference count value before the decrement;          `UINT_MAX` if `handle` is null. |
 
 ### ffrt_task_handle_destroy()
 
@@ -580,7 +580,7 @@ Destroys a task handle.After the call, the task handle is destroyed and the reso
 
 | Parameter | Description |
 | -- | -- |
-| ffrt_task_handle_t handle | Indicates a task handle. |
+| [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) handle | Indicates a task handle. |
 
 ### ffrt_wait_deps()
 

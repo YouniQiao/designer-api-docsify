@@ -83,7 +83,7 @@ Creates an **OH_Drawing_ShaderEffect** object with a single color.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation<br> fails. The possible failure cause is that no memory is available. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation  fails. The possible failure cause is that no memory is available. |
 
 ### OH_Drawing_ShaderEffectCreateLinearGradient()
 
@@ -142,7 +142,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation<br> fails. The possible failure cause is that no memory is available or at least one of the parameters startPt, <br> endPt, and colors is NULL. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation  fails. The possible failure cause is that no memory is available or at least one of the parameters startPt,   endPt, and colors is NULL. |
 
 ### OH_Drawing_ShaderEffectCreateRadialGradient()
 
@@ -201,7 +201,7 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient b
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation<br> fails. The possible failure cause is that no memory is available or at least one of the parameters centerPt and <br> colors is NULL. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If NULL is returned, the creation  fails. The possible failure cause is that no memory is available or at least one of the parameters centerPt and   colors is NULL. |
 
 ### OH_Drawing_ShaderEffectCreateSweepGradientWithLocalMatrix()
 
@@ -230,7 +230,7 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient ba
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.<br> A null pointer is returned if any of the following conditions is met:<br> - The available memory is empty.<br> - centerPt or colors is NULL.<br> - The value of tileMode is out of the enumerated value range. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.  A null pointer is returned if any of the following conditions is met:  - The available memory is empty.  - centerPt or colors is NULL.  - The value of tileMode is out of the enumerated value range. |
 
 ### OH_Drawing_ShaderEffectCreateSweepGradient()
 
@@ -258,7 +258,7 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient ba
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.<br> A null pointer is returned if any of the following conditions is met:<br> - The available memory is empty.<br> - centerPt or colors is NULL.<br> - The value of tileMode is out of the enumerated value range. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.  A null pointer is returned if any of the following conditions is met:  - The available memory is empty.  - centerPt or colors is NULL.  - The value of tileMode is out of the enumerated value range. |
 
 ### OH_Drawing_ShaderEffectCreateImageShader()
 
@@ -286,7 +286,7 @@ Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advis
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.<br> A null pointer is returned if any of the following conditions is met:<br> - The available memory is empty.<br> - image or samplingOptions is NULL.<br> - The value of tileX or tileY is out of the enumerated value range. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.  A null pointer is returned if any of the following conditions is met:  - The available memory is empty.  - image or samplingOptions is NULL.  - The value of tileX or tileY is out of the enumerated value range. |
 
 ### OH_Drawing_ShaderEffectCreatePixelMapShader()
 
@@ -346,7 +346,7 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If the returned pointer is NULL,<br> the creation fails. The possible causes are as follows:<br> - The available memory is empty.<br> - startPt, endPt, or colors is NULL.<br> - The value of tileMode is out of the enumerated value range. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created. If the returned pointer is NULL,  the creation fails. The possible causes are as follows:  - The available memory is empty.  - startPt, endPt, or colors is NULL.  - The value of tileMode is out of the enumerated value range. |
 
 ### OH_Drawing_ShaderEffectCreateCompose()
 
@@ -372,7 +372,7 @@ Creates a shader by blending two existing shaders in a certain way.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.<br> If the returned pointer is NULL, the creation fails. The possible causes are as follows:<br> - The available memory is empty.<br> - dst or src is NULL.<br> - The value of mode is out of the enumerated value range. |
+| [OH_Drawing_ShaderEffect*](capi-drawing-oh-drawing-shadereffect.md) | Returns the pointer to the [OH_Drawing_ShaderEffect](capi-drawing-oh-drawing-shadereffect.md) object created.  If the returned pointer is NULL, the creation fails. The possible causes are as follows:  - The available memory is empty.  - dst or src is NULL.  - The value of mode is out of the enumerated value range. |
 
 ### OH_Drawing_ShaderEffectDestroy()
 

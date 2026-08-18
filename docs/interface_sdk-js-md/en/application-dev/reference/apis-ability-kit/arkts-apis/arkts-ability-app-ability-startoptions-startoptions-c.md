@@ -12,7 +12,6 @@ StartOptions can be used as an input parameter for APIs used to launch a UIAbili
 
 ```TypeScript
 import { StartOptions } from '@kit.AbilityKit';
-import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandler
@@ -241,7 +240,7 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
-Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode** configured under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the [module.json5](../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default. - **FULL_SCREEN**: full-screen mode. - **FLOATING**: floating window mode. - **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode. When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15 , and in full-screen mode if the value is greater than or equal to 15. **Constraints**: &lt;!--RP1--&gt;This property takes effect only on 2-in-1 devices and tablets.&lt;!--RP1End--&gt;
+Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode** configured under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the [module.json5](../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default. - **FULL_SCREEN**: full-screen mode. - **FLOATING**: floating window mode. - **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode. When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15 , and in full-screen mode if the value is greater than or equal to 15. **Constraints**: <!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
 
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -313,7 +312,7 @@ Distance the window moves along the x-axis, with the top-left vertex of the scre
 windowMode?: int
 ```
 
-Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-abilityconstant-windowmode-e.md#windowmode).
+Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-abilityconstant-windowmode-e.md).
 
 **Type:** int
 

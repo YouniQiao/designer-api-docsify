@@ -18,7 +18,7 @@ export type Initializer<T> = (...params: FixedArray<RecordData>) => T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | FixedArray&lt;[RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |  |
+| params | FixedArray&lt;[RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |  |
 
 **返回值：**
 

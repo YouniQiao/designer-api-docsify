@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSpecifiedDistributionType
@@ -13,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getSpecifiedDistributionType(bundleName: string): string
 ```
 
-Obtains the [distribution type](../../../security/app-provision-structure.md) of a bundle in synchronous mode. The return value is the **specifiedDistributionType** field value in [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api) passed when **install** is called. No permission is required for obtaining the caller's own information.
+Obtains the [distribution type](../../../security/app-provision-structure.md) of a bundle in synchronous mode. The return value is the **specifiedDistributionType** field value in [InstallParam](arkts-ability-installer-installparam-i-sys.md) passed when **install** is called. No permission is required for obtaining the caller's own information.
 
 **Since:** 23
 

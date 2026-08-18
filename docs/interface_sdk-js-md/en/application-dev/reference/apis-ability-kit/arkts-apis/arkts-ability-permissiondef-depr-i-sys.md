@@ -1,12 +1,12 @@
 # PermissionDef (System API)
 
-The module provides permission details defined in the configuration file. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#permissiondef-system-api) instead. > > The APIs provided by this module are system APIs.
+The module provides permission details defined in the configuration file. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md) instead. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#permissiondef-system-api)
+**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md)
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 

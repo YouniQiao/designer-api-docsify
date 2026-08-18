@@ -63,7 +63,7 @@ public themeColorMode?: PickerColorMode
 
 AlbumPickerComponent theme color
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 

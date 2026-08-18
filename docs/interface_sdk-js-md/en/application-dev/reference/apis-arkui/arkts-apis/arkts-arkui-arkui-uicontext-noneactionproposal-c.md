@@ -1,8 +1,8 @@
 # NoneActionProposal
 
-Smart gesture no-op action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#gesturehandlingresolution)'s **selectedProposal** to an object of this type triggers no action.
+Smart gesture no-op action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type triggers no action.
 
-**Inheritance/Implementation:** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
+**Inheritance/Implementation:** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

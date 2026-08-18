@@ -78,7 +78,7 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.<br> If a null pointer is returned, the creation fails. The possible failure cause is that inner or inner is a<br> null pointer. |
+| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.  If a null pointer is returned, the creation fails. The possible failure cause is that inner or inner is a  null pointer. |
 
 ### OH_Drawing_CreateCornerPathEffect()
 
@@ -102,7 +102,7 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.<br> If a null pointer is returned, the creation fails. The possible failure cause is that radius is less than or<br> equal to 0. |
+| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.  If a null pointer is returned, the creation fails. The possible failure cause is that radius is less than or  equal to 0. |
 
 ### OH_Drawing_CreateDashPathEffect()
 
@@ -180,7 +180,7 @@ Creates a dashed path effect.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.<br> If a null pointer is returned, the creation fails. The possible failure cause is that path is a null pointer or <br> advance is less than or equal to 0. |
+| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.  If a null pointer is returned, the creation fails. The possible failure cause is that path is a null pointer or   advance is less than or equal to 0. |
 
 ### OH_Drawing_CreateSumPathEffect()
 
@@ -205,7 +205,7 @@ Creates an overlay path effect based on two distinct path effects that take effe
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.<br> If a null pointer is returned, the creation fails. The possible failure cause is that firstPathEffect or <br> secondPathEffect is a null pointer. |
+| [OH_Drawing_PathEffect*](capi-drawing-oh-drawing-patheffect.md) | Returns a pointer to the created [OH_Drawing_PathEffect](capi-drawing-oh-drawing-patheffect.md) object.  If a null pointer is returned, the creation fails. The possible failure cause is that firstPathEffect or   secondPathEffect is a null pointer. |
 
 ### OH_Drawing_PathEffectDestroy()
 

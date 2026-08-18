@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent)
+**替代接口：** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
 
 <!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## actionType

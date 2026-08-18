@@ -146,7 +146,7 @@ Sends ports to the HTML main page. This method passes Post Message ports to the 
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.<br>         <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): success.<br>         <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid parameter.<br>         <br>[ARKWEB_INIT_ERROR](capi-arkweb-error-code-h.md#arkweb_errorcode): initialization failed; no Web component bound to the webTag is found. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.          <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): success.          <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid parameter.          <br>[ARKWEB_INIT_ERROR](capi-arkweb-error-code-h.md#arkweb_errorcode): initialization failed; no Web component bound to the webTag is found. |
 
 ### getLastJavascriptProxyCallingFrameUrl()
 

@@ -2,7 +2,7 @@
 
 Options for the fixed-style dialog.
 
-**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md#dialogbaseoptions)
+**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
 **Since:** 26.1.0
 

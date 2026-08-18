@@ -11,7 +11,7 @@
 export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.Locale): SimpleDateTimeFormat
 ```
 
-通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
+通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
 
 **起始版本：** 23
 

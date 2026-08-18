@@ -1,6 +1,6 @@
 # VibratePreset
 
-Represents the preset vibration effect. You can pass **VibratePreset** to [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#vibrateeffect) to specify a preset vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration).
+Represents the preset vibration effect. You can pass **VibratePreset** to [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md) to specify a preset vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md).
 
 **Since:** 23
 

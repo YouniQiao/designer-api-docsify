@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## setNetworkAccessPolicy
 
 ```TypeScript
-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>
+function setNetworkAccessPolicy(uid: int, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>
 ```
 
-Set the policy to access the network of the specified application.
+Sets whether the application with the specified UID can access the network. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>--><!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>-End-->
+<!--Device-policy-function setNetworkAccessPolicy(uid: int, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>--><!--Device-policy-function setNetworkAccessPolicy(uid: int, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,15 +28,15 @@ Set the policy to access the network of the specified application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| policy | [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Yes | The network access policy of application. For details, see [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md#networkaccesspolicy-system-api). |
-| isReconfirmed | boolean | No | Whether this operation is reconfirmed by user or not. Default false. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| policy | [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md) | Yes | Network policy. |
+| isReconfirmed | boolean | No | Whether reconfirmation is required. The value **true** indicates that reconfirmation is not required and no dialog box is displayed. The value **false** indicates that reconfirmation is required and a dialog box is displayed when the application accesses the network. The default value is **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

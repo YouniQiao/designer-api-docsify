@@ -160,7 +160,7 @@ Starts the vertical domain picker with panel config. If the target ability is vi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
 | panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
 | panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 

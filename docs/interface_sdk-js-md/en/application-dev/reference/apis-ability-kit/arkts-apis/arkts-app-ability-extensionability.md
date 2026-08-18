@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { ExtensionAbility } from '@kit.AbilityKit';
-import { ExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -13,5 +12,5 @@ import { ExtensionAbility } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) | ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It inherits from [Ability](arkts-ability-app-ability-ability-ability-c.md#ability), with no property or method added. You cannot directly inherit from ExtensionAbility. For details about the inheritance relationship of each ability, see Inheritance Relationship . |
+| [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) | ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It inherits from [Ability](arkts-ability-app-ability-ability-ability-c.md), with no property or method added. You cannot directly inherit from ExtensionAbility. For details about the inheritance relationship of each ability, see Inheritance Relationship . |
 

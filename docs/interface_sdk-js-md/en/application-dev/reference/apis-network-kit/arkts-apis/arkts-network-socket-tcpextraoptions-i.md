@@ -1,10 +1,10 @@
 # TCPExtraOptions
 
-Defines other properties of the TCPSocket connection.
+Defines other properties of the **TCPSocket** object. This object is inherited from [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md).
 
-**Inheritance/Implementation:** TCPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#extraoptionsbase)
+**Inheritance/Implementation:** TCPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface TCPExtraOptions--><!--Device-socket-export interface TCPExtraOptions-End-->
 
@@ -22,11 +22,11 @@ import { socket } from '@kit.NetworkKit';
 OOBInline?: boolean
 ```
 
-Whether to enable OOBInline. The default value is false.
+Whether to enable OOBInline. The default value is **false**. The value **true** means to enable OOBInline, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
 
@@ -38,11 +38,11 @@ Whether to enable OOBInline. The default value is false.
 TCPNoDelay?: boolean
 ```
 
-Whether to enable no-delay on the TCPSocket connection. The default value is false.
+Whether to enable no-delay on the TCP socket connection. The default value is **false**. The value **true** means to enable no-delay on the TCP socket connection, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
 
@@ -54,11 +54,11 @@ Whether to enable no-delay on the TCPSocket connection. The default value is fal
 keepAlive?: boolean
 ```
 
-Whether to keep the connection alive. The default value is false.
+Whether to keep the connection alive. The default value is **false**. The value **true** means to keep the connection alive, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
 
@@ -67,16 +67,16 @@ Whether to keep the connection alive. The default value is false.
 ## socketLinger
 
 ```TypeScript
-socketLinger?: { on: boolean, linger: number }
+socketLinger?: {on: boolean, linger: int}
 ```
 
-Socket linger.
+Socket linger. - **on**: whether to enable socket linger. The value true means to enable socket linger and false means the opposite. - **linger**: linger time, in ms. The value ranges from **0** to **65535**. Specify this parameter only when **on** is set to **true**.
 
-**Type:** { on: boolean, linger: number }
+**Type:** {on: boolean, linger: int}
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }--><!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }-End-->
+<!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}--><!--Device-TCPExtraOptions-socketLinger?: {on: boolean, linger: int}-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -86,11 +86,11 @@ Socket linger.
 tcpFastOpen?: boolean
 ```
 
-Whether to enable TCP Fast Open (TFO) on the TCPSocket connection. The default value is false.
+Whether to enable TCP Fast Open (TFO) in the TCP socket connection. This function allows the client to carry data during the first handshake, reducing the connection setup delay and improving the performance in high-frequency short connection scenarios. The default value is **false**. **true**: yes; **false**: no. Currently, this parameter can be configured only on the client.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

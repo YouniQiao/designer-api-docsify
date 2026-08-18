@@ -25,7 +25,7 @@ Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | No | callback wear detection data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | No | callback wear detection data. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # AsyKeyGeneratorBySpec
 
-Asymmetric key generator interface with specified key specifications, defining methods for generating asymmetric keys based on specified key specifications. Before use, you must create an **AsyKeyGeneratorBySpec** instance by using [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec).
+Asymmetric key generator interface with specified key specifications, defining methods for generating asymmetric keys based on specified key specifications. Before use, you must create an **AsyKeyGeneratorBySpec** instance by using [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md).
 
 **Since:** 23
 
@@ -14,7 +14,6 @@ Asymmetric key generator interface with specified key specifications, defining m
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateKeyPair
@@ -23,7 +22,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 23
 
@@ -39,7 +38,7 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -98,7 +97,7 @@ function testGenerateKeyPair() {
 generateKeyPair(): Promise<KeyPair>
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
+Generates a key pair using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 23
 
@@ -173,7 +172,7 @@ function testGenerateKeyPair() {
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a key pair using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a key pair using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -251,7 +250,7 @@ function testGenerateKeyPairSync() {
 generatePriKey(callback: AsyncCallback<PriKey>): void
 ```
 
-Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) is used to create a key generator, the key generator generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) is used to create a key generator, you can obtain the specified private key from the key pair generated.
+Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified private key from the key pair generated.
 
 **Since:** 23
 
@@ -267,7 +266,7 @@ Generates a private key using this asymmetric key generator. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -326,7 +325,7 @@ function testGeneratePriKey() {
 generatePriKey(): Promise<PriKey>
 ```
 
-Generates a private key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain the private key from the key pair generated.
+Generates a private key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
 
 **Since:** 23
 
@@ -401,7 +400,7 @@ function testGeneratePriKey() {
 generatePriKeySync(): PriKey
 ```
 
-Generates a private key using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain the private key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a private key using this asymmetric key generator. This API returns the result synchronously. <br>If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePriKey](#generateprikey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -477,7 +476,7 @@ function testGeneratePriKeySync() {
 generatePubKey(callback: AsyncCallback<PubKey>): void
 ```
 
-Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 23
 
@@ -493,7 +492,7 @@ Generates a public key using this asymmetric key generator. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -552,7 +551,7 @@ function testGeneratePubKey() {
 generatePubKey(): Promise<PubKey>
 ```
 
-Generates a public key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
+Generates a public key using this asymmetric key generator. This API uses a promise to return the result. <br>If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 23
 
@@ -627,7 +626,7 @@ function testGeneratePubKey() {
 generatePubKeySync(): PubKey
 ```
 
-Generates a public key using this asymmetric key generator. This API returns the result synchronously. <br>If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#asykeyspectype) is used to create a key generator, you can obtain the specified public key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a public key using this asymmetric key generator. This API returns the result synchronously. <br>If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified public key from the key pair generated. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [generatePubKey](#generatepubkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 

@@ -39,7 +39,7 @@ Dynamically adds a listener to the state variable of state management V2. For de
 | target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
 | path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. <br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. <br>If an unsupported type is provided, a runtime error is thrown. |
-| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md#monitoroptions). By default, the asynchronous callback is used. |
+| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md). By default, the asynchronous callback is used. |
 
 **Error codes:**
 
@@ -523,7 +523,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#customcomponentcontext) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
 
@@ -539,7 +539,7 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customComponent | T | Yes | @Component or @ComponentV2 whose context is to be obtained. |
+| customComponent | T | Yes |  |
 
 **Return value:**
 
@@ -891,7 +891,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#arktscollections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
 
 **Return value:**
 

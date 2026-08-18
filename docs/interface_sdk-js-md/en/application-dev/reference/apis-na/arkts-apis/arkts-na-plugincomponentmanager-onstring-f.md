@@ -28,5 +28,5 @@ Plugin component event listener.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | string | Yes |  |
-| callback | [OnPushEventCallback](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Yes |  |
+| callback | [OnPushEventCallback](arkts-na-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-na-plugincomponentmanager-onrequesteventcallback-t.md) | Yes |  |
 

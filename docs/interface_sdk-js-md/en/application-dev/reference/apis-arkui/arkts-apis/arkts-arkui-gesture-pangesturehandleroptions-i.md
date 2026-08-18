@@ -2,7 +2,7 @@
 
 Defines the PanGestureHandler options.
 
-**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md#basehandleroptions)
+**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 
 **Since:** 23
 

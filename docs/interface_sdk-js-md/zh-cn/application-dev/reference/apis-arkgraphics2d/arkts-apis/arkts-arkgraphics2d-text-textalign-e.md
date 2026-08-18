@@ -78,7 +78,7 @@ JUSTIFY = 3
 START = 4
 ```
 
-基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#textdirection)，文本靠开头方向对齐。
+基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本靠开头方向对齐。
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ START = 4
 END = 5
 ```
 
-基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md#textdirection)，文本以结束方向对齐。
+基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本以结束方向对齐。
 
 **起始版本：** 23
 

@@ -53,7 +53,7 @@ Callback invoked when the WebSocket client receives an **Open** message.
 
 | Parameter | Description |
 | -- | -- |
-| (struct WebSocket \*client | WebSocket client. |
+| [struct WebSocket](capi-netstack-websocket.md) \*client | WebSocket client. |
 | [WebSocket_OpenResult](capi-netstack-websocket-openresult.md) openResult | Content of the **Open** message sent from the WebSocket server to client. |
 
 ### WebSocket_OnMessageCallback()
@@ -72,7 +72,7 @@ Callback invoked when the WebSocket client receives a **Message** message.
 
 | Parameter | Description |
 | -- | -- |
-| (struct WebSocket \*client | WebSocket client. |
+| [struct WebSocket](capi-netstack-websocket.md) \*client | WebSocket client. |
 | char \*data | Data received by the WebSocket client. |
 | uint32_t length | Length of the data received by the WebSocket client. |
 
@@ -92,7 +92,7 @@ Callback invoked when the WebSocket client receives an **Error** message.
 
 | Parameter | Description |
 | -- | -- |
-| (struct WebSocket \*client | WebSocket client. |
+| [struct WebSocket](capi-netstack-websocket.md) \*client | WebSocket client. |
 | [WebSocket_ErrorResult](capi-netstack-websocket-errorresult.md) errorResult | Content of the **Error** message sent from the WebSocket server to client. |
 
 ### WebSocket_OnCloseCallback()
@@ -111,7 +111,7 @@ Callback invoked when the WebSocket client receives a **Close** message.
 
 | Parameter | Description |
 | -- | -- |
-| (struct WebSocket \*client | WebSocket client. |
+| [struct WebSocket](capi-netstack-websocket.md) \*client | WebSocket client. |
 | [WebSocket_CloseResult](capi-netstack-websocket-closeresult.md) closeResult | Content of the **Close** message sent from the WebSocket server to client. |
 
 

@@ -21,7 +21,7 @@ Obtains the list of all existing Wi-Fi configurations. &lt;p&gt;You can obtain o
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getdeviceconfigs)
+**Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
 

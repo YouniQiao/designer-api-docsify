@@ -2,7 +2,7 @@
 
 Message options for the dialog box, combining message content with text style.
 
-**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#dialogtextstyleoptions)
+**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)
 
 **Since:** 26.1.0
 

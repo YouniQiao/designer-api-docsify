@@ -22,20 +22,20 @@ import { partnerAgent } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md#binddevice) | Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#partneragentextensionability) of the application will be launched. - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true, the application's ability will be launched when the device is connected via Bluetooth. - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true, the application's ability will be launched when the device is detected via Bluetooth scanning. Note: The device must be paired first. |
-| [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md#getbounddevices) | Gets the list of addresses of the bound partner device for this application. |
-| [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md#isdevicebound) | Checks whether a device is bound to this application. |
-| [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md#isdevicecontrolenabled) | Checks whether device control is enabled. |
-| [isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md#ispartneragentsupported) | Checks whether the current device supports the partner agent feature. |
-| [unbindDevice](arkts-connectivity-partneragent-unbinddevice-f.md#unbinddevice) | Unbinds a partner device. |
+| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md) | Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md) of the application will be launched. - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true, the application's ability will be launched when the device is connected via Bluetooth. - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true, the application's ability will be launched when the device is detected via Bluetooth scanning. Note: The device must be paired first. |
+| [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md) | Gets the list of addresses of the bound partner device for this application. |
+| [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md) | Checks whether a device is bound to this application. |
+| [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md) | Checks whether device control is enabled. |
+| [isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md) | Checks whether the current device supports the partner agent feature. |
+| [unbindDevice](arkts-connectivity-partneragent-unbinddevice-f.md) | Unbinds a partner device. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [disableDeviceControl](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md#disabledevicecontrol) | Disables device control for a bound device. |
-| [enableDeviceControl](arkts-connectivity-partneragent-enabledevicecontrol-f-sys.md#enabledevicecontrol) | Enables device control for a bound device. |
+| [disableDeviceControl](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md) | Disables device control for a bound device. |
+| [enableDeviceControl](arkts-connectivity-partneragent-enabledevicecontrol-f-sys.md) | Enables device control for a bound device. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function getNetAccessPolicy(): Promise<NetAccessPolicy>
 ```
 
-Query the network access policy of the calling application.
+Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings** > **Mobile network** > **Manage data usage** > **Network access**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Query the network access policy of the calling application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md)&gt; | Returns the network access policy of the application. For details, see { |
+| Promise&lt;[NetAccessPolicy](arkts-network-policy-netaccesspolicy-i.md)&gt; | Promise used to return the network access policy of the application. |
 
 **Error codes:**
 

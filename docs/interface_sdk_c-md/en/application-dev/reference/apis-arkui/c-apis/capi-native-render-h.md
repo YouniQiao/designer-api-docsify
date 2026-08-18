@@ -256,7 +256,7 @@ Sets a blur radius for a target blur style.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBackgroundBlurOption()
 
@@ -281,7 +281,7 @@ Sets a background blur style for a render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_ResetBackgroundBlurOption()
 
@@ -305,7 +305,7 @@ Resets a background blur style for a render node. After the reset, there is no b
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_SetForegroundBlurOption()
 
@@ -330,7 +330,7 @@ Sets a foreground blur style for a render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_ResetForegroundBlurOption()
 
@@ -354,7 +354,7 @@ Resets a foreground blur style for a render node. After the reset, there is no f
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_SetContentBlurOption()
 
@@ -379,7 +379,7 @@ Sets a content blur style for a render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_ResetContentBlurOption()
 
@@ -403,7 +403,7 @@ Resets a content blur style for a render node. After the reset, there is no cont
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AddRenderNode()
 
@@ -428,7 +428,7 @@ Adds a child render node to the parent custom node.The parent node supports only
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node.<br>     <br>Returns [ARKUI_ERROR_CODE_CHILD_EXISTED](capi-error-code-h.md#arkui_errorcode) if the target node already has a child node.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED](capi-error-code-h.md#arkui_errorcode) if the target rendering node already has a parent<br>     node.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the current render node originates from a<br>     FrameNode that has been either detached as a child node or destroyed. This specification is supported since API<br>     version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node.      <br>Returns [ARKUI_ERROR_CODE_CHILD_EXISTED](capi-error-code-h.md#arkui_errorcode) if the target node already has a child node.      <br>Returns [ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED](capi-error-code-h.md#arkui_errorcode) if the target rendering node already has a parent      node.      <br>Returns [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the current render node originates from a      FrameNode that has been either detached as a child node or destroyed. This specification is supported since API      version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_RemoveRenderNode()
 
@@ -453,7 +453,7 @@ Removes the specified child render node from the parent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node. |
 
 ### OH_ArkUI_RenderNodeUtils_ClearRenderNodeChildren()
 
@@ -477,7 +477,7 @@ Clears child render nodes in the parent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) if the target node is not a custom node. |
 
 ### OH_ArkUI_RenderNodeUtils_Invalidate()
 
@@ -501,7 +501,7 @@ Marks the target node, triggering its lifecycle and child nodes to re-render.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_CreateNode()
 
@@ -543,7 +543,7 @@ Destroys the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AddChild()
 
@@ -568,7 +568,7 @@ Adds a child node to the target parent render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the current render node originates from a<br>     FrameNode that has been either detached as a child node or destroyed. This specification is supported since API<br>     version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22.      <br>Returns [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the current render node originates from a      FrameNode that has been either detached as a child node or destroyed. This specification is supported since API      version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_InsertChildAfter()
 
@@ -594,7 +594,7 @@ Adds a child node after the target child node of the parent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.<br>     [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.<br>     [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the node is obtained from a FrameNode. Add since api 22.<br>     [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the child is obtained from a FrameNode, and its<br>     corresponding FrameNode is<br>     no longer in the adopted state. Add since api 22. |
+| int32_t | Error code.      [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.      [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the node is obtained from a FrameNode. Add since api 22.      [ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the child is obtained from a FrameNode, and its      corresponding FrameNode is      no longer in the adopted state. Add since api 22. |
 
 ### OH_ArkUI_RenderNodeUtils_RemoveChild()
 
@@ -619,7 +619,7 @@ Removes a child node from the specified render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_ClearChildren()
 
@@ -643,7 +643,7 @@ Clears all child nodes of the specified render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetChild()
 
@@ -669,7 +669,7 @@ Obtains the child node at the specified index.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetFirstChild()
 
@@ -694,7 +694,7 @@ Obtains the first child node of the specified render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetNextSibling()
 
@@ -719,7 +719,7 @@ Obtains the next sibling node of the specified node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found. |
 
 ### OH_ArkUI_RenderNodeUtils_GetPreviousSibling()
 
@@ -744,7 +744,7 @@ Obtains the previous sibling node of the specified node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_CHILD_NOT_EXIST](capi-error-code-h.md#arkui_errorcode) if the corresponding render child node is not found. |
 
 ### OH_ArkUI_RenderNodeUtils_GetChildren()
 
@@ -770,7 +770,7 @@ Obtains all child render nodes of the parent render node. The caller is responsi
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetChildrenCount()
 
@@ -795,7 +795,7 @@ Obtains the number of child render nodes of the specified render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBackgroundColor()
 
@@ -820,7 +820,7 @@ Sets the background color for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBackgroundColor()
 
@@ -845,7 +845,7 @@ Obtains the background color of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetClipToFrame()
 
@@ -870,7 +870,7 @@ Sets whether to clip the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetClipToFrame()
 
@@ -895,7 +895,7 @@ Obtains whether the render node is clipped.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetClipToBounds()
 
@@ -920,7 +920,7 @@ Sets whether to clip to the bounds of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetClipToBounds()
 
@@ -945,7 +945,7 @@ Sets whether clipping to the bounds of the render node is enabled.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetOpacity()
 
@@ -970,7 +970,7 @@ Sets the opacity value for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetOpacity()
 
@@ -995,7 +995,7 @@ Obtains the opacity value of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetSize()
 
@@ -1021,7 +1021,7 @@ Sets the size for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetSize()
 
@@ -1047,7 +1047,7 @@ Obtains the size of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetPosition()
 
@@ -1073,7 +1073,7 @@ Sets the position coordinates for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetPosition()
 
@@ -1099,7 +1099,7 @@ Obtains the position coordinates of the render node. The coordinates are the pos
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetPivot()
 
@@ -1125,7 +1125,7 @@ Sets the pivot point for the transformation of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetPivot()
 
@@ -1151,7 +1151,7 @@ Obtains the pivot point coordinates of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetScale()
 
@@ -1177,7 +1177,7 @@ Sets the scale factors for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetScale()
 
@@ -1203,7 +1203,7 @@ Obtains the scale factors of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetTranslation()
 
@@ -1229,7 +1229,7 @@ Sets the translation offset for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetTranslation()
 
@@ -1255,7 +1255,7 @@ Obtains the translation offset of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetRotation()
 
@@ -1282,7 +1282,7 @@ Sets the rotation angles for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetRotation()
 
@@ -1309,7 +1309,7 @@ Obtains the rotation angles of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetTransform()
 
@@ -1334,7 +1334,7 @@ Sets the transformation matrix for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetShadowColor()
 
@@ -1359,7 +1359,7 @@ Sets the shadow color for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetShadowColor()
 
@@ -1384,7 +1384,7 @@ Obtains the shadow color of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetShadowOffset()
 
@@ -1410,7 +1410,7 @@ Sets the shadow offset for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetShadowOffset()
 
@@ -1436,7 +1436,7 @@ Obtains the shadow offset of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetShadowAlpha()
 
@@ -1461,7 +1461,7 @@ Sets the shadow alpha (transparency) for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetShadowAlpha()
 
@@ -1486,7 +1486,7 @@ Obtains the shadow alpha (transparency) of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetShadowElevation()
 
@@ -1511,7 +1511,7 @@ Sets the shadow elevation for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetShadowElevation()
 
@@ -1536,7 +1536,7 @@ Obtains the shadow elevation of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetShadowRadius()
 
@@ -1561,7 +1561,7 @@ Sets the shadow radius for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetShadowRadius()
 
@@ -1586,7 +1586,7 @@ Obtains the shadow radius of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBorderStyle()
 
@@ -1611,7 +1611,7 @@ Sets the border style for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBorderStyle()
 
@@ -1636,7 +1636,7 @@ Obtains the border style of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBorderWidth()
 
@@ -1661,7 +1661,7 @@ Sets the border width for the render node. The border width must be smaller than
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBorderWidth()
 
@@ -1686,7 +1686,7 @@ Obtains the border width of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBorderColor()
 
@@ -1711,7 +1711,7 @@ Sets the border color for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBorderColor()
 
@@ -1736,7 +1736,7 @@ Obtains the border color of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBorderRadius()
 
@@ -1761,7 +1761,7 @@ Sets the border corner radius for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBorderRadius()
 
@@ -1786,7 +1786,7 @@ Obtains the border corner radius of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetMask()
 
@@ -1811,7 +1811,7 @@ Applies a mask to the render node using the mask configuration.The mask is creat
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetClip()
 
@@ -1836,7 +1836,7 @@ Applies clipping to the render node using the clipping configuration.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetMarkNodeGroup()
 
@@ -1861,7 +1861,7 @@ Marks whether to prioritize drawing the node and its child nodes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetBounds()
 
@@ -1889,7 +1889,7 @@ Sets the bounds for the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-error-code-h.md#arkui_errorcode) if the parameter value is out of range.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_GetBounds()
 
@@ -1917,7 +1917,7 @@ Obtains the bounds of the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_SetDrawRegion()
 
@@ -1945,7 +1945,7 @@ Sets the drawing region for the render node. This drawing region is mainly used 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachContentModifier()
 
@@ -1970,7 +1970,7 @@ Attaches a content modifier to the render node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.<br>     This specification is supported since API version 22. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the target node originates from a FrameNode.      This specification is supported since API version 22. |
 
 ### OH_ArkUI_RenderNodeUtils_CreateContentModifier()
 
@@ -2031,7 +2031,7 @@ Attaches a float property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachVector2Property()
 
@@ -2056,7 +2056,7 @@ Attaches a 2D vector property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachColorProperty()
 
@@ -2081,7 +2081,7 @@ Attaches a color property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachFloatAnimatableProperty()
 
@@ -2106,7 +2106,7 @@ Attaches an animatable float property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachVector2AnimatableProperty()
 
@@ -2131,7 +2131,7 @@ Attaches an animatable 2D vector property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_AttachColorAnimatableProperty()
 
@@ -2156,7 +2156,7 @@ Attaches an animatable color property to the target content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_CreateFloatProperty()
 
@@ -2205,7 +2205,7 @@ Sets the value of the float property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetFloatPropertyValue()
 
@@ -2230,7 +2230,7 @@ Obtains the value of the float property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeFloatProperty()
 
@@ -2299,7 +2299,7 @@ Sets the value of the 2D vector property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetVector2PropertyValue()
 
@@ -2325,7 +2325,7 @@ Obtains the value of the 2D vector property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeVector2Property()
 
@@ -2392,7 +2392,7 @@ Sets the value of the color property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetColorPropertyValue()
 
@@ -2417,7 +2417,7 @@ Obtains the value of the color property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeColorProperty()
 
@@ -2484,7 +2484,7 @@ Sets the value of the animatable float property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetFloatAnimatablePropertyValue()
 
@@ -2509,7 +2509,7 @@ Obtains the value of the animatable float property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeFloatAnimatableProperty()
 
@@ -2578,7 +2578,7 @@ Sets the value of the animatable 2D vector property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetVector2AnimatablePropertyValue()
 
@@ -2604,7 +2604,7 @@ Obtains the value of the animatable 2D vector property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeVector2AnimatableProperty()
 
@@ -2671,7 +2671,7 @@ Sets the value of the animatable color property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_GetColorAnimatablePropertyValue()
 
@@ -2696,7 +2696,7 @@ Obtains the value of the animatable color property.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_DisposeColorAnimatableProperty()
 
@@ -2732,7 +2732,7 @@ Sets the **onDraw** callback function for the content modifier.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_RenderContentModifierHandle](capi-arkui-rendernodeutils-arkui-rendercontentmodifier8h.md) modifier | Target content modifier. |
+| rkUI_RenderContentModifierHandle modifier | Target content modifier. |
 | void\* userData | Custom data to be passed to the callback. |
 | void (\*callback)(ArkUI_DrawContext\* context | The draw event receiver callback. |
 
@@ -2740,7 +2740,7 @@ Sets the **onDraw** callback function for the content modifier.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed. |
 
 ### OH_ArkUI_RenderNodeUtils_CreateRectShapeOption()
 
@@ -3603,7 +3603,7 @@ Obtains the RenderNode of the target node that has been accepted as a child node
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.<br>     <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.<br>     <br>Returns [ARKUI_ERROR_CODE_RENDER_NOT_ADOPTED_NODE](capi-error-code-h.md#arkui_errorcode) if this node is not accepted as a child node. |
+| int32_t | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if C API initialization failed.      <br>Returns [ARKUI_ERROR_CODE_RENDER_NOT_ADOPTED_NODE](capi-error-code-h.md#arkui_errorcode) if this node is not accepted as a child node. |
 
 ### OH_ArkUI_RenderNodeUtils_SetRoundRectShapeOptionValue()
 
@@ -3673,7 +3673,7 @@ Insert a child render node at the specified position in the parent node.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.<br>     <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.<br>     </li><li>[ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) The node is not a customNode.<br>     </li><li>[ARKUI_ERROR_CODE_CHILD_EXISTED](capi-error-code-h.md#arkui_errorcode) The node already has a child.<br>     </li><li>[ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED](capi-error-code-h.md#arkui_errorcode) The child already has a parent node.<br>     </li><li>[ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the child is obtained from a FrameNode,<br>     and its corresponding FrameNode is no longer in the adopted state.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.      </li><li>[ARKUI_ERROR_CODE_NOT_CUSTOM_NODE](capi-error-code-h.md#arkui_errorcode) The node is not a customNode.      </li><li>[ARKUI_ERROR_CODE_CHILD_EXISTED](capi-error-code-h.md#arkui_errorcode) The node already has a child.      </li><li>[ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED](capi-error-code-h.md#arkui_errorcode) The child already has a parent node.      </li><li>[ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE](capi-error-code-h.md#arkui_errorcode) if the child is obtained from a FrameNode,      and its corresponding FrameNode is no longer in the adopted state.</li></ul> |
 
 ### OH_ArkUI_RenderNodeUtils_GetRenderNodeChildrenCount()
 
@@ -3698,7 +3698,7 @@ Get the number of child render nodes of the specified parent node.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.<br>     <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 ### OH_ArkUI_RenderNodeUtils_GetRenderNodeAt()
 
@@ -3724,6 +3724,6 @@ Get the child render node at the specified position from the parent node.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.<br>     <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.<br>     </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.<br>     </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Error code.      <ul><li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) Success.      </li><li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function parameter exception.      </li><li>[ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if CAPI init error.</li></ul> |
 
 

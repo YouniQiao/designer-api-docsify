@@ -14,7 +14,6 @@ Describes an uninstallation disposed rule.
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
 ```
 
 ## priority

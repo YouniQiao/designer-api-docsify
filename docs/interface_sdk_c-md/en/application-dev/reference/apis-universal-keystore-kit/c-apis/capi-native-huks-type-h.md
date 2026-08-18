@@ -44,18 +44,7 @@ Defines enums, structs, macros, and error codes in HUKS.
 | [OH_Huks_CipherMode](#oh_huks_ciphermode) | OH_Huks_CipherMode | Cipher mode. |
 | [OH_Huks_KeySize](#oh_huks_keysize) | OH_Huks_KeySize | Enumerates the key sizes of different algorithms. |
 | [OH_Huks_KeyAlg](#oh_huks_keyalg) | OH_Huks_KeyAlg | Enumerates the algorithms for keys. |
-| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**:
-\| x25519_plain_pubkey_length  (4 Byte) \| x25519_plain_pubkey \|  agreekey_aad_length (4 Byte) \| agreekey_aad
-\|   agreekey_nonce_length     (4 Byte) \|   agreekey_nonce    \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
-\|    kek_enc_data_length      (4 Byte) \|    kek_enc_data     \|    kek_aad_length    (4 Byte) \| kek_aad
-\|      kek_nonce_length       (4 Byte) \|      kek_nonce      \|   kek_aead_tag_len   (4 Byte) \| kek_aead_tag
-\|   key_material_size_len     (4 Byte) \|  key_material_size  \|   key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**:
-\|  ECC_plain_pubkey_length    (4 Byte) \|  ECC_plain_pubkey   \|  agreekey_aad_length (4 Byte) \| agreekey_aad
-\|   agreekey_nonce_length     (4 Byte) \|   agreekey_nonce    \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
-\|    kek_enc_data_length      (4 Byte) \|    kek_enc_data     \|    kek_aad_length    (4 Byte) \| kek_aad
-\|      kek_nonce_length       (4 Byte) \|      kek_nonce      \|   kek_aead_tag_len   (4 Byte) \| kek_aead_tag
-\|   key_material_size_len     (4 Byte) \|  key_material_size  \|   key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**:
-\|     kek_SM4_enc_length      (4 Byte) \|      EN_SM4_key     \| importkey_enc_length (4 Byte) \| importkey_enc |
+| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**: \| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**: \| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**: \| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc |
 | [OH_Huks_KeyGenerateType](#oh_huks_keygeneratetype) | OH_Huks_KeyGenerateType | Enumerates the types of the key generated. |
 | [OH_Huks_KeyFlag](#oh_huks_keyflag) | OH_Huks_KeyFlag | Enumerates the key generation types. |
 | [OH_Huks_KeyStorageType](#oh_huks_keystoragetype) | OH_Huks_KeyStorageType | Enumerates the key storage types. |
@@ -267,18 +256,7 @@ enum OH_Huks_AlgSuite
 
 **Description**
 
-Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**:
-\| x25519_plain_pubkey_length  (4 Byte) \| x25519_plain_pubkey \|  agreekey_aad_length (4 Byte) \| agreekey_aad
-\|   agreekey_nonce_length     (4 Byte) \|   agreekey_nonce    \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
-\|    kek_enc_data_length      (4 Byte) \|    kek_enc_data     \|    kek_aad_length    (4 Byte) \| kek_aad
-\|      kek_nonce_length       (4 Byte) \|      kek_nonce      \|   kek_aead_tag_len   (4 Byte) \| kek_aead_tag
-\|   key_material_size_len     (4 Byte) \|  key_material_size  \|   key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**:
-\|  ECC_plain_pubkey_length    (4 Byte) \|  ECC_plain_pubkey   \|  agreekey_aad_length (4 Byte) \| agreekey_aad
-\|   agreekey_nonce_length     (4 Byte) \|   agreekey_nonce    \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
-\|    kek_enc_data_length      (4 Byte) \|    kek_enc_data     \|    kek_aad_length    (4 Byte) \| kek_aad
-\|      kek_nonce_length       (4 Byte) \|      kek_nonce      \|   kek_aead_tag_len   (4 Byte) \| kek_aead_tag
-\|   key_material_size_len     (4 Byte) \|  key_material_size  \|   key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**:
-\|     kek_SM4_enc_length      (4 Byte) \|      EN_SM4_key     \| importkey_enc_length (4 Byte) \| importkey_enc
+Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**: \| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**: \| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**: \| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc
 
 **Since**: 9
 

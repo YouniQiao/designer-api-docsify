@@ -11,6 +11,7 @@ AbilityStage是一个[Module](../../../quick-start/application-package-overview.
 ## 导入模块
 
 ```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -137,7 +138,7 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration)类中。同步接口 ，不支持异步回调。 > **说明：** > > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)类中。同步接口 ，不支持异步回调。 > **说明：** > > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 23
 
@@ -278,7 +279,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md#memorylevel)。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 
 **示例**
 
@@ -298,7 +299,7 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-如果UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;配置了在独立进程中运行（即 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!-- DelEnd--&gt;的isolationProcess字段取值为true），当该UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;被拉起时，会触发该回调，并返回一个string作为 进程唯一标识。同步接口，不支持异步回调。 如果该应用已有相同标识的进程存在，则待启动的UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;运行在此进程中，否则创建新的进程。 如果开发者同时实现onNewProcessRequest和[onAcceptWant](#onacceptwant)，将先收到onNewProcessRequest回调，再收到 onAcceptWant回调。 &lt;!--Del--&gt; 仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)配置文件中配 置isolationProcess字段为true。 &lt;!--DelEnd--&gt; > **说明：** > > - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。&lt;!--Del--&gt;从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd &gt; --> > > - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync)实现时，本回调函 > 数将不执行。
+如果UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->配置了在独立进程中运行（即 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility<!--Del-->或UIExtensionAbility<!-- DelEnd-->的isolationProcess字段取值为true），当该UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->被拉起时，会触发该回调，并返回一个string作为 进程唯一标识。同步接口，不支持异步回调。 如果该应用已有相同标识的进程存在，则待启动的UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->运行在此进程中，否则创建新的进程。 如果开发者同时实现onNewProcessRequest和[onAcceptWant](#onacceptwant)，将先收到onNewProcessRequest回调，再收到 onAcceptWant回调。 <!--Del--> 仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)配置文件中配 置isolationProcess字段为true。 <!--DelEnd--> > **说明：** > > - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。<!--Del-->从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。<!--DelEnd > --> > > - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync)实现时，本回调函 > 数将不执行。
 
 **起始版本：** 23
 
@@ -312,7 +313,7 @@ onNewProcessRequest(want: Want): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，此处表示调用方传入的启动参数，如UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，此处表示调用方传入的启动参数，如UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->名称、Bundle名称等。 |
 
 **返回值：**
 
@@ -339,7 +340,7 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequestAsync(want: Want): Promise<string>
 ```
 
-如果UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;配置了在独立进程中运行（即 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!-- DelEnd--&gt;的isolationProcess字段取值为true），当该UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;被拉起时，会触发该回调，并返回一个string作为 进程唯一标识。使用Promise异步回调。 如果该应用已有相同标识的进程存在，则待启动的UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;运行在此进程中，否则创建新的进程。 &lt;!--Del--&gt; 仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置 isolationProcess字段为true。 &lt;!--DelEnd--&gt;
+如果UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->配置了在独立进程中运行（即 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility<!--Del-->或UIExtensionAbility<!-- DelEnd-->的isolationProcess字段取值为true），当该UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->被拉起时，会触发该回调，并返回一个string作为 进程唯一标识。使用Promise异步回调。 如果该应用已有相同标识的进程存在，则待启动的UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->运行在此进程中，否则创建新的进程。 <!--Del--> 仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置 isolationProcess字段为true。 <!--DelEnd-->
 
 **起始版本：** 23
 
@@ -355,13 +356,13 @@ onNewProcessRequestAsync(want: Want): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，此处表示调用方传入的启动参数，如UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，此处表示调用方传入的启动参数，如UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->名称、Bundle名称等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回一个由开发者自定义的进程字符串标识。如果该应用已有相同标识的进程存在，则UIAbility&lt;!--Del--&gt;或UIExtensionAbility &lt;!--DelEnd--&gt;在此进程中运行，否则创建新的进程。 |
+| Promise&lt;string&gt; | Promise对象，返回一个由开发者自定义的进程字符串标识。如果该应用已有相同标识的进程存在，则UIAbility<!--Del-->或UIExtensionAbility <!--DelEnd-->在此进程中运行，否则创建新的进程。 |
 
 **示例**
 

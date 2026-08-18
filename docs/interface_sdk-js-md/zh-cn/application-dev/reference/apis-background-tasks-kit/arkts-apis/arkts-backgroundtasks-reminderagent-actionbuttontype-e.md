@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#actionbuttontype)
+**替代接口：** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 <!--Device-reminderAgent-export enum ActionButtonType--><!--Device-reminderAgent-export enum ActionButtonType-End-->
 

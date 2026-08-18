@@ -31,7 +31,7 @@ Connects the current ability to the specified web native message extension abili
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the web native message extension. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The element name of the web native messaging ability |
-| callback | [WebExtensionConnectionCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | The remote object instance |
+| callback | [WebExtensionConnectionCallback](arkts-na-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | The remote object instance |
 
 **Return value:**
 

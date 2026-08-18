@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 ```
 
 ## Summary

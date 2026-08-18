@@ -1,8 +1,8 @@
 # HTML
 
-HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md#text)的子类，用于描述超文本标记语言数据。
+HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超文本标记语言数据。
 
-**继承/实现关系：** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#text)
+**继承/实现关系：** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md#text)的
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## plainContent

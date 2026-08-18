@@ -18,7 +18,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
+**Substitutes:** [rotate](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md#rotate)
 
 <!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 
@@ -28,7 +28,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
+| options | [RotateOption](../../apis-na/arkts-apis/arkts-na-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
 
 **Return value:**
 

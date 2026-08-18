@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSignatureInfo
@@ -13,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getSignatureInfo(uid: int): SignatureInfo
 ```
 
-Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#signatureinfo) of an application based on the given UID.
+Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md) of an application based on the given UID.
 
 **Since:** 23
 

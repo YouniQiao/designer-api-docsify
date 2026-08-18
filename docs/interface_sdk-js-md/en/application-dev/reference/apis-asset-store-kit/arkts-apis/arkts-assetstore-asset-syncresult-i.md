@@ -36,7 +36,7 @@ Number of assets that fail to be synced.
 readonly resultCode: number
 ```
 
-Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see [ErrorCode](arkts-assetstore-asset-errorcode-e.md#errorcode) for the result code.
+Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see [ErrorCode](arkts-assetstore-asset-errorcode-e.md) for the result code.
 
 **Type:** number
 

@@ -47,7 +47,7 @@ The TA sends a message to the gtask to lock the agent.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.<br>         Returns other information otherwise. |
+| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.          Returns other information otherwise. |
 
 ### tee_agent_unlock()
 
@@ -71,7 +71,7 @@ Unlock the agent.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.<br>         Returns other information otherwise. |
+| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.          Returns other information otherwise. |
 
 ### tee_send_agent_cmd()
 
@@ -95,7 +95,7 @@ Send agent cmd to gtask.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.<br>         Returns other information otherwise. |
+| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.          Returns other information otherwise. |
 
 ### tee_get_agent_buffer()
 
@@ -121,6 +121,6 @@ Receive messgage in get agent buffer.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.<br>         Returns other information otherwise. |
+| TEE_Result | Returns {@code TEE_SUCCESS} if the operation is successful.          Returns other information otherwise. |
 
 

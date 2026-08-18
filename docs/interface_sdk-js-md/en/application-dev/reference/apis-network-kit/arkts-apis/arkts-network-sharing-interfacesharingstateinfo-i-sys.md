@@ -1,6 +1,6 @@
 # InterfaceSharingStateInfo (System API)
 
-The interface is used to notify listeners of changes in shared interface status.
+Wakes up the listener for network sharing state changes of an NIC.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { sharing } from '@kit.NetworkKit';
 iface: string
 ```
 
-The specified network interface name.
+NIC name.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ The specified network interface name.
 state: SharingIfaceState
 ```
 
-Network card sharing status.
+Network sharing state of the NIC.
 
 **Type:** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
 

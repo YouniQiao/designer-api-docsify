@@ -23,22 +23,22 @@ import { imageGeneration } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [closeGeneratorDialog](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md#closegeneratordialog) | Close the AI image generation task popup. |
-| [closeGeneratorNodeGraph](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md#closegeneratornodegraph) | Close the AI node graph Sheet. |
-| [hideGeneratorDialog](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md#hidegeneratordialog) | Hide the AI image generation task popup. |
-| [hideGeneratorNodeGraph](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md#hidegeneratornodegraph) | Hide the AI node graph Sheet. |
-| [openGeneratorNodeGraph](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md#opengeneratornodegraph) | Open the AI node graph Sheet. |
-| [restoreGeneratorDialog](arkts-arkui-imagegeneration-restoregeneratordialog-f-sys.md#restoregeneratordialog) | Restore the AI image generation task popup. |
-| [restoreGeneratorNodeGraph](arkts-arkui-imagegeneration-restoregeneratornodegraph-f-sys.md#restoregeneratornodegraph) | Restore the AI node graph Sheet. |
-| [showGeneratorDialog](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md#showgeneratordialog) | Open the AI image generation task popup and perform AI image generation operations. |
+| [closeGeneratorDialog](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md) | Close the AI image generation task popup. |
+| [closeGeneratorNodeGraph](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md) | Close the AI node graph Sheet. |
+| [hideGeneratorDialog](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md) | Hide the AI image generation task popup. |
+| [hideGeneratorNodeGraph](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md) | Hide the AI node graph Sheet. |
+| [openGeneratorNodeGraph](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md) | Open the AI node graph Sheet. |
+| [restoreGeneratorDialog](arkts-arkui-imagegeneration-restoregeneratordialog-f-sys.md) | Restore the AI image generation task popup. |
+| [restoreGeneratorNodeGraph](arkts-arkui-imagegeneration-restoregeneratornodegraph-f-sys.md) | Restore the AI node graph Sheet. |
+| [showGeneratorDialog](arkts-arkui-imagegeneration-showgeneratordialog-f-sys.md) | Open the AI image generation task popup and perform AI image generation operations. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -62,7 +62,7 @@ import { imageGeneration } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -70,7 +70,7 @@ import { imageGeneration } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

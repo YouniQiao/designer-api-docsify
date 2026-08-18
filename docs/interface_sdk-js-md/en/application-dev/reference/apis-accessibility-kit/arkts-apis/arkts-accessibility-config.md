@@ -14,50 +14,49 @@ The **accessibility.config** module provides APIs for configuring system accessi
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability) | Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-system-api) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api). This API uses a promise to return the result. |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-system-api) | Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-system-api) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api). This API uses an asynchronous callback to return the result. |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability) | Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-system-api). This API uses a promise to return the result. Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api). |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-system-api) | Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-system-api). This API uses an asynchronous callback to return the result. Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api). |
-| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) | Enables an accessibility extension and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md#connectcallback-system-api) as the callback for disconnection events of the accessibility extension. This API uses a promise to return the result. When the accessibility extension process is abnormally disconnected, the onDisconnect callback of ConnectCallback will be triggered. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-system-api). |
-| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getseniormodestateforapp) | Queries the senior mode state of an app. This API uses a promise to return the result. |
-| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offenabledaccessibilityextensionlistchange) | Unregister listener that watches for changes in the enabled status of accessibility extensions. |
-| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md#offinstalledaccessibilitylistchange) | Unregister listener that watches for changes in the installed status of accessibility extensions. |
-| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp) | Cancels the listener for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. |
-| [off_enabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offenabledaccessibilityextensionlistchange) | Cancels the listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result. |
-| [off_installedAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md#offinstalledaccessibilitylistchange) | Cancels the listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result. |
-| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md#onenabledaccessibilityextensionlistchange) | Register the listener that watches for changes in the enabled status of accessibility extensions. |
-| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md#oninstalledaccessibilitylistchange) | Register the listener that watches for changes in the installed status of accessibility extensions. |
-| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onseniormodestatechangeforapp) | Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp-system-api) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur. |
-| [on_enabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md#onenabledaccessibilityextensionlistchange) | Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result. This API must be used together with [config.off('enabledAccessibilityExtensionListChange')](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offenabledaccessibilityextensionlistchange). Call off to unregister the listener when it is no longer needed to avoid resource leaks. |
-| [on_installedAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md#oninstalledaccessibilitylistchange) | Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result. This API must be used together with [config.off('installedAccessibilityListChange')](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offenabledaccessibilityextensionlistchange). Call off to unregister the listener when it is no longer needed to avoid resource leaks. |
-| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setmagnificationstate) | Sets the enabled state of the magnification effect. The magnification effect depends on the magnification gesture feature. This API takes effect only when the magnification gesture feature is enabled. |
-| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setseniormodestateforapp) | Sets the senior mode state for an app. This API uses a promise to return the result. |
-| [startBlinking](arkts-accessibility-config-startblinking-f-sys.md#startblinking) | Enables the flash or screen for blinking reminders. |
-| [stopBlinking](arkts-accessibility-config-stopblinking-f-sys.md#stopblinking) | Stops flash blinking or screen blinking. |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md) | Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md). This API uses a promise to return the result. |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md) | Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md). This API uses an asynchronous callback to return the result. |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md) | Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md). This API uses a promise to return the result. Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md). |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md) | Enables an accessibility extension. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md). This API uses an asynchronous callback to return the result. Compared with [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md), this API only enables the accessibility extension without listening for connection state changes. To listen for disconnection events of the accessibility extension, use [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md). |
+| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) | Enables an accessibility extension and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) as the callback for disconnection events of the accessibility extension. This API uses a promise to return the result. When the accessibility extension process is abnormally disconnected, the onDisconnect callback of ConnectCallback will be triggered. This API must be used together with [config.disableAbility](arkts-accessibility-config-disableability-f-sys.md). |
+| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md) | Queries the senior mode state of an app. This API uses a promise to return the result. |
+| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) | Unregister listener that watches for changes in the enabled status of accessibility extensions. |
+| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) | Unregister listener that watches for changes in the installed status of accessibility extensions. |
+| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) | Cancels the listener for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. |
+| off_enabledAccessibilityExtensionListChange | Cancels the listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result. |
+| off_installedAccessibilityListChange | Cancels the listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result. |
+| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) | Register the listener that watches for changes in the enabled status of accessibility extensions. |
+| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) | Register the listener that watches for changes in the installed status of accessibility extensions. |
+| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md) | Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur. |
+| on_enabledAccessibilityExtensionListChange | Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result. This API must be used together with config.off('enabledAccessibilityExtensionListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks. |
+| on_installedAccessibilityListChange | Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result. This API must be used together with config.off('installedAccessibilityListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks. |
+| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md) | Sets the enabled state of the magnification effect. The magnification effect depends on the magnification gesture feature. This API takes effect only when the magnification gesture feature is enabled. |
+| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md) | Sets the senior mode state for an app. This API uses a promise to return the result. |
+| [startBlinking](arkts-accessibility-config-startblinking-f-sys.md) | Enables the flash or screen for blinking reminders. |
+| [stopBlinking](arkts-accessibility-config-stopblinking-f-sys.md) | Stops flash blinking or screen blinking. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
 | [AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md) | Senior mode state information of an app. |
 | [Config](arkts-accessibility-config-config-i-sys.md) | Implements configuration, acquisition, and listening for properties. |
-| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Callback provided when enabling an accessibility extension app through the [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api) API. The callback is invoked when the connection to the accessibility extension app is disconnected. |
+| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Callback provided when enabling an accessibility extension app through the [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) API. The callback is invoked when the connection to the accessibility extension app is disconnected. |
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -67,7 +66,7 @@ import { config } from '@kit.AccessibilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
@@ -78,7 +77,7 @@ import { config } from '@kit.AccessibilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |

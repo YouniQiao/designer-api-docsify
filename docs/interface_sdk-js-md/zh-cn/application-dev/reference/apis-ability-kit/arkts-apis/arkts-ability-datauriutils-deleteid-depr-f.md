@@ -17,7 +17,7 @@ function deleteId(uri: string): string
 
 **废弃版本：** 9
 
-**替代接口：** [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid)
+**替代接口：** [deleteId](arkts-ability-datauriutils-deleteid-f.md)
 
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 

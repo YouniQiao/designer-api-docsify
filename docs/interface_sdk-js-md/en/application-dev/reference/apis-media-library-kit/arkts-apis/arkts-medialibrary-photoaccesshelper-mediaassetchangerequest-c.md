@@ -2,7 +2,7 @@
 
 Represents a media asset change request.
 
-**Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri). > **NOTE：**> > For the same asset change request, this API cannot be repeatedly called after the resource is successfully > added. For a moving photo, you can call this API twice to add the image and video resources.
+Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). > **NOTE：**> > For the same asset change request, this API cannot be repeatedly called after the resource is successfully > added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 23
 
@@ -190,7 +190,7 @@ Create an asset change request based on the file type and filename extension.
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates an image asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri).
+Creates an image asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -264,7 +264,7 @@ Creates an image asset change request.
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates a video asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri).
+Creates a video asset change request. For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -349,7 +349,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of media assets to delete. The array can contain a maximum of 300 elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of media assets to delete. The array can contain a maximum of 300 elements. <!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
 
 **Return value:**
 
@@ -386,7 +386,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| uriList | Array&lt;string&gt; | Yes | URIs of the media assets to delete. The array can contain a maximum of 300 elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media assets to delete. The array can contain a maximum of 300 elements. <!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
 
 **Return value:**
 

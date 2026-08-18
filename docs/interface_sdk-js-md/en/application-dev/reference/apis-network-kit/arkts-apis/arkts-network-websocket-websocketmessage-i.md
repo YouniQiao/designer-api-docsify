@@ -1,8 +1,8 @@
 # WebSocketMessage
 
-Info about the message received from a specific client.
+Callback used to return the result, which contains:
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-webSocket-export interface WebSocketMessage--><!--Device-webSocket-export interface WebSocketMessage-End-->
 
@@ -20,11 +20,11 @@ import { webSocket } from '@kit.NetworkKit';
 clientConnection: WebSocketConnection
 ```
 
-The connection where the message comes from.
+Client information, including the IP address and port number.
 
 **Type:** [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketMessage-clientConnection: WebSocketConnection--><!--Device-WebSocketMessage-clientConnection: WebSocketConnection-End-->
 
@@ -36,11 +36,11 @@ The connection where the message comes from.
 data: string | ArrayBuffer
 ```
 
-Content of the message.
+Message data sent by the client.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketMessage-data: string | ArrayBuffer--><!--Device-WebSocketMessage-data: string | ArrayBuffer-End-->
 

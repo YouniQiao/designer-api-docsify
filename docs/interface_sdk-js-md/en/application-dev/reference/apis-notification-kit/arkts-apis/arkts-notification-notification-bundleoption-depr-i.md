@@ -16,8 +16,6 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -36,7 +34,7 @@ Bundle information of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#bundleoption)
+**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
@@ -56,7 +54,7 @@ User ID. The default value is 0.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#bundleoption)
+**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md)
 
 <!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 

@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md#removeallslots)
+**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md)
 
 <!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
 
@@ -32,7 +30,7 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAllSlots
@@ -47,7 +45,7 @@ Removes all notification slots. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md#removeallslots)
+**Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md)
 
 <!--Device-notification-function removeAllSlots(): Promise<void>--><!--Device-notification-function removeAllSlots(): Promise<void>-End-->
 

@@ -22,7 +22,7 @@ import { window } from '@kit.ArkUI';
 cutout: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_CUTOUT** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_CUTOUT** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -38,7 +38,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 keyboard: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -54,7 +54,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 navigationIndicator: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_NAVIGATION_INDICATOR** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -70,7 +70,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 statusBar: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 

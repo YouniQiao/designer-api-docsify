@@ -6,7 +6,7 @@ The enum of profile connection state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#profileconnectionstate)
+**Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
 
 <!--Device-bluetooth-enum ProfileConnectionState--><!--Device-bluetooth-enum ProfileConnectionState-End-->
 
@@ -24,7 +24,7 @@ the current profile is disconnected
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#statedisconnected)
+**Substitutes:** [STATE_DISCONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnected)
 
 <!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0--><!--Device-ProfileConnectionState-STATE_DISCONNECTED = 0-End-->
 
@@ -42,7 +42,7 @@ the current profile is being connected
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#stateconnecting)
+**Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connecting)
 
 <!--Device-ProfileConnectionState-STATE_CONNECTING = 1--><!--Device-ProfileConnectionState-STATE_CONNECTING = 1-End-->
 
@@ -60,7 +60,7 @@ the current profile is connected
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#stateconnected)
+**Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connected)
 
 <!--Device-ProfileConnectionState-STATE_CONNECTED = 2--><!--Device-ProfileConnectionState-STATE_CONNECTED = 2-End-->
 
@@ -78,7 +78,7 @@ the current profile is being disconnected
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#statedisconnecting)
+**Substitutes:** [STATE_DISCONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_disconnecting)
 
 <!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3--><!--Device-ProfileConnectionState-STATE_DISCONNECTING = 3-End-->
 

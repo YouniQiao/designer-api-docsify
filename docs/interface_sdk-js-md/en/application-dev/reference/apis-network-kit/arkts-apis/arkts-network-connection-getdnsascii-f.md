@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getDnsAscii(host: string, flag?: ConversionProcess): string
 ```
 
-Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by the ToASCII operation of RFC 3490.
+Converts the host name from Unicode to ASCII and controls the conversion behavior through the optional conversion process parameter (**conversionProcess**). > **NOTE：**> > If **conversionProcess** is set to **NO_CONFIGURATION**, only the domain names corresponding to the Unicode > characters that have been officially allocated can be converted. > When **conversionProcess** is set to **ALLOW_UNASSIGNED**, domain names that contain Unicode characters that have > not been assigned meanings can be converted. > If **conversionProcess** is set to **USE_STD3_ASCII_RULES**, the generated ASCII domain name is forcibly checked > based on the STD-3 ASCII rule (RFC 1123 standard) during the conversion. > Digits and English letters in the input parameters are not transcoded.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string-End-->
 
@@ -24,14 +24,14 @@ Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the domain name of the Unicode type. |
-| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Indicates process flag, can be 0 or any logical OR of possible flags. can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
+| host | string | Yes | Host name to be converted. The length of each label (separated by dots) cannot exceed 63 bytes. |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Conversion flow parameter. The default value is **NO_CONFIGURATION**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the converted string. |
+| string | Conversion result. |
 
 **Error codes:**
 

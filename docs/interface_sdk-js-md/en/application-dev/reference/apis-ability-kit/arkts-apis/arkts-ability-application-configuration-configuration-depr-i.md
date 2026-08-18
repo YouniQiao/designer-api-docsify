@@ -6,7 +6,7 @@ The module defines environment change information. Configuration is an interface
 
 **Deprecated since:** 9
 
-**Substitutes:** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration)
+**Substitutes:** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 

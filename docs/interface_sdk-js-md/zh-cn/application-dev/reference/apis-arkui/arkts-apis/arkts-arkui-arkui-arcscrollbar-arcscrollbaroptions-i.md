@@ -11,6 +11,7 @@ ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚�
 ## 导入模块
 
 ```TypeScript
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```
 
 ## scroller

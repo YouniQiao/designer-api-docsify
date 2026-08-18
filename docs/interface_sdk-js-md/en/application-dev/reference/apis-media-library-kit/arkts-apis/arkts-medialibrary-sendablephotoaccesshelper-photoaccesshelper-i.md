@@ -308,7 +308,7 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys). The string contains 36 bytes. |
+| burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md). The string contains 36 bytes. |
 | options | photoAccessHelper.FetchOptions | Yes | Retrieval options. |
 
 **Return value:**

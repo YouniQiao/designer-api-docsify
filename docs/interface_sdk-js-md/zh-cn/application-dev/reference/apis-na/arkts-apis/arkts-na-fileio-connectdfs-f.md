@@ -27,7 +27,7 @@ function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | 设备的网络Id。通过 [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#ohosdistributeddevicemanager)接口调用 [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo)获得。 |
+| networkId | string | 是 | 设备的网络Id。通过 [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)接口调用 [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)获得。 |
 | listeners | [DfsListeners](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-dfslisteners-i.md) | 是 | 分布式文件系统状态监听器。 |
 
 **返回值：**

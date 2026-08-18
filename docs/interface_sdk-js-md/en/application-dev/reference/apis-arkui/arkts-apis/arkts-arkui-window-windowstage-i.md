@@ -1,6 +1,6 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md#window) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance. Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 23
 
@@ -77,7 +77,7 @@ Create sub window of the stage.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | window name of sub window |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the subwindow. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the subwindow. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ Get main window of the stage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the main window. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the main window. |
 
 **Error codes:**
 
@@ -273,7 +273,7 @@ Get sub window of the stage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | Yes | Callback used to return all the subwindows. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | Yes | Callback used to return all the subwindows. |
 
 **Error codes:**
 
@@ -338,7 +338,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page to which the content will be loaded |
 | storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -410,7 +410,7 @@ Loads content from a page to this window stage. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | of the page to which the content will be loaded |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -444,7 +444,7 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
 | storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -476,7 +476,7 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-## off_deviceDisconnect
+## off_deviceDisconnect('deviceDisconnect')
 
 ```TypeScript
 function off(type: 'deviceDisconnect', callback?: Callback<string>): void
@@ -18,7 +18,7 @@ Unsubscribes from device disconnection events. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#offdevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_devicestatechangedevicestatechange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +31,7 @@ Unsubscribes from device disconnection events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
 
 **Examples**
 

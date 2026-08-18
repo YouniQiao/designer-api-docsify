@@ -12,7 +12,6 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 
 ```TypeScript
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## build

@@ -23,30 +23,30 @@ Register callbacks to observe ArkUI behavior.
 
 | Name | Description |
 | --- | --- |
-| [offDensityUpdate](arkts-na-uiobserver-offdensityupdate-f.md#offdensityupdate) | Removes a callback function that was previously registered with `on()`. |
-| [offDidLayout](arkts-na-uiobserver-offdidlayout-f.md#offdidlayout) | Removes a callback function that was previously registered with `on()`. |
-| [offNavDestinationSwitch](arkts-na-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch) | Removes a callback function that was previously registered with `onNavDestinationSwitch`. |
-| [offNavDestinationSwitch](arkts-na-uiobserver-offnavdestinationswitch-f.md#offnavdestinationswitch) | Removes a callback function that was previously registered with `onNavDestinationSwitch`. |
-| [offNavDestinationUpdate](arkts-na-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate) | Removes a callback function that was previously registered with `onNavDestinationUpdate`. |
-| [offNavDestinationUpdate](arkts-na-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate) | Removes a callback function that was previously registered with `onNavDestinationUpdate`. |
-| [offRouterPageUpdate](arkts-na-uiobserver-offrouterpageupdate-f.md#offrouterpageupdate) | Removes a callback function that was previously registered with `onRouterPageUpdate`. |
-| [offScrollEvent](arkts-na-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with `onScrollEvent()`. |
-| [offScrollEvent](arkts-na-uiobserver-offscrollevent-f.md#offscrollevent) | Removes a callback function that was previously registered with `onScrollEvent()`. |
-| [offTabContentUpdate](arkts-na-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate) | Removes a callback function that was previously registered with `on()`. |
-| [offTabContentUpdate](arkts-na-uiobserver-offtabcontentupdate-f.md#offtabcontentupdate) | Removes a callback function that was previously registered with `on()`. |
-| [offWillDraw](arkts-na-uiobserver-offwilldraw-f.md#offwilldraw) | Removes a callback function that was previously registered with `on()`. |
-| [onDensityUpdate](arkts-na-uiobserver-ondensityupdate-f.md#ondensityupdate) | Registers a callback function to be called when the screen density is updated. |
-| [onDidLayout](arkts-na-uiobserver-ondidlayout-f.md#ondidlayout) | Registers a callback function to be called when the layout is done. |
-| [onNavDestinationSwitch](arkts-na-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | Registers a callback function to be called when the navigation switched to a new navDestination. |
-| [onNavDestinationSwitch](arkts-na-uiobserver-onnavdestinationswitch-f.md#onnavdestinationswitch) | Registers a callback function to be called when the navigation switched to a new navDestination. |
-| [onNavDestinationUpdate](arkts-na-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | Registers a callback function to be called when the navigation destination is updated. |
-| [onNavDestinationUpdate](arkts-na-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate) | Registers a callback function to be called when the navigation destination is updated. |
-| [onRouterPageUpdate](arkts-na-uiobserver-onrouterpageupdate-f.md#onrouterpageupdate) | Registers a callback function to be called when the router page is updated. |
-| [onScrollEvent](arkts-na-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event starts or stops. |
-| [onScrollEvent](arkts-na-uiobserver-onscrollevent-f.md#onscrollevent) | Registers a callback function to be called when the scroll event starts or stops. |
-| [onTabContentUpdate](arkts-na-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Registers a callback function to be called when the tabContent is showed or hidden. |
-| [onTabContentUpdate](arkts-na-uiobserver-ontabcontentupdate-f.md#ontabcontentupdate) | Registers a callback function to be called when the tabContent is showed or hidden. |
-| [onWillDraw](arkts-na-uiobserver-onwilldraw-f.md#onwilldraw) | Registers a callback function to be called when the draw command will be drawn. |
+| [offDensityUpdate](arkts-na-uiobserver-offdensityupdate-f.md) | Removes a callback function that was previously registered with `on()`. |
+| [offDidLayout](arkts-na-uiobserver-offdidlayout-f.md) | Removes a callback function that was previously registered with `on()`. |
+| [offNavDestinationSwitch](arkts-na-uiobserver-offnavdestinationswitch-f.md) | Removes a callback function that was previously registered with `onNavDestinationSwitch`. |
+| [offNavDestinationSwitch](arkts-na-uiobserver-offnavdestinationswitch-f.md) | Removes a callback function that was previously registered with `onNavDestinationSwitch`. |
+| [offNavDestinationUpdate](arkts-na-uiobserver-offnavdestinationupdate-f.md) | Removes a callback function that was previously registered with `onNavDestinationUpdate`. |
+| [offNavDestinationUpdate](arkts-na-uiobserver-offnavdestinationupdate-f.md) | Removes a callback function that was previously registered with `onNavDestinationUpdate`. |
+| [offRouterPageUpdate](arkts-na-uiobserver-offrouterpageupdate-f.md) | Removes a callback function that was previously registered with `onRouterPageUpdate`. |
+| [offScrollEvent](arkts-na-uiobserver-offscrollevent-f.md) | Removes a callback function that was previously registered with `onScrollEvent()`. |
+| [offScrollEvent](arkts-na-uiobserver-offscrollevent-f.md) | Removes a callback function that was previously registered with `onScrollEvent()`. |
+| [offTabContentUpdate](arkts-na-uiobserver-offtabcontentupdate-f.md) | Removes a callback function that was previously registered with `on()`. |
+| [offTabContentUpdate](arkts-na-uiobserver-offtabcontentupdate-f.md) | Removes a callback function that was previously registered with `on()`. |
+| [offWillDraw](arkts-na-uiobserver-offwilldraw-f.md) | Removes a callback function that was previously registered with `on()`. |
+| [onDensityUpdate](arkts-na-uiobserver-ondensityupdate-f.md) | Registers a callback function to be called when the screen density is updated. |
+| [onDidLayout](arkts-na-uiobserver-ondidlayout-f.md) | Registers a callback function to be called when the layout is done. |
+| [onNavDestinationSwitch](arkts-na-uiobserver-onnavdestinationswitch-f.md) | Registers a callback function to be called when the navigation switched to a new navDestination. |
+| [onNavDestinationSwitch](arkts-na-uiobserver-onnavdestinationswitch-f.md) | Registers a callback function to be called when the navigation switched to a new navDestination. |
+| [onNavDestinationUpdate](arkts-na-uiobserver-onnavdestinationupdate-f.md) | Registers a callback function to be called when the navigation destination is updated. |
+| [onNavDestinationUpdate](arkts-na-uiobserver-onnavdestinationupdate-f.md) | Registers a callback function to be called when the navigation destination is updated. |
+| [onRouterPageUpdate](arkts-na-uiobserver-onrouterpageupdate-f.md) | Registers a callback function to be called when the router page is updated. |
+| [onScrollEvent](arkts-na-uiobserver-onscrollevent-f.md) | Registers a callback function to be called when the scroll event starts or stops. |
+| [onScrollEvent](arkts-na-uiobserver-onscrollevent-f.md) | Registers a callback function to be called when the scroll event starts or stops. |
+| [onTabContentUpdate](arkts-na-uiobserver-ontabcontentupdate-f.md) | Registers a callback function to be called when the tabContent is showed or hidden. |
+| [onTabContentUpdate](arkts-na-uiobserver-ontabcontentupdate-f.md) | Registers a callback function to be called when the tabContent is showed or hidden. |
+| [onWillDraw](arkts-na-uiobserver-onwilldraw-f.md) | Registers a callback function to be called when the draw command will be drawn. |
 
 ### Classes
 

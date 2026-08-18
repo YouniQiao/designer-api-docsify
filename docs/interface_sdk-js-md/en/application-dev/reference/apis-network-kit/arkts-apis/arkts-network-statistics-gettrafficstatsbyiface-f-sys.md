@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void
 ```
 
-Get the traffic usage details of the network interface in the specified time period.
+Obtains the historical data traffic of the specified NIC. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | Yes | Returns the [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) object; |
+| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the NIC. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ if (iFaceInfo) {
 function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 ```
 
-Get the traffic usage details of the network interface in the specified time period.
+Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result. | Name | Type | Mandatory| Description | | --------- | ------------------------- | ---- | --------------------------------------------------- | | ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | NIC information. For details, see [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md).|
 
 **Since:** 23
 
@@ -96,13 +96,13 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api). |
+| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes | Detailed query content. See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -39,7 +39,7 @@ End date of the picker. Default value: **Date('2100-12-31')** Value range: [Date
 mode?: DatePickerMode
 ```
 
-Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md#datepickerdialogoptions) is **true**, this parameter is ignored and the year, month, day columns are always shown.
+Date display mode. Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day. In DatePickerDialog, when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year, month, day columns are always shown.
 
 **Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 

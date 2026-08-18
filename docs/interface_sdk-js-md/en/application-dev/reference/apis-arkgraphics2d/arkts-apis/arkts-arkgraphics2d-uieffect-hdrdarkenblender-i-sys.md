@@ -14,7 +14,6 @@ HDR-adaptive darken blender, used to add a darken effect to a specified componen
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## grayscaleFactor

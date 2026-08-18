@@ -5,7 +5,7 @@ export type ContentDidScrollCallback = (selectedIndex: int, index: int, position
   mainAxisLength: double) => void
 ```
 
-Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-na-swiper-swipercontenttransitionproxy-i.md#swipercontenttransitionproxy)中的说明。
+Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-na-swiper-swipercontenttransitionproxy-i.md)中的说明。
 
 **起始版本：** 23
 

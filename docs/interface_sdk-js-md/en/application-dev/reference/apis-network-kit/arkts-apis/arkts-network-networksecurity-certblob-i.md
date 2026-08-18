@@ -1,6 +1,6 @@
 # CertBlob
 
-Define the certificate content.
+Defines the certificate data.
 
 **Since:** 23
 

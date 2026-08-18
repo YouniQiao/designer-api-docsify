@@ -1,6 +1,6 @@
 # AgentHostProxy
 
-AgentHostProxy用于从 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#agentextensionability)服务端向客户端发送数据或安全认证请求。 > **说明：** > > - 本模块接口需要在主线程中使用，不支持在Worker、TaskPool等子线程中使用。
+AgentHostProxy用于从 [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端向客户端发送数据或安全认证请求。 > **说明：** > > - 本模块接口需要在主线程中使用，不支持在Worker、TaskPool等子线程中使用。
 
 **起始版本：** 24
 
@@ -14,7 +14,7 @@ AgentHostProxy用于从 [AgentExtensionAbility](arkts-ability-app-agent-agentext
 authorize(handshakeData: string): void
 ```
 
-从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#agentextensionability)服务端给客户端发送安全认证请求。
+从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端给客户端发送安全认证请求。
 
 **起始版本：** 24
 
@@ -44,7 +44,7 @@ authorize(handshakeData: string): void
 sendData(data: string): void
 ```
 
-从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#agentextensionability)服务端给客户端发送数据。
+从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端给客户端发送数据。
 
 **起始版本：** 24
 
@@ -60,7 +60,7 @@ sendData(data: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string | 是 | 待发送到[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#agentextensionability)客户端的数据。 |
+| data | string | 是 | 待发送到[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)客户端的数据。 |
 
 **错误码：**
 

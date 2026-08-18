@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formObserver } from '@kit.FormKit';
-import { formObserver } from '@kit.FormKit';
 ```
 
 ## onRouter
@@ -29,7 +28,7 @@ Router event listening in registered form. &lt;p&gt;This interface requires perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -63,7 +62,7 @@ Router event listening in registered form. &lt;p&gt;This interface requires perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 

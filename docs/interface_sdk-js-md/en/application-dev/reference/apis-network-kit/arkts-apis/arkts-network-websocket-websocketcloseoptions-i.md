@@ -20,13 +20,13 @@ import { webSocket } from '@kit.NetworkKit';
 code?: int
 ```
 
-Error code.
+Error code. Set this parameter based on the actual situation. The value must be a positive integer ranging from 1 000 to 1015. If no error code is specified or the input value is not within the preceding range, the code will be set to the default value **1000**.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocketCloseOptions-code?: int--><!--Device-WebSocketCloseOptions-code?: int-End-->
 
@@ -38,13 +38,13 @@ Error code.
 reason?: string
 ```
 
-Error cause.
+Error cause. Set this parameter based on the actual situation. If no reason value is specified, the reason value is set to the default value **CLOSE_NORMAL**.
 
 **Type:** string
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocketCloseOptions-reason?: string--><!--Device-WebSocketCloseOptions-reason?: string-End-->
 

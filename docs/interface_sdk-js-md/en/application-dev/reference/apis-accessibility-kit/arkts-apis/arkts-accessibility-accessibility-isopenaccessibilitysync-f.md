@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -19,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function isOpenAccessibilitySync(): boolean
 ```
 
-Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
 **Since:** 23
 

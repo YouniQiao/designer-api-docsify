@@ -114,7 +114,7 @@ Creates an **OH_NativeColorSpaceManager** instance based on a color space name.<
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeColorSpaceManager*](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) | Returns a pointer to the [OH_NativeColorSpaceManager](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) instance. If the memory is insufficient, the <br>     OH_NativeColorSpaceManager instance fails to be created. |
+| [OH_NativeColorSpaceManager*](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) | Returns a pointer to the [OH_NativeColorSpaceManager](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) instance. If the memory is insufficient, the       OH_NativeColorSpaceManager instance fails to be created. |
 
 ### OH_NativeColorSpaceManager_CreateFromPrimariesAndGamma()
 
@@ -139,7 +139,7 @@ Creates an **OH_NativeColorSpaceManager** instance based on the color primaries 
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeColorSpaceManager*](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) | Returns a pointer to the [OH_NativeColorSpaceManager](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) instance.<br>     <br>If the memory is insufficient, the OH_NativeColorSpaceManager instance fails to be created. |
+| [OH_NativeColorSpaceManager*](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) | Returns a pointer to the [OH_NativeColorSpaceManager](capi-nativecolorspacemanager-oh-nativecolorspacemanager.md) instance.      <br>If the memory is insufficient, the OH_NativeColorSpaceManager instance fails to be created. |
 
 ### OH_NativeColorSpaceManager_Destroy()
 
@@ -181,7 +181,7 @@ Obtains the color space name.
 
 | Type | Description |
 | -- | -- |
-| int | Value corresponding to the color space enum [ColorSpaceName](capi-native-color-space-manager-h.md#colorspacename). A return value of 0 indicates that the<br>     API operation failed. Possible failure cause: the nativeColorSpaceManager parameter is a null pointer.<br>     Suggestion: check whether the parameter is a valid pointer. |
+| int | Value corresponding to the color space enum [ColorSpaceName](capi-native-color-space-manager-h.md#colorspacename). A return value of 0 indicates that the      API operation failed. Possible failure cause: the nativeColorSpaceManager parameter is a null pointer.      Suggestion: check whether the parameter is a valid pointer. |
 
 ### OH_NativeColorSpaceManager_GetWhitePoint()
 
@@ -205,7 +205,7 @@ Obtains the white points.
 
 | Type | Description |
 | -- | -- |
-| [WhitePointArray](capi-nativecolorspacemanager-whitepointarray.md) | Return value is a float array. Return value <0.0, 0.0> indicates that the API operation failed, and other<br>     return values indicate that the operation is successful. Possible failure cause: The nativeColorSpaceManager<br>     parameter is a null pointer. Suggestion: Check whether the parameter is a valid pointer. |
+| [WhitePointArray](capi-nativecolorspacemanager-whitepointarray.md) | Return value is a float array. Return value <0.0, 0.0> indicates that the API operation failed, and other      return values indicate that the operation is successful. Possible failure cause: The nativeColorSpaceManager      parameter is a null pointer. Suggestion: Check whether the parameter is a valid pointer. |
 
 ### OH_NativeColorSpaceManager_GetGamma()
 
@@ -229,6 +229,6 @@ Obtains the gamma value.
 
 | Type | Description |
 | -- | -- |
-| float | Value of the float type. 0.0 indicates that the API operation failed, and other return values indicate<br>     success. Possible failure cause: The nativeColorSpaceManager parameter is a null pointer. Suggestion: Check<br>     whether the parameter is a valid pointer. |
+| float | Value of the float type. 0.0 indicates that the API operation failed, and other return values indicate      success. Possible failure cause: The nativeColorSpaceManager parameter is a null pointer. Suggestion: Check      whether the parameter is a valid pointer. |
 
 

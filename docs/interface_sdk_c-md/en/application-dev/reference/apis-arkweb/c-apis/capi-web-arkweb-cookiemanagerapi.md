@@ -58,7 +58,7 @@ Obtains the cookie value of a specified URL. This method is used in scenarios su
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.<br>         <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): success.<br>         <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid URL. Possible causes: incorrect URL format, empty URL, or non-<br>         compliant URL.<br>         <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid cookieValue parameter. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.          <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): success.          <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid URL. Possible causes: incorrect URL format, empty URL, or non-          compliant URL.          <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid cookieValue parameter. |
 
 ### configCookieSync()
 
@@ -83,7 +83,7 @@ Sets the cookie value of a specified URL. This method is used in scenarios such 
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.<br>         <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): the cookie is set successfully.<br>         <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid URL. Possible causes: incorrect URL format, empty URL, or non-<br>         compliant URL.<br>         <br>[ARKWEB_INVALID_COOKIE_VALUE](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid cookieValue parameter. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.          <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): the cookie is set successfully.          <br>[ARKWEB_INVALID_URL](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid URL. Possible causes: incorrect URL format, empty URL, or non-          compliant URL.          <br>[ARKWEB_INVALID_COOKIE_VALUE](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid cookieValue parameter. |
 
 ### existCookies()
 

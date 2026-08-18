@@ -322,7 +322,7 @@ Compares the specified object with this list for equality.if the object are the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | Yes | The object to compare with this list |
+| obj | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | Yes | The object to compare with this list |
 
 **Return value:**
 

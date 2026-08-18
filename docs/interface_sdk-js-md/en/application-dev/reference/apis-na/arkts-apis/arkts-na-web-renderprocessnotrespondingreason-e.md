@@ -1,6 +1,6 @@
 # RenderProcessNotRespondingReason
 
-Enum type supplied to [RenderProcessNotRespondingData](arkts-na-web-renderprocessnotrespondingdata-i.md#renderprocessnotrespondingdata) when onRenderProcessNotResponding is called.
+Enum type supplied to [RenderProcessNotRespondingData](arkts-na-web-renderprocessnotrespondingdata-i.md) when onRenderProcessNotResponding is called.
 
 **Since:** 23
 

@@ -27,7 +27,7 @@ Unsubscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECT
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | No | callback pedometer detection data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | No | callback pedometer detection data. |
 
 **Error codes:**
 

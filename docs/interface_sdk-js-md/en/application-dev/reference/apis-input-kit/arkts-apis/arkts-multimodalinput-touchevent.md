@@ -16,7 +16,7 @@ import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode
 | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | Defines a touch event. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -33,7 +33,7 @@ import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode
 | [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md) | Enumerates touch tool types. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

@@ -6,7 +6,7 @@ Wi-Fi hotspot configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#hotspotconfig-system-api)
+**Substitutes:** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
 
 <!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
 

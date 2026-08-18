@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { EnvironmentCallback } from '@kit.AbilityKit';
-import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

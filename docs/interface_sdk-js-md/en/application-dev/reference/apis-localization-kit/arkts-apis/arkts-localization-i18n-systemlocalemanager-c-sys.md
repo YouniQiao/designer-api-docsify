@@ -14,7 +14,6 @@ Provide some functions for settings and startup guide to select language or regi
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

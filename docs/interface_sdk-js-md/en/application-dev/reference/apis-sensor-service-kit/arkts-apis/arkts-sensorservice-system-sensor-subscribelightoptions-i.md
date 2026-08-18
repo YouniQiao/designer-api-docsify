@@ -6,7 +6,7 @@ Defines the type of data to return for a subscription to data changes of the amb
 
 **Deprecated since:** 8
 
-**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambientlight)
+**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambient_light)
 
 <!--Device-unnamed-export interface SubscribeLightOptions--><!--Device-unnamed-export interface SubscribeLightOptions-End-->
 
@@ -32,7 +32,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -54,7 +54,7 @@ Callback invoked when the ambient light sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 

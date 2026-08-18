@@ -26,4 +26,9 @@ Creates a page component for the Stepper container. > **NOTE：**
 
 ## Summary
 
-- [ItemState](arkts-arkui-itemstate-e.md)
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ItemState](arkts-arkui-itemstate-e.md) | Display status of **nextLabel** in the stepper. |
+

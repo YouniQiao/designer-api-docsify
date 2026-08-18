@@ -2,7 +2,7 @@
 
 ## 概述
 
-Declares the APIs of **NativeKeyEvent**.
+提供NativeKeyEvent相关接口定义。
 
 **库：** libace_ndk.z.so
 
@@ -131,7 +131,7 @@ enum ArkUI_KeyCode
 | ARKUI_KEYCODE_SEMICOLON = 2062 | 按键';'。 |
 | ARKUI_KEYCODE_APOSTROPHE = 2063 | 按键''' (单引号)。 |
 | ARKUI_KEYCODE_SLASH = 2064 | 按键'/'。 |
-| ARKUI_KEYCODE_AT = 2065 | Key @ |
+| ARKUI_KEYCODE_AT = 2065 | 按键 '@'。 |
 | ARKUI_KEYCODE_PLUS = 2066 | 按键'+'。 |
 | ARKUI_KEYCODE_MENU = 2067 | 菜单键。 |
 | ARKUI_KEYCODE_PAGE_UP = 2068 | 向上翻页键。 |
@@ -509,7 +509,7 @@ ArkUI_ErrorCode OH_ArkUI_KeyEvent_IsNumLockOn(const ArkUI_UIInputEvent* event, b
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。      <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_KeyEvent_IsCapsLockOn()
 
@@ -534,7 +534,7 @@ ArkUI_ErrorCode OH_ArkUI_KeyEvent_IsCapsLockOn(const ArkUI_UIInputEvent* event, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。      <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_KeyEvent_IsScrollLockOn()
 
@@ -559,6 +559,6 @@ ArkUI_ErrorCode OH_ArkUI_KeyEvent_IsScrollLockOn(const ArkUI_UIInputEvent* event
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。<br>     <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>     <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 错误码。      <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 

@@ -1,6 +1,6 @@
 # EntityInfo (System API)
 
-EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md#intententitydecoratorinfo) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator.
+EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the @InsightIntentEntity decorator.
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-i
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
 import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
@@ -105,7 +104,7 @@ readonly parameters: Record<string, RecordData>
 
 The parameters of intent entity.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

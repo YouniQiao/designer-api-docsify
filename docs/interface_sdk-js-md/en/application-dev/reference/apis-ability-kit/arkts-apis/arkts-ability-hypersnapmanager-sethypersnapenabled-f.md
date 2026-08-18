@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { hyperSnapManager } from '@kit.AbilityKit';
-import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled

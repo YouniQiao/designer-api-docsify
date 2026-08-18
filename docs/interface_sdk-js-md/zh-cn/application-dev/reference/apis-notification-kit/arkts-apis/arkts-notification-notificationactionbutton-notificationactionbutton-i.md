@@ -16,7 +16,7 @@ extras?: Record<string, RecordData>
 
 按钮扩展信息。默认为空。 用于存储按钮的自定义扩展数据，应用可按需添加任意键值对信息，如按钮的特定标识、附加数据等。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

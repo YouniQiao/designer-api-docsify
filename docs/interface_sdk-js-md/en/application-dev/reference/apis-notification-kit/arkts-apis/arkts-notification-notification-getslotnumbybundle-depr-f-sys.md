@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle-system-api)
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ Obtains the number of notification slots of a specified application. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlotNumByBundle
@@ -52,7 +50,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getslotnumbybundle-system-api)
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

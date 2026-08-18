@@ -21,9 +21,9 @@ Enumerates the constants of the **mode** parameter used in **open()**, which spe
 
 | Name | Description |
 | --- | --- |
-| [READ_ONLY](arkts-na-openmode-con.md#readonly) | Read only Permission. The value is 0o0. |
-| [WRITE_ONLY](arkts-na-openmode-con.md#writeonly) | Write only Permission. The value is 0o1. |
-| [READ_WRITE](arkts-na-openmode-con.md#readwrite) | Write and Read Permission. The value is 0o2. |
+| [READ_ONLY](arkts-na-openmode-con.md#read_only) | Read only Permission. The value is 0o0. |
+| [WRITE_ONLY](arkts-na-openmode-con.md#write_only) | Write only Permission. The value is 0o1. |
+| [READ_WRITE](arkts-na-openmode-con.md#read_write) | Write and Read Permission. The value is 0o2. |
 | [CREATE](arkts-na-openmode-con.md#create) | If not exist, create file. The value is 0o100. |
 | [TRUNC](arkts-na-openmode-con.md#trunc) | File truncate len 0. The value is 0o1000. |
 | [APPEND](arkts-na-openmode-con.md#append) | File append write. The value is 0o2000. |

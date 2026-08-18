@@ -38,7 +38,7 @@ Video state.
 
 **废弃版本：** 11
 
-**替代接口：** [TYPE_VIDEO_BIDIRECTIONAL](#typevideobidirectional)
+**替代接口：** [TYPE_VIDEO_BIDIRECTIONAL](#type_video_bidirectional)
 
 <!--Device-VideoStateType-TYPE_VIDEO = 1--><!--Device-VideoStateType-TYPE_VIDEO = 1-End-->
 

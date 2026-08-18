@@ -265,7 +265,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Dialog box style.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -287,7 +287,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**. + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br> + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
 
 **Since:** 12
 
@@ -303,7 +303,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md)+ and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ |
 
 **Return value:**
 
@@ -343,7 +343,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
-| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -365,7 +365,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -407,7 +407,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 
@@ -505,7 +505,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 | --- | --- | --- | --- |
 | builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
-| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -577,7 +577,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -646,7 +646,7 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
 
 **Error codes:**
 

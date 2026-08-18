@@ -6,7 +6,7 @@ The Scope interface is used to describe the valid range of a field.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#scopehelper)
+**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 

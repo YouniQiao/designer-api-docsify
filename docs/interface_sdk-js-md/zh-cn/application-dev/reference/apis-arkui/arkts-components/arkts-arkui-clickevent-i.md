@@ -1,8 +1,8 @@
 # ClickEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 7
 
@@ -105,7 +105,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 

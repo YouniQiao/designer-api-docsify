@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)
+**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
 
 <!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,7 +30,7 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 设备是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 设备是否支持分布式通知的回调函数。 |
 
 
 ## isDistributedEnabled
@@ -47,7 +45,7 @@ function isDistributedEnabled(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)
+**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
 
 <!--Device-notification-function isDistributedEnabled(): Promise<boolean>--><!--Device-notification-function isDistributedEnabled(): Promise<boolean>-End-->
 

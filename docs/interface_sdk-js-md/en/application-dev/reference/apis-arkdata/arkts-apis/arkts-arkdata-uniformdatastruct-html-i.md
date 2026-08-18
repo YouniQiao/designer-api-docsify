@@ -12,7 +12,6 @@ Represents data of the HTML type.
 
 ```TypeScript
 import { uniformDataStruct } from '@kit.ArkData';
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -75,7 +74,7 @@ Plaintext without HTML tags. This parameter is optional. By default, it is an em
 readonly uniformDataType: 'general.html'
 ```
 
-Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.html**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'general.html'
 

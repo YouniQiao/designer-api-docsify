@@ -19,7 +19,7 @@ Subscribes to data changes of the gravity sensor. If this API is called multiple
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
@@ -30,6 +30,6 @@ Subscribes to data changes of the gravity sensor. If this API is called multiple
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GRAVITY**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | Callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | Callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
 | options | Options | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 

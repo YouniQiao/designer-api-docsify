@@ -6,7 +6,7 @@ Enumerates the active device types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md#communicationdevicetype)
+**Substitutes:** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)
 
 <!--Device-audio-enum ActiveDeviceType--><!--Device-audio-enum ActiveDeviceType-End-->
 

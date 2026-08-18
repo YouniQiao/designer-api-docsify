@@ -26,7 +26,7 @@ Unsubscribes from the advertising state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to listen for the advertising state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to listen for the advertising state. |
 
 **Error codes:**
 

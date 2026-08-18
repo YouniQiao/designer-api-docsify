@@ -261,7 +261,7 @@ Obtains the vertical coordinate of an image relative to the upper left corner of
 
 | Type | Description |
 | -- | -- |
-| int32_t | Vertical coordinate of the image relative to the upper left corner of the component, in px. If imageInfo<br>     is a null pointer, 0 is returned. |
+| int32_t | Vertical coordinate of the image relative to the upper left corner of the component, in px. If imageInfo      is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetLeft()
 
@@ -304,7 +304,7 @@ Obtains the horizontal coordinate of an image relative to the upper left corner 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Horizontal coordinate of the image relative to the upper left corner of the component, in px. If imageInfo<br>      is a null pointer, 0 is returned. |
+| int32_t | Horizontal coordinate of the image relative to the upper left corner of the component, in px. If imageInfo       is a null pointer, 0 is returned. |
 
 ### OH_ArkUI_ImageAnimatorFrameInfo_SetDuration()
 

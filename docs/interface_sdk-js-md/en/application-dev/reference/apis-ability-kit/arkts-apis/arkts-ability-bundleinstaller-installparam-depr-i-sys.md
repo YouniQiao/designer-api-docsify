@@ -6,7 +6,7 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Deprecated since:** 9
 
-**Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam-system-api)
+**Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 

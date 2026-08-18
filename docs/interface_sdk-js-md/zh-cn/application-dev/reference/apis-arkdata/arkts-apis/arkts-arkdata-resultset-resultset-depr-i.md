@@ -1,12 +1,12 @@
 # ResultSet
 
-结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。 > **说明：** > > 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md#resultset)。
+结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。 > **说明：** > > 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [relationalStore](arkts-data-relationalstore.md#ohosdatarelationalstore)
+**替代接口：** [relationalStore](arkts-data-relationalstore.md)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 

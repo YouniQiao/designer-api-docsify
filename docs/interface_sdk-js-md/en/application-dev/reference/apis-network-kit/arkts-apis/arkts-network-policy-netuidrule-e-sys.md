@@ -1,6 +1,6 @@
 # NetUidRule (System API)
 
-Rules whether an uid can access to a metered or non-metered network.
+Enumerates the metered network rules.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Rules whether an uid can access to a metered or non-metered network.
 NET_RULE_NONE = 0
 ```
 
-Default uid rule.
+Default rule.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Default uid rule.
 NET_RULE_ALLOW_METERED_FOREGROUND = 1 << 0
 ```
 
-Allow traffic on metered networks while app is foreground.
+Applications running in the foreground are allowed to access a metered network.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Allow traffic on metered networks while app is foreground.
 NET_RULE_ALLOW_METERED = 1 << 1
 ```
 
-Allow traffic on metered network.
+Applications are allowed to access a metered network.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Allow traffic on metered network.
 NET_RULE_REJECT_METERED = 1 << 2
 ```
 
-Reject traffic on metered network.
+Applications are not allowed to access a metered network.
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ Reject traffic on metered network.
 NET_RULE_ALLOW_ALL = 1 << 5
 ```
 
-Allow traffic on all network (metered or non-metered).
+Applications are allowed to access all networks (metered or non-metered).
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Allow traffic on all network (metered or non-metered).
 NET_RULE_REJECT_ALL = 1 << 6
 ```
 
-Reject traffic on all network.
+Applications are not allowed to access any networks (metered or non-metered).
 
 **Since:** 10
 

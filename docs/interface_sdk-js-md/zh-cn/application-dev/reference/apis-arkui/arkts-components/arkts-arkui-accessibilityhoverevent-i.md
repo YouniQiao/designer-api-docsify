@@ -2,7 +2,7 @@
 
 The accessibility hover action triggers this method invocation.
 
-**继承/实现关系：** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 12
 
@@ -61,7 +61,7 @@ Y coordinate of the accessibility hover point relative to the upper edge of the 
 globalDisplayX?: number
 ```
 
-相对于全局显示的点的 Y 坐标。
+点相对于全局显示的 X 坐标。
 
 **类型：** number
 
@@ -81,7 +81,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
+相对于全局显示的点的 Y 坐标。
 
 **类型：** number
 

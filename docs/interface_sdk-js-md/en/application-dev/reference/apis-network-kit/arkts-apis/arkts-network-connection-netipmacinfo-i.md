@@ -1,8 +1,8 @@
 # NetIpMacInfo
 
-The correspondence information between IP and MAC address.
+Defines information about entries in the IP neighbor table.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
 
@@ -20,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 iface: string
 ```
 
-Interface name of the network.
+NIC name.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
 
@@ -36,11 +36,11 @@ Interface name of the network.
 ipAddress: NetAddress
 ```
 
-Link address of the network.
+IP address information.
 
 **Type:** NetAddress
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
 
@@ -52,11 +52,11 @@ Link address of the network.
 macAddress: string
 ```
 
-Mac address of the network.
+MAC address.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
 

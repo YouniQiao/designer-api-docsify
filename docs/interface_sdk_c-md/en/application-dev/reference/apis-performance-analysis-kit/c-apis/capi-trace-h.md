@@ -207,7 +207,7 @@ Defines a callback to listen for whether the trace capture is enabled.
 
 | Parameter | Description |
 | -- | -- |
-| (bool traceStatus | Whether the trace capture is enabled for the current application.The value **true** indicates that the trace capture is enabled, and **false** indicates the opposite. |
+| bool traceStatus | Whether the trace capture is enabled for the current application.The value **true** indicates that the trace capture is enabled, and **false** indicates the opposite. |
 
 ### OH_HiTrace_BeginChain()
 
@@ -418,7 +418,7 @@ Checks whether a trace flag is enabled for a [HiTraceId](capi-hitrace-hitraceid.
 
 | Type | Description |
 | -- | -- |
-| bool | The value true indicates that the flag is enabled for the [HiTraceId](capi-hitrace-hitraceid.md), and false indicates the<br>     opposite. |
+| bool | The value true indicates that the flag is enabled for the [HiTraceId](capi-hitrace-hitraceid.md), and false indicates the      opposite. |
 
 ### OH_HiTrace_EnableFlag()
 
@@ -840,7 +840,7 @@ Checks whether trace capture is enabled for an application.
 
 | Type | Description |
 | -- | -- |
-| bool | When it is enabled, true is returned;<br>     when it is disabled or stopped, false is returned. In this case, calling the HiTraceMeter API does not<br>     take effect. |
+| bool | When it is enabled, true is returned;      when it is disabled or stopped, false is returned. In this case, calling the HiTraceMeter API does not      take effect. |
 
 ### OH_HiTrace_RegisterTraceListener()
 
@@ -864,7 +864,7 @@ Registers a callback to notify whether the application trace capture is enabled.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Callback registration status.<br>     >= 0: The registration is successful. The callback index for unregistration is returned. The index<br>     ranges from 0 to 9.<br>     -1: The maximum number of callbacks has been reached.<br>     -2: Invalid parameter. The parameter is not of the [OH_HiTrace_TraceEventListener](capi-trace-h.md#oh_hitrace_traceeventlistener) type. |
+| int32_t | Callback registration status.      >= 0: The registration is successful. The callback index for unregistration is returned. The index      ranges from 0 to 9.      -1: The maximum number of callbacks has been reached.      -2: Invalid parameter. The parameter is not of the [OH_HiTrace_TraceEventListener](capi-trace-h.md#oh_hitrace_traceeventlistener) type. |
 
 ### OH_HiTrace_UnregisterTraceListener()
 
@@ -888,6 +888,6 @@ Unregisters the callback used to notify whether the application trace capture is
 
 | Type | Description |
 | -- | -- |
-| int32_t | Callback unregistration status.<br>     0: Unregistration succeeded.<br>     -1: The callback corresponding to the index is not registered.<br>     -2: Invalid index. The index value is not within the range of 0 to 9. |
+| int32_t | Callback unregistration status.      0: Unregistration succeeded.      -1: The callback corresponding to the index is not registered.      -2: Invalid index. The index value is not within the range of 0 to 9. |
 
 

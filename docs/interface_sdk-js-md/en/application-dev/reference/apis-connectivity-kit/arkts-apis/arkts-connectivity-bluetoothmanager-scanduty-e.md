@@ -6,7 +6,7 @@ The enum of scan duty.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md#scanduty)
+**Substitutes:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
 
 <!--Device-bluetoothManager-enum ScanDuty--><!--Device-bluetoothManager-enum ScanDuty-End-->
 
@@ -24,7 +24,7 @@ low power mode
 
 **Deprecated since:** 10
 
-**Substitutes:** [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scanmodelowpower)
+**Substitutes:** [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_power)
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 
@@ -42,7 +42,7 @@ balanced power mode
 
 **Deprecated since:** 10
 
-**Substitutes:** [SCAN_MODE_BALANCED](arkts-connectivity-ble-scanduty-e.md#scanmodebalanced)
+**Substitutes:** [SCAN_MODE_BALANCED](arkts-connectivity-ble-scanduty-e.md#scan_mode_balanced)
 
 <!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
 
@@ -60,7 +60,7 @@ Scan using highest duty cycle
 
 **Deprecated since:** 10
 
-**Substitutes:** [SCAN_MODE_LOW_LATENCY](arkts-connectivity-ble-scanduty-e.md#scanmodelowlatency)
+**Substitutes:** [SCAN_MODE_LOW_LATENCY](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_latency)
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
 

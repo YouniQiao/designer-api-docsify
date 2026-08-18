@@ -14,7 +14,6 @@ Description of the AVMusicTemplate.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## bundleName

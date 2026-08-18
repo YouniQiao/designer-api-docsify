@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## checkAction
@@ -161,7 +163,7 @@ onCheckedChange?: Callback<boolean>
 
 checkbox的选中状态改变事件回调。回调参数类型为boolean，true表示checkbox已选中，false表示checkbox未选中。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 12
 
@@ -221,7 +223,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**类型：** [Theme](../../apis-na/arkts-apis/arkts-na-arkui-theme-theme-i.md) \| [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

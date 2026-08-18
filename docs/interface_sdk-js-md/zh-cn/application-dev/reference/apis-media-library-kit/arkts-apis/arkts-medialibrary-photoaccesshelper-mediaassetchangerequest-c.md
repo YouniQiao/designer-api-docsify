@@ -1,8 +1,8 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
 
-**继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -21,7 +22,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri). > **注意：** > > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
+通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). > **注意：** > > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
 
@@ -189,7 +190,7 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建图片资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri).
+创建图片资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -263,7 +264,7 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-创建视频资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#ohosfilefileuri).
+创建视频资产变更请求。 指定待创建资产的数据来源，可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **起始版本：** 11
 
@@ -348,7 +349,7 @@ static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| assets | Array&lt;PhotoAsset&gt; | 是 | 待删除的媒体文件数组，数组中元素个数不超过300 个。&lt;!--Del--&gt;系统应用对此无限制。&lt;!--DelEnd--&gt; |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 待删除的媒体文件数组，数组中元素个数不超过300 个。<!--Del-->系统应用对此无限制。<!--DelEnd--> |
 
 **返回值：**
 
@@ -385,7 +386,7 @@ static deleteAssets(context: Context, uriList: Array<string>): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组，数组中元素个数不超过300 个。&lt;!--Del--&gt;系统应用对此无限制。&lt;!--DelEnd--&gt; |
+| uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组，数组中元素个数不超过300 个。<!--Del-->系统应用对此无限制。<!--DelEnd--> |
 
 **返回值：**
 
@@ -658,7 +659,7 @@ setTitle(title: string): void
 readonly comment: string
 ```
 
-用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#mediaalbumchangerequest)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于MediaChangeRequest类型校验。 如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或 [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

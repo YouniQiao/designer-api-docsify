@@ -17,7 +17,7 @@ function getId(uri: string): number
 
 **废弃版本：** 9
 
-**替代接口：** [getId](arkts-ability-datauriutils-getid-f.md#getid)
+**替代接口：** [getId](arkts-ability-datauriutils-getid-f.md)
 
 <!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
 

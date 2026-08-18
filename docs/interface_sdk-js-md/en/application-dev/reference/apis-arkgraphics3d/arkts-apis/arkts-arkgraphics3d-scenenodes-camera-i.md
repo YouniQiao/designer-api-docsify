@@ -2,7 +2,7 @@
 
 Camera node, which inherits from Node.
 
-**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#node)
+**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 23
 

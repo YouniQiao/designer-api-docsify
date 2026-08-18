@@ -1,12 +1,12 @@
 # GattServer
 
-Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#creategattserver) to create an GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md) to create an GattServer instance.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md#gattserver)
+**Substitutes:** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md)
 
 <!--Device-bluetooth-interface GattServer--><!--Device-bluetooth-interface GattServer-End-->
 
@@ -184,7 +184,7 @@ let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 server.notifyCharacteristicChanged('XX:XX:XX:XX:XX:XX', notifyCharacteristic);
 ```
 
-## off_characteristicRead
+## off_characteristicRead('characteristicRead')
 
 ```TypeScript
 off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void
@@ -209,7 +209,7 @@ Unsubscribe characteristic read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
 
 **Examples**
 
@@ -218,7 +218,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("characteristicRead");
 ```
 
-## off_characteristicWrite
+## off_characteristicWrite('characteristicWrite')
 
 ```TypeScript
 off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void
@@ -243,7 +243,7 @@ Unsubscribe characteristic write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
 
 **Examples**
 
@@ -252,7 +252,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("characteristicWrite");
 ```
 
-## off_connectStateChange
+## off_connectStateChange('connectStateChange')
 
 ```TypeScript
 off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
@@ -277,7 +277,7 @@ Unsubscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -286,7 +286,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("connectStateChange");
 ```
 
-## off_descriptorRead
+## off_descriptorRead('descriptorRead')
 
 ```TypeScript
 off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void
@@ -311,7 +311,7 @@ Unsubscribe descriptor read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
 
 **Examples**
 
@@ -320,7 +320,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("descriptorRead");
 ```
 
-## off_descriptorWrite
+## off_descriptorWrite('descriptorWrite')
 
 ```TypeScript
 off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void
@@ -345,7 +345,7 @@ Unsubscribe descriptor write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
 
 **Examples**
 
@@ -354,7 +354,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("descriptorWrite");
 ```
 
-## on_characteristicRead
+## on_characteristicRead('characteristicRead')
 
 ```TypeScript
 on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void
@@ -379,7 +379,7 @@ Subscribe characteristic read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
 
 **Examples**
 
@@ -408,7 +408,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("characteristicRead", ReadCharacteristicReq);
 ```
 
-## on_characteristicWrite
+## on_characteristicWrite('characteristicWrite')
 
 ```TypeScript
 on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void
@@ -433,7 +433,7 @@ Subscribe characteristic write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
 
 **Examples**
 
@@ -465,7 +465,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("characteristicWrite", WriteCharacteristicReq);
 ```
 
-## on_connectStateChange
+## on_connectStateChange('connectStateChange')
 
 ```TypeScript
 on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
@@ -490,7 +490,7 @@ Subscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Examples**
 
@@ -504,7 +504,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("connectStateChange", Connected);
 ```
 
-## on_descriptorRead
+## on_descriptorRead('descriptorRead')
 
 ```TypeScript
 on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void
@@ -529,7 +529,7 @@ Subscribe descriptor read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
 
 **Examples**
 
@@ -558,7 +558,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("descriptorRead", ReadDescriptorReq);
 ```
 
-## on_descriptorWrite
+## on_descriptorWrite('descriptorWrite')
 
 ```TypeScript
 on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void
@@ -583,7 +583,7 @@ Subscribe descriptor write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
 
 **Examples**
 
@@ -677,7 +677,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md#serverresponse). |
+| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
 
 **Return value:**
 

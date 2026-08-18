@@ -14,7 +14,6 @@ Represents information about a participant of device-cloud sharing.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## attachInfo

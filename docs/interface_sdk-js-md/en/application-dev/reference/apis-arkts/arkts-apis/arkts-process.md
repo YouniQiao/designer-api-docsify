@@ -1,18 +1,6 @@
 # @ohos.process
 
-/*
- Copyright (c) 2021-2022 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **process** module provides process management APIs, for example, APIs for obtaining process information.
 
 **Since:** 7
 
@@ -32,30 +20,30 @@ import { process } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [abort](arkts-arkts-process-abort-f.md#abort) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
-| [exit](arkts-arkts-process-exit-f.md#exit) | Terminates this process. Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getenvironmentvar) | Obtains the value of an environment variable. |
-| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getpastcputime) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
-| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getstartrealtime) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
-| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getsystemconfig) | Obtains the system configuration. |
-| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getthreadpriority) | Obtains the thread priority based on the specified TID. |
-| [getUidForName](arkts-arkts-process-getuidforname-f.md#getuidforname) | Obtains the UID of a user from the user database of the system based on the specified user name. |
-| [is64Bit](arkts-arkts-process-is64bit-f.md#is64bit) | Checks whether this process is running in a 64-bit environment. |
-| [isAppUid](arkts-arkts-process-isappuid-f.md#isappuid) | Checks whether a UID belongs to this application. |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isisolatedprocess) | Checks whether this process is isolated. |
-| [kill](arkts-arkts-process-kill-f.md#kill) | Sends a signal to a specified process to terminate it. |
-| [uptime](arkts-arkts-process-uptime-f.md#uptime) | Obtains the running time of the current system, in seconds. |
+| [abort](arkts-arkts-process-abort-f.md) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
+| [exit](arkts-arkts-process-exit-f.md) | Terminates this process. Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | Obtains the value of an environment variable. |
+| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
+| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
+| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md) | Obtains the system configuration. |
+| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md) | Obtains the thread priority based on the specified TID. |
+| [getUidForName](arkts-arkts-process-getuidforname-f.md) | Obtains the UID of a user from the user database of the system based on the specified user name. |
+| [is64Bit](arkts-arkts-process-is64bit-f.md) | Checks whether this process is running in a 64-bit environment. |
+| [isAppUid](arkts-arkts-process-isappuid-f.md) | Checks whether a UID belongs to this application. |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md) | Checks whether this process is isolated. |
+| [kill](arkts-arkts-process-kill-f.md) | Sends a signal to a specified process to terminate it. |
+| [uptime](arkts-arkts-process-uptime-f.md) | Obtains the running time of the current system, in seconds. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [chdir](arkts-arkts-process-chdir-f-sys.md#chdir) | Change current directory |
-| [cwd](arkts-arkts-process-cwd-f-sys.md#cwd) | Return the current work directory; |
-| [off_string](arkts-arkts-process-offstring-f-sys.md#offstring) | Remove registered event |
-| [on_string](arkts-arkts-process-onstring-f-sys.md#onstring) | Register for an event |
-| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runcmd) | Returns a child process object and spawns a new ChildProcess to run the command. |
+| [chdir](arkts-arkts-process-chdir-f-sys.md) | Change current directory |
+| [cwd](arkts-arkts-process-cwd-f-sys.md) | Return the current work directory; |
+| [off_string](arkts-arkts-process-offstring-f-sys.md#off_string) | Remove registered event |
+| [on_string](arkts-arkts-process-onstring-f-sys.md#on_string) | Register for an event |
+| [runCmd](arkts-arkts-process-runcmd-f-sys.md) | Returns a child process object and spawns a new ChildProcess to run the command. |
 <!--DelEnd-->
 
 ### Classes
@@ -65,7 +53,7 @@ import { process } from '@kit.ArkTS';
 | [ProcessManager](arkts-arkts-process-processmanager-c.md) | Provides APIs for throwing exceptions during the addition of a process. Construct a **ProcessManager** object. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -88,7 +76,7 @@ import { process } from '@kit.ArkTS';
 | [uid](arkts-arkts-process-con.md#uid) | User identifier (UID) of the process. |
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |

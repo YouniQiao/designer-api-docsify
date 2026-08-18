@@ -12,7 +12,6 @@ Provides index management capabilities, such as obtaining the locale index list 
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale

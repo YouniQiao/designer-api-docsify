@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## createPartition

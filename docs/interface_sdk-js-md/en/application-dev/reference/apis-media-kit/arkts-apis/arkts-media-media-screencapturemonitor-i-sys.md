@@ -36,7 +36,7 @@ Unsubscribes from state change events of the system screen recorder. This event 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -44,7 +44,7 @@ Unsubscribes from state change events of the system screen recorder. This event 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## off_systemScreenRecorder
+## off_systemScreenRecorder('systemScreenRecorder')
 
 ```TypeScript
 off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
@@ -65,7 +65,7 @@ Unsubscribes from state change events of the system screen recorder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **Error codes:**
 
@@ -107,7 +107,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-## on_systemScreenRecorder
+## on_systemScreenRecorder('systemScreenRecorder')
 
 ```TypeScript
 on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
@@ -128,7 +128,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **Error codes:**
 

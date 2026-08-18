@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md#processinformation)
+**替代接口：** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 

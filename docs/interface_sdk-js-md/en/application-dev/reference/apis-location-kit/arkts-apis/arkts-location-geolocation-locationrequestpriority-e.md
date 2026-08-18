@@ -6,7 +6,7 @@ Enum for location priority
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md#locationrequestpriority)
+**Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -56,7 +56,7 @@ LOW_POWER
 
 **Deprecated since:** 9
 
-**Substitutes:** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#lowpower)
+**Substitutes:** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#low_power)
 
 <!--Device-LocationRequestPriority-LOW_POWER--><!--Device-LocationRequestPriority-LOW_POWER-End-->
 
@@ -72,7 +72,7 @@ FIRST_FIX
 
 **Deprecated since:** 9
 
-**Substitutes:** [FIRST_FIX](arkts-location-geolocationmanager-locationrequestpriority-e.md#firstfix)
+**Substitutes:** [FIRST_FIX](arkts-location-geolocationmanager-locationrequestpriority-e.md#first_fix)
 
 <!--Device-LocationRequestPriority-FIRST_FIX--><!--Device-LocationRequestPriority-FIRST_FIX-End-->
 

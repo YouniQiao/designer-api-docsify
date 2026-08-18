@@ -11,6 +11,7 @@ StartOptions可以作为启动UIAbility接口（例如 [startAbility()](arkts-ab
 ## 导入模块
 
 ```TypeScript
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandler
@@ -239,7 +240,7 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
-启动UIAbility时，指定窗口是否显示最大化/窗口化/分屏按键。如果未配置该字段，则默认采用该UIAbility对应的 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值。 - FULL_SCREEN：支持全屏模式。 - FLOATING：支持悬浮窗模式。 - SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模 式，支持进入分屏模式。 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。 **约束：** &lt;!--RP1--&gt;该功能仅在2in1和Tablet设备上生效。&lt;!--RP1End--&gt;
+启动UIAbility时，指定窗口是否显示最大化/窗口化/分屏按键。如果未配置该字段，则默认采用该UIAbility对应的 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的supportWindowMode字段取值。 - FULL_SCREEN：支持全屏模式。 - FLOATING：支持悬浮窗模式。 - SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模 式，支持进入分屏模式。 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的 [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。 **约束：** <!--RP1-->该功能仅在2in1和Tablet设备上生效。<!--RP1End-->
 
 **类型：** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -275,7 +276,7 @@ windowCreateParams?: window.WindowCreateParams
 windowHeight?: int
 ```
 
-窗口的高度，单位为px。 取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+窗口的高度，单位为px。 取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
 **类型：** int
 
@@ -311,7 +312,7 @@ windowLeft?: int
 windowMode?: int
 ```
 
-启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md#windowmode)。
+启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md)。
 
 **类型：** int
 
@@ -347,7 +348,7 @@ windowTop?: int
 windowWidth?: int
 ```
 
-窗口的宽度，单位为px。 取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+窗口的宽度，单位为px。 取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
 **类型：** int
 
@@ -365,7 +366,7 @@ windowWidth?: int
 withAnimation?: boolean
 ```
 
-启动UIAbility时是否具有动画效果。 传入true时，跟随系统默认动画效果。传入false时，表示关闭启动UIAbility动画效果，仅在[自由窗口状态](../../../windowmanager/window-terminology.md#自由窗口)的情况下 生效。 此参数不填时，默认为undefined，跟随系统默认动画效果。 从&lt;!--RP2--&gt;OpenHarmony 6.1&lt;!--RP2End--&gt;开始支持。
+启动UIAbility时是否具有动画效果。 传入true时，跟随系统默认动画效果。传入false时，表示关闭启动UIAbility动画效果，仅在[自由窗口状态](../../../windowmanager/window-terminology.md#自由窗口)的情况下 生效。 此参数不填时，默认为undefined，跟随系统默认动画效果。 从<!--RP2-->OpenHarmony 6.1<!--RP2End-->开始支持。
 
 **类型：** boolean
 

@@ -12,7 +12,6 @@ Provide a simple date time formatting interface.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## format

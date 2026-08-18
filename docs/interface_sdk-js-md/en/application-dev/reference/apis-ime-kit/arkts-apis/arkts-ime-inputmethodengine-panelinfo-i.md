@@ -12,7 +12,6 @@ Describes the attributes of the input method panel.
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## flag

@@ -12,7 +12,6 @@ Options for creating the **NumberFormat** object. Since API version 9, the **Num
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compactDisplay

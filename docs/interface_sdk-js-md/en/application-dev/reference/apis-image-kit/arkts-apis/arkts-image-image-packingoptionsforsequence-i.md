@@ -12,7 +12,6 @@ Defines the options for encoding animated images.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## delayTimeList

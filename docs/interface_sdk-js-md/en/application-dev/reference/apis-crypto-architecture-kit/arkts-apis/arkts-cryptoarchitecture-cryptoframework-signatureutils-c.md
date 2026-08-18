@@ -12,7 +12,6 @@ Provides utilities for converting ECC/SM2 signature data.
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genEccSignature

@@ -52,7 +52,7 @@ extraInfo?: Record<string, RecordData>
 
 Extra information about how the Want starts an ability. If there is no extra information to set, this constant can be left empty.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ extraInfos?: Record<string, RecordData>
 
 Extra information about how the Want starts an ability. If there is no extra information to set, this constant can be left empty. The ability of this property is same as extraInfo. If both are set, this property will be used.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

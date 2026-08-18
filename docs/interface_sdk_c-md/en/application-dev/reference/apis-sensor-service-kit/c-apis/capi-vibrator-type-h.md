@@ -45,8 +45,8 @@ Enumerates the vibrator error codes.
 | Enum item | Description |
 | -- | -- |
 | PERMISSION_DENIED = 201 | < @error Permission verification failed. |
-| PARAMETER_ERROR = 401 | <  Parameter check failed. For example, a mandatory parameter is not passed in, |
-| UNSUPPORTED = 801 | <  The API is not supported on the device. The device supports the corresponding SysCap, |
+| PARAMETER_ERROR = 401 | < Parameter check failed. For example, a mandatory parameter is not passed in, |
+| UNSUPPORTED = 801 | < The API is not supported on the device. The device supports the corresponding SysCap, |
 | DEVICE_OPERATION_FAILED = 14600101 | < @error The operation on the device failed. |
 
 ### Vibrator_Usage

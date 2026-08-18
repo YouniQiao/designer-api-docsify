@@ -2,7 +2,7 @@
 
 Defines SwipeGesture.
 
-**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23
 

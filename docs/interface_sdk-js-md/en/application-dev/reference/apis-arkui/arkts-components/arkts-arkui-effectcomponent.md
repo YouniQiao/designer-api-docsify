@@ -46,5 +46,15 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 ## Summary
 
-- [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md)
-- [EffectLayer](arkts-arkui-effectlayer-e-sys.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md) | Sets the construction parameters of the current EffectComponent, including the rendering layer of the EffectComponent. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [EffectLayer](arkts-arkui-effectlayer-e-sys.md) | Rendering layer of the EffectComponent. |
+

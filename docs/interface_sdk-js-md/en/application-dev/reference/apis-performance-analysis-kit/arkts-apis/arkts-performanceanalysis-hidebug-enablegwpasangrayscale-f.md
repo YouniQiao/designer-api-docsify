@@ -31,7 +31,7 @@ Enable the GWP-ASAN grayscale of your application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwp-asan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
 **Examples**
 

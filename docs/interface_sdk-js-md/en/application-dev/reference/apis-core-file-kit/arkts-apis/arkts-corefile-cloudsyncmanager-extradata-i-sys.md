@@ -14,7 +14,6 @@ Represents the cloud data change information.
 
 ```TypeScript
 import { cloudSyncManager } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## eventId

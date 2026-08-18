@@ -14,7 +14,6 @@ Senior mode state information of an app.
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## appIndex

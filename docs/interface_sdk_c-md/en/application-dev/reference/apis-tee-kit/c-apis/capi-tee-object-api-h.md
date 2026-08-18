@@ -34,9 +34,9 @@ Provides trusted storage APIs.You can use these APIs to implement trusted storag
 | Name | Description |
 | -- | -- |
 | [TEE_ATTR_IS_BUFFER(attribute_id)((((attribute_id) << 2) >> 31) == 0)](#tee_attr_is_buffer) | Check whether the attribute is a buffer. |
-| [TEE_ATTR_IS_VALUE(attribute_id)  ((((attribute_id) << 2) >> 31) == 1)](#tee_attr_is_value) | Check whether the attribute is a value. |
+| [TEE_ATTR_IS_VALUE(attribute_id) ((((attribute_id) << 2) >> 31) == 1)](#tee_attr_is_value) | Check whether the attribute is a value. |
 | [TEE_ATTR_IS_PROTECTED(attribute_id)((((attribute_id) << 3) >> 31) == 0)](#tee_attr_is_protected) | Check whether the attribute is protected. |
-| [TEE_ATTR_IS_PUBLIC(attribute_id)    ((((attribute_id) << 3) >> 31) == 1)](#tee_attr_is_public) | Check whether the attribute is public. |
+| [TEE_ATTR_IS_PUBLIC(attribute_id) ((((attribute_id) << 3) >> 31) == 1)](#tee_attr_is_public) | Check whether the attribute is public. |
 | [TEE_Result TEE_GetObjectBufferAttribute(TEE_ObjectHandle object, uint32_t attributeID, void *buffer, size_t *size)](#tee_getobjectbufferattribute) | Obtains a buffer attribute from the <b>TEE_Attribute</b> struct of the object pointedto by <b>TEE_ObjectHandle</b>.The members in the <b>TEE_Attribute</b> struct must be <b>ref</b>. If the <b>TEE_Attribute</b> is private,the <b>Usage_Constants</b> of the object must include <b>TEE_USAGE_EXTRACTABLE</b>. |
 | [TEE_Result TEE_GetObjectValueAttribute(TEE_ObjectHandle object, uint32_t attributeID, uint32_t *a, uint32_t *b)](#tee_getobjectvalueattribute) | Obtains a value attribute from the <b>TEE_Attribute</b> of an object.The members of the <b>TEE_Attribute</b> struct must be values. If the <b>TEE_Attribute</b> is private,the <b>Usage_Constants</b> of the object must include <b>TEE_USAGE_EXTRACTABLE</b>. |
 | [void TEE_CloseObject(TEE_ObjectHandle object)](#tee_closeobject) | Closes a <b>TEE_ObjectHandle</b> object.The object can be persistent or transient. |
@@ -114,7 +114,7 @@ Check whether the attribute is a buffer.
 ### TEE_ATTR_IS_VALUE()
 
 ```c
-TEE_ATTR_IS_VALUE(attribute_id)  ((((attribute_id) << 2) >> 31) == 1)
+TEE_ATTR_IS_VALUE(attribute_id) ((((attribute_id) << 2) >> 31) == 1)
 ```
 
 **Description**
@@ -138,7 +138,7 @@ Check whether the attribute is protected.
 ### TEE_ATTR_IS_PUBLIC()
 
 ```c
-TEE_ATTR_IS_PUBLIC(attribute_id)    ((((attribute_id) << 3) >> 31) == 1)
+TEE_ATTR_IS_PUBLIC(attribute_id) ((((attribute_id) << 3) >> 31) == 1)
 ```
 
 **Description**

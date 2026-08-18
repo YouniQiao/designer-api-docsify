@@ -29,7 +29,7 @@ Export contact data to a vcf file.
 | context | Context | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | Yes | Encoding and version. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 
@@ -155,7 +155,7 @@ Export contact data to a vcf file.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@ P2P device status.
 
 **Deprecated since:** 9
 
-**Substitutes:** [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md#p2pdevicestatus)
+**Substitutes:** [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md)
 
 <!--Device-wifi-enum P2pDeviceStatus--><!--Device-wifi-enum P2pDeviceStatus-End-->
 

@@ -28,7 +28,7 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 | [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

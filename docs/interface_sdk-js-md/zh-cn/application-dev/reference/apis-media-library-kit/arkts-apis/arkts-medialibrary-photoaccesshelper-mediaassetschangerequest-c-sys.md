@@ -2,7 +2,7 @@
 
 批量资产变更请求。
 
-**继承/实现关系：** MediaAssetsChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**继承/实现关系：** MediaAssetsChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -250,7 +251,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest) 类型校验。 <br>如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) 类型校验。 <br>如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

@@ -1,4 +1,4 @@
-# InterceptedRecord (System API)
+# InterceptedRecord(Network Firewall) (System API)
 
 Intercepted record.
 
@@ -19,16 +19,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## appUid
 
 ```TypeScript
-appUid?: number
+appUid?: int
 ```
 
 Application or service ID.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-appUid?: number--><!--Device-InterceptedRecord-appUid?: number-End-->
+<!--Device-InterceptedRecord-appUid?: int--><!--Device-InterceptedRecord-appUid?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -73,16 +73,16 @@ Local IP.
 ## localPort
 
 ```TypeScript
-localPort?: number
+localPort?: int
 ```
 
 Local port.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-localPort?: number--><!--Device-InterceptedRecord-localPort?: number-End-->
+<!--Device-InterceptedRecord-localPort?: int--><!--Device-InterceptedRecord-localPort?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -91,16 +91,16 @@ Local port.
 ## protocol
 
 ```TypeScript
-protocol?: number
+protocol?: int
 ```
 
 Transport layer protocol.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-protocol?: number--><!--Device-InterceptedRecord-protocol?: number-End-->
+<!--Device-InterceptedRecord-protocol?: int--><!--Device-InterceptedRecord-protocol?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -127,16 +127,16 @@ Remote IP.
 ## remotePort
 
 ```TypeScript
-remotePort?: number
+remotePort?: int
 ```
 
 Remote port.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-remotePort?: number--><!--Device-InterceptedRecord-remotePort?: number-End-->
+<!--Device-InterceptedRecord-remotePort?: int--><!--Device-InterceptedRecord-remotePort?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -145,16 +145,16 @@ Remote port.
 ## time
 
 ```TypeScript
-time: number
+time: int
 ```
 
 Time stamp.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecord-time: number--><!--Device-InterceptedRecord-time: number-End-->
+<!--Device-InterceptedRecord-time: int--><!--Device-InterceptedRecord-time: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

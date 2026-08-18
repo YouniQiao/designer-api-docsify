@@ -26,8 +26,8 @@ Sends an SMS message. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Sends an SMS message. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions). |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md). |
 
 **Return value:**
 

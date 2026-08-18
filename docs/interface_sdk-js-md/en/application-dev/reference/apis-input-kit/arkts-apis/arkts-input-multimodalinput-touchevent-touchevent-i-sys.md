@@ -2,7 +2,7 @@
 
 Defines a touch event.
 
-**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#inputevent)
+**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Coordinate correction mode.
 isInject?: boolean
 ```
 
-Whether the touch event is an injection event. For details about injection events, see [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#ohosmultimodalinputinputeventclient).
+Whether the touch event is an injection event. For details about injection events, see [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md).
 
 **Type:** boolean
 

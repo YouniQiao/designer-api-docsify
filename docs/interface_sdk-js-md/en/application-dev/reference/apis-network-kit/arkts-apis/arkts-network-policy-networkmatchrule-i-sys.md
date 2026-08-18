@@ -1,6 +1,6 @@
 # NetworkMatchRule (System API)
 
-The matching rules of network quota policies.
+Defines the network for which the quota policy is set.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { policy } from '@kit.NetworkKit';
 identity: string
 ```
 
-To specify the identity of network, such as different WLAN.
+ID of the SIM card on the metered cellular network. It is used for Ethernet and Wi-Fi networks. It is used together with **iccid**.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ To specify the identity of network, such as different WLAN.
 netType: NetBearType
 ```
 
-netType see [NetBearType](arkts-network-policy-netbeartype-t.md#netbeartype).
+Network type.
 
 **Type:** NetBearType
 
@@ -58,7 +58,7 @@ netType see [NetBearType](arkts-network-policy-netbeartype-t.md#netbeartype).
 simId: string
 ```
 
-The ID of the target card, valid when netType is BEARER_CELLULAR.
+Identifier of the SIM card on the metered cellular network. It is not used for Ethernet and Wi-Fi networks.
 
 **Type:** string
 

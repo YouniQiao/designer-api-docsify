@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## getBackgroundPolicyByUid
 
 ```TypeScript
-function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgroundPolicy>): void
+function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroundPolicy>): void
 ```
 
-Get the background network policy for the specified uid.
+Checks whether the specified UID can access the background network. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgroundPolicy>): void--><!--Device-policy-function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgroundPolicy>): void-End-->
+<!--Device-policy-function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroundPolicy>): void--><!--Device-policy-function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroundPolicy>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,8 +28,8 @@ Get the background network policy for the specified uid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | the callback of getBackgroundPolicyByUid. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -57,16 +57,16 @@ policy.getBackgroundPolicyByUid(11111, (error: BusinessError, data: policy.NetBa
 ## getBackgroundPolicyByUid
 
 ```TypeScript
-function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>
+function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>
 ```
 
-Get the background network policy for the specified uid.
+Obtains whether the UID can access the network of the background. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>--><!--Device-policy-function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>-End-->
+<!--Device-policy-function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>--><!--Device-policy-function getBackgroundPolicyByUid(uid: int): Promise<NetBackgroundPolicy>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -76,13 +76,13 @@ Get the background network policy for the specified uid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | The promise returned by the function. |
+| Promise&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

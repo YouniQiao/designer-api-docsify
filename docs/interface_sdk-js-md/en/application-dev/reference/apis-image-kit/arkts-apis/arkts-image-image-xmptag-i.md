@@ -12,7 +12,6 @@ Describes XMP Tag parameters.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## name

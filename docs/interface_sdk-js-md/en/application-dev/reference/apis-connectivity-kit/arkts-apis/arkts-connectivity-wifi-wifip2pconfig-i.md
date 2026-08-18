@@ -6,7 +6,7 @@ P2P config.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md#wifip2pconfig)
+**Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md)
 
 <!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 

@@ -2,7 +2,7 @@
 
 Control center session object.
 
-**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#beauty系统接口), [Aperture](arkts-camera-camera-aperture-i-sys.md#aperture系统接口), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#coloreffect系统接口)
+**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Control center session object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableAutoFraming

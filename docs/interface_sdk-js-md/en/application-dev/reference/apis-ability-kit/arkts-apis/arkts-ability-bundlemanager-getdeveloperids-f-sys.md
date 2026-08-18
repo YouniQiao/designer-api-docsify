@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getDeveloperIds
@@ -13,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: int): Array<string>
 ```
 
-Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md#appdistributiontype-system-api).
+Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md).
 
 **Since:** 23
 

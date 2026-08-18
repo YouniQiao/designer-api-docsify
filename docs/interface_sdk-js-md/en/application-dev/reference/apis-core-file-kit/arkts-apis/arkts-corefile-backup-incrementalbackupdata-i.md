@@ -2,7 +2,7 @@
 
 Corresponds to an incremental application, including its last incremental time and incremental list.
 
-**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md#incrementalbackuptime-system-api), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#filemanifestdata-system-api), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md#backupparams-system-api), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md#backuppriority-system-api)
+**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md)
 
 **Since:** 23
 

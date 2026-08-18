@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## offSystemPanelStatusChange
@@ -29,7 +28,7 @@ Unsubscribe from the system panel status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | No | callback triggered when the system panel status changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SystemPanelStatus](arkts-ime-inputmethodsystempanelmanager-systempanelstatus-i-sys.md)&gt; | No | callback triggered when the system panel status changes. |
 
 **Error codes:**
 

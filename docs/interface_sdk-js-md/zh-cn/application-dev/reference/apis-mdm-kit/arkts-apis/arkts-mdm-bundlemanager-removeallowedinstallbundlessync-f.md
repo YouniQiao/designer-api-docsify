@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## removeAllowedInstallBundlesSync
@@ -29,7 +30,7 @@ function removeAllowedInstallBundlesSync(admin: Want, appIds: Array<string>, acc
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，数组中的元素支持使用 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)和 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，仅移除传入的 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)（或 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)），不会移除同一应用的 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)（或 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)）。API version 20及之前版本，数组中的元素只支持使用 [appId](../../../quick-start/common-problem-of-application.md#什么是appid)。 |
-| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the user ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
+| accountId | number | 否 | 用户ID，取值范围：大于等于0。 <br> accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 <br> - 调用接口时，若传入accountId，表示指定用户。 <br> - 调用接口时，若未传入accountId，表示当前用户。*@ohos.account.osAccount** to obtain the user ID. <br> - If **accountId** is passed in, this API applies to the specified user. <br> - If **accountId** is not passed in, this API applies to the current user. |
 
 **错误码：**
 

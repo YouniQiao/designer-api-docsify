@@ -16,6 +16,5 @@ Summarizes the data information of the **unifiedData** object, including the dat
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getSensorListByDeviceSync
@@ -23,7 +24,7 @@ function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | int | 否 | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)查询或者监听设备上下线接口 [sensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md#onsensorstatuschange)获取。 |
+| deviceId | int | 否 | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md)查询或者监听设备上下线接口 sensorStatusChange获取。 |
 
 **返回值：**
 

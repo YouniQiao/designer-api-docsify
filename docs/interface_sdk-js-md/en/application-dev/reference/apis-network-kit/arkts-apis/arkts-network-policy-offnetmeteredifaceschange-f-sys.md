@@ -6,13 +6,13 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## off_netMeteredIfacesChange
+## off_netMeteredIfacesChange('netMeteredIfacesChange')
 
 ```TypeScript
 function off(type: 'netMeteredIfacesChange', callback?: Callback<Array<string>>): void
 ```
 
-Unregister metered ifaces change listener.
+Unsubscribes from the changes of the metering interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Unregister metered ifaces change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netMeteredIfacesChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | the callback of off. |
+| type | 'netMeteredIfacesChange' | Yes | Event type. The value **netMeteredIfacesChange** indicates a metered **iface** change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to return the result. It is called when the registered metered **iface** changes. |
 
 **Error codes:**
 

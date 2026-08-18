@@ -52,7 +52,7 @@ Creates an image filter with a given blur effect.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.<br> If nullptr is returned, the creation fails.<br> The possible cause of the failure is that the available memory is empty. |
+| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.  If nullptr is returned, the creation fails.  The possible cause of the failure is that the available memory is empty. |
 
 ### OH_Drawing_ImageFilterCreateBlurWithCrop()
 
@@ -105,7 +105,7 @@ Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This AP
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.<br> If nullptr is returned, the creation fails.<br> The possible cause of the failure is that the available memory is empty or<br> a nullptr <b>OH_Drawing_ColorFilter</b> is passed. |
+| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.  If nullptr is returned, the creation fails.  The possible cause of the failure is that the available memory is empty or  a nullptr <b>OH_Drawing_ColorFilter</b> is passed. |
 
 ### OH_Drawing_ImageFilterCreateOffset()
 
@@ -131,7 +131,7 @@ Creates an offset filter to translate the input filter based on the specified ve
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.<br> If nullptr is returned, the creation fails.<br> The possible cause of the failure is that the available memory is empty. |
+| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.  If nullptr is returned, the creation fails.  The possible cause of the failure is that the available memory is empty. |
 
 ### OH_Drawing_ImageFilterCreateFromShaderEffect()
 
@@ -155,7 +155,7 @@ Creates an **ImageFilter** object based on a shader.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.<br> If nullptr is returned, the creation fails.<br> The possible cause of the failure is that the available memory is empty or<br> a nullptr <b>OH_Drawing_ShaderEffect</b> is passed. |
+| [OH_Drawing_ImageFilter*](capi-drawing-oh-drawing-imagefilter.md) | Returns the pointer to the <b>OH_Drawing_ImageFilter</b> object created.  If nullptr is returned, the creation fails.  The possible cause of the failure is that the available memory is empty or  a nullptr <b>OH_Drawing_ShaderEffect</b> is passed. |
 
 ### OH_Drawing_ImageFilterDestroy()
 

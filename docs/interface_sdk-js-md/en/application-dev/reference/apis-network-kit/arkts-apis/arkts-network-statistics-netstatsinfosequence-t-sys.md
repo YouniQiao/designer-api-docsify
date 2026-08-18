@@ -4,7 +4,7 @@
 export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>
 ```
 
-Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#netstatsinfosequenceitem-system-api).
+Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md).
 
 **Since:** 23
 

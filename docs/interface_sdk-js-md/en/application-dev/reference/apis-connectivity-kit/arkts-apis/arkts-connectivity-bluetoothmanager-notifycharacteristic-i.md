@@ -6,7 +6,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Deprecated since:** 10
 
-**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md#notifycharacteristic)
+**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md)
 
 <!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
 
@@ -84,7 +84,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#gattservice) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) instance to which the characteristic belongs
 
 **Type:** string
 

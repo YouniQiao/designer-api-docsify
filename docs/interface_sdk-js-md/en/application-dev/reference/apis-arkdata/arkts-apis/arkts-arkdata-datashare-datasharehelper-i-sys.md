@@ -1,6 +1,6 @@
 # DataShareHelper (System API)
 
-Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-system-api) .
+Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) .
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ Batch inserts data into the database. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
@@ -417,7 +417,7 @@ Deletes one or more data records from the database. This API uses an asynchronou
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
 
 **Error codes:**
 
@@ -538,8 +538,8 @@ Denormalizes a URI. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -588,7 +588,7 @@ Denormalizes a URI. This API uses a promise to return the result. Silent access 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to denormalize. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to denormalize. |
 
 **Return value:**
 
@@ -642,7 +642,7 @@ Obtains the published data of an application. Only silent access is supported. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Application to which the data belongs. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | Yes | Callback used to return the published data obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt;&gt; | Yes | Callback used to return the published data obtained. |
 
 **Error codes:**
 
@@ -737,7 +737,7 @@ Inserts a single data record into the database. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key- value database (KVDB), do not support the return of indexes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key- value database (KVDB), do not support the return of indexes. |
 
 **Error codes:**
 
@@ -876,8 +876,8 @@ Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to normalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to normalize. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -926,7 +926,7 @@ Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to normalize. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to normalize. |
 
 **Return value:**
 
@@ -980,7 +980,7 @@ Notifies the registered observer of data changes. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1110,7 +1110,7 @@ if (dataShareHelper != undefined) {
 offDataChange(uri: string, callback?: Callback<void>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on_datachangedatachange) API.
 
 **Since:** 23
 
@@ -1127,7 +1127,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
@@ -1142,7 +1142,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on_datachangedatachange) API.
 
 **Since:** 23
 
@@ -1160,7 +1160,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | --- | --- | --- | --- |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on_datachangedatachange) . |
 
 **Error codes:**
 
@@ -1197,7 +1197,7 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1240,7 +1240,7 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1255,13 +1255,13 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## off_dataChange
+## off_dataChange('dataChange')
 
 ```TypeScript
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on_datachangedatachange) API.
 
 **Since:** 9
 
@@ -1279,7 +1279,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
@@ -1308,7 +1308,7 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#ondatachange) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on_datachangedatachange) API.
 
 **Since:** 12
 
@@ -1327,7 +1327,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#ondatachange) . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on_datachangedatachange) . |
 
 **Error codes:**
 
@@ -1352,7 +1352,7 @@ if (dataShareHelper !== undefined) {
 }
 ```
 
-## off_publishedDataChange
+## off_publishedDataChange('publishedDataChange')
 
 ```TypeScript
 off(
@@ -1382,7 +1382,7 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 | type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1413,7 +1413,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## off_rdbDataChange
+## off_rdbDataChange('rdbDataChange')
 
 ```TypeScript
 off(
@@ -1443,7 +1443,7 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 | type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
@@ -1492,7 +1492,7 @@ Subscribes to the data change of the specified URI. After an observer is registe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
@@ -1525,7 +1525,7 @@ Subscribes to the data change of the specified URI. After a change notification 
 | --- | --- | --- | --- |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
@@ -1562,7 +1562,7 @@ Subscribes to the change of the published data. Only silent access is supported.
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1605,7 +1605,7 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | --- | --- | --- | --- |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1620,7 +1620,7 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## on_dataChange
+## on_dataChange('dataChange')
 
 ```TypeScript
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
@@ -1644,7 +1644,7 @@ Subscribes to the data change of the specified URI. After an observer is registe
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
@@ -1691,7 +1691,7 @@ Subscribes to the data change of the specified URI. After a change notification 
 | event | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
@@ -1715,7 +1715,7 @@ if (dataShareHelper !== undefined) {
 }
 ```
 
-## on_publishedDataChange
+## on_publishedDataChange('publishedDataChange')
 
 ```TypeScript
 on(
@@ -1745,7 +1745,7 @@ Subscribes to the change of the published data. Only silent access is supported.
 | type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1786,7 +1786,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-## on_rdbDataChange
+## on_rdbDataChange('rdbDataChange')
 
 ```TypeScript
 on(
@@ -1816,7 +1816,7 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. If **type** is any other value, there is no response to this API. |
 | uris | Array&lt;string&gt; | Yes | URIs of the target data. |
 | templateId | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
@@ -1887,7 +1887,7 @@ Publishes data to the database. You should pass in the version of the data to be
 | data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | Yes | Data to publish. |
 | bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
 | version | int | Yes | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
@@ -1947,7 +1947,7 @@ Publishes data to the database. Only silent access is supported. This API uses a
 | --- | --- | --- | --- |
 | data | Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md)&gt; | Yes | Data to publish. |
 | bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
@@ -2058,7 +2058,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](../../apis-na/arkts-apis/arkts-na-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareResultSet](../../apis-na/arkts-apis/arkts-na-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2194,7 +2194,7 @@ Updates data in the database. This API uses an asynchronous callback to return t
 | uri | string | Yes | URI of the data to update. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
 | value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
 
 **Error codes:**
 

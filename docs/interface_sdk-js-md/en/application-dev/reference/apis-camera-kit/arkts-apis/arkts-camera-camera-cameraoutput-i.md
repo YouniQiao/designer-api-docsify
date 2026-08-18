@@ -1,6 +1,6 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md#session). It is the base class of **output**.
+CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md). It is the base class of **output**.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Releases output resources. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the output resources are released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the output resources are released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

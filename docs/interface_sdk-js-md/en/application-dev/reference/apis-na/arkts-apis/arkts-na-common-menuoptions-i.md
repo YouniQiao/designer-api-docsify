@@ -2,7 +2,7 @@
 
 Defines the menu options.
 
-**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-na-common-contextmenuoptions-i.md#contextmenuoptions)
+**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-na-common-contextmenuoptions-i.md)
 
 **Since:** 23
 

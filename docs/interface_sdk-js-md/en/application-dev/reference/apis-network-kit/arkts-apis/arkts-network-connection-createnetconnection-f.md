@@ -12,11 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection
 ```
 
-Create a network connection with optional netSpecifier and timeout.
+Creates a **NetConnection** object, which can be used to listen for the network status. [netSpecifier](arkts-network-connection-netspecifier-i.md) specifies the network to be listened for, and **timeout** indicates the timeout duration (ms). **netSpecifier** is a mandatory parameter for **timeout**. If neither of them is present, the default network is used. > **NOTE：**> > To listen for the network status, after creating a **NetConnection** object, you need to call > [register](arkts-network-connection-netconnection-i.md#register) to register the notification of the specified network status > change.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
 
@@ -26,14 +26,14 @@ Create a network connection with optional netSpecifier and timeout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See [NetSpecifier](arkts-network-connection-netspecifier-i.md#netspecifier). |
-| timeout | int | No | The time in milliseconds to attempt looking for a suitable network before netUnavailable is called. |
+| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Specification of the network to be listened for. If this parameter is not specified, the default network is listened for. |
+| timeout | int | No | Timeout interval for obtaining the network specified by **netSpecifier**. The input value must be an uint32_t integer. This parameter is valid only when **netSpecifier** is present. The default value is **0**. <br>**Note：**: If the network to be listened for does not exist, the system attempts to activate the network. If the timeout interval is exceeded and the network status listener is registered, the **netUnavailable** event is triggered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NetConnection](arkts-network-connection-netconnection-i.md) | the NetConnection of the NetSpecifier. |
+| [NetConnection](arkts-network-connection-netconnection-i.md) | Type of the network connection object to be listened for. |
 
 **Examples**
 

@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## decryptEnvelopedData
@@ -160,7 +163,7 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;&gt; | Promise对象，返回证书集合。 |
+| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise对象，返回证书集合。 |
 
 **错误码：**
 

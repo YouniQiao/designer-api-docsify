@@ -11,6 +11,7 @@ TextBlob是由一个或多个具有相同字型的字符组成的字块。支持
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds

@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructUDPSocketInstance(): UDPSocket
 ```
 
-Creates a UDPSocket object.
+Creates a **UDPSocket** object.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
 
@@ -24,7 +24,7 @@ Creates a UDPSocket object.
 
 | Type | Description |
 | --- | --- |
-| UDPSocket | the UDPSocket of the constructUDPSocketInstance. |
+| UDPSocket | UDPSocket** object. |
 
 **Examples**
 

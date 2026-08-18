@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { FormExtensionAbility } from '@kit.FormKit';
-import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -16,7 +15,7 @@ import { FormExtensionAbility } from '@kit.FormKit';
 | [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md) | Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -31,7 +30,7 @@ import { FormExtensionAbility } from '@kit.FormKit';
 | [OnStopFn](arkts-form-onstopfn-t.md) | Called when this ability breaks the last link, notifying the provider that the provider process is about to stop. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId
@@ -35,7 +36,7 @@ deviceId: long
 remote: rpc.IRemoteObject
 ```
 
-远程驱动程序对象。
+远程驱动通信对象。
 
 **类型：** rpc.IRemoteObject
 

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setAppHttpProxy(httpProxy: HttpProxy): void
 ```
 
-Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy).
+Sets the application-level HTTP proxy configuration. > **NOTE：**> > If you want to use the proxy information configured by this API, set **usingProxy** in > [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) to **true** to enable proxy forwarding. This > API is used only for configuring proxy rules. It does not verify the validity of the proxy service.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the application level proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
+| httpProxy | HttpProxy | Yes | Application-level HTTP proxy configuration. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # KeyAgreement
 
-密钥协商接口，定义基于非对称密钥对生成共享密钥的方法。调用前，需通过 [createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement)方法创建一个 KeyAgreement实例。
+密钥协商接口，定义基于非对称密钥对生成共享密钥的方法。调用前，需通过 [createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md)方法创建一个 KeyAgreement实例。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -39,7 +40,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 是 | 设置密钥协商的私钥输入。 |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 设置密钥协商的公钥输入。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当密钥协商成功时，err为undefined，data为协商的共享密钥；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当密钥协商成功时，err为undefined，data为协商的共享密钥；否则为 错误对象。 |
 
 **错误码：**
 

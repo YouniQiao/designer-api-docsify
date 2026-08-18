@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSlotByBundle
@@ -13,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result. Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot).
+Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result. Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
 
 **Since:** 23
 
@@ -31,7 +30,7 @@ Sets the notification slot for a specified application. This API uses an asynchr
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | slot | NotificationSlot | Yes | Notification slot. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -74,7 +73,7 @@ notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCal
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>
 ```
 
-Sets the notification slot for a specified application. This API uses a promise to return the result. Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md#addslot).
+Sets the notification slot for a specified application. This API uses a promise to return the result. Before setting a notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
 
 **Since:** 23
 

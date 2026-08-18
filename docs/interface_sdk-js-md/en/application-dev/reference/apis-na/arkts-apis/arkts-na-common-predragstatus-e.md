@@ -1,6 +1,6 @@
 # PreDragStatus
 
-Defines the drag status before drag action.
+定义拖拽手势触发前的各阶段状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the drag status before drag action.
 ACTION_DETECTING_STATUS = 0
 ```
 
-Define the status for user prepare to start long press gesture.
+拖拽手势启动阶段。（按下50ms时触发）
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Define the status for user prepare to start long press gesture.
 READY_TO_TRIGGER_DRAG_ACTION = 1
 ```
 
-Define the status for user can start drag action.
+拖拽准备完成，可发起拖拽阶段。（按下500ms时触发）
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Define the status for user can start drag action.
 PREVIEW_LIFT_STARTED = 2
 ```
 
-Define the status for dragItem lift animation started.
+拖拽浮起动效发起阶段。（按下800ms时触发）
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Define the status for dragItem lift animation started.
 PREVIEW_LIFT_FINISHED = 3
 ```
 
-Define the status for dragItem lift animation finished.
+拖拽浮起动效结束阶段。（浮起动效完全结束时触发）
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Define the status for dragItem lift animation finished.
 PREVIEW_LANDING_STARTED = 4
 ```
 
-Define the status for dragItem landing animation started.
+拖拽落回动效发起阶段。（落回动效发起时触发）
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Define the status for dragItem landing animation started.
 PREVIEW_LANDING_FINISHED = 5
 ```
 
-Define the status for dragItem landing animation finished.
+拖拽落回动效结束阶段。（落回动效结束时触发）
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ Define the status for dragItem landing animation finished.
 ACTION_CANCELED_BEFORE_DRAG = 6
 ```
 
-Define the status for user cancel drag action.
+拖拽浮起落位动效中断。（已满足READY_TO_TRIGGER_DRAG_ACTION状态后，未达到动效阶段，手指抬手时触发）
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ Define the status for user cancel drag action.
 PREPARING_FOR_DRAG_DETECTION = 7
 ```
 
-Define the status for user to sense the availability of drag in advance.
+拖拽准备完成，可发起拖拽阶段。（按下350ms时触发）
 
 **Since:** 23
 

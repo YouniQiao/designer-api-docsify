@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## activate
@@ -17,7 +18,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +32,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
 | inputDeviceId | number | 是 | 待穿越输入设备标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，键鼠穿越启动成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，键鼠穿越启动成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -74,7 +75,7 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate系统接口)(targetNetworkId: string, inputDeviceId: int)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)(targetNetworkId: string, inputDeviceId: int)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 

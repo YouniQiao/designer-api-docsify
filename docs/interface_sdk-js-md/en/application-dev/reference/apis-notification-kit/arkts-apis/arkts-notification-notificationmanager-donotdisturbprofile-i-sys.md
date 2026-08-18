@@ -14,7 +14,6 @@ Do Not Disturb profile.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## id

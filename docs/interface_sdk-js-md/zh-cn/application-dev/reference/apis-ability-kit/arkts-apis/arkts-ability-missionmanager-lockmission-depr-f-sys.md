@@ -17,7 +17,7 @@ function lockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission系统接口)
+**替代接口：** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +32,7 @@ function lockMission(missionId: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | number | 是 | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当锁定指定任务id的任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当锁定指定任务id的任务成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -69,7 +69,7 @@ function lockMission(missionId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission系统接口)
+**替代接口：** [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

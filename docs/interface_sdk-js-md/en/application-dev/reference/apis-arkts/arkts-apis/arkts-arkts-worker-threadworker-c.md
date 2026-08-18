@@ -2,7 +2,7 @@
 
 Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
 
-**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
+**Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
 **Since:** 9
 

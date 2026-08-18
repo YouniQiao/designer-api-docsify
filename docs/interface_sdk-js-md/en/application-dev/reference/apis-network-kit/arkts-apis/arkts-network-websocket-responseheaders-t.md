@@ -10,7 +10,8 @@ HTTP response headers.
 
 <!--Device-webSocket-export type ResponseHeaders = Record<string, string | string[] | undefined>--><!--Device-webSocket-export type ResponseHeaders = Record<string, string | string[] | undefined>-End-->
 
-**System capability:** SystemCapability.Communication.NetStack
+**System capability:** 
+- API version 23 and later: SystemCapability.Communication.NetStack
 
 **Property type:** Record<string, string | string[] | undefined>
 

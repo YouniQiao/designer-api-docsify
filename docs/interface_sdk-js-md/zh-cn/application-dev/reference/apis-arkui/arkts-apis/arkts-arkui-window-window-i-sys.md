@@ -1,6 +1,6 @@
 # Window
 
-当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、 [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、 [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
+当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)、 [createWindow()](arkts-arkui-window-createwindow-f.md)、 [findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## attachLayoutToParentWindow
@@ -35,8 +38,8 @@ attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考 [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#windowanchorinfo系统接口)。 |
-| attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考 [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md#subwindowattachoptions系统接口)。 |
+| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | 否 | 一级子窗与主窗保持相对位置不变时的锚点参数。若不传，默认逻辑参考 [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md)。 |
+| attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | 否 | 设置子窗布局的附加参数。若不传，默认逻辑参考 [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md)。 |
 
 **返回值：**
 
@@ -215,7 +218,7 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 | --- | --- | --- | --- |
 | token | rpc.RemoteObject | 是 | 目标窗口token值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -380,7 +383,7 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 | --- | --- | --- | --- |
 | requestInfo | dialogRequest.RequestInfo | 是 | 目标窗口RequestInfo值。 |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 | 目标窗口销毁监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -638,7 +641,7 @@ hide (callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -710,7 +713,7 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md)类型为TYPE_FLOAT），使用callback异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 23
 
@@ -725,7 +728,7 @@ hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | shouldHide | boolean | 是 | 指示是否隐藏非系统级的悬浮窗口，true表示隐藏，false表示不隐藏。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -841,7 +844,7 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md#windowtype)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
+设置是否隐藏非系统级悬浮窗口（[windowType](arkts-arkui-window-windowtype-e.md)类型为TYPE_FLOAT），使用Promise异步回调。 非系统级悬浮窗口是指非系统应用创建的悬浮窗口。默认情况下，一个系统应用主窗口可以与非系统级悬浮窗口共同显示，即该主窗口可以被上层的非系统级悬浮窗口遮挡，如果设置为true，则所有的非系统级悬浮窗口都会被隐藏，此时该主窗口就不会 被上层的非系统级悬浮窗口遮挡。
 
 **起始版本：** 23
 
@@ -939,7 +942,7 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1120,7 +1123,7 @@ offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
 
-## off_mainWindowFullScreenAcrossDisplaysChanged
+## off_mainWindowFullScreenAcrossDisplaysChanged('mainWindowFullScreenAcrossDisplaysChanged')
 
 ```TypeScript
 off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void
@@ -1203,7 +1206,7 @@ onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
 
-## on_mainWindowFullScreenAcrossDisplaysChanged
+## on_mainWindowFullScreenAcrossDisplaysChanged('mainWindowFullScreenAcrossDisplaysChanged')
 
 ```TypeScript
 on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void
@@ -1310,8 +1313,8 @@ raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1428,7 +1431,7 @@ raiseAboveTarget(windowId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| windowId | int | 是 | 目标子窗口的id，通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接 口获取到[properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1547,7 +1550,7 @@ raiseMainWindowAboveTarget(windowId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 目标主窗口的id，该参数为整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md#windowproperties)后，再通过properties.id获取。 |
+| windowId | int | 是 | 目标主窗口的id，该参数为整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
 
 **返回值：**
 
@@ -1839,7 +1842,7 @@ raiseToAppTop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1921,7 +1924,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用 [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) 监听窗口获焦/失焦状态。 获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。 失焦请求发送后，窗口无条件失焦。
+支持当前窗口主动请求获焦/失焦，使用Promise异步回调。调用成功即返回，该接口返回值不代表最终获焦/失焦生效结果。可使用 [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationchangerotationchange) 监听窗口获焦/失焦状态。 获焦请求发送后，窗口获焦结果受到窗口可获焦属性及窗口可见状态的限制。获焦成功的窗口需满足以下约束：1.窗口支持获焦；2.窗口可见（窗口已显示，未销毁且未退至后台）。 失焦请求发送后，窗口无条件失焦。
 
 **起始版本：** 23
 
@@ -2307,7 +2310,7 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isForbidSplitMove | boolean | 是 | 窗口在分屏模式下是否被禁止移动。true表示禁止；false表示不禁止。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2710,7 +2713,7 @@ setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 设置子窗口点击抬升功能是否使能，true表示使能，false表示禁止。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2975,7 +2978,7 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。 若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过 [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) 监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
+截屏、录屏或投屏是否忽略当前窗口。此接口一般用于禁止截屏、录屏或投屏的场景。 若要实现窗口始终在前台忽略截屏、录屏或投屏，在窗口从后台回到前台时，需要通过 [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationchangerotationchange) 监听窗口生命周期变化，在后台状态时设置为false，而在前台状态时设置为true。
 
 **起始版本：** 23
 
@@ -3327,7 +3330,7 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 是否对窗口添加标志位。true表示添加，false表示删除。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3625,7 +3628,7 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | WindowMode | 是 | 窗口模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3778,7 +3781,7 @@ setWindowType(type: WindowType, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | WindowType | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -3816,7 +3819,7 @@ showWithAnimation(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 

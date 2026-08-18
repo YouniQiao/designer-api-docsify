@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getDeviceEncryptionStatus
@@ -17,7 +18,7 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md#getsecuritystatus)
+**替代接口：** [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

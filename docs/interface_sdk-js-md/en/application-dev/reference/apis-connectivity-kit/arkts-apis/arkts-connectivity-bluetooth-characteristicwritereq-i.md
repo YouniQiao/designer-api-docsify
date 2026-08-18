@@ -6,7 +6,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Deprecated since:** 9
 
-**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#characteristicwriterequest)
+**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)
 
 <!--Device-bluetooth-interface CharacteristicWriteReq--><!--Device-bluetooth-interface CharacteristicWriteReq-End-->
 

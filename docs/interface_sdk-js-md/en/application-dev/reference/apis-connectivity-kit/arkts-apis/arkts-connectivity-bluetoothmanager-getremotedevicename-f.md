@@ -18,7 +18,7 @@ Obtains the name of a peer Bluetooth device. On API 10 and above, the permission
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRemoteDeviceName](arkts-connectivity-connection-getremotedevicename-f.md#getremotedevicename)
+**Substitutes:** [getRemoteDeviceName](arkts-connectivity-connection-getremotedevicename-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

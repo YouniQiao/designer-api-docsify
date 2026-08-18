@@ -1,6 +1,6 @@
 # @ohos.net.sharing
 
-Provides network sharing related interfaces.
+This module allows you to share your device's network connectivity with other connected devices.
 
 **Since:** 23
 
@@ -17,48 +17,48 @@ import { sharing } from '@kit.NetworkKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getSharableRegexes](arkts-network-sharing-getsharableregexes-f-sys.md#getsharableregexes) | Get a list regular expression that defines any interface that can support network sharing. |
-| [getSharableRegexes](arkts-network-sharing-getsharableregexes-f-sys.md#getsharableregexes-system-api) | Get a list regular expression that defines any interface that can support network sharing. |
-| [getSharingIfaces](arkts-network-sharing-getsharingifaces-f-sys.md#getsharingifaces) | Obtains the names of interfaces in each sharing state. |
-| [getSharingIfaces](arkts-network-sharing-getsharingifaces-f-sys.md#getsharingifaces-system-api) | Obtains the names of interfaces in each sharing state. |
-| [getSharingState](arkts-network-sharing-getsharingstate-f-sys.md#getsharingstate) | Obtains the network sharing state for given type. |
-| [getSharingState](arkts-network-sharing-getsharingstate-f-sys.md#getsharingstate-system-api) | Obtains the network sharing state for given type. |
-| [getStatsRxBytes](arkts-network-sharing-getstatsrxbytes-f-sys.md#getstatsrxbytes) | Obtains the number of downlink data bytes of the sharing network interfaces. |
-| [getStatsRxBytes](arkts-network-sharing-getstatsrxbytes-f-sys.md#getstatsrxbytes-system-api) | Obtains the number of downlink data bytes of the sharing network interfaces. |
-| [getStatsTotalBytes](arkts-network-sharing-getstatstotalbytes-f-sys.md#getstatstotalbytes) | Obtains the number of total data bytes of the sharing network interfaces. |
-| [getStatsTotalBytes](arkts-network-sharing-getstatstotalbytes-f-sys.md#getstatstotalbytes-system-api) | Obtains the number of total data bytes of the sharing network interfaces. |
-| [getStatsTxBytes](arkts-network-sharing-getstatstxbytes-f-sys.md#getstatstxbytes) | Obtains the number of uplink data bytes of the sharing network interfaces. |
-| [getStatsTxBytes](arkts-network-sharing-getstatstxbytes-f-sys.md#getstatstxbytes-system-api) | Obtains the number of uplink data bytes of the sharing network interfaces. |
-| [isSharing](arkts-network-sharing-issharing-f-sys.md#issharing) | Return the global network sharing state. |
-| [isSharing](arkts-network-sharing-issharing-f-sys.md#issharing-system-api) | Return the global network sharing state. |
-| [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md#issharingsupported) | Checks whether this device allows for network sharing. |
-| [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md#issharingsupported-system-api) | Checks whether this device allows for network sharing. |
-| [off_interfaceSharingStateChange](arkts-network-sharing-offinterfacesharingstatechange-f-sys.md#offinterfacesharingstatechange) | Unregister a callback for the interface network sharing state change. |
-| [off_sharingStateChange](arkts-network-sharing-offsharingstatechange-f-sys.md#offsharingstatechange) | Unregister a callback for the global network sharing state change. |
-| [off_sharingUpstreamChange](arkts-network-sharing-offsharingupstreamchange-f-sys.md#offsharingupstreamchange) | Unregister a callback for the sharing upstream network change. |
-| [on_interfaceSharingStateChange](arkts-network-sharing-oninterfacesharingstatechange-f-sys.md#oninterfacesharingstatechange) | Register a callback for the interface network sharing state change. |
-| [on_sharingStateChange](arkts-network-sharing-onsharingstatechange-f-sys.md#onsharingstatechange) | Register a callback for the global network sharing state change. |
-| [on_sharingUpstreamChange](arkts-network-sharing-onsharingupstreamchange-f-sys.md#onsharingupstreamchange) | Register a callback for the sharing upstream network change. |
-| [startSharing](arkts-network-sharing-startsharing-f-sys.md#startsharing) | Start network sharing for given type. |
-| [startSharing](arkts-network-sharing-startsharing-f-sys.md#startsharing-system-api) | Start network sharing for given type. |
-| [stopSharing](arkts-network-sharing-stopsharing-f-sys.md#stopsharing) | Stop network sharing for given type. |
-| [stopSharing](arkts-network-sharing-stopsharing-f-sys.md#stopsharing-system-api) | Stop network sharing for given type. |
+| [getSharableRegexes](arkts-network-sharing-getsharableregexes-f-sys.md) | Obtains regular expressions of NICs of a specified type. This API uses an asynchronous callback to return the result. |
+| [getSharableRegexes](arkts-network-sharing-getsharableregexes-f-sys.md) | Obtains regular expressions of NICs of a specified type. This API uses a promise to return the result. |
+| [getSharingIfaces](arkts-network-sharing-getsharingifaces-f-sys.md) | Obtains the names of NICs in the specified network sharing state. This API uses an asynchronous callback to return the result. |
+| [getSharingIfaces](arkts-network-sharing-getsharingifaces-f-sys.md) | Obtains the names of NICs in the specified network sharing state. This API uses a promise to return the result. |
+| [getSharingState](arkts-network-sharing-getsharingstate-f-sys.md) | Obtains the network sharing state of the specified type. This API uses an asynchronous callback to return the result. |
+| [getSharingState](arkts-network-sharing-getsharingstate-f-sys.md) | Obtains the network sharing state of the specified type. This API uses a promise to return the result. |
+| [getStatsRxBytes](arkts-network-sharing-getstatsrxbytes-f-sys.md) | Obtains the volume of mobile data traffic received via network sharing. This API uses an asynchronous callback to return the result. |
+| [getStatsRxBytes](arkts-network-sharing-getstatsrxbytes-f-sys.md) | Obtains the volume of mobile data traffic received via network sharing. This API uses a promise to return the result. |
+| [getStatsTotalBytes](arkts-network-sharing-getstatstotalbytes-f-sys.md) | Obtains the total volume of mobile data traffic sent via network sharing. This API uses an asynchronous callback to return the result. |
+| [getStatsTotalBytes](arkts-network-sharing-getstatstotalbytes-f-sys.md) | Obtains the total volume of mobile data traffic sent via network sharing. This API uses a promise to return the result. |
+| [getStatsTxBytes](arkts-network-sharing-getstatstxbytes-f-sys.md) | Obtains the volume of mobile data traffic sent via network sharing. This API uses an asynchronous callback to return the result. |
+| [getStatsTxBytes](arkts-network-sharing-getstatstxbytes-f-sys.md) | Obtains the volume of mobile data traffic sent via network sharing. This API uses a promise to return the result. |
+| [isSharing](arkts-network-sharing-issharing-f-sys.md) | Obtains the current network sharing status. This API uses an asynchronous callback to return the result. |
+| [isSharing](arkts-network-sharing-issharing-f-sys.md) | Obtains the current network sharing status. This API uses a promise to return the result. |
+| [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | Checks whether network sharing is supported. This API uses an asynchronous callback to return the result. |
+| [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | Checks whether network sharing is supported. This API uses a promise to return the result. |
+| [off_interfaceSharingStateChange](arkts-network-sharing-offinterfacesharingstatechange-f-sys.md#off_interfacesharingstatechangeinterfacesharingstatechange) | Unsubscribes from network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
+| [off_sharingStateChange](arkts-network-sharing-offsharingstatechange-f-sys.md#off_sharingstatechangesharingstatechange) | Unregisters the network sharing status change event. This method uses an asynchronous callback to return the result. |
+| [off_sharingUpstreamChange](arkts-network-sharing-offsharingupstreamchange-f-sys.md#off_sharingupstreamchangesharingupstreamchange) | Unsubscribes from upstream network changes. This API uses an asynchronous callback to return the result. |
+| [on_interfaceSharingStateChange](arkts-network-sharing-oninterfacesharingstatechange-f-sys.md#on_interfacesharingstatechangeinterfacesharingstatechange) | Subscribes to network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result. |
+| [on_sharingStateChange](arkts-network-sharing-onsharingstatechange-f-sys.md#on_sharingstatechangesharingstatechange) | Registers the network sharing status change event. This API uses an asynchronous callback to return the result. |
+| [on_sharingUpstreamChange](arkts-network-sharing-onsharingupstreamchange-f-sys.md#on_sharingupstreamchangesharingupstreamchange) | Subscribes to upstream network changes. This API uses an asynchronous callback to return the result. |
+| [startSharing](arkts-network-sharing-startsharing-f-sys.md) | Enables sharing of a specified type. This API uses an asynchronous callback to return the result. |
+| [startSharing](arkts-network-sharing-startsharing-f-sys.md) | Enables sharing of a specified type. This API uses a promise to return the result. |
+| [stopSharing](arkts-network-sharing-stopsharing-f-sys.md) | Disables sharing of a specified type. This API uses an asynchronous callback to return the result. |
+| [stopSharing](arkts-network-sharing-stopsharing-f-sys.md) | Disables sharing of a specified type. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md) | The interface is used to notify listeners of changes in shared interface status. |
+| [InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md) | Wakes up the listener for network sharing state changes of an NIC. |
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -70,5 +70,5 @@ import { sharing } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [NetHandle](arkts-network-sharing-nethandle-t.md) | Get the handle of the data network. |
+| [NetHandle](arkts-network-sharing-nethandle-t.md) | Defines the handle of the data network. Before calling the **NetHandle** function, call the **getNetHandle** function to obtain a **NetHandle** object. |
 

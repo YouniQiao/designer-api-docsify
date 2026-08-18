@@ -18,7 +18,7 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 
 **Deprecated since:** 10
 
-**Substitutes:** [getState](arkts-connectivity-access-getstate-f.md#getstate)
+**Substitutes:** [getState](arkts-connectivity-access-getstate-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

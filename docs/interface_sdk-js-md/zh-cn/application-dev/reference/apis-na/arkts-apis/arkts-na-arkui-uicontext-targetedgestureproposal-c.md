@@ -2,7 +2,7 @@
 
 类TargetedGestureProposal。
 
-**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
+**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **起始版本：** 26.0.0
 

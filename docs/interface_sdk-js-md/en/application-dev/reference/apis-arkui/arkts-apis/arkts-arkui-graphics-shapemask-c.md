@@ -48,7 +48,7 @@ Sets a round mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](../../apis-na/arkts-apis/arkts-na-graphics-circle-i.md) | Yes | Round shape. |
+| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | Round shape. |
 
 **Examples**
 
@@ -119,7 +119,7 @@ Sets the command for drawing a path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](../../apis-na/arkts-apis/arkts-na-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
+| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
 
 **Examples**
 
@@ -191,7 +191,7 @@ Sets an oval mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Oval shape. |
+| oval | [Rect](arkts-arkui-rect-t.md) | Yes | Oval shape. |
 
 **Examples**
 
@@ -257,7 +257,7 @@ Sets a rectangle mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Shape of the rectangle. |
+| rect | [Rect](arkts-arkui-rect-t.md) | Yes | Shape of the rectangle. |
 
 **Examples**
 
@@ -333,7 +333,7 @@ Sets the mask in the shape of a rectangle with rounded corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-na/arkts-apis/arkts-na-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
 
 **Examples**
 
@@ -392,7 +392,7 @@ struct Index {
 fillColor: number
 ```
 
-Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode) API to generate the final color.
+Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) API to generate the final color.
 
 **Type:** number
 
@@ -414,7 +414,7 @@ Describes the fill color of the mask, in ARGB format. The default value is **0XF
 strokeColor: number
 ```
 
-Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode) API to generate the final color.
+Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md) API to generate the final color.
 
 **Type:** number
 

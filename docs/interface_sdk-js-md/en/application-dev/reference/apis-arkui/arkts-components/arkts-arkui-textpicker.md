@@ -26,15 +26,25 @@ Creates a text picker based on the specified data list.
 
 ## Summary
 
-- [DividerOptions](arkts-arkui-divideroptions-i.md)
-- [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
-- [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)
-- [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md)
-- [TextPickerDialogOptionsExt](arkts-arkui-textpickerdialogoptionsext-i.md)
-- [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
-- [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)
-- [TextPickerResult](arkts-arkui-textpickerresult-i.md)
-- [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
-- [OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)
-- [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md)
-- [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [DividerOptions](arkts-arkui-divideroptions-i.md) | Define the divider configuration options. |
+| [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md) | Defines the background style configuration for selected picker items. |
+| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md) | Defines the content for multi-column picker options. |
+| [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | Defines the TextPickerDialogOptions for Text Picker Dialog. |
+| [TextPickerDialogOptionsExt](arkts-arkui-textpickerdialogoptionsext-i.md) | Defines the TextPickerDialogOptionsExt for Text Picker Dialog. |
+| [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) | Defines the configuration options of the text picker. |
+| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md) | Defines the content for single-column picker options. |
+| [TextPickerResult](arkts-arkui-textpickerresult-i.md) | Defines the struct of TextPickerResult. |
+| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | Defines the text style options for the text picker. Inherits from PickerTextStyle. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md) | Defines the **onChange** event callback signature. |
+| [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | Defines the **onEnterSelectedArea** event callback signature. |
+| [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | Defines the **onScrollStop** event callback signature. |
+

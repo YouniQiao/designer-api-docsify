@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -43,7 +44,7 @@ size: Size
 
 获取到的当前ContainerReader组件的尺寸，用于布局分析和断点计算。<br/>**说明：**<br/>该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。绑定后组件尺寸值变化时，size绑定的变量值会自动更新。
 
-**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
+**类型：** [Size](arkts-arkui-graphics-size-i.md)
 
 **起始版本：** 26.0.0
 

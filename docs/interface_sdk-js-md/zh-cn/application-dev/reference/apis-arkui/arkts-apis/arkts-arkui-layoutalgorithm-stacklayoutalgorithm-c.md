@@ -1,8 +1,8 @@
 # StackLayoutAlgorithm
 
-堆叠布局算法类。 > **说明：** > > StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md#dynamiclayout)组件的 > 入参指定布局算法。
+堆叠布局算法类。 > **说明：** > > StackLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md)组件的 > 入参指定布局算法。
 
-**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#layoutalgorithm)
+**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
 
 **起始版本：** 24
 

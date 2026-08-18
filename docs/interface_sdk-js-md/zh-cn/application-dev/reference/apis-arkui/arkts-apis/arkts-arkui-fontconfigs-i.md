@@ -19,7 +19,7 @@
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md#fontweightconfigs)。
+字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)。
 
 **类型：** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 

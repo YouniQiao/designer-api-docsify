@@ -2,7 +2,7 @@
 
 设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。 设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。 比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。 在调用DeviceKVStore的方法前，需要先通过 getKVStore 构建一个DeviceKVStore实例。
 
-**继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#singlekvstore)
+**继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## getResultSet
@@ -38,7 +39,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | Promise对象。返回KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | Promise对象。返回KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -114,7 +115,7 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 | --- | --- | --- | --- |
 | deviceId | string | 是 | Indicates the ID of the device to which the results belong. |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 

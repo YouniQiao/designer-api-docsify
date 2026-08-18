@@ -22,9 +22,9 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 
 | Name | Description |
 | --- | --- |
-| [READ_ONLY](arkts-corefile-openmode-con.md#readonly) | Open the file in read-only mode. |
-| [WRITE_ONLY](arkts-corefile-openmode-con.md#writeonly) | Open the file in write-only mode. |
-| [READ_WRITE](arkts-corefile-openmode-con.md#readwrite) | Open the file in read/write mode. |
+| [READ_ONLY](arkts-corefile-openmode-con.md#read_only) | Open the file in read-only mode. |
+| [WRITE_ONLY](arkts-corefile-openmode-con.md#write_only) | Open the file in write-only mode. |
+| [READ_WRITE](arkts-corefile-openmode-con.md#read_write) | Open the file in read/write mode. |
 | [CREATE](arkts-corefile-openmode-con.md#create) | Create a file if the specified file does not exist. |
 | [TRUNC](arkts-corefile-openmode-con.md#trunc) | If the file exists and is opened in write-only or read/write mode, truncate the file length to 0. |
 | [APPEND](arkts-corefile-openmode-con.md#append) | Open the file in append mode. New data will be written to the end of the file. |

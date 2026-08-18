@@ -1,6 +1,6 @@
 # DeviceConnectionType (System API)
 
-Defines the Device Connection Mode of the Ethernet.
+Enumerates Ethernet device connection modes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Defines the Device Connection Mode of the Ethernet.
 BUILT_IN = 0
 ```
 
-Ethernet in built-in mode.
+Internal connection mode.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Ethernet in built-in mode.
 EXTERNAL = 1
 ```
 
-Ethernet in external mode. For example, an ethernet connection via USB.
+External connection mode. For example, the Ethernet device is connected through a USB.
 
 **Since:** 20
 

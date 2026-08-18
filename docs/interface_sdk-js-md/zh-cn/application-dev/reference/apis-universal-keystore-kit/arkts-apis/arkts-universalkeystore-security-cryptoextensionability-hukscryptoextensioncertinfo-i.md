@@ -1,6 +1,6 @@
 # HuksCryptoExtensionCertInfo
 
-[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md#hukscryptoextensionresultcode)中的certs数组中的元素。
+[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)中的certs数组中的元素。
 
 **起始版本：** 22
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
 ```
 
 ## cert

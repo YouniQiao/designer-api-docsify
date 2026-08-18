@@ -14,7 +14,6 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 
 ```TypeScript
 import { AppServiceExtensionAbility } from '@kit.AbilityKit';
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -220,7 +219,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext).
+Context environment for an AppServiceExtensionAbility. This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 **Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 

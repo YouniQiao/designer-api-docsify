@@ -1,8 +1,8 @@
 # TLSSecureOptions
 
-Defines TLS security options. The CA certificate is mandatory, and other parameters are optional.
+TLS security options. When **cert** (local certificate) and **key** (private key) are not empty, the two-way authentication mode is enabled. If **cert** or **key** is empty, one-way authentication is enabled.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-socket-export interface TLSSecureOptions--><!--Device-socket-export interface TLSSecureOptions-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 ca?: string | Array<string>
 ```
 
-Certificate used to verify the identity of the server, if it is not set, use system ca.
+CA certificate of the server, which is used to authenticate the digital certificate of the server. The default value is the preset CA certificate&lt;sup&gt;12+&lt;/sup&gt;. A maximum of 1000 certificates can be set.
 
 **Type:** string \| Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 9
 
 <!--Device-TLSSecureOptions-ca?: string | Array<string>--><!--Device-TLSSecureOptions-ca?: string | Array<string>-End-->
 
@@ -36,11 +36,11 @@ Certificate used to verify the identity of the server, if it is not set, use sys
 cert?: string | Array<string>
 ```
 
-Certificate proving the identity of the client
+Digital certificate of the local client. An array can be passed since API version 24. A maximum of 1000 certificates can be set.
 
 **Type:** string \| Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 9
 
 <!--Device-TLSSecureOptions-cert?: string | Array<string>--><!--Device-TLSSecureOptions-cert?: string | Array<string>-End-->
 
@@ -52,11 +52,11 @@ Certificate proving the identity of the client
 cipherSuite?: string
 ```
 
-Crypto suite specification
+Cipher suite used during communication. The default value is **""**.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-cipherSuite?: string--><!--Device-TLSSecureOptions-cipherSuite?: string-End-->
 
@@ -68,11 +68,11 @@ Crypto suite specification
 isBidirectionalAuthentication?: boolean
 ```
 
-Used to set up bidirectional authentication. The default value is false.
+Two-way authentication. The default value is **false**. The value **true** means to enable two-way authentication, and the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-TLSSecureOptions-isBidirectionalAuthentication?: boolean--><!--Device-TLSSecureOptions-isBidirectionalAuthentication?: boolean-End-->
 
@@ -84,11 +84,11 @@ Used to set up bidirectional authentication. The default value is false.
 key?: string
 ```
 
-Private key of client certificate
+Private key of the local digital certificate.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-key?: string--><!--Device-TLSSecureOptions-key?: string-End-->
 
@@ -100,11 +100,11 @@ Private key of client certificate
 password?: string
 ```
 
-Password of the private key
+Password for reading the private key.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-password?: string--><!--Device-TLSSecureOptions-password?: string-End-->
 
@@ -116,11 +116,11 @@ Password of the private key
 protocols?: Protocol | Array<Protocol>
 ```
 
-TLS protocol version
+TLS protocol version. The default value is **TLSv1.2**.
 
 **Type:** Protocol \| Array&lt;Protocol&gt;
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-protocols?: Protocol | Array<Protocol>--><!--Device-TLSSecureOptions-protocols?: Protocol | Array<Protocol>-End-->
 
@@ -132,11 +132,11 @@ TLS protocol version
 signatureAlgorithms?: string
 ```
 
-&lt;P&gt;Supported signature algorithms. This string can contain summary algorithms(SHA256,MD5,etc),Public key algorithm(RSA-PSS,ECDSA,etc), Combination of the two(For example 'RSA+SHA384') or TLS v1.3 Scheme name(For example rsa_pss_pss_sha512)&lt;/P&gt;
+Signing algorithm used during communication. The default value is **""**.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-signatureAlgorithms?: string--><!--Device-TLSSecureOptions-signatureAlgorithms?: string-End-->
 
@@ -148,11 +148,11 @@ signatureAlgorithms?: string
 useRemoteCipherPrefer?: boolean
 ```
 
-default is false, use local cipher.
+Whether to use the remote cipher suite preferentially. The value **true** means to use the remote cipher suite preferentially, and the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSSecureOptions-useRemoteCipherPrefer?: boolean--><!--Device-TLSSecureOptions-useRemoteCipherPrefer?: boolean-End-->
 

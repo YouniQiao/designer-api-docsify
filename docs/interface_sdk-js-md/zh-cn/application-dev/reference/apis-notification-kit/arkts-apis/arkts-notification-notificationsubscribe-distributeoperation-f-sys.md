@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation

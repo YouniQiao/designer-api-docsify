@@ -2,7 +2,7 @@
 
 不受光照影响的材质，其着色值只与设置的基础颜色有关，与光照条件无关，继承自Material。
 
-**继承/实现关系：** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#material)
+**继承/实现关系：** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
 **起始版本：** 23
 

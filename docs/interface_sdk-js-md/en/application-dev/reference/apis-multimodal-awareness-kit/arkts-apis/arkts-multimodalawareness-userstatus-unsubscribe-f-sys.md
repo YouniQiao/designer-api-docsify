@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { userStatus } from '@kit.MultimodalAwarenessKit';
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## unsubscribe
@@ -30,7 +29,7 @@ Unsubscribes from user status monitoring.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | Yes | Indicates the feature to be unsubscribed from. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | No | Callback used to return user status data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | No | Callback used to return user status data. |
 
 **Return value:**
 

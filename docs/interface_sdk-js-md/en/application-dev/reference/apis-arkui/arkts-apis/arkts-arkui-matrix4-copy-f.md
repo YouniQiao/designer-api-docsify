@@ -18,7 +18,7 @@ Copies this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
+**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md#copy)
 
 <!--Device-matrix4-function copy(): Matrix4Transit--><!--Device-matrix4-function copy(): Matrix4Transit-End-->
 

@@ -6,7 +6,7 @@ Enumerates the fault types.
 
 **Deprecated since:** 18
 
-**Substitutes:** [event](arkts-performanceanalysis-hiappevent-event-n.md#event)
+**Substitutes:** [event](arkts-performanceanalysis-hiappevent-event-n.md)
 
 <!--Device-FaultLogger-enum FaultType--><!--Device-FaultLogger-enum FaultType-End-->
 

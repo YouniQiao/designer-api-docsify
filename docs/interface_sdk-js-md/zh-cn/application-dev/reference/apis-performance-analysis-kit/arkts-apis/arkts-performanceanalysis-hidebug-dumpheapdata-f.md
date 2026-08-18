@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpHeapData
@@ -17,7 +18,7 @@ function dumpHeapData(filename: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)(filename : string)
+**替代接口：** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md)(filename : string)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 

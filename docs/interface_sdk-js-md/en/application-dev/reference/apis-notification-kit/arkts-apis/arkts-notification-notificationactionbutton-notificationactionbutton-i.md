@@ -16,7 +16,7 @@ extras?: Record<string, RecordData>
 
 Extension information of the button. The default value is empty. It is used to store custom extension data of the button. An application can add any key-value pair information as needed, such as the specific identifier and additional data of the button.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

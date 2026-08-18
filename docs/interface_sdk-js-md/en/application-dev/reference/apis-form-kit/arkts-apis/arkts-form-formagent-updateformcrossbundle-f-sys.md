@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formAgent } from '@kit.FormKit';
-import { formAgent } from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle

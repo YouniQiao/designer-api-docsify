@@ -6,7 +6,7 @@ typedef struct Input_InterceptorOptions Input_InterceptorOptions
 
 ## Overview
 
-Defines event interceptor options.
+Event interceptor options, which are used to configure parameters and rules for input event interception.Interception control for key events, mouse events, touchscreen events, and axis events are supported.
 
 **Since**: 12
 

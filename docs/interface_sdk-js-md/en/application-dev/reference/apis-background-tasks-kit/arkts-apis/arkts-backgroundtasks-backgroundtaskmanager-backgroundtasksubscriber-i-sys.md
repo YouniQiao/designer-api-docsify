@@ -14,7 +14,6 @@ Represents a listener object used to listen for background task state changes.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart

@@ -1,6 +1,6 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow), or [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | No | Anchor point information used to attach the first-level child window to the main window to maintain the fixed relative position. If this parameter is not passed, the default logic is the same as that of [WindowAnchorInfo] [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md#windowanchorinfo-system-api). |
+| anchorInfo | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | No | Anchor point information used to attach the first-level child window to the main window to maintain the fixed relative position. If this parameter is not passed, the default logic is the same as that of [WindowAnchorInfo] [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md). |
 | attachOptions | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | No | Additional parameters for setting the child window layout. If this parameter is not passed, the default logic is the same as that of [SubWindowAttachOptions] SubWindoWattachOptions. |
 
 **Return value:**
@@ -170,7 +170,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | --- | --- | --- | --- |
 | token | rpc.RemoteObject | Yes | Token of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -335,7 +335,7 @@ Binds the modal window to the target window. After the binding is successful, th
 | --- | --- | --- | --- |
 | requestInfo | dialogRequest.RequestInfo | Yes | RequestInfo** of the target window. |
 | deathCallback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for modal window destruction events. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -560,7 +560,7 @@ Hides this window. This API uses an asynchronous callback to return the result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -632,7 +632,7 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#windowtype) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -647,7 +647,7 @@ Sets whether to hide non-system floating windows (where [windowType](arkts-arkui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shouldHide | boolean | Yes | Whether to hide non-system floating windows. **true** to hide, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -711,7 +711,7 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#windowtype) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
 **Since:** 23
 
@@ -809,7 +809,7 @@ Hides this window and plays an animation during the process. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -960,7 +960,7 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
-## off_mainWindowFullScreenAcrossDisplaysChanged
+## off_mainWindowFullScreenAcrossDisplaysChanged('mainWindowFullScreenAcrossDisplaysChanged')
 
 ```TypeScript
 off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void
@@ -1043,7 +1043,7 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
-## on_mainWindowFullScreenAcrossDisplaysChanged
+## on_mainWindowFullScreenAcrossDisplaysChanged('mainWindowFullScreenAcrossDisplaysChanged')
 
 ```TypeScript
 on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void
@@ -1150,8 +1150,8 @@ Raises a child window above a target child window. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1227,7 +1227,7 @@ Raises a child window above a target child window. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
+| windowId | int | Yes | ID of the target child window, which is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
 
 **Return value:**
 
@@ -1307,7 +1307,7 @@ Moves the main window above another main window within the same application, wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the target main window. The value is an integer. It is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md#windowproperties) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
+| windowId | int | Yes | ID of the target main window. The value is an integer. It is the value of **properties.id** in [properties](arkts-arkui-window-windowproperties-i.md) obtained through [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties). |
 
 **Return value:**
 
@@ -1468,7 +1468,7 @@ Raises the application child window to the top layer of the application. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1519,7 +1519,7 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationchangerotationchange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
 
 **Since:** 23
 
@@ -1889,7 +1889,7 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isForbidSplitMove | boolean | Yes | Whether the window is forbidden to move in split-screen mode. **true** if forbidden, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2159,7 +2159,7 @@ Sets whether to enable a child window to raise itself by click. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable a child window to raise itself by click. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2367,7 +2367,7 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#onrotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationchangerotationchange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
 **Since:** 23
 
@@ -2631,7 +2631,7 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to add or delete the flag. **true** to add, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2887,7 +2887,7 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | WindowMode | Yes | Indicate the mode of a window. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3002,7 +3002,7 @@ Sets the type of this window. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | WindowType | Yes | Window type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -3040,7 +3040,7 @@ Shows this window and plays an animation during the process. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

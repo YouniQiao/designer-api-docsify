@@ -1,8 +1,8 @@
 # AeadParamsSpec
 
-Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec). <br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can > be called only once.
+Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md). <br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can > be called only once.
 
-**Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec)
+**Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
 **Since:** 26.0.0
 
@@ -13,7 +13,6 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 

@@ -1,18 +1,6 @@
 # @ohos.file.recent
 
-/*
- Copyright (c) 2023 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License"),
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **file.recent** module provides APIs for managing the list of recently accessed files. > **NOTE：**> > - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a superscript to indicate their earliest API version. > - The APIs provided by this module are system APIs. > - Currently, the APIs of this module can be called only by **FileManager**. > - The APIs of this module are deprecated since API version 23. The following APIs are not recommended.
 
 **Since:** 10
 
@@ -35,17 +23,17 @@ import { recent } from '@kit.CoreFileKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [add](arkts-corefile-recent-add-f-sys.md#add) | Adds the file of the specified URI to the recent file list. |
-| [listFile](arkts-corefile-recent-listfile-f-sys.md#listfile) | Lists the files that are accessed recently. |
-| [remove](arkts-corefile-recent-remove-f-sys.md#remove) | Removes the file of the specified URI from the recent file list. |
+| [add](arkts-corefile-recent-add-f-sys.md) | Adds the file of the specified URI to the recent file list. |
+| [listFile](arkts-corefile-recent-listfile-f-sys.md) | Lists the files that are accessed recently. |
+| [remove](arkts-corefile-recent-remove-f-sys.md) | Removes the file of the specified URI from the recent file list. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

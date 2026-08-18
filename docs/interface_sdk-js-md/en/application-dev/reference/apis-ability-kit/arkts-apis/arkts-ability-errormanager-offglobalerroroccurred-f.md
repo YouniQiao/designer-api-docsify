@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
-import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_globalErrorOccurred
+## off_globalErrorOccurred('globalErrorOccurred')
 
 ```TypeScript
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void

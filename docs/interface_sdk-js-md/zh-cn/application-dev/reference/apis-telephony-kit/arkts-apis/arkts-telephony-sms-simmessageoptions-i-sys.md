@@ -13,6 +13,7 @@ SIM卡消息选项。
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## pdu

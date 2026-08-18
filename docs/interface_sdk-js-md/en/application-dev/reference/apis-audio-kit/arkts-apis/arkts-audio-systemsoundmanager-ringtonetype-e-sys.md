@@ -22,7 +22,7 @@ Default type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [RINGTONE_TYPE_SIM_CARD_0](#ringtonetypesimcard0)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_0](#ringtone_type_sim_card_0)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0--><!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0-End-->
 
@@ -58,7 +58,7 @@ Multi-sim type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [RINGTONE_TYPE_SIM_CARD_1](#ringtonetypesimcard1)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_1](#ringtone_type_sim_card_1)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1--><!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1-End-->
 

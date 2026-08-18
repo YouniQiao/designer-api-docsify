@@ -11,6 +11,11 @@ PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -51,7 +56,7 @@ deny(): void
 getAccessibleResource(): Array<string>
 ```
 
-获取网页所请求的权限资源列表，类型参考[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype)。
+获取网页所请求的权限资源列表，类型参考[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md)。
 
 **起始版本：** 9
 
@@ -109,5 +114,5 @@ grant(resources: Array<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resources | Array&lt;string&gt; | 是 | 网页被授予的权限资源列表，需通过 getAccessibleResource() 获取，类型参考 [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype)。传入该参数后，网页将获得对指定资源的访问权限，若传入空列表，则表示拒绝所有权限请求。 |
+| resources | Array&lt;string&gt; | 是 | 网页被授予的权限资源列表，需通过 getAccessibleResource() 获取，类型参考 [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md)。传入该参数后，网页将获得对指定资源的访问权限，若传入空列表，则表示拒绝所有权限请求。 |
 

@@ -2,7 +2,7 @@
 
 图库选择选项子类，继承于BaseSelectOptions。用于拉起对应userId空间的picker。
 
-**继承/实现关系：** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions)
+**继承/实现关系：** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -113,7 +114,7 @@ isOriginalSupported?: boolean
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-在单选模式下，拍完照是否能自动跳转到大图预览模式，true表示支持，false表示不支持，默认为false。 **注意：** 该参数配置为true时仅在[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md#singleselectionmode)为BROWSER_MODE（大图预览模式）或者 BROWSER_AND_SELECT_MODE（兼容模式）并且 [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions)参数为true时生效。 **模型约束**： 此接口仅可在Stage模型下使用。
+在单选模式下，拍完照是否能自动跳转到大图预览模式，true表示支持，false表示不支持，默认为false。 **注意：** 该参数配置为true时仅在[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)为BROWSER_MODE（大图预览模式）或者 BROWSER_AND_SELECT_MODE（兼容模式）并且 [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)参数为true时生效。 **模型约束**： 此接口仅可在Stage模型下使用。
 
 **类型：** boolean
 

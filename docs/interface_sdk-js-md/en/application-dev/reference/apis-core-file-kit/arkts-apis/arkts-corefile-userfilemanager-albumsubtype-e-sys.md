@@ -6,7 +6,7 @@ Enumerates the album subtypes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#albumsubtype)
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
 <!--Device-userFileManager-enum AlbumSubType--><!--Device-userFileManager-enum AlbumSubType-End-->
 
@@ -26,7 +26,7 @@ User album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#usergeneric)
+**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#user_generic)
 
 <!--Device-AlbumSubType-USER_GENERIC = 1--><!--Device-AlbumSubType-USER_GENERIC = 1-End-->
 
@@ -57,7 +57,7 @@ Favorites.
 ## VIDEO
 
 ```TypeScript
-VIDEO
+VIDEO = 1026
 ```
 
 Video album.
@@ -68,7 +68,7 @@ Video album.
 
 **Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#video)
 
-<!--Device-AlbumSubType-VIDEO--><!--Device-AlbumSubType-VIDEO-End-->
+<!--Device-AlbumSubType-VIDEO = 1026--><!--Device-AlbumSubType-VIDEO = 1026-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -77,7 +77,7 @@ Video album.
 ## HIDDEN
 
 ```TypeScript
-HIDDEN
+HIDDEN = 1027
 ```
 
 Hidden album.
@@ -88,7 +88,7 @@ Hidden album.
 
 **Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#hidden)
 
-<!--Device-AlbumSubType-HIDDEN--><!--Device-AlbumSubType-HIDDEN-End-->
+<!--Device-AlbumSubType-HIDDEN = 1027--><!--Device-AlbumSubType-HIDDEN = 1027-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -97,7 +97,7 @@ Hidden album.
 ## TRASH
 
 ```TypeScript
-TRASH
+TRASH = 1028
 ```
 
 Trash.
@@ -108,7 +108,7 @@ Trash.
 
 **Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
 
-<!--Device-AlbumSubType-TRASH--><!--Device-AlbumSubType-TRASH-End-->
+<!--Device-AlbumSubType-TRASH = 1028--><!--Device-AlbumSubType-TRASH = 1028-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -117,7 +117,7 @@ Trash.
 ## SCREENSHOT
 
 ```TypeScript
-SCREENSHOT
+SCREENSHOT = 1029
 ```
 
 Album for screenshots and screen recording files.
@@ -128,7 +128,7 @@ Album for screenshots and screen recording files.
 
 **Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#screenshot)
 
-<!--Device-AlbumSubType-SCREENSHOT--><!--Device-AlbumSubType-SCREENSHOT-End-->
+<!--Device-AlbumSubType-SCREENSHOT = 1029--><!--Device-AlbumSubType-SCREENSHOT = 1029-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -137,7 +137,7 @@ Album for screenshots and screen recording files.
 ## CAMERA
 
 ```TypeScript
-CAMERA
+CAMERA = 1030
 ```
 
 Album for photos and videos taken by the camera.
@@ -148,7 +148,7 @@ Album for photos and videos taken by the camera.
 
 **Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#camera)
 
-<!--Device-AlbumSubType-CAMERA--><!--Device-AlbumSubType-CAMERA-End-->
+<!--Device-AlbumSubType-CAMERA = 1030--><!--Device-AlbumSubType-CAMERA = 1030-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

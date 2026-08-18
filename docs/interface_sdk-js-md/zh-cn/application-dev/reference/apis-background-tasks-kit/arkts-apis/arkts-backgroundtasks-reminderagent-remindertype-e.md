@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#remindertype)
+**替代接口：** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
 
 <!--Device-reminderAgent-export enum ReminderType--><!--Device-reminderAgent-export enum ReminderType-End-->
 

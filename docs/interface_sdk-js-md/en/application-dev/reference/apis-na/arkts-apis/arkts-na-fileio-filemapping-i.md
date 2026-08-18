@@ -1,6 +1,6 @@
 # FileMapping
 
-Defines a file mapping object. Before calling the **FileMapping** method, construct a **FileMapping** instance using [mmap()](arkts-na-fileio-mmap-f.md#mmap) or [mmapSync()](arkts-na-fileio-mmapsync-f.md#mmapsync).
+Defines a file mapping object. Before calling the **FileMapping** method, construct a **FileMapping** instance using [mmap()](arkts-na-fileio-mmap-f.md) or [mmapSync()](arkts-na-fileio-mmapsync-f.md).
 
 **Since:** 26.0.0
 

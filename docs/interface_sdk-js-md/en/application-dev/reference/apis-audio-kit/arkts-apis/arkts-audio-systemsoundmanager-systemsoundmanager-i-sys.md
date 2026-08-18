@@ -14,7 +14,6 @@ System sound manager object.
 
 ```TypeScript
 import { systemSoundManager } from '@kit.AudioKit';
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## addCustomizedTone
@@ -40,7 +39,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-system-api). |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md). |
 | externalUri | string | Yes | Tone uri in external storage. |
 
 **Return value:**
@@ -113,7 +112,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-system-api). |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md). |
 | fd | int | Yes | File descriptor. |
 | offset | long | No | The offset in the file where the data to be read, in bytes. By default, the offset is zero. |
 | length | long | No | The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset. |
@@ -902,7 +901,7 @@ Gets the ringtone player.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
 
 **Examples**
 
@@ -1005,7 +1004,7 @@ Gets the ringtone uri.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
 **Examples**
 
@@ -1809,7 +1808,7 @@ Sets the ringtone uri to system.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
 | type | RingtoneType | Yes | Ringtone type to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
 **Examples**
 

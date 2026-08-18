@@ -91,7 +91,7 @@ Defines the function called when input method getting text config.You need to im
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance. |
 | InputMethod_TextConfig \*config | Represents a pointer to an [InputMethod_TextConfig](capi-inputmethod-inputmethod-textconfig.md) instance. You can only access the memory whenthis callback is called. After this callback returns, the memory will be released and you should not access thismemory again. |
 
 ### OH_TextEditorProxy_InsertTextFunc()
@@ -110,7 +110,7 @@ Defines the function called when input method inserting text.You need to impleme
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
 | const char16_t \*text | Represents a pointer to the text to be inserted. You can only access the memory when this callbackis called. After this callback returns, the memory will be released and you should not access this memory again. |
 | size_t length | Represents the length of the text to be inserted. |
 
@@ -130,7 +130,7 @@ Defines the function called when input method deleting text forward.You need to 
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
 | int32_t length | Represents the length of the text to be deleted. |
 
 ### OH_TextEditorProxy_DeleteBackwardFunc()
@@ -149,7 +149,7 @@ Defines the function called when input method deleting text backward.You need to
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to the [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be setin. |
 | int32_t length | Represents the length of the text to be deleted. |
 
 ### OH_TextEditorProxy_SendKeyboardStatusFunc()
@@ -168,7 +168,7 @@ Called when input method notifying keyboard status.You need to implement this fu
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | [InputMethod_KeyboardStatus](capi-inputmethod-types-capi-h.md#inputmethod_keyboardstatus) keyboardStatus | Keyboard status, which is defined in [InputMethod_KeyboardStatus](capi-inputmethod-types-capi-h.md#inputmethod_keyboardstatus). |
 
 ### OH_TextEditorProxy_SendEnterKeyFunc()
@@ -187,7 +187,7 @@ Called when input method sending enter key.You need to implement this function, 
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | [InputMethod_EnterKeyType](capi-inputmethod-types-capi-h.md#inputmethod_enterkeytype) enterKeyType | Enter key type, which is defined in [InputMethod_EnterKeyType](capi-inputmethod-types-capi-h.md#inputmethod_enterkeytype). |
 
 ### OH_TextEditorProxy_MoveCursorFunc()
@@ -206,7 +206,7 @@ Called when input method requesting to move cursor.You need to implement this fu
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | [InputMethod_Direction](capi-inputmethod-types-capi-h.md#inputmethod_direction) direction | Represents the direction of the cursor movement, which is defined in [InputMethod_Direction](capi-inputmethod-types-capi-h.md#inputmethod_direction). |
 
 ### OH_TextEditorProxy_HandleSetSelectionFunc()
@@ -225,7 +225,7 @@ Called when input method requesting to set selection.You need to implement this 
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | int32_t start | Represents the start position of the selection. |
 | int32_t end | Represents the end position of the selection. |
 
@@ -245,7 +245,7 @@ Called when input method sending extend action.You need to implement this functi
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | [InputMethod_ExtendAction](capi-inputmethod-types-capi-h.md#inputmethod_extendaction) action | Represents the extend action, which is defined in [InputMethod_ExtendAction](capi-inputmethod-types-capi-h.md#inputmethod_extendaction). |
 
 ### OH_TextEditorProxy_GetLeftTextOfCursorFunc()
@@ -264,7 +264,7 @@ Called when input method requesting to get left text of cursor.You need to imple
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | int32_t number | Represents the number of characters to be get. |
 | char16_t text[] | Represents the left text of cursor, you need to assing this parameter. You can only access the memorywhen this callback is called. After this callback returns, the memory will be released and you should not access thismemory again. |
 | size_t \*length | Represents the length of the left text of cursor, you need to assing this parameter. |
@@ -285,7 +285,7 @@ Called when input method requesting to get right text of cursor.You need to impl
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | int32_t number | Represents the number of characters to be get. |
 | char16_t text[] | Represents the right text of cursor, you need to assing this parameter. You can only access the memorywhen this callback is called. After this callback returns, the memory will be released and you should not access thismemory again. |
 | size_t \*length | Represents the length of the right text of cursor. |
@@ -306,7 +306,7 @@ Called when input method requesting to get text index at cursor.You need to impl
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 
 **Returns**:
 
@@ -330,7 +330,7 @@ Called when input method sending private command.You need to implement this func
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) \*privateCommand[] | Private command from input method. You can only access the memory when this callback is called.After this callback returns, the memory will be released and you should not access this memory again. |
 | size_t size | Size of private command. |
 
@@ -356,7 +356,7 @@ Called when input method setting preview text.You need to implement this functio
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 | const char16_t text[] | Represents text to be previewd. You can only access the memory when this callback is called.After this callback returns, the memory will be released and you should not access this memory again. |
 | size_t length | Length of preview text. |
 | int32_t start | Start position of preview text. |
@@ -384,7 +384,7 @@ Called when input method finishing preview text.You need to implement this funct
 
 | Parameter | Description |
 | -- | -- |
-| (InputMethod_TextEditorProxy \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
+| [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) \*textEditorProxy | Represents a pointer to an [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md) instance which will be set in. |
 
 ### OH_TextEditorProxy_Create()
 
@@ -402,7 +402,7 @@ Create a new [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-textedit
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_TextEditorProxy *](capi-inputmethod-inputmethod-texteditorproxy.md) | If the creation succeeds, a pointer to the newly created [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md)<br> instance is returned. If the creation fails, NULL is returned, possible cause is insufficient memory. |
+| [InputMethod_TextEditorProxy *](capi-inputmethod-inputmethod-texteditorproxy.md) | If the creation succeeds, a pointer to the newly created [InputMethod_TextEditorProxy](capi-inputmethod-inputmethod-texteditorproxy.md)  instance is returned. If the creation fails, NULL is returned, possible cause is insufficient memory. |
 
 ### OH_TextEditorProxy_Destroy()
 
@@ -445,7 +445,7 @@ Set function [OH_TextEditorProxy_GetTextConfigFunc](capi-inputmethod-text-editor
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetInsertTextFunc()
 
@@ -470,7 +470,7 @@ Set function [OH_TextEditorProxy_InsertTextFunc](capi-inputmethod-text-editor-pr
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetDeleteForwardFunc()
 
@@ -495,7 +495,7 @@ Set function [OH_TextEditorProxy_SetDeleteForwardFunc](capi-inputmethod-text-edi
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetDeleteBackwardFunc()
 
@@ -520,7 +520,7 @@ Set function [OH_TextEditorProxy_DeleteBackwardFunc](capi-inputmethod-text-edito
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetSendKeyboardStatusFunc()
 
@@ -545,7 +545,7 @@ Set function [OH_TextEditorProxy_SendKeyboardStatusFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetSendEnterKeyFunc()
 
@@ -570,7 +570,7 @@ Set function [OH_TextEditorProxy_SendEnterKeyFunc](capi-inputmethod-text-editor-
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetMoveCursorFunc()
 
@@ -595,7 +595,7 @@ Set function [OH_TextEditorProxy_MoveCursorFunc](capi-inputmethod-text-editor-pr
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetHandleSetSelectionFunc()
 
@@ -620,7 +620,7 @@ Set function [OH_TextEditorProxy_HandleSetSelectionFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetHandleExtendActionFunc()
 
@@ -645,7 +645,7 @@ Set function [OH_TextEditorProxy_HandleExtendActionFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetGetLeftTextOfCursorFunc()
 
@@ -670,7 +670,7 @@ Set function [OH_TextEditorProxy_GetLeftTextOfCursorFunc](capi-inputmethod-text-
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetGetRightTextOfCursorFunc()
 
@@ -695,7 +695,7 @@ Set function [OH_TextEditorProxy_GetRightTextOfCursorFunc](capi-inputmethod-text
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetGetTextIndexAtCursorFunc()
 
@@ -720,7 +720,7 @@ Set function [OH_TextEditorProxy_GetTextIndexAtCursorFunc](capi-inputmethod-text
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetReceivePrivateCommandFunc()
 
@@ -745,7 +745,7 @@ Set function [OH_TextEditorProxy_ReceivePrivateCommandFunc](capi-inputmethod-tex
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetSetPreviewTextFunc()
 
@@ -770,7 +770,7 @@ Set function [OH_TextEditorProxy_SetPreviewTextFunc](capi-inputmethod-text-edito
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetFinishTextPreviewFunc()
 
@@ -795,7 +795,7 @@ Set function [OH_TextEditorProxy_FinishTextPreviewFunc](capi-inputmethod-text-ed
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetGetTextConfigFunc()
 
@@ -820,7 +820,7 @@ Get function [OH_TextEditorProxy_GetTextConfigFunc](capi-inputmethod-text-editor
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetInsertTextFunc()
 
@@ -845,7 +845,7 @@ Get function [OH_TextEditorProxy_InsertTextFunc](capi-inputmethod-text-editor-pr
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetDeleteForwardFunc()
 
@@ -870,7 +870,7 @@ Get function [OH_TextEditorProxy_DeleteForwardFunc](capi-inputmethod-text-editor
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetDeleteBackwardFunc()
 
@@ -895,7 +895,7 @@ Get function [OH_TextEditorProxy_DeleteBackwardFunc](capi-inputmethod-text-edito
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetSendKeyboardStatusFunc()
 
@@ -920,7 +920,7 @@ Get function [OH_TextEditorProxy_SendKeyboardStatusFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetSendEnterKeyFunc()
 
@@ -945,7 +945,7 @@ Get function [OH_TextEditorProxy_SendEnterKeyFunc](capi-inputmethod-text-editor-
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetMoveCursorFunc()
 
@@ -970,7 +970,7 @@ Get function [OH_TextEditorProxy_MoveCursorFunc](capi-inputmethod-text-editor-pr
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetHandleSetSelectionFunc()
 
@@ -995,7 +995,7 @@ Get function [OH_TextEditorProxy_HandleSetSelectionFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetHandleExtendActionFunc()
 
@@ -1020,7 +1020,7 @@ Get function [OH_TextEditorProxy_HandleExtendActionFunc](capi-inputmethod-text-e
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetGetLeftTextOfCursorFunc()
 
@@ -1045,7 +1045,7 @@ Get function [OH_TextEditorProxy_GetLeftTextOfCursorFunc](capi-inputmethod-text-
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetGetRightTextOfCursorFunc()
 
@@ -1070,7 +1070,7 @@ Get function [OH_TextEditorProxy_GetRightTextOfCursorFunc](capi-inputmethod-text
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetGetTextIndexAtCursorFunc()
 
@@ -1095,7 +1095,7 @@ Get function [OH_TextEditorProxy_GetTextIndexAtCursorFunc](capi-inputmethod-text
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetReceivePrivateCommandFunc()
 
@@ -1120,7 +1120,7 @@ Get function [OH_TextEditorProxy_ReceivePrivateCommandFunc](capi-inputmethod-tex
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetSetPreviewTextFunc()
 
@@ -1145,7 +1145,7 @@ Get function [OH_TextEditorProxy_SetPreviewTextFunc](capi-inputmethod-text-edito
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_GetFinishTextPreviewFunc()
 
@@ -1170,7 +1170,7 @@ Get function [OH_TextEditorProxy_FinishTextPreviewFunc](capi-inputmethod-text-ed
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_TextEditorProxy_SetCallbackInMainThread()
 
@@ -1195,6 +1195,6 @@ Configure the execution thread (main thread/IPC thread) for the callback functio
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Execution result.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Configuration succeeded.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Returned when proxy is NULL. |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Execution result.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Configuration succeeded.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - Returned when proxy is NULL. |
 
 

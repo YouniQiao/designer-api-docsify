@@ -54,5 +54,10 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 ## Summary
 
-- [RowOptions](arkts-arkui-rowoptions-i.md)
-- [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [RowOptions](arkts-arkui-rowoptions-i.md) | Sets the spacing between child components of the **Row** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While starting version information is preserved for historical anonymous objects, there may be cases where the > outer element's @since version number is higher than inner element's. This does not affect interface usability. |
+| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While starting version information is preserved for historical anonymous objects, there may be cases where the > outer element's @since version number is higher than inner element's. This does not affect interface usability. |
+

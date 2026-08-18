@@ -18,7 +18,7 @@ data: Record<string, RecordData>
 
 User defined data. When the modal window of AutoFillExtension needs to be raised again, pass this parameter to the application framework.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

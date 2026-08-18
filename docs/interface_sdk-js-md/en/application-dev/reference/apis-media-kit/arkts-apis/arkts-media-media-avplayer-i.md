@@ -1,6 +1,6 @@
 # AVPlayer
 
-AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer) to create an AVPlayer instance. When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#onmediakeysysteminfoupdate): listens for AVPlayer state changes. [on('error')](#onmediakeysysteminfoupdate): listens for error events. Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources. For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
+AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md) to create an AVPlayer instance. When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate): listens for AVPlayer state changes. [on('error')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate): listens for error events. Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources. For details about the audio and video playback demo, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md) and [Video Playback](../../../media/media/video-playback.md).
 
 **Since:** 23
 
@@ -273,7 +273,7 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Track index, which is obtained from [MediaDescription](arkts-media-media-mediadescription-i.md#mediadescription) by calling [getTrackDescription](#gettrackdescription). |
+| index | int | Yes | Track index, which is obtained from [MediaDescription](arkts-media-media-mediadescription-i.md) by calling [getTrackDescription](#gettrackdescription). |
 
 **Return value:**
 
@@ -413,7 +413,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 ```
 
-Obtains the media key system information of the media asset that is being played. This API can be called only after the [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event is successfully triggered.
+Obtains the media key system information of the media asset that is being played. This API can be called only after the [on('mediaKeySystemInfoUpdate')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event is successfully triggered.
 
 **Since:** 23
 
@@ -617,7 +617,7 @@ Obtains the audio and video track information. This API can be called only when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -687,7 +687,7 @@ Obtains the track selection filter configured for the player. This API uses a pr
 isSeekContinuousSupported() : boolean
 ```
 
-Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-media-seekmode-e.md#seekmode)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
+Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (specified by [SeekMode](arkts-media-media-seekmode-e.md)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
 
 **Since:** 23
 
@@ -721,7 +721,7 @@ Unsubscribes from update events of the maximum amplitude. The event is triggered
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. |
 
 ## offAudioInterrupt
 
@@ -729,7 +729,7 @@ Unsubscribes from update events of the maximum amplitude. The event is triggered
 offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 ```
 
-Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent)
+Unregister listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md)
 
 **Since:** 23
 
@@ -741,7 +741,7 @@ Unregister listens for audio interrupt event, refer to [InterruptEvent](../../ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for the playback event return audio interrupt info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for the playback event return audio interrupt info. |
 
 ## offAudioOutputDeviceChangeWithInfo
 
@@ -761,7 +761,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -787,7 +787,7 @@ Unregister listens for available bitrate list collect completed events for HLS p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback used to listen for the playback event return available bitrate list. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | No | Callback used to listen for the playback event return available bitrate list. |
 
 ## offBitrateDone
 
@@ -807,7 +807,7 @@ Unsubscribes from the event that checks whether the bit rate is successfully set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bit rate. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bit rate. |
 
 ## offBufferingUpdate
 
@@ -847,7 +847,7 @@ Unsubscribes from media asset duration changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the resource duration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the resource duration. |
 
 ## offEndOfStream
 
@@ -867,7 +867,7 @@ Unregister listens for media playback endOfStream event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
 
 ## offError
 
@@ -887,7 +887,7 @@ Unsubscribes from AVPlayer errors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code ID and error message. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code ID and error message. |
 
 ## offMediaKeySystemInfoUpdate
 
@@ -907,7 +907,7 @@ Unregister listens for mediaKeySystemInfoUpdate events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback for event. |
 
 ## offMetricsEvent
 
@@ -927,7 +927,7 @@ Unsubscribes from metric events during playback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
 
 ## offPlaybackContentChanged
 
@@ -951,7 +951,7 @@ Unregisters listener to detect when changes occur in the playback content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## offPlaybackRateDone
 
@@ -991,7 +991,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user. The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user. The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
 
 ## offSeiMessageReceived
 
@@ -1032,7 +1032,7 @@ Unsubscribes from the event that checks whether the playback speed is successful
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
 
 ## offStartRenderFrame
 
@@ -1052,7 +1052,7 @@ Unregister listens for start render video frame events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the playback event return . |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the playback event return . |
 
 ## offStateChange
 
@@ -1092,7 +1092,7 @@ Unsubscribes from subtitle update events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. |
 
 ## offSuperResolutionChanged
 
@@ -1132,7 +1132,7 @@ Unsubscribes from playback position changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the current time. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the current time. |
 
 ## offTimedMetaData
 
@@ -1156,7 +1156,7 @@ Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## offTrackChange
 
@@ -1196,7 +1196,7 @@ Unsubscribes from track information update events. The event is triggered when t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. |
 
 ## offVideoSizeChange
 
@@ -1236,9 +1236,9 @@ Unsubscribes from the event that checks whether the volume is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. |
 
-## off_amplitudeUpdate
+## off_amplitudeUpdate('amplitudeUpdate')
 
 ```TypeScript
 off(type: 'amplitudeUpdate', callback?: Callback<Array<double>>): void
@@ -1257,9 +1257,9 @@ Unsubscribes from update events of the maximum amplitude.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'amplitudeUpdate' | Yes | Event type, which is **'amplitudeUpdate'** in this case. The event is triggered when the amplitude changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **amplitudeUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback that has been registered to listen for amplitude updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **amplitudeUpdate** event will be unregistered. |
 
-## off_audioInterrupt
+## off_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
@@ -1280,9 +1280,9 @@ Unsubscribes from the audio interruption event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioInterrupt** event will be unregistered.<br>**Since:** 12 |
 
-## off_audioOutputDeviceChangeWithInfo
+## off_audioOutputDeviceChangeWithInfo('audioOutputDeviceChangeWithInfo')
 
 ```TypeScript
 off(type: 'audioOutputDeviceChangeWithInfo', callback?: Callback<audio.AudioStreamDeviceChangeInfo>): void
@@ -1303,7 +1303,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptor of the current audio stream and the change reason. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **audioOutputDeviceChangeWithInfo** event will be unregistered. |
 
 **Error codes:**
 
@@ -1311,7 +1311,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-## off_availableBitrates
+## off_availableBitrates('availableBitrates')
 
 ```TypeScript
 off(type: 'availableBitrates', callback?: Callback<Array<int>>): void
@@ -1332,9 +1332,9 @@ Unsubscribes from available bitrates of HLS/DASH streams. This event is reported
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
 
-## off_bitrateDone
+## off_bitrateDone('bitrateDone')
 
 ```TypeScript
 off(type: 'bitrateDone', callback?: Callback<int>): void
@@ -1355,9 +1355,9 @@ Unsubscribes from the event that checks whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
 
-## off_bufferingUpdate
+## off_bufferingUpdate('bufferingUpdate')
 
 ```TypeScript
 off(type: 'bufferingUpdate', callback?: OnBufferingUpdateHandler): void
@@ -1380,7 +1380,7 @@ Unsubscribes from audio and video buffer changes.
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
 | callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bufferingUpdate** event will be unregistered.<br>**Since:** 12 |
 
-## off_durationUpdate
+## off_durationUpdate('durationUpdate')
 
 ```TypeScript
 off(type: 'durationUpdate', callback?: Callback<int>): void
@@ -1401,9 +1401,9 @@ Unsubscribes from media asset duration changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'durationUpdate' | Yes | Event type, which is **'durationUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the resource duration. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **durationUpdate** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the resource duration. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **durationUpdate** event will be unregistered.<br>**Since:** 19 |
 
-## off_endOfStream
+## off_endOfStream('endOfStream')
 
 ```TypeScript
 off(type: 'endOfStream', callback?: Callback<void>): void
@@ -1424,9 +1424,9 @@ Unsubscribes from the event that indicates the end of the stream being played.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type, which is **'endOfStream'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **endOfStream** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **endOfStream** event will be unregistered.<br>**Since:** 19 |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -1447,9 +1447,9 @@ Unsubscribes from AVPlayer errors.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code ID and error message. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **error** event will be unregistered.<br>**Since:** 12 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code ID and error message. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **error** event will be unregistered.<br>**Since:** 12 |
 
-## off_mediaKeySystemInfoUpdate
+## off_mediaKeySystemInfoUpdate('mediaKeySystemInfoUpdate')
 
 ```TypeScript
 off(type: 'mediaKeySystemInfoUpdate', callback?: Callback<Array<drm.MediaKeySystemInfo>>): void
@@ -1470,9 +1470,9 @@ Unsubscribes from media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | No | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **mediaKeySystemInfoUpdate** event will be unregistered.<br>**Since:** 12 |
 
-## off_playbackRateDone
+## off_playbackRateDone('playbackRateDone')
 
 ```TypeScript
 off(type: 'playbackRateDone', callback?: OnPlaybackRateDone): void
@@ -1495,7 +1495,7 @@ Unsubscribes from the event indicating that the playback rate set by calling [se
 | type | 'playbackRateDone' | Yes | Event type, which is **'playbackRateDone'** in this case. |
 | callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | No | Callback invoked when the event is triggered. It reports the new playback rate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **playbackRateDone** event will be unregistered. |
 
-## off_seekDone
+## off_seekDone('seekDone')
 
 ```TypeScript
 off(type: 'seekDone', callback?: Callback<int>): void
@@ -1516,9 +1516,9 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#seekmode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
-## off_seiMessageReceived
+## off_seiMessageReceived('seiMessageReceived')
 
 ```TypeScript
 off(type: 'seiMessageReceived', payloadTypes?: Array<int>, callback?: OnSeiMessageHandle): void
@@ -1542,7 +1542,7 @@ Unsubscribes from the events indicating that an SEI message is received.
 | payloadTypes | Array&lt;int&gt; | No | Array of subscribed-to payload types of SEI messages. |
 | callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | No | Callback used to listen for SEI message events and receive the subscribed-to payload types. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seiMessageReceived** event will be unregistered. |
 
-## off_speedDone
+## off_speedDone('speedDone')
 
 ```TypeScript
 off(type: 'speedDone', callback?: Callback<int>): void
@@ -1563,9 +1563,9 @@ Unsubscribes from the event that checks whether the playback speed is successful
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **speedDone** event will be unregistered.<br>**Since:** 12 |
 
-## off_startRenderFrame
+## off_startRenderFrame('startRenderFrame')
 
 ```TypeScript
 off(type: 'startRenderFrame', callback?: Callback<void>): void
@@ -1586,15 +1586,15 @@ Unsubscribes from the event that indicates rendering starts for the first frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **startRenderFrame** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **startRenderFrame** event will be unregistered.<br>**Since:** 19 |
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange', callback?: OnAVPlayerStateChangeHandle): void
 ```
 
-Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate) state changes.
+Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md) state changes.
 
 **Since:** 9
 
@@ -1611,7 +1611,7 @@ Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayers
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
 | callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **stateChange** event will be unregistered.<br>**Since:** 12 |
 
-## off_subtitleUpdate
+## off_subtitleUpdate('subtitleUpdate')
 
 ```TypeScript
 off(type: 'subtitleUpdate', callback?: Callback<SubtitleInfo>): void
@@ -1632,9 +1632,9 @@ Unsubscribes from subtitle update events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes | Event type, which is **'subtitleUpdate'** in this case. The event is triggered when the external subtitle is updated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **subtitleUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No | Callback that has been registered to listen for subtitle update events. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **subtitleUpdate** event will be unregistered. |
 
-## off_superResolutionChanged
+## off_superResolutionChanged('superResolutionChanged')
 
 ```TypeScript
 off(type:'superResolutionChanged', callback?: OnSuperResolutionChanged): void
@@ -1657,7 +1657,7 @@ Unsubscribes from the event indicating that super resolution is enabled or disab
 | type | 'superResolutionChanged' | Yes | Event type, which is **'superResolutionChanged'** in this case. The event is triggered when super resolution is enabled or disabled. |
 | callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | No | Callback used to listen for super resolution status changes. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **superResolutionChanged** event will be unregistered. |
 
-## off_timeUpdate
+## off_timeUpdate('timeUpdate')
 
 ```TypeScript
 off(type: 'timeUpdate', callback?: Callback<int>): void
@@ -1678,9 +1678,9 @@ Unsubscribes from playback position changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the current time. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **timeUpdate** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the current time. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **timeUpdate** event will be unregistered.<br>**Since:** 12 |
 
-## off_trackChange
+## off_trackChange('trackChange')
 
 ```TypeScript
 off(type: 'trackChange', callback?: OnTrackChangeHandler): void
@@ -1703,7 +1703,7 @@ Unsubscribes from track change events.
 | type | 'trackChange' | Yes | Event type, which is **'trackChange'** in this case. The event is triggered when the track changes. |
 | callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | No | Callback that has been registered to listen for track changes. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **trackChange** event will be unregistered. |
 
-## off_trackInfoUpdate
+## off_trackInfoUpdate('trackInfoUpdate')
 
 ```TypeScript
 off(type: 'trackInfoUpdate', callback?: Callback<Array<MediaDescription>>): void
@@ -1724,9 +1724,9 @@ Unsubscribes from track information update events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes | Event type, which is **'trackInfoUpdate'** in this case. The event is triggered when the track information is updated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **trackInfoUpdate** event will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No | Callback that has been registered to listen for track information updates. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **trackInfoUpdate** event will be unregistered. |
 
-## off_videoSizeChange
+## off_videoSizeChange('videoSizeChange')
 
 ```TypeScript
 off(type: 'videoSizeChange', callback?: OnVideoSizeChangeHandler): void
@@ -1749,7 +1749,7 @@ Unsubscribes from video size changes.
 | type | 'videoSizeChange' | Yes | Event type, which is **'videoSizeChange'** in this case. |
 | callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | No | Callback invoked when the event is triggered. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **videoSizeChange** event will be unregistered.<br>**Since:** 12 |
 
-## off_volumeChange
+## off_volumeChange('volumeChange')
 
 ```TypeScript
 off(type: 'volumeChange', callback?: Callback<double>): void
@@ -1770,7 +1770,7 @@ Unsubscribes from the event that checks whether the volume is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type, which is **'volumeChange'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **volumeChange** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Callback invoked when the event is triggered. It reports the effective volume. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **volumeChange** event will be unregistered.<br>**Since:** 12 |
 
 ## onAmplitudeUpdate
 
@@ -1790,7 +1790,7 @@ Subscribes to update events of the maximum audio level value, which is periodica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onAudioInterrupt
 
@@ -1798,7 +1798,7 @@ Subscribes to update events of the maximum audio level value, which is periodica
 onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
 ```
 
-Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#interruptevent). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
+Register listens for audio interrupt event, refer to [InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see Handling Audio Interruption Events.
 
 **Since:** 23
 
@@ -1810,7 +1810,7 @@ Register listens for audio interrupt event, refer to [InterruptEvent](../../apis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for the playback event return audio interrupt info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for the playback event return audio interrupt info. |
 
 ## onAudioOutputDeviceChangeWithInfo
 
@@ -1830,7 +1830,7 @@ Subscribes to audio stream output device changes and reasons. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
@@ -1856,7 +1856,7 @@ Register listens for available bitrate list collect completed events for HLS pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to listen for the playback event return available bitrate list. It returns an array that holds the available bit rates. If the array length is 0, no bit rate can be set. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to listen for the playback event return available bitrate list. It returns an array that holds the available bit rates. If the array length is 0, no bit rate can be set. |
 
 ## onBitrateDone
 
@@ -1876,7 +1876,7 @@ Subscribes to the event to check whether the bit rate is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bit rate. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bit rate. |
 
 ## onBufferingUpdate
 
@@ -1916,7 +1916,7 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
 
 ## onEndOfStream
 
@@ -1936,7 +1936,7 @@ Subscribes to the event that indicates the end of the stream being played. If lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onError
 
@@ -1956,13 +1956,13 @@ Register listens for playback error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5410002](../errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) | Seek continuous unsupported. |
+| [5410002](../errorcode-media.md#5410002-seek-in-seek_continuous-mode-is-not-supported) | Seek continuous unsupported. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -2002,7 +2002,7 @@ Register listens for mediaKeySystemInfoUpdate events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array. |
 
 ## onMetricsEvent
 
@@ -2022,7 +2022,7 @@ Subscribes to metric events during playback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes | Callback invoked for metric events. This API uses an asynchronous callback to return the result. |
 
 ## onPlaybackContentChanged
 
@@ -2046,7 +2046,7 @@ Registers a listener to detect when the playback content has changed. The value 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onPlaybackRateDone
 
@@ -2086,7 +2086,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user.The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user. For video playback, SeekMode may cause the actual position to be different from that requested by the user.The exact position can be obtained from the currentTime attribute. The time in this callback only means that the requested seek operation is complete. |
 
 ## onSeiMessageReceived
 
@@ -2127,7 +2127,7 @@ Subscribes to the event to check whether the playback speed is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of setSpeed is successful, the effective speed mode is reported. For details, see PlaybackSpeed. |
 
 ## onStartRenderFrame
 
@@ -2147,7 +2147,7 @@ Subscribes to the event that indicates rendering starts for the first frame. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onStateChange
 
@@ -2187,7 +2187,7 @@ Subscribes to subtitle update events. When external subtitles exist, the system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
 
 ## onSuperResolutionChanged
 
@@ -2227,7 +2227,7 @@ Subscribes to playback position changes. It is used to refresh the current posit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the current time. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the current time. |
 
 ## onTimedMetaData
 
@@ -2251,7 +2251,7 @@ Register listener to detect time-based metadata, Currently, only the #EXT-X-DATE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onTrackChange
 
@@ -2291,7 +2291,7 @@ Subscribes to track information update events. When the track information is upd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onVideoSizeChange
 
@@ -2331,9 +2331,9 @@ Subscribes to the event to check whether the volume is successfully set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
 
-## on_amplitudeUpdate
+## on_amplitudeUpdate('amplitudeUpdate')
 
 ```TypeScript
 on(type: 'amplitudeUpdate', callback: Callback<Array<double>>): void
@@ -2352,15 +2352,15 @@ Subscribes to update events of the maximum audio level value, which is periodica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'amplitudeUpdate' | Yes | Event type, which is **'amplitudeUpdate'** in this case. The event is triggered when the amplitude changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_audioInterrupt
+## on_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md#interruptmode). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode [audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see [Handling Audio Interruption Events](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
 
@@ -2375,9 +2375,9 @@ Subscribes to the audio interruption event. When multiple audio and video assets
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
-## on_audioOutputDeviceChangeWithInfo
+## on_audioOutputDeviceChangeWithInfo('audioOutputDeviceChangeWithInfo')
 
 ```TypeScript
 on(type: 'audioOutputDeviceChangeWithInfo', callback: Callback<audio.AudioStreamDeviceChangeInfo>): void
@@ -2398,7 +2398,7 @@ Subscribes to audio stream output device changes and reasons. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioOutputDeviceChangeWithInfo' | Yes | Event type, which is **'audioOutputDeviceChangeWithInfo'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -2406,7 +2406,7 @@ Subscribes to audio stream output device changes and reasons. This API uses an a
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-## on_availableBitrates
+## on_availableBitrates('availableBitrates')
 
 ```TypeScript
 on(type: 'availableBitrates', callback: Callback<Array<int>>): void
@@ -2427,9 +2427,9 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. This event is triggered once after the AVPlayer switches to the prepared state. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
 
-## on_bitrateDone
+## on_bitrateDone('bitrateDone')
 
 ```TypeScript
 on(type: 'bitrateDone', callback: Callback<int>): void
@@ -2450,9 +2450,9 @@ Subscribes to the event to check whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. This event is triggered each time **setBitrate()** is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate. |
 
-## on_bufferingUpdate
+## on_bufferingUpdate('bufferingUpdate')
 
 ```TypeScript
 on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler): void
@@ -2475,7 +2475,7 @@ Subscribes to audio and video buffer changes. This subscription is supported onl
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
 | callback | [OnBufferingUpdateHandler](arkts-media-media-onbufferingupdatehandler-t.md) | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
-## on_durationUpdate
+## on_durationUpdate('durationUpdate')
 
 ```TypeScript
 on(type: 'durationUpdate', callback: Callback<int>): void
@@ -2496,15 +2496,15 @@ Subscribes to media asset duration changes. It is used to refresh the length of 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'durationUpdate' | Yes | Event type, which is **'durationUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the resource duration. |
 
-## on_endOfStream
+## on_endOfStream('endOfStream')
 
 ```TypeScript
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#onmediakeysysteminfoupdate) event.
+Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event.
 
 **Since:** 9
 
@@ -2519,15 +2519,15 @@ Subscribes to the event that indicates the end of the stream being played. If **
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type, which is **'endOfStream'** in this case. This event is triggered when the AVPlayer finishes playing the media asset. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to [AVPlayer](arkts-multimedia-media.md#ohosmultimediamedia) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md#avplayerstate) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
+Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used only for error prompt and does not require the user to stop playback control. If the [AVPlayerState](arkts-media-media-avplayerstate-t.md) is also switched to error, call [reset()](#reset) or [release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the [release()](#release) method to exit the playback operation.
 
 **Since:** 9
 
@@ -2542,13 +2542,13 @@ Subscribes to [AVPlayer](arkts-multimedia-media.md#ohosmultimediamedia) errors. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the error code ID and error message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5410002](../errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) | Seek continuous unsupported.<br>**Applicable version:** 18 and later |
+| [5410002](../errorcode-media.md#5410002-seek-in-seek_continuous-mode-is-not-supported) | Seek continuous unsupported.<br>**Applicable version:** 18 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [5411002](../errorcode-media.md#5411002-network-connection-timeout) | IO connection timeout.<br>**Applicable version:** 14 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -2571,7 +2571,7 @@ Subscribes to [AVPlayer](arkts-multimedia-media.md#ohosmultimediamedia) errors. 
 | [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 
-## on_mediaKeySystemInfoUpdate
+## on_mediaKeySystemInfoUpdate('mediaKeySystemInfoUpdate')
 
 ```TypeScript
 on(type: 'mediaKeySystemInfoUpdate', callback: Callback<Array<drm.MediaKeySystemInfo>>): void
@@ -2592,9 +2592,9 @@ Subscribes to media key system information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaKeySystemInfoUpdate' | Yes | Event type, which is **'mediaKeySystemInfoUpdate'** in this case. This event is triggered when the copyright protection information of the media asset being played changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;drm.MediaKeySystemInfo&gt;&gt; | Yes | Callback invoked when the event is triggered. It reports a **MediaKeySystemInfo** array.<br>**Since:** 12 |
 
-## on_playbackRateDone
+## on_playbackRateDone('playbackRateDone')
 
 ```TypeScript
 on(type: 'playbackRateDone', callback: OnPlaybackRateDone): void
@@ -2617,7 +2617,7 @@ Subscribes to the event indicating that the playback rate set by calling [setPla
 | type | 'playbackRateDone' | Yes | Event type, which is **'playbackRateDone'** in this case. This event is triggered each time **setPlaybackRate** is called. |
 | callback | [OnPlaybackRateDone](arkts-media-media-onplaybackratedone-t.md) | Yes | Callback invoked when the event is triggered. It reports the new playback rate. |
 
-## on_seekDone
+## on_seekDone('seekDone')
 
 ```TypeScript
 on(type: 'seekDone', callback: Callback<int>): void
@@ -2638,9 +2638,9 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time **seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#seekmode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
 
-## on_seiMessageReceived
+## on_seiMessageReceived('seiMessageReceived')
 
 ```TypeScript
 on(type: 'seiMessageReceived', payloadTypes: Array<int>, callback: OnSeiMessageHandle): void
@@ -2664,7 +2664,7 @@ Subscribes to events indicating that a Supplemental Enhancement Information (SEI
 | payloadTypes | Array&lt;int&gt; | Yes | Array of subscribed-to payload types of SEI messages. Currently, only payloadType = 5 is supported. |
 | callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | Yes | Callback used to listen for SEI message events and receive the subscribed-to payload types. |
 
-## on_speedDone
+## on_speedDone('speedDone')
 
 ```TypeScript
 on(type: 'speedDone', callback: Callback<int>): void
@@ -2685,9 +2685,9 @@ Subscribes to the event to check whether the playback speed is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'speedDone' | Yes | Event type, which is **'speedDone'** in this case. This event is triggered each time **setSpeed()** is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md#playbackspeed). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the result. When the call of **setSpeed** is successful, the effective speed mode is reported. For details, see [PlaybackSpeed](arkts-media-media-playbackspeed-e.md). |
 
-## on_startRenderFrame
+## on_startRenderFrame('startRenderFrame')
 
 ```TypeScript
 on(type: 'startRenderFrame', callback: Callback<void>): void
@@ -2708,9 +2708,9 @@ Subscribes to the event that indicates rendering starts for the first frame. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle): void
@@ -2733,7 +2733,7 @@ Subscribes to AVPlayer state changes.
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. This event can be triggered by both user operations and the system. |
 | callback | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
-## on_subtitleUpdate
+## on_subtitleUpdate('subtitleUpdate')
 
 ```TypeScript
 on(type: 'subtitleUpdate', callback: Callback<SubtitleInfo>): void
@@ -2754,9 +2754,9 @@ Subscribes to subtitle update events. When external subtitles exist, the system 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes | Event type, which is **'subtitleUpdate'** in this case. The event is triggered when the external subtitle is updated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes | Callback invoked when the subtitle is updated. |
 
-## on_superResolutionChanged
+## on_superResolutionChanged('superResolutionChanged')
 
 ```TypeScript
 on(type:'superResolutionChanged', callback: OnSuperResolutionChanged): void
@@ -2779,7 +2779,7 @@ Subscribes to the event indicating that super resolution is enabled or disabled.
 | type | 'superResolutionChanged' | Yes | Event type, which is **'superResolutionChanged'** in this case. The event is triggered when super resolution is enabled or disabled. |
 | callback | [OnSuperResolutionChanged](arkts-media-media-onsuperresolutionchanged-t.md) | Yes | Callback used to listen for super resolution status changes. |
 
-## on_timeUpdate
+## on_timeUpdate('timeUpdate')
 
 ```TypeScript
 on(type: 'timeUpdate', callback: Callback<int>): void
@@ -2800,9 +2800,9 @@ Subscribes to playback position changes. It is used to refresh the current posit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the current time. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the current time. |
 
-## on_trackChange
+## on_trackChange('trackChange')
 
 ```TypeScript
 on(type: 'trackChange', callback: OnTrackChangeHandler): void
@@ -2825,7 +2825,7 @@ Subscribes to track change events. When the track changes, the system notifies t
 | type | 'trackChange' | Yes | Event type, which is **'trackChange'** in this case. The event is triggered when the track changes. |
 | callback | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) | Yes | Callback invoked when the event is triggered. |
 
-## on_trackInfoUpdate
+## on_trackInfoUpdate('trackInfoUpdate')
 
 ```TypeScript
 on(type: 'trackInfoUpdate', callback: Callback<Array<MediaDescription>>): void
@@ -2846,9 +2846,9 @@ Subscribes to track information update events. When the track information is upd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes | Event type, which is **'trackInfoUpdate'** in this case. The event is triggered when the track information is updated. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback invoked when the event is triggered. |
 
-## on_videoSizeChange
+## on_videoSizeChange('videoSizeChange')
 
 ```TypeScript
 on(type: 'videoSizeChange', callback: OnVideoSizeChangeHandler): void
@@ -2871,7 +2871,7 @@ Subscribes to video size (width and height) changes. This subscription is suppor
 | type | 'videoSizeChange' | Yes | Event type, which is **'videoSizeChange'** in this case. |
 | callback | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) | Yes | Callback invoked when the event is triggered.<br>**Since:** 12 |
 
-## on_volumeChange
+## on_volumeChange('volumeChange')
 
 ```TypeScript
 on(type: 'volumeChange', callback: Callback<double>): void
@@ -2892,7 +2892,7 @@ Subscribes to the event to check whether the volume is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type, which is **'volumeChange'** in this case. This event is triggered each time **setVolume()** is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Callback invoked when the event is triggered. It reports the effective volume. |
 
 ## pause
 
@@ -2914,7 +2914,7 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -2970,7 +2970,7 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3012,7 +3012,7 @@ Starts to play an audio and video asset. This API can be called only when the AV
 prepare(callback: AsyncCallback<void>): void
 ```
 
-Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses an asynchronous callback to return the result.
+Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -3026,7 +3026,7 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3041,7 +3041,7 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 prepare(): Promise<void>
 ```
 
-Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#onmediakeysysteminfoupdate) event. This API uses a promise to return the result. If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
+Prepares for audio and video playback. This API can be called only when the AVPlayer is in the initialized state. The state changes can be detected by subscribing to the [stateChange](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. This API uses a promise to return the result. If your application frequently switches between short videos, you can create multiple AVPlayer objects to prepare the next video in advance, thereby improving the switching performance. For details, see [Smooth Switchover Between Online Short Videos](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-smooth-switching).
 
 **Since:** 23
 
@@ -3084,7 +3084,7 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3177,7 +3177,7 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3219,7 +3219,7 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 seek(timeMs: int, mode?: SeekMode): void
 ```
 
-Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the [on('seekDone')](#onmediakeysysteminfoupdate) event. > **NOTE：**> > Since API version 24, **seek** is supported in live streaming scenarios.
+Seeks to the specified playback position. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the seek operation takes effect by subscribing to the [on('seekDone')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. > **NOTE：**> > Since API version 24, **seek** is supported in live streaming scenarios.
 
 **Since:** 23
 
@@ -3235,7 +3235,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md#seekmode), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
 
 ## seekToDefaultPosition
@@ -3282,7 +3282,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the track. You can call [getTrackDescription](#gettrackdescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md#mediadescription) of the current resource. |
+| index | int | Yes | Index of the track. You can call [getTrackDescription](#gettrackdescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md) of the current resource. |
 | mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
 
 **Return value:**
@@ -3304,7 +3304,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 setBitrate(bitrate: int): void
 ```
 
-Sets the bitrate for the streaming media. This API is valid only for HLS/DASH streams. By default, the AVPlayer selects a proper bitrate based on the network connection speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the setting takes effect by subscribing to the [bitrateDone](#onmediakeysysteminfoupdate) event.
+Sets the bitrate for the streaming media. This API is valid only for HLS/DASH streams. By default, the AVPlayer selects a proper bitrate based on the network connection speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the setting takes effect by subscribing to the [bitrateDone](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event.
 
 **Since:** 23
 
@@ -3318,7 +3318,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#onmediakeysysteminfoupdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
+| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
 
 ## setDecryptionConfig
 
@@ -3326,7 +3326,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void
 ```
 
-Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpdate')](#onmediakeysysteminfoupdate) event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
+Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpdate')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event, create the related configuration and set the decryption configuration based on the information in the reported event. Otherwise, the playback fails.
 
 **Since:** 23
 
@@ -3355,7 +3355,7 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 setLoudnessGain(loudnessGain: double): Promise<void>
 ```
 
-Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE：**> > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage).
+Sets the loudness gain of the AVPlayer. After this API is called, the loudness gain takes effect immediately. This API uses a promise to return the result. > **NOTE：**> > - This API can be called when the AVPlayer is in the prepared, playing, paused, completed, or stopped state. > > - Before calling this API, ensure that the audio rendering information has been set in > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to > [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md), > [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md), or > [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md).
 
 **Since:** 23
 
@@ -3453,7 +3453,7 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>
 ```
 
-Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-media-seekmode-e.md#seekmode). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
+Sets the playback range and seeks to the start position of the range based on the specified [SeekMode](arkts-media-media-seekmode-e.md). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
 
 **Since:** 23
 
@@ -3490,7 +3490,7 @@ Sets the playback range and seeks to the start position of the range based on th
 setPlaybackRate(rate: double): void
 ```
 
-Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0].
+Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0]. You can check whether the setting takes effect through the [playbackRateDone](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. > **NOTE：**> > This API is not supported in live mode.
 
 **Since:** 23
 
@@ -3554,7 +3554,7 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 setSpeed(speed: PlaybackSpeed): void
 ```
 
-Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the [on('speedDone')](#onmediakeysysteminfoupdate) event. > **NOTE：**> > This method is not supported in live streaming scenarios.
+Sets the playback speed. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the speed setting takes effect by subscribing to the [on('speedDone')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event. > **NOTE：**> > This method is not supported in live streaming scenarios.
 
 **Since:** 23
 
@@ -3576,7 +3576,7 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 setSuperResolution(enabled: boolean) : Promise<void>
 ```
 
-Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy).
+Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
 
 **Since:** 23
 
@@ -3604,7 +3604,7 @@ Enables or disables super resolution. This API can be called when the AVPlayer i
 | --- | --- |
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy). Return by promise. |
+| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
 
 ## setTrackSelectionFilter
 
@@ -3646,7 +3646,7 @@ Sets a track selection filter for the player. The player will use this filter to
 setVideoWindowSize(width: int, height: int) : Promise<void>
 ```
 
-Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy).
+Sets the resolution of the output video after super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result. The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px). Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
 
 **Since:** 23
 
@@ -3676,7 +3676,7 @@ Sets the resolution of the output video after super resolution. This API can be 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Return by promise. |
 | [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) | Super-resolution not supported. Return by promise. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#playbackstrategy). Return by promise. |
+| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) | Missing enable super-resolution feature in [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md). Return by promise. |
 
 ## setVolume
 
@@ -3684,7 +3684,7 @@ Sets the resolution of the output video after super resolution. This API can be 
 setVolume(volume: double): void
 ```
 
-Sets the playback volume. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the volume setting takes effect by subscribing to the [on('volumeChange')](#onmediakeysysteminfoupdate) event.
+Sets the playback volume. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. You can check whether the volume setting takes effect by subscribing to the [on('volumeChange')](#on_mediakeysysteminfoupdatemediakeysysteminfoupdate) event.
 
 **Since:** 23
 
@@ -3720,7 +3720,7 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -3798,7 +3798,7 @@ Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic pr
 audioRendererInfo?: audio.AudioRendererInfo
 ```
 
-Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md#audiorendererinfo). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
+Audio renderer information. If the media source contains videos, the default value of **usage** is **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure [audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md). This parameter can be set only when the AVPlayer is in the initialized state. To take effect, this property must be set before [prepare()](#prepare) is called for the first time.
 
 **Type:** audio.AudioRendererInfo
 
@@ -3944,7 +3944,7 @@ Set the loop mode when playing the media source playlist. <br>Default value:PLAY
 privacyType?: audio.AudioPrivacyType
 ```
 
-Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md#audioprivacytype). Default value: PRIVACY_TYPE_PUBLIC.
+Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md). Default value: PRIVACY_TYPE_PUBLIC.
 
 **Type:** audio.AudioPrivacyType
 

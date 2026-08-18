@@ -12,7 +12,6 @@ Represents the background load task stop information, which is used to ON_STOP f
 
 ```TypeScript
 import { backgroundLoader } from '@kit.BackgroundTasksKit';
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

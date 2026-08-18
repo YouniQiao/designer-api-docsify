@@ -1,6 +1,6 @@
-# FirewallRulePage
+# FirewallRulePage(Network Firewall)
 
-Rule page information.
+Defines the pagination structure for firewall rules.
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 data: Array<NetFirewallRule>
 ```
 
-Page data: all records displayed on this page.
+Page data.
 
 **Type:** Array&lt;[NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md)&gt;
 
@@ -33,48 +33,48 @@ Page data: all records displayed on this page.
 ## page
 
 ```TypeScript
-page: number
+page: int
 ```
 
-Current page number: indicates the page number of this query.
+Current page number. The value range is [1,1000].
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-page: number--><!--Device-FirewallRulePage-page: number-End-->
+<!--Device-FirewallRulePage-page: int--><!--Device-FirewallRulePage-page: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
 
 ```TypeScript
-pageSize: number
+pageSize: int
 ```
 
-Page size: maximum number of records on a page for this query.
+Page size. The value range is [1,50].
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-pageSize: number--><!--Device-FirewallRulePage-pageSize: number-End-->
+<!--Device-FirewallRulePage-pageSize: int--><!--Device-FirewallRulePage-pageSize: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## totalPage
 
 ```TypeScript
-totalPage: number
+totalPage: int
 ```
 
-Total pages: total number of pages.
+Total number of pages. The value range is [1,1000].
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-FirewallRulePage-totalPage: number--><!--Device-FirewallRulePage-totalPage: number-End-->
+<!--Device-FirewallRulePage-totalPage: int--><!--Device-FirewallRulePage-totalPage: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

@@ -12,7 +12,6 @@ Provides holiday data parsing capabilities, such as determining holidays and obt
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

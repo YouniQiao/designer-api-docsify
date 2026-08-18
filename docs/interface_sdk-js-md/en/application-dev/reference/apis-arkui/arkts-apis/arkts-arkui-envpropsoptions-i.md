@@ -37,7 +37,7 @@ Default value used if the value of the specified environment variable key is not
 key: string
 ```
 
-Environment variable name. For details about the value range, see [Built-in Environment Variables](arkts-arkui-environment-c.md#environment).
+Environment variable name. For details about the value range, see [Built-in Environment Variables](arkts-arkui-environment-c.md).
 
 **Type:** string
 

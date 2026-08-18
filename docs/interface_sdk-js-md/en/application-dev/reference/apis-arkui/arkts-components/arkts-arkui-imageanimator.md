@@ -24,4 +24,9 @@ ImageAnimator is returned.
 
 ## Summary
 
-- [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) | Image frame information set. |
+

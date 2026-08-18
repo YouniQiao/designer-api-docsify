@@ -6,7 +6,7 @@ P2P device information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md#wifip2pdevice)
+**Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
 
 <!--Device-wifi-interface WifiP2pDevice--><!--Device-wifi-interface WifiP2pDevice-End-->
 

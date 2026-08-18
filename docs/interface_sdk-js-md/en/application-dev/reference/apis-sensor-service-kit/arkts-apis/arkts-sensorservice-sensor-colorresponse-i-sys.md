@@ -1,8 +1,8 @@
 # ColorResponse (System API)
 
-Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

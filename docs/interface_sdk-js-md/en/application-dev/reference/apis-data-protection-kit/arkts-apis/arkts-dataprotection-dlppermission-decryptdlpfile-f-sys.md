@@ -51,7 +51,7 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-non-dlp-file) | The file is not a DLP file. |
 | [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
 **Examples**

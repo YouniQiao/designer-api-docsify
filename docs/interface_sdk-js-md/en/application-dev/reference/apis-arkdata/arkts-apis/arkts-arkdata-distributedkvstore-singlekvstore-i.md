@@ -34,8 +34,8 @@ Backs up a distributed KV store. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -173,7 +173,7 @@ Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | KVStoreResultSet** object to close. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -292,7 +292,7 @@ Commits the transaction in this single KV store. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -384,8 +384,8 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -446,7 +446,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -509,8 +509,8 @@ Deletes a backup file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | Callback used to return the name of the backup file deleted and the operation result. |
+| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | Callback used to return the name of the backup file deleted and the operation result. |
 
 **Error codes:**
 
@@ -558,7 +558,7 @@ Deletes a backup file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -645,7 +645,7 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keys | string[] | Yes | KV pairs to delete. This parameter cannot be empty. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -796,7 +796,7 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data sync across devices, and the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -894,8 +894,8 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
@@ -926,7 +926,7 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -964,7 +964,7 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
@@ -1113,7 +1113,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
 
 **Error codes:**
 
@@ -1263,7 +1263,7 @@ Obtains a result set with the specified prefix from this single KV store. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the result set with the specified prefix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the result set with the specified prefix. |
 
 **Error codes:**
 
@@ -1426,7 +1426,7 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
@@ -1576,7 +1576,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the number of results obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
 
@@ -1718,7 +1718,7 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
 
 **Error codes:**
 
@@ -1810,7 +1810,7 @@ Unsubscribe from the SingleKVStore database based on the specified subscribeType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | No | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
 
 **Error codes:**
 
@@ -1838,7 +1838,7 @@ Unregister the database synchronization callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | No | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | No | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
 
 ## off_dataChange
 
@@ -1859,7 +1859,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -1921,7 +1921,7 @@ Unsubscribes from the cross-device data sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. When multiple ArkTS instances ( obtained through the getKVStore API) of the same database all register the callback used to listen for the sync completion event, if all these callbacks are unregistered by one of the ArkTS instances, then the callbacks of the others are also unregistered. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. When multiple ArkTS instances ( obtained through the getKVStore API) of the same database all register the callback used to listen for the sync completion event, if all these callbacks are unregistered by one of the ArkTS instances, then the callbacks of the others are also unregistered. |
 
 **Error codes:**
 
@@ -1984,7 +1984,7 @@ Register a callback to the database and when data in the distributed database ha
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SubscribeType | Yes | Indicates the subscription type, which is defined in {@code SubscribeType}. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | Yes | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
 
 **Error codes:**
 
@@ -2013,7 +2013,7 @@ Register a databases synchronization callback to the database. &lt;p&gt; Sync re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
 
 ## on_dataChange
 
@@ -2035,7 +2035,7 @@ Subscribes to data changes of the specified type.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
 | type | SubscribeType | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the object to be notified when the data changes. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the object to be notified when the data changes. |
 
 **Error codes:**
 
@@ -2079,7 +2079,7 @@ Subscribes to the cross-device data sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates the sync completion event. |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the sync completion event. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the sync completion event. |
 
 **Error codes:**
 
@@ -2130,9 +2130,9 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| value | Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| value | Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2163,8 +2163,8 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| value | Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| value | Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -2202,7 +2202,7 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | entries | Entry[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2368,7 +2368,7 @@ Update the key used to encrypt the database.
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#syncmode).
+Deletes data of a device. This API uses an asynchronous callback to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 23
 
@@ -2383,7 +2383,7 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Network ID of the target device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2430,7 +2430,7 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#syncmode).
+Deletes data of a device. This API uses a promise to return the result. > **NOTE：**> > **deviceId** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 23
 
@@ -2509,8 +2509,8 @@ Restores a distributed KV store from a database file. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2559,7 +2559,7 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md#constants). |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
@@ -2647,7 +2647,7 @@ Rolls back the transaction in this single KV store. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2725,7 +2725,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#syncmode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 23
 
@@ -2740,7 +2740,7 @@ Sets the default delay for cross-device data sync. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | defaultAllowedDelayMs | int | Yes | Delay time to set, in ms. The value can be **0** or ranges from 100 to 86400000. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2774,7 +2774,7 @@ try {
 setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 ```
 
-Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md#syncmode) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+Sets the default delay for cross-device data sync. This API uses a promise to return the result. > **NOTE：**> > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross- > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 23
 
@@ -2842,7 +2842,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | localLabels | string[] | Yes | Sync labels set for the local device. |
 | remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2945,7 +2945,7 @@ Starts the transaction in this single KV store. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3061,7 +3061,7 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > .
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > .
 
 **Since:** 23
 
@@ -3150,7 +3150,7 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicebasicinfo), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > .
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md). > **NOTE：**> > **deviceIds** is **networkId** in > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be > obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > .
 
 **Since:** 23
 

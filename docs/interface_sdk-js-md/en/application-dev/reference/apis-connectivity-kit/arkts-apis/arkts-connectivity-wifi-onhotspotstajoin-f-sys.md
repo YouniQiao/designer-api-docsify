@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## on_hotspotStaJoin
+## on_hotspotStaJoin('hotspotStaJoin')
 
 ```TypeScript
 function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
@@ -36,5 +36,5 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | Yes | the callback of on |
 

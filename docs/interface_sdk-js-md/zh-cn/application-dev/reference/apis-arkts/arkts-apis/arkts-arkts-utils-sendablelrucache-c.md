@@ -11,6 +11,7 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 ## 导入模块
 
 ```TypeScript
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## clear

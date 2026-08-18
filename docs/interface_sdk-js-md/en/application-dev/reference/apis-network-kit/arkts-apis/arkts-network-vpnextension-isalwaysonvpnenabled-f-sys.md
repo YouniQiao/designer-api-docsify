@@ -12,7 +12,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function isAlwaysOnVpnEnabled(bundleName: string): Promise<boolean>
 ```
 
-Get the Always on VPN mode status for a device.
+Obtains the status of the **always on** mode. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,13 +30,13 @@ Get the Always on VPN mode status for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | bundleName is used to retrieve whether it has the always on. |
+| bundleName | string | Yes | Bundle name of the application (generally a third-party application). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | return the mode for alway on vpn status |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the **always on** mode is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

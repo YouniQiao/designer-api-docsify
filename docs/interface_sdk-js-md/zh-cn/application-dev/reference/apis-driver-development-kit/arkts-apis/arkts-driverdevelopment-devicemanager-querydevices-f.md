@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDevices
@@ -25,7 +26,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| busType | int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#bustype)约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)约定的设备总线类型，不填则查找所有类型设备。 |
 
 **返回值：**
 

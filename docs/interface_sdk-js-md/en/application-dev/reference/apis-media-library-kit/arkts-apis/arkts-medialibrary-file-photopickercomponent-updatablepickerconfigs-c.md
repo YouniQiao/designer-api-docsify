@@ -1,6 +1,6 @@
 # UpdatablePickerConfigs
 
-Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md#pickeroptions).
+Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of [PickerOptions](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickeroptions-c.md).
 
 **Since:** 22
 
@@ -304,7 +304,7 @@ photoBrowserBackgroundColorMode?: PickerColorMode
 
 Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
-**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 
@@ -360,7 +360,7 @@ selectMode?: SelectMode
 
 Picker selection mode. **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
-**Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
+**Type:** [SelectMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 22
 
@@ -396,7 +396,7 @@ uiComponentColorMode?: PickerColorMode
 
 Color mode of the Picker UI component. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/ light color mode. When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark background color, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light background color for the same reason.
 
-**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
 

@@ -18,7 +18,7 @@ Enables Bluetooth on a device. On API 10 and above, the permission required by t
 
 **Deprecated since:** 10
 
-**Substitutes:** [enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md#enablebluetooth)
+**Substitutes:** [enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

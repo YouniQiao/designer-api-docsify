@@ -99,7 +99,7 @@ Set the name of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -129,7 +129,7 @@ Set the uri of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -159,7 +159,7 @@ Set the path of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -189,7 +189,7 @@ Set the create time of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -219,7 +219,7 @@ Set the modify time of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -249,7 +249,7 @@ Set the size of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -279,7 +279,7 @@ Set the status of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -310,7 +310,7 @@ Obtains the name of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -341,7 +341,7 @@ Obtains the uri of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -372,7 +372,7 @@ Obtains the path of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -402,7 +402,7 @@ Obtains the create time of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -432,7 +432,7 @@ Obtains the modify time of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -462,7 +462,7 @@ Obtains the size of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_ERR} - Indicates that the function execution exception.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -492,7 +492,7 @@ Obtains the status of the asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.<br>     {@link RDB_OK} - success.<br>     {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -515,7 +515,7 @@ Creates an [Data_Asset](capi-rdb-data-asset.md) instance.
 
 | Type | Description |
 | -- | -- |
-| [Data_Asset *](capi-rdb-data-asset.md) | If the creation is successful, a pointer to the instance of the @link Data_Asset} structure is returned,<br> otherwise NULL is returned. |
+| [Data_Asset *](capi-rdb-data-asset.md) | If the creation is successful, a pointer to the instance of the @link Data_Asset} structure is returned,  otherwise NULL is returned. |
 
 **Reference**:
 
@@ -544,7 +544,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) object and reclaim the memory o
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br>     <br>while failure returns a specific error code.<br>     <br>{@link RDB_OK} - success.<br>     <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.      <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -573,7 +573,7 @@ Creates [Data_Asset](capi-rdb-data-asset.md) instances of given number.
 
 | Type | Description |
 | -- | -- |
-| [Data_Asset **](capi-rdb-data-asset.md) | If the creation is successful, a pointer to the instance of the [Data_Asset](capi-rdb-data-asset.md) structure is returned.<br>         If the creation is unsuccessful, NULL is returned. |
+| [Data_Asset **](capi-rdb-data-asset.md) | If the creation is successful, a pointer to the instance of the [Data_Asset](capi-rdb-data-asset.md) structure is returned.          If the creation is unsuccessful, NULL is returned. |
 
 **Reference**:
 
@@ -603,7 +603,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) objects and reclaim the memory 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br>     <br>while failure returns a specific error code.<br>     <br>{@link RDB_OK} - success.<br>     <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.      <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 

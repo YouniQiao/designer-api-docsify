@@ -14,7 +14,6 @@ Subscriber of the system live view notification.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## onResponse

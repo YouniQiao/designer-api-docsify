@@ -1,6 +1,6 @@
 # Kem
 
-密钥封装机制（KEM）接口，定义基于密钥封装机制进行密钥封装和解封装的方法。调用前，需通过 [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem)方法创建一个Kem实例。
+密钥封装机制（KEM）接口，定义基于密钥封装机制进行密钥封装和解封装的方法。调用前，需通过 [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md)方法创建一个Kem实例。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## decapsulate

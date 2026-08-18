@@ -17,7 +17,7 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration系统接口)
+**替代接口：** [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -32,7 +32,7 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | 是 | 新的配置项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当通过修改配置来更新配置成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当通过修改配置来更新配置成功，err为undefined，否则为错误对象。 |
 
 
 ## updateConfiguration
@@ -47,7 +47,7 @@ function updateConfiguration(config: Configuration): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration系统接口)
+**替代接口：** [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 

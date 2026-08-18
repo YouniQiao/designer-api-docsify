@@ -12,7 +12,6 @@ The **reminderAgentManager** module provides APIs related to agent-powered remin
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -21,26 +20,26 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md#addexcludedate) | Adds a non-reminder date for a recurring calendar reminder with a specific ID. For example, configure a daily reminder to skip notifications on Tuesdays. This API uses a promise to return the result. |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot) | Adds a notification slot. This API uses a promise to return the result. |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders) | Cancels all reminders set by the current application. This API uses an asynchronous callback to return the result. |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders) | Cancels all reminders set by the current application. This API uses a promise to return the result. |
-| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder) | Cancels a reminder published. This API uses an asynchronous callback to return the result. |
-| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder) | Cancels a reminder published. This API uses a promise to return the result. |
-| [cancelReminderOnDisplay](arkts-backgroundtasks-reminderagentmanager-cancelreminderondisplay-f.md#cancelreminderondisplay) | Cancels the notification card displayed in the notification center with the agent reminder data retained. For example, for a daily repeating reminder, calling this API removes the card from the notification center, but the reminder will be triggered again the next day according to its schedule. |
-| [deleteExcludeDates](arkts-backgroundtasks-reminderagentmanager-deleteexcludedates-f.md#deleteexcludedates) | Deletes all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
-| [getAllValidReminders](arkts-backgroundtasks-reminderagentmanager-getallvalidreminders-f.md#getallvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. To call this API, you need to request the ohos.permission.PUBLISH_AGENT_REMINDER permission. |
-| [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md#getexcludedates) | Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
-| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result. |
-| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot) | Removes a specified notification slot. This API uses an asynchronous callback to return the result. |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot) | Removes a specified notification slot. This API uses a promise to return the result. |
-| [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md#subscribereminderstate) | Subscribes to agent-powered reminder state changes. This API uses a promise to return the result. |
-| [unsubscribeReminderState](arkts-backgroundtasks-reminderagentmanager-unsubscribereminderstate-f.md#unsubscribereminderstate) | Unsubscribes from agent-powered reminder state changes. This API uses a promise to return the result. |
-| [updateReminder](arkts-backgroundtasks-reminderagentmanager-updatereminder-f.md#updatereminder) | Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated. |
+| [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md) | Adds a non-reminder date for a recurring calendar reminder with a specific ID. For example, configure a daily reminder to skip notifications on Tuesdays. This API uses a promise to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md) | Adds a notification slot. This API uses a promise to return the result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md) | Cancels all reminders set by the current application. This API uses an asynchronous callback to return the result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md) | Cancels all reminders set by the current application. This API uses a promise to return the result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md) | Cancels a reminder published. This API uses an asynchronous callback to return the result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md) | Cancels a reminder published. This API uses a promise to return the result. |
+| [cancelReminderOnDisplay](arkts-backgroundtasks-reminderagentmanager-cancelreminderondisplay-f.md) | Cancels the notification card displayed in the notification center with the agent reminder data retained. For example, for a daily repeating reminder, calling this API removes the card from the notification center, but the reminder will be triggered again the next day according to its schedule. |
+| [deleteExcludeDates](arkts-backgroundtasks-reminderagentmanager-deleteexcludedates-f.md) | Deletes all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
+| [getAllValidReminders](arkts-backgroundtasks-reminderagentmanager-getallvalidreminders-f.md) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. To call this API, you need to request the ohos.permission.PUBLISH_AGENT_REMINDER permission. |
+| [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md) | Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) > permission is obtained. > |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) | Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) > permission is obtained. > |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md) | Removes a specified notification slot. This API uses an asynchronous callback to return the result. |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md) | Removes a specified notification slot. This API uses a promise to return the result. |
+| [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md) | Subscribes to agent-powered reminder state changes. This API uses a promise to return the result. |
+| [unsubscribeReminderState](arkts-backgroundtasks-reminderagentmanager-unsubscribereminderstate-f.md) | Unsubscribes from agent-powered reminder state changes. This API uses a promise to return the result. |
+| [updateReminder](arkts-backgroundtasks-reminderagentmanager-updatereminder-f.md) | Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated. |
 
 ### Interfaces
 
@@ -59,7 +58,7 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md) | Defines the information about the redirected-to ability. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -79,7 +78,7 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 | [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md) | Enumerates the time zone types. When the time zone is changed, the reminder time is recalculated based on the new time zone. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

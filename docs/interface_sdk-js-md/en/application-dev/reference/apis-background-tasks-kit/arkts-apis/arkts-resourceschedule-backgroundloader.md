@@ -1,18 +1,6 @@
 # @ohos.resourceschedule.backgroundLoader
 
-/*
- Copyright (c) 2026 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **BackgroundLoader** module provides the APIs for registering, unregistering and querying tasks. You can use these APIs to register tasks that need to be loaded in the background. The system schedules and executes these deferred tasks at an appropriate time, subject to the storage space, power consumption.
 
 **Since:** 26.0.0
 
@@ -26,7 +14,6 @@
 
 ```TypeScript
 import { backgroundLoader } from '@kit.BackgroundTasksKit';
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -35,10 +22,10 @@ import { backgroundLoader } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md#finishtask) | Finish background load task. |
-| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md#gettaskinfo) | Obtains the information of a background load task. This API returns the result via a promise. |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md#registertask) | Register background load task. |
-| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md#unregistertask) | Unregister background load task. |
+| [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) | Finish background load task. |
+| [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) | Obtains the information of a background load task. This API returns the result via a promise. |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) | Register background load task. |
+| [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) | Unregister background load task. |
 
 ### Interfaces
 
@@ -57,6 +44,6 @@ import { backgroundLoader } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#onstart) | Start task method. |
-| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#onstop) | Stop task method. |
+| [ON_START](arkts-backgroundtasks-backgroundloader-con.md#on_start) | Start task method. |
+| [ON_STOP](arkts-backgroundtasks-backgroundloader-con.md#on_stop) | Stop task method. |
 

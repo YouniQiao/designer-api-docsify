@@ -18,7 +18,7 @@ Enables a Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md#enablehotspot)
+**Substitutes:** [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

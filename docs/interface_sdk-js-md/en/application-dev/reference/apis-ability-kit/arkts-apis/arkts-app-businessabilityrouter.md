@@ -14,22 +14,21 @@ This module is used to obtain business ability information of various applicatio
 
 ```TypeScript
 import { businessAbilityRouter } from '@kit.AbilityKit';
-import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
-| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-system-api) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -37,7 +36,7 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -45,7 +44,7 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

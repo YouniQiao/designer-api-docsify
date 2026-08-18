@@ -28,7 +28,7 @@ Subscribe to the cameraCapabilitiesChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CameraCapabilities details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CameraCapabilities](arkts-telephony-call-cameracapabilities-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CameraCapabilities details. |
 
 **Error codes:**
 

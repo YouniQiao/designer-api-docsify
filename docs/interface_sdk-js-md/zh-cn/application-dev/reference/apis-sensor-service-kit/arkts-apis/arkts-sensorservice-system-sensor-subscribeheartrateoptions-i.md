@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heartrate)
+**替代接口：** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heart_rate)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -33,7 +34,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -57,7 +58,7 @@ success: (data: HeartRateResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## off_BundleChangedEvent
@@ -30,7 +29,7 @@ Unregister to monitor the installation status
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | type Indicates the command should be implement. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | Indicates the callback to be unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | Indicates the callback to be unregister. |
 
 **Error codes:**
 

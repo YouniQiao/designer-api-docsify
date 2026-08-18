@@ -12,7 +12,7 @@ import { ethernet } from '@kit.NetworkKit';
 function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void
 ```
 
-Get the specified network interface information.
+Obtains the information about a specified network interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,8 +28,8 @@ Get the specified network interface information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | the callback of getIfaceConfig. |
+| iface | string | Yes | Network interface. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ ethernet.getIfaceConfig("eth0", (error: BusinessError, value: ethernet.Interface
 function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>
 ```
 
-Get the specified network interface information.
+Obtains the information about a specified network interface. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -86,13 +86,13 @@ Get the specified network interface information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name. |
+| iface | string | Yes | Network interface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | the promise returned by the function. |
+| Promise&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

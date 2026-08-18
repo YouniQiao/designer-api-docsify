@@ -13,6 +13,7 @@ Transition Controller
 ## 导入模块
 
 ```TypeScript
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -549,7 +550,7 @@ Unregister the callback of avoidAreaChange
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
@@ -598,7 +599,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 
@@ -625,7 +626,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off_avoidAreaChange
+## off_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -648,7 +649,7 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 否 |  |
 
 **错误码：**
 
@@ -672,7 +673,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off_windowSizeChange
+## off_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
@@ -695,7 +696,7 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸 变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
 
 **错误码：**
 
@@ -741,7 +742,7 @@ Register the callback of avoidAreaChange
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 是 | Callback used to return the area. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | 是 | Callback used to return the area. |
 
 **错误码：**
 
@@ -789,7 +790,7 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | Callback used to return the window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | Callback used to return the window size. |
 
 **错误码：**
 
@@ -815,7 +816,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## on_avoidAreaChange
+## on_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -838,7 +839,7 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 是 |  |
 
 **错误码：**
 
@@ -864,7 +865,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## on_windowSizeChange
+## on_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 on(type: 'windowSizeChange', callback: Callback<window.Size>): void
@@ -887,7 +888,7 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变 化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
 
 **错误码：**
 
@@ -1017,7 +1018,7 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-UIExtensionComponent组件以及宿主窗口的信息。 **约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#onavoidareachange) 回调之后获取。
+UIExtensionComponent组件以及宿主窗口的信息。 **约束：** 由于架构约束，不建议在 [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到 [on('windowSizeChange')](#on_avoidareachangeavoidareachange) 回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

@@ -1,8 +1,8 @@
 # DepthFusion (System API)
 
-Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#depthfusionquery-system-api).
+Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md).
 
-**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#depthfusionquery-system-api)
+**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md)
 
 **Since:** 23
 

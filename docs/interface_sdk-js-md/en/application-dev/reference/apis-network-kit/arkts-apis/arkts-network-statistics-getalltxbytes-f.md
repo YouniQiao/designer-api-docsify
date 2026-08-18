@@ -12,11 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getAllTxBytes(callback: AsyncCallback<long>): void
 ```
 
-Queries the data traffic (including all TCP and UDP data packets) sent through all NICs.
+Obtains the total uplink traffic of all NICs (in bytes) from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-statistics-function getAllTxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getAllTxBytes(callback: AsyncCallback<long>): void-End-->
 
@@ -26,7 +26,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Returns the data traffic sent through all NICs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -56,11 +56,11 @@ statistics.getAllTxBytes((error: BusinessError, stats: number) => {
 function getAllTxBytes(): Promise<long>
 ```
 
-Queries the data traffic (including all TCP and UDP data packets) sent through all NICs.
+Obtains the total uplink traffic (in bytes) of all NICs from the last startup to the time when this API is called. This API uses a promise to return the result.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-statistics-function getAllTxBytes(): Promise<long>--><!--Device-statistics-function getAllTxBytes(): Promise<long>-End-->
 
@@ -70,7 +70,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | The promise returned by the function. |
+| Promise&lt;long&gt; | Promise used to return the real-time uplink traffic (in bytes) of all NICs. |
 
 **Error codes:**
 

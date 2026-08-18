@@ -79,7 +79,7 @@ Creates a **TextMenuItemId** object based on **id**.
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
+<!--RP1--><!--RP1End-->ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -299,7 +299,7 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 static readonly askAI: TextMenuItemId
 ```
 
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
+<!--RP2--><!--RP2End-->ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 

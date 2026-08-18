@@ -24,7 +24,7 @@ import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 | [Worker](arkts-arkts-worker-worker-c.md) | The Worker class contains all Worker functions. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

@@ -6,8 +6,8 @@
 
 | Name | Description |
 | --- | --- |
-| [Particle](arkts-na-particle-particle-f.md#particle) | Defines Particle Component |
-| [Particle](arkts-na-particle-particle-f.md#particle) | Defines Particle |
+| [Particle](arkts-na-particle-particle-f.md) | Defines Particle Component |
+| [Particle](arkts-na-particle-particle-f.md) | Defines Particle |
 
 ### Interfaces
 

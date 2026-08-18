@@ -17,7 +17,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -30,7 +30,7 @@ Obtains a WantAgent object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | about the WantAgent object to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
 
 **Examples**
 
@@ -88,7 +88,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

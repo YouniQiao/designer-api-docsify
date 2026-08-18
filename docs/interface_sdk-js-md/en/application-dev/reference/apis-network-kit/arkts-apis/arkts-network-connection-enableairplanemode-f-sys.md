@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function enableAirplaneMode(callback: AsyncCallback<void>): void
 ```
 
-Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Enables the airplane mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Enables the airplane mode for a device. To invoke this method, you must have the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of enableAirplaneMode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ connection.enableAirplaneMode((error: BusinessError) => {
 function enableAirplaneMode(): Promise<void>
 ```
 
-Enables the airplane mode for a device. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Enables airplane mode. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -74,7 +74,7 @@ Enables the airplane mode for a device. To invoke this method, you must have the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

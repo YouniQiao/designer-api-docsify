@@ -196,7 +196,7 @@ Obtains the status text of this response.
 getUrl(): string
 ```
 
-Obtains the redirection URL or the URL changed due to HSTS. Risk warning: To obtain a URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
+Obtains the redirection URL or the URL changed due to HSTS. Risk warning: To obtain a URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkweb-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
 
 **Since:** 12
 

@@ -12,7 +12,6 @@ Provides fileUri APIS
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
-import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -21,7 +20,7 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | Get the uri from the path of file in app sandbox |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 

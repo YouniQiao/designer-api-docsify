@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## connectToNetwork
@@ -17,7 +21,7 @@ function connectToNetwork(networkId: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md#connecttonetwork)
+**替代接口：** [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md)
 
 **需要权限：** ohos.permission.MANAGE_WIFI_CONNECTION
 

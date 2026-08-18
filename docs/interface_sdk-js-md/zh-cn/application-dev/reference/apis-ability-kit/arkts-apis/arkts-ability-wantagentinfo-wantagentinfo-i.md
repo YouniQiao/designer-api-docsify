@@ -52,7 +52,7 @@ extraInfo?: Record<string, RecordData>
 
 启动应用的额外信息。 如果没有需要设置的额外信息，此常量可以留空。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
@@ -68,7 +68,7 @@ extraInfos?: Record<string, RecordData>
 
 额外数据。推荐使用该属性替代extraInfo，设置该属性后，extraInfo不再生效。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

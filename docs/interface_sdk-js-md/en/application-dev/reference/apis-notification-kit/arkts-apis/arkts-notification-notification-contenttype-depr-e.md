@@ -24,7 +24,7 @@ Normal text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_BASIC_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentbasictext)
+**Substitutes:** [NOTIFICATION_CONTENT_BASIC_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notification_content_basic_text)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
@@ -42,7 +42,7 @@ Long text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentlongtext)
+**Substitutes:** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notification_content_long_text)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
@@ -60,7 +60,7 @@ Picture-attached notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_PICTURE](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentpicture)
+**Substitutes:** [NOTIFICATION_CONTENT_PICTURE](arkts-notification-notificationmanager-contenttype-e.md#notification_content_picture)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
@@ -78,7 +78,7 @@ Conversation notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentconversation)
+**Substitutes:** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#notification_content_conversation)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
@@ -96,7 +96,7 @@ Multi-line text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NOTIFICATION_CONTENT_MULTILINE](arkts-notification-notificationmanager-contenttype-e.md#notificationcontentmultiline)
+**Substitutes:** [NOTIFICATION_CONTENT_MULTILINE](arkts-notification-notificationmanager-contenttype-e.md#notification_content_multiline)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 

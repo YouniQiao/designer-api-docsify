@@ -59,7 +59,7 @@ Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native
 
 | Type | Description |
 | -- | -- |
-| [OH_AVBuffer *](capi-core-oh-avbuffer.md) | Pointer to the OH_AVBuffer instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of capacity is less than or equal to 0.<br>     <br>2. An internal error occurs, or the system does not have resources. |
+| [OH_AVBuffer *](capi-core-oh-avbuffer.md) | Pointer to the OH_AVBuffer instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of capacity is less than or equal to 0.      <br>2. An internal error occurs, or the system does not have resources. |
 
 ### OH_AVBuffer_Destroy()
 
@@ -83,7 +83,7 @@ Releases an OH_AVBuffer instance. A buffer cannot be destroyed repeatedly.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of buffer is nullptr or fails format verification.<br>     <br>[AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The input buffer is not created by the user. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of buffer is nullptr or fails format verification.      <br>[AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The input buffer is not created by the user. |
 
 ### OH_AVBuffer_GetBufferAttr()
 
@@ -108,7 +108,7 @@ Obtains the basic attributes, including **pts**, **size**, **offset**, and **fla
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:<br>     <br>1. The value of buffer or attr is nullptr.<br>     <br>2. The value of buffer fails parameter structure verification. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_SetBufferAttr()
 
@@ -133,7 +133,7 @@ Sets the basic attributes, including **pts**, **size**, **offset**, and **flags*
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:<br>     <br>1. The value of buffer or attr is nullptr.<br>     <br>2. The value of buffer fails parameter structure verification.<br>     <br>3. The memory size or offset of the buffer is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification.      <br>3. The memory size or offset of the buffer is invalid. |
 
 ### OH_AVBuffer_GetParameter()
 
@@ -157,7 +157,7 @@ Obtains parameters except basic attributes of a buffer. The information is carri
 
 | Type | Description |
 | -- | -- |
-| [OH_AVFormat *](capi-core-oh-avformat.md) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:<br>     <br>1. The value of buffer is nullptr.<br>     <br>2. The meta of the buffer is nullptr.<br>     <br>3. The value of buffer fails parameter structure verification. |
+| [OH_AVFormat *](capi-core-oh-avformat.md) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:      <br>1. The value of buffer is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_SetParameter()
 
@@ -182,7 +182,7 @@ Sets parameters except basic attributes of a buffer. The information is carried 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:<br>     <br>1. The value of buffer or format is nullptr.<br>     <br>2. The meta of the buffer is nullptr.<br>     <br>3. The value of buffer fails parameter structure verification. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The possible causes are as follows:      <br>1. The value of buffer or format is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_GetAddr()
 
@@ -206,7 +206,7 @@ Obtains the virtual address of a data buffer.
 
 | Type | Description |
 | -- | -- |
-| uint8_t * | Virtual address. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of buffer is a null pointer.<br>     <br>2. The value of OH_AVBuffer fails parameter structure verification.<br>     <br>3. An internal error occurs. |
+| uint8_t * | Virtual address. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of buffer is a null pointer.      <br>2. The value of OH_AVBuffer fails parameter structure verification.      <br>3. An internal error occurs. |
 
 ### OH_AVBuffer_GetCapacity()
 
@@ -230,7 +230,7 @@ Obtains the capacity (in bytes) of a buffer.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Capacity. If the operation fails, -1 is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of buffer is a null pointer.<br>     <br>2. The value of OH_AVBuffer fails parameter structure verification.<br>     <br>3. An internal error occurs. |
+| int32_t | Capacity. If the operation fails, -1 is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of buffer is a null pointer.      <br>2. The value of OH_AVBuffer fails parameter structure verification.      <br>3. An internal error occurs. |
 
 ### OH_AVBuffer_GetNativeBuffer()
 
@@ -254,6 +254,6 @@ Obtains the pointer to an OH_NativeBuffer instance. You must call {@link OH_Nati
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBuffer *](capi-core-oh-nativebuffer.md) | Pointer to the OH_NativeBuffer instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of buffer is a null pointer.<br>     <br>2. The value of OH_AVBuffer fails parameter structure verification.<br>     <br>3. An internal error occurs. |
+| [OH_NativeBuffer *](capi-core-oh-nativebuffer.md) | Pointer to the OH_NativeBuffer instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of buffer is a null pointer.      <br>2. The value of OH_AVBuffer fails parameter structure verification.      <br>3. An internal error occurs. |
 
 

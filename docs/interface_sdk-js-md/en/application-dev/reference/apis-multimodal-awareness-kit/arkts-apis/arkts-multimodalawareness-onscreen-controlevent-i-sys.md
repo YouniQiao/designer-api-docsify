@@ -40,7 +40,7 @@ Control event type.
 hookId?: long
 ```
 
-Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#pagecontent-system-api) of a session.
+Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
 **Type:** long
 
@@ -58,7 +58,7 @@ Hook ID corresponding to the control event. The hook ID and the session ID can b
 sessionId: long
 ```
 
-ID of the session to be operated. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#pagecontent-system-api) of a session.
+ID of the session to be operated. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
 
 **Type:** long
 

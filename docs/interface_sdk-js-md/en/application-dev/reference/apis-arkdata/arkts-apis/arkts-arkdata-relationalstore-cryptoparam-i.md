@@ -12,7 +12,6 @@ Represents the configuration of database encryption parameters. This configurati
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## cryptoPageSize

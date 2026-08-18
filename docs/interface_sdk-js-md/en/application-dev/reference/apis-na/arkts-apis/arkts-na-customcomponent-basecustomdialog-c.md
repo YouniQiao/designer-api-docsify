@@ -2,7 +2,7 @@
 
 Definition of base custom dialog class.
 
-**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#extendablecomponent)
+**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md)
 
 **Since:** 23
 

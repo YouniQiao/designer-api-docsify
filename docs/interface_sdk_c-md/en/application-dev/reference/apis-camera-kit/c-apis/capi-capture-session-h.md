@@ -176,7 +176,7 @@ Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-ca
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
 | [Camera_FocusState](capi-camera-h.md#camera_focusstate) focusState | Focus status. |
 
 ### OH_CaptureSession_OnError()
@@ -195,7 +195,7 @@ Defines the callback defined in the [CaptureSession_Callbacks](capi-oh-camera-ca
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
 | [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) errorCode | Error code reported in a capture session. |
 
 **Reference**:
@@ -219,7 +219,7 @@ Defines the callback invoked when smooth zoom is triggered for a capture session
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
 | [Camera_SmoothZoomInfo](capi-oh-camera-camera-smoothzoominfo.md)\* smoothZoomInfo | Pointer to the smooth zoom information passed by the callback. |
 
 ### OH_CaptureSession_OnAutoDeviceSwitchStatusChange()
@@ -238,7 +238,7 @@ Capture session device switch status callback.
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
 | [Camera_AutoDeviceSwitchStatusInfo](capi-oh-camera-camera-autodeviceswitchstatusinfo.md)\* autoDeviceSwitchStatusInfo | the [Camera_AutoDeviceSwitchStatusInfo](capi-oh-camera-camera-autodeviceswitchstatusinfo.md) which delivered by the callback. |
 
 ### OH_CaptureSession_OnSystemPressureLevelChange()
@@ -257,7 +257,7 @@ Defines the callback used to listen for capture system pressure level changes.
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
 | Camera_SystemPressureLevel systemPressureLevel | Pointer to the system pressure level passed by the callback. |
 
 ### OH_CaptureSession_RegisterCallback()
@@ -283,7 +283,7 @@ Registers a callback to listen for capture session events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterCallback()
 
@@ -308,7 +308,7 @@ Unregisters the callback used to listen for capture session events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_RegisterSmoothZoomInfoCallback()
 
@@ -333,7 +333,7 @@ Registers a callback to listen for smooth zoom events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterSmoothZoomInfoCallback()
 
@@ -358,7 +358,7 @@ Unregisters the callback used to listen for smooth zoom events.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_SetSessionMode()
 
@@ -383,7 +383,7 @@ Sets a session mode.This API cannot be called after [OH_CaptureSession_BeginConf
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.<br>     <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.      <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
 
 ### OH_CaptureSession_AddSecureOutput()
 
@@ -408,7 +408,7 @@ Marks a preview output stream as secure output.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.<br>     <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.      <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
 
 ### OH_CaptureSession_BeginConfig()
 
@@ -432,7 +432,7 @@ Starts the configuration for a capture session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_CONFIG_LOCKED: The session configuration is locked. |
 
 ### OH_CaptureSession_CommitConfig()
 
@@ -456,7 +456,7 @@ Commits the configuration for a capture session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_AddInput()
 
@@ -475,13 +475,13 @@ Adds a Camera_Input instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to add. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to add. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_RemoveInput()
 
@@ -500,13 +500,13 @@ Removes a Camera_Input instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to remove. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to remove. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_AddPreviewOutput()
 
@@ -531,7 +531,7 @@ Adds a PreviewOutput instance to a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_RemovePreviewOutput()
 
@@ -556,7 +556,7 @@ Removes a PreviewOutput instance from a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_AddPhotoOutput()
 
@@ -581,7 +581,7 @@ Adds a PhotoOutput instance to a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_RemovePhotoOutput()
 
@@ -606,7 +606,7 @@ Removes a PhotoOutput instance from a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_AddVideoOutput()
 
@@ -625,13 +625,13 @@ Adds a **VideoOutput** instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* videoOutput | Pointer to the **VideoOutput** instance to add. |
+| Camera_VideoOutput* videoOutput | Pointer to the **VideoOutput** instance to add. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_RemoveVideoOutput()
 
@@ -650,13 +650,13 @@ Removes a VideoOutput instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* videoOutput | Pointer to the VideoOutput instance to remove. |
+| Camera_VideoOutput* videoOutput | Pointer to the VideoOutput instance to remove. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_AddMetadataOutput()
 
@@ -681,7 +681,7 @@ Adds a MetadataOutput instance to a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_RemoveMetadataOutput()
 
@@ -706,7 +706,7 @@ Removes a MetadataOutput instance from a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_Start()
 
@@ -730,7 +730,7 @@ Starts a capture session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_Stop()
 
@@ -754,7 +754,7 @@ Stops a capture session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_Release()
 
@@ -778,7 +778,7 @@ Releases a CaptureSession instance.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_HasFlash()
 
@@ -803,7 +803,7 @@ Checks whether the device has flash.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_IsFlashModeSupported()
 
@@ -829,7 +829,7 @@ Checks whether a flash mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetFlashMode()
 
@@ -854,7 +854,7 @@ Obtains the flash mode in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetFlashMode()
 
@@ -879,7 +879,7 @@ Sets a flash mode for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_OnFlashStateChange()
 
@@ -897,7 +897,7 @@ Capture session flash state change callback.
 
 | Parameter | Description |
 | -- | -- |
-| (const Camera_CaptureSession\* session | Pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
+| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
 | [OH_Camera_FlashState](capi-camera-h.md#oh_camera_flashstate) flashState | The [OH_Camera_FlashState](capi-camera-h.md#oh_camera_flashstate) which delivered by the callback. |
 
 ### OH_CaptureSession_RegisterFlashStateChangeCallback()
@@ -923,7 +923,7 @@ Register flash state change event callback.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_UnregisterFlashStateChangeCallback()
 
@@ -948,7 +948,7 @@ Unregister flash state change callback.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_OnExposureStateChange()
 
@@ -966,7 +966,7 @@ Defines a callback function that is invoked when the exposure state changes.
 
 | Parameter | Description |
 | -- | -- |
-| (void\* context | Indicates the pointer to the user-defined context. |
+| void\* context | Indicates the pointer to the user-defined context. |
 | [OH_Camera_ExposureState](capi-camera-h.md#oh_camera_exposurestate) exposureState | Indicates the current exposure state. |
 
 ### OH_CaptureSession_RegisterExposureStateChangeCallback()
@@ -993,7 +993,7 @@ Registers a callback for exposure state changes.After this callback is registere
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_UnregisterExposureStateChangeCallback()
 
@@ -1019,7 +1019,7 @@ Unregisters the callback for exposure state changes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_IsExposureModeSupported()
 
@@ -1045,7 +1045,7 @@ Checks whether an exposure mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetExposureMode()
 
@@ -1070,7 +1070,7 @@ Obtains the exposure mode in use. This API directly returns an invalid value if 
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_IsWhiteBalanceModeSupported()
 
@@ -1096,7 +1096,7 @@ Checks whether the specified white balance mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_GetWhiteBalanceMode()
 
@@ -1121,7 +1121,7 @@ Obtains the white balance mode in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_SetWhiteBalanceMode()
 
@@ -1146,7 +1146,7 @@ Sets a white balance mode.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The setting is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The setting is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_GetWhiteBalanceRange()
 
@@ -1172,7 +1172,7 @@ Obtains the supported white balance color temperature range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_GetWhiteBalance()
 
@@ -1197,7 +1197,7 @@ Obtains the white balance color temperature.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The function is successfully called.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_SetWhiteBalance()
 
@@ -1222,7 +1222,7 @@ Sets the white balance color temperature.Before setting this parameter, you are 
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The setting is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The setting is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The camera session is not configured. |
 
 ### OH_CaptureSession_GetColorTintRange()
 
@@ -1248,7 +1248,7 @@ Obtains the supported white balance color tint range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | Result code.<br>         [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) is returned if an input parameter<br>               is missing or the parameter type is incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) is returned if the session is not configured when the function is called. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | Result code.          [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) is returned if an input parameter                is missing or the parameter type is incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) is returned if the session is not configured when the function is called. |
 
 ### OH_CaptureSession_GetColorTint()
 
@@ -1273,7 +1273,7 @@ Obtains the white balance color tint.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | Result code.<br>         [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) is returned if an input<br>               parameter is missing or the parameter type is incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) is returned if the session is not configured when the function is called. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | Result code.          [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) is returned if an input                parameter is missing or the parameter type is incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) is returned if the session is not configured when the function is called. |
 
 ### OH_CaptureSession_SetColorTint()
 
@@ -1298,7 +1298,7 @@ Sets the white balance color tint.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul><br>         <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li><br>         <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li><br>         <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li><br>         </ul> |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul>          <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li>          <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li>          <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li>          </ul> |
 
 ### OH_CaptureSession_SetExposureMode()
 
@@ -1323,7 +1323,7 @@ Sets an exposure mode for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetMeteringPoint()
 
@@ -1348,7 +1348,7 @@ Obtains the metering point in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetMeteringPoint()
 
@@ -1373,7 +1373,7 @@ Sets the metering point, which is the center point of the metering rectangle.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_IsExposureMeteringModeSupported()
 
@@ -1399,7 +1399,7 @@ Check whether a specified exposure metering mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetExposureMeteringMode()
 
@@ -1424,7 +1424,7 @@ Get current exposure metering mode.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetExposureMeteringMode()
 
@@ -1449,7 +1449,7 @@ Set exposure metering mode.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetSupportedISORange()
 
@@ -1475,7 +1475,7 @@ Query the iso range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetIso()
 
@@ -1500,7 +1500,7 @@ Get current iso sensitivity value, as defined in ISO 12232:2006.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetIso()
 
@@ -1525,7 +1525,7 @@ Sets ISO sensitivity value, within the range of getSupportedIsoRange. This contr
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_OnIsoChange()
 
@@ -1543,7 +1543,7 @@ Defines the callback used to listen for ISO changes in a camera session.
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the **Camera_CaptureSession** instance. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the **Camera_CaptureSession** instance. |
 | int32_t isoValue | ISO value obtained in the callback. |
 
 ### OH_CaptureSession_RegisterIsoChangeCallback()
@@ -1569,7 +1569,7 @@ Registers a callback to listen for ISO changes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterIsoChangeCallback()
 
@@ -1594,7 +1594,7 @@ Unregisters the callback used to listen for ISO changes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_GetSupportedPhysicalApertures()
 
@@ -1620,7 +1620,7 @@ Gets the supported physical apertures list. Release the physical apertures memor
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success <br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success           [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetPhysicalAperture()
 
@@ -1645,7 +1645,7 @@ Gets the current physical aperture value
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success <br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success           [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_DeletePhysicalApertures()
 
@@ -1671,7 +1671,7 @@ Delete the physical apertures.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_SetPhysicalAperture()
 
@@ -1696,7 +1696,7 @@ Set physical aperture value.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success <br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) success           [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetExposureBiasRange()
 
@@ -1723,7 +1723,7 @@ Obtains the exposure compensation values of the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetExposureBias()
 
@@ -1748,7 +1748,7 @@ Sets an exposure compensation value for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetExposureBias()
 
@@ -1773,7 +1773,7 @@ Obtains the exposure compensation value in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetSupportedExposureDurationRange()
 
@@ -1799,7 +1799,7 @@ Get the supported range of exposure durations. Units: Microseconds.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetExposureDuration()
 
@@ -1824,7 +1824,7 @@ Set exposure duration. Units: Microseconds.This control is only effective ifExpo
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetExposureDuration()
 
@@ -1849,7 +1849,7 @@ Get current exposure duration. Units: Microseconds.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_OnExposureDurationChange()
 
@@ -1867,7 +1867,7 @@ Capture session exposure duration change callback.
 
 | Parameter | Description |
 | -- | -- |
-| (const Camera_CaptureSession\* session | Pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
+| [const Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md) which deliver the callback. |
 | int32_t exposureDuration | The exposure duration which delivered by the callback. |
 
 ### OH_CaptureSession_RegisterExposureInfoChangeCallback()
@@ -1893,7 +1893,7 @@ Register exposure info change event callback.After exposure parameters are chang
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br> [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.  [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_UnregisterExposureInfoChangeCallback()
 
@@ -1918,7 +1918,7 @@ Unregister exposure info change callback.Invoke this method after finishing came
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br> [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.  [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_IsFocusModeSupported()
 
@@ -1944,7 +1944,7 @@ Checks whether a focus mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetFocusMode()
 
@@ -1969,7 +1969,7 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetFocusMode()
 
@@ -1994,7 +1994,7 @@ Sets a focus mode for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetFocusPoint()
 
@@ -2019,7 +2019,7 @@ Obtains the focal point in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetFocusPoint()
 
@@ -2044,7 +2044,7 @@ Sets a focal point for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetZoomRatioRange()
 
@@ -2070,7 +2070,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetZoomRatio()
 
@@ -2095,7 +2095,7 @@ Obtains the zoom ratio in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetZoomRatio()
 
@@ -2120,7 +2120,7 @@ Sets a zoom ratio for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_IsVideoStabilizationModeSupported()
 
@@ -2146,7 +2146,7 @@ Checks whether a video stabilization mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetVideoStabilizationMode()
 
@@ -2171,7 +2171,7 @@ Obtains the video stabilization mode in use.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetVideoStabilizationMode()
 
@@ -2196,7 +2196,7 @@ Sets a video stabilization mode for the device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_CanAddInput()
 
@@ -2215,14 +2215,14 @@ Checks whether a Camera_Input instance can be added to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_Input* cameraInput | Pointer to the Camera_Input instance to check. |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | Pointer to the Camera_Input instance to check. |
 | bool* isSuccessful | Pointer to the check result for whether the Camera_Input instance can be added to the session. true** if it can be added to the session, **false** otherwise. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_CanAddPreviewOutput()
 
@@ -2248,7 +2248,7 @@ Checks whether a PreviewOutput instance can be added to a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_CanAddPhotoOutput()
 
@@ -2274,7 +2274,7 @@ Checks whether a PhotoOutput instance can be added to a session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_CanAddVideoOutput()
 
@@ -2293,14 +2293,14 @@ Checks whether a **VideoOutput** instance can be added to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* cameraOutput | Pointer to the **VideoOutput** instance to check. |
+| Camera_VideoOutput* cameraOutput | Pointer to the **VideoOutput** instance to check. |
 | bool* isSuccessful | Pointer to the check result for whether the VideoOutput instance can be added to the session. true** if it can be added to the session, **false** otherwise. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_CanPreconfig()
 
@@ -2326,7 +2326,7 @@ Checks whether a preconfigured resolution type is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_CanPreconfigWithRatio()
 
@@ -2353,7 +2353,7 @@ Checks whether a preconfigured resolution type with an aspect ratio is supported
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_Preconfig()
 
@@ -2378,7 +2378,7 @@ Sets a preconfigured resolution type.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_PreconfigWithRatio()
 
@@ -2404,7 +2404,7 @@ Sets a preconfigured resolution type with an aspect ratio.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_GetExposureValue()
 
@@ -2429,7 +2429,7 @@ Obtains the exposure value.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_GetFocalLength()
 
@@ -2454,7 +2454,7 @@ Obtains the current focal length.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_IsFocusDistanceSupported()
 
@@ -2479,7 +2479,7 @@ Check whether focus distance is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetFocusDistance()
 
@@ -2504,7 +2504,7 @@ Get current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortestdist
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetFocusDistance()
 
@@ -2529,7 +2529,7 @@ Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 be
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetSmoothZoom()
 
@@ -2555,7 +2555,7 @@ Sets smooth zoom.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetSupportedColorSpaces()
 
@@ -2581,7 +2581,7 @@ Obtains the supported color spaces.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_DeleteColorSpaces()
 
@@ -2606,7 +2606,7 @@ Deletes color spaces.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_GetActiveColorSpace()
 
@@ -2631,7 +2631,7 @@ Obtains the active color space.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_SetActiveColorSpace()
 
@@ -2656,7 +2656,7 @@ Sets the active color space.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_RegisterAutoDeviceSwitchStatusCallback()
 
@@ -2681,7 +2681,7 @@ Register device switch event callback.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_UnregisterAutoDeviceSwitchStatusCallback()
 
@@ -2706,7 +2706,7 @@ Unregister device switch event callback.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_IsAutoDeviceSwitchSupported()
 
@@ -2731,7 +2731,7 @@ Check whether auto device switch is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_EnableAutoDeviceSwitch()
 
@@ -2756,7 +2756,7 @@ Enable auto switch or not for the camera device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config.<br>         [CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) if camera service fatal error. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config.          [CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) if camera service fatal error. |
 
 ### OH_CaptureSession_SetQualityPrioritization()
 
@@ -2781,7 +2781,7 @@ Set quality prioritization.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_IsMacroSupported()
 
@@ -2806,7 +2806,7 @@ Checks whether macro photography is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | @return<br>     <br>CAMERA_OK = 0: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | @return      <br>CAMERA_OK = 0: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_EnableMacro()
 
@@ -2831,7 +2831,7 @@ Enables or disables macro photography for the camera device.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | @return<br>     <br>CAMERA_OK = 0: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | @return      <br>CAMERA_OK = 0: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_OPERATION_NOT_ALLOWED: The operation is not allowed. |
 
 ### OH_CaptureSession_OnMacroStatusChange()
 
@@ -2849,7 +2849,7 @@ Defines the callback used to listen for macro status changes of a camera session
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance. |
 | bool isMacroDetected | Whether the camera is in macro mode. **true** if the camera is in macro mode, **falseotherwise. |
 
 ### OH_CaptureSession_RegisterMacroStatusChangeCallback()
@@ -2875,7 +2875,7 @@ Registers a callback to listen for macro status changes of a camera session.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterMacroStatusChangeCallback()
 
@@ -2900,7 +2900,7 @@ Unregisters the callback used to listen for macro status changes of a camera ses
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_RegisterSystemPressureLevelChangeCallback()
 
@@ -2925,7 +2925,7 @@ Registers a callback to listen for capture system pressure level changes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterSystemPressureLevelChangeCallback()
 
@@ -2950,7 +2950,7 @@ Unregisters the callback used to listen for capture system pressure level change
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_IsControlCenterSupported()
 
@@ -2975,7 +2975,7 @@ Checks whether the camera controller is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK = 0: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK = 0: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_GetSupportedEffectTypes()
 
@@ -3001,7 +3001,7 @@ Obtains the effect types supported by the camera controller.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured. |
 
 ### OH_CaptureSession_DeleteSupportedEffectTypes()
 
@@ -3027,7 +3027,7 @@ Deletes the effect types supported by the camera controller.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_EnableControlCenter()
 
@@ -3052,7 +3052,7 @@ Enables or disables the camera controller.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK = 0: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.<br>     <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.<br>     <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK = 0: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect.      <br>CAMERA_SESSION_NOT_CONFIG: The capture session is not configured.      <br>CAMERA_SERVICE_FATAL_ERROR: The camera service is abnormal. |
 
 ### OH_CaptureSession_OnControlCenterEffectStatusChange()
 
@@ -3070,7 +3070,7 @@ Defines the callback used to listen for effect status changes of a camera contro
 
 | Parameter | Description |
 | -- | -- |
-| (Camera_CaptureSession\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
+| [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)\* session | Pointer to the Camera_CaptureSession instance that transfers the callback. |
 | [Camera_ControlCenterStatusInfo](capi-oh-camera-camera-controlcenterstatusinfo.md)\* controlCenterStatusInfo | Pointer to the effect status information passed by the callback. |
 
 ### OH_CaptureSession_RegisterControlCenterEffectStatusChangeCallback()
@@ -3096,7 +3096,7 @@ Registers a callback to listen for effect status changes of a camera controller.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_UnregisterControlCenterEffectStatusChangeCallback()
 
@@ -3121,7 +3121,7 @@ Unregisters the callback used to listen for effect status changes of a camera co
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.<br>     <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | CAMERA_OK: The operation is successful.      <br>CAMERA_INVALID_ARGUMENT: A parameter is missing or the parameter type is incorrect. |
 
 ### OH_CaptureSession_GetRAWCaptureZoomRatioRange()
 
@@ -3147,7 +3147,7 @@ Query the raw zoom range.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation not allowed, session or inputdevice maybe abnormal.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_IsOISModeSupported()
 
@@ -3173,7 +3173,7 @@ Checks if the specified OIS mode is supported.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetSupportedOISBiasRange()
 
@@ -3201,7 +3201,7 @@ Gets the supported bias range for the specified OIS axis.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetCurrentOISMode()
 
@@ -3226,7 +3226,7 @@ Gets the current OIS mode.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetCurrentCustomOISBias()
 
@@ -3252,7 +3252,7 @@ Gets the current custom bias values for all OIS axes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetOISMode()
 
@@ -3277,7 +3277,7 @@ Sets the OIS mode.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_SetOISModeCustom()
 
@@ -3303,7 +3303,7 @@ Sets custom OIS bias values for all axes.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_GetZoomPointInfos()
 
@@ -3329,7 +3329,7 @@ Gets the zoom point infos.Release the zoom point infos memory by calling [OH_Cap
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.<br>         [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.<br>         [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) is returned if the function is called successfully.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameters are invalid.          [CAMERA_OPERATION_NOT_ALLOWED](capi-camera-h.md#camera_errorcode) if operation is not allowed.          [CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) if the capture session not config. |
 
 ### OH_CaptureSession_DeleteZoomPointInfos()
 
@@ -3354,7 +3354,7 @@ Delete the zoom point infos.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.<br>         [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | [CAMERA_OK](capi-camera-h.md#camera_errorcode) if the method call succeeds.          [CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) if parameter missing or parameter type incorrect. |
 
 ### OH_CaptureSession_IsLockFocusTrackingSupported()
 
@@ -3403,7 +3403,7 @@ Lock focus tracking, can be unlocked by [OH_CaptureSession_UnlockFocusTracking](
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul><br>         <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li><br>         <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li><br>         <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li><br>         <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) The camera service is abnormal.</li><br>         </ul> |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul>          <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li>          <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li>          <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li>          <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) The camera service is abnormal.</li>          </ul> |
 
 ### OH_CaptureSession_UnlockFocusTracking()
 
@@ -3427,6 +3427,6 @@ Unlock focus tracking.
 
 | Type | Description |
 | -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul><br>         <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li><br>         <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li><br>         <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li><br>         <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) The camera service is abnormal.</li><br>         </ul> |
+| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul>          <li>[CAMERA_OK](capi-camera-h.md#camera_errorcode) The operation is successful.</li>          <li>[CAMERA_INVALID_ARGUMENT](capi-camera-h.md#camera_errorcode) A parameter is missing or the parameter type is incorrect.</li>          <li>[CAMERA_SESSION_NOT_CONFIG](capi-camera-h.md#camera_errorcode) The capture session is not configured.</li>          <li>[CAMERA_SERVICE_FATAL_ERROR](capi-camera-h.md#camera_errorcode) The camera service is abnormal.</li>          </ul> |
 
 

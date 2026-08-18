@@ -12,7 +12,6 @@ Queries the time zone transition rule.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## nextTransition

@@ -1,8 +1,8 @@
 # ScaleRingStyleOptions
 
-Options of the ring style with scales. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions).
+Options of the ring style with scales. Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
-**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 

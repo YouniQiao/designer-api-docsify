@@ -52,7 +52,7 @@ Initialize global environment for image processing.This function is optional. <b
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if initialization is successful. <br> [IMAGE_PROCESSING_ERROR_INITIALIZE_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if initialization is failed. <br> You can check if the device GPU is working properly. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if initialization is successful. \n  [IMAGE_PROCESSING_ERROR_INITIALIZE_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if initialization is failed. \n  You can check if the device GPU is working properly. |
 
 ### OH_ImageProcessing_DeinitializeEnvironment()
 
@@ -70,7 +70,7 @@ Deinitialize global environment for image processing.This function is required i
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if deinitialization is successful. <br> [IMAGE_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-image-processing-types-h.md#imageprocessing_errorcode) if some image processing instance is not destroyed or<br> [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment) is not called. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if deinitialization is successful. \n  [IMAGE_PROCESSING_ERROR_OPERATION_NOT_PERMITTED](capi-image-processing-types-h.md#imageprocessing_errorcode) if some image processing instance is not destroyed or  [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment) is not called. \n |
 
 ### OH_ImageProcessing_IsColorSpaceConversionSupported()
 
@@ -95,7 +95,7 @@ Query whether the image color space conversion is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the color space conversion is supported. <br> <b>false</b> if the the color space conversion is unsupported. |
+| bool | <b>true</b> if the color space conversion is supported. \n  <b>false</b> if the the color space conversion is unsupported. |
 
 ### OH_ImageProcessing_IsCompositionSupported()
 
@@ -121,7 +121,7 @@ Query whether the image composition is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the image composition is supported. <br> <b>false</b> if the image composition is unsupported. |
+| bool | <b>true</b> if the image composition is supported. \n  <b>false</b> if the image composition is unsupported. |
 
 ### OH_ImageProcessing_IsDecompositionSupported()
 
@@ -147,7 +147,7 @@ Query whether the image decomposition is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the image decomposition is supported. <br> <b>false</b> if the image decomposition is unsupported. |
+| bool | <b>true</b> if the image decomposition is supported. \n  <b>false</b> if the image decomposition is unsupported. |
 
 ### OH_ImageProcessing_IsMetadataGenerationSupported()
 
@@ -171,7 +171,7 @@ Query whether the image metadata generation is supported.
 
 | Type | Description |
 | -- | -- |
-| bool | <b>true</b> if the image metadata generation is supported.. <br> <b>false</b> if the image metadata generation is unsupported. |
+| bool | <b>true</b> if the image metadata generation is supported.. \n  <b>false</b> if the image metadata generation is unsupported. |
 
 ### OH_ImageProcessing_Create()
 
@@ -196,7 +196,7 @@ Create an image processing instance.
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if creating an image processing successfully. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the type is not supported. For example, if metadata<br> generation is not supported by vendor, it returns unsupported processing. <br> [IMAGE_PROCESSING_ERROR_CREATE_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if failed to create an image processing. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or <b></b>instance is <b>not</b> null. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if type is invalid. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if creating an image processing successfully. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the type is not supported. For example, if metadata  generation is not supported by vendor, it returns unsupported processing. \n  [IMAGE_PROCESSING_ERROR_CREATE_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if failed to create an image processing. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or <b></b>instance is <b>not</b> null. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if type is invalid. \n |
 
 ### OH_ImageProcessing_Destroy()
 
@@ -220,7 +220,7 @@ Destroy the image processing instance.
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if the instance is destroyed successfully. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if the instance is destroyed successfully. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. |
 
 ### OH_ImageProcessing_SetParameter()
 
@@ -245,7 +245,7 @@ Set parameter for image processing.Add parameter identified by the specified par
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if setting parameter is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the parameter is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of the parameter is invalid. For example, the parameter<br> contains unsupported parameter key or value. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if setting parameter is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the parameter is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of the parameter is invalid. For example, the parameter  contains unsupported parameter key or value. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 ### OH_ImageProcessing_GetParameter()
 
@@ -270,7 +270,7 @@ Get parameter of image processing.Get parameter identified by the specified para
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if getting parameter is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the parameter is null. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if getting parameter is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the parameter is null. \n |
 
 ### OH_ImageProcessing_ConvertColorSpace()
 
@@ -296,7 +296,7 @@ Conversion between single-layer images.The function generate the destinationImag
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space<br> of the image is unsupported. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. <br> [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space  of the image is unsupported. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. \n  [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 ### OH_ImageProcessing_Compose()
 
@@ -323,7 +323,7 @@ Composition from dual-layer HDR images to single-layer HDR images.The function g
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space<br> of the image is unsupported. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. <br> [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space  of the image is unsupported. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. \n  [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 ### OH_ImageProcessing_Decompose()
 
@@ -350,7 +350,7 @@ Decomposition from single-layer HDR images to dual-layer HDR images.The function
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space<br> of the image is unsupported. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. <br> [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space  of the image is unsupported. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. \n  [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 ### OH_ImageProcessing_GenerateMetadata()
 
@@ -375,7 +375,7 @@ Metadata Generation for HDR images.The function generate metadata for the source
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space<br> of the image is unsupported. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. <br> [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space  of the image is unsupported. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. \n  [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 ### OH_ImageProcessing_EnhanceDetail()
 
@@ -401,6 +401,6 @@ Clarity enhancement for images.The function generate the destinationImage from s
 
 | Type | Description |
 | -- | -- |
-| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. <br> [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. <br> [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. <br> [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space<br> of the image is unsupported. <br> [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. <br> [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. <br> [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
+| [ImageProcessing_ErrorCode](capi-image-processing-types-h.md#imageprocessing_errorcode) | [IMAGE_PROCESSING_SUCCESS](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing image is successful. \n  [IMAGE_PROCESSING_ERROR_INVALID_INSTANCE](capi-image-processing-types-h.md#imageprocessing_errorcode) if instance is null or not an image processing instance. \n  [IMAGE_PROCESSING_ERROR_INVALID_PARAMETER](capi-image-processing-types-h.md#imageprocessing_errorcode) if the image is null. \n  [IMAGE_PROCESSING_ERROR_INVALID_VALUE](capi-image-processing-types-h.md#imageprocessing_errorcode) if some property of image is invalid. For example, the color space  of the image is unsupported. \n  [IMAGE_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-image-processing-types-h.md#imageprocessing_errorcode) if the processing is not supported. \n  [IMAGE_PROCESSING_ERROR_PROCESS_FAILED](capi-image-processing-types-h.md#imageprocessing_errorcode) if processing error occurs. \n  [IMAGE_PROCESSING_ERROR_NO_MEMORY](capi-image-processing-types-h.md#imageprocessing_errorcode) if memory allocation failed. |
 
 

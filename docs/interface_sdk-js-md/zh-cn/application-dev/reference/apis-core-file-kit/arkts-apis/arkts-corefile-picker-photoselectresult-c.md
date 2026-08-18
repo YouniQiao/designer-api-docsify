@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoselectresult)
+**替代接口：** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## isOriginalPhoto

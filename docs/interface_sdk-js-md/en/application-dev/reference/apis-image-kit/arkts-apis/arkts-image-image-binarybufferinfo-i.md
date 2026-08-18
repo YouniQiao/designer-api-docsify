@@ -12,7 +12,6 @@ Describes binary buffer info.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## bytesPerRow

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Swiper](arkts-na-swiper-swiper-f.md#swiper) | Defines Swiper Component |
+| [Swiper](arkts-na-swiper-swiper-f.md) | Defines Swiper Component |
 
 ### Classes
 
@@ -33,7 +33,7 @@
 | [SwiperContentWillScrollResult](arkts-na-swiper-swipercontentwillscrollresult-i.md) | The result of swiper ContentWillScrollCallback. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

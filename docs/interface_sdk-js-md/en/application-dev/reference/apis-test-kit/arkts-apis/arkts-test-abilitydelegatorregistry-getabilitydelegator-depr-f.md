@@ -17,7 +17,7 @@ Obtains the **AbilityDelegator** object of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator)
+**Substitutes:** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)
 
 <!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
 

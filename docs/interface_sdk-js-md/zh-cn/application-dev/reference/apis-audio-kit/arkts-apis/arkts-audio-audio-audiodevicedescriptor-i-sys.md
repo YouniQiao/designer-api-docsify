@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -39,7 +41,7 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: int
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remotecast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remotedaudio) has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remote_cast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remote_daudio) has dmDeviceType which indicated deviceTypeId.
 
 **类型：** int
 

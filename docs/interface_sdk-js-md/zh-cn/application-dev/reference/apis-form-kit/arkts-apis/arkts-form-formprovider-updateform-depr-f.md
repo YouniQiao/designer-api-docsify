@@ -21,7 +21,7 @@ function updateForm(
 
 **废弃版本：** 9
 
-**替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
+**替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md)
 
 <!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -33,7 +33,7 @@ function updateForm(
 | --- | --- | --- | --- |
 | formId | string | 是 | 请求更新的卡片标识。 |
 | formBindingData | formBindingData.FormBindingData | 是 | 用于更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -68,7 +68,7 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 
 **废弃版本：** 9
 
-**替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
+**替代接口：** [updateForm](arkts-form-formprovider-updateform-f.md)
 
 <!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
 

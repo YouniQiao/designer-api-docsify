@@ -2,7 +2,7 @@
 
 Defines the Eclipse style Options.
 
-**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **Since:** 23
 

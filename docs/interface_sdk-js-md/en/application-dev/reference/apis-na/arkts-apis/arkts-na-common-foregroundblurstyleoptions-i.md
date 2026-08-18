@@ -2,7 +2,7 @@
 
 Defines the options of ForegroundBlurStyle
 
-**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-na-common-blurstyleoptions-i.md#blurstyleoptions)
+**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-na-common-blurstyleoptions-i.md)
 
 **Since:** 23
 

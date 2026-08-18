@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId
@@ -67,7 +68,7 @@ isSensorOnline: boolean
 sensorId: int
 ```
 
-传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md#sensorid)枚举值。
+传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
 
 **类型：** int
 

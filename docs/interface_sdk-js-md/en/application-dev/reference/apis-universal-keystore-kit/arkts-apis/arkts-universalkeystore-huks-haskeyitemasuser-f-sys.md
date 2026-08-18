@@ -31,7 +31,7 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key to check. |
-| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 

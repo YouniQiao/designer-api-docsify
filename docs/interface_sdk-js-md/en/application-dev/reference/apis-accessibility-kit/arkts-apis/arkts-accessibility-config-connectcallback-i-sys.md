@@ -1,6 +1,6 @@
 # ConnectCallback (System API)
 
-Callback provided when enabling an accessibility extension app through the [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-system-api) API. The callback is invoked when the connection to the accessibility extension app is disconnected.
+Callback provided when enabling an accessibility extension app through the [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) API. The callback is invoked when the connection to the accessibility extension app is disconnected.
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Callback provided when enabling an accessibility extension app through the [conf
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 import { config } from '@kit.AccessibilityKit';
 ```
 

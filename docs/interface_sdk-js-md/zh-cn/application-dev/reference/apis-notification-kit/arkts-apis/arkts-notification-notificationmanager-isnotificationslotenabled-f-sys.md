@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabled
@@ -31,7 +30,7 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callbac
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | type | SlotType | 是 | 渠道类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取渠道使能状态回调函数（true：使能，false：禁止）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取渠道使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 

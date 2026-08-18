@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains the number of active notifications of this application. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md#getactivenotificationcount)
+**Substitutes:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)
 
 <!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void--><!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void-End-->
 
@@ -32,7 +30,7 @@ Obtains the number of active notifications of this application. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
 ## getActiveNotificationCount
@@ -47,7 +45,7 @@ Obtains the number of active notifications of this application. This API uses a 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md#getactivenotificationcount)
+**Substitutes:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)
 
 <!--Device-notification-function getActiveNotificationCount(): Promise<number>--><!--Device-notification-function getActiveNotificationCount(): Promise<number>-End-->
 

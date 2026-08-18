@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { dialogRequest } from '@kit.AbilityKit';
-import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestInfo

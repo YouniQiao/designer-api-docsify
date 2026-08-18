@@ -98,7 +98,7 @@ Checks whether two rectangles intersect and if yes, sets **rect** to the area of
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if they intersect (rect is set to the intersection area); returns false otherwise (<br> rect remains unchanged). |
+| bool | Returns true if they intersect (rect is set to the intersection area); returns false otherwise (  rect remains unchanged). |
 
 ### OH_Drawing_RectJoin()
 
@@ -123,7 +123,7 @@ Obtains the union of two rectangles.This API may return an error code. For detai
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the union is obtained; returns false otherwise. The possible failure cause is that<br> at least one of the parameters rect and other is NULL or the size of the rectangle specified by other is<br> empty. |
+| bool | Returns true if the union is obtained; returns false otherwise. The possible failure cause is that  at least one of the parameters rect and other is NULL or the size of the rectangle specified by other is  empty. |
 
 ### OH_Drawing_RectSetLeft()
 
@@ -404,7 +404,7 @@ Creates a rectangle array object to store multiple rectangle objects. Release th
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object created. If the returned object pointer is null,<br> the creation fails.<br> Possible causes are that no memory is available or an input parameter is incorrect. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object created. If the returned object pointer is null,  the creation fails.  Possible causes are that no memory is available or an input parameter is incorrect. |
 
 ### OH_Drawing_RectGetArraySize()
 
@@ -429,7 +429,7 @@ Obtains the size of an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) obje
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either rectArray or pSize is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either rectArray or pSize is NULL. |
 
 ### OH_Drawing_RectGetArrayElement()
 
@@ -455,7 +455,7 @@ Obtains the rectangle with the specified index in a rectangle array.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if rectArray or rect is null or index is out of range. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if rectArray or rect is null or index is out of range. |
 
 ### OH_Drawing_RectDestroyArray()
 
@@ -479,7 +479,7 @@ Destroys an **OH_Drawing_Array** object and reclaims the memory occupied by the 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if rectArray is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if rectArray is NULL. |
 
 ### OH_Drawing_RectContains()
 
@@ -505,7 +505,7 @@ Checks whether a rectangle completely contains another rectangle.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if the rect, other, or isContains parameter is empty. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if the rect, other, or isContains parameter is empty. |
 
 ### OH_Drawing_RectInset()
 
@@ -533,7 +533,7 @@ Adds a specified value to the bounds of a rectangle.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if the rect parameter is empty. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if the rect parameter is empty. |
 
 ### OH_Drawing_RectIsEmpty()
 
@@ -558,7 +558,7 @@ Checks whether a rectangle is empty.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect or isEmpty is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect or isEmpty is a null pointer. |
 
 ### OH_Drawing_RectOffset()
 
@@ -584,7 +584,7 @@ Offsets a rectangle along the X axis and Y axis.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
 
 ### OH_Drawing_RectOffsetTo()
 
@@ -610,7 +610,7 @@ Offsets a rectangle to a specific position while keeping the width and height un
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
 
 ### OH_Drawing_RectSetEmpty()
 
@@ -634,7 +634,7 @@ Clears a rectangle (by setting the X and Y coordinates of the upper left corner 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
 
 ### OH_Drawing_RectSort()
 
@@ -658,7 +658,7 @@ Sorts the coordinates of a rectangle based on the actual position.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect is a null pointer. |
 
 ### OH_Drawing_RectUnion()
 
@@ -683,6 +683,6 @@ Sets the current rectangle to the union of this rectangle and another rectangle.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect or other is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if rect or other is a null pointer. |
 
 

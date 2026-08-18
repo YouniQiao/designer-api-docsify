@@ -59,7 +59,7 @@ Creates an asset with the specified file name. This API uses a promise to return
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -119,7 +119,7 @@ Creates an asset with the specified file name and options. This API uses a promi
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -221,7 +221,7 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper, context: Context) {

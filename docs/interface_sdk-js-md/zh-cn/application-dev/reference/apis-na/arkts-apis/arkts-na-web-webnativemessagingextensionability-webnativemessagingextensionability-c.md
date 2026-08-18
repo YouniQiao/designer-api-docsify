@@ -91,7 +91,7 @@ context: WebNativeMessagingExtensionContext
 
 当前Web原生消息扩展Ability的上下文。
 
-**类型：** [WebNativeMessagingExtensionContext](arkts-na-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
+**类型：** [WebNativeMessagingExtensionContext](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **起始版本：** 23
 

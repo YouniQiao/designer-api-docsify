@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## isHdcDisabled
@@ -17,7 +18,7 @@ function isHdcDisabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
+**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md)(admin: Want | null, feature: FeatureForDevice)
 
 **需要权限：** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
@@ -34,7 +35,7 @@ function isHdcDisabled(admin: Want, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回HDC是否被禁用，true表示HDC被禁用，false表示HDC未被禁用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回HDC是否被禁用，true表示HDC被禁用，false表示HDC未被禁用。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function isHdcDisabled(admin: Want): Promise<boolean>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
+**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md)(admin: Want | null, feature: FeatureForDevice)
 
 **需要权限：** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 

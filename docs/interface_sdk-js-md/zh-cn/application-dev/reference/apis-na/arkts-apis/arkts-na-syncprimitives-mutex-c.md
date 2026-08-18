@@ -2,7 +2,7 @@
 
 互斥锁，提供对共享资源的独占访问。同一时刻仅允许一个线程持有该锁。
 
-**继承/实现关系：** Mutex implements [Lock](arkts-na-syncprimitives-lock-i.md#lock)
+**继承/实现关系：** Mutex implements [Lock](arkts-na-syncprimitives-lock-i.md)
 
 **起始版本：** 26.0.0
 

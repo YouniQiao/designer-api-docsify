@@ -52,7 +52,7 @@ Obtains the display name of the local device.The device display name involves us
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code. For details about the error code definitions, see {@link DeviceManager_ErrorCode}.<br>       Returns {@link ERR_OK} is returned if the execution is successful.<br>       Returns {@link DM_ERR_FAILED} is returned if the function fails to be executed.<br>       Returns {@link DM_ERR_OBTAIN_SERVICE} is returned if the device management service fails to be obtained.<br>       Returns {@link DM_ERR_OBTAIN_BUNDLE_NAME} is returned if the bundle name fails to be obtained.<br>       Returns {@link ERR_INVALID_PARAMETER} is returned if the localDeviceName is nullptr or<br>                                             localDeviceName is not nullptr. |
+| int32_t | Error code. For details about the error code definitions, see {@link DeviceManager_ErrorCode}.        Returns {@link ERR_OK} is returned if the execution is successful.        Returns {@link DM_ERR_FAILED} is returned if the function fails to be executed.        Returns {@link DM_ERR_OBTAIN_SERVICE} is returned if the device management service fails to be obtained.        Returns {@link DM_ERR_OBTAIN_BUNDLE_NAME} is returned if the bundle name fails to be obtained.        Returns {@link ERR_INVALID_PARAMETER} is returned if the localDeviceName is nullptr or                                              localDeviceName is not nullptr. |
 
 ### OH_DeviceManager_GetLocalDeviceNameC()
 
@@ -79,6 +79,6 @@ Obtains the display name of the local device.The device display name involves us
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code. For details about the error code definitions, see {@link DeviceManager_ErrorCode}.<br>       Returns {@link ERR_OK} is returned if the execution is successful.<br>       Returns {@link DM_ERR_FAILED} is returned if the function fails to be executed.<br>       Returns {@link DM_ERR_OBTAIN_SERVICE} is returned if the device management service fails to be obtained.<br>       Returns {@link DM_ERR_OBTAIN_BUNDLE_NAME} is returned if the bundle name fails to be obtained.<br>       Returns {@link ERR_INVALID_PARAMETER} is returned if the localDeviceName is nullptr or<br>                                             localDeviceName is not nullptr or len is nullptr. |
+| int32_t | Error code. For details about the error code definitions, see {@link DeviceManager_ErrorCode}.        Returns {@link ERR_OK} is returned if the execution is successful.        Returns {@link DM_ERR_FAILED} is returned if the function fails to be executed.        Returns {@link DM_ERR_OBTAIN_SERVICE} is returned if the device management service fails to be obtained.        Returns {@link DM_ERR_OBTAIN_BUNDLE_NAME} is returned if the bundle name fails to be obtained.        Returns {@link ERR_INVALID_PARAMETER} is returned if the localDeviceName is nullptr or                                              localDeviceName is not nullptr or len is nullptr. |
 
 

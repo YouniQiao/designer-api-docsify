@@ -1,6 +1,6 @@
 # PopupCommonOptions
 
-配置弹出气泡的参数。使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#uicontext)中的 [getPromptAction()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 [PromptAction](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#promptaction)对象，再通过该对象调用 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup)和 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup)时传入的options参数。
+配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的 [getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup)和 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup)时传入的options参数。
 
 **起始版本：** 18
 
@@ -523,7 +523,7 @@ placement?: Placement
 popupColor?: ResourceColor
 ```
 
-气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色TRANSPARENT加模糊背景填充效果 [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)。
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色TRANSPARENT加模糊背景填充效果 [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
 
 **类型：** ResourceColor
 

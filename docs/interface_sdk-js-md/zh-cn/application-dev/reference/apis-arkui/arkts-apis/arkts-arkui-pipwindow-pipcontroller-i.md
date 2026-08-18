@@ -1,6 +1,6 @@
 # PiPController
 
-画中画控制器实例。用于启动、停止画中画以及更新回调注册等。 下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方 法。
+画中画控制器实例。用于启动、停止画中画以及更新回调注册等。 下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md)方法获取到PiPController实例，再通过此实例调用对应方 法。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## getPiPSettingSwitch
@@ -168,7 +169,7 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
 
 **错误码：**
 
@@ -195,7 +196,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
 **示例**
 
@@ -244,7 +245,7 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
@@ -295,7 +296,7 @@ offStateChange(): void
 this.pipController.offStateChange();
 ```
 
-## off_activeStatusChange
+## off_activeStatusChange('activeStatusChange')
 
 ```TypeScript
 off(type: 'activeStatusChange', callback?: Callback<boolean>): void
@@ -316,7 +317,7 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
 
 **示例**
 
@@ -327,7 +328,7 @@ let callback = (activeStatus: boolean) => {
 this.pipController.off('activeStatusChange', callback);
 ```
 
-## off_controlEvent
+## off_controlEvent('controlEvent')
 
 ```TypeScript
 off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
@@ -348,7 +349,7 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
 
 **示例**
 
@@ -359,13 +360,13 @@ let callbackFunc = (event: PiPWindow.ControlEventParam) => {
 this.pipController.off('controlEvent', callbackFunc);
 ```
 
-## off_controlPanelActionEvent
+## off_controlPanelActionEvent('controlPanelActionEvent')
 
 ```TypeScript
 off(type: 'controlPanelActionEvent'): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用 [off('controlEvent')](#offstatechange) 来关闭画中画控制面板控件动作事件的监听。
+关闭画中画控制面板控件动作事件的监听。推荐使用 [off('controlEvent')](#off_statechangestatechange) 来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -387,7 +388,7 @@ off(type: 'controlPanelActionEvent'): void
 this.pipController.off('controlPanelActionEvent');
 ```
 
-## off_pipWindowSizeChange
+## off_pipWindowSizeChange('pipWindowSizeChange')
 
 ```TypeScript
 off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
@@ -408,7 +409,7 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
 
 **错误码：**
 
@@ -439,7 +440,7 @@ try {
 }
 ```
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange'): void
@@ -485,7 +486,7 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 <br>画中画显示状态变化回调函数 |
 
 **错误码：**
 
@@ -521,7 +522,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 **示例**
 
@@ -623,7 +624,7 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -695,7 +696,7 @@ this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => 
 });
 ```
 
-## on_activeStatusChange
+## on_activeStatusChange('activeStatusChange')
 
 ```TypeScript
 on(type: 'activeStatusChange', callback: Callback<boolean>): void
@@ -716,7 +717,7 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | 是 | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
 
 **示例**
 
@@ -727,7 +728,7 @@ let callback = (activeStatus: boolean) => {
 this.pipController.on('activeStatusChange', callback);
 ```
 
-## on_controlEvent
+## on_controlEvent('controlEvent')
 
 ```TypeScript
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
@@ -748,7 +749,7 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 **示例**
 
@@ -781,13 +782,13 @@ this.pipController.on('controlEvent', (control) => {
 });
 ```
 
-## on_controlPanelActionEvent
+## on_controlPanelActionEvent('controlPanelActionEvent')
 
 ```TypeScript
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用 [on('controlEvent')](#onstatechange) 来开启画中画控制面板控件动作事件的监听。
+开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用 [on('controlEvent')](#on_statechangestatechange) 来开启画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -835,7 +836,7 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 });
 ```
 
-## on_pipWindowSizeChange
+## on_pipWindowSizeChange('pipWindowSizeChange')
 
 ```TypeScript
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
@@ -856,7 +857,7 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
@@ -877,7 +878,7 @@ try {
 }
 ```
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
@@ -898,7 +899,7 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md#pipstate)，表示当前画中画生命周期状态。 <br/>reason：string，表示当前生命周期的切换原因。 <br/>在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 <br/>从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： <br/>"requestStart"：应用调用startPip接口； <br/>"autoStart"：应用退后台触发画中画自动启动； <br/>"requestDelete"：应用调用stopPip接口； <br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮； <br/>"dragDelete"：用户将画中画窗口拖入垃圾桶； <br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； <br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。<br/>state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md)，表示当前画中画生命周期状态。 <br/>reason：string，表示当前生命周期的切换原因。 <br/>在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，reason始终为“0”，无需关注。 <br/>从<!--RP1-->OpenHarmony 6.1<!--RP1End-->开始，reason为当前生命周期的切换原因： <br/>"requestStart"：应用调用startPip接口； <br/>"autoStart"：应用退后台触发画中画自动启动； <br/>"requestDelete"：应用调用stopPip接口； <br/>"panelActionDelete"：用户点击画中画窗口的关闭按钮； <br/>"dragDelete"：用户将画中画窗口拖入垃圾桶； <br/>"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； <br/>"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
 
 **示例**
 

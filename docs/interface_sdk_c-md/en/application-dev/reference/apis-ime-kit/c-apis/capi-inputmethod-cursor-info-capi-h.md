@@ -56,7 +56,7 @@ Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_CursorInfo *](capi-inputmethod-inputmethod-cursorinfo.md) | If the creation succeeds, a pointer to the newly created [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)<br> instance is returned. If the creation fails, NULL is returned, possible cause is insufficient memory. |
+| [InputMethod_CursorInfo *](capi-inputmethod-inputmethod-cursorinfo.md) | If the creation succeeds, a pointer to the newly created [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)  instance is returned. If the creation fails, NULL is returned, possible cause is insufficient memory. |
 
 ### OH_CursorInfo_Destroy()
 
@@ -102,7 +102,7 @@ Set cursor info.
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 ### OH_CursorInfo_GetRect()
 
@@ -130,6 +130,6 @@ Get cursor info.
 
 | Type | Description |
 | -- | -- |
-| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.<br>     [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.<br>     [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.<br> Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
+| [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) | Returns a specific error code.      [IME_ERR_OK](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - success.      [IME_ERR_NULL_POINTER](capi-inputmethod-types-capi-h.md#inputmethod_errorcode) - unexpected null pointer.  Specific error codes can be referenced [InputMethod_ErrorCode](capi-inputmethod-types-capi-h.md#inputmethod_errorcode). |
 
 

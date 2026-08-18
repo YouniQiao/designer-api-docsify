@@ -12,7 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function getMifareClassic(tagInfo: TagInfo): MifareClassicTag
 ```
 
-Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#mifareclassictag) object based on the tag information. During tag reading, if the tag supports the MIFARE Classic technology, an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md#mifareclassictag) object will be created based on the tag information.
+Obtains an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) object based on the tag information. During tag reading, if the tag supports the MIFARE Classic technology, an [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) object will be created based on the tag information.
 
 **Since:** 23
 

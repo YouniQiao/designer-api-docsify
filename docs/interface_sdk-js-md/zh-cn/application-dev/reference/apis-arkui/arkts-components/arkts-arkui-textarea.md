@@ -28,6 +28,21 @@ TextArea(value?: TextAreaOptions)
 
 ## 汇总
 
-- [TextAreaOptions](arkts-arkui-textareaoptions-i.md)
-- [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md)
-- [TextAreaType](arkts-arkui-textareatype-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | TextArea初始化参数。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) | 软键盘按下回车键时的回调事件。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [TextAreaType](arkts-arkui-textareatype-e.md) | 多行文本输入框类型。 |
+

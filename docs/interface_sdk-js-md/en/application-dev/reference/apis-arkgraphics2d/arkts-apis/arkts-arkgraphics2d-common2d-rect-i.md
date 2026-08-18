@@ -12,7 +12,6 @@ Describes a rectangle, which can be defined by two coordinate points: upper left
 
 ```TypeScript
 import { common2D } from '@kit.ArkGraphics2D';
-import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## bottom

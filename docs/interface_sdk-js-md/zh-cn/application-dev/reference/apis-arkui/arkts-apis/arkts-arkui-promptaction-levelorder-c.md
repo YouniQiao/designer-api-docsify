@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## clamp

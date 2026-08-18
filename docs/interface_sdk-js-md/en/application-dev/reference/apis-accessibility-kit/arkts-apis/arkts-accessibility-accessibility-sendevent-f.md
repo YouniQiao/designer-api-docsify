@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -25,7 +22,7 @@ Sends an accessibility event. The event will be distributed to registered access
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event: EventInfo, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)(event: EventInfo, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -36,7 +33,7 @@ Sends an accessibility event. The event will be distributed to registered access
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | EventInfo | Yes | Accessibility event object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
 
 **Examples**
 
@@ -72,7 +69,7 @@ Sends an accessibility event. The event will be distributed to registered access
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event: EventInfo)
+**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)(event: EventInfo)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 

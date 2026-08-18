@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityInfo
@@ -28,7 +29,7 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示统一资源标识符URI，取值与 [module.json5配置文件中skills下的uris字段](../../../quick-start/module-configuration-file.md#skills标签)相对应。 |
-| abilityFlags | int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e-sys.md#abilityflag系统接口)，指示需要获取的 Ability组件信息的内容。 |
+| abilityFlags | int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e-sys.md)，指示需要获取的 Ability组件信息的内容。 |
 
 **返回值：**
 

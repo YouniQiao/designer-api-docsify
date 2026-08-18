@@ -1,12 +1,12 @@
 # UiDriver
 
-UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。 该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#driver)替代。
+UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。 该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [Driver](arkts-test-uitest-driver-c.md#driver)
+**替代接口：** [Driver](arkts-test-uitest-driver-c.md)
 
 <!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
@@ -15,6 +15,8 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -502,7 +504,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。 |
+| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
 
 **返回值：**
 

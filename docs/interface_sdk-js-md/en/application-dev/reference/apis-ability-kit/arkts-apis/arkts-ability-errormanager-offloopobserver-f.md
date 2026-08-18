@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
-import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_loopObserver
+## off_loopObserver('loopObserver')
 
 ```TypeScript
 function off(type: 'loopObserver', observer?: LoopObserver): void
@@ -34,7 +33,7 @@ Unregisters an observer for the message processing duration of the main thread. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 

@@ -150,7 +150,7 @@ Indicates whether the location was obtained from the mock location function.
 
 | Type | Description |
 | -- | -- |
-| bool | true if the location was obtained from the mock location function.<br> Otherwise, the location originates from the system's real positioning result. |
+| bool | true if the location was obtained from the mock location function.  Otherwise, the location originates from the system's real positioning result. |
 
 ### OH_LocationInfo_GetBasicInfo()
 
@@ -174,7 +174,7 @@ Obtain basic location information.
 
 | Type | Description |
 | -- | -- |
-| [Location_BasicInfo](capi-location-location-basicinfo.md) | Return the basic information structure of the location.<br> For a detailed definition, please refer to [Location_BasicInfo](capi-location-location-basicinfo.md). |
+| [Location_BasicInfo](capi-location-location-basicinfo.md) | Return the basic information structure of the location.\n  For a detailed definition, please refer to [Location_BasicInfo](capi-location-location-basicinfo.md).\n |
 
 ### OH_LocationInfo_GetAdditionalInfo()
 
@@ -200,7 +200,7 @@ Obtain additional information from the location information.
 
 | Type | Description |
 | -- | -- |
-| [Location_ResultCode](capi-oh-location-type-h.md#location_resultcode) | Location functions result code.<br>     For a detailed definition, please refer to [Location_ResultCode](capi-oh-location-type-h.md#location_resultcode).<br>     {@link LOCAION_SUCCESS} Successfully obtained additional information.<br>     [LOCATION_INVALID_PARAM](capi-oh-location-type-h.md#location_resultcode) 1.The input parameter location or additionalInfo is a null pointer.<br>         2.The input parameter length is too small to store additional information. |
+| [Location_ResultCode](capi-oh-location-type-h.md#location_resultcode) | Location functions result code.\n      For a detailed definition, please refer to [Location_ResultCode](capi-oh-location-type-h.md#location_resultcode).\n      {@link LOCAION_SUCCESS} Successfully obtained additional information.\n      [LOCATION_INVALID_PARAM](capi-oh-location-type-h.md#location_resultcode) 1.The input parameter location or additionalInfo is a null pointer.\n          2.The input parameter length is too small to store additional information.\n |
 
 ### Location_InfoCallback()
 
@@ -218,7 +218,7 @@ Defines the callback function used to report location data.
 
 | Parameter | Description |
 | -- | -- |
-| (Location_Info\* location | - Pointer to the [Location_Info](capi-location-location-info.md) instance. Carry the latest location information.<br> The memory of the location instance is recycled at the end of [Location_InfoCallback](capi-oh-location-type-h.md#location_infocallback).<br> Before that, call [OH_LocationInfo_GetBasicInfo](capi-oh-location-type-h.md#oh_locationinfo_getbasicinfo) and other interfaces to obtain location information. |
+| [Location_Info](capi-location-location-info.md)\* location | - Pointer to the [Location_Info](capi-location-location-info.md) instance. Carry the latest location information.<br> The memory of the location instance is recycled at the end of [Location_InfoCallback](capi-oh-location-type-h.md#location_infocallback).<br> Before that, call [OH_LocationInfo_GetBasicInfo](capi-oh-location-type-h.md#oh_locationinfo_getbasicinfo) and other interfaces to obtain location information. |
 | void\* userData | - Pointer to an application data structure, this parameter is passed in<br> through [OH_LocationRequestConfig_SetCallback](capi-oh-location-type-h.md#oh_locationrequestconfig_setcallback). |
 
 ### OH_Location_CreateRequestConfig()
@@ -237,7 +237,7 @@ Create a location request parameter structure instance.
 
 | Type | Description |
 | -- | -- |
-| [Location_RequestConfig*](capi-location-location-requestconfig.md) | Return a pointer to the {@ link Location_RequestConfig} instance. <br> If NULL is returned, it indicates that the creation failed. <br> The possible reason is that the application address space is full,<br> resulting in the inability to allocate space. |
+| [Location_RequestConfig*](capi-location-location-requestconfig.md) | Return a pointer to the {@ link Location_RequestConfig} instance. \n  If NULL is returned, it indicates that the creation failed. \n  The possible reason is that the application address space is full,\n  resulting in the inability to allocate space. \n |
 
 ### OH_Location_DestroyRequestConfig()
 

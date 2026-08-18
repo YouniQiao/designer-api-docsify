@@ -61,7 +61,7 @@ Creates an OH_AVMuxer instance by using the file descriptor and container format
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMuxer *](capi-avmuxer-oh-avmuxer.md) | Pointer to the OH_AVMuxer instance created. You must call [OH_AVMuxer_Destroy](capi-native-avmuxer-h.md#oh_avmuxer_destroy) to destroy the<br>     instance when it is no longer needed. |
+| [OH_AVMuxer *](capi-avmuxer-oh-avmuxer.md) | Pointer to the OH_AVMuxer instance created. You must call [OH_AVMuxer_Destroy](capi-native-avmuxer-h.md#oh_avmuxer_destroy) to destroy the      instance when it is no longer needed. |
 
 ### OH_AVMuxer_SetRotation()
 
@@ -86,7 +86,7 @@ Sets the rotation angle (clockwise), which must be 0, 90, 180, or 270, of an out
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null or the value of rotation is invalid.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null or the value of rotation is invalid.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence. |
 
 ### OH_AVMuxer_SetFormat()
 
@@ -111,7 +111,7 @@ Set format to the muxer.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: the muxer or format is invalid<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: not permit to call the interface, it was called in invalid state |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: the muxer or format is invalid      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: not permit to call the interface, it was called in invalid state |
 
 ### OH_AVMuxer_AddTrack()
 
@@ -137,7 +137,7 @@ Adds an audio or video track to a muxer. Each time this function is called, an a
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index or track format is invalid.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.<br>     <br>{@link AV_ERR_UNSUPPORT}: The MIME type is not supported.<br>     <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.<br>     <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index or track format is invalid.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.      <br>{@link AV_ERR_UNSUPPORT}: The MIME type is not supported.      <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.      <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
 
 ### OH_AVMuxer_Start()
 
@@ -161,7 +161,7 @@ Starts a muxer. This function must be called after [OH_AVMuxer_AddTrack](capi-na
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.<br>     <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.      <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
 
 ### OH_AVMuxer_WriteSample()
 
@@ -192,7 +192,7 @@ Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index, sample, or info is invalid.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.<br>     <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.<br>     <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index, sample, or info is invalid.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.      <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.      <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
 
 ### OH_AVMuxer_WriteSampleBuffer()
 
@@ -218,7 +218,7 @@ Writes a sample to a muxer. This function must be called after [OH_AVMuxer_Start
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index or sample is invalid.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.<br>     <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.<br>     <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null, or the track index or sample is invalid.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence.      <br>{@link AV_ERR_NO_MEMORY}: Memory allocation fails.      <br>{@link AV_ERR_UNKNOWN}: An unknown error occurs. |
 
 ### OH_AVMuxer_Stop()
 
@@ -242,7 +242,7 @@ Stops a muxer. Once the muxer is stopped, it cannot be restarted.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null.<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The function is called out of sequence. |
 
 ### OH_AVMuxer_Destroy()
 
@@ -266,6 +266,6 @@ Clears internal resources and destroys an OH_AVMuxer instance.Do not repeatedly 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The muxer pointer is null. |
 
 

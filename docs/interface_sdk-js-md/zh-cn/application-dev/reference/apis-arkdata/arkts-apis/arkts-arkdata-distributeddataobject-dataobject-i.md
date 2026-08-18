@@ -1,6 +1,6 @@
 # DataObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md#create)获取DataObject对象。
+表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md)获取DataObject对象。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## bindAssetStore
@@ -33,7 +34,7 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
 
 **错误码：**
 
@@ -445,7 +446,7 @@ try {
 }
 ```
 
-## off_change
+## off_change('change')
 
 ```TypeScript
 off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void
@@ -488,7 +489,7 @@ g_object.off('change', (sessionId: string, fields: Array<string>) => {
 g_object.off('change');
 ```
 
-## off_change
+## off_change('change')
 
 ```TypeScript
 off(type: 'change', callback?: DataObserver): void
@@ -544,7 +545,7 @@ try {
 }
 ```
 
-## off_progressChanged
+## off_progressChanged('progressChanged')
 
 ```TypeScript
 off(type: 'progressChanged', callback?: ProgressObserver): void
@@ -591,7 +592,7 @@ try {
 }
 ```
 
-## off_status
+## off_status('status')
 
 ```TypeScript
 off(
@@ -632,7 +633,7 @@ g_object.off('status', (sessionId: string, networkId: string, status: 'online' |
 g_object.off('status');
 ```
 
-## off_status
+## off_status('status')
 
 ```TypeScript
 off(type: 'status', callback?: StatusObserver): void
@@ -785,7 +786,7 @@ try {
 }
 ```
 
-## on_change
+## on_change('change')
 
 ```TypeScript
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void
@@ -825,7 +826,7 @@ g_object.on('change', (sessionId: string, fields: Array<string>) => {
 });
 ```
 
-## on_change
+## on_change('change')
 
 ```TypeScript
 on(type: 'change', callback: DataObserver): void
@@ -864,7 +865,7 @@ try {
 }
 ```
 
-## on_progressChanged
+## on_progressChanged('progressChanged')
 
 ```TypeScript
 on(type: 'progressChanged', callback: ProgressObserver): void
@@ -899,7 +900,7 @@ try {
 }
 ```
 
-## on_status
+## on_status('status')
 
 ```TypeScript
 on(
@@ -937,7 +938,7 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 });
 ```
 
-## on_status
+## on_status('status')
 
 ```TypeScript
 on(type: 'status', callback: StatusObserver): void
@@ -989,7 +990,7 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
 
 **错误码：**
 
@@ -1144,7 +1145,7 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 存储数据的设备号，标识需要保存对象的设备。"local"表示本地设备，否则表示其他设备的设备号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
 
 **错误码：**
 
@@ -1268,7 +1269,7 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetKey对应的文件必须已存在且类型为资产 [Asset](arkts-arkdata-commontype-asset-i.md#asset)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。 <br/>（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
+| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetKey对应的文件必须已存在且类型为资产 [Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。 <br/>（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
 | uri | string | 是 | 待设置的新资产的uri，表示该资产的存放的分布式路径。必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -1392,7 +1393,7 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetsKey对应的文件已存在且类型必须为资产 [Asset](arkts-arkdata-commontype-asset-i.md#asset)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错 误。<br/>（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
+| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。<br/>**使用约束：** <br/>（1）提供的assetsKey对应的文件已存在且类型必须为资产 [Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错 误。<br/>（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
 | uris | Array&lt;string&gt; | 是 | 待设置的新资产数组的uri集合，表示资产数组内每个资产存放的分布式路径。数组中元素的数量为[1, 50]，元素uri必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -1519,7 +1520,7 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null时表示退出分布式组网。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
 
 **错误码：**
 
@@ -1563,7 +1564,7 @@ setSessionId(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
 
 **错误码：**
 

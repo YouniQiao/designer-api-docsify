@@ -21,7 +21,7 @@
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface).
+Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
 
 **Since:** 7
 

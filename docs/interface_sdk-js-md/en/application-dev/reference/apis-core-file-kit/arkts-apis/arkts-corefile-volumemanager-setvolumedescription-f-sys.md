@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## setVolumeDescription
@@ -31,7 +30,7 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | uuid | string | Yes | UUID of the volume. |
 | description | string | Yes | Description of the volume. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked after the volume description is set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked after the volume description is set. |
 
 **Error codes:**
 

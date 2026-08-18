@@ -2,7 +2,7 @@
 
 The tap action triggers this method invocation.
 
-**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **起始版本：** 23
 

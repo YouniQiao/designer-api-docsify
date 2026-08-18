@@ -46,7 +46,7 @@ Provide environment APIS.
 
 | 类型 | 说明 |
 | -- | -- |
-| FileManagement_ErrCode | 返回FileManagement模块错误码。<br>          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.<br>          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
+| FileManagement_ErrCode | 返回FileManagement模块错误码。           {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.           {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.           {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
 
 ### OH_Environment_GetUserDesktopDir()
 
@@ -70,7 +70,7 @@ Provide environment APIS.
 
 | 类型 | 说明 |
 | -- | -- |
-| FileManagement_ErrCode | 返回FileManagement模块错误码。<br>          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.<br>          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
+| FileManagement_ErrCode | 返回FileManagement模块错误码。           {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.           {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.           {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
 
 ### OH_Environment_GetUserDocumentDir()
 
@@ -94,6 +94,6 @@ Provide environment APIS.
 
 | 类型 | 说明 |
 | -- | -- |
-| FileManagement_ErrCode | 返回FileManagement模块错误码。<br>          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.<br>          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
+| FileManagement_ErrCode | 返回FileManagement模块错误码。           {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter, pointer is null.           {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.           {@link ERR_ENOMEM} 13900011 - Failed to apply for memory. |
 
 

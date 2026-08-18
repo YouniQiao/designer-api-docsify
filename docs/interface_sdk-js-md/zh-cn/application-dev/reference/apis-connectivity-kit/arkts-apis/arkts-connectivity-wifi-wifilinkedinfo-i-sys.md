@@ -6,7 +6,7 @@ WLAN连接信息。
 
 **废弃版本：** 9
 
-**替代接口：** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#wifilinkedinfo)
+**替代接口：** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
@@ -15,6 +15,10 @@ WLAN连接信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## chload

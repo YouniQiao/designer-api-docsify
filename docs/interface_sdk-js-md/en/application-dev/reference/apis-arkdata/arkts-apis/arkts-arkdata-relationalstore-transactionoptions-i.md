@@ -12,7 +12,6 @@ Represents the configuration of a transaction object.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## transactionType

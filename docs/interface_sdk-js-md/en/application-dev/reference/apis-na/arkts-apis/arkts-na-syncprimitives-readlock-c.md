@@ -2,7 +2,7 @@
 
 A read lock that allows concurrent read access to a shared resource
 
-**Inheritance/Implementation:** ReadLock implements [Lock](arkts-na-syncprimitives-lock-i.md#lock)
+**Inheritance/Implementation:** ReadLock implements [Lock](arkts-na-syncprimitives-lock-i.md)
 
 **Since:** 26.0.0
 

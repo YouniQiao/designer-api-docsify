@@ -1,8 +1,8 @@
 # CanvasRenderingContext2D
 
-After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent > command queue buildup and excessive memory usage. For best practices, see > [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility). > > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D** > and do not affect paths defined in > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#offscreencanvasrenderingcontext2d) > or [Path2D](arkts-arkui-path2d-c.md#path2d): > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20). > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU > causes significant performance degradation.
+After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the > rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** > component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent > command queue buildup and excessive memory usage. For best practices, see > [Controlling Canvas Rendering Based on Component Visibility](../../../ui/arkts-drawing-customization-on-canvas.md#controlling-canvas-rendering-based-on-component-visibility). > > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D** > and do not affect paths defined in > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) > or [Path2D](arkts-arkui-path2d-c.md): > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20). > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU > causes significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#canvasrenderer)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
 **Since:** 8
 
@@ -103,7 +103,7 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 | --- | --- |
 | [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. |
 
-## off_onAttach
+## off_onAttach('onAttach')
 
 ```TypeScript
 off(type: 'onAttach', callback?: Callback<void>): void
@@ -134,7 +134,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## off_onDetach
+## off_onDetach('onDetach')
 
 ```TypeScript
 off(type: 'onDetach', callback?: Callback<void>): void
@@ -165,7 +165,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_onAttach
+## on_onAttach('onAttach')
 
 ```TypeScript
 on(type: 'onAttach', callback: Callback<void>): void
@@ -196,7 +196,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_onDetach
+## on_onDetach('onDetach')
 
 ```TypeScript
 on(type: 'onDetach', callback: Callback<void>): void

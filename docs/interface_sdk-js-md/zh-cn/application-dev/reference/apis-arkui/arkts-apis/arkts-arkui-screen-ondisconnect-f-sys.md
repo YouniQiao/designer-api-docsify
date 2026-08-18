@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { screen } from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## onDisconnect
@@ -25,7 +27,7 @@ Register the callback for screen disconnection events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback used to return the screen ID. This parameter is callable. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | Callback used to return the screen ID. This parameter is callable. |
 
 **错误码：**
 

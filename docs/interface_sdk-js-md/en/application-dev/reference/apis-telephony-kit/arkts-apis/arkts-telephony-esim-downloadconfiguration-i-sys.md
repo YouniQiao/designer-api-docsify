@@ -22,7 +22,7 @@ import { eSIM } from '@kit.TelephonyKit';
 forceDisableProfile: boolean
 ```
 
-Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#resultmustdisableprofile) is returned in resultCode to ask for the user's agreement to the operation.
+Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, [RESULT_MUST_DISABLE_PROFILE](arkts-telephony-esim-resultcode-e-sys.md#result_must_disable_profile) is returned in resultCode to ask for the user's agreement to the operation.
 
 **Type:** boolean
 

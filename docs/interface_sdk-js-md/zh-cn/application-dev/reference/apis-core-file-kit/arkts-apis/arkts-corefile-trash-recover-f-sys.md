@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## recover
@@ -11,7 +12,7 @@
 function recover(uri: string): void
 ```
 
-Recovers a file or directory from the trash.
+将uri对应文件/目录恢复到原路径。
 
 **起始版本：** 10
 
@@ -31,7 +32,7 @@ Recovers a file or directory from the trash.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | string | 是 | URI of the file or directory. |
+| uri | string | 是 | 回收站文件/文件夹URI。 |
 
 **错误码：**
 

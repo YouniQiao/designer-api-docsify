@@ -638,7 +638,7 @@ Function pointer type of OOM-Error callback.
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* location | The location information of the OOM error. |
+| const char\* location | The location information of the OOM error. |
 | const char\* detail | The detail of the OOM error. |
 | bool isHeapOOM | Determine whether the OOM type is Heap OOM. |
 
@@ -658,7 +658,7 @@ Function pointer type of Fatal-Error callback.
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* location | The location information of the Fatal error. |
+| const char\* location | The location information of the Fatal error. |
 | const char\* message | The message of the Fatal error. |
 
 ### JSVM_CDECL* JSVM_HandlerForPromiseReject()
@@ -677,7 +677,7 @@ Function pointer type of Promise-Reject callback.
 
 | Parameter | Description |
 | -- | -- |
-| (JSVM_Env env | The environment that the function is invoked under. |
+| [JSVM_Env](capi-jsvm-jsvm-env--8h.md) env | The environment that the function is invoked under. |
 | [JSVM_PromiseRejectEvent](capi-jsvm-types-h.md#jsvm_promiserejectevent) rejectEvent | The promise-reject event. |
 | [JSVM_Value](capi-jsvm-types-h.md#jsvm_value) rejectInfo | An JS-object containing two properties: 'promise' and 'value'.The 'promise' represents a reference to the Promise object that was rejected.The 'value' represents the rejection reason associated with that promise. |
 
@@ -697,7 +697,7 @@ Function pointer type of GC callback.
 
 | Parameter | Description |
 | -- | -- |
-| (JSVM_VM vm | The VM instance that the JSVM-API call is invoked under. |
+| [JSVM_VM](capi-jsvm-jsvm-vm--8h.md) vm | The VM instance that the JSVM-API call is invoked under. |
 | [JSVM_GCType](capi-jsvm-types-h.md#jsvm_gctype) gcType | The gc type. |
 | [JSVM_GCCallbackFlags](capi-jsvm-types-h.md#jsvm_gccallbackflags) flags | The GC callback flags. |
 | void\* data | The native pointer data. |
@@ -718,7 +718,7 @@ Function pointer type for heap threshold callback.
 
 | Parameter | Description |
 | -- | -- |
-| (JSVM_VM vm | The VM instance whose heap usage is observed at or above the threshold. |
+| [JSVM_VM](capi-jsvm-jsvm-vm--8h.md) vm | The VM instance whose heap usage is observed at or above the threshold. |
 | uint64_t threshold | The heap usage threshold in bytes. |
 | void\* data | The native pointer data. |
 

@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -21,7 +19,7 @@ Obtains an **Authenticator** instance for user authentication.
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
 <!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
 

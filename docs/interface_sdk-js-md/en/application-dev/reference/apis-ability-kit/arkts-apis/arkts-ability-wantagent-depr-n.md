@@ -6,7 +6,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 **Deprecated since:** 9
 
-**Substitutes:** [wantAgent/wantAgent](arkts-ability-wantagent-n.md#wantagent)
+**Substitutes:** [wantAgent/wantAgent](arkts-ability-wantagent-n.md)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
@@ -36,7 +36,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 | [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | Obtains a WantAgent object. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |

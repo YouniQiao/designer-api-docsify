@@ -22,18 +22,18 @@ import { bas } from '@kit.ConnectivityKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getRemoteDeviceBatteryInfo](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md#getremotedevicebatteryinfo) | Get remote device battery information. |
-| [isBasSupported](arkts-connectivity-bas-isbassupported-f-sys.md#isbassupported) | Determine whether the local device can obtain the battery level of the remote device. |
-| [offBatteryChange](arkts-connectivity-bas-offbatterychange-f-sys.md#offbatterychange) | Unsubscribe the event of battery state changes from a remote device. |
-| [onBatteryChange](arkts-connectivity-bas-onbatterychange-f-sys.md#onbatterychange) | Subscribe the event of battery state changed from a remote device. |
+| [getRemoteDeviceBatteryInfo](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md) | Get remote device battery information. |
+| [isBasSupported](arkts-connectivity-bas-isbassupported-f-sys.md) | Determine whether the local device can obtain the battery level of the remote device. |
+| [offBatteryChange](arkts-connectivity-bas-offbatterychange-f-sys.md) | Unsubscribe the event of battery state changes from a remote device. |
+| [onBatteryChange](arkts-connectivity-bas-onbatterychange-f-sys.md) | Subscribe the event of battery state changed from a remote device. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -41,7 +41,7 @@ import { bas } from '@kit.ConnectivityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

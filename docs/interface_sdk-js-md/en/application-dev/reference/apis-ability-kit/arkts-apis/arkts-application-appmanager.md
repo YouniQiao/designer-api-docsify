@@ -6,7 +6,7 @@ The appManager module provides APIs for application management. For example, you
 
 **Deprecated since:** 9
 
-**Substitutes:** [appManager/appManager](arkts-app-ability-appmanager.md#ohosappabilityappmanager)
+**Substitutes:** [appManager/appManager](arkts-app-ability-appmanager.md)
 
 <!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
 
@@ -25,15 +25,15 @@ The appManager module provides APIs for application management. For example, you
 | --- | --- |
 | [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md#getappmemorysize) | Obtains the maximum memory (RAM allocation) available to the current application. This API uses a promise to return the result. |
 | [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md#getappmemorysize) | Obtains the maximum memory (RAM allocation) available to the current application. This API uses an asynchronous callback to return the result. |
-| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) | Obtains information about the running processes. This API uses a promise to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) > instead. |
-| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) | Obtains information about the running processes. This API uses an asynchronous callback to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) > instead. |
+| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) | Obtains information about the running processes. This API uses a promise to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) > instead. |
+| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos) | Obtains information about the running processes. This API uses an asynchronous callback to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) > instead. |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md#isramconstraineddevice) | Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses a promise to return the result. |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md#isramconstraineddevice) | Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses an asynchronous callback to return the result. |
 | [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md#isrunninginstabilitytest) | Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions. |
 | [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md#isrunninginstabilitytest) | Checks whether the system is undergoing a stability test. This API uses a promise to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
@@ -41,7 +41,7 @@ The appManager module provides APIs for application management. For example, you
 | [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-depr-f-sys.md#clearupapplicationdata) | Clear up application data by bundle name |
 | [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md#getforegroundapplications) | getForegroundApplications. |
 | [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md#getforegroundapplications) | getForegroundApplications. |
-| [getProcessRunningInformation](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md#getprocessrunninginformation) | Obtains information about the running processes. This API uses a promise to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) > instead. |
+| [getProcessRunningInformation](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md#getprocessrunninginformation) | Obtains information about the running processes. This API uses a promise to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) > instead. |
 | [getProcessRunningInformation](arkts-ability-appmanager-getprocessrunninginformation-depr-f-sys.md#getprocessrunninginformation) | Obtains information about the running processes. This API uses an asynchronous callback to return the result. > This API is deprecated since API version 9. You are advised to use > [appManager.getRunningProcessInformation]{ > @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead. |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md#killprocesswithaccount) | Kill process with account. |

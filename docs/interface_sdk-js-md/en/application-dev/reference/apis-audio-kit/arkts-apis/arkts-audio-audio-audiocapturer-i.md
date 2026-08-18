@@ -1,6 +1,6 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture. Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer) to create an AudioCapturer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
+This interface provides APIs for audio capture. Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
 
@@ -12,8 +12,6 @@ This interface provides APIs for audio capture. Before calling any API in AudioC
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -35,7 +33,7 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
 
 ## getAudioStreamId
 
@@ -95,7 +93,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
 ## getAudioTime
 
@@ -207,7 +205,7 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
 ## getBufferSize
 
@@ -267,7 +265,7 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
 
 ## getCapturerInfo
 
@@ -429,7 +427,7 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
 
 ## getStreamInfo
 
@@ -477,7 +475,7 @@ Obtains the stream information of this audio capturer. This API returns the resu
 getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 ```
 
-Gets all the supported noise reduction modes for current device platform. Currently the noise reduction effect is only supported when using [SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md#sourcetypevoicemessage), other supported usage may be extened later. The supported modes will only consider the audio format and device platform, audio input device and stream concurrency will not be considered.
+Gets all the supported noise reduction modes for current device platform. Currently the noise reduction effect is only supported when using [SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md#source_type_voice_message), other supported usage may be extened later. The supported modes will only consider the audio format and device platform, audio input device and stream concurrency will not be considered.
 
 **Since:** 26.0.0
 
@@ -517,7 +515,7 @@ Unsubscribes audio capturer info change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -557,7 +555,7 @@ Unsubscribes input device change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -583,7 +581,7 @@ Unsubscribes from the mark reached events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
 ## offPeriodReach
 
@@ -603,7 +601,7 @@ Unsubscribes from period reached events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback invoked when the event is triggered. |
 
 ## offReadData
 
@@ -623,7 +621,7 @@ Unsubscribes audio data callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -649,7 +647,7 @@ Unsubscribes audio state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | No | Callback used to listen for the audio state change event. |
 
 **Error codes:**
 
@@ -657,7 +655,7 @@ Unsubscribes audio state change event callback.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_audioCapturerChange
+## off_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void
@@ -676,7 +674,7 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer configuration is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used for unsubscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -685,7 +683,7 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_audioInterrupt
+## off_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 off(type: 'audioInterrupt'): void
@@ -712,7 +710,7 @@ Unsubscribes from the audio interruption event.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_inputDeviceChange
+## off_inputDeviceChange('inputDeviceChange')
 
 ```TypeScript
 off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
@@ -731,7 +729,7 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the audio input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used to return the information about the audio input device. |
 
 **Error codes:**
 
@@ -740,7 +738,7 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_markReach
+## off_markReach('markReach')
 
 ```TypeScript
 off(type: 'markReach', callback?: Callback<long>): void
@@ -759,9 +757,9 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
-## off_periodReach
+## off_periodReach('periodReach')
 
 ```TypeScript
 off(type: 'periodReach', callback?: Callback<long>): void
@@ -780,9 +778,9 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
-## off_readData
+## off_readData('readData')
 
 ```TypeScript
 off(type: 'readData', callback?: Callback<ArrayBuffer>): void
@@ -801,7 +799,7 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -810,7 +808,7 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange', callback?: Callback<AudioState>): void
@@ -829,7 +827,7 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio capturer state change event is canceled. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -855,7 +853,7 @@ Subscribes audio capturer info change event callback. The event is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
@@ -881,7 +879,7 @@ Listens for audio interrupt events. This method uses a callback to get interrupt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to listen for interrupt callback. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to listen for interrupt callback. |
 
 **Error codes:**
 
@@ -907,7 +905,7 @@ Subscribes input device change event callback. The event is triggered when input
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to listen device change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to listen device change event. |
 
 **Error codes:**
 
@@ -934,7 +932,7 @@ Subscribes to mark reached events. When the number of frames captured reaches th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onPeriodReach
 
@@ -955,7 +953,7 @@ Subscribes to period reached events. When the period of frame capturing reaches 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | frame | long | Yes | Period during which frame capturing is listened. The value must be greater than 0. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback invoked when the event is triggered. |
 
 ## onReadData
 
@@ -975,7 +973,7 @@ Subscribes audio data callback. The event is triggered when audio buffer is avai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback with the buffer to read. |
 
 **Error codes:**
 
@@ -1001,9 +999,9 @@ Subscribes audio state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | Yes | Callback used to listen for the audio state change event. |
 
-## on_audioCapturerChange
+## on_audioCapturerChange('audioCapturerChange')
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void
@@ -1022,7 +1020,7 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the current configuration and status information of the audio capturer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | Yes | Callback used to return the current configuration and status information of the audio capturer. |
 
 **Error codes:**
 
@@ -1031,13 +1029,13 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_audioInterrupt
+## on_audioInterrupt('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus. After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 10
 
@@ -1050,7 +1048,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -1059,7 +1057,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_inputDeviceChange
+## on_inputDeviceChange('inputDeviceChange')
 
 ```TypeScript
 on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
@@ -1078,7 +1076,7 @@ Subscribes to the audio input device change event, which is triggered when an au
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the updated information about the audio input device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the updated information about the audio input device. |
 
 **Error codes:**
 
@@ -1087,7 +1085,7 @@ Subscribes to the audio input device change event, which is triggered when an au
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_markReach
+## on_markReach('markReach')
 
 ```TypeScript
 on(type: 'markReach', frame: long, callback: Callback<long>): void
@@ -1107,9 +1105,9 @@ Subscribes to the mark reached event, which is triggered (only once) when the nu
 | --- | --- | --- | --- |
 | type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
-## on_periodReach
+## on_periodReach('periodReach')
 
 ```TypeScript
 on(type: 'periodReach', frame: long, callback: Callback<long>): void
@@ -1129,9 +1127,9 @@ Subscribes to the period reached event, which is triggered each time the number 
 | --- | --- | --- | --- |
 | type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
 | frame | long | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
-## on_readData
+## on_readData('readData')
 
 ```TypeScript
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
@@ -1150,7 +1148,7 @@ Subscribes to the audio data read event, which is triggered when audio stream da
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -1159,7 +1157,7 @@ Subscribes to the audio data read event, which is triggered when audio stream da
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: Callback<AudioState>): void
@@ -1178,7 +1176,7 @@ Subscribes to the audio capturer state change event, which is triggered when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
 
 ## read
 
@@ -1204,7 +1202,7 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 | --- | --- | --- | --- |
 | size | number | Yes | Number of bytes to read. |
 | isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
 
 ## read
 
@@ -1255,7 +1253,7 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -1297,7 +1295,7 @@ Asynchronously request to start the playback capture stream. This function is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | Yes | Callback function used to receive the final result of start request. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)&gt; | Yes | Callback function used to receive the final result of start request. |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1320,7 +1318,7 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE：
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
-| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#audiosessionbehaviorflags). |
+| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -1444,7 +1442,7 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## start
 
@@ -1484,7 +1482,7 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 

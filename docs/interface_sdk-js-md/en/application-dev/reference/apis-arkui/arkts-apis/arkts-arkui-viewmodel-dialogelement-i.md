@@ -2,7 +2,7 @@
 
 The &lt;dialog&gt; component is a custom pop-up container.
 
-**Inheritance/Implementation:** DialogElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** DialogElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 4
 

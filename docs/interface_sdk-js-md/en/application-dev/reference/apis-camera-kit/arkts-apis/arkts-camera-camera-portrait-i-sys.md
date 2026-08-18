@@ -1,8 +1,8 @@
 # Portrait (System API)
 
-Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#portraitquery-system-api). Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md). Provides the APIs for portrait photo settings.
 
-**Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#portraitquery-system-api)
+**Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
 
 **Since:** 23
 

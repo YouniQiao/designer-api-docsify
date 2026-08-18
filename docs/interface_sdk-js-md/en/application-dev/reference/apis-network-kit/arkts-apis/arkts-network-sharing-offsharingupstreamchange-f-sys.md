@@ -6,13 +6,13 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-## off_sharingUpstreamChange
+## off_sharingUpstreamChange('sharingUpstreamChange')
 
 ```TypeScript
 function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): void
 ```
 
-Unregister a callback for the sharing upstream network change.
+Unsubscribes from upstream network changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,8 +28,8 @@ Unregister a callback for the sharing upstream network change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sharingUpstreamChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | No | the callback function that returns the network handle. |
+| type | 'sharingUpstreamChange' | Yes | Event type. The value **sharingUpstreamChange** indicates an upstream network change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | No | Callback used for unsubscription from upstream network changes. |
 
 **Error codes:**
 

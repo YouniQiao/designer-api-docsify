@@ -162,7 +162,7 @@ Creates the pointer to an OH_PictureMetadata struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect. |
 
 ### OH_PictureMetadata_GetProperty()
 
@@ -188,7 +188,7 @@ Obtains a property of metadata based on the key. **value.data** obtained through
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the<br>     auxiliary picture type do not match. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the      auxiliary picture type do not match. |
 
 ### OH_PictureMetadata_GetPropertyWithNull()
 
@@ -214,7 +214,7 @@ Obtains the metadata value of an OH_PictureMetadata instance. The output **value
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode): The metadata, key, or value parameter is a null pointer.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the<br>     auxiliary picture type do not match. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode): The metadata, key, or value parameter is a null pointer.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the      auxiliary picture type do not match. |
 
 ### OH_PictureMetadata_SetProperty()
 
@@ -240,7 +240,7 @@ Sets a property of metadata based on the key.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.<br>     <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the<br>     auxiliary picture type do not match. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.      <br>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode): The metadata type is not supported, or the metadata type and the      auxiliary picture type do not match. |
 
 ### OH_PictureMetadata_SetBlobData()
 
@@ -266,7 +266,7 @@ Sets blob data in the metadata.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata is nullptr, or blob is nullptr, or blobSize is 0.</li><br>         <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li><br>         <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) failed to set blob data.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata is nullptr, or blob is nullptr, or blobSize is 0.</li>          <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li>          <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) failed to set blob data.</li>          </ul> |
 
 ### OH_PictureMetadata_GetBlobDataSize()
 
@@ -291,7 +291,7 @@ Obtains the size of the blob data in the metadata.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata or blobSize is nullptr.</li><br>         <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata or blobSize is nullptr.</li>          <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li>          </ul> |
 
 ### OH_PictureMetadata_GetBlobData()
 
@@ -317,7 +317,7 @@ Obtains blob data from the metadata.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata is nullptr, or blob is nullptr, or blobSize is 0, or blobSize<br>             is less than metadata length.</li><br>         <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li><br>         <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) failed to get blob data.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadata is nullptr, or blob is nullptr, or blobSize is 0, or blobSize              is less than metadata length.</li>          <li>[IMAGE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) unsupported metadata type.</li>          <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) failed to get blob data.</li>          </ul> |
 
 ### OH_PictureMetadata_Release()
 
@@ -341,7 +341,7 @@ Releases the pointer to an OH_PictureMetadata struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect. |
 
 ### OH_PictureMetadata_GetMetadataByType()
 
@@ -368,7 +368,7 @@ Obtains the PictureMetadata object matching the specified type from the PictureM
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if metadatas/metadata is nullptr or metadataCount is 0.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if metadatas/metadata is nullptr or metadataCount is 0.</li>          </ul> |
 
 ### OH_PictureMetadatas_Release()
 
@@ -393,7 +393,7 @@ Releases an array of OH_PictureMetadata objects.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadatas is nullptr, or metadatasCount is 0.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) metadatas is nullptr, or metadatasCount is 0.</li>          </ul> |
 
 ### OH_PictureMetadata_Clone()
 
@@ -418,6 +418,6 @@ Clones metadata.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.<br>     <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode): The memory allocation fails.<br>     <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode): The memory copy fails. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): A parameter is incorrect.      <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode): The memory allocation fails.      <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode): The memory copy fails. |
 
 

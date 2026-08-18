@@ -1,6 +1,6 @@
 # CameraInput
 
-**CameraInput** defines the camera input object. It provides camera device information used in [Session](arkts-camera-camera-session-i.md#session).
+**CameraInput** defines the camera input object. It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Unsubscribes from camera occlusion detection results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | No | Callback used to get detection results. |
 
 ## offError
 
@@ -154,9 +154,9 @@ Unsubscribes from error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the camera input errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the camera input errors. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
@@ -178,7 +178,7 @@ Unsubscribes from CameraInput error events.
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise, all registered callbacks will be unregistered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise, all registered callbacks will be unregistered. |
 
 ## onCameraOcclusionDetection
 
@@ -198,7 +198,7 @@ Subscribes to camera occlusion detection results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | Yes | Callback used to get detection results. |
 
 ## onError
 
@@ -219,9 +219,9 @@ Subscribes to error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the camera input errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the camera input errors. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
@@ -243,7 +243,7 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## open
 
@@ -265,7 +265,7 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is opened successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the camera device is opened successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -326,7 +326,7 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecureEnabled | boolean | Yes | Whether to open the camera device in secure mode. **true** to open in secure mode, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode) is returned. |
+| isSecureEnabled | boolean | Yes | Whether to open the camera device in secure mode. **true** to open in secure mode, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Return value:**
 

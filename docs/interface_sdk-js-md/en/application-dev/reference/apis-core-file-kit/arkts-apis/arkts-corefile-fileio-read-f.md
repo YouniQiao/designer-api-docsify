@@ -25,7 +25,7 @@ Reads data from a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-corefile-file-fs-read-f.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-read-f.md)
 
 <!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>-End-->
 
@@ -58,7 +58,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-corefile-file-fs-read-f.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-read-f.md)
 
 <!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -70,7 +70,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to read. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when the data is read asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when the data is read asynchronously. |
 
 
 ## read
@@ -94,7 +94,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [read](arkts-corefile-file-fs-read-f.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-read-f.md)
 
 <!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -107,5 +107,5 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | fd | number | Yes | File descriptor of the file to read. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
 | options | {     offset?: number;     length?: number;     position?: number;   } | Yes | The options are as follows:<br>- **offset** (number): byte offset from the start of the buffer where the read data is stored. This parameter is optional. The default value is **0**.<br>- **length** ( number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position in the file to read from, in bytes. This parameter is optional. By default, data is read from the current position.<br>Constraints: offset + length &lt;= Buffer size |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when the data is read asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when the data is read asynchronously. |
 

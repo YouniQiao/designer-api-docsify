@@ -2,7 +2,7 @@
 
 Defines prefix icon option.
 
-**Inheritance/Implementation:** ChipV2PrefixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md#chipv2imageiconconfig)
+**Inheritance/Implementation:** ChipV2PrefixImageIconConfig extends [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)
 
 **Since:** 26.0.0
 

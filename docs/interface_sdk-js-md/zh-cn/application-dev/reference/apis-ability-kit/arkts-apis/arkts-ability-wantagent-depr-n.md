@@ -6,7 +6,7 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 
 **废弃版本：** 9
 
-**替代接口：** [wantAgent/wantAgent](arkts-ability-wantagent-n.md#wantagent)
+**替代接口：** [wantAgent/wantAgent](arkts-ability-wantagent-n.md)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 

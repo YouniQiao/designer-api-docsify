@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getFloat32Array
@@ -19,7 +20,7 @@
 getFloat32Array(columnIndex: int): Float32Array
 ```
 
-以浮点数组的形式获取当前行中指定列的值，仅在向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig)中配置vector为true）下可用。
+以浮点数组的形式获取当前行中指定列的值，仅在向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）下可用。
 
 **起始版本：** 23
 

@@ -409,7 +409,7 @@ Display order of the dialog box. **NOTE：**- Default value: **LevelOrder.clamp(
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box. This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**. Value range: a number no less than 0
+[Unique ID](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box. This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**. Value range: a number no less than 0
 
 **Type:** number
 

@@ -30,6 +30,16 @@ CalendarPicker(options?: CalendarOptions)
 
 ## 汇总
 
-- [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md)
-- [CalendarOptions](arkts-arkui-calendaroptions-i.md)
-- [CalendarAlign](arkts-arkui-calendaralign-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | 日历选择器弹窗选项。 继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。 |
+| [CalendarOptions](arkts-arkui-calendaroptions-i.md) | 日历选择器组件的参数说明。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [CalendarAlign](arkts-arkui-calendaralign-e.md) | 对齐方式类型。 |
+

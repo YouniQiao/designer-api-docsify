@@ -1,6 +1,6 @@
 # ImageEmbedding(智慧数据平台)
 
-描述多模态嵌入模型的图像嵌入函数。 下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getimageembeddingmodel)获取到ImageEmbedding实例，再通过此实例 调用对应接口。
+描述多模态嵌入模型的图像嵌入函数。 下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md)获取到ImageEmbedding实例，再通过此实例 调用对应接口。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding

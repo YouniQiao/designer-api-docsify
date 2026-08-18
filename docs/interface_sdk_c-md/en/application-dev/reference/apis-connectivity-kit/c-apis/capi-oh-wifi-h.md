@@ -204,7 +204,7 @@ Check whether the wifi switch is enabled.
 
 | Type | Description |
 | -- | -- |
-| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.<br>     For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).<br>     [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the wifi switch status.<br>     [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter enabled is a null pointer.<br>     [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed. |
+| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.\n      For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).\n      [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the wifi switch status.\n      [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter enabled is a null pointer.\n      [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed.\n |
 
 ### OH_Wifi_GetDeviceMacAddress()
 
@@ -231,7 +231,7 @@ Get the device Mac address.
 
 | Type | Description |
 | -- | -- |
-| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.<br>     For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).<br>     [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the device Mac address.<br>     [WIFI_PERMISSION_DENIED](capi-oh-wifi-h.md#wifi_resultcode) Permission denied.<br>     [WIFI_NOT_SUPPORTED](capi-oh-wifi-h.md#wifi_resultcode) Capability not supported.<br>     [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter macAddr is a null pointer.<br>     [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed.<br>     [WIFI_STA_DISABLED](capi-oh-wifi-h.md#wifi_resultcode) Wi-Fi STA disabled. |
+| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.      For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).      [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the device Mac address.      [WIFI_PERMISSION_DENIED](capi-oh-wifi-h.md#wifi_resultcode) Permission denied.      [WIFI_NOT_SUPPORTED](capi-oh-wifi-h.md#wifi_resultcode) Capability not supported.      [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter macAddr is a null pointer.      [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed.      [WIFI_STA_DISABLED](capi-oh-wifi-h.md#wifi_resultcode) Wi-Fi STA disabled. |
 
 ### OH_Wifi_GetLinkedInfo()
 
@@ -257,6 +257,6 @@ Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddre
 
 | Type | Description |
 | -- | -- |
-| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.<br>     For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).<br>     [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the wifi linked info.<br>     [WIFI_PERMISSION_DENIED](capi-oh-wifi-h.md#wifi_resultcode) Permission denied.<br>     [WIFI_NOT_SUPPORTED](capi-oh-wifi-h.md#wifi_resultcode) Capability not supported.<br>     [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter info is a null pointer.<br>     [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed. |
+| [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode) | wifi functions result code.      For a detailed definition, please refer to [Wifi_ResultCode](capi-oh-wifi-h.md#wifi_resultcode).      [WIFI_SUCCESS](capi-oh-wifi-h.md#wifi_resultcode) Successfully obtained the wifi linked info.      [WIFI_PERMISSION_DENIED](capi-oh-wifi-h.md#wifi_resultcode) Permission denied.      [WIFI_NOT_SUPPORTED](capi-oh-wifi-h.md#wifi_resultcode) Capability not supported.      [WIFI_INVALID_PARAM](capi-oh-wifi-h.md#wifi_resultcode) The input parameter info is a null pointer.      [WIFI_OPERATION_FAILED](capi-oh-wifi-h.md#wifi_resultcode) Internal execution failed. |
 
 

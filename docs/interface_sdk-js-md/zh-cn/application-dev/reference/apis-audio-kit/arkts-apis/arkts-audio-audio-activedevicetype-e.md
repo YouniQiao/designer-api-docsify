@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md#communicationdevicetype)
+**替代接口：** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)
 
 <!--Device-audio-enum ActiveDeviceType--><!--Device-audio-enum ActiveDeviceType-End-->
 

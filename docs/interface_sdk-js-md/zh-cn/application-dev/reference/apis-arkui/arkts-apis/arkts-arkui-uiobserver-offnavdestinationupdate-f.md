@@ -3,15 +3,16 @@
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_navDestinationUpdate
+## off_navDestinationUpdate('navDestinationUpdate')
 
 ```TypeScript
 export function off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<NavDestinationInfo>): void
 ```
 
-取消监听NavDestination组件的状态变化。与[uiObserver.off](#offnavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。
+取消监听NavDestination组件的状态变化。与[uiObserver.off](#off_navdestinationupdatenavdestinationupdate)相比，新增了options参数，即支持指定监听的Navigation的id。
 
 **起始版本：** 11
 
@@ -29,10 +30,10 @@ export function off(type: 'navDestinationUpdate', options: { navigationId: Resou
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | 是 | 监听事件，固定为'navDestinationUpdate'，即NavDestination组件的状态变化。 |
 | options | { navigationId: ResourceStr } | 是 | 指定监听的Navigation的id。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 否 | 回调函数。返回当前的NavDestination组件状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 否 | 回调函数。返回当前的NavDestination组件状态。 |
 
 
-## off_navDestinationUpdate
+## off_navDestinationUpdate('navDestinationUpdate')
 
 ```TypeScript
 export function off(type: 'navDestinationUpdate', callback?: Callback<NavDestinationInfo>): void
@@ -55,5 +56,5 @@ export function off(type: 'navDestinationUpdate', callback?: Callback<NavDestina
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | 是 | 监听事件，固定为'navDestinationUpdate'，即NavDestination组件的状态变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 否 | 回调函数。返回当前的NavDestination组件状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 否 | 回调函数。返回当前的NavDestination组件状态。 |
 

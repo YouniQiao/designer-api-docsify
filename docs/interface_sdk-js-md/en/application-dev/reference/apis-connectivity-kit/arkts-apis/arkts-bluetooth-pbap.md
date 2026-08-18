@@ -20,10 +20,10 @@ import { pbap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md#createpbapserverprofile) | create the instance of PBAP server profile. |
+| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md) | create the instance of PBAP server profile. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -31,7 +31,7 @@ import { pbap } from '@kit.ConnectivityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -45,7 +45,7 @@ import { pbap } from '@kit.ConnectivityKit';
 | [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md) | Base interface of profile. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

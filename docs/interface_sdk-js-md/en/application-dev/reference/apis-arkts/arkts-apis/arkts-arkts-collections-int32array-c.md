@@ -1,6 +1,6 @@
 # Int32Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md#arktscollections). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 

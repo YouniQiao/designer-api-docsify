@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getTopAbility
@@ -55,7 +56,7 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | 回调函数。当获取窗口焦点所在的Ability成功，err为undefined，data为获取到的应用名；否则为错误对象。可进行错误处理或其他自 定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | 回调函数。当获取窗口焦点所在的Ability成功，err为undefined，data为获取到的应用名；否则为错误对象。可进行错误处理或其他自 定义处理。 |
 
 **错误码：**
 

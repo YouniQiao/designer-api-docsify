@@ -93,7 +93,7 @@ Sets the child process priority. After a child process is suppressed, the CPU re
 
 | Type | Description |
 | -- | -- |
-| int | [ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS](capi-background-process-manager-h.md#backgroundprocessmanager_errorcode) is returned if the suppression parameter is sent successfully<br>     [ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM](capi-background-process-manager-h.md#backgroundprocessmanager_errorcode) is returned if the parameter check fails. |
+| int | [ERR_BACKGROUND_PROCESS_MANAGER_SUCCESS](capi-background-process-manager-h.md#backgroundprocessmanager_errorcode) is returned if the suppression parameter is sent successfully      [ERR_BACKGROUND_PROCESS_MANAGER_INVALID_PARAM](capi-background-process-manager-h.md#backgroundprocessmanager_errorcode) is returned if the parameter check fails. |
 
 ### OH_BackgroundProcessManager_ResetProcessPriority()
 

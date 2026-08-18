@@ -12,7 +12,6 @@ During application development, you often need to draw different elements. Typic
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary
@@ -41,7 +40,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | Implements a shadow layer. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | Defines a block consisting of one or more characters with the same font. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
-| [Tool](arkts-arkgraphics2d-drawing-tool-c.md) | A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#ohosgraphicscommon2d). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
+| [Tool](arkts-arkgraphics2d-drawing-tool-c.md) | A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Describes the style of a typeface, such as SimSun or KaiTi. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | This module defines a struct for setting typeface arguments. > **NOTE：**> > - The initial APIs of this class are supported since API version 20. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. |
 
@@ -65,7 +64,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Enumerates the filter modes. |
 | [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | Enumerates the font edging types. |
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | Enumerates the font hinting types. |
-| [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) | Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#fontmetrics) struct is valid. |
+| [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) | Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) struct is valid. |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | Enumerates the join styles of a pen. The join style defines the shape of the joints of a polyline segment drawn by the pen. |
 | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Enumerates the drawing styles for path effects. \| Name \| Value\| Description \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| Translates only, not rotating with the path.\| \| ROTATE \| 1 \| Rotates with the path.\| \| MORPH \| 2 \| Rotates with the path and stretches or compresses at turns to enhance smoothness.\| |
 | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | Enumerates the directions of a closed contour. |

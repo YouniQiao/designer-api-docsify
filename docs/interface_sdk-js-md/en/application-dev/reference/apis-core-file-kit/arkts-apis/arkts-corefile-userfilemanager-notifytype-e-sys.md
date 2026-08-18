@@ -6,7 +6,7 @@ Enumerates the notification event types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifytype)
+**Substitutes:** [NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md)
 
 <!--Device-userFileManager-enum NotifyType--><!--Device-userFileManager-enum NotifyType-End-->
 
@@ -17,7 +17,7 @@ Enumerates the notification event types.
 ## NOTIFY_ADD
 
 ```TypeScript
-NOTIFY_ADD
+NOTIFY_ADD = 0
 ```
 
 A file asset or album is added.
@@ -26,9 +26,9 @@ A file asset or album is added.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyadd)
+**Substitutes:** [NOTIFY_ADD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_add)
 
-<!--Device-NotifyType-NOTIFY_ADD--><!--Device-NotifyType-NOTIFY_ADD-End-->
+<!--Device-NotifyType-NOTIFY_ADD = 0--><!--Device-NotifyType-NOTIFY_ADD = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ A file asset or album is added.
 ## NOTIFY_UPDATE
 
 ```TypeScript
-NOTIFY_UPDATE
+NOTIFY_UPDATE = 1
 ```
 
 A file asset or album is updated.
@@ -46,9 +46,9 @@ A file asset or album is updated.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyupdate)
+**Substitutes:** [NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_update)
 
-<!--Device-NotifyType-NOTIFY_UPDATE--><!--Device-NotifyType-NOTIFY_UPDATE-End-->
+<!--Device-NotifyType-NOTIFY_UPDATE = 1--><!--Device-NotifyType-NOTIFY_UPDATE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ A file asset or album is updated.
 ## NOTIFY_REMOVE
 
 ```TypeScript
-NOTIFY_REMOVE
+NOTIFY_REMOVE = 2
 ```
 
 A file asset or album is removed.
@@ -66,9 +66,9 @@ A file asset or album is removed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyremove)
+**Substitutes:** [NOTIFY_REMOVE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_remove)
 
-<!--Device-NotifyType-NOTIFY_REMOVE--><!--Device-NotifyType-NOTIFY_REMOVE-End-->
+<!--Device-NotifyType-NOTIFY_REMOVE = 2--><!--Device-NotifyType-NOTIFY_REMOVE = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -77,7 +77,7 @@ A file asset or album is removed.
 ## NOTIFY_ALBUM_ADD_ASSET
 
 ```TypeScript
-NOTIFY_ALBUM_ADD_ASSET
+NOTIFY_ALBUM_ADD_ASSET = 3
 ```
 
 A file asset is added to the album.
@@ -86,9 +86,9 @@ A file asset is added to the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyalbumaddasset)
+**Substitutes:** [NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_add_asset)
 
-<!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET-End-->
+<!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET = 3--><!--Device-NotifyType-NOTIFY_ALBUM_ADD_ASSET = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -97,7 +97,7 @@ A file asset is added to the album.
 ## NOTIFY_ALBUM_REMOVE_ASSET
 
 ```TypeScript
-NOTIFY_ALBUM_REMOVE_ASSET
+NOTIFY_ALBUM_REMOVE_ASSET = 4
 ```
 
 A file asset is removed from the album.
@@ -106,9 +106,9 @@ A file asset is removed from the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notifyalbumremoveasset)
+**Substitutes:** [NOTIFY_ALBUM_REMOVE_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_remove_asset)
 
-<!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET-End-->
+<!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET = 4--><!--Device-NotifyType-NOTIFY_ALBUM_REMOVE_ASSET = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

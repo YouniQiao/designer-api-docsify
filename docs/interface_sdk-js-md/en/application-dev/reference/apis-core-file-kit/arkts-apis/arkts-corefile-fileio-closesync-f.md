@@ -17,7 +17,7 @@ Closes a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeSync](arkts-corefile-file-fs-closesync-f.md#closesync)
+**Substitutes:** [closeSync](arkts-corefile-file-fs-closesync-f.md)
 
 <!--Device-unnamed-declare function closeSync(fd: number): void--><!--Device-unnamed-declare function closeSync(fd: number): void-End-->
 

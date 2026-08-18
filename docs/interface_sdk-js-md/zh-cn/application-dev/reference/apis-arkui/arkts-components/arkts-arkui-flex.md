@@ -30,5 +30,10 @@ Flex(value?: FlexOptions)
 
 ## 汇总
 
-- [FlexOptions](arkts-arkui-flexoptions-i.md)
-- [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [FlexOptions](arkts-arkui-flexoptions-i.md) | 设置Flex子组件的排列对齐方式。 |
+| [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md) | 设置Flex容器的子组件在主轴或交叉轴的间距。 |
+

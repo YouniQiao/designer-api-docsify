@@ -6,7 +6,7 @@ Circular fence information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md#geofence)
+**Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

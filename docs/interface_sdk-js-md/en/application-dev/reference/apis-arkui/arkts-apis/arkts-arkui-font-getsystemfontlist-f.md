@@ -12,7 +12,7 @@ import { font } from '@kit.ArkUI';
 function getSystemFontList(): Array<string>
 ```
 
-Obtains this system font list. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) API to obtain the latest system-supported font list data. > **NOTE：**> > - Since API version 10, you can use the > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated with > the current UI context.
+Obtains this system font list. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data. > **NOTE：**> > - Since API version 10, you can use the > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated with > the current UI context.
 
 **Since:** 10
 

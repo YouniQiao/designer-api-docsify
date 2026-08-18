@@ -1,6 +1,6 @@
 # AutoFillExtensionAbility (System API)
 
-The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability).
+The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
 **Inheritance/Implementation:** AutoFillExtensionAbility extends ExtensionAbility
 
@@ -15,7 +15,6 @@ The AutoFillExtensionAbility module provides APIs for automatically filling in a
 ## Modules to Import
 
 ```TypeScript
-import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 ```
 

@@ -1,4 +1,4 @@
-# InterceptedRecordPage (System API)
+# InterceptedRecordPage(Network Firewall) (System API)
 
 Intercepted record page information.
 
@@ -37,16 +37,16 @@ Page data: all records displayed on this page.
 ## page
 
 ```TypeScript
-page: number
+page: int
 ```
 
 Current page number: indicates the page number of this query.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-page: number--><!--Device-InterceptedRecordPage-page: number-End-->
+<!--Device-InterceptedRecordPage-page: int--><!--Device-InterceptedRecordPage-page: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -55,16 +55,16 @@ Current page number: indicates the page number of this query.
 ## pageSize
 
 ```TypeScript
-pageSize: number
+pageSize: int
 ```
 
 Page size: maximum number of records on a page for this query.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-pageSize: number--><!--Device-InterceptedRecordPage-pageSize: number-End-->
+<!--Device-InterceptedRecordPage-pageSize: int--><!--Device-InterceptedRecordPage-pageSize: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -73,16 +73,16 @@ Page size: maximum number of records on a page for this query.
 ## totalPage
 
 ```TypeScript
-totalPage: number
+totalPage: int
 ```
 
 Total pages: total number of pages.
 
-**Type:** number
+**Type:** int
 
 **Since:** 14
 
-<!--Device-InterceptedRecordPage-totalPage: number--><!--Device-InterceptedRecordPage-totalPage: number-End-->
+<!--Device-InterceptedRecordPage-totalPage: int--><!--Device-InterceptedRecordPage-totalPage: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

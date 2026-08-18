@@ -25,7 +25,7 @@ Get the hash code of an object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 是 | The object that need to get hash code. |
+| obj | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 是 | The object that need to get hash code. |
 
 **返回值：**
 

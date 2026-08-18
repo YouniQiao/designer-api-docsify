@@ -542,7 +542,7 @@ selected(index: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#alphabetindexeroptions).length-1] <br/>若超出索引值范围，则取默认值0。<br/>默认值：0 |
+| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length-1] <br/>若超出索引值范围，则取默认值0。<br/>默认值：0 |
 
 ## selectedBackgroundColor
 

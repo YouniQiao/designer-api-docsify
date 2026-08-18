@@ -21,9 +21,9 @@ open接口flags参数常量，用于指定文件打开模式（如只读、只�
 
 | 名称 | 说明 |
 | --- | --- |
-| [READ_ONLY](arkts-na-openmode-con.md#readonly) | 只读打开。值为 0o0。 |
-| [WRITE_ONLY](arkts-na-openmode-con.md#writeonly) | 只写打开。值为 0o1。 |
-| [READ_WRITE](arkts-na-openmode-con.md#readwrite) | 读写打开。值为 0o2。 |
+| [READ_ONLY](arkts-na-openmode-con.md#read_only) | 只读打开。值为 0o0。 |
+| [WRITE_ONLY](arkts-na-openmode-con.md#write_only) | 只写打开。值为 0o1。 |
+| [READ_WRITE](arkts-na-openmode-con.md#read_write) | 读写打开。值为 0o2。 |
 | [CREATE](arkts-na-openmode-con.md#create) | 若文件不存在，则创建文件。值为 0o100。 |
 | [TRUNC](arkts-na-openmode-con.md#trunc) | 如果文件存在且以只写或读写的方式打开，则将其长度裁剪为零。值为 0o1000 |
 | [APPEND](arkts-na-openmode-con.md#append) | 以追加方式打开，后续写将追加到文件末尾。值为 0o2000。 |

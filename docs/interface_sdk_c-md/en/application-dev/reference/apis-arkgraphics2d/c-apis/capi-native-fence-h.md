@@ -47,7 +47,7 @@ Checks if the fenceFd is valid.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the fenceFd is valid.<br>         Returns false if the fenceFd is a negative integer. |
+| bool | Returns true if the fenceFd is valid.          Returns false if the fenceFd is a negative integer. |
 
 ### OH_NativeFence_Wait()
 
@@ -72,7 +72,7 @@ Waits for a fence signal. The maximum waiting time is determined by the timeout 
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the fence signaled.<br>         Returns false in the following cases:<br>         1.if the fenceFd is a negative integer.<br>         2.no event occurred within the specified timeout period.<br>         3.the underlying poll interface call failed.<br>         4.the timeout value is 0.<br>         5.failed to duplicate the file descriptor. |
+| bool | Returns true if the fence signaled.          Returns false in the following cases:          1.if the fenceFd is a negative integer.          2.no event occurred within the specified timeout period.          3.the underlying poll interface call failed.          4.the timeout value is 0.          5.failed to duplicate the file descriptor. |
 
 ### OH_NativeFence_WaitForever()
 
@@ -96,7 +96,7 @@ Waits forever for a fence signal.The incoming fenceFd needs to be closed by the 
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the fence signaled.<br>         Returns false in the following cases:<br>         1.if the fenceFd is a negative integer.<br>         2.no incidents have occurred, permanent waiting.<br>         3.failed to duplicate the file descriptor. |
+| bool | Returns true if the fence signaled.          Returns false in the following cases:          1.if the fenceFd is a negative integer.          2.no incidents have occurred, permanent waiting.          3.failed to duplicate the file descriptor. |
 
 ### OH_NativeFence_Close()
 

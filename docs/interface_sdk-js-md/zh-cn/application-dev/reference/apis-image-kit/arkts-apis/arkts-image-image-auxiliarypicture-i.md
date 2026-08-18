@@ -1,6 +1,6 @@
 # AuxiliaryPicture
 
-AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#auxiliarypicturetype) 。 在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture)或Picture的 [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)创建一个AuxiliaryPicture实例。 由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法 均执行完成，且后续不再使用该对象。 > **说明：** > > - 本Interface首批接口从API version 13开始支持。
+AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) 。 在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md)或Picture的 [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)创建一个AuxiliaryPicture实例。 由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法 均执行完成，且后续不再使用该对象。 > **说明：** > > - 本Interface首批接口从API version 13开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo

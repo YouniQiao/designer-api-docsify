@@ -1,6 +1,6 @@
 # AvoidAreaType
 
-Enumerates the types of areas to avoid for window content. When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding [AvoidArea](arkts-arkui-window-avoidarea-i.md#avoidarea) specified by **AvoidAreaType**.
+Enumerates the types of areas to avoid for window content. When adapting window content for an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding [AvoidArea](arkts-arkui-window-avoidarea-i.md) specified by **AvoidAreaType**.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the types of areas to avoid for window content. When adapting window 
 TYPE_SYSTEM = 0
 ```
 
-Default area of the system. &lt;!--RP11--&gt;It contains the status bar and three-button navigation bar.&lt;!--RP11End--&gt;
+Default area of the system. <!--RP11-->It contains the status bar and three-button navigation bar.<!--RP11End-->
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ Fixed soft keyboard area.
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-Bottom navigation bar. &lt;!--RP12--&gt;OpenHarmony devices do not support this capability.&lt;!--RP12End--&gt;
+Bottom navigation bar. <!--RP12-->OpenHarmony devices do not support this capability.<!--RP12End-->
 
 **Since:** 23
 

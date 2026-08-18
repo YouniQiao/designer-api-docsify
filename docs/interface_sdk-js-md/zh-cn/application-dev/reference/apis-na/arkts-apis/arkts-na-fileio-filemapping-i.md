@@ -1,6 +1,6 @@
 # FileMapping
 
-文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-na-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-na-fileio-mmapsync-f.md#mmapsync)构建一个FileMapping实例。
+文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-na-fileio-mmap-f.md)或方法[mmapSync()](arkts-na-fileio-mmapsync-f.md)构建一个FileMapping实例。
 
 **起始版本：** 26.0.0
 

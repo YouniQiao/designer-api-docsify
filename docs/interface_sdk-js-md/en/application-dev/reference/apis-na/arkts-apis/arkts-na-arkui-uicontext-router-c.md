@@ -279,7 +279,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
 
 **Error codes:**
 
@@ -353,7 +353,7 @@ Navigates to a specified page in the application based on the page URL and param
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Options. |
 | mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushNamedRoute. |
 
 **Error codes:**
 
@@ -427,7 +427,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pushUrl. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushUrl. |
 
 **Error codes:**
 
@@ -501,7 +501,7 @@ Navigates to a specified page in the application based on the page URL and param
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Options. |
 | mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pushUrl. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of pushUrl. |
 
 **Error codes:**
 
@@ -575,7 +575,7 @@ Replaces the current page with another one in the application. The current page 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
 
 **Error codes:**
 
@@ -647,7 +647,7 @@ Replaces the current page with another one in the application. The current page 
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Options. |
 | mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceNamedRoute. |
 
 **Error codes:**
 
@@ -719,7 +719,7 @@ Replaces the current page with another one in the application. The current page 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
 
 **Error codes:**
 
@@ -791,7 +791,7 @@ Replaces the current page with another one in the application. The current page 
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Options. |
 | mode | router.RouterMode | Yes | RouterMode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of replaceUrl. |
 
 **Error codes:**
 

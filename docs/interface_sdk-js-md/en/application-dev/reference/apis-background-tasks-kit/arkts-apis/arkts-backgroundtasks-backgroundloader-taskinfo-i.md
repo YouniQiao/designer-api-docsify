@@ -12,7 +12,6 @@ Represents the background load task information, which is used to register task.
 
 ```TypeScript
 import { backgroundLoader } from '@kit.BackgroundTasksKit';
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

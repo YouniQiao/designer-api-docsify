@@ -1,6 +1,6 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md#reactivebuildernode) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
+ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
 
 **Inheritance/Implementation:** ReactiveComponentContent extends Content
 
@@ -357,7 +357,7 @@ struct Index {
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md#componentoptions) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE：**> > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
+Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE：**> > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
 
 **Since:** 22
 
@@ -955,7 +955,7 @@ For details, see the example in [recycle](#recycle).
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#configuration).
+Transfers a system environment change event and triggers full update of a node. This event can be used to notify the object of the update. Whether the system environment used by the object is updated depends on the current system environment change of the application. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
 
 **Since:** 22
 

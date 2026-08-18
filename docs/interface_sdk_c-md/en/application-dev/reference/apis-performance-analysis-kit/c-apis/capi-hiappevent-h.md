@@ -170,7 +170,7 @@ Passes event content to the caller. Note: The lifecycle of the object pointed by
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* domain | Domain of the received application event. |
+| const char\* domain | Domain of the received application event. |
 | [const struct HiAppEvent_AppEventGroup](capi-hiappevent-hiappevent-appeventgroup.md)\* appEventGroups | Event group array. |
 | uint32_t groupLen | Length of the event group array. |
 
@@ -190,7 +190,7 @@ Invoked if the event received by the watcher meets the conditions specified by[O
 
 | Parameter | Description |
 | -- | -- |
-| (int row | Number of events newly received by the watcher. |
+| int row | Number of events newly received by the watcher. |
 | int size | Total size of events newly received by the watcher, in bytes. The size of a single event is the lengthof the JSON string converted from the event. |
 
 ### OH_HiAppEvent_OnTake()
@@ -209,7 +209,7 @@ Passes the events received by the watcher to the caller when [OH_HiAppEvent_Take
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* const \*events | The event JSON string array. |
+| const char\* const \*events | The event JSON string array. |
 | uint32_t eventLen | Size of the event array. |
 
 ### OH_HiAppEvent_CreateParamList()
@@ -697,7 +697,7 @@ Logs application events whose parameters are of the list type. Before applicatio
 
 | Type | Description |
 | -- | -- |
-| int | If the event parameters are successfully verified, 0 is returned and the event is written into the event<br>     file.<br>     If an event contains invalid parameters, a positive value is returned. The event is written into the event file<br>     after the invalid parameters are discarded.<br>     If the event parameter fails to be verified, a negative value is returned and the event is not written to the<br>     event file.<br>     <br>0: Parameter verification successful.<br>     <br>-1: Invalid event name.<br>     <br>-4: Invalid event domain name.<br>     <br>-99: Application event logging disabled.<br>     <br>1: Invalid event parameter name.<br>     <br>4: Invalid event parameter string length.<br>     <br>5: Invalid number of event parameters.<br>     <br>6: Invalid event parameter array length.<br>     <br>8: Duplicate event parameter name. |
+| int | If the event parameters are successfully verified, 0 is returned and the event is written into the event      file.      If an event contains invalid parameters, a positive value is returned. The event is written into the event file      after the invalid parameters are discarded.      If the event parameter fails to be verified, a negative value is returned and the event is not written to the      event file.      <br>0: Parameter verification successful.      <br>-1: Invalid event name.      <br>-4: Invalid event domain name.      <br>-99: Application event logging disabled.      <br>1: Invalid event parameter name.      <br>4: Invalid event parameter string length.      <br>5: Invalid number of event parameters.      <br>6: Invalid event parameter array length.      <br>8: Duplicate event parameter name. |
 
 ### OH_HiAppEvent_Configure()
 
@@ -722,7 +722,7 @@ Configures the application event logging function. This function is used to conf
 
 | Type | Description |
 | -- | -- |
-| bool | Configuration result. The value true indicates that the configuration is successful, and the<br>     value false indicates the opposite. |
+| bool | Configuration result. The value true indicates that the configuration is successful, and the      value false indicates the opposite. |
 
 ### OH_HiAppEvent_CreateWatcher()
 
@@ -746,7 +746,7 @@ Creates a watcher for application events. Note: If a created watcher is no longe
 
 | Type | Description |
 | -- | -- |
-| [HiAppEvent_Watcher*](capi-hiappevent-hiappevent-watcher.md) | Pointer to the new watcher if the API is called successfully; NULL if the name parameter is<br>     invalid. |
+| [HiAppEvent_Watcher*](capi-hiappevent-hiappevent-watcher.md) | Pointer to the new watcher if the API is called successfully; NULL if the name parameter is      invalid. |
 
 ### OH_HiAppEvent_DestroyWatcher()
 
@@ -819,7 +819,7 @@ Sets the type of events to listen for. This function can be called repeatedly. Y
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the API is called successfully; -1 if the names parameter is invalid; -4 if the <br>     domain parameter is invalid; -5 if the pointer to an input parameter is null. |
+| int | 0 if the API is called successfully; -1 if the names parameter is invalid; -4 if the       domain parameter is invalid; -5 if the pointer to an input parameter is null. |
 
 ### OH_HiAppEvent_SetWatcherOnTrigger()
 
@@ -895,7 +895,7 @@ Obtains the event saved by the watcher.
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the API is called successfully; -5 if the pointer to an input parameter is null; -6 if<br>     [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) has not been called to add a watcher. |
+| int | 0 if the API is called successfully; -5 if the pointer to an input parameter is null; -6 if      [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) has not been called to add a watcher. |
 
 ### OH_HiAppEvent_AddWatcher()
 
@@ -943,7 +943,7 @@ Removes a watcher. Once a watcher is removed, it stops listening for system mess
 
 | Type | Description |
 | -- | -- |
-| int | 0 if the API is called successfully; -5 if the pointer to an input parameter is null; -6 if<br>     [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) has not been called to add a watcher. |
+| int | 0 if the API is called successfully; -5 if the pointer to an input parameter is null; -6 if      [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher) has not been called to add a watcher. |
 
 ### OH_HiAppEvent_ClearData()
 
@@ -979,7 +979,7 @@ Creates a processor for application events. Note: If a created processor is no l
 
 | Type | Description |
 | -- | -- |
-| [HiAppEvent_Processor*](capi-hiappevent-hiappevent-processor.md) | Pointer to the new processor if the API is called successfully; NULL if the name parameter is<br>     invalid. |
+| [HiAppEvent_Processor*](capi-hiappevent-hiappevent-processor.md) | Pointer to the new processor if the API is called successfully; NULL if the name parameter is      invalid. |
 
 ### OH_HiAppEvent_SetReportRoute()
 
@@ -1005,7 +1005,7 @@ Sets the report route for the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetReportPolicy()
 
@@ -1033,7 +1033,7 @@ Sets the report policy for the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetReportEvent()
 
@@ -1060,7 +1060,7 @@ Sets the report event for the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetCustomConfig()
 
@@ -1086,7 +1086,7 @@ Sets the custom extension parameters of the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetConfigId()
 
@@ -1111,7 +1111,7 @@ Sets the configuration ID of the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetConfigName()
 
@@ -1136,7 +1136,7 @@ Sets the configuration name of the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetReportUserId()
 
@@ -1162,7 +1162,7 @@ Sets the report user ID of the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetReportUserProperty()
 
@@ -1188,7 +1188,7 @@ Sets the report user property of the processor.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode) Invalid user ID.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE_LENGTH](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value length.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_AddProcessor()
 
@@ -1212,7 +1212,7 @@ Adds a processor. You can add a processor to migrate event data to the cloud. Yo
 
 | Type | Description |
 | -- | -- |
-| int64_t | <ul><br>         <li>Unique ID if set is successful. The value is greater than 0.</li><br>         <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode): The processor parameter is empty.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode): Invalid parameter value.</li><br>         <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode): Failed to find or register the data processor name.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode): Invalid user ID.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int64_t | <ul>          <li>Unique ID if set is successful. The value is greater than 0.</li>          <li>[HIAPPEVENT_PROCESSOR_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode): The processor parameter is empty.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode): Invalid parameter value.</li>          <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode): Failed to find or register the data processor name.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode): Invalid user ID.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_DestroyProcessor()
 
@@ -1254,7 +1254,7 @@ Removes a processor. Once a processor is removed, it stops reporting events. Not
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode): Operation successful.</li><br>         <li>[HIAPPEVENT_PROCESSOR_NOT_FOUND](capi-hiappevent-h.md#hiappevent_errorcode): Failed to find the processor.</li><br>         <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode): Operation failed.</li><br>         <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode): Invalid user ID.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode): Operation successful.</li>          <li>[HIAPPEVENT_PROCESSOR_NOT_FOUND](capi-hiappevent-h.md#hiappevent_errorcode): Failed to find the processor.</li>          <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode): Operation failed.</li>          <li>[HIAPPEVENT_INVALID_UID](capi-hiappevent-h.md#hiappevent_errorcode): Invalid user ID.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_CreateConfig()
 
@@ -1316,7 +1316,7 @@ Sets the items in the configuration object.
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_EVENT_CONFIG_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The input pointer to the configuration object is null.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid configuration item.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_EVENT_CONFIG_IS_NULL](capi-hiappevent-h.md#hiappevent_errorcode) The input pointer to the configuration object is null.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid configuration item.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_SetEventConfig()
 
@@ -1341,7 +1341,7 @@ Sets event configuration parameters.Configuration items vary depending on events
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation successful.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 ### OH_HiAppEvent_ReportFrameworkMemAnomaly()
 
@@ -1367,6 +1367,6 @@ Reports information about abnormal memory usage of the application framework.<br
 
 | Type | Description |
 | -- | -- |
-| int | <ul><br>         <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation succeeded.</li><br>         <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li><br>         <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) System/application event write failed, or timestamp retrieval<br>             failed.</li><br>         <li>[HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED](capi-hiappevent-h.md#hiappevent_errorcode) The reporting frequency exceeds the limit.</li><br>         </ul><br>     For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
+| int | <ul>          <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) Operation succeeded.</li>          <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) Invalid parameter value.</li>          <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) System/application event write failed, or timestamp retrieval              failed.</li>          <li>[HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED](capi-hiappevent-h.md#hiappevent_errorcode) The reporting frequency exceeds the limit.</li>          </ul>      For details, see [HiAppEvent_ErrorCode](capi-hiappevent-h.md#hiappevent_errorcode). |
 
 

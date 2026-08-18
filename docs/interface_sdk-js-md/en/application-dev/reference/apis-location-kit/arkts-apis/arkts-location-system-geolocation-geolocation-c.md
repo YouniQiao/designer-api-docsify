@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md#ohosgeolocationmanager)
+**Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
 
 <!--Device-unnamed-export default class Geolocation--><!--Device-unnamed-export default class Geolocation-End-->
 
@@ -28,7 +28,7 @@ Obtains the geographic location.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

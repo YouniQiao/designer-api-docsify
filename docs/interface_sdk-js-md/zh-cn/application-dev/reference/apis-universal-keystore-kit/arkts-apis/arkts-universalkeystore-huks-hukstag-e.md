@@ -620,7 +620,7 @@ HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303
 HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304
 ```
 
-表示用户认证类型。从[HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md#huksuserauthtype)中选择，需要与安全访问控制类型同时设置。支持同时指定两种用户认证类型，如：安全访问控制类型指定为 HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL时，密钥访问认证类型可以指定以下三种： HUKS_USER_AUTH_TYPE_FACE 、 HUKS_USER_AUTH_TYPE_FINGERPRINT、HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT
+表示用户认证类型。从[HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md)中选择，需要与安全访问控制类型同时设置。支持同时指定两种用户认证类型，如：安全访问控制类型指定为 HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL时，密钥访问认证类型可以指定以下三种： HUKS_USER_AUTH_TYPE_FACE 、 HUKS_USER_AUTH_TYPE_FINGERPRINT、HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT
 
 **起始版本：** 8
 
@@ -668,7 +668,7 @@ HUKS_TAG_AUTH_TOKEN = HuksTagType.HUKS_TAG_TYPE_BYTES | 306
 HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307
 ```
 
-表示安全访问控制类型。从[HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md#huksauthaccesstype)中选择，需要和用户认证类型同时设置。
+表示安全访问控制类型。从[HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md)中选择，需要和用户认证类型同时设置。
 
 **起始版本：** 9
 
@@ -700,7 +700,7 @@ HUKS_TAG_KEY_SECURE_SIGN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 308
 HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 ```
 
-表示密钥使用时生成的challenge类型。从[HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md#hukschallengetype)中选择。
+表示密钥使用时生成的challenge类型。从[HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md)中选择。
 
 **起始版本：** 9
 
@@ -716,7 +716,7 @@ HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310
 ```
 
-表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据。从[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md#hukschallengeposition)中 选择。
+表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据。从[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md)中 选择。
 
 **起始版本：** 9
 
@@ -748,7 +748,7 @@ HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311
 HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
 ```
 
-表示密钥存储安全等级的tag。从[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel)中选择。
+表示密钥存储安全等级的tag。从[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)中选择。
 
 **起始版本：** 11
 
@@ -764,7 +764,7 @@ HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
 HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319
 ```
 
-表示用户认证模式。从[HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md#huksuserauthmode)中选择。
+表示用户认证模式。从[HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md)中选择。
 
 **起始版本：** 12
 

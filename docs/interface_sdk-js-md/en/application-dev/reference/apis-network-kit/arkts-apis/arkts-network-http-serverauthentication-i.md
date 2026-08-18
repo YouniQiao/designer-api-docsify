@@ -1,6 +1,6 @@
 # ServerAuthentication
 
-HTTP server authentication.
+Defines HTTP server identity verification information.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 authenticationType?: AuthenticationType
 ```
 
-Authentication type of server. If not set, negotiate with the server.
+Server identity verification type. If the type is not set, negotiation with the server is required.
 
 **Type:** [AuthenticationType](arkts-network-http-authenticationtype-t.md)
 
@@ -38,7 +38,7 @@ Authentication type of server. If not set, negotiate with the server.
 credential: Credential
 ```
 
-Credential of server.
+Server credential. The default value is **undefined**.
 
 **Type:** Credential
 

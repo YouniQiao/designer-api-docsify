@@ -36,7 +36,7 @@ User permission on the DLP file, for example, read-only.
 flags: number
 ```
 
-Operations that can be performed on the DLP file. The value is determined by a combination of different [ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md#actionflagtype).
+Operations that can be performed on the DLP file. The value is determined by a combination of different [ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md).
 
 **Type:** number
 

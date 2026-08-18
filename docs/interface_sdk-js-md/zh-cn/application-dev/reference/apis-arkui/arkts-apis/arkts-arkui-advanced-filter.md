@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## 汇总

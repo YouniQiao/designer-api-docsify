@@ -42,11 +42,11 @@ Configuration for asset compatibility capabilities.
 
 **Type:** [AssetCompatibleCapability](arkts-medialibrary-photoaccesshelper-assetcompatiblecapability-i.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-assetCompatibleCapability?: AssetCompatibleCapability--><!--Device-BaseSelectOptions-assetCompatibleCapability?: AssetCompatibleCapability-End-->
 
@@ -62,11 +62,11 @@ Media asset filter, with a maximum length of 50 items. If the limit is exceeded,
 
 **Type:** Array&lt;[OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-assetFilter?: Array<OperationItem>--><!--Device-BaseSelectOptions-assetFilter?: Array<OperationItem>-End-->
 
@@ -82,11 +82,11 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 
 **Type:** Array&lt;[AutoPlayScene](arkts-medialibrary-photoaccesshelper-autoplayscene-c.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-autoPlayScenes?: Array<AutoPlayScene>--><!--Device-BaseSelectOptions-autoPlayScenes?: Array<AutoPlayScene>-End-->
 
@@ -98,13 +98,13 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 combinedMediaTypeFilter?: Array<string>
 ```
 
-A string array of filter criteria, supporting combinations of various types. The string format is as follows: **photoType | photoSubType1,photoSubType2, ... | mimeType1,mimeType2, ...** - The first part specifies a single **photoType**, which is fixed at **image** or **video**. - The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore). - The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md#mimetypefilter). Filters are combined using intersection logic. The NOT logic is supported. To exclude types, use parentheses. Each string can have only one set. If the filter string does not match the specifications, the result is empty. Only the first three array elements are used; **MIMETypes** and **mimeTypeFilter** are ignored.
+A string array of filter criteria, supporting combinations of various types. The string format is as follows: **photoType | photoSubType1,photoSubType2, ... | mimeType1,mimeType2, ...** - The first part specifies a single **photoType**, which is fixed at **image** or **video**. - The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore). - The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md). Filters are combined using intersection logic. The NOT logic is supported. To exclude types, use parentheses. Each string can have only one set. If the filter string does not match the specifications, the result is empty. Only the first three array elements are used; **MIMETypes** and **mimeTypeFilter** are ignored.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-combinedMediaTypeFilter?: Array<string>--><!--Device-BaseSelectOptions-combinedMediaTypeFilter?: Array<string>-End-->
 
@@ -138,11 +138,11 @@ Global effect of the moving photo. Currently, only **MOVING_PHOTO_ENABLED** and 
 
 **Type:** [MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-globalMovingPhotoState?: MovingPhotoBadgeStateType--><!--Device-BaseSelectOptions-globalMovingPhotoState?: MovingPhotoBadgeStateType-End-->
 
@@ -158,11 +158,11 @@ Pinch mode of the grid in the picker.
 
 **Type:** [GridPinchMode](arkts-medialibrary-photoaccesshelper-gridpinchmode-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-gridPinchMode?: GridPinchMode--><!--Device-BaseSelectOptions-gridPinchMode?: GridPinchMode-End-->
 
@@ -174,13 +174,13 @@ Pinch mode of the grid in the picker.
 isMovingPhotoBadgeShown?: boolean
 ```
 
-Whether the moving photo badge is displayed in the photo browser page. **true** to display the badge, **false** to hide it. The default is **false**. If this parameter is set to **true**, [Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoselectresult) returns the **movingPhotoBadgeStates** array. The default status of a moving photo is [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md#movingphotobadgestatetype). Note: Use both **isMovingPhotoBadgeShown** and **MovingPhotoBadgeStateType** to determine whether a photo is a moving photo.
+Whether the moving photo badge is displayed in the photo browser page. **true** to display the badge, **false** to hide it. The default is **false**. If this parameter is set to **true**, [Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md) returns the **movingPhotoBadgeStates** array. The default status of a moving photo is [MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md). Note: Use both **isMovingPhotoBadgeShown** and **MovingPhotoBadgeStateType** to determine whether a photo is a moving photo.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-isMovingPhotoBadgeShown?: boolean--><!--Device-BaseSelectOptions-isMovingPhotoBadgeShown?: boolean-End-->
 
@@ -286,9 +286,9 @@ An array used to filter media files by type and size. Only the first three array
 
 **Type:** Array&lt;[PhotoViewMimeTypeFileSizeFilter](arkts-medialibrary-photoaccesshelper-photoviewmimetypefilesizefilter-c.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>--><!--Device-BaseSelectOptions-photoViewMimeTypeFileSizeFilters?: Array<PhotoViewMimeTypeFileSizeFilter>-End-->
 
@@ -304,11 +304,11 @@ Preferred compatibility mode.
 
 **Type:** [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-preferredCompatibleMode?: PreferredCompatibleMode--><!--Device-BaseSelectOptions-preferredCompatibleMode?: PreferredCompatibleMode-End-->
 
@@ -360,11 +360,11 @@ Whether to display the date group information when the scroll bar is dragged. **
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BaseSelectOptions-showDateOnScrollbar?: boolean--><!--Device-BaseSelectOptions-showDateOnScrollbar?: boolean-End-->
 

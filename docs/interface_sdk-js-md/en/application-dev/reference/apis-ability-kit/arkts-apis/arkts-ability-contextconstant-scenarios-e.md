@@ -14,7 +14,7 @@ Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiabili
 SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 ```
 
-&lt;!--RP1--&gt;A scenario where the system API missionManager.moveMissionToFront is called to move the UIAbility to the foreground.&lt;!--RP1End--&gt;
+<!--RP1-->A scenario where the system API missionManager.moveMissionToFront is called to move the UIAbility to the foreground.<!--RP1End-->
 
 **Since:** 23
 

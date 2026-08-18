@@ -6,7 +6,7 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_navDestinationSwitch
+## off_navDestinationSwitch('navDestinationSwitch')
 
 ```TypeScript
 export function off(
@@ -34,10 +34,10 @@ Unsubscribes from **Navigation** component page switching events.
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
-## off_navDestinationSwitch
+## off_navDestinationSwitch('navDestinationSwitch')
 
 ```TypeScript
 export function off(
@@ -48,7 +48,7 @@ export function off(
   ): void
 ```
 
-Unsubscribes from **Navigation** component page switching events. Compared with [uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate), this API supports the **observerOptions** parameter, which enables you to configure observation options.
+Unsubscribes from **Navigation** component page switching events. Compared with [uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#off_navdestinationupdatenavdestinationupdate), this API supports the **observerOptions** parameter, which enables you to configure observation options.
 
 **Since:** 12
 
@@ -66,6 +66,6 @@ Unsubscribes from **Navigation** component page switching events. Compared with 
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
-| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Observer configuration options. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
+| observerOptions | [NavDestinationSwitchObserverOptions](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Observer configuration options. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | No | Target listener to unregister. |
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [RequestResult](arkts-ipc-rpc-requestresult-i.md#requestresult)
+**替代接口：** [RequestResult](arkts-ipc-rpc-requestresult-i.md)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## code

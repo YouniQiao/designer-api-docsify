@@ -6,7 +6,7 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#accelerometerresponse)
+**Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

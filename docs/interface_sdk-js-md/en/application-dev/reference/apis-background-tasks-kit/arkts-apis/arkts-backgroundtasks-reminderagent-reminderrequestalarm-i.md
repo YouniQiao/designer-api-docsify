@@ -2,13 +2,13 @@
 
 Defines a reminder for an alarm.
 
-**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#reminderrequestalarm)
+**Substitutes:** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md)
 
 <!--Device-reminderAgent-interface ReminderRequestAlarm--><!--Device-reminderAgent-interface ReminderRequestAlarm-End-->
 
@@ -18,7 +18,6 @@ Defines a reminder for an alarm.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

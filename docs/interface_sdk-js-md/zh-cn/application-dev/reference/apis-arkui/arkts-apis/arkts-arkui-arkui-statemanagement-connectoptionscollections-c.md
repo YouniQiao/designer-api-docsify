@@ -1,6 +1,6 @@
 # ConnectOptionsCollections
 
-globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md#connectoptions)。当开发者需要持久化容器类型数据（如`Array&lt;S&gt;`）时，需要使用 `ConnectOptionsCollections`入参。 如下展示`StorageDefaultCreator&lt;T&gt;`和`StorageDefaultCreator&lt;S&gt;`示例：
+globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md)。当开发者需要持久化容器类型数据（如`Array&lt;S&gt;`）时，需要使用 `ConnectOptionsCollections`入参。 如下展示`StorageDefaultCreator&lt;T&gt;`和`StorageDefaultCreator&lt;S&gt;`示例：
 
 **继承/实现关系：** ConnectOptionsCollections extends ConnectOptions<T>
 
@@ -13,6 +13,7 @@ globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOpt
 ## 导入模块
 
 ```TypeScript
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## defaultCreator

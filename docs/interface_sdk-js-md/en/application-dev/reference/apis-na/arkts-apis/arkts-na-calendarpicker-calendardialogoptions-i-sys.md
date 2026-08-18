@@ -2,7 +2,7 @@
 
 Defines the DatePickerDialogOptions for Calendar Picker Dialog.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-na-calendarpicker-calendaroptions-i.md#calendaroptions)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-na-calendarpicker-calendaroptions-i.md)
 
 **Since:** 23
 

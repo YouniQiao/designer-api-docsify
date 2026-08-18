@@ -12,7 +12,6 @@ The **formInfo** module provides types and enums related to the widget informati
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -28,7 +27,7 @@ import { formInfo } from '@kit.FormKit';
 | [Rect](arkts-form-forminfo-rect-i.md) | Indicates rectangle, unit is vp. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -62,7 +61,7 @@ import { formInfo } from '@kit.FormKit';
 | [VisibilityType](arkts-form-forminfo-visibilitytype-e.md) | The visibility of a form. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -75,7 +74,7 @@ import { formInfo } from '@kit.FormKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

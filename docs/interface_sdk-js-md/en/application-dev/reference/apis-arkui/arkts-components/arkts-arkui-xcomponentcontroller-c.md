@@ -157,7 +157,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods, see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#canvas).
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods, see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md).
 
 **Since:** 20
 

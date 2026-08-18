@@ -14,7 +14,6 @@ Disk information.
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## diskId

@@ -12,7 +12,6 @@ Implements a path operation iterator. You can read path operation instructions b
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

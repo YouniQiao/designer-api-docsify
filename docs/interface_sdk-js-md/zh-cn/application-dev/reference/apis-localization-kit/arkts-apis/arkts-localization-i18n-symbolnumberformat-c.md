@@ -2,7 +2,7 @@
 
 提供自定义数字符号的能力。继承自 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)， 支持 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的方法。
 
-**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](../../apis-na/arkts-apis/arkts-na-intl-numberformat-c.md#numberformat)
+**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

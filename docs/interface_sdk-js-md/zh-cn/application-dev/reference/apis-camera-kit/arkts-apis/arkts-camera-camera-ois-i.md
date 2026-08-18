@@ -2,7 +2,7 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**继承/实现关系：** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#oisquery)
+**继承/实现关系：** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md)
 
 **起始版本：** 24
 
@@ -13,6 +13,8 @@ OIS (Optical Image Stabilization) interface.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## setOISMode

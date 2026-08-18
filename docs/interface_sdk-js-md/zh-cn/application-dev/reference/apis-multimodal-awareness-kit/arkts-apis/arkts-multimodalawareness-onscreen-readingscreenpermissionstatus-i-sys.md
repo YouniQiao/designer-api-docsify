@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## readingCode
@@ -21,7 +22,7 @@
 readingCode?: int
 ```
 
-如果屏幕无法读取，将返回相应的状态码，参考[CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#collectstrategy系统接口)。
+如果屏幕无法读取，将返回相应的状态码，参考[CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md)。
 
 **类型：** int
 

@@ -1,8 +1,8 @@
 # Folder
 
-Represents the folder data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#file) and is used to describe a folder.
+Represents the folder data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a folder.
 
-**Inheritance/Implementation:** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
+**Inheritance/Implementation:** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ Represents the folder data. It is a child class of [File](arkts-arkdata-unifiedd
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

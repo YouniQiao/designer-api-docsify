@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 ```
 
-Obtains the port states of system network. To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO} permission.
+Obtains information about all TCP and UDP ports currently listened by the system, and the PID and UID of the processes that listen for the ports. Both IPv4 and IPv6 addresses are supported. > **NOTE：**> > This API is used to obtain information about the TCP and UDP ports currently listened by the system. The detailed > fields are as follows: > > TCP port fields: local address, local port, remote address, remote port, TCP connection status, process PID, and > process UID > > UDP port fields: local address, local port, process PID, and process UID
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Required permissions:** ohos.permission.GET_IP_MAC_INFO
 
@@ -28,7 +28,7 @@ Obtains the port states of system network. To invoke this method, you must have 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; | Returns the port status of system network. |
+| Promise&lt;[NetPortStatesInfo](arkts-network-connection-netportstatesinfo-i.md)&gt; | Promise used to return the TCP and UDP port information. |
 
 **Error codes:**
 

@@ -28,5 +28,15 @@ PatternLock(controller?: PatternLockController)
 
 ## 汇总
 
-- [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)
-- [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md) | 圆环样式的参数说明。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | 图案密码状态。 |
+

@@ -25,7 +25,7 @@ Obtains the quaternion from a rotation vector. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;double&gt; | Yes | Rotation vector. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the quaternion. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the quaternion. |
 
 **Error codes:**
 

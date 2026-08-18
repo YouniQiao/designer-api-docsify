@@ -1,8 +1,8 @@
 # Video
 
-Represents video data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#file) and is used to describe a video file.
+Represents video data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a video file.
 
-**Inheritance/Implementation:** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
+**Inheritance/Implementation:** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ Represents video data. It is a child class of [File](arkts-arkdata-unifieddatach
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

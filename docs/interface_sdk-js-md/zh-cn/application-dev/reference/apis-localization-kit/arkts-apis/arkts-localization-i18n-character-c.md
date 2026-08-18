@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Unicode](arkts-localization-i18n-unicode-c.md#unicode)
+**替代接口：** [Unicode](arkts-localization-i18n-unicode-c.md)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getType

@@ -10,16 +10,16 @@ import { mdns } from '@kit.NetworkKit';
 
 ```TypeScript
 function addLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void
+                           callback: AsyncCallback<LocalServiceInfo>): void
 ```
 
-Adds an mDNS service.
+Adds an MDNS service. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
+<!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,                           callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,                           callback: AsyncCallback<LocalServiceInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -27,9 +27,9 @@ Adds an mDNS service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
-| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#localserviceinfo) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback of addLocalService. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | MDNS service information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **data** is the MDNS service information. |
 
 **Error codes:**
 
@@ -77,9 +77,9 @@ mdns.addLocalService(context, localServiceInfo, (error:BusinessError, data:mdns.
 function addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>
 ```
 
-Adds an mDNS service.
+Adds an MDNS service. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,14 +91,14 @@ Adds an mDNS service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
-| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | Information about the mDNS service. [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md#localserviceinfo) |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| serviceInfo | [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md) | Yes | MDNS service information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

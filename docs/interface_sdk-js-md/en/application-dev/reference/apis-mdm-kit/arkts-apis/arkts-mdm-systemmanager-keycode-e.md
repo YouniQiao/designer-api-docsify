@@ -1,6 +1,6 @@
 # KeyCode
 
-Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies), [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies), [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies), and [onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) APIs map key codes to the corresponding physical keys on the device.
+Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md), [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md), [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md), and [onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) APIs map key codes to the corresponding physical keys on the device.
 
 **Since:** 23
 

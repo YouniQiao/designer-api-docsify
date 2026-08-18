@@ -38,7 +38,7 @@ Sets automatic refresh for the ColorMetrics object. When enabled, the color valu
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | Returns the ColorMetrics object for chaining. |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Returns the ColorMetrics object for chaining. |
 
 ## blendColor
 
@@ -62,13 +62,13 @@ blend color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| overlayColor | [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | Yes | overlay color |
+| overlayColor | [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes | overlay color |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ Instantiate the ColorMetrics class using colorSpace and rgba. Only some properti
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## numeric
 
@@ -138,7 +138,7 @@ Instantiate the ColorMetrics class using color number
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## resourceColor
 
@@ -168,7 +168,7 @@ Instantiate the ColorMetrics class using ResourceColor
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 **Error codes:**
 
@@ -208,7 +208,7 @@ Instantiate the ColorMetrics class using color rgb
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## BLACK
 

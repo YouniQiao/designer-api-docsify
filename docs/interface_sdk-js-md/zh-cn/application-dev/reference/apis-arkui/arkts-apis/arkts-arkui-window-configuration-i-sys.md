@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## defaultDensityEnabled
@@ -37,7 +40,7 @@ defaultDensityEnabled?: boolean
 zIndex?: int
 ```
 
-当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md#windowtype)为TYPE_DYNAMIC时生效。
+当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md)为TYPE_DYNAMIC时生效。
 
 **类型：** int
 

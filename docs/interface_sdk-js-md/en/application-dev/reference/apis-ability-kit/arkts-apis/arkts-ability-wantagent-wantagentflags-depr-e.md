@@ -6,7 +6,7 @@ Enumerates flags for using a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md#wantagentflags)
+**Substitutes:** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
 
 <!--Device-wantAgent-export enum WantAgentFlags--><!--Device-wantAgent-export enum WantAgentFlags-End-->
 
@@ -24,7 +24,7 @@ Indicates that the WantAgent can be used only once. This flag is valid only when
 
 **Deprecated since:** 9
 
-**Substitutes:** [ONE_TIME_FLAG](arkts-ability-wantagent-wantagentflags-e.md#onetimeflag)
+**Substitutes:** [ONE_TIME_FLAG](arkts-ability-wantagent-wantagentflags-e.md#one_time_flag)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +44,7 @@ Indicates that null is returned if the WantAgent does not exist. This flag is va
 
 **Deprecated since:** 9
 
-**Substitutes:** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#nobuildflag)
+**Substitutes:** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#no_build_flag)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +64,7 @@ Indicates that the existing WantAgent should be canceled before a new object is 
 
 **Deprecated since:** 9
 
-**Substitutes:** [CANCEL_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#cancelpresentflag)
+**Substitutes:** [CANCEL_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#cancel_present_flag)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,7 +84,7 @@ Indicates that the system only replaces the extra data of the existing WantAgent
 
 **Deprecated since:** 9
 
-**Substitutes:** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#updatepresentflag)
+**Substitutes:** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#update_present_flag)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,7 +104,7 @@ Indicates that the created WantAgent should be immutable.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CONSTANT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#constantflag)
+**Substitutes:** [CONSTANT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#constant_flag)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,7 +124,7 @@ Indicates that the current value of element can be replaced when the WantAgent i
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#replaceelement)
+**Substitutes:** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#replace_element)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,7 +144,7 @@ Indicates that the current value of action can be replaced when the WantAgent is
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ACTION](arkts-ability-wantagent-wantagentflags-e.md#replaceaction)
+**Substitutes:** [REPLACE_ACTION](arkts-ability-wantagent-wantagentflags-e.md#replace_action)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,7 +164,7 @@ Indicates that the current value of uri can be replaced when the WantAgent is tr
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#replaceuri)
+**Substitutes:** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#replace_uri)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -184,7 +184,7 @@ Indicates that the current value of entities can be replaced when the WantAgent 
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#replaceentities)
+**Substitutes:** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#replace_entities)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,7 +204,7 @@ Indicates that the current value of packageName can be replaced when the WantAge
 
 **Deprecated since:** 9
 
-**Substitutes:** [REPLACE_BUNDLE](arkts-ability-wantagent-wantagentflags-e.md#replacebundle)
+**Substitutes:** [REPLACE_BUNDLE](arkts-ability-wantagent-wantagentflags-e.md#replace_bundle)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

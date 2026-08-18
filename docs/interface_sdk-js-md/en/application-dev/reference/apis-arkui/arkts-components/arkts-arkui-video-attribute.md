@@ -195,7 +195,7 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ImageFit | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values, including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md#imagefit) enumeration range, will result in an effect the same as **Cover**. |
+| value | ImageFit | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values, including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) enumeration range, will result in an effect the same as **Cover**. |
 
 ## onError
 

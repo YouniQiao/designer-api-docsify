@@ -1,8 +1,8 @@
 # CounterV2DateStyleOptions
 
-CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。 继承于[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md#counterv2commonoptions)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
+CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。 继承于[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md#counterv2commonoptions)
+**继承/实现关系：** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@ CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。 继
 ## 导入模块
 
 ```TypeScript
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## day

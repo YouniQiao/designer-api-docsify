@@ -27,7 +27,7 @@ Get account information of SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Yes | Indicates the callback for getting a {@code IccAccountInfo} object. The ICCID and phone number will be null if the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt; | Yes | Indicates the callback for getting a {@code IccAccountInfo} object. The ICCID and phone number will be null if the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
 
 **Error codes:**
 

@@ -19,7 +19,7 @@ Obtain the scanned sta list.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 

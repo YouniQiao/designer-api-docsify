@@ -22,7 +22,7 @@ export function bindGridController(node: FrameNode, controller: Scroller): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 目标FrameNode。 |
+| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 目标FrameNode。 |
 | controller | Scroller | 是 | the controller which is bind to 目标FrameNode。 |
 
 **错误码：**

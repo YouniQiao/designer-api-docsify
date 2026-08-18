@@ -14,7 +14,6 @@ Describes the information of the ServiceExtensionAbility bound to the [intent de
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

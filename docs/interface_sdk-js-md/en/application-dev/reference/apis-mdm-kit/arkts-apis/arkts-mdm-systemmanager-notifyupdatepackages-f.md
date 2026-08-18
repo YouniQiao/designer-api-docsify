@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise<void>
 ```
 
-Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy) to set the update policy. This API uses a promise to return the result. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API.
+Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md) to set the update policy. This API uses a promise to return the result. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API.
 
 **Since:** 12
 

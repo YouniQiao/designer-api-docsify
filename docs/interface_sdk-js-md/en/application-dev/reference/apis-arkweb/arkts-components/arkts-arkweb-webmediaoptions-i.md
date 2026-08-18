@@ -42,7 +42,7 @@ Whether the audio of multiple Web instances in an app is exclusive. The value **
 audioSessionType?: AudioSessionType
 ```
 
-Web audio type in the app. The default value corresponds to STREAM_USAGE_MUSIC in the system audio stream type [StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage). Used to change the mapping between the component audio type and the system audio type, affecting the ArkWeb audio focus policy.
+Web audio type in the app. The default value corresponds to STREAM_USAGE_MUSIC in the system audio stream type [StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md). Used to change the mapping between the component audio type and the system audio type, affecting the ArkWeb audio focus policy.
 
 **Type:** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 

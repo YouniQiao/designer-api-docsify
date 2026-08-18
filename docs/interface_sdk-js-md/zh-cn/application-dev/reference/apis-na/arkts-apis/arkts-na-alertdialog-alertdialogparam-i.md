@@ -16,7 +16,7 @@
 alignment?: DialogAlignment
 ```
 
-弹窗在竖直方向上的对齐方式。 默认值：DialogAlignment.Default **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。 **说明：** 若在[UIExtension](../../apis-arkui/arkts-apis/arkts-arkui-uiextension.md#ohosarkuiuiextension)中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
+弹窗在竖直方向上的对齐方式。 默认值：DialogAlignment.Default **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。 **说明：** 若在[UIExtension](../../apis-arkui/arkts-apis/arkts-arkui-uiextension.md)中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
 
 **类型：** [DialogAlignment](arkts-na-alertdialog-dialogalignment-e.md)
 
@@ -412,7 +412,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)。仅在levelMode属性设置为LevelMode.EMBEDDED时生效。 取值范围：大于等于0的数字。传入小于0的数字本项配置不生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-na-framenode-c.md#getuniqueid)。仅在levelMode属性设置为LevelMode.EMBEDDED时生效。 取值范围：大于等于0的数字。传入小于0的数字本项配置不生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **类型：** int
 

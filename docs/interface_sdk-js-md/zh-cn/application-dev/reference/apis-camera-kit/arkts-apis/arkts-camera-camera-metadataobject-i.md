@@ -1,6 +1,6 @@
 # MetadataObject
 
-相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
+相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## boundingBox

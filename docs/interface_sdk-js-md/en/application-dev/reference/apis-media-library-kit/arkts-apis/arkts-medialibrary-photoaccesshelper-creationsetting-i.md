@@ -40,7 +40,7 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype) of the created media file, which can be **IMAGE** or **VIDEO**.
+[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) of the created media file, which can be **IMAGE** or **VIDEO**.
 
 **Type:** PhotoType
 

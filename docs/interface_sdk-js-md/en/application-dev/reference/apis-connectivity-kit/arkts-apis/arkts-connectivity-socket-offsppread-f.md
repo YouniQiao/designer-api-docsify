@@ -25,7 +25,7 @@ Unsubscribe the event reported when data is read from the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | clientSocket | int | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. The value should be an integer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to listen for the spp read event. |
 
 **Error codes:**
 

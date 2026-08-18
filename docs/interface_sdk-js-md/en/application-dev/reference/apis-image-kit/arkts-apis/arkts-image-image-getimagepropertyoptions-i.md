@@ -6,7 +6,7 @@ Describes the image properties.
 
 **Deprecated since:** 11
 
-**Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md#imagepropertyoptions)
+**Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
 
 <!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
@@ -15,7 +15,6 @@ Describes the image properties.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 ```
 

@@ -2,7 +2,7 @@
 
 Defines RotationGesture.
 
-**Inheritance/Implementation:** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**Inheritance/Implementation:** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23
 

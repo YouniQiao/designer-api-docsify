@@ -1,3 +1,0 @@
-# SymbolSpanModifier
-
-## Summary

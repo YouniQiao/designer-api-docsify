@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -19,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 ```
 
-Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md#onseniormodestatechange), which listens for system-level senior mode state changes, this API only monitors the state of the app itself. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md#offseniormodestatechangeforself) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
+Subscribes to the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. Unlike [accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md), which listens for system-level senior mode state changes, this API only monitors the state of the app itself. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
 
 **Since:** 26.0.0
 
@@ -33,5 +30,5 @@ Subscribes to the "senior mode" change event of the app itself. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the app's own senior mode is enabled, and **false** indicates that the app's own senior mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the app's own senior mode is enabled, and **false** indicates that the app's own senior mode is disabled. |
 

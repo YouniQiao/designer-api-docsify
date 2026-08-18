@@ -28,6 +28,16 @@ Creates a **ListItemGroup** component.
 
 ## Summary
 
-- [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md)
-- [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md)
-- [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | Describes the **ListItemGroup** component parameter. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md) | Enumerates the header and footer styles of **ListItemGroup**. |
+| [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md) | Enumerates the card styles of the **ListItemGroup** component. |
+

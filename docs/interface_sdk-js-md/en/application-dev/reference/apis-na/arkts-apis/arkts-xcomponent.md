@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [XComponent](arkts-na-xcomponent-xcomponent-f.md#xcomponent) | Defines XComponent Component.It requires call setXComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
+| [XComponent](arkts-na-xcomponent-xcomponent-f.md) | Defines XComponent Component.It requires call setXComponentOptions at start of the component attribute set-up, and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 
 ### Classes
 
@@ -27,7 +27,7 @@
 | [XComponentParameters](arkts-na-xcomponent-xcomponentparameters-i.md) | Defines the XComponent parameter interface. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

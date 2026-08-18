@@ -12,7 +12,6 @@ Describes the options for the audio-haptic player.
 
 ```TypeScript
 import { audioHaptic } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## muteAudio

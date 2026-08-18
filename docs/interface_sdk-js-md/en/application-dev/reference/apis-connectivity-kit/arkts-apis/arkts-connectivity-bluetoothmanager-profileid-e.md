@@ -6,7 +6,7 @@ The enum of profile id.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ProfileId](arkts-connectivity-constant-profileid-e.md#profileid)
+**Substitutes:** [ProfileId](arkts-connectivity-constant-profileid-e.md)
 
 <!--Device-bluetoothManager-enum ProfileId--><!--Device-bluetoothManager-enum ProfileId-End-->
 
@@ -24,7 +24,7 @@ A2DP profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-constant-profileid-e.md#profilea2dpsource)
+**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-constant-profileid-e.md#profile_a2dp_source)
 
 <!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
@@ -42,7 +42,7 @@ HFP profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#profilehandsfreeaudiogateway)
+**Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#profile_handsfree_audio_gateway)
 
 <!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 
@@ -60,7 +60,7 @@ Human Interface Device (HID) profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_HID_HOST](arkts-connectivity-constant-profileid-e.md#profilehidhost)
+**Substitutes:** [PROFILE_HID_HOST](arkts-connectivity-constant-profileid-e.md#profile_hid_host)
 
 <!--Device-ProfileId-PROFILE_HID_HOST = 6--><!--Device-ProfileId-PROFILE_HID_HOST = 6-End-->
 
@@ -78,7 +78,7 @@ PAN profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** [PROFILE_PAN_NETWORK](arkts-connectivity-constant-profileid-e.md#profilepannetwork)
+**Substitutes:** [PROFILE_PAN_NETWORK](arkts-connectivity-constant-profileid-e.md#profile_pan_network)
 
 <!--Device-ProfileId-PROFILE_PAN_NETWORK = 7--><!--Device-ProfileId-PROFILE_PAN_NETWORK = 7-End-->
 

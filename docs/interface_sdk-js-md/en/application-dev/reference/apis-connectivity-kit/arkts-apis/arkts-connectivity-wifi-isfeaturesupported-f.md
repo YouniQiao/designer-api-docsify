@@ -21,7 +21,7 @@ Checks whether this device supports a specified feature.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isfeaturesupported)
+**Substitutes:** [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

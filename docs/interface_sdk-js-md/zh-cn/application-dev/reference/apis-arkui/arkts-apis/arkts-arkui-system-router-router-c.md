@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [router](../../apis-na/arkts-apis/arkts-router.md#ohosrouter)
+**替代接口：** [router](../../apis-na/arkts-apis/arkts-router.md)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## back

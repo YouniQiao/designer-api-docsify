@@ -11,6 +11,8 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 ## 导入模块
 
 ```TypeScript
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityConnect
@@ -93,7 +95,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 ```
 
-当无障碍事件发生时，系统将事件分发至已连接的AccessibilityExtensionAbility并回调该接口，可根据事件信息处理业务逻辑。通常需要重写。事件类型的详细说明请参见 [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md#accessibilityeventtype系统接口)。
+当无障碍事件发生时，系统将事件分发至已连接的AccessibilityExtensionAbility并回调该接口，可根据事件信息处理业务逻辑。通常需要重写。事件类型的详细说明请参见 [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md)。
 
 **起始版本：** 23
 

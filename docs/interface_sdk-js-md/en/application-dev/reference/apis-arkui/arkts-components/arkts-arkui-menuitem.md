@@ -26,3 +26,8 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 ## Summary
 
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+

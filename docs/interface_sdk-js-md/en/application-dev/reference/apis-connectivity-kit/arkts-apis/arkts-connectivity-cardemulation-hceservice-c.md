@@ -36,7 +36,7 @@ Unsubscribe the event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
@@ -45,7 +45,7 @@ Unsubscribe the event to receive the APDU data.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## off_hceCmd
+## off_hceCmd('hceCmd')
 
 ```TypeScript
 off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void
@@ -68,7 +68,7 @@ Unsubscribe the event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to unregister event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
@@ -135,7 +135,7 @@ register HCE event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ register HCE event to receive the APDU data.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## on_hceCmd
+## on_hceCmd('hceCmd')
 
 ```TypeScript
 on(type: 'hceCmd', callback: AsyncCallback<int[]>): void
@@ -168,7 +168,7 @@ register HCE event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to register. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
@@ -510,7 +510,7 @@ Sends a response APDU to the remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | response | int[] | Yes | Indicates the response to send, which is a byte array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback |
 
 **Error codes:**
 

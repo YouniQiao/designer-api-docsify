@@ -6,15 +6,15 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## off_netUidPolicyChange
+## off_netUidPolicyChange('netUidPolicyChange')
 
 ```TypeScript
 function off(type: 'netUidPolicyChange', callback?: Callback<NetUidPolicyInfo>): void
 ```
 
-Unregister uid policy change listener.
+Unsubscribes from **policy** changes. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -28,8 +28,8 @@ Unregister uid policy change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netUidPolicyChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | No | the callback of off. |
+| type | 'netUidPolicyChange' | Yes | Event type. The value **netUidPolicyChange** indicates a policy change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | No | Callback used to return the result. It is called when the network policy changes.<br>**Since:** 11 |
 
 **Error codes:**
 

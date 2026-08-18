@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setNotificationEnableSlot
@@ -37,7 +36,7 @@ function setNotificationEnableSlot(
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | type | SlotType | 是 | 指定渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
 
 **错误码：**
 
@@ -129,7 +128,7 @@ function setNotificationEnableSlot(
 | type | SlotType | 是 | 指定渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
 | isForceControl | boolean | 是 | 渠道开关是否受通知授权开关影响（false：受影响，true：不受影响）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
 
 **错误码：**
 

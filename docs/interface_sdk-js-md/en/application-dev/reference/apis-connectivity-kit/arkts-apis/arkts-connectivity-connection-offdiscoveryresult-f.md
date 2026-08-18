@@ -28,7 +28,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[DiscoveryResult](arkts-connectivity-connection-discoveryresult-i-sys.md)&gt;&gt; | No | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[DiscoveryResult](arkts-connectivity-connection-discoveryresult-i-sys.md)&gt;&gt; | No | Callback used to listen for the discovering event. |
 
 **Error codes:**
 

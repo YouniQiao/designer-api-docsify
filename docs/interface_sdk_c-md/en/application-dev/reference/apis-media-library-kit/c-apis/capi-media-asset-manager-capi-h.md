@@ -162,7 +162,7 @@ Requests a moving photo based on different policies.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.<br>     <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.      <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAssetManager_RequestImage()
 
@@ -192,7 +192,7 @@ Requests an image based on different policies.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.<br>     <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.      <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAssetManager_Release()
 
@@ -216,7 +216,7 @@ Releases an [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.m
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed. |
 
 ### OH_MediaAssetManager_QuickRequestImage()
 
@@ -246,6 +246,6 @@ Requests an image based on different policies.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.<br>     <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_OPERATION_NOT_SUPPORTED if operation is not supported.      <br>MEDIA_LIBRARY_PERMISSION_DENIED if permission is denied.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 

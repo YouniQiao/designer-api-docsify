@@ -1,6 +1,6 @@
 # QuotaPolicy (System API)
 
-Policies that limit network quota.
+Defines the network quota policy.
 
 **Since:** 10
 
@@ -19,16 +19,16 @@ import { policy } from '@kit.NetworkKit';
 ## lastLimitRemind
 
 ```TypeScript
-lastLimitRemind?: number
+lastLimitRemind?: long
 ```
 
-The time of the last limit reminder. For notifying only, default: REMIND_NEVER.
+Last time when the quota was exhausted. Default value: **-1**.
 
-**Type:** number
+**Type:** long
 
 **Since:** 10
 
-<!--Device-QuotaPolicy-lastLimitRemind?: number--><!--Device-QuotaPolicy-lastLimitRemind?: number-End-->
+<!--Device-QuotaPolicy-lastLimitRemind?: long--><!--Device-QuotaPolicy-lastLimitRemind?: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -37,16 +37,16 @@ The time of the last limit reminder. For notifying only, default: REMIND_NEVER.
 ## lastWarningRemind
 
 ```TypeScript
-lastWarningRemind?: number
+lastWarningRemind?: long
 ```
 
-The time of the last warning reminder. For notifying only, default: REMIND_NEVER.
+Last time when an alarm was generated. Default value: **-1**.
 
-**Type:** number
+**Type:** long
 
 **Since:** 10
 
-<!--Device-QuotaPolicy-lastWarningRemind?: number--><!--Device-QuotaPolicy-lastWarningRemind?: number-End-->
+<!--Device-QuotaPolicy-lastWarningRemind?: long--><!--Device-QuotaPolicy-lastWarningRemind?: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -58,7 +58,7 @@ The time of the last warning reminder. For notifying only, default: REMIND_NEVER
 limitAction: LimitAction
 ```
 
-The action while the used bytes reach the limit, see [LimitAction](arkts-network-policy-limitaction-e-sys.md#limitaction-system-api).
+Action to take when the data volume quota is reached.
 
 **Type:** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 
@@ -73,16 +73,16 @@ The action while the used bytes reach the limit, see [LimitAction](arkts-network
 ## limitBytes
 
 ```TypeScript
-limitBytes: number
+limitBytes: long
 ```
 
-The limit threshold of traffic, default: DATA_USAGE_UNKNOWN.
+Data volume quota.
 
-**Type:** number
+**Type:** long
 
 **Since:** 10
 
-<!--Device-QuotaPolicy-limitBytes: number--><!--Device-QuotaPolicy-limitBytes: number-End-->
+<!--Device-QuotaPolicy-limitBytes: long--><!--Device-QuotaPolicy-limitBytes: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -94,7 +94,7 @@ The limit threshold of traffic, default: DATA_USAGE_UNKNOWN.
 metered: boolean
 ```
 
-Is metered network or not.
+Whether the network is a metered network. The value **true** indicates that the network is a metered network, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -112,7 +112,7 @@ Is metered network or not.
 periodDuration: string
 ```
 
-The period and the start time for quota policy, default: "M1" (Monthly cycle).
+Metering period for the quota limit. **D1**, **M1**, and **Y1** indicate one day, one month, and one year, respectively. If the specified metering period is exceeded, the quota is not limited.
 
 **Type:** string
 
@@ -127,16 +127,16 @@ The period and the start time for quota policy, default: "M1" (Monthly cycle).
 ## warningBytes
 
 ```TypeScript
-warningBytes: number
+warningBytes: long
 ```
 
-The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
+Data volume threshold for generating an alarm.
 
-**Type:** number
+**Type:** long
 
 **Since:** 10
 
-<!--Device-QuotaPolicy-warningBytes: number--><!--Device-QuotaPolicy-warningBytes: number-End-->
+<!--Device-QuotaPolicy-warningBytes: long--><!--Device-QuotaPolicy-warningBytes: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

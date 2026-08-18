@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## decomposeToPicture

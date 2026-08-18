@@ -17,7 +17,7 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments)
+**Substitutes:** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
 
 <!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
 

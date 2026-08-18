@@ -16,7 +16,7 @@
 | [CalendarOptions](arkts-na-calendarpicker-calendaroptions-i.md) | Defines the options of CalendarPicker. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

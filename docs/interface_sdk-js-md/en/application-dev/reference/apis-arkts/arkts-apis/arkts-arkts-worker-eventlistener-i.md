@@ -6,7 +6,7 @@ Implements event listening.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md#workereventlistener)
+**Substitutes:** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md)
 
 <!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
 

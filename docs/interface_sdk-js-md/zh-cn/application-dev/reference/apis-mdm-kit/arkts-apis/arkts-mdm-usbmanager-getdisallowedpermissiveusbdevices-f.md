@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedPermissiveUsbDevices
@@ -11,7 +12,7 @@
 function getDisallowedPermissiveUsbDevices(admin: Want | null): Array<PermissiveUsbDeviceType>
 ```
 
-获取通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices)接口禁用的USB设备类型。
+获取通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口禁用的USB设备类型。
 
 **起始版本：** 26.0.0
 

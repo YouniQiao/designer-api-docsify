@@ -16,7 +16,6 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## calendar

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## cachedCount
@@ -301,7 +302,7 @@ onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表到达起始位置时触发。 当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md#arklistoptions)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经 过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
+列表到达起始位置时触发。 当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经 过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
 
 **起始版本：** 18
 
@@ -483,7 +484,7 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **返回值：**
 
@@ -511,7 +512,7 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
+| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
 
 **返回值：**
 
@@ -539,7 +540,7 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
+| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **返回值：**
 

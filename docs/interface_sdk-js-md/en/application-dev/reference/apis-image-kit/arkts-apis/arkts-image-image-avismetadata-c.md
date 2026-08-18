@@ -12,7 +12,6 @@ Avis metadata.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## delayTime

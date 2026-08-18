@@ -28,4 +28,9 @@ Image resource to be obtained.
 
 ## Summary
 
-- [ASTCResource](arkts-arkui-astcresource-i-sys.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Defines the resource which can use ASTC. |
+

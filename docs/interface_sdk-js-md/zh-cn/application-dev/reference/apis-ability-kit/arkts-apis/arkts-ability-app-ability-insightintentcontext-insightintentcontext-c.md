@@ -1,6 +1,6 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#insightintentexecutor)和 [@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#insightintententryexecutor)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md#uiability)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)和 [@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md)。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -19,7 +20,7 @@
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md#executemode)的意图。
+设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md)的意图。
 
 **起始版本：** 23
 
@@ -140,7 +141,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md#executemode)的意图。
+设置意图执行结果的返回形式，适用于执行模式为[UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md)的意图。
 
 **起始版本：** 23
 
@@ -276,7 +277,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility组件的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

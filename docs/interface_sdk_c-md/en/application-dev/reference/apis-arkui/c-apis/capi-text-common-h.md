@@ -53,12 +53,9 @@ Defines a set of text common enum and interface.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback |  |
-| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback |  |
-| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem*    item, int32_t                      start, int32_t                      end, void*                        userData
-)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback |  |
+| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback |  |
+| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback |  |
+| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback |  |
 | [ArkUI_ShowCounterConfig* OH_ArkUI_ShowCounterConfig_Create()](#oh_arkui_showcounterconfig_create) | - | Creates a configuration object for textField's counter. |
 | [void OH_ArkUI_ShowCounterConfig_Dispose(ArkUI_ShowCounterConfig* config)](#oh_arkui_showcounterconfig_dispose) | - | Disposes a configuration object for textField's counter. |
 | [void OH_ArkUI_ShowCounterConfig_SetCounterTextColor(ArkUI_ShowCounterConfig* config, uint32_t color)](#oh_arkui_showcounterconfig_setcountertextcolor) | - | Sets the color of counter when textField hasn't wanted to exceed the maximum character count. |
@@ -429,8 +426,7 @@ Enumerates the text response type.
 ### ArkUI_TextCreateMenuCallback()
 
 ```c
-typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)
+typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)
 ```
 
 **Description**
@@ -441,14 +437,13 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray*    items, 
 
 | Parameter | Description |
 | -- | -- |
-| (ArkUI_TextMenuItemArray\*    items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
-| void\*                       userData | User defined data. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
+| void\* userData | User defined data. |
 
 ### ArkUI_TextPrepareMenuCallback()
 
 ```c
-typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray*    items, void*                       userData
-)
+typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)
 ```
 
 **Description**
@@ -459,14 +454,13 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray*    items,
 
 | Parameter | Description |
 | -- | -- |
-| (ArkUI_TextMenuItemArray\*    items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
-| void\*                       userData | User defined data. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
+| void\* userData | User defined data. |
 
 ### ArkUI_TextMenuItemClickCallback()
 
 ```c
-typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem*    item, int32_t                      start, int32_t                      end, void*                        userData
-)
+typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)
 ```
 
 **Description**
@@ -477,10 +471,10 @@ typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem*    ite
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkUI_TextMenuItem\*    item | The menu item click. |
-| int32_t                      start | The start offset of the selected content. |
-| int32_t                      end | The end offset of the selected content. |
-| void\*                        userData | The user data. |
+| [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)\* item | The menu item click. |
+| int32_t start | The start offset of the selected content. |
+| int32_t end | The end offset of the selected content. |
+| void\* userData | The user data. |
 
 **Returns**:
 

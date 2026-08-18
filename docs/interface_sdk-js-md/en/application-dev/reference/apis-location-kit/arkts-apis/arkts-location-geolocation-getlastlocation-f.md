@@ -18,7 +18,7 @@ Obtain last known location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Obtain last known location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 
@@ -59,7 +59,7 @@ Obtain last known location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

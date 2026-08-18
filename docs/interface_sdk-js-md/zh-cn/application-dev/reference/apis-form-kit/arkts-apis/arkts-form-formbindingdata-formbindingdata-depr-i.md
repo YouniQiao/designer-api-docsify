@@ -6,7 +6,7 @@ FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展�
 
 **废弃版本：** 9
 
-**替代接口：** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#formbindingdata)
+**替代接口：** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
 
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
 
@@ -31,7 +31,7 @@ JS卡片要展示的数据。可以是包含若干键值对的Object或者 json 
 
 **废弃版本：** 9
 
-**替代接口：** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#formbindingdata)
+**替代接口：** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
 
 <!--Device-FormBindingData-data: Object--><!--Device-FormBindingData-data: Object-End-->
 

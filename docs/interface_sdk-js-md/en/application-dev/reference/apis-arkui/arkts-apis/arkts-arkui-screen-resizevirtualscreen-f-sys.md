@@ -41,7 +41,7 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |

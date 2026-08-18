@@ -2,7 +2,7 @@
 
 Manager pan host profile.
 
-**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-pan-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
 
 **Since:** 26.0.0
 

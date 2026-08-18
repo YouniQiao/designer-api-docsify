@@ -12,8 +12,6 @@ Describes audio capturer configurations.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -59,7 +57,7 @@ Defines configuration for capturing played audio. This API is supported since AP
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer. This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#audioplaybackcapturemode).
+The playback capture mode for audio capturer. This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md).
 
 **Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 

@@ -37,7 +37,7 @@ Indicates whether to enable anti-aliasing
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | @returns { T } |
+| value | boolean | 是 |  |
 
 **返回值：**
 
@@ -67,7 +67,7 @@ Fill color.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | @returns { T } |
+| value | ResourceColor | 是 |  |
 
 **返回值：**
 
@@ -97,7 +97,7 @@ fill Opacity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | @returns { T } |
+| value | number \| string \| Resource | 是 |  |
 
 **返回值：**
 
@@ -127,7 +127,7 @@ border Color
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | @returns { T } |
+| value | ResourceColor | 是 |  |
 
 **返回值：**
 
@@ -157,7 +157,7 @@ Sets the gap for the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | 是 | @returns { T } |
+| value | Array&lt;any&gt; | 是 |  |
 
 **返回值：**
 
@@ -187,7 +187,7 @@ Offset from the start point of the border drawing.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | @returns { T } |
+| value | number \| string | 是 |  |
 
 **返回值：**
 
@@ -217,7 +217,7 @@ Path endpoint drawing style.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LineCapStyle | 是 | @returns { T } |
+| value | LineCapStyle | 是 |  |
 
 **返回值：**
 
@@ -247,7 +247,7 @@ Border corner drawing style.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LineJoinStyle | 是 | @returns { T } |
+| value | LineJoinStyle | 是 |  |
 
 **返回值：**
 
@@ -307,7 +307,7 @@ Sets the opacity of the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | @returns { T } |
+| value | number \| string \| Resource | 是 |  |
 
 **返回值：**
 
@@ -337,7 +337,7 @@ Sets the width of the dividing line.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | @returns { T } |
+| value | Length | 是 |  |
 
 **返回值：**
 

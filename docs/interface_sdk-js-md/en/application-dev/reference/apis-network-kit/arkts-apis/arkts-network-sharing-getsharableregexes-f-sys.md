@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Array<string>>): void
 ```
 
-Get a list regular expression that defines any interface that can support network sharing.
+Obtains regular expressions of NICs of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Get a list regular expression that defines any interface that can support networ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getSharableRegexes. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Sharing type. The value **0** means Wi-Fi hotspot sharing, **1** means USB sharing, and **2** means Bluetooth sharing. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of regular expressions. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ sharing.getSharableRegexes(SHARING_WIFI, (error: BusinessError, data: string[]) 
 function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>
 ```
 
-Get a list regular expression that defines any interface that can support network sharing.
+Obtains regular expressions of NICs of a specified type. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -78,13 +78,13 @@ Get a list regular expression that defines any interface that can support networ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md) | Yes | Sharing type. The value **0** means Wi-Fi hotspot sharing, **1** means USB sharing, and **2** means Bluetooth sharing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array of regular expressions. |
 
 **Error codes:**
 

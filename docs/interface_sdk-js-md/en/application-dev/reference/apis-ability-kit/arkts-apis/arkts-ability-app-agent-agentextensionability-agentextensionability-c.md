@@ -14,7 +14,6 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 
 ```TypeScript
 import { AgentExtensionAbility } from '@kit.AbilityKit';
-import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onAuth

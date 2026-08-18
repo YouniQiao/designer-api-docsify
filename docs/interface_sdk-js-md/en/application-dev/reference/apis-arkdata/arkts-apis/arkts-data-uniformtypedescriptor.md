@@ -1,18 +1,6 @@
 # @ohos.data.uniformTypeDescriptor
 
-/*
- Copyright (c) 2023-2026 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 
 **Since:** 23
 
@@ -26,7 +14,6 @@
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
-import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -35,20 +22,20 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md#gettypedescriptor) | Obtains the **TypeDescriptor** object based on the uniform data type ID. |
-| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md#gettypedescriptor) | Queries and returns the uniform type descriptor by the given uniform data type ID. |
-| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md#getuniformdatatypebyfilenameextension) | Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
-| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md#getuniformdatatypebymimetype) | Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
-| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md#getuniformdatatypesbyfilenameextension) | Obtains the uniform data type IDs based on the given file name extension and data type. |
-| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md#getuniformdatatypesbymimetype) | Obtains the uniform data type IDs based on the given MIME type and data type. |
+| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) | Obtains the **TypeDescriptor** object based on the uniform data type ID. |
+| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) | Queries and returns the uniform type descriptor by the given uniform data type ID. |
+| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md) | Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
+| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md) | Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned. |
+| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md) | Obtains the uniform data type IDs based on the given file name extension and data type. |
+| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md) | Obtains the uniform data type IDs based on the given MIME type and data type. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [registerTypeDescriptors](arkts-arkdata-uniformtypedescriptor-registertypedescriptors-f-sys.md#registertypedescriptors) | Register type descriptors into the system. |
-| [unregisterTypeDescriptors](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md#unregistertypedescriptors) | Unregister one or more type descriptors from the system by the given type IDs. |
+| [registerTypeDescriptors](arkts-arkdata-uniformtypedescriptor-registertypedescriptors-f-sys.md) | Register type descriptors into the system. |
+| [unregisterTypeDescriptors](arkts-arkdata-uniformtypedescriptor-unregistertypedescriptors-f-sys.md) | Unregister one or more type descriptors from the system by the given type IDs. |
 <!--DelEnd-->
 
 ### Classes

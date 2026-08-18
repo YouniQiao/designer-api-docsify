@@ -2,7 +2,7 @@
 
 Date time range format part.
 
-**Inheritance/Implementation:** DateTimeRangeFormatPart extends [DateTimeFormatPart](arkts-na-intl-datetimeformatpart-i.md#datetimeformatpart)
+**Inheritance/Implementation:** DateTimeRangeFormatPart extends [DateTimeFormatPart](arkts-na-intl-datetimeformatpart-i.md)
 
 **Since:** 26.0.0
 

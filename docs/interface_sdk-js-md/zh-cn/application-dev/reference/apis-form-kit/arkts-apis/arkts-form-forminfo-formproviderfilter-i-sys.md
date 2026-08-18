@@ -13,6 +13,7 @@ Information about a running form.
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName

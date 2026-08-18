@@ -2,13 +2,13 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment.
 
-**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
+**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md#globalscope)
+**Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md)
 
 <!--Device-unnamed-declare interface WorkerGlobalScope--><!--Device-unnamed-declare interface WorkerGlobalScope-End-->
 

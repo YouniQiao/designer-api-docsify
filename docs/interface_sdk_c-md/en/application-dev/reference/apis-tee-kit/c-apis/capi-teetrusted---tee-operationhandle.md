@@ -42,9 +42,7 @@ Defines the cryptographic operation handle.
 | [TEE_DH_OtherInfo](capi-teetrusted-tee-dh-otherinfo.md) *dh_otherinfo | TEE_DH_OtherInfo |
 | uint32_t dh_hash_mode | TEE_DH_HASH_Mode |
 | uint32_t dh_derive_func | TEE_DH_DerivFuncMode |
-| uint32_t dh_op_mode;
-    void *dh_prime;
-    uint32_t dh_prime_size | TEE_DH_OpMode_t |
+| uint32_t dh_op_mode; void *dh_prime; uint32_t dh_prime_size | TEE_DH_OpMode_t |
 | pthread_mutex_t operation_lock | Operation lock |
 | void *hal_info | HAL information |
 

@@ -2,7 +2,7 @@
 
 Defines the numeric text content transition class.
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-textcommon-contenttransition-c.md#contenttransition)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-textcommon-contenttransition-c.md)
 
 **Since:** 24
 

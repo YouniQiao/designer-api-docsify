@@ -12,9 +12,9 @@ import { mdns } from '@kit.NetworkKit';
 function createDiscoveryService(context: Context, serviceType: string): DiscoveryService
 ```
 
-Create an mDNS based discovery service with context and serviceType.
+Creates a **DiscoveryService** object, which is used to discover MDNS services of the specified type.
 
-**Since:** 11
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -26,14 +26,14 @@ Create an mDNS based discovery service with context and serviceType.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates the context of application or capability. |
-| serviceType | string | Yes | The service type being discovered. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. <br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| serviceType | string | Yes | MDNS service type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | the DiscoveryService of the createDiscoveryService. |
+| [DiscoveryService](arkts-network-mdns-discoveryservice-i.md) | DiscoveryService** object obtained based on the specified **serviceType** and **context**. |
 
 **Error codes:**
 

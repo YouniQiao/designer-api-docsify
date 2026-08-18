@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addRecord
@@ -364,7 +365,7 @@ hasType(type: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 要查询的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。 |
+| type | string | 是 | 要查询的数据类型，见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。 |
 
 **返回值：**
 

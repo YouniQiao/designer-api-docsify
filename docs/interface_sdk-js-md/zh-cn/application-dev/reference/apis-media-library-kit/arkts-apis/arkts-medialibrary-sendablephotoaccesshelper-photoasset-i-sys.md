@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getAnalysisData
@@ -88,7 +89,7 @@ requestSource(): Promise<number>
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper)的示例使用。
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

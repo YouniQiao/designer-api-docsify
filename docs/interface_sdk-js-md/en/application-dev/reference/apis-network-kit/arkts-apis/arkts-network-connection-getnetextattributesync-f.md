@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getNetExtAttributeSync(netHandle: NetHandle): string
 ```
 
-Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20
 
@@ -26,13 +26,13 @@ Get the network extended attribute for a [NetHandle](arkts-network-connection-ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | The netExtAttribute string returned by the function. |
+| string | Extended network attributes. |
 
 **Error codes:**
 

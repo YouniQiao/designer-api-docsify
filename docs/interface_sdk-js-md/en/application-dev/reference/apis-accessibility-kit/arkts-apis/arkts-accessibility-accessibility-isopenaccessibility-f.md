@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -25,7 +22,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
 
 <!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
 
@@ -35,7 +32,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
 
 **Examples**
 
@@ -65,7 +62,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
 
 <!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 

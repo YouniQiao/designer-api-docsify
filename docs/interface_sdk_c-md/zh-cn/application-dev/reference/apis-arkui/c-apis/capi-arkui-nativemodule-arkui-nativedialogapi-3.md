@@ -76,7 +76,7 @@ int32_t (*setLevelOrder)(ArkUI_NativeDialogHandle handle, double levelOrder)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### registerOnWillAppear()
 
@@ -102,7 +102,7 @@ int32_t (*registerOnWillAppear)(ArkUI_NativeDialogHandle handle, void* userData,
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### registerOnDidAppear()
 
@@ -128,7 +128,7 @@ int32_t (*registerOnDidAppear)(ArkUI_NativeDialogHandle handle, void* userData, 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### registerOnWillDisappear()
 
@@ -154,7 +154,7 @@ int32_t (*registerOnWillDisappear)(ArkUI_NativeDialogHandle handle, void* userDa
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### registerOnDidDisappear()
 
@@ -180,7 +180,7 @@ int32_t (*registerOnDidDisappear)(ArkUI_NativeDialogHandle handle, void* userDat
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBorderWidth()
 
@@ -212,7 +212,7 @@ int32_t (*setBorderWidth)(ArkUI_NativeDialogHandle handle, float top, float righ
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBorderColor()
 
@@ -243,7 +243,7 @@ int32_t (*setBorderColor)(ArkUI_NativeDialogHandle handle, uint32_t top, uint32_
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBorderStyle()
 
@@ -274,7 +274,7 @@ int32_t (*setBorderStyle)(ArkUI_NativeDialogHandle handle, int32_t top, int32_t 
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setWidth()
 
@@ -303,7 +303,7 @@ int32_t (*setWidth)(ArkUI_NativeDialogHandle handle, float width, ArkUI_LengthMe
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setHeight()
 
@@ -332,7 +332,7 @@ int32_t (*setHeight)(ArkUI_NativeDialogHandle handle, float height, ArkUI_Length
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setShadow()
 
@@ -360,7 +360,7 @@ int32_t (*setShadow)(ArkUI_NativeDialogHandle handle, ArkUI_ShadowStyle shadow)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setCustomShadow()
 
@@ -382,13 +382,13 @@ int32_t (*setCustomShadow)(ArkUI_NativeDialogHandle handle, const ArkUI_Attribut
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | 指向自定义弹窗控制器的指针。 |
-|  const [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)* customShadow | 自定义阴影参数，格式与[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的NODE_SHADOW属性一致。 |
+|  const ArkUI_AttributeItem* customShadow | 自定义阴影参数，格式与[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的NODE_SHADOW属性一致。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBackgroundBlurStyle()
 
@@ -416,7 +416,7 @@ int32_t (*setBackgroundBlurStyle)(ArkUI_NativeDialogHandle handle, ArkUI_BlurSty
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setKeyboardAvoidMode()
 
@@ -444,7 +444,7 @@ int32_t (*setKeyboardAvoidMode)(ArkUI_NativeDialogHandle handle, ArkUI_KeyboardA
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### enableHoverMode()
 
@@ -472,7 +472,7 @@ int32_t (*enableHoverMode)(ArkUI_NativeDialogHandle handle, bool enableHoverMode
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setHoverModeArea()
 
@@ -500,7 +500,7 @@ int32_t (*setHoverModeArea)(ArkUI_NativeDialogHandle handle, ArkUI_HoverModeArea
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setFocusable()
 
@@ -525,7 +525,7 @@ int32_t (*setFocusable)(ArkUI_NativeDialogHandle handle, bool focusable)
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBackgroundBlurStyleOptions()
 
@@ -547,13 +547,13 @@ int32_t (*setBackgroundBlurStyleOptions)(ArkUI_NativeDialogHandle handle, const 
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | 指向自定义弹窗控制器的指针。 |
-|  const [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)* backgroundBlurStyleOptions | 背景模糊效果。参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<br>.value[0].i32：表示深浅色模式，取[ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode)枚举值。<br>.value[1]?.i32：表示取色模式，取[ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor)枚举值。<br>.value[2]?.f32：表示模糊效果程度，取[0.0,1.0]范围内的值，超出有效值区间时取边界值。<br>.value[3]?.u32：表示灰阶模糊参数，对黑色的提亮程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[4]?.u32：表示灰阶模糊参数，对白色的压暗程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[5]?.i32：表示模糊激活策略，取[ArkUI_BlurStyleActivePolicy](capi-native-type-h.md#arkui_blurstyleactivepolicy)枚举值。<br>.value[6]?.u32：表示窗口失焦后，窗口内控件模糊效果会被移除，此时控件背板的颜色，0xargb类型。 |
+|  const ArkUI_AttributeItem* backgroundBlurStyleOptions | 背景模糊效果。参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<br>.value[0].i32：表示深浅色模式，取[ArkUI_ColorMode](capi-native-type-h.md#arkui_colormode)枚举值。<br>.value[1]?.i32：表示取色模式，取[ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor)枚举值。<br>.value[2]?.f32：表示模糊效果程度，取[0.0,1.0]范围内的值，超出有效值区间时取边界值。<br>.value[3]?.u32：表示灰阶模糊参数，对黑色的提亮程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[4]?.u32：表示灰阶模糊参数，对白色的压暗程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[5]?.i32：表示模糊激活策略，取[ArkUI_BlurStyleActivePolicy](capi-native-type-h.md#arkui_blurstyleactivepolicy)枚举值。<br>.value[6]?.u32：表示窗口失焦后，窗口内控件模糊效果会被移除，此时控件背板的颜色，0xargb类型。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### setBackgroundEffect()
 
@@ -575,12 +575,12 @@ int32_t (*setBackgroundEffect)(ArkUI_NativeDialogHandle handle, const ArkUI_Attr
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | 指向自定义弹窗控制器的指针。 |
-|  const [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)* backgroundEffect | 背景效果参数。参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<br>.value[0].f32：表示模糊半径，单位为vp。<br>.value[1]?.f32：表示饱和度。<br>.value[2]?.f32：表示亮度。<br>.value[3]?.u32：表示颜色，0xargb类型。<br>.value[4]?.i32：表示取色模式，取[ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor)枚举值。<br>.value[5]?.u32：表示灰阶模糊参数，对黑色的提亮程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[6]?.u32：表示灰阶模糊参数，对白色的压暗程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[7]?.i32：表示模糊激活策略，取[ArkUI_BlurStyleActivePolicy](capi-native-type-h.md#arkui_blurstyleactivepolicy)枚举值。<br>.value[8]?.u32：表示窗口失焦后，窗口内控件模糊效果会被移除，此时控件背板的颜色，0xargb类型。 |
+|  const ArkUI_AttributeItem* backgroundEffect | 背景效果参数。参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：<br>.value[0].f32：表示模糊半径，单位为vp。<br>.value[1]?.f32：表示饱和度。<br>.value[2]?.f32：表示亮度。<br>.value[3]?.u32：表示颜色，0xargb类型。<br>.value[4]?.i32：表示取色模式，取[ArkUI_AdaptiveColor](capi-native-type-h.md#arkui_adaptivecolor)枚举值。<br>.value[5]?.u32：表示灰阶模糊参数，对黑色的提亮程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[6]?.u32：表示灰阶模糊参数，对白色的压暗程度，有效值范围为[0,127]，超出有效值范围，取0。<br>.value[7]?.i32：表示模糊激活策略，取[ArkUI_BlurStyleActivePolicy](capi-native-type-h.md#arkui_blurstyleactivepolicy)枚举值。<br>.value[8]?.u32：表示窗口失焦后，窗口内控件模糊效果会被移除，此时控件背板的颜色，0xargb类型。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>         <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>         <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
+| int32_t | 错误码。          <br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。          <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 

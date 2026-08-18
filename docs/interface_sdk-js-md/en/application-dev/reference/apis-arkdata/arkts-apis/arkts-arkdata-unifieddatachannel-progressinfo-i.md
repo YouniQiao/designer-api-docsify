@@ -12,7 +12,6 @@ Represents the progress information.
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## progress

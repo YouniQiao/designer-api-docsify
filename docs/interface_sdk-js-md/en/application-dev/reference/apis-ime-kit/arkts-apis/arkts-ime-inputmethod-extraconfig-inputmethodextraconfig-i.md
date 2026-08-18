@@ -12,7 +12,6 @@ Represents the extension information of an input method.
 
 ```TypeScript
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## customSettings

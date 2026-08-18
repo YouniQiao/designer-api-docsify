@@ -1,12 +1,12 @@
 # HitTestType
 
-Enumerates the test result types of the click event. > **NOTE：**> > Supported since API version 9 and deprecated since API version 21. You are advised to use > [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md#webhittesttype) instead.
+Enumerates the test result types of the click event. > **NOTE：**> > Supported since API version 9 and deprecated since API version 21. You are advised to use > [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md) instead.
 
 **Since:** 8
 
 **Deprecated since:** 21
 
-**Substitutes:** [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md#webhittesttype)
+**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 

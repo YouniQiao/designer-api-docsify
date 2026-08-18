@@ -22,7 +22,7 @@ import { font } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) | Get font details according to the font name. |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | Get font details according to the font name. |
 
 ### Interfaces
 

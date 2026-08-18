@@ -5,7 +5,7 @@
 ```TypeScript
 ```
 
-## on_formUninstall
+## on_formUninstall('formUninstall')
 
 ```TypeScript
 function on(type: 'formUninstall', callback: Callback<string>): void
@@ -17,7 +17,7 @@ function on(type: 'formUninstall', callback: Callback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [on](arkts-form-formhost-onformuninstall-f-sys.md#onformuninstall)
+**替代接口：** on
 
 <!--Device-formHost-function on(type: 'formUninstall', callback: Callback<string>): void--><!--Device-formHost-function on(type: 'formUninstall', callback: Callback<string>): void-End-->
 
@@ -30,5 +30,5 @@ function on(type: 'formUninstall', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'formUninstall' | 是 | 填写'formUninstall'，表示卡片卸载事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回卡片标识。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回卡片标识。 |
 

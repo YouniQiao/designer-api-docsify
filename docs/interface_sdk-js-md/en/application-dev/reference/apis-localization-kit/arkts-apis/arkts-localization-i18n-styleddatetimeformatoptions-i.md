@@ -12,7 +12,6 @@ Optional configuration items for creating the time and date formatting object fo
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## day

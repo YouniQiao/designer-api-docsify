@@ -2,7 +2,7 @@
 
 Draw context object for the Canvas component.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md#canvasrenderer)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Constructor of the canvas drawing context object, which is used to create a draw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md#renderingcontextsettings). |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md). |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## getContext2DFromDrawingContext

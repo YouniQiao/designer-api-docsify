@@ -12,7 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function setUserProperty(name: string, value: string): void
 ```
 
-Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#processor) is configured.
+Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured.
 
 **Since:** 23
 

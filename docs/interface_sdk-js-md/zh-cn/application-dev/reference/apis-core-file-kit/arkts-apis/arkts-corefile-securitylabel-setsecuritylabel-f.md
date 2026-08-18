@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## setSecurityLabel
@@ -11,7 +12,7 @@
 function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 ```
 
-设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。使用Promise异步回调。
+设置文件或目录的数据安全等级，用于实现文件的分级管理和访问控制。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -23,14 +24,14 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件路径。 |
-| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。<br>注意：数据安全等级仅可由低向高或同级设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise实例，用于异步获取结果。本调用将返回空值。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -64,7 +65,7 @@ securityLabel.setSecurityLabel(filePath, "s0").then(() => {
 function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void
 ```
 
-设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。使用callback异步回调。
+设置文件或目录的数据安全等级，用于实现文件的分级管理和访问控制。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -76,9 +77,9 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件路径。 |
-| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置数据安全等级之后的回调。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。<br>注意：数据安全等级仅可由低向高或同级设置。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置数据安全等级成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

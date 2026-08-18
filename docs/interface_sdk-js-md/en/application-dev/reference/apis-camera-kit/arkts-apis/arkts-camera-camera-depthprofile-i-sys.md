@@ -1,6 +1,6 @@
 # DepthProfile (System API)
 
-Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#profile).
+Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md).
 
 **Since:** 23
 

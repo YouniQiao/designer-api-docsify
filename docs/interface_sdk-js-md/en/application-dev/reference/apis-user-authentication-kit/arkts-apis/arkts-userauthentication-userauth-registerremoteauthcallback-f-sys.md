@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -15,7 +13,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 ```
 
-Registers a remote authentication callback. This API is used in remote authentication scenarios. After registration, the system can obtain the page parameters required for remote authentication through the callback and receive the authentication result after the authentication is complete. Duplicate registration is not allowed. When the callback is no longer needed, call [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterremoteauthcallback-system-api) to unregister it to prevent the callback from being unable to be released.
+Registers a remote authentication callback. This API is used in remote authentication scenarios. After registration, the system can obtain the page parameters required for remote authentication through the callback and receive the authentication result after the authentication is complete. Duplicate registration is not allowed. When the callback is no longer needed, call [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md) to unregister it to prevent the callback from being unable to be released.
 
 **Since:** 26.0.0
 

@@ -26,4 +26,9 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 ## Summary
 
-- [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | Describes the header and footer of the menu item group. |
+

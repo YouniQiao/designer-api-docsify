@@ -18,7 +18,7 @@ Obtains the device IP address based on the network interface. This API uses an a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -36,7 +36,7 @@ Obtains the device IP address based on the network interface. This API uses an a
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network port. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the IP address obtained. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the IP address obtained. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

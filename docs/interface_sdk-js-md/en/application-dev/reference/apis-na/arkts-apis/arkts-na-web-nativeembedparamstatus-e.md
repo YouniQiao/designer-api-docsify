@@ -1,6 +1,6 @@
 # NativeEmbedParamStatus
 
-Enum type supplied to [NativeEmbedParamItem](arkts-na-web-nativeembedparamitem-i.md#nativeembedparamitem) when onNativeEmbedObjectParamChange being called.
+Enum type supplied to [NativeEmbedParamItem](arkts-na-web-nativeembedparamitem-i.md) when onNativeEmbedObjectParamChange being called.
 
 **Since:** 23
 

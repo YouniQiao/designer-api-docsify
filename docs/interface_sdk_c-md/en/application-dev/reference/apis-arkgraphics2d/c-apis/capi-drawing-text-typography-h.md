@@ -782,7 +782,7 @@ Obtains a bool-type typography attribute.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography or value parameter is a null<br>     pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.      <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.      <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography or value parameter is a null      pointer.      <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match      the called function. |
 
 ### OH_Drawing_SetTypographyAttributeBool()
 
@@ -808,7 +808,7 @@ Sets a bool-type typography attribute.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography parameter is a null pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.      <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.      <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography parameter is a null pointer.      <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match      the called function. |
 
 ### OH_Drawing_SetTextStyleAttributeDouble()
 
@@ -834,7 +834,7 @@ Sets the text style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id exceeds the<br>     allowable range. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.      <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id exceeds the      allowable range. |
 
 ### OH_Drawing_GetTextStyleAttributeDouble()
 
@@ -860,7 +860,7 @@ Obtains the text style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTextStyleAttributeInt()
 
@@ -886,7 +886,7 @@ Sets the text style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.      <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to      be set. |
 
 ### OH_Drawing_GetTextStyleAttributeInt()
 
@@ -912,7 +912,7 @@ Obtains the text style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeDouble()
 
@@ -938,7 +938,7 @@ Sets the typography style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id<br>     exceeds the allowable range. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.      <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id      exceeds the allowable range. |
 
 ### OH_Drawing_GetTypographyStyleAttributeDouble()
 
@@ -964,7 +964,7 @@ Obtains the typography style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeInt()
 
@@ -990,7 +990,7 @@ Sets the typography style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.      <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to      be set. |
 
 ### OH_Drawing_GetTypographyStyleAttributeInt()
 
@@ -1016,7 +1016,7 @@ Obtains the typography style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeBool()
 
@@ -1042,7 +1042,7 @@ Sets the typography style attribute of the **bool** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetTypographyStyleAttributeBool()
 
@@ -1068,7 +1068,7 @@ Obtains the typography style attribute of the **bool** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style or value is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style or value is NULL.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeDoubleArray()
 
@@ -1095,7 +1095,7 @@ Sets the typography style attribute of the floating-point array type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or<br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or      arrayLength is 0.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetTypographyStyleAttributeDoubleArray()
 
@@ -1122,7 +1122,7 @@ Obtains the typography style attribute of the floating-point array type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or <br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or       arrayLength is 0.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_CreateTypographyStyle()
 
@@ -1985,7 +1985,7 @@ Releases the memory occupied by the [OH_Drawing_Array](capi-drawing-oh-drawing-a
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if array is a null pointer or the type is not supported. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if array is a null pointer or the type is not supported. |
 
 ### OH_Drawing_TypographyGetMaxWidth()
 
@@ -2974,7 +2974,7 @@ Obtains the line bounds in a typography object. This function must be called aft
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_Range* | Pointer to the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object. If the line index is invalid, start and end in the<br>     result value are both 0. |
+| OH_Drawing_Range* | Pointer to the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object. If the line index is invalid, start and end in the      result value are both 0. |
 
 ### OH_Drawing_CreateFontDescriptor()
 
@@ -3129,7 +3129,7 @@ Obtains the information about a system font based on the given system font name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | Pointer to the system font descriptor object. When no longer needed, use<br>     [OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) to release the pointer. |
+| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | Pointer to the system font descriptor object. When no longer needed, use      [OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) to release the pointer. |
 
 ### OH_Drawing_TypographyGetLineMetrics()
 
@@ -3318,7 +3318,7 @@ Obtains the default text style of a typography style.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_TextStyle* | Pointer to the [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md) object. Release this pointer by calling<br>     [OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) when this object is no longer needed. |
+| OH_Drawing_TextStyle* | Pointer to the [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md) object. Release this pointer by calling      [OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) when this object is no longer needed. |
 
 ### OH_Drawing_TypographyGetEffectiveAlignment()
 
@@ -3374,7 +3374,7 @@ Checks whether the maximum number of lines is limited for text.
 
 | Type | Description |
 | -- | -- |
-| bool | Whether the text has a maximum line limit. The value true means there is no maximum line limit, and <br>     false means there is a maximum line limit. |
+| bool | Whether the text has a maximum line limit. The value true means there is no maximum line limit, and       false means there is a maximum line limit. |
 
 ### OH_Drawing_TypographyIsEllipsized()
 
@@ -3479,7 +3479,7 @@ Obtains the metrics of a given line or the metrics of the first character in a g
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the metrics of the given line or the metrics of the first character in the given line is<br>     obtained; returns false otherwise. |
+| bool | Returns true if the metrics of the given line or the metrics of the first character in the given line is      obtained; returns false otherwise. |
 
 ### OH_Drawing_SetTypographyTextFontWeight()
 
@@ -4673,7 +4673,7 @@ Obtains the locale of a text style.
 
 | Type | Description |
 | -- | -- |
-| const char* | Pointer to the locale in the format of language-country. For example, zh-CN indicates Chinese (China), and<br>     en-US indicates English (United States). For details, see BCP 47. |
+| const char* | Pointer to the locale in the format of language-country. For example, zh-CN indicates Chinese (China), and      en-US indicates English (United States). For details, see BCP 47. |
 
 ### OH_Drawing_SetTextStyleBadgeType()
 
@@ -4815,7 +4815,7 @@ Checks whether two text styles are equal. The word width property is not involve
 
 | Type | Description |
 | -- | -- |
-| bool | Whether two text style objects are equal. true if the source rectangle is equal to the destination<br>     rectangle; false otherwise. |
+| bool | Whether two text style objects are equal. true if the source rectangle is equal to the destination      rectangle; false otherwise. |
 
 ### OH_Drawing_TextStyleIsEqualByFont()
 
@@ -4994,7 +4994,7 @@ Obtains the system font configuration.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontConfigInfo*](capi-drawing-oh-drawing-fontconfiginfo.md) | Pointer to the system font configuration. When it is no longer required, call<br>     [OH_Drawing_DestroySystemFontConfigInfo](capi-drawing-text-typography-h.md#oh_drawing_destroysystemfontconfiginfo) to release the pointer to the object. |
+| [OH_Drawing_FontConfigInfo*](capi-drawing-oh-drawing-fontconfiginfo.md) | Pointer to the system font configuration. When it is no longer required, call      [OH_Drawing_DestroySystemFontConfigInfo](capi-drawing-text-typography-h.md#oh_drawing_destroysystemfontconfiginfo) to release the pointer to the object. |
 
 ### OH_Drawing_DestroySystemFontConfigInfo()
 
@@ -5397,7 +5397,7 @@ Obtains the font weight of a text line style.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight) | Font weight.<br>     <br> For details about the available options, see [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight). |
+| [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight) | Font weight.      <br> For details about the available options, see [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight). |
 
 ### OH_Drawing_TypographyTextlineStyleGetFontStyle()
 
@@ -5423,7 +5423,7 @@ Obtains the font style of the strut style in a typography style.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) | Font style of the strut style in a typography style. 1 indicates italic, and 0 or others indicate<br>     non-italic. For details, see the [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) enumeration. |
+| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) | Font style of the strut style in a typography style. 1 indicates italic, and 0 or others indicate      non-italic. For details, see the [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) enumeration. |
 
 ### OH_Drawing_TypographyTextlineStyleGetFontFamilies()
 
@@ -5549,7 +5549,7 @@ Checks whether only the font height is used for a text line style.
 
 | Type | Description |
 | -- | -- |
-| bool | Method for calculating the height of a font block. true means that the height is calculated based on the<br>     font size; false means that the height is calculated based on the line spacing. |
+| bool | Method for calculating the height of a font block. true means that the height is calculated based on the      font size; false means that the height is calculated based on the line spacing. |
 
 ### OH_Drawing_TypographyTextlineStyleGetHalfLeading()
 
@@ -5679,7 +5679,7 @@ Obtains the text direction of a typography style.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection) | Text direction. 0 means right-to-left; 1 means left-to-right. For details, see<br>     [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection). |
+| [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection) | Text direction. 0 means right-to-left; 1 means left-to-right. For details, see      [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection). |
 
 ### OH_Drawing_TypographyGetTextMaxLines()
 
@@ -5848,7 +5848,7 @@ Creates a text tab object.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_TextTab* | Pointer to the OH_Drawing_TextTab object created. If a null pointer is returned, the creation fails. A<br>     possible cause is that no memory is available. |
+| OH_Drawing_TextTab* | Pointer to the OH_Drawing_TextTab object created. If a null pointer is returned, the creation fails. A      possible cause is that no memory is available. |
 
 ### OH_Drawing_DestroyTextTab()
 
@@ -5894,7 +5894,7 @@ Obtains the alignment mode of a text tab.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_TextAlign](capi-drawing-text-typography-h.md#oh_drawing_textalign) | Alignment mode. The value 1 means right alignment, 2 means center alignment, and 0 or other<br>     values mean left alignment. |
+| [OH_Drawing_TextAlign](capi-drawing-text-typography-h.md#oh_drawing_textalign) | Alignment mode. The value 1 means right alignment, 2 means center alignment, and 0 or other      values mean left alignment. |
 
 ### OH_Drawing_GetTextTabLocation()
 
@@ -6058,7 +6058,7 @@ Creates a copy of an existing paragraph style object.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_TypographyStyle* | Pointer to the copied [OH_Drawing_TypographyStyle](capi-drawing-oh-drawing-typographystyle.md) object. If a null pointer is returned, the creation<br>     fails. The possible cause is that no memory is available or style is a null pointer. Release this pointer by<br>     calling [OH_Drawing_DestroyTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytypographystyle) when this object is no longer needed. |
+| OH_Drawing_TypographyStyle* | Pointer to the copied [OH_Drawing_TypographyStyle](capi-drawing-oh-drawing-typographystyle.md) object. If a null pointer is returned, the creation      fails. The possible cause is that no memory is available or style is a null pointer. Release this pointer by      calling [OH_Drawing_DestroyTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytypographystyle) when this object is no longer needed. |
 
 ### OH_Drawing_CopyTextStyle()
 
@@ -6084,7 +6084,7 @@ Creates a copy of an existing text style object.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_TextStyle* | Pointer to the copied [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md) object. If a null pointer is returned, the creation fails.<br>      The possible cause is that no memory is available or style is a null pointer. Release this pointer by<br>     calling [OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) when this object is no longer needed. |
+| OH_Drawing_TextStyle* | Pointer to the copied [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md) object. If a null pointer is returned, the creation fails.       The possible cause is that no memory is available or style is a null pointer. Release this pointer by      calling [OH_Drawing_DestroyTextStyle](capi-drawing-text-typography-h.md#oh_drawing_destroytextstyle) when this object is no longer needed. |
 
 ### OH_Drawing_CopyTextShadow()
 
@@ -6110,7 +6110,7 @@ Creates a copy of an existing text shadow object.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_TextShadow* | Pointer to the copied [OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md) object. If a null pointer is returned, the creation<br>     fails. The possible cause is that no memory is available or shadow is a null pointer. Release this pointer<br>     by calling [OH_Drawing_DestroyTextShadow](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadow) when this object is no longer needed. |
+| OH_Drawing_TextShadow* | Pointer to the copied [OH_Drawing_TextShadow](capi-drawing-oh-drawing-textshadow.md) object. If a null pointer is returned, the creation      fails. The possible cause is that no memory is available or shadow is a null pointer. Release this pointer      by calling [OH_Drawing_DestroyTextShadow](capi-drawing-text-typography-h.md#oh_drawing_destroytextshadow) when this object is no longer needed. |
 
 ### OH_Drawing_DestroyPositionAndAffinity()
 
@@ -6156,7 +6156,7 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_Range* | Returns the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object pointer that indicates the character range. When the object is<br>     no longer needed, use the [OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer) API to release it. |
+| OH_Drawing_Range* | Returns the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object pointer that indicates the character range. When the object is      no longer needed, use the [OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer) API to release it. |
 
 ### OH_Drawing_TypographyGetCharacterPositionAtCoordinateWithBuffer()
 
@@ -6183,7 +6183,7 @@ Obtains the character position information closest to the specified coordinates.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_PositionAndAffinity* | Returns the character index position and affinity at the coordinate. The return type is the<br>     [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md) structure.<br>     <br>When the object is no longer needed, call [OH_Drawing_DestroyPositionAndAffinity](capi-drawing-text-typography-h.md#oh_drawing_destroypositionandaffinity) to release it. |
+| OH_Drawing_PositionAndAffinity* | Returns the character index position and affinity at the coordinate. The return type is the      [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md) structure.      <br>When the object is no longer needed, call [OH_Drawing_DestroyPositionAndAffinity](capi-drawing-text-typography-h.md#oh_drawing_destroypositionandaffinity) to release it. |
 
 ### OH_Drawing_TypographyGetGlyphRangeForCharacterRangeWithBuffer()
 
@@ -6211,7 +6211,7 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_Range* | Returns the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object pointer that indicates the font range. If the object is no<br>     longer needed, use the [OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer) API to release it. |
+| OH_Drawing_Range* | Returns the [OH_Drawing_Range](capi-drawing-oh-drawing-range.md) object pointer that indicates the font range. If the object is no      longer needed, use the [OH_Drawing_ReleaseRangeBuffer](capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer) API to release it. |
 
 ### OH_Drawing_ReleaseRangeBuffer()
 

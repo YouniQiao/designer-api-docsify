@@ -1,3 +1,0 @@
-# LoadingProgressModifier
-
-## Summary

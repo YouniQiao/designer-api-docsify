@@ -54,5 +54,15 @@ NavRouter(value: RouteInfo)
 
 ## 汇总
 
-- [RouteInfo](arkts-arkui-routeinfo-i.md)
-- [NavRouteMode](arkts-arkui-navroutemode-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [RouteInfo](arkts-arkui-routeinfo-i.md) | 路由信息。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [NavRouteMode](arkts-arkui-navroutemode-e.md) | 路由模式。 |
+

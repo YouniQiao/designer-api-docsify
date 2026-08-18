@@ -2,7 +2,7 @@
 
 The definition of Single song.
 
-**Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
+**Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ The definition of Single song.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
 import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

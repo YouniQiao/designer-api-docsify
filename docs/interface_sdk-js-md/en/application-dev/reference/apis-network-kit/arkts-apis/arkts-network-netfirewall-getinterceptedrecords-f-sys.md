@@ -9,7 +9,7 @@ import { netFirewall } from '@kit.NetworkKit';
 ## getInterceptedRecords
 
 ```TypeScript
-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>
+function getInterceptedRecords(userId: int, requestParam: RequestParam): Promise<InterceptedRecordPage>
 ```
 
 Get intercepted records by userId, and it is necessary to specify the pagination query parameters.
@@ -18,7 +18,7 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
-<!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>--><!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>-End-->
+<!--Device-netFirewall-function getInterceptedRecords(userId: int, requestParam: RequestParam): Promise<InterceptedRecordPage>--><!--Device-netFirewall-function getInterceptedRecords(userId: int, requestParam: RequestParam): Promise<InterceptedRecordPage>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -28,7 +28,7 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
+| userId | int | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
 | requestParam | [RequestParam](arkts-network-netfirewall-requestparam-i.md) | Yes | Paging query input parameters. |
 
 **Return value:**

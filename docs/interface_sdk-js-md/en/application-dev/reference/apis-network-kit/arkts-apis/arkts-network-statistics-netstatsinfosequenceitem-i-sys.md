@@ -1,6 +1,6 @@
 # NetStatsInfoSequenceItem (System API)
 
-Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) with start time and end time.
+Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) with start time and end time.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ info: NetStatsInfo
 
 Detailed information of statistics.
 
-**Type:** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)
+**Type:** [NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)
 
 **Since:** 23
 

@@ -14,7 +14,6 @@ Material effect parameters, used to control the display properties of the materi
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## distortFactor

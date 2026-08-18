@@ -14,7 +14,6 @@ Provides OverflowRequest about request/cancel form's overflow
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## formId

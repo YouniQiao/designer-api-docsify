@@ -46,7 +46,7 @@ Verifies the server certificate chain and returns a sorted chain.
 | [2305024](../errorcode-net-networkSecurity.md#2305024-invalid-ca) | Invalid certificate authority (CA). |
 | 2305062 | Invalid hostname. |
 | [2305002](../errorcode-net-networkSecurity.md#2305002-failed-to-obtain-the-issuer-certificate) | Unable to get issuer certificate. |
-| [2305018](../errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) | Self-signed certificate. |
+| [2305018](../errorcode-net-networkSecurity.md#2305018-self-signed-certificate) | Self-signed certificate. |
 | [2305001](../errorcode-net-networkSecurity.md#2305001-unspecified-error) | Unspecified error. |
 | [2305007](../errorcode-net-networkSecurity.md#2305007-failed-to-sign-the-certificate) | Certificate signature failure. |
 | [2305006](../errorcode-net-networkSecurity.md#2305006-failed-to-decode-the-issuer-public-key) | Unable to decode issuer public key. |

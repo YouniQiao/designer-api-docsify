@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onDistanceMeasure
@@ -31,7 +32,7 @@ function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | 测距接口配置参数 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | 是 | 回调函数，返回测距结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DistanceMeasurementResponse](arkts-multimodalawareness-spatialawareness-distancemeasurementresponse-i-sys.md)&gt; | 是 | 回调函数，返回测距结果。 |
 
 **错误码：**
 

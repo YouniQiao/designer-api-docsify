@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDriverInfo
@@ -27,7 +28,7 @@ function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| driverUid | string | 否 | 驱动UID，通过queryDeviceInfo获得。 |
+| driverUid | string | 否 | 驱动UID，通过[queryDeviceInfo](arkts-driverdevelopment-devicemanager-querydeviceinfo-f-sys.md)返回的设备信息获得。如果不传入驱动UID，则默 认获取所有的驱动信息；如果传入了UID但不存在对应的驱动，则会返回空列表。 |
 
 **返回值：**
 

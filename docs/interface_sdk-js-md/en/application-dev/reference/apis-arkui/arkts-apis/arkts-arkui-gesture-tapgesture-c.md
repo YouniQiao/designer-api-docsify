@@ -2,7 +2,7 @@
 
 Defines TapGesture.
 
-**Inheritance/Implementation:** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**Inheritance/Implementation:** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **Since:** 23
 

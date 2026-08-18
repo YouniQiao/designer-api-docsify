@@ -18,7 +18,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -29,7 +29,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
 
 **Examples**
 
@@ -62,7 +62,7 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector: Array&lt;double&gt;)
+**Substitutes:** [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)(rotationVector: Array&lt;double&gt;)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
 

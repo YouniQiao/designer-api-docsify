@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## change
@@ -55,7 +56,7 @@ permissionName: Permissions
 tokenID: int
 ```
 
-被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。 BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 获取。
+被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。 BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 获取。
 
 **类型：** int
 

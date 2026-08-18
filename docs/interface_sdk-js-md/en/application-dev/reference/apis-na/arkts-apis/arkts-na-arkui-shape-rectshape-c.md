@@ -2,7 +2,7 @@
 
 Defines a rect drawing class.
 
-**Inheritance/Implementation:** RectShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
+**Inheritance/Implementation:** RectShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md)
 
 **Since:** 23
 

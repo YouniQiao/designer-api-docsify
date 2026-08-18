@@ -40,7 +40,7 @@ The width of each page in the **Swiper** component equals the maximum width of c
 
 **Deprecated since:** 10
 
-**Substitutes:** [AUTO_LINEAR](#autolinear)
+**Substitutes:** [AUTO_LINEAR](#auto_linear)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
 

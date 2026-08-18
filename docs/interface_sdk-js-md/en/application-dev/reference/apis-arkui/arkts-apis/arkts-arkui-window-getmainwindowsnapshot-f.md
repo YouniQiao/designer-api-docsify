@@ -29,7 +29,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | Array&lt;int&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md#getallmainwindowinfo). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
+| windowId | Array&lt;int&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
 | config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | Yes | Configuration for obtaining the window screenshot. |
 
 **Return value:**

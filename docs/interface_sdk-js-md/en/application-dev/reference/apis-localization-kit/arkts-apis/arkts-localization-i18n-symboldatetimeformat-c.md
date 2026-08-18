@@ -14,7 +14,6 @@ Provide a DateTime formatting interface that supports custom symbols. This inter
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

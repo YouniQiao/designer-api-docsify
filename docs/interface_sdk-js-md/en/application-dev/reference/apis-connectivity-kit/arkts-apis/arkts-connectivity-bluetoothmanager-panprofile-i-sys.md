@@ -2,13 +2,13 @@
 
 Manager pan profile.
 
-**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md#panprofile)
+**Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md)
 
 <!--Device-bluetoothManager-interface PanProfile--><!--Device-bluetoothManager-interface PanProfile-End-->
 

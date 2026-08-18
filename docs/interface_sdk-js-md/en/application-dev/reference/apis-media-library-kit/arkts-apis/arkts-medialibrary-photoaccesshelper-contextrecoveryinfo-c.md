@@ -96,7 +96,7 @@ Level of the grid when the user exits last time.
 recommendationType: int
 ```
 
-Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#recommendationtype). If no recommendation was set during the last selection, the default value is **0**.
+Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md). If no recommendation was set during the last selection, the default value is **0**.
 
 **Type:** int
 
@@ -114,7 +114,7 @@ Enumerated value of the recommended content set by the user during the last sele
 selectedRecommendationType: int
 ```
 
-Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#recommendationtype). If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
+Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md). If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
 **Type:** int
 

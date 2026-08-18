@@ -6,7 +6,7 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component](arkts-test-uitest-component-c.md#component)
+**Substitutes:** [Component](arkts-test-uitest-component-c.md)
 
 <!--Device-unnamed-declare class UiComponent--><!--Device-unnamed-declare class UiComponent-End-->
 

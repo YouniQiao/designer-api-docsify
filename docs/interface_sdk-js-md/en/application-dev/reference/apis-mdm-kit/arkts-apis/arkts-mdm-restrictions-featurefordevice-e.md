@@ -158,7 +158,7 @@ Disk erasure capability. Once disabled, the "Disk Erasure" entry will be grayed 
 BLUETOOTH = 9
 ```
 
-Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is configured via [addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#adddisallowedbluetoothdevices) or [addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices), disabling Bluetooth via this API takes priority. The blocklist or trustlist will only take effect after Bluetooth is re-enabled.
+Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is configured via [addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md) or [addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md), disabling Bluetooth via this API takes priority. The blocklist or trustlist will only take effect after Bluetooth is re-enabled.
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ Device capability to modify system time.
 PRINTER = 11
 ```
 
-Device printing capability. When the device printing capability has been disabled, enabling printing for a specific user via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API will not take effect. The printing capability remains disabled for that user.
+Device printing capability. When the device printing capability has been disabled, enabling printing for a specific user via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API will not take effect. The printing capability remains disabled for that user.
 
 **Since:** 26.0.0
 
@@ -238,7 +238,7 @@ Device microphone capability.
 FINGERPRINT = 14
 ```
 
-Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
+Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
 
 **Since:** 26.0.0
 
@@ -254,7 +254,7 @@ Device fingerprint authentication capability. Enable device fingerprint authenti
 USB = 15
 ```
 
-Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices). If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices) API. 2. USB storage device access policy has been set to read-only or disabled via the [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy) API. 3. Specific USB device types have been blocked via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices) API. 4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API. 5. USB-to-serial conversion ([USB_SERIAL](#featurefordevice)) is disabled.
+Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices). If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API. 2. USB storage device access policy has been set to read-only or disabled via the [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) API. 3. Specific USB device types have been blocked via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API. 4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API. 5. USB-to-serial conversion ([USB_SERIAL](#featurefordevice)) is disabled.
 
 **Since:** 26.0.0
 
@@ -334,7 +334,7 @@ Device camera capability.
 MTP_CLIENT = 20
 ```
 
-Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
+Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
 
 **Since:** 26.0.0
 
@@ -398,7 +398,7 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 BACKUP_AND_RESTORE = 24
 ```
 
-Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore** and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
+Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore** and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
 
 **Since:** 26.0.0
 
@@ -510,7 +510,7 @@ Virtual Private Network (VPN) capability.
 NOTIFICATION = 31
 ```
 
-Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addallowednotificationbundles), error code 9200010 will be reported.
+Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md), error code 9200010 will be reported.
 
 **Since:** 26.0.0
 
@@ -670,7 +670,7 @@ Device virtualization service capability, which refers to the system capability 
 USB_SERIAL = 41
 ```
 
-Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices) API. 2. The device ([USB](#featurefordevice)) capability has been disabled.
+Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API. 2. The device ([USB](#featurefordevice)) capability has been disabled.
 
 **Since:** 26.0.0
 

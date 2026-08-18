@@ -6,7 +6,7 @@ Configuring parameters in reverse geocode requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md#reversegeocoderequest)
+**Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

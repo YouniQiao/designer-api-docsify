@@ -2,7 +2,7 @@
 
 Defines the Extendable Button.
 
-**继承/实现关系：** ExtendableButton implements [ButtonAttribute](arkts-na-button-buttonattribute-i.md#buttonattribute)
+**继承/实现关系：** ExtendableButton implements [ButtonAttribute](arkts-na-button-buttonattribute-i.md)
 
 **起始版本：** 26.0.0
 

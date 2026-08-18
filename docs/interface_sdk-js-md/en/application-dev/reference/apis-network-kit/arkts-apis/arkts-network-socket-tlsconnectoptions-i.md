@@ -2,7 +2,7 @@
 
 Defines TLS connection options.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-socket-export interface TLSConnectOptions--><!--Device-socket-export interface TLSConnectOptions-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 ALPNProtocols?: Array<string>
 ```
 
-Application layer protocol negotiation extension, such as "spdy/1", "http/1.1", "h2"
+ALPN protocol. The value range is ["spdy/1", "http/1.1"]. The default value is **[]**.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
 
@@ -40,7 +40,7 @@ Gateway address.
 
 **Type:** NetAddress
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSConnectOptions-address: NetAddress--><!--Device-TLSConnectOptions-address: NetAddress-End-->
 
@@ -52,7 +52,7 @@ Gateway address.
 proxy?: ProxyOptions
 ```
 
-Set this option for the proxy feature.
+Proxy option. By default, no proxy is used.
 
 **Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
@@ -68,11 +68,11 @@ Set this option for the proxy feature.
 secureOptions: TLSSecureOptions
 ```
 
-Protocol http2TLS security related operations.
+TLS security options.
 
 **Type:** [TLSSecureOptions](arkts-network-socket-tlssecureoptions-i.md)
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions--><!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions-End-->
 
@@ -84,11 +84,11 @@ Protocol http2TLS security related operations.
 skipRemoteValidation?: boolean
 ```
 
-Skip identity verification for remote servers. The default value is false.
+Whether to skip certificate authentication on the server. The default value is **false**. The value **true** means to skip certificate authentication on the server, and the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-TLSConnectOptions-skipRemoteValidation?: boolean--><!--Device-TLSConnectOptions-skipRemoteValidation?: boolean-End-->
 
@@ -100,11 +100,11 @@ Skip identity verification for remote servers. The default value is false.
 timeout?: int
 ```
 
-Timeout duration of the TLSSocket connection, in milliseconds.
+Connection timeout interval, in milliseconds. The default value is **0**. The input value must be an integer ranging from 0 to 4294967295. The TLS socket connection fails after the timeout interval.
 
 **Type:** int
 
-**Since:** 24
+**Since:** 22
 
 <!--Device-TLSConnectOptions-timeout?: int--><!--Device-TLSConnectOptions-timeout?: int-End-->
 

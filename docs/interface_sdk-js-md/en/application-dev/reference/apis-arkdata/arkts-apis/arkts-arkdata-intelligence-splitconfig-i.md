@@ -12,7 +12,6 @@ Manages text chunk process configurations.
 
 ```TypeScript
 import { intelligence } from '@kit.ArkData';
-import { intelligence } from '@kit.ArkData';
 ```
 
 ## overlapRatio

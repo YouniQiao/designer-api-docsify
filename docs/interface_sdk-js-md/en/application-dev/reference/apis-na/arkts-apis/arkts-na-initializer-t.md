@@ -20,7 +20,7 @@ function that returns by the function updateConstructorParams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | FixedArray&lt;[RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |  |
+| params | FixedArray&lt;[RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |  |
 
 **Return value:**
 

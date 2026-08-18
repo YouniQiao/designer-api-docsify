@@ -23,7 +23,7 @@ public data?: Map<MaxCountType, int>
 
 data. support to set max_total_count, max_photo_count and max_video_count.
 
-**Type:** Map&lt;[MaxCountType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md), int&gt;
+**Type:** Map&lt;[MaxCountType](arkts-na-file-photopickercomponent-maxcounttype-e.md), int&gt;
 
 **Since:** 26.0.0
 

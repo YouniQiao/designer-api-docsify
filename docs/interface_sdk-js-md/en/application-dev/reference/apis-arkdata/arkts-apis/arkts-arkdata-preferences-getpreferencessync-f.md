@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { preferences } from '@kit.ArkData';
-import { preferences } from '@kit.ArkData';
 ```
 
 ## getPreferencesSync
@@ -27,7 +26,7 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context). |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | options | Options | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**

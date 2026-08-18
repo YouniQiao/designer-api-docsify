@@ -6,8 +6,8 @@
 
 | Name | Description |
 | --- | --- |
-| [If](arkts-na-if-if-f.md#if) | Defines If Component. |
-| [If](arkts-na-if-if-f.md#if) | Defines If Component. It requires calling setIfOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
+| [If](arkts-na-if-if-f.md) | Defines If Component. |
+| [If](arkts-na-if-if-f.md) | Defines If Component. It requires calling setIfOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 

@@ -14,7 +14,6 @@ Format options for partition formatting.
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## fsType

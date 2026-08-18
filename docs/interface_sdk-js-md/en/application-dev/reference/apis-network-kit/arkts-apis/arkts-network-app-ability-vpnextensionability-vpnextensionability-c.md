@@ -1,6 +1,6 @@
 # VpnExtensionAbility
 
-class of vpn extension ability.
+**VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 onCreate(want: Want): void
 ```
 
-Called back when a vpn extension is started for initialization.
+Represents the callback triggered when the extended VPN is initialized. > **NOTE：**> > You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the > extended VPN and clear resources in a timely manner.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Called back when a vpn extension is started for initialization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of created service extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information. |
 
 **Examples**
 
@@ -55,7 +55,7 @@ class MyVpnExtAbility extends VpnExtensionAbility {
 onDestroy(): void
 ```
 
-Called back before a vpn extension is destroyed.
+Represents the callback triggered when the extended VPN is destroyed.
 
 **Since:** 11
 
@@ -83,7 +83,7 @@ class MyVpnExtAbility extends VpnExtensionAbility {
 context: VpnExtensionContext
 ```
 
-Indicates service extension ability context.
+Specified context.
 
 **Type:** [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)
 

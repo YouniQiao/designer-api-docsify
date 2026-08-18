@@ -23,7 +23,7 @@ Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>Ar
 | [int32_t OH_ArkUI_GetNodeContentFromNapiValue(napi_env env, napi_value value, ArkUI_NodeContentHandle* content)](#oh_arkui_getnodecontentfromnapivalue) | Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b>object on the native side. |
 | [int32_t OH_ArkUI_GetDrawableDescriptorFromNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromnapivalue) | Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side. |
 | [int32_t OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromresourcenapivalue) | Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side. |
-| [ArkUI_ErrorCode  OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavigationid) | Obtain the ID of the Navigation component where the node is located. |
+| [ArkUI_ErrorCode OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavigationid) | Obtain the ID of the Navigation component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationName(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationname) | Obtain the name of the NavDestination component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavStackLength(ArkUI_NodeHandle node, int32_t* length)](#oh_arkui_getnavstacklength) | Based on the given index value, obtain the length of the Navigation stack where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int32_t index, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationnamebyindex) | Based on the given index value, obtain the page name of the corresponding positionin the navigation stack where the node is located.Index values are counted from 0, with 0 being the bottom of the stack. |
@@ -68,7 +68,7 @@ Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_N
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetContextFromNapiValue()
 
@@ -94,7 +94,7 @@ Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_C
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetNodeContentFromNapiValue()
 
@@ -120,7 +120,7 @@ Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.           Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.           Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetDrawableDescriptorFromNapiValue()
 
@@ -146,7 +146,7 @@ Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue()
 
@@ -172,12 +172,12 @@ Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_Dra
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetNavigationId()
 
 ```c
-ArkUI_ErrorCode  OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)
+ArkUI_ErrorCode OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)
 ```
 
 **Description**
@@ -199,7 +199,7 @@ Obtain the ID of the Navigation component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationName()
 
@@ -226,7 +226,7 @@ Obtain the name of the NavDestination component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavStackLength()
 
@@ -251,7 +251,7 @@ Based on the given index value, obtain the length of the Navigation stack where 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or length is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or length is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationNameByIndex()
 
@@ -279,7 +279,7 @@ Based on the given index value, obtain the page name of the corresponding positi
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_NODE_INDEX_INVALID](capi-error-code-h.md#arkui_errorcode) if index is an invalid value.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_NODE_INDEX_INVALID](capi-error-code-h.md#arkui_errorcode) if index is an invalid value.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationId()
 
@@ -306,7 +306,7 @@ Obtain the ID of the NavDestination component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationState()
 
@@ -331,7 +331,7 @@ Obtain the state of the NavDestination component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or state is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or state is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationIndex()
 
@@ -356,7 +356,7 @@ Obtain the index of the NavDestination component on the Navigation stack where t
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or index is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or index is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationParam()
 
@@ -380,7 +380,7 @@ Obtain the parameters of the NavDestination component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| napi_value | The parameters.<br>         If a null pointer is returned, it may be because the node is empty or the parameters does not exist. |
+| napi_value | The parameters.          If a null pointer is returned, it may be because the node is empty or the parameters does not exist. |
 
 ### OH_ArkUI_GetRouterPageIndex()
 
@@ -405,7 +405,7 @@ Obtain the index of the page where the node resides in the Router page stack.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or index is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or index is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in RouterPage. |
 
 ### OH_ArkUI_GetRouterPageName()
 
@@ -432,7 +432,7 @@ Obtain the name of the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in RouterPage.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in RouterPage.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetRouterPagePath()
 
@@ -459,7 +459,7 @@ Obtain the path of the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in RouterPage.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in RouterPage.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetRouterPageState()
 
@@ -484,7 +484,7 @@ Obtain the state of the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or state is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node or state is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in RouterPage. |
 
 ### OH_ArkUI_GetRouterPageId()
 
@@ -511,7 +511,7 @@ Obtain the ID of the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.<br>         [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,<br>         this may be because the node is not in RouterPage.<br>         [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_GET_INFO_FAILED](capi-error-code-h.md#arkui_errorcode) if query information failed,          this may be because the node is not in RouterPage.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_PostFrameCallback()
 
@@ -529,7 +529,7 @@ Register a callback to be executed when rendering in the next frame. Cannot be c
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | ArkUI_ContextHandle. |
+| rkUI_ContextHandle uiContext | ArkUI_ContextHandle. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*callback)(uint64_t nanoTimestamp | Custom callback function. |
 | void (\*callback)(uint64_t nanoTimestamp | Timestamp of frame signal. |
@@ -539,7 +539,7 @@ Register a callback to be executed when rendering in the next frame. Cannot be c
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error.<br>         Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.<br>         Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
+| int32_t | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error.          Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.          Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
 
 ### OH_ArkUI_InitModuleForArkTSEnv()
 
@@ -563,7 +563,7 @@ Initialize the ArkTS method for the specified env environment. Cannot be called 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.<br>         [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if env is null or failed to set the whitelist.<br>         [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error. |
+| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if env is null or failed to set the whitelist.          [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error. |
 
 ### OH_ArkUI_NotifyArkTSEnvDestroy()
 
@@ -599,7 +599,7 @@ Register a callback to be executed at the end of the next idle frame.If there is
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | ArkUI_ContextHandle. |
+| rkUI_ContextHandle uiContext | ArkUI_ContextHandle. |
 | void\* userData | Indicates the custom data to be saved. |
 | void (\*callback)(uint64_t nanoTimeLeft | Custom callback function. |
 | void (\*callback)(uint64_t nanoTimeLeft | Time remaining until the end of the current frame. |
@@ -609,7 +609,7 @@ Register a callback to be executed at the end of the next idle frame.If there is
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error.<br>         Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.<br>         Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
+| int32_t | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_CAPI_INIT_ERROR](capi-error-code-h.md#arkui_errorcode) if the CAPI init error.          Returns [ARKUI_ERROR_CODE_UI_CONTEXT_INVALID](capi-error-code-h.md#arkui_errorcode) if the uiContext is invalid.          Returns [ARKUI_ERROR_CODE_CALLBACK_INVALID](capi-error-code-h.md#arkui_errorcode) if the callback function is invalid. |
 
 ### OH_ArkUI_EnableEventPassthrough()
 
@@ -635,6 +635,6 @@ Enables or disables event passthrough. Event passthrough indicates that an event
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code. <br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. <br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the UIContext object is invalid. |
+| ArkUI_ErrorCode | Result code. \n          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful. \n          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the UIContext object is invalid. |
 
 

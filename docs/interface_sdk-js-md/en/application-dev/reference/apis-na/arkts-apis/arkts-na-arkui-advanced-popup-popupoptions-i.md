@@ -68,7 +68,7 @@ icon?: PopupIconOptions
 
 The icon of Popup.
 
-**Type:** [PopupIconOptions](arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
+**Type:** [PopupIconOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
 **Since:** 23
 
@@ -110,7 +110,7 @@ message?: PopupTextOptions
 
 The message of Popup.
 
-**Type:** [PopupTextOptions](arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 23
 
@@ -172,7 +172,7 @@ title?: PopupTextOptions
 
 The title of Popup.
 
-**Type:** [PopupTextOptions](arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
+**Type:** [PopupTextOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
 **Since:** 23
 

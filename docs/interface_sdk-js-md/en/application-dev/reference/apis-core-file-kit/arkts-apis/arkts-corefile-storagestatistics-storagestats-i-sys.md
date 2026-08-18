@@ -14,7 +14,6 @@ Get the user storage statistics.
 
 ```TypeScript
 import { storageStatistics } from '@kit.CoreFileKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## app

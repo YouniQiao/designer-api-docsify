@@ -2,7 +2,7 @@
 
 Defines event info for swipe gesture.
 
-**Inheritance/Implementation:** SwipeGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#basegestureevent)
+**Inheritance/Implementation:** SwipeGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 
 **Since:** 23
 

@@ -3,6 +3,12 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getInputMethodController
@@ -11,13 +17,13 @@
 function getInputMethodController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md#inputmethodcontroller)。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)
+**替代接口：** [getController](arkts-ime-inputmethod-getcontroller-f.md)
 
 <!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
 

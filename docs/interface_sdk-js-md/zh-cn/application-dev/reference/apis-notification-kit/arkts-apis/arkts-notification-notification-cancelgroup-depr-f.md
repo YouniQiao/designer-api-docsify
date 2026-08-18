@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup)
+**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md)
 
 <!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -33,7 +31,7 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | groupName | string | 是 | 通知组名称，此名称需要在发布通知时通过 [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)对象指定。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消本应用指定组下通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消本应用指定组下通知的回调函数。 |
 
 
 ## cancelGroup
@@ -48,7 +46,7 @@ function cancelGroup(groupName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup)
+**替代接口：** [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md)
 
 <!--Device-notification-function cancelGroup(groupName: string): Promise<void>--><!--Device-notification-function cancelGroup(groupName: string): Promise<void>-End-->
 

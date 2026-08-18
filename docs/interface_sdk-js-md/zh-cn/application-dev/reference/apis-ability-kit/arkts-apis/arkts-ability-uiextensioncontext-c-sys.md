@@ -1,6 +1,6 @@
 # UIExtensionContext
 
-UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)的上下文环境，继承自 [ExtensionContext](arkts-ability-extensioncontext-c.md#extensioncontext)，提供UIExtensionAbility的相关配置信息以及操作UIAbility的方法，如 启动UIAbility等。
+UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的上下文环境，继承自 [ExtensionContext](arkts-ability-extensioncontext-c.md)，提供UIExtensionAbility的相关配置信息以及操作UIAbility的方法，如 启动UIAbility等。
 
 **继承/实现关系：** UIExtensionContext extends ExtensionContext
 
@@ -16,7 +16,7 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): long
 ```
 
-将当前UIExtensionAbility连接到一个 [ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)，通过返回的远 程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传 递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在 [onCreate()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#oncreate)或 [onConnect()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)方法中，通过Want参数的 [UI_EXTENSION_ROOT_TOKEN](arkts-ability-wantconstant-params-e.md#params)获取该Token。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+将当前UIExtensionAbility连接到一个 [ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)，通过返回的远 程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传 递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在 [onCreate()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#oncreate)或 [onConnect()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)方法中，通过Want参数的 [UI_EXTENSION_ROOT_TOKEN](arkts-ability-wantconstant-params-e.md)获取该Token。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 26.0.0
 
@@ -65,7 +65,7 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 setHostPageOverlayForbidden(isForbidden: boolean) : void
 ```
 
-是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)拉起的页面被使用方的页面覆盖。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 该接口需要在窗口创建之前调用。建议在[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)的 > [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate)生命周期内调用。
+是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 该接口需要在窗口创建之前调用。建议在[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的 > [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate)生命周期内调用。
 
 **起始版本：** 23
 
@@ -81,7 +81,7 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isForbidden | boolean | 是 | 是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) 拉起的页面被使用方的页面覆盖。true表示不允许，false表示允许。 |
+| isForbidden | boolean | 是 | 是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) 拉起的页面被使用方的页面覆盖。true表示不允许，false表示允许。 |
 
 **错误码：**
 
@@ -135,10 +135,10 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 | [16000070](../errorcode-ability.md#16000070-严格模式下不允许该类型extension启动指定serviceextensionability) | The extension cannot start the service. |
 | [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000076](../errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
 | [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
 | [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
@@ -217,7 +217,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
-| accountId | int | 是 | 系统账号的ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
+| accountId | int | 是 | 系统账号的ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 接口获取。 |
 
 **返回值：**
 
@@ -296,7 +296,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid. |
+| [16000076](../errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
@@ -353,7 +353,7 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Pr
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | Target UIAbility does not exist. |
-| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid. |
+| [16000076](../errorcode-ability.md#16000076-指定的app_instance_key不存在) | The app instance key is invalid. |
 | [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
 | [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 | [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |

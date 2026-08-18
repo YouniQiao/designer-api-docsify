@@ -1,6 +1,6 @@
 # AudioManager
 
-音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager)获取AudioManager实例。
+音频音量和设备管理。 在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)获取AudioManager实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## disableSafeMediaVolume
@@ -90,7 +92,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#audioeffectmanager系统接口) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) instance.
 
 **起始版本：** 23
 
@@ -200,7 +202,7 @@ getRecordingManager(): AudioRecordingManager
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
-## on_ringerModeChange
+## on_ringerModeChange('ringerModeChange')
 
 ```TypeScript
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
@@ -225,7 +227,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
 
 **示例**
 
@@ -235,7 +237,7 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 });
 ```
 
-## on_volumeChange
+## on_volumeChange('volumeChange')
 
 ```TypeScript
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
@@ -260,7 +262,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | 是 | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
 
 **示例**
 
@@ -293,7 +295,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | Audio scene mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 

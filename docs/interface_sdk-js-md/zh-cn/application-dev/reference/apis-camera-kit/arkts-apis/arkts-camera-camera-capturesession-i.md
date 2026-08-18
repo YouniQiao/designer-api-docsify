@@ -1,12 +1,12 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
+**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addInput
@@ -23,7 +25,7 @@
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -54,7 +56,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -125,7 +127,7 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
 
 **错误码：**
 
@@ -669,7 +671,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -681,7 +683,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **废弃版本：** 11
 
-**替代接口：** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'error', callback?: ErrorCallback)
+**替代接口：** [off](arkts-camera-camera-videosession-i.md#off_errorerror)(type: 'error', callback?: ErrorCallback)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -692,9 +694,9 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_focusStateChange
+## off_focusStateChange('focusStateChange')
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -706,7 +708,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 **废弃版本：** 11
 
-**替代接口：** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
+**替代接口：** [off](arkts-camera-camera-videosession-i.md#off_errorerror)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -717,9 +719,9 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -731,7 +733,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **废弃版本：** 11
 
-**替代接口：** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'error', callback: ErrorCallback)
+**替代接口：** [on](arkts-camera-camera-videosession-i.md#on_errorerror)(type: 'error', callback: ErrorCallback)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -742,9 +744,9 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](#beginconfig)， [commitConfig](#commitconfig)，[addInput](#addinput)等接 口发生错误时返回错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
-## on_focusStateChange
+## on_focusStateChange('focusStateChange')
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -756,7 +758,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 **废弃版本：** 11
 
-**替代接口：** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
+**替代接口：** [on](arkts-camera-camera-videosession-i.md#on_errorerror)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -767,7 +769,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。仅当自动对焦模式时,且相机对焦状态发生改变时可触发该事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
 
 ## release
 
@@ -791,7 +793,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -835,7 +837,7 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md#camerainput)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -866,7 +868,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -913,7 +915,7 @@ setExposureBias(exposureBias: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
+| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
 
 **错误码：**
 
@@ -1153,7 +1155,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -1215,7 +1217,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

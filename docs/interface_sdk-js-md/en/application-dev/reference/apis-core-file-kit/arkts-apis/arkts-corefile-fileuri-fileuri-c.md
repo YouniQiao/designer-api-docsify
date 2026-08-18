@@ -14,7 +14,6 @@ FileUri represents the uri of the file.
 
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
-import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## constructor

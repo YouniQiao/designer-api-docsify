@@ -74,7 +74,7 @@ static addMonitor(valueInfo: MonitorValueInfo | MonitorValueInfo[],
 | --- | --- | --- | --- |
 | valueInfo | [MonitorValueInfo](arkts-na-utils-monitorvalueinfo-i.md) \| [MonitorValueInfo](arkts-na-utils-monitorvalueinfo-i.md)[] | 是 | 监听变量的信息或其数组。 |
 | monitorCallback | [MonitorCallback](arkts-na-monitorcallback-t.md) | 是 | 触发监听时调用的回调函数。 |
-| options | [MonitorBaseOptions](arkts-na-utils-monitorbaseoptions-i.md) | 否 | 设置函数的行为，默认行为详见[MonitorBaseOptions](arkts-na-utils-monitorbaseoptions-i.md#monitorbaseoptions)。 |
+| options | [MonitorBaseOptions](arkts-na-utils-monitorbaseoptions-i.md) | 否 | 设置函数的行为，默认行为详见[MonitorBaseOptions](arkts-na-utils-monitorbaseoptions-i.md)。 |
 
 **返回值：**
 

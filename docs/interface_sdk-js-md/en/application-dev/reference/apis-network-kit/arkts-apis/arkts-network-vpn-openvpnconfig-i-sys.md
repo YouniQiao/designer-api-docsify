@@ -2,7 +2,7 @@
 
 Define configuration of the open VPN network.
 
-**Inheritance/Implementation:** OpenVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api)
+**Inheritance/Implementation:** OpenVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)
 
 **Since:** 12
 
@@ -40,16 +40,16 @@ The ask pass for the openvpn VPN network.
 ## ovpnAuthType
 
 ```TypeScript
-ovpnAuthType?: number
+ovpnAuthType?: int
 ```
 
 The auth type for the openvpn VPN network.
 
-**Type:** number
+**Type:** int
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnAuthType?: number--><!--Device-OpenVpnConfig-ovpnAuthType?: number-End-->
+<!--Device-OpenVpnConfig-ovpnAuthType?: int--><!--Device-OpenVpnConfig-ovpnAuthType?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -148,16 +148,16 @@ The private key file path for the openvpn VPN network.
 ## ovpnProtocol
 
 ```TypeScript
-ovpnProtocol?: number
+ovpnProtocol?: int
 ```
 
 The protocol for the openvpn VPN network.
 
-**Type:** number
+**Type:** int
 
 **Since:** 12
 
-<!--Device-OpenVpnConfig-ovpnProtocol?: number--><!--Device-OpenVpnConfig-ovpnProtocol?: number-End-->
+<!--Device-OpenVpnConfig-ovpnProtocol?: int--><!--Device-OpenVpnConfig-ovpnProtocol?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

@@ -6,7 +6,7 @@ WLAN热点配置信息。
 
 **废弃版本：** 9
 
-**替代接口：** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#hotspotconfig系统接口)
+**替代接口：** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
 
 <!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
 
@@ -17,6 +17,10 @@ WLAN热点配置信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## band

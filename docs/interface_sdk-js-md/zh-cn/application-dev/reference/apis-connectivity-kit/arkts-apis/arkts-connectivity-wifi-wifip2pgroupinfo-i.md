@@ -6,7 +6,7 @@ P2P群组信息。
 
 **废弃版本：** 9
 
-**替代接口：** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#wifip2pgroupinfo)
+**替代接口：** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)
 
 <!--Device-wifi-interface WifiP2pGroupInfo--><!--Device-wifi-interface WifiP2pGroupInfo-End-->
 
@@ -15,6 +15,10 @@ P2P群组信息。
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## clientDevices

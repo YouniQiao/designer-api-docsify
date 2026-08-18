@@ -28,7 +28,7 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties). |
+| displayId | long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md). |
 
 **Return value:**
 

@@ -12,8 +12,6 @@ The module defines the environment variables for the application runtime, includ
 
 ```TypeScript
 import { Configuration } from '@kit.AbilityKit';
-import { Configuration } from '@kit.AbilityKit';
-import { ConfigurationConstant } from '@kit.AbilityKit';
 import { ConfigurationConstant } from '@kit.AbilityKit';
 ```
 
@@ -41,7 +39,7 @@ Dark/Light color mode of the application. The light color mode is used by defaul
 direction?: ConfigurationConstant.Direction
 ```
 
-Screen orientation of the application. The options are as follows: - **DIRECTION_NOT_SET**: The screen orientation is not set. - **DIRECTION_HORIZONTAL**: horizontal direction. - **DIRECTION_VERTICAL**: vertical direction. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
+Screen orientation of the application. The options are as follows: - **DIRECTION_NOT_SET**: The screen orientation is not set. - **DIRECTION_HORIZONTAL**: horizontal direction. - **DIRECTION_VERTICAL**: vertical direction. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Type:** ConfigurationConstant.Direction
 
@@ -59,7 +57,7 @@ Screen orientation of the application. The options are as follows: - **DIRECTION
 displayId?: long
 ```
 
-ID of the display where the application is located. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
+ID of the display where the application is located. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Type:** long
 
@@ -221,7 +219,7 @@ Mobile network code.
 screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
-Screen density. The options are as follows: - **SCREEN_DENSITY_NOT_SET**: The pixel density is not set. - **SCREEN_DENSITY_SDPI**: 120. - **SCREEN_DENSITY_MDPI**: 160. - **SCREEN_DENSITY_LDPI**: 240. - **SCREEN_DENSITY_XLDPI**: 320. - **SCREEN_DENSITY_XXLDPI**: 480. - **SCREEN_DENSITY_XXXLDPI**: 640. The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md#applicationcontext) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage).
+Screen density. The options are as follows: - **SCREEN_DENSITY_NOT_SET**: The pixel density is not set. - **SCREEN_DENSITY_SDPI**: 120. - **SCREEN_DENSITY_MDPI**: 160. - **SCREEN_DENSITY_LDPI**: 240. - **SCREEN_DENSITY_XLDPI**: 320. - **SCREEN_DENSITY_XXLDPI**: 480. - **SCREEN_DENSITY_XXXLDPI**: 640. The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect. You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Type:** ConfigurationConstant.ScreenDensity
 

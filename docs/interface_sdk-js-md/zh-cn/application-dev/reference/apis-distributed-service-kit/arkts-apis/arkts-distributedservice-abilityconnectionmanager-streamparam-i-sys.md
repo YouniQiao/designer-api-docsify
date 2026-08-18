@@ -13,6 +13,7 @@ Streaming configuration parameters.
 ## 导入模块
 
 ```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bitrate

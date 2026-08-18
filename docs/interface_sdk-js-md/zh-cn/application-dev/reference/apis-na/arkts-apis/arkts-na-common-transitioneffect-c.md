@@ -101,7 +101,7 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 | --- | --- |
 | [TransitionEffect](arkts-na-common-transitioneffect-c.md) | 组合过渡效应。 |
 
-## constructor
+## constructor('identity' | 'slideSwitch')
 
 ```TypeScript
 constructor(type: 'identity' | 'slideSwitch', effect: undefined)
@@ -126,7 +126,7 @@ constructor(type: 'identity' | 'slideSwitch', effect: undefined)
 | type | 'identity' \| 'slideSwitch' | 是 | 转场类型。 |
 | effect | undefined | 是 | 转场参数。 |
 
-## constructor
+## constructor('opacity')
 
 ```TypeScript
 constructor(type: 'opacity', effect: double)
@@ -151,7 +151,7 @@ constructor(type: 'opacity', effect: double)
 | type | 'opacity' | 是 | 转场类型。 |
 | effect | double | 是 | 转场参数。 |
 
-## constructor
+## constructor('move')
 
 ```TypeScript
 constructor(type: 'move', effect: TransitionEdge)
@@ -176,7 +176,7 @@ constructor(type: 'move', effect: TransitionEdge)
 | type | 'move' | 是 | 转场类型。 |
 | effect | [TransitionEdge](arkts-na-common-transitionedge-e.md) | 是 | 转场参数。 |
 
-## constructor
+## constructor('translate')
 
 ```TypeScript
 constructor(type: 'translate', effect: TranslateOptions)
@@ -201,7 +201,7 @@ constructor(type: 'translate', effect: TranslateOptions)
 | type | 'translate' | 是 | 转场类型。 |
 | effect | [TranslateOptions](arkts-na-common-translateoptions-i.md) | 是 | 转场参数。 |
 
-## constructor
+## constructor('rotate')
 
 ```TypeScript
 constructor(type: 'rotate', effect: RotateOptions)
@@ -226,7 +226,7 @@ constructor(type: 'rotate', effect: RotateOptions)
 | type | 'rotate' | 是 | 转场类型。 |
 | effect | [RotateOptions](arkts-na-common-rotateoptions-i.md) | 是 | 转场参数。 |
 
-## constructor
+## constructor('scale')
 
 ```TypeScript
 constructor(type: 'scale', effect: ScaleOptions)
@@ -251,7 +251,7 @@ constructor(type: 'scale', effect: ScaleOptions)
 | type | 'scale' | 是 | 转场类型。 |
 | effect | [ScaleOptions](arkts-na-common-scaleoptions-i.md) | 是 | 转场参数。 |
 
-## constructor
+## constructor('asymmetric')
 
 ```TypeScript
 constructor(type: 'asymmetric', effect: AsymmetricTransitionOption)

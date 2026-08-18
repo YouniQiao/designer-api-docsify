@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## on_fenceStatusChange
+## on_fenceStatusChange('fenceStatusChange')
 
 ```TypeScript
 function on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void

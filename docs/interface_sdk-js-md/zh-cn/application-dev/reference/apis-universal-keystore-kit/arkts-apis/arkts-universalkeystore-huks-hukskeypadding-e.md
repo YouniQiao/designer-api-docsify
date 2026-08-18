@@ -118,7 +118,7 @@ HUKS_PADDING_PKCS7 = 5
 HUKS_PADDING_ISO_IEC_9796_2 = 6
 ```
 
-表示使用ISO_IEC_9796_2填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
+表示使用ISO_IEC_9796_2填充算法<!--Del-->（暂不支持）<!--DelEnd-->。
 
 **起始版本：** 12
 
@@ -134,7 +134,7 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 HUKS_PADDING_ISO_IEC_9797_1 = 7
 ```
 
-表示使用ISO_IEC_9797_1填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
+表示使用ISO_IEC_9797_1填充算法<!--Del-->（暂不支持）<!--DelEnd-->。
 
 **起始版本：** 12
 

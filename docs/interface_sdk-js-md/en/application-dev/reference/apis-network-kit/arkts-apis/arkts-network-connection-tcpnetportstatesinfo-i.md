@@ -1,8 +1,8 @@
 # TcpNetPortStatesInfo
 
-Defines TCP port states of system network.
+Describes the TCP port state information.
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-connection-export interface TcpNetPortStatesInfo--><!--Device-connection-export interface TcpNetPortStatesInfo-End-->
 
@@ -20,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 tcpLocalIp: string
 ```
 
-Local IP of the TCP network.
+Local IP address of the TCP network.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +38,11 @@ Local IP of the TCP network.
 tcpLocalPort: int
 ```
 
-Local port of the TCP network.
+Local port of the TCP network. The value range is [0, 65535].
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ Local port of the TCP network.
 tcpPid: int
 ```
 
-PID of the TCP network.
+PID of the process that listens for the TCP port.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +74,11 @@ PID of the TCP network.
 tcpRemoteIp: string
 ```
 
-Remote IP of the TCP network.
+Remote IP address of the TCP network.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,7 +92,7 @@ Remote IP of the TCP network.
 tcpRemotePort: int
 ```
 
-Remote port of the TCP network.
+Remote port of the TCP network. The value range is [0, 65535].
 
 **Type:** int
 
@@ -110,11 +110,11 @@ Remote port of the TCP network.
 tcpState: TcpState
 ```
 
-Port state of the TCP network.
+TCP network status.
 
 **Type:** [TcpState](arkts-network-connection-tcpstate-e.md)
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,11 +128,11 @@ Port state of the TCP network.
 tcpUid: int
 ```
 
-UID of the TCP network.
+UID of the user who listens for the TCP port.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

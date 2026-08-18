@@ -20,7 +20,7 @@ data: RecordData
 
 传给插件组件提供方使用的数据，类型不限（支持对象、字符串等）。具体数据格式由使用方与提供方协商定义。 AnonyMous Object Rectification
 
-**类型：** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**类型：** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **起始版本：** 23
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## onKeyPressed
@@ -24,7 +25,7 @@ function onKeyPressed(options: KeyPressedConfig, callback: Callback<KeyEvent>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | 是 | Key consumption settings. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Callback used to return key events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Callback used to return key events. |
 
 **错误码：**
 

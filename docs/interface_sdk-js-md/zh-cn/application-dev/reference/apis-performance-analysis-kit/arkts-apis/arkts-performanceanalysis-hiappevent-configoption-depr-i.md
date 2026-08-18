@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md#configoption)
+**替代接口：** [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md)
 
 <!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 

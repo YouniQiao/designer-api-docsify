@@ -53,9 +53,9 @@ function pointer, it points to a function which is used to build content of a Pu
 
 | Parameter | Description |
 | -- | -- |
-| (void \* | *: data ptr, points to start address of a PurgMem obj's content. |
+| void \* | *: data ptr, points to start address of a PurgMem obj's content. |
 | size_t | Data size of the content. |
-| (void \* | *: other private parameters. |
+| void \* | *: other private parameters. |
 
 **Returns**:
 
@@ -111,7 +111,7 @@ destroy a PurgMem obj.
 
 | Type | Description |
 | -- | -- |
-| bool | true is success, while false is fail. return true if purgObj is NULL.<br>      <br>If return true, purgObj will be set to NULL to avoid Use-After-Free. |
+| bool | true is success, while false is fail. return true if purgObj is NULL.       <br>If return true, purgObj will be set to NULL to avoid Use-After-Free. |
 
 ### OH_PurgeableMemory_BeginRead()
 
@@ -135,7 +135,7 @@ begin read a PurgMem obj.
 
 | Type | Description |
 | -- | -- |
-| bool | return true if purgObj's content is present.<br>     If content is purged(no present), system will recover its data,<br>     return false if content is purged and recovered failed.<br>     While return true if content recover success.<br>     OS cannot reclaim the memory of purgObj's content when this<br>     function return true, until PurgMemEndRead() is called. |
+| bool | return true if purgObj's content is present.      If content is purged(no present), system will recover its data,      return false if content is purged and recovered failed.      While return true if content recover success.      OS cannot reclaim the memory of purgObj's content when this      function return true, until PurgMemEndRead() is called. |
 
 ### OH_PurgeableMemory_EndRead()
 
@@ -177,7 +177,7 @@ begin write a PurgMem obj.
 
 | Type | Description |
 | -- | -- |
-| bool | return true if purgObj's content is present.<br>     if content is purged(no present), system will recover its data,<br>     return false if content is purged and recovered failed.<br>     While return true if content is successfully recovered.<br>     OS cannot reclaim the memory of purgObj's content when this<br>     function return true, until PurgMemEndWrite() is called. |
+| bool | return true if purgObj's content is present.      if content is purged(no present), system will recover its data,      return false if content is purged and recovered failed.      While return true if content is successfully recovered.      OS cannot reclaim the memory of purgObj's content when this      function return true, until PurgMemEndWrite() is called. |
 
 ### OH_PurgeableMemory_EndWrite()
 
@@ -219,7 +219,7 @@ get content ptr of a PurgMem obj.
 
 | Type | Description |
 | -- | -- |
-| void * | return start address of a PurgMem obj's content.<br>     <br>Return NULL if purgObj is NULL.<br>     <br>This function should be protect by PurgMemBeginRead()/PurgMemEndRead()<br>     or PurgMemBeginWrite()/PurgMemEndWrite() |
+| void * | return start address of a PurgMem obj's content.      <br>Return NULL if purgObj is NULL.      <br>This function should be protect by PurgMemBeginRead()/PurgMemEndRead()      or PurgMemBeginWrite()/PurgMemEndWrite() |
 
 ### OH_PurgeableMemory_ContentSize()
 
@@ -243,7 +243,7 @@ get content size of a PurgMem obj.
 
 | Type | Description |
 | -- | -- |
-| size_t | return content size of purgObj.<br>     Return 0 if purgObj is NULL. |
+| size_t | return content size of purgObj.      Return 0 if purgObj is NULL. |
 
 ### OH_PurgeableMemory_AppendModify()
 

@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -27,7 +25,7 @@ function remove(
 
 **废弃版本：** 9
 
-**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove系统接口)
+**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -44,7 +42,7 @@ function remove(
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | notificationKey | NotificationKey | 是 | 通知键值。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 
 ## remove
@@ -59,7 +57,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 **废弃版本：** 9
 
-**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove系统接口)
+**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -96,7 +94,7 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove系统接口)
+**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -110,9 +108,9 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hashCode | string | 是 | 通知唯一ID。可以通过[onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) 回调的入参[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#subscribecallbackdata系统接口)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)对象中的hashCode。 |
+| hashCode | string | 是 | 通知唯一ID。可以通过[onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) 回调的入参[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 
 ## remove
@@ -127,7 +125,7 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove系统接口)
+**替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

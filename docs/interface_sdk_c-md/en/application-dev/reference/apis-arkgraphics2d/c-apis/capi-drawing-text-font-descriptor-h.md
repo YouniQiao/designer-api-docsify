@@ -190,7 +190,7 @@ Obtains all system font descriptors that match a font descriptor. In the [OH_Dra
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | An array of [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) objects. Use [OH_Drawing_DestroyFontDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontdescriptors) to<br>     release the array. |
+| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | An array of [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) objects. Use [OH_Drawing_DestroyFontDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontdescriptors) to      release the array. |
 
 ### OH_Drawing_DestroyFontDescriptors()
 
@@ -238,7 +238,7 @@ Obtains the specified font descriptor based on the font name and font type. This
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | Pointer to an [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) object. Call [OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) to<br>     release this pointer when the object is no longer needed. |
+| [OH_Drawing_FontDescriptor*](capi-drawing-oh-drawing-fontdescriptor.md) | Pointer to an [OH_Drawing_FontDescriptor](capi-drawing-oh-drawing-fontdescriptor.md) object. Call [OH_Drawing_DestroyFontDescriptor](capi-drawing-text-typography-h.md#oh_drawing_destroyfontdescriptor) to      release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetSystemFontFullNamesByType()
 
@@ -264,7 +264,7 @@ Obtains an array of font names by font type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of the corresponding font type. Call<br>     [OH_Drawing_DestroySystemFontFullNames](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroysystemfontfullnames) to release this pointer when the object is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of the corresponding font type. Call      [OH_Drawing_DestroySystemFontFullNames](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroysystemfontfullnames) to release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetSystemFontFullNameByIndex()
 
@@ -336,7 +336,7 @@ Obtains the font descriptor array based on the original binary data.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of the font descriptor corresponding to the font<br>     file. Call [OH_Drawing_DestroyFontFullDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptors) to release the pointer when the OH_Drawing_Array<br>     object is no longer needed.<br>     <br>Returns NULL if the operation fails due to an invalid data format or parsing error. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of the font descriptor corresponding to the font      file. Call [OH_Drawing_DestroyFontFullDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptors) to release the pointer when the OH_Drawing_Array      object is no longer needed.      <br>Returns NULL if the operation fails due to an invalid data format or parsing error. |
 
 ### OH_Drawing_GetFontFullDescriptorsFromPath()
 
@@ -360,7 +360,7 @@ Obtains an array of font descriptors based on the font file path.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of the font descriptor corresponding to the font<br>     file. Call [OH_Drawing_DestroyFontFullDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptors) to release the pointer when the OH_Drawing_Array<br>     object is no longer needed.<br>     <br>Returns NULL if the font file is not found, the font file path is invalid, the font file does not have the<br>     required permission, or the file is not in the font format. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to the [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) array of the font descriptor corresponding to the font      file. Call [OH_Drawing_DestroyFontFullDescriptors](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptors) to release the pointer when the OH_Drawing_Array      object is no longer needed.      <br>Returns NULL if the font file is not found, the font file path is invalid, the font file does not have the      required permission, or the file is not in the font format. |
 
 ### OH_Drawing_GetFontFullDescriptorByIndex()
 
@@ -385,7 +385,7 @@ Obtains the font descriptor from the font descriptor array based on the index.
 
 | Type | Description |
 | -- | -- |
-| [const OH_Drawing_FontFullDescriptor*](capi-drawing-oh-drawing-fontfulldescriptor.md) | Returns the pointer to the font descriptor object [OH_Drawing_FontFullDescriptor](capi-drawing-oh-drawing-fontfulldescriptor.md) at the specified<br>     index.<br>     <br>Returns NULL if the index is out of range or the array is invalid. |
+| [const OH_Drawing_FontFullDescriptor*](capi-drawing-oh-drawing-fontfulldescriptor.md) | Returns the pointer to the font descriptor object [OH_Drawing_FontFullDescriptor](capi-drawing-oh-drawing-fontfulldescriptor.md) at the specified      index.      <br>Returns NULL if the index is out of range or the array is invalid. |
 
 ### OH_Drawing_DestroyFontFullDescriptors()
 
@@ -448,7 +448,7 @@ Obtains the Unicode code array from a font file.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER if the font path is invalid, a non-font file is passed in, or<br>     the unicodeArray or arrayLength parameter is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.      <br>Returns OH_DRAWING_SUCCESS if the operation is successful.      <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER if the font path is invalid, a non-font file is passed in, or      the unicodeArray or arrayLength parameter is NULL. |
 
 ### OH_Drawing_GetFontUnicodeArrayFromBuffer()
 
@@ -476,7 +476,7 @@ Obtains the Unicode code array from a font byte stream buffer.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER if the cached data is invalid, the cached data is not font file<br>     data, or the parameters unicodeArray and arrayLength are NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.      <br>Returns OH_DRAWING_SUCCESS if the operation is successful.      <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER if the cached data is invalid, the cached data is not font file      data, or the parameters unicodeArray and arrayLength are NULL. |
 
 ### OH_Drawing_GetFontFullDescriptorAttributeInt()
 
@@ -502,7 +502,7 @@ Obtains the attributes of a font descriptor of the int type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the descriptor or value parameter is null.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the descriptor or value parameter is null.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontFullDescriptorAttributeBool()
 
@@ -528,7 +528,7 @@ Obtains the font descriptor attribute of the bool type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the descriptor or value parameter is null.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the descriptor or value parameter is null.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontFullDescriptorAttributeString()
 
@@ -558,7 +558,7 @@ Obtains the attributes of the [OH_Drawing_String](capi-drawing-oh-drawing-string
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if descriptor or str is a null pointer.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if descriptor or str is a null pointer.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontFullDescriptorAttributeArray()
 
@@ -583,7 +583,7 @@ Obtains the object array attributes of the font descriptor.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Array of objects returned, or NULL if the retrieval fails. When id is FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS,<br>     use the [OH_Drawing_DestroyFontVariationAxis](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontvariationaxis) API to release it when it is no longer needed. When id is<br>     FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE, use the [OH_Drawing_DestroyFontVariationInstance](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontvariationinstance) API to<br>     release it when it is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Array of objects returned, or NULL if the retrieval fails. When id is FULL_DESCRIPTOR_ATTR_O_VARIATION_AXIS,      use the [OH_Drawing_DestroyFontVariationAxis](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontvariationaxis) API to release it when it is no longer needed. When id is      FULL_DESCRIPTOR_ATTR_O_VARIATION_INSTANCE, use the [OH_Drawing_DestroyFontVariationInstance](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontvariationinstance) API to      release it when it is no longer needed. |
 
 ### OH_Drawing_GetFontVariationAxisByIndex()
 
@@ -608,7 +608,7 @@ Obtains the corresponding font variable axis from the font variable axis array b
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontVariationAxis*](capi-drawing-oh-drawing-fontvariationaxis.md) | Returns the pointer to the font variable axis object [OH_Drawing_FontVariationAxis](capi-drawing-oh-drawing-fontvariationaxis.md) at the specified<br>     index.<br>     <br>Returns NULL if the index is out of range or the array is invalid. |
+| [OH_Drawing_FontVariationAxis*](capi-drawing-oh-drawing-fontvariationaxis.md) | Returns the pointer to the font variable axis object [OH_Drawing_FontVariationAxis](capi-drawing-oh-drawing-fontvariationaxis.md) at the specified      index.      <br>Returns NULL if the index is out of range or the array is invalid. |
 
 ### OH_Drawing_DestroyFontVariationAxis()
 
@@ -652,7 +652,7 @@ Obtains the font variable axis attributes of the double type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or value is a null pointer.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or value is a null pointer.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontVariationAxisAttributeInt()
 
@@ -678,7 +678,7 @@ Obtains the font variable axis attributes of the int type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or value is a null pointer.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or value is a null pointer.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontVariationAxisAttributeStr()
 
@@ -708,7 +708,7 @@ Obtains the font variable axis attributes of the [OH_Drawing_String](capi-drawin
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or str is a null pointer.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationAxis or str is a null pointer.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontVariationInstanceByIndex()
 
@@ -733,7 +733,7 @@ Obtains the corresponding font variable instance from the font variable instance
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontVariationInstance*](capi-drawing-oh-drawing-fontvariationinstance.md) | Returns the pointer to the font variable instance object [OH_Drawing_FontVariationInstance](capi-drawing-oh-drawing-fontvariationinstance.md) at the<br>     specified index.<br>     <br>Returns NULL if the index is out of range or the array is invalid. |
+| [OH_Drawing_FontVariationInstance*](capi-drawing-oh-drawing-fontvariationinstance.md) | Returns the pointer to the font variable instance object [OH_Drawing_FontVariationInstance](capi-drawing-oh-drawing-fontvariationinstance.md) at the      specified index.      <br>Returns NULL if the index is out of range or the array is invalid. |
 
 ### OH_Drawing_DestroyFontVariationInstance()
 
@@ -781,7 +781,7 @@ Obtains the font variable instance attributes of the [OH_Drawing_String](capi-dr
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationInstance or str is a null pointer.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.      <br>OH_DRAWING_SUCCESS if the operation is successful.      <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter variationInstance or str is a null pointer.      <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetFontVariationInstanceCoordinate()
 
@@ -831,7 +831,7 @@ Obtains the complete font descriptor object based on the font name and type.
 
 | Type | Description |
 | -- | -- |
-| [const OH_Drawing_FontFullDescriptor*](capi-drawing-oh-drawing-fontfulldescriptor.md) | Returns the pointer to the complete font descriptor object [OH_Drawing_FontFullDescriptor](capi-drawing-oh-drawing-fontfulldescriptor.md). If<br>     OH_Drawing_FontFullDescriptor is not required, use the [OH_Drawing_DestroyFontFullDescriptor](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptor) API to<br>     release the pointer of the object. |
+| [const OH_Drawing_FontFullDescriptor*](capi-drawing-oh-drawing-fontfulldescriptor.md) | Returns the pointer to the complete font descriptor object [OH_Drawing_FontFullDescriptor](capi-drawing-oh-drawing-fontfulldescriptor.md). If      OH_Drawing_FontFullDescriptor is not required, use the [OH_Drawing_DestroyFontFullDescriptor](capi-drawing-text-font-descriptor-h.md#oh_drawing_destroyfontfulldescriptor) API to      release the pointer of the object. |
 
 ### OH_Drawing_GetFontCountFromFile()
 
@@ -905,6 +905,6 @@ Obtains all font file paths of the specified font type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_String*](capi-drawing-oh-drawing-string.md) | List of font paths returned. When no longer needed, use free to release the pointer to this object and the<br>     pointer held internally by each OH_Drawing_String object. |
+| [OH_Drawing_String*](capi-drawing-oh-drawing-string.md) | List of font paths returned. When no longer needed, use free to release the pointer to this object and the      pointer held internally by each OH_Drawing_String object. |
 
 

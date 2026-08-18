@@ -2,7 +2,7 @@
 
 Represents a media asset change request.
 
-**Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **Since:** 23
 
@@ -105,7 +105,7 @@ Adds a resource using fileUri from file management directory
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1. The file corresponding to the URI is not in the app sandbox. <br>2. ResourceType must be image or video |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
 ## createAssetRequest
 
@@ -978,19 +978,19 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## setHiddenAttribute
+## setLivePhoto4dStatus
 
 ```TypeScript
-setHiddenAttribute(hiddenState: boolean): void
+setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void
 ```
 
-Set hidden state of asset.
+Set 4d livephoto status.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void-End-->
+<!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void--><!--Device-MediaAssetChangeRequest-setLivePhoto4dStatus(status: LivePhoto4dStatus, livephoto_4d_latest_pair?: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1000,15 +1000,15 @@ Set hidden state of asset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hiddenState | boolean | Yes | Hidden status of the asset. |
+| status | [LivePhoto4dStatus](arkts-medialibrary-photoaccesshelper-livephoto4dstatus-e-sys.md) | Yes | 4d livephoto status. |
+| livephoto_4d_latest_pair | string | No | The latest 4d livephoto which is genetated by the livephoto. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: 1. Database corrupted.2. The filesystem is abnormal.3. The IPC request timed out. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## setLocation
 
@@ -1152,38 +1152,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
-
-## setTitleByFile
-
-```TypeScript
-setTitleByFile(name: string): void
-```
-
-Set title by filemanger.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void--><!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | asset name to set. <br> Should not contain extensions. The file name contains 1 to 255 characters. Invalid English characters, including: . \ /: *? "'`&lt; &gt; \| {} [] Name-only is not allowed. Or.. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
 
 ## setUserComment
 

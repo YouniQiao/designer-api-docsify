@@ -1,8 +1,8 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md#readableoptions)，支持**Readable**中的所有API。
+既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md)，支持**Readable**中的所有API。
 
-**继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#readable)
+**继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

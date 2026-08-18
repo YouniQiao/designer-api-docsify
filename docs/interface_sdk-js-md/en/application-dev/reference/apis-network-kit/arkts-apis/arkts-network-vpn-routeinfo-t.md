@@ -4,7 +4,7 @@
 export type RouteInfo = connection.RouteInfo
 ```
 
-Get network route information.
+Defines the network route information.
 
 **Since:** 10
 

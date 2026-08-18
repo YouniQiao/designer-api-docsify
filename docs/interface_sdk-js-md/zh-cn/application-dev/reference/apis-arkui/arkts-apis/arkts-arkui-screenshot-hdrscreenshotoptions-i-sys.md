@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -21,7 +22,7 @@
 displayId?: long
 ```
 
-表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md#displaystate)的ID号，该参数应为整数。默认为0。
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。默认为0。
 
 **类型：** long
 
@@ -83,7 +84,7 @@ isCaptureFullOfScreen?: boolean
 isNotificationNeeded?: boolean
 ```
 
-表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过 [captureStatusChange](arkts-arkui-display-onadd-f.md#onadd)接口 监听。
+表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过 captureStatusChange接口 监听。
 
 **类型：** boolean
 

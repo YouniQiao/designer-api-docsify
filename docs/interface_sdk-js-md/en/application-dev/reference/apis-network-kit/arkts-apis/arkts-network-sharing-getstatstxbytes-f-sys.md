@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function getStatsTxBytes(callback: AsyncCallback<int>): void
 ```
 
-Obtains the number of uplink data bytes of the sharing network interfaces.
+Obtains the volume of mobile data traffic sent via network sharing. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of uplink data bytes of the sharing network interfaces. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the data volume, in KB. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ sharing.getStatsTxBytes((error: BusinessError, data: number) => {
 function getStatsTxBytes(): Promise<int>
 ```
 
-Obtains the number of uplink data bytes of the sharing network interfaces.
+Obtains the volume of mobile data traffic sent via network sharing. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -75,7 +75,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returned by the function. |
+| Promise&lt;int&gt; | Promise used to return the data volume, in KB. |
 
 **Error codes:**
 

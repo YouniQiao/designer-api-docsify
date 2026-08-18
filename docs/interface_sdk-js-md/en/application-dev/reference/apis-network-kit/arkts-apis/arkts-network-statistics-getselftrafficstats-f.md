@@ -12,9 +12,9 @@ import { statistics } from '@kit.NetworkKit';
 function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 ```
 
-Get the traffic usage details of the specified network of the calling application in the specified time period and the specified networktype.
+Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result. > **NOTE：**> > - Currently, only cellular and Wi-Fi traffic usage can be obtained. > - Currently, only traffic usage within the last 31 days can be obtained. If the timestamp passed in the parameter > is earlier than 31 days before the current system time, error code 2103019 will be returned. > > - This API may take some time to execute. Do not call it frequently.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
 
@@ -24,13 +24,13 @@ Get the traffic usage details of the specified network of the calling applicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| networkInfo | NetworkInfo | Yes | Network information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; | The statistics of the calling application. |
+| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Promise used to return the historical traffic statistics of the application. |
 
 **Error codes:**
 

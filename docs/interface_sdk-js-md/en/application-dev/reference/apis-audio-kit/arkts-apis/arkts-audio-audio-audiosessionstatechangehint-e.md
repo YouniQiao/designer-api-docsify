@@ -1,6 +1,6 @@
 # AudioSessionStateChangeHint
 
-Enumerates the hints for audio session state changes. The hint is obtained when an [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md#audiosessionstatechangedevent) is received. The hint specifies the action (such as audio pause or volume adjustment) to take on the audio session based on the focus strategy. For details, see [Audio Session Management](../../../media/audio/audio-session-management.md).
+Enumerates the hints for audio session state changes. The hint is obtained when an [AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) is received. The hint specifies the action (such as audio pause or volume adjustment) to take on the audio session based on the focus strategy. For details, see [Audio Session Management](../../../media/audio/audio-session-management.md).
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ A hint is displayed, indicating that audio ducking ends and the audio is played 
 AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6
 ```
 
-Suggests to mute the playback because there is another application begin to play nonmixable audio, application can decide whether to mute. If interrupt strategy is duck, [AUDIO_SESSION_STATE_CHANGE_HINT_DUCK](#audiosessionstatechangehintduck) will replace mute suggestion event, but application can still decide to mute when receive hint duck.
+Suggests to mute the playback because there is another application begin to play nonmixable audio, application can decide whether to mute. If interrupt strategy is duck, [AUDIO_SESSION_STATE_CHANGE_HINT_DUCK](#audio_session_state_change_hint_duck) will replace mute suggestion event, but application can still decide to mute when receive hint duck.
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ Suggests to mute the playback because there is another application begin to play
 AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7
 ```
 
-Suggest to unmute the playback because another application's nonmixable audio ends, application can decide whether to mute. If interrupt strategy is unduck, [AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK](#audiosessionstatechangehintunduck) will replace unmute suggestion event, but application can still decide to unmute when receive hint unduck.
+Suggest to unmute the playback because another application's nonmixable audio ends, application can decide whether to mute. If interrupt strategy is unduck, [AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK](#audio_session_state_change_hint_unduck) will replace unmute suggestion event, but application can still decide to unmute when receive hint unduck.
 
 **Since:** 23
 
@@ -130,7 +130,7 @@ Suggest to unmute the playback because another application's nonmixable audio en
 AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8
 ```
 
-The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-audio-audio-audiosessionbehaviorflags-e.md#mutewheninterrupted) has been set by the interface [setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior) and [setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene) has been called, and the audio session has been activated. After the hint is received, the audio stream is muted.
+The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-audio-audio-audiosessionbehaviorflags-e.md#mute_when_interrupted) has been set by the interface [setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior) and [setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene) has been called, and the audio session has been activated. After the hint is received, the audio stream is muted.
 
 **Since:** 24
 
@@ -146,7 +146,7 @@ The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-
 AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 ```
 
-The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-audio-audio-audiosessionbehaviorflags-e.md#mutewheninterrupted) has been set by the interface [setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior) and [setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene) has been called, and the audio session has been activated. When the hint is received, the audio stream is unmuted.
+The hint can be received only after the parameter [MUTE_WHEN_INTERRUPTED](arkts-audio-audio-audiosessionbehaviorflags-e.md#mute_when_interrupted) has been set by the interface [setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior) and [setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene) has been called, and the audio session has been activated. When the hint is received, the audio stream is unmuted.
 
 **Since:** 24
 

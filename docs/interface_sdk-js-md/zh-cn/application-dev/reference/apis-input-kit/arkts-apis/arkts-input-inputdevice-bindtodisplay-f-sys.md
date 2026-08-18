@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## bindToDisplay
@@ -46,6 +48,6 @@ function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | 拒绝访问。应用没有调用API所需的权限。 |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 非系统应用 |
 | [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | 指定的input device id不存在 |
-| 3900005 | 不支持此外设 |
-| 3900004 | 指定的display id不存在 |
+| [3900005](../errorcode-inputdevice.md#3900005-不支持的输入设备) | 不支持此外设 |
+| [3900004](../errorcode-inputdevice.md#3900004-指定的显示器不存在) | 指定的display id不存在 |
 

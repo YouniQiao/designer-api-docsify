@@ -1,8 +1,8 @@
 # CalendarDialogOptions
 
-日历选择器弹窗选项。 继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md#calendaroptions)。 > **说明：** > > 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小 > 窗口宽度为386vp。
+日历选择器弹窗选项。 继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。 > **说明：** > > 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小 > 窗口宽度为386vp。
 
-**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#calendaroptions)
+**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
 
 **起始版本：** 10
 
@@ -371,7 +371,7 @@ shadow?: ShadowOptions | ShadowStyle
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md#immersiveoptions)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#immersivematerial)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色 > backgroundColor、背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
+设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色 > backgroundColor、背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
 
 **类型：** SystemUiMaterial
 

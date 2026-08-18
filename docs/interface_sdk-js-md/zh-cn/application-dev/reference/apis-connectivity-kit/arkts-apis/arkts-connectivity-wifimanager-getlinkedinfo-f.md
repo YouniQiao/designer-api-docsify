@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -59,7 +61,7 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 表示回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 表示回调函数。 |
 
 **错误码：**
 

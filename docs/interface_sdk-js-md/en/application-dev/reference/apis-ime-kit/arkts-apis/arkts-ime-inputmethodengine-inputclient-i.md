@@ -12,7 +12,6 @@ You must first use on('inputStart') to obtain a **InputClient** instance, and th
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -34,7 +33,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | int | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -168,7 +167,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | int | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -421,7 +420,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | int | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -541,7 +540,7 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. > **NOTE：**> > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md#panel) as the > soft keyboard window.
+Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. > **NOTE：**> > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the > soft keyboard window.
 
 **Since:** 12
 
@@ -622,7 +621,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -663,7 +662,7 @@ Get attribute about editor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | Yes | the callback of getEditorAttribute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | Yes | the callback of getEditorAttribute. |
 
 **Error codes:**
 
@@ -815,7 +814,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | int | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -947,7 +946,7 @@ Obtains the index of the text where the cursor is located. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the text index is obtained, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the text index is obtained, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1062,7 +1061,7 @@ Inserts text. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1194,7 +1193,7 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | int | Yes | Direction in which the cursor moves. <br>- **1**: upward. <br>- **2**: downward. <br>- **3**: leftward. <br>- **4**: rightward. which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1313,9 +1312,9 @@ Unsubscribe 'attachOptionsDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No | optional, the callback called when the attach options changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | No | optional, the callback called when the attach options changed. |
 
-## off_attachOptionsDidChange
+## off_attachOptionsDidChange('attachOptionsDidChange')
 
 ```TypeScript
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
@@ -1334,7 +1333,7 @@ Unsubscribes from the event indicating that additional options for binding an in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
 
 **Examples**
 
@@ -1368,9 +1367,9 @@ Subscribe 'attachOptionsDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes | the callback called when the attach options changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | Yes | the callback called when the attach options changed. |
 
-## on_attachOptionsDidChange
+## on_attachOptionsDidChange('attachOptionsDidChange')
 
 ```TypeScript
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
@@ -1389,7 +1388,7 @@ Subscribes to the event indicating that the additional options for binding an in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes | Callback used to return the additional options for binding an input method. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AttachOptions&gt; | Yes | Callback used to return the additional options for binding an input method. |
 
 **Error codes:**
 
@@ -1417,7 +1416,7 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler. > **NOTE：**> > The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#messagehandler) object is globally unique. After multiple > registrations, only the last registered object is valid and retained, and the > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered > object is triggered. > > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#messagehandler). Its > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
+Registers or unregisters MessageHandler. > **NOTE：**> > The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple > registrations, only the last registered object is valid and retained, and the > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered > object is triggered. > > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 23
 
@@ -1429,7 +1428,7 @@ Registers or unregisters MessageHandler. > **NOTE：**> > The [MessageHandler](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#messagehandler). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1476,7 +1475,7 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1599,7 +1598,7 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | range | Range | Yes | Range of the selected text. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1709,7 +1708,7 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-Sends an extended edit action. This API uses an asynchronous callback to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#extendaction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
+Sends an extended edit action. This API uses an asynchronous callback to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
 **Since:** 23
 
@@ -1722,7 +1721,7 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | action | ExtendAction | Yes | Extended edit action to send. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1752,7 +1751,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-Sends an extended edit action. This API uses a promise to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for > further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#extendaction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
+Sends an extended edit action. This API uses a promise to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for > further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
 **Since:** 23
 
@@ -1811,7 +1810,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | action | int | Yes | Action of the function key. <br>- **0**: invalid key. <br>- **1**: confirm key (Enter key). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1926,7 +1925,7 @@ Sends the custom communication to the edit box application attached to the input
 | [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) | input method client is not editable. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 | [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) | the other side does not accept the request. |
-| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) | the input method is in basic mode. |
+| [12800014](../errorcode-inputmethod-framework.md#12800014-non-full-access-mode-of-the-input-method-application) | the input method is in basic mode. |
 
 **Examples**
 

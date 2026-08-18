@@ -12,7 +12,7 @@ import { telephonyManager } from '@kit.MDMKit';
 function removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void
 ```
 
-Removes the trustlist or blocklist for outgoing calls. If the list is not set, the removal fails. For example, an enterprise can use this API when removing call restrictions and restoring normal call permissions for employees. A policy conflict is reported when this API is called in the following scenario: If the device's call capability has been disabled via the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) API, using this API to remove an outgoing call trustlist or blocklist will return error code 203. To resolve the conflict, enable the call capability via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy).
+Removes the trustlist or blocklist for outgoing calls. If the list is not set, the removal fails. For example, an enterprise can use this API when removing call restrictions and restoring normal call permissions for employees. A policy conflict is reported when this API is called in the following scenario: If the device's call capability has been disabled via the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md) API, using this API to remove an outgoing call trustlist or blocklist will return error code 203. To resolve the conflict, enable the call capability via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md).
 
 **Since:** 20
 

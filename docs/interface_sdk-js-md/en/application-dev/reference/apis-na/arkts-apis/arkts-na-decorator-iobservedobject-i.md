@@ -2,7 +2,7 @@
 
 Define IObservedObject interface.
 
-**Inheritance/Implementation:** IObservedObject extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md#iwatchsubscriberregister)
+**Inheritance/Implementation:** IObservedObject extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md)
 
 **Since:** 23
 

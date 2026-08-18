@@ -6,7 +6,7 @@ Defines the return value of the listener callback.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#changedata)
+**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
 
 <!--Device-userFileManager-interface ChangeData--><!--Device-userFileManager-interface ChangeData-End-->
 
@@ -68,7 +68,7 @@ Notification type.
 uris: Array<string>
 ```
 
-Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md#notifytype-system-api).
+Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md).
 
 **Type:** Array&lt;string&gt;
 

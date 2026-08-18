@@ -12,7 +12,6 @@ A helper to enable a picker to select output devices
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## constructor
@@ -62,7 +61,7 @@ Unregister picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
@@ -70,7 +69,7 @@ Unregister picker state change callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## off_pickerStateChange
+## off_pickerStateChange('pickerStateChange')
 
 ```TypeScript
 off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
@@ -91,7 +90,7 @@ Unregister picker state change callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | No | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
@@ -118,7 +117,7 @@ Register picker state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
@@ -126,7 +125,7 @@ Register picker state change callback.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-## on_pickerStateChange
+## on_pickerStateChange('pickerStateChange')
 
 ```TypeScript
 on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
@@ -147,7 +146,7 @@ Register picker state change callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | Yes | The callback used to handle picker state changed event. |
 
 **Error codes:**
 

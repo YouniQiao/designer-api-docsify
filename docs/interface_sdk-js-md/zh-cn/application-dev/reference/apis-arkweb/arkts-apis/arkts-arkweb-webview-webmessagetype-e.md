@@ -1,6 +1,6 @@
 # WebMessageType
 
-[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md#webmessageport)接口所支持的数据类型。
+[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口所支持的数据类型。
 
 **起始版本：** 10
 

@@ -1,8 +1,8 @@
 # ManualExposure（系统接口）
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#manualexposurequery系统接口) Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration.
 
-**继承/实现关系：** ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md#manualexposurequery系统接口)
+**继承/实现关系：** ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposure

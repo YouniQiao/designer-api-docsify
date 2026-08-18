@@ -1,10 +1,10 @@
 # RichEditorController
 
-RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller)。 > **说明：** > > 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、 > [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan) > 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。 > **说明：** > > 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addtextspan)、 > [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan) > 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
 
 ## 导入对象 ```ts controller: RichEditorController = new RichEditorController(); ```
 
-**继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller)
+**继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
 
 **起始版本：** 10
 
@@ -23,7 +23,7 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number
 ```
 
-在RichEditor中添加用户自定义布局（BuilderSpan）。 > **说明：** > > - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。 > > - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#richeditorbuilderspanoptions)设置此builder在RichEditor中的index（一个文字为一个单位）。 > > - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。 > > - 支持通过bindSelectionMenu设置自定义菜单。 > > - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)， > onSelect，aboutToDelete获取 > builderSpan信息。 > > - 不支持通过[updateSpanStyle](#updatespanstyle)， > [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。 > > - 对此builder节点进行复制或粘贴不生效。 > > - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。 > > - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。 > > - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。 > > - 对[addBuilderSpan](#addbuilderspan)的节点文本， > enableDataDetector、 > dataDetectorConfig、 > enableSelectedDataDetector功能不会生效。 > 通用属性仅支持size、padding、margin、 > aspectRatio、borderStyle、 > borderWidth、borderColor、 > borderRadius、 > backgroundColor、 > backgroundBlurStyle > 、opacity、 > blur、 > backdropBlur、 > shadow、 > grayscale、 > brightness、saturate > 、contrast、 > invert、 > sepia、 > hueRotate、 > colorBlend、 > linearGradientBlur、 > clip、mask、 > foregroundBlurStyle > 、accessibilityGroup、 > accessibilityText、 > accessibilityDescription、 > accessibilityLevel、 > sphericalEffect、 > lightUpEffect、 > pixelStretchEffect。
+在RichEditor中添加用户自定义布局（BuilderSpan）。 > **说明：** > > - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。 > > - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。 > > - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。 > > - 支持通过bindSelectionMenu设置自定义菜单。 > > - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)， > onSelect，aboutToDelete获取 > builderSpan信息。 > > - 不支持通过[updateSpanStyle](#updatespanstyle)， > [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。 > > - 对此builder节点进行复制或粘贴不生效。 > > - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。 > > - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。 > > - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。 > > - 对[addBuilderSpan](#addbuilderspan)的节点文本， > enableDataDetector、 > dataDetectorConfig、 > enableSelectedDataDetector功能不会生效。 > 通用属性仅支持size、padding、margin、 > aspectRatio、borderStyle、 > borderWidth、borderColor、 > borderRadius、 > backgroundColor、 > backgroundBlurStyle > 、opacity、 > blur、 > backdropBlur、 > shadow、 > grayscale、 > brightness、saturate > 、contrast、 > invert、 > sepia、 > hueRotate、 > colorBlend、 > linearGradientBlur、 > clip、mask、 > foregroundBlurStyle > 、accessibilityGroup、 > accessibilityText、 > accessibilityDescription、 > accessibilityLevel、 > sphericalEffect、 > lightUpEffect、 > pixelStretchEffect。
 
 **起始版本：** 11
 

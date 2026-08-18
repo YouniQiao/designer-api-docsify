@@ -38,7 +38,7 @@ Access token ID of the application, which is used in the [checkAccessToken](../.
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate. For details, see the **appProvisionType** field in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#applicationinfo).
+Distribution type of the application signing certificate. For details, see the **appProvisionType** field in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
 
 **Type:** string
 
@@ -416,7 +416,7 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-na/arkts-apis/arkts-deviceinfo.md#ohosdeviceinfo)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-na/arkts-apis/arkts-deviceinfo.md)) to determine the compatibility.
 
 **Type:** string
 

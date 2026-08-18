@@ -2,9 +2,9 @@
 
 ## Overview
 
-Defines the device axis event struct and enumerates device axis events. The axis type defines the physicalbehavior characteristics of an input device in different interaction scenarios. The system uses the axis type todistinguish and transmit different gesture interaction information.
+**Include**: <multimodalinput/oh_axis_type.h>
 
-**Library**: liboh_input.so
+**Library**: libohinput.so
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
@@ -38,11 +38,11 @@ Defines the axis type of an input device.
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_TYPE_UNKNOWN = 0 |  |
-| AXIS_TYPE_SCROLL_VERTICAL = 1 |  |
-| AXIS_TYPE_SCROLL_HORIZONTAL = 2 |  |
-| AXIS_TYPE_PINCH = 3 |  |
-| AXIS_TYPE_ROTATE = 4 |  |
+| AXIS_TYPE_UNKNOWN = 0 | Unknown axis type, which is usually used as the initial value.<br>**Since**: 12 |
+| AXIS_TYPE_SCROLL_VERTICAL = 1 | Vertical scroll axis. When you scroll the mouse wheel or slide with one or two fingers on the touchpad,thestatus of the vertical scroll axis changes.<br>**Since**: 12 |
+| AXIS_TYPE_SCROLL_HORIZONTAL = 2 | Horizontal scroll axis. When you scroll the mouse wheel or slide with two fingers on the touchpad, thestatus ofthe horizontal scroll axis changes.<br>**Since**: 12 |
+| AXIS_TYPE_PINCH = 3 | Pinch axis, which is used to describe a two-finger pinch gesture on the touchpad.<br>**Since**: 12 |
+| AXIS_TYPE_ROTATE = 4 | Rotation axis, which is used to describe a two-finger rotation gesture on the touchpad.<br>**Since**: 12 |
 
 ### InputEvent_AxisEventType
 
@@ -75,9 +75,9 @@ Action of the input device.
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_ACTION_CANCEL = 0 |  |
-| AXIS_ACTION_BEGIN = 1 |  |
-| AXIS_ACTION_UPDATE = 2 |  |
-| AXIS_ACTION_END = 3 |  |
+| AXIS_ACTION_CANCEL = 0 | The axis event is canceled.<br>**Since**: 12 |
+| AXIS_ACTION_BEGIN = 1 | The axis event begins.<br>**Since**: 12 |
+| AXIS_ACTION_UPDATE = 2 | The axis event is updated.<br>**Since**: 12 |
+| AXIS_ACTION_END = 3 | The axis event ends.<br>**Since**: 12 |
 
 

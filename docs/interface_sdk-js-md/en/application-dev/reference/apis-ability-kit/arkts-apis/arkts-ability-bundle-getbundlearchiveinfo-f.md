@@ -4,32 +4,20 @@
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 import { bundleManager } from '@kit.AbilityKit';
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundle } from '@kit.AbilityKit';
 import { defaultAppManager } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
 import { distributedBundleManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
 import { freeInstall } from '@kit.AbilityKit';
 import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
 import { launcherBundleManager } from '@kit.AbilityKit';
 import { overlay } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
 import { shortcutManager } from '@kit.AbilityKit';
 import { skillManager } from '@kit.AbilityKit';
 import { appDomainVerify } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
@@ -54,8 +42,8 @@ Obtains information about the bundles contained in a HAP file. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePath | string | Yes | Path where the HAP file is stored. The absolute path of the application and the data directory sandbox path are supported. |
-| bundleFlags | number | Yes | Flags used to specify information contained in the BundleInfo object that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the information about the bundles. |
+| bundleFlags | number | Yes | Flags used to specify information contained in the BundleInfo object that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the information about the bundles. |
 
 
 ## getBundleArchiveInfo
@@ -79,7 +67,7 @@ Obtains information about the bundles contained in a HAP file. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePath | string | Yes | Path where the HAP file is stored. The absolute path of the application and the data directory sandbox path are supported. |
-| bundleFlags | number | Yes | Flags used to specify information contained in the BundleInfo object that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Flags used to specify information contained in the BundleInfo object that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 
 **Return value:**
 

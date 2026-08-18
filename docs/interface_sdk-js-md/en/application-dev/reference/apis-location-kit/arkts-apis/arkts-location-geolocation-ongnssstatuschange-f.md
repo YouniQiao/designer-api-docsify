@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## on_gnssStatusChange
+## on_gnssStatusChange('gnssStatusChange')
 
 ```TypeScript
 function on(type: 'gnssStatusChange', callback: Callback<SatelliteStatusInfo>): void
@@ -31,7 +31,7 @@ Subscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
 
 **Examples**
 

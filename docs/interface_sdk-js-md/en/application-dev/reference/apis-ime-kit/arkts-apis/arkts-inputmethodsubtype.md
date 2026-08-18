@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
-import { InputMethodSubtype } from '@kit.IMEKit';
 ```
 
 ## Summary

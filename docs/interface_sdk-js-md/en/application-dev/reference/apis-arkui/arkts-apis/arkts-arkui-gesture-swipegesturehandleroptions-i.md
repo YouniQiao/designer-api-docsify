@@ -2,7 +2,7 @@
 
 Defines the SwipeGestureHandler options.
 
-**Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md#basehandleroptions)
+**Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 
 **Since:** 23
 

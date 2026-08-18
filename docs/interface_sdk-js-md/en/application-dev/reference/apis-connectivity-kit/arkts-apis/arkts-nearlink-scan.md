@@ -22,10 +22,10 @@ import { scan } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound) | Unsubscribes from NearLink scan results. |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound) | Subscribes to NearLink scan results. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
-| [startScan](arkts-connectivity-scan-startscan-f.md#startscan) | Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan) | Stops scanning. |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md) | Unsubscribes from NearLink scan results. |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md) | Subscribes to NearLink scan results. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned. |
+| [startScan](arkts-connectivity-scan-startscan-f.md) | Starts scanning for specified NearLink devices with filters. It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md) | Stops scanning. |
 
 ### Interfaces
 
@@ -42,7 +42,7 @@ import { scan } from '@kit.ConnectivityKit';
 | [ScanMode](arkts-connectivity-scan-scanmode-e.md) | The enum of scan mode. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

@@ -6,7 +6,7 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-## on_deviceConnect
+## on_deviceConnect('deviceConnect')
 
 ```TypeScript
 function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
@@ -18,7 +18,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_devicestatechangedevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +31,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ContinuationResult&gt; | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Examples**
 

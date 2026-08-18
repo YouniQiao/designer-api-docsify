@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function setCalibrationTraffic(simId: int, remainTraffic: long, totalTraffic?: long): Promise<void>
 ```
 
-Set calibration traffic data.
+Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,15 +30,15 @@ Set calibration traffic data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | int | Yes | The ID of the specified sim card. |
-| remainTraffic | long | Yes | The remaining traffic data. |
-| totalTraffic | long | No | The total traffic data. |
+| simId | int | Yes | SIM card ID. |
+| remainTraffic | long | Yes | Remaining traffic, in bytes. |
+| totalTraffic | long | No | Total traffic, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

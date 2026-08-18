@@ -17,7 +17,7 @@ Attaches an ID to the end of a given URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md#attachid)
+**Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md)
 
 <!--Device-dataUriUtils-function attachId(uri: string, id: number): string--><!--Device-dataUriUtils-function attachId(uri: string, id: number): string-End-->
 

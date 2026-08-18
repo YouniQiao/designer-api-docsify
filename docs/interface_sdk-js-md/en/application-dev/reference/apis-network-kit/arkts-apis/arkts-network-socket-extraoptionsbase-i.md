@@ -1,6 +1,8 @@
 # ExtraOptionsBase
 
-**Since:** 10
+Defines base properties of the **LocalSocket** object.
+
+**Since:** 7
 
 <!--Device-socket-export interface ExtraOptionsBase--><!--Device-socket-export interface ExtraOptionsBase-End-->
 
@@ -15,16 +17,16 @@ import { socket } from '@kit.NetworkKit';
 ## receiveBufferSize
 
 ```TypeScript
-receiveBufferSize?: number
+receiveBufferSize?: int
 ```
 
-Size of the receive buffer, in MBS.
+Size of the RX buffer, in bytes. The value ranges from 0 to 262144. If this parameter is left unspecified or the unspecified value exceeds the value range, the default value **8192** is used.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-ExtraOptionsBase-receiveBufferSize?: number--><!--Device-ExtraOptionsBase-receiveBufferSize?: number-End-->
+<!--Device-ExtraOptionsBase-receiveBufferSize?: int--><!--Device-ExtraOptionsBase-receiveBufferSize?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -34,11 +36,11 @@ Size of the receive buffer, in MBS.
 reuseAddress?: boolean
 ```
 
-Whether to reuse addresses. The default value is false.
+Whether to reuse addresses. The value **true** means to reuse addresses, and the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-ExtraOptionsBase-reuseAddress?: boolean--><!--Device-ExtraOptionsBase-reuseAddress?: boolean-End-->
 
@@ -47,32 +49,32 @@ Whether to reuse addresses. The default value is false.
 ## sendBufferSize
 
 ```TypeScript
-sendBufferSize?: number
+sendBufferSize?: int
 ```
 
-Size of the send buffer, in MBS.
+Size of the TX buffer, in bytes. The value ranges from 0 to 262144. If this parameter is left unspecified or the unspecified value exceeds the value range, the default value **8192** is used.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-ExtraOptionsBase-sendBufferSize?: number--><!--Device-ExtraOptionsBase-sendBufferSize?: number-End-->
+<!--Device-ExtraOptionsBase-sendBufferSize?: int--><!--Device-ExtraOptionsBase-sendBufferSize?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketTimeout
 
 ```TypeScript
-socketTimeout?: number
+socketTimeout?: int
 ```
 
-Timeout duration of the UDPSocket connection, in milliseconds.
+Timeout duration of the local socket connection, in ms.
 
-**Type:** number
+**Type:** int
 
-**Since:** 10
+**Since:** 7
 
-<!--Device-ExtraOptionsBase-socketTimeout?: number--><!--Device-ExtraOptionsBase-socketTimeout?: number-End-->
+<!--Device-ExtraOptionsBase-socketTimeout?: int--><!--Device-ExtraOptionsBase-socketTimeout?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

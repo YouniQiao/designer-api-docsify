@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## onConnectionStateChange
@@ -25,7 +26,7 @@ function onConnectionStateChange(callback: Callback<ConnectionStateParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 是 | 用于监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionStateParam](arkts-connectivity-remotedevice-connectionstateparam-i.md)&gt; | 是 | 用于监听事件的回调。 |
 
 **错误码：**
 

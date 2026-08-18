@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## getExemptedApps
@@ -27,8 +28,8 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype系统接口)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | 是 | 豁免应用信息。 |
+| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | 是 | 豁免应用信息。 |
 
 **错误码：**
 
@@ -85,7 +86,7 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#resourcetype系统接口)。 |
+| resourceTypes | int | 是 | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。 |
 
 **返回值：**
 

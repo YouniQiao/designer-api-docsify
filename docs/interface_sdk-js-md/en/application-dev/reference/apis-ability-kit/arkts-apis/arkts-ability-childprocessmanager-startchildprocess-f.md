@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { childProcessManager } from '@kit.AbilityKit';
-import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startChildProcess
@@ -102,7 +101,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | --- | --- | --- | --- |
 | srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**. The source file can be stored only in the module of the entry type. For example, if the source file of a child process is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/ DemoProcess.ets**.<br>In addition, ensure that the source file of the child process is referenced by other files to prevent it from being optimized by the build tool. (For details, see the sample code below.) |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | Yes | Start mode of the child process. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
 
 **Error codes:**
 

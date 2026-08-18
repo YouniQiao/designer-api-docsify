@@ -12,7 +12,7 @@ import { ethernet } from '@kit.NetworkKit';
 function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void
 ```
 
-Set the specified network interface parameters.
+Sets the network interface configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,9 +28,9 @@ Set the specified network interface parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#interfaceconfiguration-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setIfaceConfig. |
+| iface | string | Yes | Interface name. |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Network interface configuration to set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ ethernet.setIfaceConfig("eth0", config, (error: BusinessError) => {
 function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>
 ```
 
-Set the specified network interface parameters.
+Sets the network interface configuration information. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -94,14 +94,14 @@ Set the specified network interface parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#interfaceconfiguration-system-api). |
+| iface | string | Yes | Interface name. |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Network interface configuration to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

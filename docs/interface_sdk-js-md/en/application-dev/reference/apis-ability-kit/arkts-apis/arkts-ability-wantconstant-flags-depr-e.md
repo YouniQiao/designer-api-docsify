@@ -6,7 +6,7 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#flags)
+**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md)
 
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 
@@ -24,7 +24,7 @@ Grants the permission to read the URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flagauthreaduripermission)
+**Substitutes:** [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flag_auth_read_uri_permission)
 
 <!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
@@ -42,7 +42,7 @@ Grants the permission to write data to the URI.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flagauthwriteuripermission)
+**Substitutes:** [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flag_auth_write_uri_permission)
 
 <!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
 
@@ -156,7 +156,7 @@ Indicates that the specific ability will be installed if it has not been install
 
 **Deprecated since:** 9
 
-**Substitutes:** [FLAG_INSTALL_ON_DEMAND](arkts-ability-wantconstant-flags-e.md#flaginstallondemand)
+**Substitutes:** [FLAG_INSTALL_ON_DEMAND](arkts-ability-wantconstant-flags-e.md#flag_install_on_demand)
 
 <!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
 
@@ -184,7 +184,7 @@ Indicates that the specific ability will be installed in the background if it ha
 FLAG_ABILITY_CLEAR_MISSION = 0x00008000
 ```
 
-Clears other operation missions. This flag can be set for the Want passed in [startAbility](arkts-ability-featureability-startability-f.md#startability) . It must be used together with **FLAG_ABILITY_NEW_MISSION**.
+Clears other operation missions. This flag can be set for the Want passed in [startAbility](arkts-ability-featureability-startability-f.md) . It must be used together with **FLAG_ABILITY_NEW_MISSION**.
 
 **Since:** 6
 

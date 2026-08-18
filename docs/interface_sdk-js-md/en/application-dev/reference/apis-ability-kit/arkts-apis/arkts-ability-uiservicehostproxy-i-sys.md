@@ -1,6 +1,6 @@
 # UIServiceHostProxy (System API)
 
-UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) server to the client. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensio
 sendData(data: Record<string, Object>): void
 ```
 
-Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) server to the client.
+Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) client. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) client. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ export default class MyUiServiceExtensionAbility extends UIServiceExtensionAbili
 sendData(data: Record<string, RecordData>): void
 ```
 
-Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) server to the client.
+Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client.
 
 **Since:** 23
 
@@ -92,7 +92,7 @@ Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#uiserviceextensionability-system-api) client. |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) client. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@ Sets the time information for a calendar reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#localdatetime)
+**Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
 <!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
@@ -16,7 +16,6 @@ Sets the time information for a calendar reminder.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

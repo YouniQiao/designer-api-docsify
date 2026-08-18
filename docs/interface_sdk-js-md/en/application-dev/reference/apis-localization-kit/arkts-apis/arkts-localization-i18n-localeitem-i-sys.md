@@ -14,7 +14,6 @@ Represents the locale information, which consists of the language, script, and c
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## displayName

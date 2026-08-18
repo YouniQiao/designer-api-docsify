@@ -13,7 +13,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function createVpnConnection(context: AbilityContext): VpnConnection
 ```
 
-Create a VPN connection using the AbilityContext.
+Creates a VPN connection.
 
 **Since:** 10
 
@@ -27,13 +27,13 @@ Create a VPN connection using the AbilityContext.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | Yes | Indicates the context of application or capability. |
+| context | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | Yes | Specified context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnConnection | the VpnConnection of the construct VpnConnection instance. |
+| VpnConnection | VPN connection object. |
 
 **Error codes:**
 

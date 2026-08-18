@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## customKeyboard
@@ -37,7 +42,7 @@ customKeyboard?: CustomBuilder
 enterKeyType?: number
 ```
 
-指定系统软键盘enter键的类型，取值范围见输入框架的定义[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#enterkeytype)，该参数为可选参数，默认值为 UNSPECIFIED。当useSystemKeyboard为true，并且设置了有效的enterKeyType时候，才有效。
+指定系统软键盘enter键的类型，取值范围见输入框架的定义[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md)，该参数为可选参数，默认值为 UNSPECIFIED。当useSystemKeyboard为true，并且设置了有效的enterKeyType时候，才有效。
 
 **类型：** number
 

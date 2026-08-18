@@ -14,7 +14,6 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createPixelMapMask

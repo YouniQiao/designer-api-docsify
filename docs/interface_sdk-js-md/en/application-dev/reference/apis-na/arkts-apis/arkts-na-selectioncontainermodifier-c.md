@@ -2,7 +2,7 @@
 
 Defines SelectionContainer Modifier
 
-**Inheritance/Implementation:** SelectionContainerModifier implements [SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#selectioncontainerattribute), AttributeModifier<SelectionContainerAttribute>
+**Inheritance/Implementation:** SelectionContainerModifier implements [SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md), AttributeModifier<SelectionContainerAttribute>
 
 **Since:** 26.0.0
 

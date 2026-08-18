@@ -17,7 +17,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-system-api)
+**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +32,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is cleared, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -66,7 +66,7 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-system-api)
+**Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## execute
@@ -13,7 +12,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.ExecuteResult>): void
 ```
 
-Executes a call to an intent. This API uses an asynchronous callback to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md#executemode) of the intent call is set to **UI_ABILITY_BACKGROUND**, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required.
+Executes a call to an intent. This API uses an asynchronous callback to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md) of the intent call is set to **UI_ABILITY_BACKGROUND**, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required.
 
 **Since:** 23
 
@@ -32,21 +31,21 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Yes | Parameter used to execute the intent call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;insightIntent.ExecuteResult&gt; | Yes | Callback used to return the intent call execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
@@ -99,7 +98,7 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
 function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 ```
 
-Executes a call to an intent. This API uses a promise to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md#executemode) of the intent call is set to **UI_ABILITY_BACKGROUND**, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required. On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required.
+Executes a call to an intent. This API uses a promise to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md) of the intent call is set to **UI_ABILITY_BACKGROUND**, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required. On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required.
 
 **Since:** 23
 
@@ -130,14 +129,14 @@ Executes a call to an intent. This API uses a promise to return the result. When
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000055](../errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) | Cross-user operations are not allowed. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |

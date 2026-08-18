@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getSockfdRxBytes(sockfd: int, callback: AsyncCallback<long>): void
 ```
 
-Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd.
+Obtains the downlink traffic (in bytes) of the specified socket. This API uses an asynchronous callback to return the result. > **NOTE：**> > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot > be queried after the socket is closed.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sockfd | int | Yes | Indicates the file descriptor of the given socket. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Returns the data traffic bytes received by the specified sockfd. |
+| sockfd | int | Yes | File description (FD) of the socket to query. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the downlink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ statistics.getSockfdRxBytes(sockfd, (error: BusinessError, stats: number) => {
 function getSockfdRxBytes(sockfd: int): Promise<long>
 ```
 
-Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd.
+Obtains the downlink traffic (in bytes) of the specified socket. This API uses a promise to return the result. > **NOTE：**> > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot > be queried after the socket is closed.
 
 **Since:** 23
 
@@ -68,13 +68,13 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sockfd | int | Yes | Indicates the file descriptor of the given socket. |
+| sockfd | int | Yes | FD of the socket to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Returns the data traffic bytes received by the specified sockfd. |
+| Promise&lt;long&gt; | Promise used to return the downlink traffic (in bytes) of the socket. |
 
 **Error codes:**
 

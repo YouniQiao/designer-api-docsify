@@ -1,6 +1,6 @@
 # CertType
 
-Defines the certificate type.
+Enumerates certificate types.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Defines the certificate type.
 CERT_TYPE_PEM = 0
 ```
 
-PEM type certificate.
+PEM certificate
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ PEM type certificate.
 CERT_TYPE_DER = 1
 ```
 
-DER type certificate.
+DER certificate.
 
 **Since:** 23
 

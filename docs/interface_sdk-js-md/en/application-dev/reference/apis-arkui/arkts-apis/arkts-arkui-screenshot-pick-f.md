@@ -12,7 +12,7 @@ import { screenshot } from '@kit.ArkUI';
 function pick(): Promise<PickInfo>
 ```
 
-Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture](arkts-arkui-screenshot-capture-f.md#capture) API.) This API uses a promise to return the result.
+Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture](arkts-arkui-screenshot-capture-f.md) API.) This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported on this device. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Examples**

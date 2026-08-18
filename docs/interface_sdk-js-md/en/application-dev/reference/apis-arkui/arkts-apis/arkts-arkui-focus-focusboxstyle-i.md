@@ -18,7 +18,7 @@ margin?: LengthMetrics
 
 Describes the focus-box margin.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ strokeColor?: ColorMetrics
 
 Describes the focus-box color.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ strokeWidth?: LengthMetrics
 
 Describes the focus-box stroke width.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

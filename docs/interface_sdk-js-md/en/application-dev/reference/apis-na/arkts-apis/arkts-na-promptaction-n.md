@@ -23,8 +23,8 @@ Defines promptAction
 
 | Name | Description |
 | --- | --- |
-| [openToast](arkts-na-promptaction-opentoast-f.md#opentoast) | Displays the notification text. |
-| [closeToast](arkts-na-promptaction-closetoast-f.md#closetoast) | Close the notification text. |
+| [openToast](arkts-na-promptaction-opentoast-f.md) | Displays the notification text. |
+| [closeToast](arkts-na-promptaction-closetoast-f.md) | Close the notification text. |
 
 ### Classes
 
@@ -48,7 +48,7 @@ Defines promptAction
 | [ActionMenuOptions](arkts-na-promptaction-actionmenuoptions-i.md) | ActionMenu options. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -65,7 +65,7 @@ Defines promptAction
 | [CommonState](arkts-na-promptaction-commonstate-e.md) | Enum for state. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

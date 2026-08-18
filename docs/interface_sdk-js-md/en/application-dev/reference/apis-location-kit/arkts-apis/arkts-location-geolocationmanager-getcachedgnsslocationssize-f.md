@@ -26,7 +26,7 @@ Obtain the number of cached GNSS locations reported at a time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
 
 **Error codes:**
 

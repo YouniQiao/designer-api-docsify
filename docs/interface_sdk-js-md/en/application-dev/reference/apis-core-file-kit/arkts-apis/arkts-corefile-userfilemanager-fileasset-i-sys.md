@@ -6,7 +6,7 @@ Provides APIs for encapsulating file asset attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoasset)
+**Substitutes:** [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)
 
 <!--Device-userFileManager-interface FileAsset--><!--Device-userFileManager-interface FileAsset-End-->
 
@@ -32,7 +32,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md#close)
+**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
 
 <!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -45,7 +45,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to close. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -91,7 +91,7 @@ Closes this file. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md#close)
+**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
 
 <!--Device-FileAsset-close(fd: number): Promise<void>--><!--Device-FileAsset-close(fd: number): Promise<void>-End-->
 
@@ -164,7 +164,7 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -286,7 +286,7 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isFavorite | boolean | Yes | Whether to favorite or unfavorite the file. The value **true** means to favorite the file; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -437,7 +437,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#propertykey). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#imagevideokey-system-api).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
 
 **Since:** 10
 
@@ -457,7 +457,7 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback that returns the EXIF data, in JSON strings. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback that returns the EXIF data, in JSON strings. |
 
 **Error codes:**
 
@@ -511,7 +511,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(): Promise<string>
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#propertykey). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#imagevideokey-system-api).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
 
 **Since:** 10
 
@@ -595,7 +595,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
 **Examples**
 
@@ -651,7 +651,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | image.Size | Yes | Size of the thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the PixelMap of the thumbnail. |
 
 **Examples**
 
@@ -756,7 +756,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -771,7 +771,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | string | Yes | Mode of opening the file, for example, **'r'** (read-only), **'w'** (write-only), and **'rw'** (read-write). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor of the file opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the file descriptor of the file opened. |
 
 **Examples**
 
@@ -805,7 +805,7 @@ Opens this file asset. This API uses a promise to return the result. > **NOTE：
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -929,7 +929,7 @@ Sets a file to hidden state. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hiddenState | boolean | Yes | Whether to hide the file. The value **true** means to hide the file; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -1060,7 +1060,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userComment | string | Yes | User comment information to set, which cannot exceed 140 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 

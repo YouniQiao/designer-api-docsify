@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundles
@@ -17,7 +18,7 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
+**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -34,7 +35,7 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20 及之前版本，返回值为应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为 应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)或 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20 及之前版本，返回值为应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为 应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)或 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
+**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -98,7 +99,7 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20 及之前版本，返回值为应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为 应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)或 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20 及之前版本，返回值为应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为 应用[appId](../../../quick-start/common-problem-of-application.md#什么是appid)或 [appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
 
 **错误码：**
 
@@ -144,7 +145,7 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
+**替代接口：** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 

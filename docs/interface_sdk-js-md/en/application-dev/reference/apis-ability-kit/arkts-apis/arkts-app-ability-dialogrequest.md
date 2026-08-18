@@ -12,7 +12,6 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 
 ```TypeScript
 import { dialogRequest } from '@kit.AbilityKit';
-import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -21,8 +20,8 @@ import { dialogRequest } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | Obtains the request callback from Want. > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) | Obtains the request callback from Want. > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | > **NOTE：**> > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
 
 ### Interfaces
 

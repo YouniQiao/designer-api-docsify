@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getLineInstance
@@ -27,7 +26,7 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The generated [BreakIterator](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md#breakiterator) object calculates the positions of line breaks based on the rules of the specified locale. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. The generated [BreakIterator](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md) object calculates the positions of line breaks based on the rules of the specified locale. |
 
 **Return value:**
 

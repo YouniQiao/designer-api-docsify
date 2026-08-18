@@ -27,7 +27,7 @@ Transforms a rotation vector based on the coordinate system. This API uses an as
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;double&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation vector after being transformed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation vector after being transformed. |
 
 **Error codes:**
 

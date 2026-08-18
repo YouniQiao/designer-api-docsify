@@ -1,8 +1,8 @@
 # PictureDrawableDescriptor
 
-Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult).
+Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. This API inherits from [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
 
-**Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
+**Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 26.0.0
 
@@ -62,5 +62,5 @@ Sets HDR composition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | HDR composition configuration. |
+| config | [HdrCompositionConfig](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | HDR composition configuration. |
 

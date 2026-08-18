@@ -42,7 +42,7 @@ Specifies a clear animation host instance context via the UIContext object and t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | AnimateParam | Yes | Animation settings. |
-| processor | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
+| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
 ## clearResourceCache
 

@@ -1,6 +1,6 @@
 # Sign
 
-Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization. <br>The signing mode is determined by **createSign()**, and the key is set by **init()**. <br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**. <br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data. <br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data. <br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode) . <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization. <br>The signing mode is determined by **createSign()**, and the key is set by **init()**. <br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**. <br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data. <br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data. <br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Signing interface, defining methods for signing data using a private key. Before
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
@@ -93,7 +92,7 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for the initialization. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -183,7 +182,7 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 setSignSpec(itemType: SignSpecItem, itemValue: int): void
 ```
 
-Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). <br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
+Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). <br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
 
 **Since:** 10
 
@@ -353,7 +352,7 @@ Signs the data, including data added via the update interface. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | The data to be signed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -388,7 +387,7 @@ Signs data. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -541,7 +540,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to pass in. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

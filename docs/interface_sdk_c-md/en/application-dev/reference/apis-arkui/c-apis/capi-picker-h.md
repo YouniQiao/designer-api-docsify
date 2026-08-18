@@ -330,7 +330,7 @@ Creates a style instance of the selected item indicator.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle*](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | Pointer to the [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) instance. If a null pointer is returned, the creation<br>     fails. The possible cause is that the address space is full or the type is not supported. |
+| [ArkUI_PickerIndicatorStyle*](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | Pointer to the [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) instance. If a null pointer is returned, the creation      fails. The possible cause is that the address space is full or the type is not supported. |
 
 ### OH_ArkUI_PickerIndicatorStyle_Dispose()
 

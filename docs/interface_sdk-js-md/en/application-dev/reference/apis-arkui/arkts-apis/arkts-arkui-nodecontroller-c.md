@@ -66,7 +66,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Yes | Width and height of the component, in vp. |
+| size | [Size](arkts-arkui-graphics-size-i.md) | Yes | Width and height of the component, in vp. |
 
 ## makeNode
 
@@ -74,7 +74,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#nodecontroller) of NodeContainer > triggers the [makeNode](#makenode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#nodecontroller) of NodeContainer > triggers the [makeNode](#makenode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
+| [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
 
 ## onAttach
 
@@ -260,7 +260,7 @@ Called when this **NodeController** instance is about to be unbound from a NodeC
 rebuild(): void
 ```
 
-Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to explicitly define the UI context at the time of the call.
+Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to explicitly define the UI context at the time of the call.
 
 **Since:** 11
 

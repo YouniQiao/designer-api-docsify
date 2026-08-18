@@ -30,8 +30,23 @@ CheckboxGroup(options?: CheckboxGroupOptions)
 
 ## 汇总
 
-- [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md)
-- [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md)
-- [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md)
-- [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md)
-- [SelectStatus](arkts-arkui-selectstatus-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md) | 开发者必须自定义此类以实现ContentModifier接口，使用方法见contentModifier。 |
+| [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | 多选框群组的信息。 |
+| [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | 多选框群组的名称和状态。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | 多选框群组的信息。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [SelectStatus](arkts-arkui-selectstatus-e.md) | 多选框群组的选中状态。 |
+

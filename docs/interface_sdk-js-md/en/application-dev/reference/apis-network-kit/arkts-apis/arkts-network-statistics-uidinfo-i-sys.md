@@ -1,6 +1,6 @@
 # UidInfo (System API)
 
-Parameters for obtaining detailed information on application traffic usage.
+Defines the parameters for querying historical traffic of an application.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { statistics } from '@kit.NetworkKit';
 ifaceInfo: IfaceInfo
 ```
 
-See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api)
+NIC information, including the NIC name and query time range.
 
 **Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
@@ -40,7 +40,7 @@ See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#ifaceinfo-system-api
 uid: int
 ```
 
-Uid of app for querying traffic.
+Application UID.
 
 **Type:** int
 

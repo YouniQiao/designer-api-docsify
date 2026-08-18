@@ -56,6 +56,16 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 
 ## 汇总
 
-- [ColumnOptions](arkts-arkui-columnoptions-i.md)
-- [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md)
-- [SpaceType](arkts-arkui-spacetype-t.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ColumnOptions](arkts-arkui-columnoptions-i.md) | 设置Column组件的子组件间距属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | 设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [SpaceType](arkts-arkui-spacetype-t.md) | Column组件构造函数中space支持的数据类型，取值类型为下表类型中的并集。 |
+

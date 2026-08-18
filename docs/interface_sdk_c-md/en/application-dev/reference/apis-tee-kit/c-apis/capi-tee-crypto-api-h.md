@@ -423,7 +423,7 @@ Allocates an operation handle.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation handle is allocated.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if there is no enough memory for this operation.<br>         Returns <b>TEE_ERROR_NOT_SUPPORTED</b> if the specified algorithm is not supported.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation handle is allocated.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if there is no enough memory for this operation.          Returns <b>TEE_ERROR_NOT_SUPPORTED</b> if the specified algorithm is not supported.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_FreeOperation()
 
@@ -503,7 +503,7 @@ Sets the key for an operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if there is no enough memory for this operation. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if there is no enough memory for this operation. |
 
 ### TEE_SetOperationKey2()
 
@@ -529,7 +529,7 @@ Sets two keys for an operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters. |
 
 ### TEE_CopyOperation()
 
@@ -596,7 +596,7 @@ Updates the data for a cipher operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_CipherDoFinal()
 
@@ -624,7 +624,7 @@ Finalizes a cipher operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_DigestUpdate()
 
@@ -672,7 +672,7 @@ Finalizes the message digest operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the operationInfo buffer is not large enough to<br> hold the information obtained. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the operationInfo buffer is not large enough to  hold the information obtained. |
 
 ### TEE_MACInit()
 
@@ -740,7 +740,7 @@ MAC Finalizes the MAC operation with a last chunk of message and computes the MA
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_MACCompareFinal()
 
@@ -768,7 +768,7 @@ Finalizes the MAC operation and compares the MAC with the one passed in.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors.<br>         Returns <b>TEE_ERROR_MAC_INVALID</b> if the computed MAC is not the same as that passed in. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors.          Returns <b>TEE_ERROR_MAC_INVALID</b> if the computed MAC is not the same as that passed in. |
 
 ### TEE_DeriveKey()
 
@@ -837,7 +837,7 @@ Initializes an AE operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AEUpdateAAD()
 
@@ -885,7 +885,7 @@ Updates data for an AE operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AEEncryptFinal()
 
@@ -915,7 +915,7 @@ Finalizes the AE encryption operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AEDecryptFinal()
 
@@ -945,7 +945,7 @@ Finalizes an AE decryption operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_MAC_INVALID</b> if the computed tag does not match the provided tag. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_MAC_INVALID</b> if the computed tag does not match the provided tag. |
 
 ### TEE_AsymmetricEncrypt()
 
@@ -975,7 +975,7 @@ Performs asymmetric encryption.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AsymmetricDecrypt()
 
@@ -1005,7 +1005,7 @@ Performs asymmetric decryption.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AsymmetricSignDigest()
 
@@ -1035,7 +1035,7 @@ Signs a message digest in an asymmetric operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_AsymmetricVerifyDigest()
 
@@ -1065,7 +1065,7 @@ Verifies a message digest signature in an asymmetric operation.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_GENERIC</b> if the operation fails due to other errors. |
 
 ### TEE_GetOperationInfoMultiple()
 
@@ -1091,7 +1091,7 @@ Obtains information about the operation involving multiple keys.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.<br>         Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the operationInfo buffer is not large enough to<br> hold the information obtained. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_BAD_PARAMETERS</b> if the operation fails due to invalid parameters.          Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the operationInfo buffer is not large enough to  hold the information obtained. |
 
 ### TEE_IsAlgorithmSupported()
 
@@ -1116,6 +1116,6 @@ Checks whether the algorithm is supported.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the algorithm is supported.<br>         Returns <b>TEE_ERROR_NOT_SUPPORTED</b> otherwise. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the algorithm is supported.          Returns <b>TEE_ERROR_NOT_SUPPORTED</b> otherwise. |
 
 

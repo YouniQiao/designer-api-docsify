@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## attendee
@@ -235,7 +236,7 @@ reminderTime?: number[]
 service?: EventService
 ```
 
-&lt;!--RP1--&gt;日程服务。不填时，默认没有一键服务。暂不支持此功能。&lt;!--RP1End--&gt;
+<!--RP1-->日程服务。不填时，默认没有一键服务。暂不支持此功能。<!--RP1End-->
 
 **类型：** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
@@ -271,7 +272,7 @@ startTime: number
 timeZone?: string
 ```
 
-日程时区。日程时区。长度建议为[0,5000]字符，不填或异常值时，默认为当前所在时区，当需要创建与当前不一样的时区时，可填入对应的时区。可通过 [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone) 获取当前系统时区。
+日程时区。日程时区。长度建议为[0,5000]字符，不填或异常值时，默认为当前所在时区，当需要创建与当前不一样的时区时，可填入对应的时区。可通过 [systemDateTime.getTimezone()](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md) 获取当前系统时区。
 
 **类型：** string
 

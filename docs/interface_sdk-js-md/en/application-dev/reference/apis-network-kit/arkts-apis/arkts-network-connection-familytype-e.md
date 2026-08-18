@@ -1,8 +1,8 @@
 # FamilyType
 
-Defines the address family type.
+Indicates the type of the IP address to be queried.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-export enum FamilyType--><!--Device-connection-export enum FamilyType-End-->
 
@@ -14,9 +14,9 @@ Defines the address family type.
 FAMILY_TYPE_ALL = 0
 ```
 
-Indicates that no ip type is specified, all address types can be use.
+All IPv4 and IPv6 addresses are queried.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-FamilyType-FAMILY_TYPE_ALL = 0--><!--Device-FamilyType-FAMILY_TYPE_ALL = 0-End-->
 
@@ -28,9 +28,9 @@ Indicates that no ip type is specified, all address types can be use.
 FAMILY_TYPE_IPV4 = 1
 ```
 
-Indicates that the family type is ipv4.
+Only IPv4 addresses are queried.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1--><!--Device-FamilyType-FAMILY_TYPE_IPV4 = 1-End-->
 
@@ -42,9 +42,9 @@ Indicates that the family type is ipv4.
 FAMILY_TYPE_IPV6 = 2
 ```
 
-Indicates that the family type is ipv6.
+Only IPv6 addresses are queried.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2--><!--Device-FamilyType-FAMILY_TYPE_IPV6 = 2-End-->
 

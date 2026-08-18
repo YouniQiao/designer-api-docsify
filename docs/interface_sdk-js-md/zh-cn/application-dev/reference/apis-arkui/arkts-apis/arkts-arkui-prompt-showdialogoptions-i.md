@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#showdialogoptions)
+**替代接口：** [ShowDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons

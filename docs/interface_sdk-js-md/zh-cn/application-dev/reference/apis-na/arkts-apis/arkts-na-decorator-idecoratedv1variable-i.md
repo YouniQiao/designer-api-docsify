@@ -2,7 +2,7 @@
 
 Define V1 decorated variable interface.
 
-**继承/实现关系：** IDecoratedV1Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md#idecoratedvariable)
+**继承/实现关系：** IDecoratedV1Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md)
 
 **起始版本：** 23
 

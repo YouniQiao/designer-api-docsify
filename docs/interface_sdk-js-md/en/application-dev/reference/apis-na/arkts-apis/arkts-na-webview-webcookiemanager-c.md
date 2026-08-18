@@ -63,7 +63,7 @@ Remove all cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ Delete the session cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Called after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -263,7 +263,7 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookie is to be set. |
 | value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Called after the cookies have been set. |
 
 **Error codes:**
 
@@ -392,7 +392,7 @@ Fetches all stored cookies asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
 
 ## fetchCookie
 
@@ -486,7 +486,7 @@ Gets all cookies for the given URL Asynchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookies are requested. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Called after the cookies of given URL have been gotten. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Called after the cookies of given URL have been gotten. |
 
 **Error codes:**
 
@@ -755,7 +755,7 @@ Save the cookies Asynchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Called after the cookies have been saved. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Called after the cookies have been saved. |
 
 **Error codes:**
 

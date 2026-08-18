@@ -47,7 +47,7 @@ The constructor used to create a ToolBarV2ItemImage object.
 
 Icon fillColor when the item is activated.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ Icon fillColor when the item is activated.
 
 Define icon fillColor.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 

@@ -66,7 +66,7 @@ Closes a file or directory. After the file or directory is closed, the FD become
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | int \| [File](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. After the function is disabled, the **File** object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. When the file or directory is successfully closed asynchronously, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. When the file or directory is successfully closed asynchronously, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

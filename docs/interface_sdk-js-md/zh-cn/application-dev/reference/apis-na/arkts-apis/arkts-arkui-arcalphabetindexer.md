@@ -11,7 +11,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md#arcalphabetindexer) | 创建弧形索引条实例，传入弧形索引条配置项参数。 |
+| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md) | 创建弧形索引条实例，传入弧形索引条配置项参数。 |
 
 ### 接口
 

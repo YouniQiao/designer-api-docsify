@@ -14,7 +14,6 @@ Describes gainmap generation parameters.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## isFullSizeGainmap

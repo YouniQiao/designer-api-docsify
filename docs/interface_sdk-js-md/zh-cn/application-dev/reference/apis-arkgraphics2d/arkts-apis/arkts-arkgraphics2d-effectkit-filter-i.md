@@ -1,6 +1,6 @@
 # Filter
 
-图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。 在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。 在添加效果后，需调用[getEffectPixelMap](#geteffectpixelmap)获取处理后的图像。
+图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。 在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。 在添加效果后，需调用[getEffectPixelMap](#geteffectpixelmap)获取处理后的图像。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -295,7 +296,7 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。 如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。 常用于图片处理后需要保存或显示结果的场景。 > **说明：** > > 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md#tilemode)和 [getEffectPixelMap](#geteffectpixelmap)。
+获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。 如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。 常用于图片处理后需要保存或显示结果的场景。 > **说明：** > > 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和 [getEffectPixelMap](#geteffectpixelmap)。
 
 **起始版本：** 23
 
@@ -357,7 +358,7 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| useCpuRender | boolean | 是 | 指定渲染模式。true表示使用CPU渲染，false表示使用GPU渲染。 使用GPU渲染时，着色器效果平铺模式[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md#tilemode)的支持范围与CPU渲染不同，详见TileMode说明。 |
+| useCpuRender | boolean | 是 | 指定渲染模式。true表示使用CPU渲染，false表示使用GPU渲染。 使用GPU渲染时，着色器效果平铺模式[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)的支持范围与CPU渲染不同，详见TileMode说明。 |
 
 **返回值：**
 

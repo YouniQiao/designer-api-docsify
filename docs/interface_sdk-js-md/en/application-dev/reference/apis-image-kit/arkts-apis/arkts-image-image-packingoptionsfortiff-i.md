@@ -12,7 +12,6 @@ Describes the options for tiff image packing.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## compression

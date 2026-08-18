@@ -18,7 +18,7 @@ Enables or disables screen hopping. This API uses an asynchronous callback to re
 
 **Deprecated since:** 23
 
-**Substitutes:** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate-system-api)
+**Substitutes:** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function enable(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function enable(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +31,7 @@ Enables or disables screen hopping. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Specifies whether to enable screen hopping. This API uses a promise to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate-system-api)
+**Substitutes:** [prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function enable(enable: boolean): Promise<void>--><!--Device-inputDeviceCooperate-function enable(enable: boolean): Promise<void>-End-->
 

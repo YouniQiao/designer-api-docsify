@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bindTarget
@@ -35,7 +36,7 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
 | bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值： <br>bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 <br>targetPkgName 绑定目标的包名。 <br>appName 尝试绑定目标的应用程序名称。 <br>appOperation 应用程序要绑定目标的原因。 <br>customDescription 操作的详细说明。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | 是 |  |
 
 **错误码：**
 
@@ -105,7 +106,7 @@ bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: 
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
 | bindParam | Record&lt;string, int \| string&gt; | 是 | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： <br>bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 <br>targetPkgName 绑定目标的包名。 <br>appName 尝试绑定目标的应用程序名称。 <br>appOperation 应用程序要绑定目标的原因。 <br>customDescription 操作的详细说明。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | 是 | 认证结果回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | 是 | 认证结果回调。 |
 
 **错误码：**
 
@@ -135,7 +136,7 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
@@ -345,7 +346,7 @@ getDeviceType(networkId: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | &lt;!--RP2--&gt;返回指定设备类型。&lt;!--RP2End--&gt; |
+| int | <!--RP2-->返回指定设备类型。<!--RP2End--> |
 
 **错误码：**
 
@@ -536,7 +537,7 @@ getLocalDeviceType(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | &lt;!--RP1--&gt;返回本地设备类型。&lt;!--RP1End--&gt; |
+| int | <!--RP1-->返回本地设备类型。<!--RP1End--> |
 
 **错误码：**
 
@@ -597,7 +598,7 @@ offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 否 | 指示要取消注册设备名称改变的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 否 | 指示要取消注册设备名称改变的回调方法。 |
 
 **错误码：**
 
@@ -641,7 +642,7 @@ offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 否 | 指示要取消注册的设备状态回调，返回设备状态和设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 否 | 指示要取消注册的设备状态回调，返回设备状态和设备信息。 |
 
 **错误码：**
 
@@ -685,7 +686,7 @@ offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 否 | 指示要取消注册的设备发现失败回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 否 | 指示要取消注册的设备发现失败回调。 |
 
 **错误码：**
 
@@ -729,7 +730,7 @@ offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 否 | 指示要取消注册的设备发现回调，返回设备状态和设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 否 | 指示要取消注册的设备发现回调，返回设备状态和设备信息。 |
 
 **错误码：**
 
@@ -773,7 +774,7 @@ offServiceDie(callback?: Callback<ServiceDieData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 否 | 取消注册serviceDie的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 否 | 取消注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -797,7 +798,7 @@ try {
 }
 ```
 
-## off_deviceNameChange
+## off_deviceNameChange('deviceNameChange')
 
 ```TypeScript
 off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
@@ -818,7 +819,7 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | 是 | 取消注册设备名称改变回调，固定为deviceNameChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -850,7 +851,7 @@ try {
 }
 ```
 
-## off_deviceStateChange
+## off_deviceStateChange('deviceStateChange')
 
 ```TypeScript
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -871,7 +872,7 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -909,7 +910,7 @@ try {
 }
 ```
 
-## off_discoverFailure
+## off_discoverFailure('discoverFailure')
 
 ```TypeScript
 off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
@@ -930,7 +931,7 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | 是 | 取消注册设备发现失败回调，固定为discoverFailure。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -962,7 +963,7 @@ try {
 }
 ```
 
-## off_discoverSuccess
+## off_discoverSuccess('discoverSuccess')
 
 ```TypeScript
 off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void
@@ -983,7 +984,7 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | 是 | 取消注册设备发现回调，固定为discoverSuccess。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | 否 |  |
 
 **错误码：**
 
@@ -1020,7 +1021,7 @@ try {
 }
 ```
 
-## off_serviceDie
+## off_serviceDie('serviceDie')
 
 ```TypeScript
 off(type: 'serviceDie', callback?: Callback<{}>): void
@@ -1041,7 +1042,7 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | 否 |  |
 
 **错误码：**
 
@@ -1089,7 +1090,7 @@ onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 是 | 注册设备名称改变的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 是 | 注册设备名称改变的回调方法。 |
 
 **错误码：**
 
@@ -1133,7 +1134,7 @@ onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 是 | 指示要注册的设备状态回调，返回设备状态和设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 是 | 指示要注册的设备状态回调，返回设备状态和设备信息。 |
 
 **错误码：**
 
@@ -1177,7 +1178,7 @@ onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 是 | 注册设备发现失败的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 是 | 注册设备发现失败的回调方法。 |
 
 **错误码：**
 
@@ -1221,7 +1222,7 @@ onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 是 | 注册设备发现的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 是 | 注册设备发现的回调方法。 |
 
 **错误码：**
 
@@ -1265,7 +1266,7 @@ onServiceDie(callback: Callback<ServiceDieData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 是 | 注册serviceDie的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 是 | 注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -1289,7 +1290,7 @@ try {
 }
 ```
 
-## on_deviceNameChange
+## on_deviceNameChange('deviceNameChange')
 
 ```TypeScript
 on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
@@ -1310,7 +1311,7 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | 是 | 注册设备名称改变回调，以便在设备名称改变时通知应用程序，固定为deviceNameChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1342,7 +1343,7 @@ try {
 }
 ```
 
-## on_deviceStateChange
+## on_deviceStateChange('deviceStateChange')
 
 ```TypeScript
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -1363,7 +1364,7 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1401,7 +1402,7 @@ try {
 }
 ```
 
-## on_discoverFailure
+## on_discoverFailure('discoverFailure')
 
 ```TypeScript
 on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
@@ -1422,7 +1423,7 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | 是 | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFailure。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1454,7 +1455,7 @@ try {
 }
 ```
 
-## on_discoverSuccess
+## on_discoverSuccess('discoverSuccess')
 
 ```TypeScript
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
@@ -1475,7 +1476,7 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | 是 | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为discoverSuccess。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1512,7 +1513,7 @@ try {
 }
 ```
 
-## on_serviceDie
+## on_serviceDie('serviceDie')
 
 ```TypeScript
 on(type: 'serviceDie', callback?: Callback<{}>): void
@@ -1533,7 +1534,7 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | 否 |  |
 
 **错误码：**
 

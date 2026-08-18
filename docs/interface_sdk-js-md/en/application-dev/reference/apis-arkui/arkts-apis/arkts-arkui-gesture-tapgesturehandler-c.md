@@ -2,7 +2,7 @@
 
 Defines the TapGesture handler.
 
-**Inheritance/Implementation:** TapGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** TapGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

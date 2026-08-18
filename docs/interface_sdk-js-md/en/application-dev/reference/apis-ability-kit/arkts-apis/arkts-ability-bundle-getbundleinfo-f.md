@@ -4,32 +4,20 @@
 
 ```TypeScript
 import { appControl } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 import { bundleManager } from '@kit.AbilityKit';
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundleResourceManager } from '@kit.AbilityKit';
 import { bundle } from '@kit.AbilityKit';
 import { defaultAppManager } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
 import { distributedBundleManager } from '@kit.AbilityKit';
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
 import { freeInstall } from '@kit.AbilityKit';
 import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
 import { launcherBundleManager } from '@kit.AbilityKit';
 import { overlay } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
-import { shortcutManager } from '@kit.AbilityKit';
 import { shortcutManager } from '@kit.AbilityKit';
 import { skillManager } from '@kit.AbilityKit';
 import { appDomainVerify } from '@kit.AbilityKit';
-import { pluginBundleManager } from '@kit.AbilityKit';
 import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
@@ -59,9 +47,9 @@ Obtains the bundle information based on a given bundle name and bundle options. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | options | BundleOptions | Yes | Includes **userId**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
 
 
 ## getBundleInfo
@@ -89,8 +77,8 @@ Obtains the bundle information based on a given bundle name. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
 
 
 ## getBundleInfo
@@ -118,7 +106,7 @@ Obtains the bundle information based on a given bundle name. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#bundleflag). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | options | BundleOptions | No | Options that contain the user ID. |
 
 **Return value:**

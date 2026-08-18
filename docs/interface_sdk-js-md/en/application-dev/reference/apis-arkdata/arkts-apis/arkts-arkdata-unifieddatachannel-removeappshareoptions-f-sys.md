@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## removeAppShareOptions
@@ -13,7 +12,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function removeAppShareOptions(intention: Intention): void
 ```
 
-Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions-system-api).
+Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md).
 
 **Since:** 23
 

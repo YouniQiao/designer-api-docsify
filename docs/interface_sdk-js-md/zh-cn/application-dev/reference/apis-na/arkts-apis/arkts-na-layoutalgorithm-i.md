@@ -1,6 +1,6 @@
 # LayoutAlgorithm
 
-DynamicLayout组件支持的布局算法基础类型。 > **说明：** > > 该类型变量可以赋值具体的布局算法类对象， > 如[CustomLayoutAlgorithm](arkts-na-layoutalgorithm-customlayoutalgorithm-c.md#customlayoutalgorithm)类对象、 > [RowLayoutAlgorithm](arkts-na-layoutalgorithm-rowlayoutalgorithm-c.md#rowlayoutalgorithm)类对象等。
+DynamicLayout组件支持的布局算法基础类型。 > **说明：** > > 该类型变量可以赋值具体的布局算法类对象， > 如[CustomLayoutAlgorithm](arkts-na-layoutalgorithm-customlayoutalgorithm-c.md)类对象、 > [RowLayoutAlgorithm](arkts-na-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
 
 **起始版本：** 24
 

@@ -11,6 +11,7 @@ AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
 ```
 
 ## controller

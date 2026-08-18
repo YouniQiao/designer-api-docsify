@@ -2,7 +2,7 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)
 
 **Since:** 23
 

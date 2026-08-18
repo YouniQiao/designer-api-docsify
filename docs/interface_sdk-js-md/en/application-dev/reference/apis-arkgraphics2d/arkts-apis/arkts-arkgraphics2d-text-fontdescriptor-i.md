@@ -12,7 +12,6 @@ Describes the font descriptor information.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## copyright

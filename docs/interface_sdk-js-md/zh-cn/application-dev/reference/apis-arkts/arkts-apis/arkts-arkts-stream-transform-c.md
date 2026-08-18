@@ -1,8 +1,8 @@
 # Transform
 
-一种特殊的双工流，支持数据转换和结果输出。**Transform**类继承自[Duplex](arkts-arkts-stream-duplex-c.md#duplex)，支持**Duplex**中的所有API。
+一种特殊的双工流，支持数据转换和结果输出。**Transform**类继承自[Duplex](arkts-arkts-stream-duplex-c.md)，支持**Duplex**中的所有API。
 
-**继承/实现关系：** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md#duplex)
+**继承/实现关系：** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

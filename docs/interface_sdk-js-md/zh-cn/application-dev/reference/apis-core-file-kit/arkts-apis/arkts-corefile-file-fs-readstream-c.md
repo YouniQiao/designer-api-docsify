@@ -2,7 +2,7 @@
 
 文件可读流，需要先通过fileIo.createReadStream方法来构建一个ReadStream实例。ReadStream继承自数据流基类stream.Readable。 ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
+**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
 
 **起始版本：** 12
 
@@ -13,6 +13,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -80,14 +83,14 @@ seek(offset: number, whence?: WhenceType): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
+| offset | number | 是 | 相对偏移位置，单位为Byte。 |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Position of the current offset pointer (offset relative to the file header, in bytes). |
+| number | 当前可读流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
 
 **错误码：**
 

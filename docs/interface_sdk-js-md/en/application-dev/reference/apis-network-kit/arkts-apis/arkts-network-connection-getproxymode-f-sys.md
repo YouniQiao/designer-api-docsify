@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getProxyMode(): Promise<ProxyMode>
 ```
 
-Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#proxymode-system-api).
+Obtains the current proxy mode. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; | the promise returned by the function. |
+| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; | Promise used to return the current proxy mode. |
 
 **Error codes:**
 

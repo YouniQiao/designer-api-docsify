@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function getActiveApnName(): Promise<string>
 ```
 
-Get Active APN's Name.
+Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Get Active APN's Name.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the name of the active APN or null if cellular network is not active. |
+| Promise&lt;string&gt; | Promise used to return the result. If mobile data is not activated, an empty string is returned. |
 
 **Error codes:**
 

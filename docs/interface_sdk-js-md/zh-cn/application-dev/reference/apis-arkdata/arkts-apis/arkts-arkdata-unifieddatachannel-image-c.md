@@ -1,8 +1,8 @@
 # Image
 
-图片类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md#file)的子类，用于描述图片文件。
+图片类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述图片文件。
 
-**继承/实现关系：** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
+**继承/实现关系：** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
 **起始版本：** 23
 
@@ -17,5 +17,6 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

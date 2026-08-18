@@ -1,3 +1,0 @@
-# SymbolGlyphModifier
-
-## Summary

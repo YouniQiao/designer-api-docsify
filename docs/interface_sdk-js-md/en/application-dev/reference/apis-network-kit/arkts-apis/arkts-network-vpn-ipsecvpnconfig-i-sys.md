@@ -2,7 +2,7 @@
 
 Define configuration of the ipsec VPN network.
 
-**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api)
+**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)
 
 **Since:** 12
 

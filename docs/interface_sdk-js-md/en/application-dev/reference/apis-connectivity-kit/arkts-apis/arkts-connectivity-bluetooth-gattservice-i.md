@@ -6,7 +6,7 @@ Describes the Gatt service.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#gattservice)
+**Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)
 
 <!--Device-bluetooth-interface GattService--><!--Device-bluetooth-interface GattService-End-->
 
@@ -41,7 +41,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 characteristics: Array<BLECharacteristic>
 ```
 
-The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#blecharacteristic) list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 

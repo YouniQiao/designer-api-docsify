@@ -12,7 +12,6 @@ Defines the data loading policy for the data sender in the lazy loading scenario
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## dataLoadInfo

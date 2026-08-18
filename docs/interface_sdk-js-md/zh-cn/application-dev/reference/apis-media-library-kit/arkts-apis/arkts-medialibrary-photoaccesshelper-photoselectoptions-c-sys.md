@@ -2,7 +2,7 @@
 
 图库选择选项子类，继承于BaseSelectOptions。用于拉起对应userId空间的picker。
 
-**继承/实现关系：** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions)
+**继承/实现关系：** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## themeColor
@@ -23,7 +24,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
+**类型：** [CustomColors](../../apis-na/arkts-apis/arkts-na-customcolors-t.md)
 
 **起始版本：** 26.0.0
 

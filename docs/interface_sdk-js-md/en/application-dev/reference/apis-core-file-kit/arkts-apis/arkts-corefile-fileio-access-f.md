@@ -17,7 +17,7 @@ Checks whether this process can access a file. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md)
 
 <!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>-End-->
 
@@ -49,7 +49,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md)
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +60,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
 
 
 ## access
@@ -75,7 +75,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md)
 
 <!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
@@ -87,5 +87,5 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | mode | number | Yes | Options for accessing the file. You can specify multiple options, separated with a bitwise OR operator (\|). The default value is **0**.<br>The options are as follows:<br>- **0**: Check whether the file exists.<br>- **1**: Check whether the process has the execute permission on the file.<br>- **2**: Check whether the process has the write permission on the file.<br>- **4**: Check whether the process has the read permission on the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
 

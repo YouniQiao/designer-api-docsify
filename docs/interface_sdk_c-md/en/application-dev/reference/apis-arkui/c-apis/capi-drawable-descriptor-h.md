@@ -348,7 +348,7 @@ Sets the duration for each frame in a DrawableDescriptor animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_GetAnimationFrameDurations()
 
@@ -374,7 +374,7 @@ Obtains the duration of each frame in a DrawableDescriptor animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_SetAnimationAutoPlay()
 
@@ -399,7 +399,7 @@ Specifies whether to enable autoplay for a DrawableDescriptor animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_GetAnimationAutoPlay()
 
@@ -424,7 +424,7 @@ Checks whether autoplay is enabled for a DrawableDescriptor animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_SetAnimationStopMode()
 
@@ -449,7 +449,7 @@ Sets the stop mode for an animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_GetAnimationStopMode()
 
@@ -474,7 +474,7 @@ Obtains the stop mode of an animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_CreateAnimationController()
 
@@ -500,7 +500,7 @@ Creates an animation controller for the DrawableDescriptor.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_DisposeAnimationController()
 
@@ -542,7 +542,7 @@ Starts playback from the first frame.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_StopAnimation()
 
@@ -566,7 +566,7 @@ Stops the DrawableDescriptor animation and returns to the first frame.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_ResumeAnimation()
 
@@ -590,7 +590,7 @@ Resumes the DrawableDescriptor animation from the current frame.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_PauseAnimation()
 
@@ -614,7 +614,7 @@ Pauses playback on the current frame.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_DrawableDescriptor_GetAnimationStatus()
 
@@ -639,6 +639,6 @@ Obtains the playback status of the DrawableDescriptor animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 

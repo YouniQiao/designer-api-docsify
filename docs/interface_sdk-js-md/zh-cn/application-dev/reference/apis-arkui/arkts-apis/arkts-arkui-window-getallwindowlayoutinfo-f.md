@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getAllWindowLayoutInfo
@@ -25,7 +28,7 @@ function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | long | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties)获取。 |
+| displayId | long | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)获取。 |
 
 **返回值：**
 
@@ -106,7 +109,7 @@ function getAllWindowLayoutInfo(displayId: long, option?: WindowInfoOptions): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | long | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties)获取。 |
+| displayId | long | 是 | 需要获取窗口布局信息的displayId，该参数应为整数，且为当前实际存在屏幕的displayId，可以通过窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)获取。 |
 | option | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | 否 | 过滤选项。用于指定返回信息是否排除系统窗、比指定窗口层级更低或更高的窗口的信息。默认不过滤。 |
 
 **返回值：**

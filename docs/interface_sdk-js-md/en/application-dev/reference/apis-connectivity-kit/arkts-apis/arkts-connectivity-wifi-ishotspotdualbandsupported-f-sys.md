@@ -21,7 +21,7 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 
 **Deprecated since:** 9
 
-**Substitutes:** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported-system-api)
+**Substitutes:** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 

@@ -21,7 +21,7 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 onConfigurationUpdated(config: Configuration): void
 ```
 
-[注册系统环境变化的监听](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#onabilitylifecycle) 后，在系统环境变化时触发回调。
+[注册系统环境变化的监听](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle) 后，在系统环境变化时触发回调。
 
 **起始版本：** 23
 
@@ -47,7 +47,7 @@ onConfigurationUpdated(config: Configuration): void
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-[注册系统环境变化的监听](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#onabilitylifecycle) 后，在系统内存变化时触发回调。
+[注册系统环境变化的监听](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle) 后，在系统内存变化时触发回调。
 
 **起始版本：** 23
 
@@ -65,5 +65,5 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md#memorylevel)。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md)。 |
 

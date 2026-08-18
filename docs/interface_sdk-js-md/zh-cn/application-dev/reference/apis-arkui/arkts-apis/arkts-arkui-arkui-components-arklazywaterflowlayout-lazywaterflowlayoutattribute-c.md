@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -37,7 +38,7 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 | 列之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 列之间的间距。 <br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 
@@ -157,7 +158,7 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值：LengthMetrics.vp(0) |
 
 **返回值：**
 

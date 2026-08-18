@@ -20,7 +20,7 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 duration?: number
 ```
 
-Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -56,7 +56,7 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**. For m
 height?: number
 ```
 
-Height of the image or video, in px. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Height of the image or video, in px. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Height of the image or video, in px. This parameter is supported only when [Item
 mimeType?: string
 ```
 
-MIME type of the image or video. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty. You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/" , it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
+MIME type of the image or video. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty. You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/" , it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
 
 **Type:** string
 
@@ -92,7 +92,7 @@ MIME type of the image or video. This parameter is supported only when [ItemType
 movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType
 ```
 
-State of the moving photo badge. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty.
+State of the moving photo badge. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** photoAccessHelper.MovingPhotoBadgeStateType
 
@@ -146,7 +146,7 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 size?: number
 ```
 
-Size of the image or video, in bytes. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Size of the image or video, in bytes. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -166,7 +166,7 @@ Size of the image or video, in bytes. This parameter is supported only when [Ite
 uri?: string
 ```
 
-URI of the image or video. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty. **NOTE：**If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
+URI of the image or video. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty. **NOTE：**If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
 
 **Type:** string
 
@@ -202,7 +202,7 @@ Log mode of a video file.
 width?: number
 ```
 
-Width of the image or video, in px. This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#itemtype) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Width of the image or video, in px. This parameter is supported only when [ItemType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 

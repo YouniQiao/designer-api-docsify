@@ -33,7 +33,7 @@ Disables proactive awareness on screen content and unsubscribes from a screen aw
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | Yes | Onscreen awareness capability list. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md)[]&gt; | No | Callback to unregister. The returned onscreen <br> awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness <br> information items. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnscreenAwarenessInfo](arkts-multimodalawareness-onscreen-onscreenawarenessinfo-i-sys.md)[]&gt; | No | Callback to unregister. The returned onscreen <br> awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness <br> information items. |
 
 **Error codes:**
 

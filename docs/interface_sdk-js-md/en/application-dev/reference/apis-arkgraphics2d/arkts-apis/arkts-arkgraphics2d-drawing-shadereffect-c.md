@@ -12,7 +12,6 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createColorShader

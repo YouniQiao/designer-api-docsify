@@ -11,6 +11,7 @@ Describes the video Dimensions.
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## height

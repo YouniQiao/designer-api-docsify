@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#showtoastoptions)
+**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## bottom

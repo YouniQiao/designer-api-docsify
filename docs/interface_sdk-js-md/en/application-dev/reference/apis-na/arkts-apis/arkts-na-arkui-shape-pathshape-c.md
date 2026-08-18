@@ -2,7 +2,7 @@
 
 Defines a path drawing class.
 
-**Inheritance/Implementation:** PathShape extends [CommonShapeMethod](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod)
+**Inheritance/Implementation:** PathShape extends [CommonShapeMethod](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
 **Since:** 23
 

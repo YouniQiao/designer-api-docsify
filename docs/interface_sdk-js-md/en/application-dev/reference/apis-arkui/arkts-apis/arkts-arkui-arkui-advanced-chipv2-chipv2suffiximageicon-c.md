@@ -2,7 +2,7 @@
 
 Defines suffix icon.
 
-**Inheritance/Implementation:** ChipV2SuffixImageIcon extends [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md#chipv2imageicon)
+**Inheritance/Implementation:** ChipV2SuffixImageIcon extends [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md)
 
 **Since:** 26.0.0
 

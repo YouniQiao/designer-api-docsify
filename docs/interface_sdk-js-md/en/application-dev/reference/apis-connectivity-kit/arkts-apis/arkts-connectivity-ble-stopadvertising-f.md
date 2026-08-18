@@ -70,7 +70,7 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | advertisingId | int | Yes | Indicates the ID for this BLE advertising. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 

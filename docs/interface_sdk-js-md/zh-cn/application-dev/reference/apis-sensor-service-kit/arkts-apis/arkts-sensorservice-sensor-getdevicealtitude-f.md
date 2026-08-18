@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getDeviceAltitude
@@ -25,7 +26,7 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double, callbac
 | --- | --- | --- | --- |
 | seaPressure | double | 是 | 海平面气压值，单位：hPa（百帕）。 |
 | currentPressure | double | 是 | 指定的气压值，单位：hPa（百帕）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数，异步返回指定的气压值对应的海拔高度，单位：m（米）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数，异步返回指定的气压值对应的海拔高度，单位：m（米）。 |
 
 **错误码：**
 

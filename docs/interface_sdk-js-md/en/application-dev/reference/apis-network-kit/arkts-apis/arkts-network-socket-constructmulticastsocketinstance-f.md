@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructMulticastSocketInstance(): MulticastSocket
 ```
 
-Creates a MulticastSocket object.
+Creates a **MulticastSocket** object.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket--><!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket-End-->
 
@@ -24,7 +24,7 @@ Creates a MulticastSocket object.
 
 | Type | Description |
 | --- | --- |
-| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | the MulticastSocket of the constructMulticastSocketInstance. |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | MulticastSocket** object. |
 
 **Examples**
 

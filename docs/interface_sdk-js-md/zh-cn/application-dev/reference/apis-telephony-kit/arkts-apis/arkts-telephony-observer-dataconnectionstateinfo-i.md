@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## network
@@ -37,7 +38,7 @@ state: DataConnectState
 
 数据连接状态。
 
-**类型：** [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md)
+**类型：** DataConnectState
 
 **起始版本：** 23
 

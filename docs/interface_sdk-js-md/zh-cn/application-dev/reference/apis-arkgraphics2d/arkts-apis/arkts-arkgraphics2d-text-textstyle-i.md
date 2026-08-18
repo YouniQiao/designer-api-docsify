@@ -1,6 +1,6 @@
 # TextStyle
 
-文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder)的 [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)（控制段落级 别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
+文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)的 [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)（控制段落级 别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundRect
@@ -293,7 +294,7 @@ fontVariations?: Array<FontVariation>
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。 在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开 始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
+字重，默认为W400。 在<!--RP1-->OpenHarmony 6.1<!--RP1End-->之前，仅系统字体中的可变字体支持字重调节；从<!--RP1-->OpenHarmony 6.1<!--RP1End-->开 始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
 
 **类型：** FontWeight
 

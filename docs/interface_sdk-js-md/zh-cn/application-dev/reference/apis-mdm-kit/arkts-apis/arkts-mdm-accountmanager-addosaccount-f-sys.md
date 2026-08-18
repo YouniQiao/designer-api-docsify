@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## addOsAccount
@@ -17,7 +18,7 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync)
+**替代接口：** [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

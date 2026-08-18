@@ -86,7 +86,7 @@ Sets the TipsDialogV2 content.
 
 Sets the borderColor of TipsDialogV2 image.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -107,7 +107,7 @@ Sets the borderColor of TipsDialogV2 image.
 
 Sets the borderWidth of TipsDialogV2 image.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 

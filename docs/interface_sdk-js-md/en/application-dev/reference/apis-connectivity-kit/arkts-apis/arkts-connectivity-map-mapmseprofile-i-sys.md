@@ -2,7 +2,7 @@
 
 Manager MAP MSE profile.
 
-**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-map-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** MapMseProfile extends [BaseProfile](arkts-connectivity-map-baseprofile-t.md)
 
 **Since:** 26.0.0
 

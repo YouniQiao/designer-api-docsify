@@ -1,6 +1,6 @@
 # VpnObserver
 
-Defines a VPN observer.
+Defines a VPN observer object. It is used to listen for VPN-related events. Before calling **VpnObserver** APIs, you need to create a VPN connection object by calling [vpnExtension.createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md).
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 offAuthorizationResult(callback?: Callback<boolean>): void
 ```
 
-Unregisters the listener for user authorization results.
+Unregisters a listener for the user authorization result. > **NOTE：**> > If you have called onAuthorizationResult multiple times to register > listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no > parameter.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Unregisters the listener for user authorization results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | the callback used to return the result. |
+| callback | Callback&lt;boolean&gt; | No | Listener callback used to return the user authorization result. <br>If this parameter is passed, the specified listener is unregistered. If no parameter is passed, all registered listeners are unregistered. |
 
 ## onAuthorizationResult
 
@@ -42,7 +42,7 @@ Unregisters the listener for user authorization results.
 onAuthorizationResult(callback: Callback<boolean>): void
 ```
 
-Registers a listener for user authorization results. The authorization results are notified after startVpnExtensionAbility is invoked. Only the results of the current VPN are received.
+Registers a listener for the user authorization result. The authorization result is displayed in a dialog box after [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) is called. The notification is sent only when the user taps the dialog box, and only the result of the current VPN is received. If you do not need to listen for the authorization result, call offAuthorizationResult to cancel the registration. > **NOTE：**> > If this API is called multiple times, only the last callback takes effect.
 
 **Since:** 26.0.0
 
@@ -56,5 +56,5 @@ Registers a listener for user authorization results. The authorization results a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | the callback used to return the result. |
+| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the user authorization result. The value **true** indicates that the user agrees to the authorization, and the value **false** indicates the opposite. |
 

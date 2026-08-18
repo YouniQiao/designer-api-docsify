@@ -71,7 +71,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md#want) | Yes| Want information of the UIExtensionAbility.|
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result. The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application. A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility. | Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 23
 
@@ -175,7 +175,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
+**Substitutes:** [on](arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,7 +209,7 @@ Register environment callback.
 
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
+**Substitutes:** [on](arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -243,7 +243,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [off](arkts-ability-applicationcontext-c.md#off_abilitylifecycleabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,7 +258,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
 
@@ -312,7 +312,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [off](arkts-ability-applicationcontext-c.md#off_abilitylifecycleabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -327,7 +327,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
-| envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| envcallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
 

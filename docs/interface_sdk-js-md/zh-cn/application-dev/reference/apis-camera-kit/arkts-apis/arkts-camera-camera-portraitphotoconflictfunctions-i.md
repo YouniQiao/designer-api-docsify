@@ -2,7 +2,7 @@
 
 Portrait Photo Conflict Functions object.
 
-**继承/实现关系：** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#portraitquery系统接口), [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md#aperturequery系统接口)
+**继承/实现关系：** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md), [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,5 +15,7 @@ Portrait Photo Conflict Functions object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 

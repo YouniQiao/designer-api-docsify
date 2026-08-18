@@ -6,7 +6,7 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 
 **Deprecated since:** 9
 
-**Substitutes:** [missionManager/missionManager](arkts-app-ability-missionmanager.md#ohosappabilitymissionmanager)
+**Substitutes:** [missionManager/missionManager](arkts-app-ability-missionmanager.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -24,7 +24,7 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |

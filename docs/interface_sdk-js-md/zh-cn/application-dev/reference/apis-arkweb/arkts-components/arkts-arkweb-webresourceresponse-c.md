@@ -11,6 +11,11 @@ WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -243,7 +248,7 @@ setResponseCode(code: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 要设置的资源响应的状态码。如果该资源请求失败或响应状态为错误状态，请参考 [@ohos.web.netErrorList](../arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md#webneterrorlist)设置相应错误码。常见错误码场景：404表示资源不存在，请检查资源路径；500表示服 务器内部错误，请检查服务器状态；403表示无访问权限，请申请相应访问权限；401表示未授权，请检查认证信息。根据错误码检查网络配置、服务器状态或资源访问权限。避免设置错误码为 ERR_IO_PENDING，设置为该错误码可 能会导致XMLHttpRequest同步请求阻塞。 |
+| code | number | 是 | 要设置的资源响应的状态码。如果该资源请求失败或响应状态为错误状态，请参考 [@ohos.web.netErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md)设置相应错误码。常见错误码场景：404表示资源不存在，请检查资源路径；500表示服 务器内部错误，请检查服务器状态；403表示无访问权限，请申请相应访问权限；401表示未授权，请检查认证信息。根据错误码检查网络配置、服务器状态或资源访问权限。避免设置错误码为 ERR_IO_PENDING，设置为该错误码可 能会导致XMLHttpRequest同步请求阻塞。 |
 
 ## setResponseData
 

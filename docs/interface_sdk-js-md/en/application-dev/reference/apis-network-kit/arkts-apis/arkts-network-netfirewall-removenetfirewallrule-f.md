@@ -9,16 +9,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## removeNetFirewallRule
 
 ```TypeScript
-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>
+function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>
 ```
 
-Delete a firewall rule by userId and ruleId.
+Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result. **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
-<!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>--><!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>-End-->
+<!--Device-netFirewall-function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>--><!--Device-netFirewall-function removeNetFirewallRule(userId: int, ruleId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,14 +26,14 @@ Delete a firewall rule by userId and ruleId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| ruleId | number | Yes | Rule ID. |
+| userId | int | Yes | System user ID, which must exist. |
+| ruleId | int | Yes | ID of the firewall rule. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

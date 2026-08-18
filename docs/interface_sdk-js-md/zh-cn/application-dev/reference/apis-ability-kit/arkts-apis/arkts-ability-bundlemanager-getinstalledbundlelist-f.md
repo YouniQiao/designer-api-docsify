@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
@@ -27,7 +28,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#bundleflag)。 |
+| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)。 |
 
 **返回值：**
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getSimState
@@ -24,7 +25,7 @@ Obtains the state of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 | Indicates the callback for getting one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN} &lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT} &lt;li&gt;{@code SimState#SIM_STATE_LOCKED} &lt;li&gt;{@code SimState#SIM_STATE_NOT_READY} &lt;li&gt;{@code SimState#SIM_STATE_READY} &lt;li&gt;{@code SimState#SIM_STATE_LOADED} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimState&gt; | 是 | Indicates the callback for getting one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN} &lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT} &lt;li&gt;{@code SimState#SIM_STATE_LOCKED} &lt;li&gt;{@code SimState#SIM_STATE_NOT_READY} &lt;li&gt;{@code SimState#SIM_STATE_READY} &lt;li&gt;{@code SimState#SIM_STATE_LOADED} &lt;/ul&gt; |
 
 **错误码：**
 

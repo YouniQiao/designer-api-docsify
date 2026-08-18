@@ -137,7 +137,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and registered custom fonts are supported. |
+| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported. |
 
 ## fontSize
 

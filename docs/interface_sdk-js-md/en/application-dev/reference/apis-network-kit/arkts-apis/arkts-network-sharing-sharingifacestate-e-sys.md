@@ -16,7 +16,7 @@ Enumerates the network sharing states of an NIC.
 SHARING_NIC_SERVING = 1
 ```
 
-Indicates the names of the NICs that are serving as network sharing.
+Network sharing is in progress.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Indicates the names of the NICs that are serving as network sharing.
 SHARING_NIC_CAN_SERVER = 2
 ```
 
-Indicates the names of the NICs that can serve as network sharing.
+Network sharing is supported.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Indicates the names of the NICs that can serve as network sharing.
 SHARING_NIC_ERROR = 3
 ```
 
-Indicates the names of the NICs that serving error.
+An error occurred during network sharing.
 
 **Since:** 23
 

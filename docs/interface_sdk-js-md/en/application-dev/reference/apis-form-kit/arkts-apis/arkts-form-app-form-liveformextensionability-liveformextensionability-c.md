@@ -14,7 +14,6 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 
 ```TypeScript
 import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## onLiveFormCreate
@@ -101,7 +100,7 @@ export default class LiveFormExtAbility extends LiveFormExtensionAbility {
 context: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
@@ -121,7 +120,7 @@ Context of the **LiveFormExtensionAbility**. This context is inherited from [Ext
 liveFormContext: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#extensioncontext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 

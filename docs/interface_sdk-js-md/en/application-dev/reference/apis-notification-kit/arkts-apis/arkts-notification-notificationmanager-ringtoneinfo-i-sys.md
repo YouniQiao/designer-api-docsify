@@ -14,7 +14,6 @@ Describes the custom ringtone information.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## ringtoneFileName

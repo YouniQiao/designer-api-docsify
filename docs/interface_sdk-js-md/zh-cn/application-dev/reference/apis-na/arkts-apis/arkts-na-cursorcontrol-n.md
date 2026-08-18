@@ -18,6 +18,6 @@ CursorControl
 
 | 名称 | 说明 |
 | --- | --- |
-| [setCursor](arkts-na-cursorcontrol-setcursor-f.md#setcursor) | Change the mouse cursor style by param: 'PointerStyle'. |
-| [restoreDefault](arkts-na-cursorcontrol-restoredefault-f.md#restoredefault) | Restore the default mouse cursor style. |
+| [setCursor](arkts-na-cursorcontrol-setcursor-f.md) | Change the mouse cursor style by param: 'PointerStyle'. |
+| [restoreDefault](arkts-na-cursorcontrol-restoredefault-f.md) | Restore the default mouse cursor style. |
 

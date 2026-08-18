@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

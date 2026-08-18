@@ -12,7 +12,6 @@ The definition of command to be sent to the session
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## command
@@ -21,7 +20,7 @@ import { avSession } from '@kit.AVSessionKit';
 command: AVControlCommandType
 ```
 
-The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md#avcontrolcommandtype)
+The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
 **Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
@@ -39,7 +38,7 @@ The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcomm
 commandInfo?: CommandInfo
 ```
 
-The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#commandinfo)
+The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
 **Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
@@ -55,7 +54,7 @@ The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#comma
 parameter?: LoopMode | string | double
 ```
 
-parameter of the command. Whether this command requires parameters, see AVSessionCommand seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md#loopmode) parameter. toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetid) parameter other commands need no parameter
+parameter of the command. Whether this command requires parameters, see AVSessionCommand seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md) parameter. toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetid) parameter other commands need no parameter
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 

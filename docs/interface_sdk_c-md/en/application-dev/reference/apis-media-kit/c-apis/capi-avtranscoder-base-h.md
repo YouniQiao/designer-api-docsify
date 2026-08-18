@@ -74,7 +74,7 @@ Defines a callback invoked when the state of the transcoding process changes.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVTranscoder \*transcoder | The pointer to an OH_AVTranscoder instance. |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) \*transcoder | The pointer to an OH_AVTranscoder instance. |
 | [OH_AVTranscoder_State](capi-avtranscoder-base-h.md#oh_avtranscoder_state) state | Indicates the transcoder state. For details, see [OH_AVTranscoder_State](capi-avtranscoder-base-h.md#oh_avtranscoder_state). |
 | void \*userData | Pointer to user specific data. |
 
@@ -94,7 +94,7 @@ Defines a callback invoked when an error occurs during the transcoding process.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVTranscoder \*transcoder | Pointer to an OH_AVTranscoder instance. |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) \*transcoder | Pointer to an OH_AVTranscoder instance. |
 | int32_t errorCode | Error code.{@link AV_ERR_NO_MEMORY}: memory is insufficient.{@link AV_ERR_IO}: IO access failed.{@link AV_ERR_INVALID_STATE}: current state does not support this operation.{@link AV_ERR_UNSUPPORT}: unsupported function.{@link AV_ERR_INVALID_VAL}: the parameter check failed.{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed. |
 | const char \*errorMsg | Error message. |
 | void \*userData | Pointer to user specific data. |
@@ -115,7 +115,7 @@ Defines a callback invoked when the progress of the transcoding process is updat
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVTranscoder \*transcoder | Pointer to an OH_AVTranscoder instance. |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) \*transcoder | Pointer to an OH_AVTranscoder instance. |
 | int32_t progress | Transcoding progress, in percentage. |
 | void \*userData | Pointer to user specific data. |
 

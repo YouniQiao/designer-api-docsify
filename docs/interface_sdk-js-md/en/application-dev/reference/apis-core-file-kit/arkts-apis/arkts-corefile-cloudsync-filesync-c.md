@@ -12,8 +12,6 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -103,7 +101,7 @@ Obtains the last sync time. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to obtain the last sync time. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to obtain the last sync time. |
 
 **Error codes:**
 
@@ -147,7 +145,7 @@ Unsubscribes from sync progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No | callback function with a `SyncProgress` argument. |
 
 **Error codes:**
 
@@ -175,7 +173,7 @@ Removes the specified callback from the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No | Callback used to return the sync progress. The default value is null. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No | Callback used to return the sync progress. The default value is null. |
 
 **Error codes:**
 
@@ -216,7 +214,7 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
 
 **Error codes:**
 
@@ -244,7 +242,7 @@ Registers a listener for the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | Callback used to return the sync progress. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Error codes:**
 
@@ -332,7 +330,7 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to start device-cloud sync. |
 
 **Error codes:**
 
@@ -419,7 +417,7 @@ Stops device-cloud sync of a file. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to stop device-cloud sync. |
 
 **Error codes:**
 

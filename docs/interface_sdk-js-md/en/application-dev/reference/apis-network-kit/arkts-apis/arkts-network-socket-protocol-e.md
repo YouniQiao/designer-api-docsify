@@ -2,7 +2,7 @@
 
 Enumerates TLS protocol versions.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-socket-export enum Protocol--><!--Device-socket-export enum Protocol-End-->
 
@@ -14,9 +14,9 @@ Enumerates TLS protocol versions.
 TLSv12 = "TLSv1.2"
 ```
 
-Use TLSv1.2 protocol for communication.
+TLSv1.2.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-Protocol-TLSv12 = "TLSv1.2"--><!--Device-Protocol-TLSv12 = "TLSv1.2"-End-->
 
@@ -28,9 +28,9 @@ Use TLSv1.2 protocol for communication.
 TLSv13 = "TLSv1.3"
 ```
 
-Use TLSv1.3 protocol for communication.
+TLSv1.3.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-Protocol-TLSv13 = "TLSv1.3"--><!--Device-Protocol-TLSv13 = "TLSv1.3"-End-->
 

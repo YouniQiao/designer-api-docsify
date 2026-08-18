@@ -16,24 +16,23 @@ The dialogSession module provides APIs related to the dialog box.
 
 ```TypeScript
 import { dialogSession } from '@kit.AbilityKit';
-import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getdialogsessioninfo) | Obtains the session information based on the session ID. |
-| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getdialogsessioninfo-system-api) | Query the session info of dialog. |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult) | Sends a request for a dialog box. This API uses a promise to return the result. |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult-system-api) | Sends a request for a dialog box. This API uses an asynchronous callback to return the result. |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md) | Obtains the session information based on the session ID. |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md) | Query the session info of dialog. |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md) | Sends a request for a dialog box. This API uses a promise to return the result. |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md) | Sends a request for a dialog box. This API uses an asynchronous callback to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

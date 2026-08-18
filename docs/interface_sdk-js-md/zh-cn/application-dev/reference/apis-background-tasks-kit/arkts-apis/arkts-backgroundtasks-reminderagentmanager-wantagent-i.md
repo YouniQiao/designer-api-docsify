@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -37,7 +38,7 @@ parameters?: RecordData
 
 The description of the WantParams object in an Want
 
-**类型：** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**类型：** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **起始版本：** 23
 

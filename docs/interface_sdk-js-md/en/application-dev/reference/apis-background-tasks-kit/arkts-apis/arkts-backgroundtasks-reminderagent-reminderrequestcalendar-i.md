@@ -2,13 +2,13 @@
 
 Defines a reminder for a calendar event.
 
-**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#reminderrequestcalendar)
+**Substitutes:** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md)
 
 <!--Device-reminderAgent-interface ReminderRequestCalendar--><!--Device-reminderAgent-interface ReminderRequestCalendar-End-->
 
@@ -18,7 +18,6 @@ Defines a reminder for a calendar event.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

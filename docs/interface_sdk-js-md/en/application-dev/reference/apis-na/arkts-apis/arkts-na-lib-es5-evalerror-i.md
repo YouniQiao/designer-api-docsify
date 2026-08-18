@@ -1,6 +1,6 @@
 # EvalError
 
-**Inheritance/Implementation:** EvalError extends [Error](arkts-na-lib-es5-error-i.md#error)
+**Inheritance/Implementation:** EvalError extends [Error](arkts-na-lib-es5-error-i.md)
 
 **Since:** -1
 

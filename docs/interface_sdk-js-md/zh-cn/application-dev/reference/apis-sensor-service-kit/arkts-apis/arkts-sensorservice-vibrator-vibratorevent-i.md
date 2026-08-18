@@ -1,6 +1,6 @@
 # VibratorEvent
 
-振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#vibratorpattern)的events数组中定义具体的振动事件。
+振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)的events数组中定义具体的振动事件。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## duration

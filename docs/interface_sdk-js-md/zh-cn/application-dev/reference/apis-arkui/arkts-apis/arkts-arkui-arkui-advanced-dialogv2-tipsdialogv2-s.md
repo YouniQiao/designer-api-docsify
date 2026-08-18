@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## checkTips
@@ -85,7 +86,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 图片描边颜色。 默认值：Color.Black
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -106,7 +107,7 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 
 图片描边宽度。 默认无描边效果。
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 18
 

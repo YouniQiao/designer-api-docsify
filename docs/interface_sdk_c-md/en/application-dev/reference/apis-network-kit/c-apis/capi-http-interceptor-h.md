@@ -56,7 +56,7 @@ Adds a global read-only HTTP interceptor.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.      [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_AddWritableInterceptor()
 
@@ -87,7 +87,7 @@ add a writable http global interceptor for HTTP requests.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>         [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.          [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_RemoveInterceptor()
 
@@ -113,7 +113,7 @@ Removes a specified global HTTP interceptor.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.      [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_RemoveAllInterceptors()
 
@@ -146,7 +146,7 @@ Removes all HTTP interceptors of a specified group ID.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.      [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_StartAllInterceptors()
 
@@ -172,7 +172,7 @@ Enables all HTTP interceptors of a specified group ID.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.      [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 ### OH_Http_StopAllInterceptors()
 
@@ -198,6 +198,6 @@ Disables all HTTP interceptors of a specified group ID.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.<br>     [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
+| int32_t | [OH_HTTP_RESULT_OK](capi-net-http-type-h.md#http_errcode) 0 -if the operation is successful.      [OH_HTTP_PERMISSION_DENIED](capi-net-http-type-h.md#http_errcode) 201 -if permission is denied. |
 
 

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -21,13 +22,13 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) | 创建CDSM客户端实例。 |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) | 创建CDSM客户端实例。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient)来创建CDSM客户端实例。 |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | 管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md)来创建CDSM客户端实例。 |
 | [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 描述合作设备集信息。 |
 | [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | 描述合作设备集的成员信息。 |
 

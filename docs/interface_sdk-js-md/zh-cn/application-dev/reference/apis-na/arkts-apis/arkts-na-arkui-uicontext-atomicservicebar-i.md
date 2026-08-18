@@ -37,7 +37,7 @@ getBarRect(): Frame
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](arkts-na-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](../../apis-arkui/arkts-apis/arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## setBackgroundColor
 

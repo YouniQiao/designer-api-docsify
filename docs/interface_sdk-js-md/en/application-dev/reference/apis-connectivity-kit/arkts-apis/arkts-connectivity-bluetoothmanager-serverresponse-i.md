@@ -6,7 +6,7 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Deprecated since:** 10
 
-**Substitutes:** [ServerResponse](arkts-connectivity-ble-serverresponse-i.md#serverresponse)
+**Substitutes:** [ServerResponse](arkts-connectivity-ble-serverresponse-i.md)
 
 <!--Device-bluetoothManager-interface ServerResponse--><!--Device-bluetoothManager-interface ServerResponse-End-->
 

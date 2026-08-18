@@ -6,7 +6,7 @@ Describes the service data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md#servicedata)
+**Substitutes:** [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md)
 
 <!--Device-bluetooth-interface ServiceData--><!--Device-bluetooth-interface ServiceData-End-->
 

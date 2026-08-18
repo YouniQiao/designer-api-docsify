@@ -4,7 +4,7 @@
 export type TlsV10CipherSuite = TlsV10SpecificCipherSuite
 ```
 
-TLS1.0 cipher suite.
+Declares the cipher suite for TLS 1.0.
 
 **Since:** 23
 

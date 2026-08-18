@@ -12,7 +12,6 @@ The **cloudData** module provides APIs for implementing device-cloud synergy and
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -27,12 +26,12 @@ import { cloudData } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md#setcloudstrategy) | Sets the cloud sync strategy of an application. This API uses a promise to return the result. |
-| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md#onautosynctrigger) | Describes the triggering method for automatic device-cloud synchronization subscription. |
-| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md#offautosynctrigger) | Describes unsubscribing from the device-cloud automatic synchronization trigger mode. |
+| [setCloudStrategy](arkts-arkdata-clouddata-setcloudstrategy-f.md) | Sets the cloud sync strategy of an application. This API uses a promise to return the result. |
+| [onAutoSyncTrigger](arkts-arkdata-clouddata-onautosynctrigger-f.md) | Describes the triggering method for automatic device-cloud synchronization subscription. |
+| [offAutoSyncTrigger](arkts-arkdata-clouddata-offautosynctrigger-f.md) | Describes unsubscribing from the device-cloud automatic synchronization trigger mode. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -46,7 +45,7 @@ import { cloudData } from '@kit.ArkData';
 | [AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md) | Describes information about the automatic synchronization trigger mode. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -69,7 +68,7 @@ import { cloudData } from '@kit.ArkData';
 | [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md) | Indicates automatic synchronization triggering method for Device-Cloud data. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -78,10 +77,10 @@ import { cloudData } from '@kit.ArkData';
 <!--DelEnd-->
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#datachangeeventid) | ID of the event, which indicates the change of the data in the cloud. |
+| [DATA_CHANGE_EVENT_ID](arkts-arkdata-clouddata-con-sys.md#data_change_event_id) | ID of the event, which indicates the change of the data in the cloud. |
 <!--DelEnd-->
 

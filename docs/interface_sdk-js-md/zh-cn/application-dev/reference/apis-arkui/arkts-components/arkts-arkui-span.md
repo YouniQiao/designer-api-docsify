@@ -30,4 +30,9 @@ Span(value: string | Resource)
 
 ## 汇总
 
-- [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 定义Span的背景样式。 |
+

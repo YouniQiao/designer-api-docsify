@@ -1,8 +1,8 @@
 # SystemDefinedAppItem
 
-Represents the data of the home screen icon defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#systemdefinedrecord).
+Represents the data of the home screen icon defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md).
 
-**Inheritance/Implementation:** SystemDefinedAppItem extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#systemdefinedrecord)
+**Inheritance/Implementation:** SystemDefinedAppItem extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ Represents the data of the home screen icon defined by the system. It is a child
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

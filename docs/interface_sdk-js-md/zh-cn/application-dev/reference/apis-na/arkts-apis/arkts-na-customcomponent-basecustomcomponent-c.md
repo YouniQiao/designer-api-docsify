@@ -2,7 +2,7 @@
 
 基础自定义组件的定义，它是所有自定义组件的基类。
 
-**继承/实现关系：** BaseCustomComponent extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md#extendablecomponent) implements CommonAttribute
+**继承/实现关系：** BaseCustomComponent extends [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md) implements CommonAttribute
 
 **起始版本：** 23
 

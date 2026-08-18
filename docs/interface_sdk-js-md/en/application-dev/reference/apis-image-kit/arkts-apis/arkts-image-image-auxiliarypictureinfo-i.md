@@ -12,7 +12,6 @@ Describes the auxiliary picture information.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## auxiliaryPictureType

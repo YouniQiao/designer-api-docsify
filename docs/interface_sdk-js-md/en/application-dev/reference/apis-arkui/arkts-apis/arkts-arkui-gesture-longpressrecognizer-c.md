@@ -2,7 +2,7 @@
 
 Defines the long press gesture recognizer.
 
-**Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#gesturerecognizer)
+**Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 
 **Since:** 23
 

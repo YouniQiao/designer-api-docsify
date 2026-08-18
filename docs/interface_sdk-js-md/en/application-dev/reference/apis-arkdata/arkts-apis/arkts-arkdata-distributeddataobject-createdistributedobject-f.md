@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## createDistributedObject
@@ -19,7 +18,7 @@ Creates a distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](arkts-arkdata-distributeddataobject-create-f.md#create)
+**Substitutes:** [create](arkts-arkdata-distributeddataobject-create-f.md)
 
 <!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject--><!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject-End-->
 

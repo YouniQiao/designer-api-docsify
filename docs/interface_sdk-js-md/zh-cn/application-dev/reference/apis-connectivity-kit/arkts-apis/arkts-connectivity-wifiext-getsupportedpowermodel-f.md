@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerModel
@@ -17,7 +18,7 @@ function getSupportedPowerModel(): Promise<Array<PowerModel>>
 
 **废弃版本：** 9
 
-**替代接口：** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
+**替代接口：** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -44,7 +45,7 @@ function getSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): voi
 
 **废弃版本：** 9
 
-**替代接口：** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md#getsupportedpowermode)
+**替代接口：** [getSupportedPowerMode](arkts-connectivity-wifimanagerext-getsupportedpowermode-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -56,5 +57,5 @@ function getSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt;&gt; | 是 | 回调函数。当操作成功时，err为0，data表示支持的功率模式。如果err为非0，表示处理出现错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt;&gt; | 是 | 回调函数。当操作成功时，err为0，data表示支持的功率模式。如果err为非0，表示处理出现错误。 |
 

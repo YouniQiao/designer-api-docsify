@@ -11,6 +11,7 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement
@@ -258,7 +259,7 @@ console.info(result); // <![CDATA[root SYSTEM]]>
 setComment(text: string): void
 ```
 
-写入注释内容，所生成的注释结构为：`&lt;!--` + 注释内容 + `--&gt;`。
+写入注释内容，所生成的注释结构为：`<!--` + 注释内容 + `-->`。
 
 **起始版本：** 23
 

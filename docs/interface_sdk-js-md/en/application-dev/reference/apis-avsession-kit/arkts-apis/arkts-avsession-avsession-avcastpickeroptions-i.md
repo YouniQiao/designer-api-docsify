@@ -12,7 +12,6 @@ An option to make different picker usage
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## menuPosition

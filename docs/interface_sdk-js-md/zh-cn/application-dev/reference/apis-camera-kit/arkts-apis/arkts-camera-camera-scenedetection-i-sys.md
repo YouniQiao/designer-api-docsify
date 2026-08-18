@@ -1,8 +1,8 @@
 # SceneDetection（系统接口）
 
-Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#scenedetectionquery系统接口).
+Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md).
 
-**继承/实现关系：** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#scenedetectionquery系统接口)
+**继承/实现关系：** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableSceneFeature
@@ -23,7 +25,7 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 ```
 
-Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md#scenefeaturedetectionresult系统接口) of the corresponding scene feature is received.
+Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is received.
 
 **起始版本：** 23
 

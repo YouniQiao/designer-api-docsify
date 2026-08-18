@@ -12,13 +12,13 @@ import { sms } from '@kit.TelephonyKit';
 function sendMessage(options: SendMessageOptions): void
 ```
 
-Sends an SMS message. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage).
+Sends an SMS message. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
 
 **Since:** 6
 
 **Deprecated since:** 10
 
-**Substitutes:** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage)
+**Substitutes:** [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md)
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -30,7 +30,7 @@ Sends an SMS message. > **NOTE：**> > This API is supported since API version 6
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions). |
+| options | SendMessageOptions | Yes | Options (including the callback) for sending SMS messages. For details, see [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md). |
 
 **Error codes:**
 

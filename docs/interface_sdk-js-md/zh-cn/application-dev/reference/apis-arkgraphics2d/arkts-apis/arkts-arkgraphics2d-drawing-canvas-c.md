@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -415,7 +416,7 @@ drawCircle(x: double, y: double, radius: double): void
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode)对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **起始版本：** 23
 
@@ -442,7 +443,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode)对画布当前裁剪区域进行填充。性能优于 [drawColor](#drawcolor)接口，推荐使用本接口。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于 [drawColor](#drawcolor)接口，推荐使用本接口。
 
 **起始版本：** 23
 
@@ -472,7 +473,7 @@ drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): v
 drawColor(color: int, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#blendmode)对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
 
 **起始版本：** 23
 

@@ -14,7 +14,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>
 ```
 
-Creates a [TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md#x509trustanchor) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result.
+Creates a [TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md) object array by using the CA certificate parsed from a .p12 keystore file. This API uses a promise to return the result.
 
 **Since:** 23
 

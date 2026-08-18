@@ -6,7 +6,7 @@ Provides an asynchronous callback to return the authentication event information
 
 **Deprecated since:** 11
 
-**Substitutes:** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#iauthcallback)
+**Substitutes:** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
 
 <!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
@@ -16,8 +16,6 @@ Provides an asynchronous callback to return the authentication event information
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 

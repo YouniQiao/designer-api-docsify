@@ -12,7 +12,6 @@ Represents the RSA private key encoding parameters. You can use it to generate a
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherName

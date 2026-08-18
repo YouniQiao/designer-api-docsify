@@ -1,6 +1,6 @@
 # VibratorCurvePoint
 
-相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md#continuousparam)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md#vibratorevent)的 points字段，精细控制振动强度和频率的变化趋势。
+相对事件振动强度的增益。用于[ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md)和[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)的 points字段，精细控制振动强度和频率的变化趋势。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## frequency

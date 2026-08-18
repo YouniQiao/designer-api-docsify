@@ -30,7 +30,7 @@ Sets the screen to extended mode. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | Array&lt;[ExpandOption](arkts-arkui-screen-expandoption-i-sys.md)&gt; | Yes | Parameters for expanding the screen. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the group ID of the extended screens, where the ID is an integer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the group ID of the extended screens, where the ID is an integer. |
 
 **Error codes:**
 

@@ -6,7 +6,7 @@ Enumerates the widget states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md#formstate)
+**Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md)
 
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 

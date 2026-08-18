@@ -1,6 +1,6 @@
 # ExtensionAbilityType
 
-Enumerates the types of ExtensionAbility components. &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+Enumerates the types of ExtensionAbility components. <!--RP2--><!--RP2End-->
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates the types of ExtensionAbility components. &lt;!--RP2--&gt;&lt;!--RP2E
 FORM = 0
 ```
 
-[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability): provides APIs for widget development.
+[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md): provides APIs for widget development.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ FORM = 0
 WORK_SCHEDULER = 1
 ```
 
-[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md#workschedulerextensionability): provides extended capabilities related to deferred tasks, enabling applications to execute non-real-time tasks when the system is idle.
+[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md): provides extended capabilities related to deferred tasks, enabling applications to execute non-real-time tasks when the system is idle.
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#inputmethodextensionability): provides extended capabilities related to input method applications.
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md): provides extended capabilities related to input method applications.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#serviceextensionability-system-api): provides extended capabilities related to background services.
+[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md): provides extended capabilities related to background services.
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ AccessibilityExtensionAbility: provides extended capabilities related to accessi
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#datashareextensionability-system-api): provides extended capabilities related to data sharing, providing data reading and writing services.
+[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md): provides extended capabilities related to data sharing, providing data reading and writing services.
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ FileShareExtensionAbility: provides extended capabilities related to file sharin
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#staticsubscriberextensionability-system-api) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
+[StaticSubscriberExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md) : provides extended capabilities related to static broadcast, used to handle static events such as startup events.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ WallpaperExtensionAbility: provides extended capabilities to implement wallpaper
 BACKUP = 9
 ```
 
-[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md#backupextensionability): provides extended capabilities for data backup and restore.
+[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md): provides extended capabilities for data backup and restore.
 
 **Since:** 23
 
@@ -156,7 +156,7 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#windowextensionability-system-api): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
+[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
 
 **Since:** 23
 
@@ -170,7 +170,7 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#enterpriseadminextensionability) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
+[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) : provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
 
 **Since:** 23
 
@@ -226,7 +226,7 @@ PrintExtensionAbility: provides extended capabilities for printing photos and do
 SHARE = 16
 ```
 
-[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#shareextensionability): provides sharing service templates based on the UIExtensionAbility.
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md): provides sharing service templates based on the UIExtensionAbility.
 
 **Since:** 23
 
@@ -254,7 +254,7 @@ PushExtensionAbility: provides extended capabilities for pushing scenario-specif
 DRIVER = 18
 ```
 
-[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#driverextensionability): provides extended capabilities for the peripheral driver. When an application configures an ExtensionAbility of the driver type, it is recognized as a driver application. Driver applications do not differentiate between users during installation, uninstall, and recovery. Moreover, when a new user account is created, the existing driver applications on the device are installed for that user. For example, when a sub-user is created, the driver applications already installed by the primary user is automatically installed for the sub-user. If a driver application is uninstalled for a sub- user, it is also removed for the primary user.
+[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md): provides extended capabilities for the peripheral driver. When an application configures an ExtensionAbility of the driver type, it is recognized as a driver application. Driver applications do not differentiate between users during installation, uninstall, and recovery. Moreover, when a new user account is created, the existing driver applications on the device are installed for that user. For example, when a sub-user is created, the driver applications already installed by the primary user is automatically installed for the sub-user. If a driver application is uninstalled for a sub- user, it is also removed for the primary user.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#actionextensionability): provides custom action service templates based on the UIExtensionAbility.
+[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md): provides custom action service templates based on the UIExtensionAbility.
 
 **Since:** 23
 
@@ -296,7 +296,7 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#embeddeduiextensionability): provides extended capabilities for the embeddable UI across process.
+[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md): provides extended capabilities for the embeddable UI across process.
 
 **Since:** 23
 
@@ -324,7 +324,7 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 FENCE = 24
 ```
 
-[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md#fenceextensionability): provides geofence- related capabilities. It inherits from ExtensionAbility.
+[FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md): provides geofence- related capabilities. It inherits from ExtensionAbility.
 
 **Since:** 23
 
@@ -366,7 +366,7 @@ AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloa
 FORM_EDIT = 27
 ```
 
-[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#formeditextensionability): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
+[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md): provides extended capabilities related to widget editing. It inherits from UIExtensionAbility.
 
 **Since:** 23
 
@@ -380,7 +380,7 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#distributedextensionability): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
 
 **Since:** 23
 
@@ -394,7 +394,7 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#appserviceextensionability): provides backend service capabilities for enterprise common applications.
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md): provides backend service capabilities for enterprise common applications.
 
 **Since:** 23
 
@@ -408,7 +408,7 @@ APP_SERVICE = 29
 LIVE_FORM = 30
 ```
 
-[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#liveformextensionability): provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
+[LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-liveformextensionability-liveformextensionability-c.md): provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#webnativemessagingextensionability): provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
 
 **Since:** 23
 
@@ -454,7 +454,7 @@ WEB_NATIVE_MESSAGING = 32
 FAULT_LOG = 33
 ```
 
-[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#faultlogextensionability): provides extended capabilities for delayed fault notifications.
+[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md): provides extended capabilities for delayed fault notifications.
 
 **Since:** 23
 
@@ -468,7 +468,7 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#notificationsubscriberextensionability) : provides extended capabilities for notification subscription.
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md) : provides extended capabilities for notification subscription.
 
 **Since:** 23
 
@@ -496,7 +496,7 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#partneragentextensionability): provides the device discovery and device offline notification functions based on Bluetooth.
+[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md): provides the device discovery and device offline notification functions based on Bluetooth.
 
 **Since:** 23
 
@@ -560,7 +560,7 @@ Indicates extension info with type of the modular object extension.
 UNSPECIFIED = 255
 ```
 
-The ability type is not specified. &lt;!--Del--&gt;It can be used in [queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo-system-api) to obtain ExtensionAbility components of all types.&lt;!--DelEnd--&gt;
+The ability type is not specified. <!--Del-->It can be used in [queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md) to obtain ExtensionAbility components of all types.<!--DelEnd-->
 
 **Since:** 23
 

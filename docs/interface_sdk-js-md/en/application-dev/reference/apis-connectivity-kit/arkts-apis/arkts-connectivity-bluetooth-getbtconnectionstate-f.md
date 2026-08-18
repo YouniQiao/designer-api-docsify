@@ -35,7 +35,7 @@ Get the local device connection state to any profile of any remote device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md#getbtconnectionstate)
+**Substitutes:** [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

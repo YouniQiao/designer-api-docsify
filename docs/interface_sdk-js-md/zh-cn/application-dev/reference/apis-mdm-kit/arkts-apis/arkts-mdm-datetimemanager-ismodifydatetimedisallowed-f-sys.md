@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## isModifyDateTimeDisallowed
@@ -17,7 +18,7 @@ function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
+**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md)(admin: Want | null, feature: FeatureForDevice)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -34,7 +35,7 @@ function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回是否禁止修改系统时间策略，true表示禁止修改系统时间，否则表示允许修改系统时间。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，callback方式返回是否禁止修改系统时间策略，true表示禁止修改系统时间，否则表示允许修改系统时间。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)(admin: Want | null, feature: FeatureForDevice)
+**替代接口：** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md)(admin: Want | null, feature: FeatureForDevice)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_DATETIME
 

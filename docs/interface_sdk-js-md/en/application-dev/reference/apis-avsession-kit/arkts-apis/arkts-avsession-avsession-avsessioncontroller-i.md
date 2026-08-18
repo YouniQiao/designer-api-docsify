@@ -12,7 +12,6 @@ Session controller,used to control media playback and get media information
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -33,7 +32,7 @@ Destroy the server controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -89,7 +88,7 @@ Get the call status of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
 
 **Error codes:**
 
@@ -145,7 +144,7 @@ Get the metadata of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
 
 **Error codes:**
 
@@ -233,7 +232,7 @@ Get the playback status of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
@@ -321,7 +320,7 @@ Get the playlist of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
 
 **Error codes:**
 
@@ -409,7 +408,7 @@ Get the name of the playlist of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
 
 **Error codes:**
 
@@ -497,7 +496,7 @@ Get the call metadata of the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
 
 **Error codes:**
 
@@ -585,7 +584,7 @@ Get custom media packets provided by the corresponding session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{[key: string]: Object}&gt; | Yes |  |
 
 **Error codes:**
 
@@ -616,7 +615,7 @@ Get custom media packets provided by the corresponding session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | The triggered asyncCallback when (getExtras). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | The triggered asyncCallback when (getExtras). |
 
 **Error codes:**
 
@@ -746,7 +745,7 @@ Get the WantAgent of this session that can launch the session ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
 
 **Error codes:**
 
@@ -833,7 +832,7 @@ Get output device information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
 
 **Error codes:**
 
@@ -1009,7 +1008,7 @@ Get commands supported by the current session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
@@ -1097,7 +1096,7 @@ Check if the current session is active
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
 
 **Error codes:**
 
@@ -1248,7 +1247,7 @@ Unregister the active state of this session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
@@ -1275,7 +1274,7 @@ Unregister call metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1302,7 +1301,7 @@ Unregister playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1329,7 +1328,7 @@ Unregister listener for custom data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -1358,7 +1357,7 @@ Unregister desktop lyric enable state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
@@ -1387,7 +1386,7 @@ Unregister desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -1416,7 +1415,7 @@ Unregister desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -1443,7 +1442,7 @@ Unregister the custom media packets change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
@@ -1472,7 +1471,7 @@ Unregister media center control type changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No | Callback to receive the changed control types. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | No | Callback to receive the changed control types. |
 
 **Error codes:**
 
@@ -1499,7 +1498,7 @@ Unregister metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1526,7 +1525,7 @@ Unregister session output device change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#outputdeviceinfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#connectionstate). |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -1553,7 +1552,7 @@ Unregister playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1582,7 +1581,7 @@ Unregister session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#avqueueitem) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
@@ -1609,7 +1608,7 @@ Unregister the name of session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
@@ -1694,7 +1693,7 @@ Unregister listener for supported loop modes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No | Callback used to retrieve supported loop modes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | No | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
@@ -1725,7 +1724,7 @@ Unregister listener for supported play speeds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to retrieve supported play speeds. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
@@ -1752,7 +1751,7 @@ Unregister the valid commands of the session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
@@ -1761,7 +1760,7 @@ Unregister the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_activeStateChange
+## off_activeStateChange('activeStateChange')
 
 ```TypeScript
 off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
@@ -1792,7 +1791,7 @@ Unregister the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_callMetadataChange
+## off_callMetadataChange('callMetadataChange')
 
 ```TypeScript
 off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
@@ -1813,7 +1812,7 @@ Unregister call metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1823,7 +1822,7 @@ Unregister call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_callStateChange
+## off_callStateChange('callStateChange')
 
 ```TypeScript
 off(type: 'callStateChange', callback?: Callback<AVCallState>): void
@@ -1844,7 +1843,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1854,7 +1853,7 @@ Unregister playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_customDataChange
+## off_customDataChange('customDataChange')
 
 ```TypeScript
 off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
@@ -1875,7 +1874,7 @@ Unregister listener for custom data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -1884,7 +1883,7 @@ Unregister listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_extrasChange
+## off_extrasChange('extrasChange')
 
 ```TypeScript
 off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
@@ -1915,7 +1914,7 @@ Unregister the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_metadataChange
+## off_metadataChange('metadataChange')
 
 ```TypeScript
 off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
@@ -1936,7 +1935,7 @@ Unregister metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| callback | (data: AVMetadata) =&gt; void | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) parameter. It only contains the properties set in the filter. |
+| callback | (data: AVMetadata) =&gt; void | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1946,7 +1945,7 @@ Unregister metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_outputDeviceChange
+## off_outputDeviceChange('outputDeviceChange')
 
 ```TypeScript
 off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
@@ -1967,7 +1966,7 @@ Unregister session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#outputdeviceinfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#connectionstate). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -1977,7 +1976,7 @@ Unregister session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
-## off_playbackStateChange
+## off_playbackStateChange('playbackStateChange')
 
 ```TypeScript
 off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
@@ -1998,7 +1997,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2008,7 +2007,7 @@ Unregister playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_queueItemsChange
+## off_queueItemsChange('queueItemsChange')
 
 ```TypeScript
 off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
@@ -2029,7 +2028,7 @@ Unregister session playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#avqueueitem) |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
@@ -2039,7 +2038,7 @@ Unregister session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_queueTitleChange
+## off_queueTitleChange('queueTitleChange')
 
 ```TypeScript
 off(type: 'queueTitleChange', callback?: (title: string) => void): void
@@ -2070,7 +2069,7 @@ Unregister the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_sessionDestroy
+## off_sessionDestroy('sessionDestroy')
 
 ```TypeScript
 off(type: 'sessionDestroy', callback?: () => void)
@@ -2101,7 +2100,7 @@ Unregister current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_sessionEvent
+## off_sessionEvent('sessionEvent')
 
 ```TypeScript
 off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
@@ -2132,7 +2131,7 @@ Unregister session event callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## off_validCommandChange
+## off_validCommandChange('validCommandChange')
 
 ```TypeScript
 off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
@@ -2181,7 +2180,7 @@ Register the active state of this session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
@@ -2208,8 +2207,8 @@ Register call metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) parameter. It only contains the properties set in the filter. |
+| filter | Array&lt;string&gt; | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2236,7 +2235,7 @@ Registers a callback for all call metadata changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2263,8 +2262,8 @@ Register call state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) parameter. |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2291,7 +2290,7 @@ Register a callback for all call attribute changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2318,7 +2317,7 @@ Register listener for custom data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2347,7 +2346,7 @@ Register desktop lyric enable state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
@@ -2376,7 +2375,7 @@ Register desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -2405,7 +2404,7 @@ Register desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -2432,7 +2431,7 @@ Register the custom media packets change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
@@ -2461,7 +2460,7 @@ Register media center control type changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes | Callback to receive the changed control types. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | Yes | Callback to receive the changed control types. |
 
 **Error codes:**
 
@@ -2488,8 +2487,8 @@ Register metadata changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) parameter. It only contains the properties set in the filter. |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2516,7 +2515,7 @@ Registers a callback to be invoked whenever any metadata changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) parameter. It only contains the properties set in the filter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2543,7 +2542,7 @@ Register session output device change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#outputdeviceinfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#connectionstate). |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -2570,8 +2569,8 @@ Register playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2598,7 +2597,7 @@ Registers a callback to be invoked whenever the playback state changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2625,7 +2624,7 @@ Register session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#avqueueitem) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
@@ -2652,7 +2651,7 @@ Register the name of session playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
@@ -2737,7 +2736,7 @@ Register listener for supported loop modes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
@@ -2768,7 +2767,7 @@ Register listener for supported play speeds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
@@ -2795,7 +2794,7 @@ Register the valid commands of the session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
@@ -2804,7 +2803,7 @@ Register the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_activeStateChange
+## on_activeStateChange('activeStateChange')
 
 ```TypeScript
 on(type: 'activeStateChange', callback: (isActive: boolean) => void)
@@ -2835,7 +2834,7 @@ Register the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_callMetadataChange
+## on_callMetadataChange('callMetadataChange')
 
 ```TypeScript
 on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
@@ -2856,8 +2855,8 @@ Register call metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#callmetadata) parameter. It only contains the properties set in the filter. |
+| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2867,7 +2866,7 @@ Register call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_callStateChange
+## on_callStateChange('callStateChange')
 
 ```TypeScript
 on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
@@ -2888,8 +2887,8 @@ Register call state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#avcallstate) parameter. |
+| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2899,7 +2898,7 @@ Register call state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_customDataChange
+## on_customDataChange('customDataChange')
 
 ```TypeScript
 on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
@@ -2920,7 +2919,7 @@ Register listener for custom data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2929,7 +2928,7 @@ Register listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_extrasChange
+## on_extrasChange('extrasChange')
 
 ```TypeScript
 on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
@@ -2960,7 +2959,7 @@ Register the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_metadataChange
+## on_metadataChange('metadataChange')
 
 ```TypeScript
 on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
@@ -2981,8 +2980,8 @@ Register metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) that you cared about |
-| callback | (data: AVMetadata) =&gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#avmetadata) parameter. It only contains the properties set in the filter. |
+| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | (data: AVMetadata) =&gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2992,7 +2991,7 @@ Register metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_outputDeviceChange
+## on_outputDeviceChange('outputDeviceChange')
 
 ```TypeScript
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
@@ -3013,7 +3012,7 @@ Register session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#outputdeviceinfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#connectionstate). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -3023,7 +3022,7 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
-## on_playbackStateChange
+## on_playbackStateChange('playbackStateChange')
 
 ```TypeScript
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
@@ -3044,8 +3043,8 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) that you cared about |
-| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -3055,7 +3054,7 @@ Register playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_queueItemsChange
+## on_queueItemsChange('queueItemsChange')
 
 ```TypeScript
 on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
@@ -3076,7 +3075,7 @@ Register session playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#avqueueitem) |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) |
 
 **Error codes:**
 
@@ -3086,7 +3085,7 @@ Register session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_queueTitleChange
+## on_queueTitleChange('queueTitleChange')
 
 ```TypeScript
 on(type: 'queueTitleChange', callback: (title: string) => void): void
@@ -3117,7 +3116,7 @@ Register the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_sessionDestroy
+## on_sessionDestroy('sessionDestroy')
 
 ```TypeScript
 on(type: 'sessionDestroy', callback: () => void)
@@ -3148,7 +3147,7 @@ Register current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_sessionEvent
+## on_sessionEvent('sessionEvent')
 
 ```TypeScript
 on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
@@ -3179,7 +3178,7 @@ Register session event callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-## on_validCommandChange
+## on_validCommandChange('validCommandChange')
 
 ```TypeScript
 on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
@@ -3229,7 +3228,7 @@ Send media key event to this session
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3301,7 +3300,7 @@ Send common commands to this session
 | --- | --- | --- | --- |
 | command | string | Yes | The command name to be sent. |
 | args | {[key: string]: Object} | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3337,7 +3336,7 @@ Send common commands to this session
 | --- | --- | --- | --- |
 | command | string | Yes | The command name to be sent. |
 | args | Record&lt;string, Object&gt; | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3449,8 +3448,8 @@ Send control commands to this session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#avcontrolcommand) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3484,7 +3483,7 @@ Send control commands to this session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md#avcontrolcommand) |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) |
 
 **Return value:**
 
@@ -3635,7 +3634,7 @@ Set the item in the playlist to be played
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | itemId | int | Yes | The serial number of the item to be played |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 

@@ -2,7 +2,7 @@
 
 Defines the custom layout algorithm.
 
-**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
+| self | [FrameNode](arkts-na-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
 | position | [NodePosition](arkts-na-nodeposition-t.md) | Yes | The position of the node, will be used when executing layout method. |
 
 ## onMeasure
@@ -59,6 +59,6 @@ Method to measure the DynamicLayout FrameNode and its content to determine the m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
-| constraint | [LayoutConstraint](../../apis-arkui/arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) | Yes | The layout constraint of the node, which will be used in measure process. |
+| self | [FrameNode](arkts-na-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
+| constraint | [LayoutConstraint](arkts-na-framenode-layoutconstraint-i.md) | Yes | The layout constraint of the node, which will be used in measure process. |
 

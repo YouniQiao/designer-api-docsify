@@ -6,7 +6,7 @@ Defines the AbsAlbum.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#absalbum)
+**Substitutes:** [AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md)
 
 <!--Device-userFileManager-interface AbsAlbum--><!--Device-userFileManager-interface AbsAlbum-End-->
 
@@ -47,7 +47,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 

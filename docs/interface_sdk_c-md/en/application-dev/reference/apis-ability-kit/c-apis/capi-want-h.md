@@ -90,7 +90,7 @@ Destroys Want. Want cannot be used after being destroyed. Otherwise, undefined b
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: Want is destroyed.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: element is invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: Want is destroyed.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: element is invalid. |
 
 ### OH_AbilityBase_SetWantElement()
 
@@ -115,7 +115,7 @@ Sets the Element struct, which consists of **bundleName**, **moduleName**, and *
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or element is invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or element is invalid. |
 
 ### OH_AbilityBase_GetWantElement()
 
@@ -140,7 +140,7 @@ Obtains the Element struct, which consists of **bundleName**, **moduleName**, an
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The element struct is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or element is invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The element struct is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or element is invalid. |
 
 ### OH_AbilityBase_SetWantCharParam()
 
@@ -166,7 +166,7 @@ Sets **Param** in Want. For details about **Param**, see {@link parameters in Wa
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantCharParam()
 
@@ -193,7 +193,7 @@ Obtains **Param** set by [OH_AbilityBase_SetWantCharParam](capi-want-h.md#oh_abi
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The param struct is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The param struct is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_AddWantFd()
 
@@ -219,7 +219,7 @@ Adds a Want file descriptor. The file descriptor can be obtained through {@link 
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The Want file descriptor is added.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The Want file descriptor is added.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantFd()
 
@@ -245,7 +245,7 @@ Obtains a Want file descriptor.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The Want file descriptor is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The Want file descriptor is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_SetWantUri()
 
@@ -270,7 +270,7 @@ Sets **uri** in Want. For details about the URI, see {@link uri in Want}.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantUri()
 
@@ -296,7 +296,7 @@ Obtains **uri** set in Want. For details about the URI, see {@link uri in Want}.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The URI string in Want is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The URI string in Want is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_SetWantInt32Param()
 
@@ -322,7 +322,7 @@ Sets a value of the int32_t type in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantInt32Param()
 
@@ -348,7 +348,7 @@ Obtains a value of the int32_t type set in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the int32_t type is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the int32_t type is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_SetWantBoolParam()
 
@@ -374,7 +374,7 @@ Sets a value of the bool type in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantBoolParam()
 
@@ -400,7 +400,7 @@ Obtains a value of the bool type set in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the bool type is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the bool type is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_SetWantDoubleParam()
 
@@ -426,7 +426,7 @@ Sets a value of the double type in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The setting is successful.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 ### OH_AbilityBase_GetWantDoubleParam()
 
@@ -452,6 +452,6 @@ Obtains a value of the double type set in Want.
 
 | Type | Description |
 | -- | -- |
-| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:<br>      ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the double type is obtained.<br>      ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
+| [AbilityBase_ErrorCode](capi-ability-base-common-h.md#abilitybase_errorcode) | One of the following execution results:       ABILITY_BASE_ERROR_CODE_NO_ERROR: The value of the double type is obtained.       ABILITY_BASE_ERROR_CODE_PARAM_INVALID: want is null or invalid. |
 
 

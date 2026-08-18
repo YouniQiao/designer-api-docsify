@@ -32,7 +32,7 @@ Starts screen hopping based on the specified options. This API uses a promise to
 | --- | --- | --- | --- |
 | targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
 | inputDeviceId | int | Yes | ID of the input device that initiates screen hopping. |
-| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | No | Screen hopping options, such as the exit position. If this parameter is not set, this API works in the same way as [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-system-api). |
+| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | No | Screen hopping options, such as the exit position. If this parameter is not set, this API works in the same way as [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md). |
 
 **Return value:**
 

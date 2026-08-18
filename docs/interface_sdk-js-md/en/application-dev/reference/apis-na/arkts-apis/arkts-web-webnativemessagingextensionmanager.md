@@ -23,8 +23,8 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 
 | Name | Description |
 | --- | --- |
-| [connectNative](arkts-na-webnativemessagingextensionmanager-connectnative-f.md#connectnative) | Connects the current ability to the specified web native message extension ability. |
-| [disconnectNative](arkts-na-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative) | Disconnects the connection of a specified web native message extension. |
+| [connectNative](arkts-na-webnativemessagingextensionmanager-connectnative-f.md) | Connects the current ability to the specified web native message extension ability. |
+| [disconnectNative](arkts-na-webnativemessagingextensionmanager-disconnectnative-f.md) | Disconnects the connection of a specified web native message extension. |
 
 ### Interfaces
 

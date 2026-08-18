@@ -35,7 +35,7 @@ Disables Bluetooth on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md#disablebluetooth)
+**Substitutes:** [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

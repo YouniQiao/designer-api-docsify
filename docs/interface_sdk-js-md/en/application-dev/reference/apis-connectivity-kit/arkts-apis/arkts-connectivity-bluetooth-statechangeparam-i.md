@@ -6,7 +6,7 @@ Profile state change parameters.
 
 **Deprecated since:** 9
 
-**Substitutes:** [StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md#statechangeparam)
+**Substitutes:** [StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)
 
 <!--Device-bluetooth-interface StateChangeParam--><!--Device-bluetooth-interface StateChangeParam-End-->
 

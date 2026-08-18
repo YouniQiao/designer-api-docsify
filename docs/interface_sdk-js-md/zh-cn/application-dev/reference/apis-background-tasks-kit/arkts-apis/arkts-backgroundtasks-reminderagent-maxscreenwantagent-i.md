@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#maxscreenwantagent)
+**替代接口：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
 <!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

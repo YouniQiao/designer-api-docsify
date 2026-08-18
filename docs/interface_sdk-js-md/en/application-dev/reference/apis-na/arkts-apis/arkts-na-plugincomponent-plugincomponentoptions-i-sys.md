@@ -20,7 +20,7 @@ data: RecordData
 
 Plugin component data. AnonyMous Object Rectification
 
-**Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**Type:** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **Since:** 23
 

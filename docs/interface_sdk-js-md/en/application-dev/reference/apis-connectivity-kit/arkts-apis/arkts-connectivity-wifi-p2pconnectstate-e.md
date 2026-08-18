@@ -6,7 +6,7 @@ P2P connection status.
 
 **Deprecated since:** 9
 
-**Substitutes:** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md#p2pconnectstate)
+**Substitutes:** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md)
 
 <!--Device-wifi-enum P2pConnectState--><!--Device-wifi-enum P2pConnectState-End-->
 

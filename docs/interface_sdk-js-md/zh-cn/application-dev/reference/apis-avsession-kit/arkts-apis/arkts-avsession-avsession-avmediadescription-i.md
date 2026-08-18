@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## albumCoverUri
@@ -161,7 +162,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#displaytag)。 在使用了cast+协议的音频投播场景下，不支持使用该属性。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。 在使用了cast+协议的音频投播场景下，不支持使用该属性。
 
 **类型：** int
 

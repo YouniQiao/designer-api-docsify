@@ -1,6 +1,6 @@
 # NetQuotaPolicy (System API)
 
-Net quota policies, including matching network rule usage periods, restrictions, and warnings.
+Defines the quota policy for the specified network.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { policy } from '@kit.NetworkKit';
 networkMatchRule: NetworkMatchRule
 ```
 
-The matching rules of network quota policies.
+Network for which the quota policy is set.
 
 **Type:** [NetworkMatchRule](arkts-network-policy-networkmatchrule-i-sys.md)
 
@@ -40,7 +40,7 @@ The matching rules of network quota policies.
 quotaPolicy: QuotaPolicy
 ```
 
-Policies that limit network quota.
+Network quota policy.
 
 **Type:** [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md)
 

@@ -2,7 +2,7 @@
 
 MutableStyledString
 
-**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-styledstring-c.md#styledstring)
+**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
 **Since:** 23
 

@@ -17,7 +17,7 @@ function getAbilityDelegator(): AbilityDelegator
 
 **废弃版本：** 9
 
-**替代接口：** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator)
+**替代接口：** [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)
 
 <!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
 

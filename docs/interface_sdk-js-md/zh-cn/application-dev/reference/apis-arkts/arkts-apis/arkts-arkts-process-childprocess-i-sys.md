@@ -13,6 +13,7 @@ childprocess 对象可用于创建新的进程。
 ## 导入模块
 
 ```TypeScript
+import { process } from '@kit.ArkTS';
 ```
 
 ## close

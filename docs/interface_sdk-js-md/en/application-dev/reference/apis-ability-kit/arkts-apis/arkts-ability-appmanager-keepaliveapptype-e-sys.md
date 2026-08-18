@@ -16,7 +16,7 @@ Enumerates the types of applications to be kept alive.
 ALL = 0
 ```
 
-Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles-system-api).
+Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md).
 
 **Since:** 23
 

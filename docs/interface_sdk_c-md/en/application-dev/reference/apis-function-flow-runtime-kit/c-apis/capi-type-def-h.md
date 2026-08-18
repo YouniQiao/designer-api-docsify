@@ -30,6 +30,7 @@ Declares common types.
 | [ffrt_rwlock_t](capi-ffrt-ffrt-rwlock-t.md) | ffrt_rwlock_t | Defines the rwlock structure used to store internal data of the rwlock. |
 | [ffrt_cond_t](capi-ffrt-ffrt-cond-t.md) | ffrt_cond_t | Defines the condition variable structure used to store internal data of the condition variable. |
 | [ffrt_fiber_t](capi-ffrt-ffrt-fiber-t.md) | ffrt_fiber_t | Defines the fiber structure used to store fiber execution context. |
+| [ffrt_task_handle_t](capi-ffrt-ffrt-task-handle-t.md) | ffrt_task_handle_t | Defines the task handle, which identifies different tasks. |
 
 ### Enum
 
@@ -252,7 +253,7 @@ Defines the poller callback function type.The callback is invoked when the polle
 
 | Parameter | Description |
 | -- | -- |
-| (void\* data | Indicates the user data pointer passed in at poller registration. |
+| void\* data | Indicates the user data pointer passed in at poller registration. |
 | uint32_t event | Indicates the event type that triggered the callback. |
 
 ### ffrt_timer_cb()
@@ -271,6 +272,6 @@ Defines the timer callback function type.The callback is invoked when the timer 
 
 | Parameter | Description |
 | -- | -- |
-| (void\* data | Indicates the user data pointer passed in at timer registration. |
+| void\* data | Indicates the user data pointer passed in at timer registration. |
 
 

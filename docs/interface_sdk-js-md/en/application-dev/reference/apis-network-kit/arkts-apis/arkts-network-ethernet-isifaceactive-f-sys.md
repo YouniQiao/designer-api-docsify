@@ -9,16 +9,16 @@ import { ethernet } from '@kit.NetworkKit';
 ## isIfaceActive
 
 ```TypeScript
-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
+function isIfaceActive(iface: string, callback: AsyncCallback<int>): void
 ```
 
-Check whether the specified network is active.
+Checks whether the interface is activated. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-<!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void-End-->
+<!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -28,8 +28,8 @@ Check whether the specified network is active.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of isIfaceActive. |
+| iface | string | Yes | Interface name. If this parameter is left empty, the API checks for any active network interface. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
 
 **Error codes:**
 
@@ -62,16 +62,16 @@ ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
 ## isIfaceActive
 
 ```TypeScript
-function isIfaceActive(iface: string): Promise<number>
+function isIfaceActive(iface: string): Promise<int>
 ```
 
-Check whether the specified network is active.
+Checks whether the interface is activated. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-<!--Device-ethernet-function isIfaceActive(iface: string): Promise<number>--><!--Device-ethernet-function isIfaceActive(iface: string): Promise<number>-End-->
+<!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>--><!--Device-ethernet-function isIfaceActive(iface: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -81,13 +81,13 @@ Check whether the specified network is active.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iface | string | Yes | Indicates the network interface name. |
+| iface | string | Yes | Interface name. If this parameter is left empty, the API checks for any active network interface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| Promise&lt;int&gt; | Promise used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
 
 **Error codes:**
 

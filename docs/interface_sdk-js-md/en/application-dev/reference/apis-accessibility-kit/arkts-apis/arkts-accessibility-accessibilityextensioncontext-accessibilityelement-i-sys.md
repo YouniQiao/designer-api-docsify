@@ -172,7 +172,7 @@ try {
 }
 ```
 
-## findElement
+## findElement('textType')
 
 ```TypeScript
 findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>
@@ -224,7 +224,7 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
 });
 ```
 
-## findElement
+## findElement('elementId')
 
 ```TypeScript
 findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
@@ -490,7 +490,7 @@ Searches for an element based on the focus direction and focus rule type. This A
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
-Searches for a node element in the active window by element ID. This API uses a promise to return the result. This method is functionally equivalent to [findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findelement) and is recommended for priority use.
+Searches for a node element in the active window by element ID. This API uses a promise to return the result. This method is functionally equivalent to findElement('elementId') and is recommended for priority use.
 
 **Since:** 23
 
@@ -819,7 +819,7 @@ Obtains the cursor position in a text component. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1394,7 +1394,7 @@ List of custom actions supported by the element.
 customComponentType?: string
 ```
 
-Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#accessibilityroletype) type of the element.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) type of the element.
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 declare type StyledStringUnmarshallCallback = (buf: ArrayBuffer) => StyledStringMarshallingValue
 ```
 
-Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue-system-api).
+Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
 
@@ -20,7 +20,7 @@ Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarsh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#styledstringmarshallingvalue-system-api). |
+| buf | ArrayBuffer | Yes | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 
 **Return value:**
 

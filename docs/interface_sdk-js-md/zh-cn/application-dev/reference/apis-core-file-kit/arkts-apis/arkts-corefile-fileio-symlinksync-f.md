@@ -17,7 +17,7 @@ declare function symlinkSync(target: string, srcPath: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md#symlinksync)
+**替代接口：** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md)
 
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 

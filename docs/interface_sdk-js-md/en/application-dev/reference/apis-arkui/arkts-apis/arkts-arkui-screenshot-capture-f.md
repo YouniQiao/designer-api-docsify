@@ -12,7 +12,7 @@ import { screenshot } from '@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-Takes a screenshot of the entire screen. This API uses a promise to return the result. This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md#pick) API allows you to take screenshots of a specified region.
+Takes a screenshot of the entire screen. This API uses a promise to return the result. This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ Takes a screenshot of the entire screen. This API uses a promise to return the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported on this device. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

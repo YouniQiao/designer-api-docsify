@@ -88,7 +88,7 @@ space?: LengthMetrics
 
 纵向布局元素垂直方向间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

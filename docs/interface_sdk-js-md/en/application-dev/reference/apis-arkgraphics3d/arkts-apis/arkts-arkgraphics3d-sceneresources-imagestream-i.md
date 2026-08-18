@@ -2,7 +2,7 @@
 
 ImageStream resource.
 
-**Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md#image)
+**Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md)
 
 **Since:** 26.0.0
 

@@ -2,7 +2,7 @@
 
 The class of user authentication extension ability.
 
-**Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)
+**Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
 **Since:** 23
 
@@ -17,7 +17,6 @@ The class of user authentication extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
 

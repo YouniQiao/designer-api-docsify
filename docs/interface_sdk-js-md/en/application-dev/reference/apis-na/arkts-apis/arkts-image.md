@@ -41,7 +41,7 @@
 | [RequestDownloadInfo](arkts-na-requestdownloadinfo-t.md) | Download information of network images. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

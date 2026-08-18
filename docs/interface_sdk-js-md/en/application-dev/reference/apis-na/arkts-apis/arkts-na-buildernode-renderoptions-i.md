@@ -38,7 +38,7 @@ selfIdealSize?: Size
 
 The ideal size of the node.
 
-**Type:** [Size](arkts-na-graphics-size-i.md)
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 

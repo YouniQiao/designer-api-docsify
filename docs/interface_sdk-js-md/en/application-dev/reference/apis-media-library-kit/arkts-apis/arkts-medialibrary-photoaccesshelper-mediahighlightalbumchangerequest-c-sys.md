@@ -1,8 +1,8 @@
 # MediaHighlightAlbumChangeRequest (System API)
 
-Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest-system-api).
+Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md).
 
-**Inheritance/Implementation:** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#mediaanalysisalbumchangerequest-system-api)
+**Inheritance/Implementation:** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)
 
 **Since:** 26.0.0
 

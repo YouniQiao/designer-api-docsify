@@ -10,7 +10,7 @@ Enumerates the authentication event information types. It consists of the fields
 
 **Deprecated since:** 11
 
-**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#userauthresult)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
 
 <!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo--><!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo-End-->
 

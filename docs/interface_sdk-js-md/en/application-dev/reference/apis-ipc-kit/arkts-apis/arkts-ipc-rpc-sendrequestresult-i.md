@@ -6,7 +6,7 @@ Defines the response to the request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md#requestresult)
+**Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 

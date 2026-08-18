@@ -17,7 +17,7 @@
 | [LifecycleService](arkts-ability-lifecycle-lifecycleservice-i.md) | interface of service lifecycle. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

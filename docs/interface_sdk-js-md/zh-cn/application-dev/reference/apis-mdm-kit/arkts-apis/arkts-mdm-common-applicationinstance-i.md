@@ -1,6 +1,6 @@
 # ApplicationInstance
 
-应用的实例数据。 该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps)接口 中作为入参使用。
+应用的实例数据。 该接口目前在[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md)、 [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md)、 [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md)、 [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md)接口 中作为入参使用。
 
 **起始版本：** 22
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { common } from '@kit.MDMKit';
 ```
 
 ## accountId
@@ -19,7 +20,7 @@
 accountId: number
 ```
 
-用户ID。取值范围：大于等于0的整数。 accountId可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接 口获取。
+用户ID。取值范围：大于等于0的整数。 accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接 口获取。
 
 **类型：** number
 
@@ -37,7 +38,7 @@ accountId: number
 appIdentifier: string
 ```
 
-应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md#signatureinfo)，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)获取 bundleInfo.signatureInfo.appIdentifier。
+应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md)，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md)获取 bundleInfo.signatureInfo.appIdentifier。
 
 **类型：** string
 
@@ -55,7 +56,7 @@ appIdentifier: string
 appIndex: number
 ```
 
-应用分身索引。取值范围：大于等于0的整数。 appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)接口获取。
+应用分身索引。取值范围：大于等于0的整数。 appIndex可以通过[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md)接口获取。
 
 **类型：** number
 

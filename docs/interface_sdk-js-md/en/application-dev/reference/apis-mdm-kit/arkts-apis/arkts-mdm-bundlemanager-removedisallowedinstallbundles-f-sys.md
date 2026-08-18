@@ -18,7 +18,7 @@ Removes the applications that cannot be installed by the current user. This API 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -36,7 +36,7 @@ Removes the applications that cannot be installed by the current user. This API 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appIds | Array&lt;string&gt; | Yes | Application IDs. <br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can be transferred. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Removes the applications that cannot be installed by the user specified by **use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -103,7 +103,7 @@ Removes the applications that cannot be installed by the user specified by **use
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appIds | Array&lt;string&gt; | Yes | Application IDs. <br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can be transferred. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ Removes the applications that cannot be installed by the current or specified us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

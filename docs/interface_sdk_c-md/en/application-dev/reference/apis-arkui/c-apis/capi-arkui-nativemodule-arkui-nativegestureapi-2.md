@@ -6,7 +6,7 @@ typedef struct ArkUI_NativeGestureAPI_2 {...} ArkUI_NativeGestureAPI_2
 
 ## Overview
 
-Defines the gesture APIs.
+Defines a collection of gesture APIs.
 
 **Since**: 18
 
@@ -20,7 +20,7 @@ Defines the gesture APIs.
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_NativeGestureAPI_1*](capi-arkui-nativemodule-arkui-nativegestureapi-1.md) gestureApi1 | Pointer to the <b>ArkUI_NativeGestureAPI_1</b> struct. |
+| [ArkUI_NativeGestureAPI_1*](capi-arkui-nativemodule-arkui-nativegestureapi-1.md) gestureApi1 | Pointer to the **ArkUI_NativeGestureAPI_1** struct. |
 
 
 ### Member functions
@@ -45,14 +45,14 @@ Sets the callback for gesture interruption events.
 
 | Parameter | Description |
 | -- | -- |
-| node | Node for which you want to set a gesture interruption callback. |
-| userData | Custom data. |
-| interrupter | Gesture interruption callback to set. <b>info</b> indicates the gesture interruption data.If <b>interrupter</b> returns <b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition process proceedsproperly. If it returns <b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
+| node | Pointer to the ArkUI node for which you want to set a gesture interruption callback. |
+| userData | Pointer to user-defined data. |
+| interrupter | Gesture interruption callback to set. <b>info</b> indicates the gesture interruption data.If <b>interrupter</b> returns <b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition processproceedsproperly. If it returns <b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if success.<br>            Returns <b>401</b> if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 

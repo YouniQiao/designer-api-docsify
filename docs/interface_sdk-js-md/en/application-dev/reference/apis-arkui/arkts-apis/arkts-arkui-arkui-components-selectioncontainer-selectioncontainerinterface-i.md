@@ -42,5 +42,5 @@ Defines the constructor of SelectionContainer.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
+| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
 

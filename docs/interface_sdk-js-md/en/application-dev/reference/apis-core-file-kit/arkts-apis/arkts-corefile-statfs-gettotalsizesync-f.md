@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { statfs } from '@kit.CoreFileKit';
-import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getTotalSizeSync

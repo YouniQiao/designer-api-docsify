@@ -30,7 +30,7 @@ None
 Horizontal
 ```
 
-水平方向，手指滑动方向与x轴夹角小于45度时触发。
+Sliding horizontally.
 
 **起始版本：** 8
 
@@ -46,7 +46,7 @@ Horizontal
 Vertical
 ```
 
-竖直方向，手指滑动方向与y轴夹角小于45度时触发。
+垂直滑动
 
 **起始版本：** 8
 
@@ -62,7 +62,7 @@ Vertical
 All
 ```
 
-所有方向。
+Sliding in all directions.
 
 **起始版本：** 8
 

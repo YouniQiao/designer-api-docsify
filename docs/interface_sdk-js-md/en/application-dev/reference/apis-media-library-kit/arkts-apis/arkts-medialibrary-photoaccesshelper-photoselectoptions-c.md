@@ -2,7 +2,7 @@
 
 Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space.
 
-**Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions)
+**Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -44,9 +44,9 @@ Information for restoring the PhotoPicker's state from the last exit. When the s
 
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo--><!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo-End-->
 
@@ -62,11 +62,11 @@ Whether destruction with Navigation is supported. **true** if supported, **false
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean--><!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean-End-->
 
@@ -114,15 +114,15 @@ Whether to display the button for selecting the original image. **true** to disp
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**. Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md#singleselectionmode) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions) is set to **true**.
+Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**. Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md) is set to **true**.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean--><!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean-End-->
 
@@ -138,11 +138,11 @@ Support displaying index numbers.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean--><!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean-End-->
 
@@ -158,11 +158,11 @@ Support selection order adjustment.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean--><!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean-End-->
 
@@ -178,11 +178,11 @@ Maximum number of photos that can be selected. A maximum of 500 photos can be se
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int-End-->
 
@@ -198,11 +198,11 @@ Maximum number of videos that can be selected. A maximum of 500 videos can be se
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int-End-->
 

@@ -66,7 +66,7 @@ Obtains the device type.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns one of the following values:<br>     <br>phone (or default),<br>     <br>wearable,<br>     <br>liteWearable,<br>     <br>tablet,<br>     <br>tv,<br>     <br>car,<br>     <br>smartVision |
+| const char * | Returns one of the following values:      <br>phone (or default),      <br>wearable,      <br>liteWearable,      <br>tablet,      <br>tv,      <br>car,      <br>smartVision |
 
 ### OH_GetManufacture()
 
@@ -326,7 +326,7 @@ Obtains the OS release type represented by a string.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns an OS release type. The options include Release, Beta, and Canary.<br>     <br>A specific release type may be Release, Beta1, or another similar type. |
+| const char * | Returns an OS release type. The options include Release, Beta, and Canary.      <br>A specific release type may be Release, Beta1, or another similar type. |
 
 ### OH_GetOSFullName()
 
@@ -526,7 +526,7 @@ Obtains the Distribution OS name represented by a string.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns an ISV distribution OS name.<br>     <br>If no ISV is specified, an empty string is returned. |
+| const char * | Returns an ISV distribution OS name.      <br>If no ISV is specified, an empty string is returned. |
 
 ### OH_GetDistributionOSVersion()
 
@@ -546,7 +546,7 @@ Obtains the ISV distribution OS version.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns an ISV distribution OS version.<br>     <br>If no ISV is specified, the value of [OH_GetOSFullName](capi-deviceinfo-h.md#oh_getosfullname) is returned. |
+| const char * | Returns an ISV distribution OS version.      <br>If no ISV is specified, the value of [OH_GetOSFullName](capi-deviceinfo-h.md#oh_getosfullname) is returned. |
 
 ### OH_GetDistributionOSApiVersion()
 
@@ -566,7 +566,7 @@ Obtains the ISV distribution OS API version.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an ISV distribution OS API version.<br>     <br>If no ISV is specified, the value of [OH_GetSdkApiVersion](capi-deviceinfo-h.md#oh_getsdkapiversion) is returned. |
+| int | Returns an ISV distribution OS API version.      <br>If no ISV is specified, the value of [OH_GetSdkApiVersion](capi-deviceinfo-h.md#oh_getsdkapiversion) is returned. |
 
 ### OH_GetDistributionOSReleaseType()
 
@@ -586,6 +586,6 @@ Obtains the ISV distribution OS release type.
 
 | Type | Description |
 | -- | -- |
-| const char * | Returns an ISV distribution OS release type.<br>     <br>If no ISV is specified, the value of [OH_GetOsReleaseType](capi-deviceinfo-h.md#oh_getosreleasetype) is returned. |
+| const char * | Returns an ISV distribution OS release type.      <br>If no ISV is specified, the value of [OH_GetOsReleaseType](capi-deviceinfo-h.md#oh_getosreleasetype) is returned. |
 
 

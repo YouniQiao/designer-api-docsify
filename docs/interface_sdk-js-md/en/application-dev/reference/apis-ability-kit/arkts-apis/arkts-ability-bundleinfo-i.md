@@ -84,7 +84,7 @@ Timestamp for the initial installation of the application package. It measures t
 readonly hapModulesInfo: Array<HapModuleInfo>
 ```
 
-Module configuration information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+Module configuration information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)&gt;
 
@@ -156,7 +156,7 @@ Name of the application package. It corresponds to the **bundleName** field in t
 readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 ```
 
-Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
+Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
 
 **Type:** Array&lt;bundleManager.PermissionGrantState&gt;
 
@@ -174,7 +174,7 @@ Permission grant state. The information can be obtained by passing in **GET_BUND
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-Detailed information of the permissions to request from the system. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
+Detailed information of the permissions to request from the system. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
 
 **Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)&gt;
 
@@ -192,7 +192,7 @@ Detailed information of the permissions to request from the system. The informat
 readonly routerMap: Array<RouterItem>
 ```
 
-Router table of the application. The table is obtained by deduplicating and combining the **routerMap** information under **hapModulesInfo** based on the **name** field in **RouterItem**. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+Router table of the application. The table is obtained by deduplicating and combining the **routerMap** information under **hapModulesInfo** based on the **name** field in **RouterItem**. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 

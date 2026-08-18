@@ -26,7 +26,7 @@ Obtains a Display object based on the display ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can be obtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties) as the input parameter. |
+| displayId | long | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can be obtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in [WindowProperties](arkts-arkui-window-windowproperties-i.md) as the input parameter. |
 
 **Return value:**
 

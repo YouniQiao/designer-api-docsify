@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getIMSI
@@ -28,7 +29,7 @@ Get the international mobile subscriber ID.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the international mobile subscriber ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the international mobile subscriber ID. |
 
 **错误码：**
 

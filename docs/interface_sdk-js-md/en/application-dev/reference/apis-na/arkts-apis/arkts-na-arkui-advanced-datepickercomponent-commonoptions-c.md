@@ -1,6 +1,6 @@
 # CommonOptions
 
-CommonOptions defines common options for the date time picker. > **Description:** > > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。 > > - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow, > text may be truncated. > > - When parameters are omitted or set to undefined, default values are used. > > - In [DateOptions](arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md#dateoptions), setting start, end, and selected only takes effect for the date part > (year, month, day). In [TimeOptions](arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md#timeoptions), setting start, end, and selected only takes effect for the > time part (hour, minute, second).
+CommonOptions defines common options for the date time picker. > **Description:** > > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。 > > - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow, > text may be truncated. > > - When parameters are omitted or set to undefined, default values are used. > > - In [DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part > (year, month, day). In [TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the > time part (hour, minute, second).
 
 **Since:** 26.0.0
 
@@ -87,7 +87,7 @@ onChange?: Callback<DatePickerComponentResult>
 
 Callback triggered after date or time is selected.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -107,7 +107,7 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 Callback triggered when a picker item is selected and scrolling stops.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
 

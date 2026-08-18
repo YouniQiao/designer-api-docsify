@@ -2,7 +2,7 @@
 
 特效类型，继承自SceneResource。由createEffect接口获得。
 
-**继承/实现关系：** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
+**继承/实现关系：** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
 **起始版本：** 23
 

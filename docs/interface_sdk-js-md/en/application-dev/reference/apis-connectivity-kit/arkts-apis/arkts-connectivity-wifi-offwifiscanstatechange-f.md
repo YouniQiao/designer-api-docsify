@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_wifiScanStateChange
+## off_wifiScanStateChange('wifiScanStateChange')
 
 ```TypeScript
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
@@ -34,7 +34,7 @@ Unsubscribe Wi-Fi scan status change events. &lt;p&gt;All callback functions wil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiScanStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | the callback of on, 0: scan fail, 1: scan success |
 
 **Examples**
 

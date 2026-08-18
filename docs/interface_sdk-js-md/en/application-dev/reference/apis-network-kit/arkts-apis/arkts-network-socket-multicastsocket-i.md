@@ -1,10 +1,10 @@
 # MulticastSocket
 
-Defines a UDP MulticastSocket connection.
+Defines a **MulticastSocket** connection. Before calling MulticastSocket APIs, you need to call [socket.constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md) to create a **MulticastSocket** object.
 
-**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md#udpsocket)
+**Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md)
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-export interface MulticastSocket--><!--Device-socket-export interface MulticastSocket-End-->
 
@@ -22,9 +22,9 @@ import { socket } from '@kit.NetworkKit';
 addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 ```
 
-Add the socket to the multicast group.
+Adds a member to a multicast group. This API uses an asynchronous callback to return the result. > **NOTE：**> > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255. > > A member in a multicast group can serve as a sender or a receiver. Data is transmitted in broadcast mode, > regardless of the client or server.
 
-**Since:** 12
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -36,8 +36,8 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of addMembership. |
+| multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -74,9 +74,9 @@ multicast.addMembership(addr, (err: Object) => {
 addMembership(multicastAddress: NetAddress): Promise<void>
 ```
 
-Add the socket to the multicast group.
+Adds a member to a multicast group. This API uses a promise to return the result. > **NOTE：**> > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255. > > A member in a multicast group can serve as a sender or a receiver. Data is transmitted in broadcast mode, > regardless of the client or server.
 
-**Since:** 12
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -88,13 +88,13 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
+| multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -128,9 +128,9 @@ multicast.addMembership(addr).then(() => {
 dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 ```
 
-Drop the socket from the multicast group.
+Drops a member from a multicast group. This API uses an asynchronous callback to return the result. > **NOTE：**> > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255. > > You can drop only a member that has been added to a multicast group by using > [addMembership](#addmembership).
 
-**Since:** 12
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -142,8 +142,8 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of dropMembership. |
+| multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -179,9 +179,9 @@ multicast.dropMembership(addr, (err: Object) => {
 dropMembership(multicastAddress: NetAddress): Promise<void>
 ```
 
-Drop the socket from the multicast group.
+Drops a member from a multicast group. This API uses a promise to return the result. > **NOTE：**> > The IP addresses used for multicast belong to a specific range, for example, 224.0.0.0 to 239.255.255.255. > > You can drop only a member that has been added to a multicast group by using > [addMembership](#addmembership).
 
-**Since:** 12
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -193,13 +193,13 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
+| multicastAddress | NetAddress | Yes | Destination address. For details, see NetAddress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -233,9 +233,9 @@ multicast.dropMembership(addr).then(() => {
 getLoopbackMode(callback: AsyncCallback<boolean>): void
 ```
 
-Get the loopback mode of the socket.
+Obtains the loopback mode flag for multicast communication. This API uses an asynchronous callback to return the result. > **NOTE：**> > Use this API to check whether the loopback mode is enabled. > > The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. > When the loopback mode is disabled, the host does not receive the multicast packets sent by itself. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
 
@@ -245,7 +245,7 @@ Get the loopback mode of the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -275,9 +275,9 @@ multicast.getLoopbackMode((err: Object, value: Boolean) => {
 getLoopbackMode(): Promise<boolean>
 ```
 
-Get the loopback mode of the socket.
+Obtains the loopback mode flag for multicast communication. This API uses a promise to return the result. > **NOTE：**> > Use this API to check whether the loopback mode is enabled. > > The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. > When the loopback mode is disabled, the host does not receive the multicast packets sent by itself. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
 
@@ -287,7 +287,7 @@ Get the loopback mode of the socket.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the loopback mode is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -312,14 +312,14 @@ multicast.getLoopbackMode().then((value: Boolean) => {
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(callback: AsyncCallback<number>): void
+getMulticastTTL(callback: AsyncCallback<int>): void
 ```
 
-Get the TTL value of socket multicast packet.
+Obtains the TTL for multicast packets. This API uses an asynchronous callback to return the result. > **NOTE：**> > TTL is used to limit the maximum number of router hops for packet transmission on a network. > > The value ranges from 0 to 255. The default value is **1**. > > If the TTL value is **1**, multicast packets can be transmitted only to the host directly connected to the > sender. If the TTL is set to a large value, multicast packets can be transmitted over a longer distance. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void-End-->
+<!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -327,7 +327,7 @@ Get the TTL value of socket multicast packet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback of getMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -354,14 +354,14 @@ multicast.getMulticastTTL((err: Object, value: Number) => {
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(): Promise<number>
+getMulticastTTL(): Promise<int>
 ```
 
-Get the TTL value of socket multicast packet.
+Obtains the TTL for multicast packets. This API uses a promise to return the result. > **NOTE：**> > TTL is used to limit the maximum number of router hops for packet transmission on a network. > > The value ranges from 0 to 255. The default value is **1**. > > If the TTL value is **1**, multicast packets can be transmitted only to the host directly connected to the > sender. If the TTL is set to a large value, multicast packets can be transmitted over a longer distance. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-MulticastSocket-getMulticastTTL(): Promise<number>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<number>-End-->
+<!--Device-MulticastSocket-getMulticastTTL(): Promise<int>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -369,7 +369,7 @@ Get the TTL value of socket multicast packet.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -397,9 +397,9 @@ multicast.getMulticastTTL().then((value: Number) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the MulticastSocket.
+Obtains the file descriptor of the MulticastSocket. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after > [bind](arkts-network-socket-udpsocket-i.md#bind) is successfully called. > > - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close > is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](arkts-network-socket-udpsocket-i.md#close) method to close the socket connection, > instead of directly operating the file descriptor.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -413,7 +413,7 @@ Obtains the file descriptor of the MulticastSocket.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returns the file descriptor of the Multicast socket. |
+| Promise&lt;int&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -451,9 +451,9 @@ multicast.bind(bindAddr)
 setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 ```
 
-Set the loopback mode for the socket.
+Sets the loopback mode flag for multicast communication. This API uses an asynchronous callback to return the result. > **NOTE：**> > Use this API to enable or disable the loopback mode. By default, the loopback mode is enabled. > > The value **true** indicates that the host is allowed to receive the multicast packets sent by itself, and the > value **false** indicates the opposite. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -463,8 +463,8 @@ Set the loopback mode for the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | boolean | Yes | Whether to enable loopback mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setLoopbackMode. |
+| flag | boolean | Yes | Whether to enable the loopback mode. The value **true** means to enable the loopback mode, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -494,9 +494,9 @@ multicast.setLoopbackMode(false, (err: Object) => {
 setLoopbackMode(flag: boolean): Promise<void>
 ```
 
-Set the loopback mode for the socket.
+Sets the loopback mode flag for multicast communication. This API uses a promise to return the result. > **NOTE：**> > Use this API to enable or disable the loopback mode. By default, the loopback mode is enabled. > > The value **true** indicates that the host is allowed to receive the multicast packets sent by itself, and the > value **false** indicates the opposite. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
@@ -506,13 +506,13 @@ Set the loopback mode for the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | boolean | Yes | Whether to enable loopback mode. |
+| flag | boolean | Yes | Whether to enable the loopback mode. The value **true** means to enable the loopback mode, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -537,14 +537,14 @@ multicast.setLoopbackMode(false).then(() => {
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
+setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void
 ```
 
-Set the TTL value for socket multicast packets.
+Sets the time to live (TTL) for multicast packets. This API uses an asynchronous callback to return the result. > **NOTE：**> > TTL is used to limit the maximum number of router hops for packet transmission on a network. > > The value ranges from 0 to 255. The default value is **1**. > > If the TTL value is **1**, multicast packets can be transmitted only to the host directly connected to the > sender. If the TTL is set to a large value, multicast packets can be transmitted over a longer distance. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void-End-->
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -552,8 +552,8 @@ Set the TTL value for socket multicast packets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ttl | number | Yes | The TTL value to set. Valid range is typically 0 to 255. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setMulticastTTL. |
+| ttl | int | Yes | TTL value. The value is of the number type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -582,14 +582,14 @@ multicast.setMulticastTTL(ttl, (err: Object) => {
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: number): Promise<void>
+setMulticastTTL(ttl: int): Promise<void>
 ```
 
-Set the TTL value for socket multicast packet.
+Sets the TTL for multicast packets. This API uses a promise to return the result. > **NOTE：**> > TTL is used to limit the maximum number of router hops for packet transmission on a network. > > The value ranges from 0 to 255. The default value is **1**. > > If the TTL value is **1**, multicast packets can be transmitted only to the host directly connected to the > sender. If the TTL is set to a large value, multicast packets can be transmitted over a longer distance. > > This API is effective only after > [addMembership](#addmembership) > is called.
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>-End-->
+<!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -597,13 +597,13 @@ Set the TTL value for socket multicast packet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ttl | number | Yes | The TTL value to set. Valid range is typically 0 to 255. |
+| ttl | int | Yes | TTL value. The value is of the number type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -632,7 +632,7 @@ multicast.setMulticastTTL(8).then(() => {
 setReuseAddress(reuse: boolean): void
 ```
 
-Sets whether the multicast socket supports address reuse.
+Sets whether the multicast socket supports address reuse. This API is called in synchronous mode. > **NOTE：**> > This API is used to control whether to enable address reuse when a multicast socket is bound to a port. > > To bind an occupied port, ensure that the address reuse capability is enabled for the party that occupies the > port. In addition, the service needs to call this API before calling > [bind](arkts-network-socket-udpsocket-i.md#bind) to enable the address > reuse capability.
 
 **Since:** 26.0.0
 
@@ -646,5 +646,5 @@ Sets whether the multicast socket supports address reuse.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reuse | boolean | Yes | whether the multicast socket supports address reuse. |
+| reuse | boolean | Yes | Whether to enable address reuse. **true** to enable, **false** otherwise. |
 

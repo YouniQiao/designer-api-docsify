@@ -11,6 +11,7 @@ CompletionHandlerForAbilityStartCallback提供了onRequestSuccess和onRequestFai
 ## 导入模块
 
 ```TypeScript
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## onRequestFailure

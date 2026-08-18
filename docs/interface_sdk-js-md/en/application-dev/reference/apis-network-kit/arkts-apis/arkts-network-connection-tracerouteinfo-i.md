@@ -1,6 +1,6 @@
 # TraceRouteInfo
 
-Defines the trace route information structure.
+Defines the route tracing information.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 address: string
 ```
 
-Host name or address.
+IP address to jump to.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Host name or address.
 jumpNo: int
 ```
 
-Number of jumps.
+Jump number.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ Number of jumps.
 rtt: int[]
 ```
 
-RTT in microseconds, min/avg/max/std.
+Round-trip time (RTT), in milliseconds. Five probe packets are sent for each jump. The array elements are the minimum, average, maximum, and standard deviation of the RTTs of these probe packets, respectively.
 
 **Type:** int[]
 

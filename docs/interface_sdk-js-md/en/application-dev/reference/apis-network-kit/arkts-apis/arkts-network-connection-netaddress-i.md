@@ -2,7 +2,7 @@
 
 Defines a network address.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-export interface NetAddress--><!--Device-connection-export interface NetAddress-End-->
 
@@ -24,9 +24,9 @@ Network address.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetAddress-address: string--><!--Device-NetAddress-address: string-End-->
 
@@ -38,13 +38,13 @@ Network address.
 family?: int
 ```
 
-Address family identifier. The value is 1 for IPv4 and 2 for IPv6. The default value is 1.
+Address family identifier. The value is **1** for IPv4 and **2** for IPv6. The default value is **1**.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetAddress-family?: int--><!--Device-NetAddress-family?: int-End-->
 
@@ -56,13 +56,13 @@ Address family identifier. The value is 1 for IPv4 and 2 for IPv6. The default v
 port?: int
 ```
 
-Port number. The value ranges from 0 to 65535.
+Port number. The value range is [0, 65535]. The default value is **0**.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetAddress-port?: int--><!--Device-NetAddress-port?: int-End-->
 

@@ -16,7 +16,7 @@ data: Record<string, RecordData>
 
 模板数据。 - title: 表示下载标题。必填字段，值为字符串类型。 - fileName: 表示下载文件名。必填字段，值为字符串类型。 - progressValue: 表示下载进度，值为数值类型。建议取值范围为0~100， 表示百分比进度。当`progressValue`取值小于或等于0时，进度为0； 当其取值大于或等于100时，进度环消失，代表下载完成。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

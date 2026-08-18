@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formProvider } from '@kit.FormKit';
-import { formProvider } from '@kit.FormKit';
 ```
 
 ## getFormRect

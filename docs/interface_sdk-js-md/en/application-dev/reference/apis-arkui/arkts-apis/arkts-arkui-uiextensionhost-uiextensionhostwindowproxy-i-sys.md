@@ -397,7 +397,7 @@ Unregister the callback of avoidAreaChange
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;uiExtension.AvoidAreaInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -427,7 +427,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -435,7 +435,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## off_avoidAreaChange
+## off_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -458,7 +458,7 @@ Unsubscribes from events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
 
 **Error codes:**
 
@@ -482,7 +482,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## off_windowSizeChange
+## off_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
@@ -505,7 +505,7 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -551,7 +551,7 @@ Register the callback of avoidAreaChange
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;uiExtension.AvoidAreaInfo&gt; | Yes | Callback used to return the area. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;uiExtension.AvoidAreaInfo&gt; | Yes | Callback used to return the area. |
 
 **Error codes:**
 
@@ -581,7 +581,7 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
 
 **Error codes:**
 
@@ -589,7 +589,7 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## on_avoidAreaChange
+## on_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
@@ -612,7 +612,7 @@ Subscribes to events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -638,7 +638,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-## on_windowSizeChange
+## on_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 on(type: 'windowSizeChange', callback: Callback<window.Size>): void
@@ -661,7 +661,7 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 
@@ -760,7 +760,7 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-Information about the host application window and the **UIExtensionComponent**. Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#onavoidareachange) callback.
+Information about the host application window and the **UIExtensionComponent**. Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#on_avoidareachangeavoidareachange) callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

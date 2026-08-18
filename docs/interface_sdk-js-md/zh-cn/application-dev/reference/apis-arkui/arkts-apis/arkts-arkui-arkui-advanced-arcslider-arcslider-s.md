@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstructorOptions, ArcSliderLayoutOptions, ArcSliderLayoutOptionsConstructorOptions, ArcSliderStyleOptions, ArcSliderStyleOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderValueOptionsConstructorOptions } from '@kit.ArkUI';
 ```
 
 ## options
@@ -19,7 +20,7 @@
 options: ArcSliderOptions
 ```
 
-配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#arcslideroptions)的各项子属性均取其默认值。
+配置弧形滑动条的参数。 默认值：[ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 

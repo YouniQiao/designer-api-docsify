@@ -323,7 +323,7 @@ public photoBrowserBackgroundColorMode?: PickerColorMode
 
 Support to set photo browser background color mode.
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.1.0
 
@@ -383,7 +383,7 @@ public selectMode?: SelectMode
 
 Select mode of the picker.
 
-**Type:** [SelectMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
+**Type:** [SelectMode](arkts-na-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 26.1.0
 
@@ -423,7 +423,7 @@ public uiComponentColorMode?: PickerColorMode
 
 Support to set UIComponent color mode.
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.1.0
 

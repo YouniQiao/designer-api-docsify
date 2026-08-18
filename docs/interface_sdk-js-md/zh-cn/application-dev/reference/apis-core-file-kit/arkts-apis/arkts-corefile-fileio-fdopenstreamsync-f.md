@@ -17,7 +17,7 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **废弃版本：** 9
 
-**替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenstreamsync)
+**替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md)
 
 <!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
 

@@ -2,7 +2,7 @@
 
 用于设置滚动事件回调。
 
-**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#uicommonevent)
+**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
 
 **起始版本：** 19
 

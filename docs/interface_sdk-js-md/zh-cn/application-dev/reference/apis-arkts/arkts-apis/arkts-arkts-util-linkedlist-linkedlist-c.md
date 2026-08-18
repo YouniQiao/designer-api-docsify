@@ -11,6 +11,8 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 ## 导入模块
 
 ```TypeScript
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

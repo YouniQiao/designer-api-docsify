@@ -2,7 +2,7 @@
 
 Defines the status of the socket connection.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface SocketStateBase--><!--Device-socket-export interface SocketStateBase-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 isBound: boolean
 ```
 
-Whether the connection is in the bound state.
+Whether the connection is in the bound state. The value **true** indicates that the connection is in the bound state, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-SocketStateBase-isBound: boolean--><!--Device-SocketStateBase-isBound: boolean-End-->
 
@@ -36,11 +36,11 @@ Whether the connection is in the bound state.
 isClose: boolean
 ```
 
-Whether the connection is in the closed state.
+Whether the connection is in the closed state. The value **true** indicates that the connection is in the closed state, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-SocketStateBase-isClose: boolean--><!--Device-SocketStateBase-isClose: boolean-End-->
 
@@ -52,11 +52,11 @@ Whether the connection is in the closed state.
 isConnected: boolean
 ```
 
-Whether the connection is in the connected state.
+Whether the connection is in the connected state. The value **true** indicates that the connection is in the connected state, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-SocketStateBase-isConnected: boolean--><!--Device-SocketStateBase-isConnected: boolean-End-->
 

@@ -1,3 +1,0 @@
-# GaugeModifier
-
-## Summary

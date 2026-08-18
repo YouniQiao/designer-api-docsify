@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## resetFactory
@@ -17,7 +18,7 @@ function resetFactory(admin: Want, callback: AsyncCallback<void>): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice)(admin: Want, operation: Operation, addition?: string)
+**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)(admin: Want, operation: Operation, addition?: string)
 
 **需要权限：** ohos.permission.ENTERPRISE_RESET_DEVICE
 
@@ -34,7 +35,7 @@ function resetFactory(admin: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function resetFactory(admin: Want): Promise<void>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice)(admin: Want, operation: Operation, addition?: string)
+**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)(admin: Want, operation: Operation, addition?: string)
 
 **需要权限：** ohos.permission.ENTERPRISE_RESET_DEVICE
 

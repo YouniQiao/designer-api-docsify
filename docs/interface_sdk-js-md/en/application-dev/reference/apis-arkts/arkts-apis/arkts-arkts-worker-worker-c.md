@@ -2,13 +2,13 @@
 
 The Worker class contains all Worker functions.
 
-**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
+**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
+**Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
 <!--Device-worker-class Worker--><!--Device-worker-class Worker-End-->
 

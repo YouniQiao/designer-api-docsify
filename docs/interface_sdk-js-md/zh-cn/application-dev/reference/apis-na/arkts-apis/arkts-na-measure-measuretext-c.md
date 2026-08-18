@@ -37,7 +37,7 @@ static measureText(options: MeasureOptions): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
+| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
 
 **返回值：**
 
@@ -67,7 +67,7 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-na-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
+| options | [MeasureOptions](../../apis-arkui/arkts-apis/arkts-arkui-measure-measureoptions-i.md) | 是 | 被计算文本描述信息。 |
 
 **返回值：**
 

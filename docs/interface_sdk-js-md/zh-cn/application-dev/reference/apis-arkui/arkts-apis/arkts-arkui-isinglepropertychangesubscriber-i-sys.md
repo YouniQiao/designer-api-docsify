@@ -1,8 +1,8 @@
 # ISinglePropertyChangeSubscriber(System API)（系统接口）
 
-继承自IPropertySubscriber。用于订阅单个属性值的变化，当被订阅的属性发生变化时接收通知。
+继承自[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)。用于订阅单个属性值的变化，当被订阅的属性发生变化时接收通知。
 
-**继承/实现关系：** ISinglePropertyChangeSubscriber extends IPropertySubscriber
+**继承/实现关系：** ISinglePropertyChangeSubscriber extends [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)
 
 **起始版本：** 7
 

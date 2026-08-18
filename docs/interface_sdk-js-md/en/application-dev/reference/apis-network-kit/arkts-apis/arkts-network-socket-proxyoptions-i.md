@@ -1,6 +1,6 @@
 # ProxyOptions
 
-Define parameters for the proxy connection.
+Defines the socket proxy information.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { socket } from '@kit.NetworkKit';
 address: NetAddress
 ```
 
-Proxy server address.
+Proxy address.
 
 **Type:** NetAddress
 
@@ -36,7 +36,7 @@ Proxy server address.
 password?: string
 ```
 
-Specify password, if the proxy server supports user-password authentication.
+Password. This field must be specified if the user password authentication mode is used.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ Specify password, if the proxy server supports user-password authentication.
 type: ProxyTypes
 ```
 
-Proxy types.
+Proxy type.
 
 **Type:** [ProxyTypes](arkts-network-socket-proxytypes-e.md)
 
@@ -68,7 +68,7 @@ Proxy types.
 username?: string
 ```
 
-Specify username, if the proxy server supports user-password authentication.
+User name. This field must be specified if the user password authentication mode is used.
 
 **Type:** string
 

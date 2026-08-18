@@ -2,7 +2,7 @@
 
 Defines the PanGesture handler.
 
-**Inheritance/Implementation:** PanGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** PanGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

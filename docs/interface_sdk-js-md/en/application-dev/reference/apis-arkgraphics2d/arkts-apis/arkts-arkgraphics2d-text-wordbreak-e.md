@@ -62,7 +62,7 @@ For non-CJK text, breaks lines between any two characters. If a line contains br
 BREAK_HYPHEN = 3
 ```
 
-Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like **BREAK_WORD**. When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#textstyle) to define the language environment, which affects the word break effect.
+Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like **BREAK_WORD**. When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) to define the language environment, which affects the word break effect.
 
 **Since:** 23
 

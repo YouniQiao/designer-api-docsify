@@ -3,6 +3,12 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## getInputMethodSetting
@@ -11,13 +17,13 @@
 function getInputMethodSetting(): InputMethodSetting
 ```
 
-获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md#inputmethodsetting)。
+获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)
+**替代接口：** [getSetting](arkts-ime-inputmethod-getsetting-f.md)
 
 <!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
 

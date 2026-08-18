@@ -79,7 +79,7 @@ paragraphSpacing?: number
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。 默认值：undefined，不设置着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#richeditortextstyle)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#richeditortextstyle)的fontColor。
+设置文本着色器效果。 默认值：undefined，不设置着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的fontColor。
 
 **类型：** ShaderStyle
 

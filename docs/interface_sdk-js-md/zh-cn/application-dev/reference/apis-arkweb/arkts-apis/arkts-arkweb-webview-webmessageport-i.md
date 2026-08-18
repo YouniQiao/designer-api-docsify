@@ -11,6 +11,7 @@ WebMessagePort是Web组件中用于应用侧（ArkTS）与HTML5侧（JavaScript�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## close
@@ -35,7 +36,7 @@ close(): void
 onMessageEvent(callback: (result: WebMessage) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessage](arkts-arkweb-webview-webmessage-t.md#webmessage)类型消息。完整示例代码参考 [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息。完整示例代码参考 [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
 
 **起始版本：** 9
 
@@ -64,7 +65,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#webmessagetype)类型消息。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息。
 
 **起始版本：** 10
 
@@ -93,7 +94,7 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 postMessageEvent(message: WebMessage): void
 ```
 
-发送[WebMessage](arkts-arkweb-webview-webmessage-t.md#webmessage)类型消息给HTML5侧，必须先调用 onMessageEvent，否则会发送失败。完整示 例代码参考[postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
+发送[WebMessage](arkts-arkweb-webview-webmessage-t.md)类型消息给HTML5侧，必须先调用 onMessageEvent，否则会发送失败。完整示 例代码参考[postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage)。
 
 **起始版本：** 9
 
@@ -122,7 +123,7 @@ postMessageEvent(message: WebMessage): void
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-发送[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#webmessagetype)类型消息给HTML5侧，必须先调用 onMessageEventExt，否则 会发送失败。完整示例代码参考 onMessageEventExt。
+发送[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息给HTML5侧，必须先调用 onMessageEventExt，否则 会发送失败。完整示例代码参考 onMessageEventExt。
 
 **起始版本：** 10
 

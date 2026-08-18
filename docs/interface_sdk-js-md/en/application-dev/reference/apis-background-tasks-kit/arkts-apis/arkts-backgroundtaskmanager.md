@@ -6,7 +6,7 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 
 **Deprecated since:** 9
 
-**Substitutes:** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#ohosresourceschedulebackgroundtaskmanager)
+**Substitutes:** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)
 
 <!--Device-unnamed-declare namespace backgroundTaskManager--><!--Device-unnamed-declare namespace backgroundTaskManager-End-->
 
@@ -45,7 +45,7 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md) | Defines the type of a continuous task. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

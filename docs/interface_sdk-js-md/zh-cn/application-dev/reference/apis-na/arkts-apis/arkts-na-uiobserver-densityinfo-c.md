@@ -23,7 +23,7 @@ context: UIContext
 
 The context of the changed screen density.
 
-**类型：** [UIContext](arkts-na-arkui-uicontext-uicontext-c.md)
+**类型：** [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 23
 

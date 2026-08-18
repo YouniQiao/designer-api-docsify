@@ -2,7 +2,7 @@
 
 实体相册
 
-**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#absalbum)
+**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md)
 
 **起始版本：** 12
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify

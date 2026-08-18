@@ -6,7 +6,7 @@ Configuring parameters in geocode requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md#geocoderequest)
+**Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

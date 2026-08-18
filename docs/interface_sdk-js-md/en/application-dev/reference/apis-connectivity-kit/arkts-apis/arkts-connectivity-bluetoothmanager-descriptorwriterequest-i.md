@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Deprecated since:** 10
 
-**Substitutes:** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptorwriterequest)
+**Substitutes:** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
 
 <!--Device-bluetoothManager-interface DescriptorWriteRequest--><!--Device-bluetoothManager-interface DescriptorWriteRequest-End-->
 

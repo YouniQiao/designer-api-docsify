@@ -6,7 +6,7 @@ Enumerates the widget types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormType](arkts-form-forminfo-formtype-e.md#formtype)
+**Substitutes:** [FormType](arkts-form-forminfo-formtype-e.md)
 
 <!--Device-formInfo-enum FormType--><!--Device-formInfo-enum FormType-End-->
 

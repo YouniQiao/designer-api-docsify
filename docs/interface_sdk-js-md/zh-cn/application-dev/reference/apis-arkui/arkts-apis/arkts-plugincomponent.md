@@ -5,6 +5,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## 汇总

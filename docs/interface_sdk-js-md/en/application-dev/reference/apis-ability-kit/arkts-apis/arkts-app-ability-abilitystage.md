@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AbilityStage } from '@kit.AbilityKit';
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -1,8 +1,8 @@
 # Duplex
 
-A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written. The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md#readableoptions) and supports all the APIs in **Readable**.
+A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written. The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md) and supports all the APIs in **Readable**.
 
-**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#readable)
+**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
 **Since:** 23
 

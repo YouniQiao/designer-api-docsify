@@ -6,7 +6,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **废弃版本：** 9
 
-**替代接口：** [LRUCache](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#lrucache)
+**替代接口：** [LRUCache](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md)
 
 <!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
@@ -15,6 +15,42 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 ## 导入模块
 
 ```TypeScript
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

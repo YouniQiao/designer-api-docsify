@@ -24,7 +24,7 @@ import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 controller: WebController | WebviewController
 ```
 
-Controller used to control various behaviors of the Web component, including page navigation, lifecycle state, JavaScript interaction, etc. Since API version 9, WebController is no longer maintained. It is recommended to use [WebviewController](arkts-arkweb-webviewcontroller-t.md#webviewcontroller) instead.
+Controller used to control various behaviors of the Web component, including page navigation, lifecycle state, JavaScript interaction, etc. Since API version 9, WebController is no longer maintained. It is recommended to use [WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
 
 **Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
@@ -58,7 +58,7 @@ Whether to convert mouse events to touch events. The value **true** indicates th
 incognitoMode? : boolean
 ```
 
-Whether the current Webview is created in incognito mode. The value **true** indicates incognito mode, and **false** indicates normal mode. Default value: **false**. The value is **false** when undefined or null is passed in.&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Whether the current Webview is created in incognito mode. The value **true** indicates incognito mode, and **false** indicates normal mode. Default value: **false**. The value is **false** when undefined or null is passed in.<!--RP1--><!--RP1End-->
 
 **Type:** boolean
 
@@ -110,7 +110,7 @@ Token that specifies the shared render process for the current Web component. In
 src: string | Resource
 ```
 
-Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path. src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl).
+Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path. src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 
 **Type:** string \| Resource
 

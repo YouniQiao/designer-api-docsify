@@ -108,7 +108,7 @@ Creates an OH_AVCencInfo instance for setting the CENC information.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVCencInfo *](capi-multimedia-drm-oh-avcencinfo.md) | Pointer to the OH_AVCencInfo instance created. If the operation fails, nullptr is returned.<br>     <br>The possible causes of an operation failure are as follows: The application address space is full,<br>     or the data in the object fails to be initialized. |
+| [OH_AVCencInfo *](capi-multimedia-drm-oh-avcencinfo.md) | Pointer to the OH_AVCencInfo instance created. If the operation fails, nullptr is returned.      <br>The possible causes of an operation failure are as follows: The application address space is full,      or the data in the object fails to be initialized. |
 
 ### OH_AVCencInfo_Destroy()
 
@@ -132,7 +132,7 @@ Destroys an OH_AVCencInfo instance and clears internal resources.An instance can
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetAlgorithm()
 
@@ -157,7 +157,7 @@ Sets an encryption algorithm of the CENC information.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetKeyIdAndIv()
 
@@ -185,7 +185,7 @@ Sets the key ID and IV in the CENC information.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo, keyId, or iv is null,<br>     keyIdLen is not equal to DRM_KEY_ID_SIZE, ivLen is not equal to DRM_KEY_IV_SIZE,<br>     the key ID or IV fails to be copied. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo, keyId, or iv is null,      keyIdLen is not equal to DRM_KEY_ID_SIZE, ivLen is not equal to DRM_KEY_IV_SIZE,      the key ID or IV fails to be copied. |
 
 ### OH_AVCencInfo_SetSubsampleInfo()
 
@@ -214,7 +214,7 @@ Sets the subsample information in the CENC information.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null, subsampleCount is greater than<br>     DRM_KEY_MAX_SUB_SAMPLE_NUM, or subsamples is null. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null, subsampleCount is greater than      DRM_KEY_MAX_SUB_SAMPLE_NUM, or subsamples is null. |
 
 ### OH_AVCencInfo_SetMode()
 
@@ -239,7 +239,7 @@ Sets the CENC information mode.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetAVBuffer()
 
@@ -264,6 +264,6 @@ Sets the CENC information to an AVBuffer.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo, buffer, buffer->buffer_,<br>     or buffer->buffer_->meta_ is null. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The value of cencInfo, buffer, buffer->buffer_,      or buffer->buffer_->meta_ is null. |
 
 

@@ -2,7 +2,7 @@
 
 Represents static method of class
 
-**Inheritance/Implementation:** StaticMethod extends [Method](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-method-i-sys.md#method-system-api)
+**Inheritance/Implementation:** StaticMethod extends [Method](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-method-i-sys.md)
 
 **Since:** 24
 

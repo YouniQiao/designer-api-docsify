@@ -6,7 +6,7 @@ Provides information about geographic locations
 
 **Deprecated since:** 9
 
-**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

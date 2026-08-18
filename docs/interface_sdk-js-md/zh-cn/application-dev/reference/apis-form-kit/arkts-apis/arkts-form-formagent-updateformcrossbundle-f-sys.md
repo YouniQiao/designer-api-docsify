@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle

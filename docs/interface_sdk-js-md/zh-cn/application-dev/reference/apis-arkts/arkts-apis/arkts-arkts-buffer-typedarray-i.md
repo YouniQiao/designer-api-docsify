@@ -2,7 +2,7 @@
 
 TypedArray继承Int8Array的特性与方法。
 
-**继承/实现关系：** TypedArray extends [Int8Array](arkts-arkts-collections-int8array-c.md#int8array)
+**继承/实现关系：** TypedArray extends [Int8Array](arkts-arkts-collections-int8array-c.md)
 
 **起始版本：** 9
 
@@ -15,5 +15,6 @@ TypedArray继承Int8Array的特性与方法。
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 

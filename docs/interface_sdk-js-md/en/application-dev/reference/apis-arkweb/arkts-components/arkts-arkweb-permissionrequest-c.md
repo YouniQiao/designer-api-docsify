@@ -56,7 +56,7 @@ Denies the permission requested by the web page.
 getAccessibleResource(): Array<string>
 ```
 
-Obtains the list of permission resources requested by the web page. For details about the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype).
+Obtains the list of permission resources requested by the web page. For details about the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
 
 **Since:** 9
 
@@ -114,5 +114,5 @@ Grants the permission requested by the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resources | Array&lt;string&gt; | Yes | List of permission resources granted to the web page, which must be obtained through getAccessibleResource(). For the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#protectedresourcetype). After this parameter is passed in, the web page will obtain access to the specified resources. If an empty list is passed in, all permission requests are denied. |
+| resources | Array&lt;string&gt; | Yes | List of permission resources granted to the web page, which must be obtained through getAccessibleResource(). For the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md). After this parameter is passed in, the web page will obtain access to the specified resources. If an empty list is passed in, all permission requests are denied. |
 

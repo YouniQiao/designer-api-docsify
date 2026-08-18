@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AgentUIExtensionAbility } from '@kit.AbilityKit';
-import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

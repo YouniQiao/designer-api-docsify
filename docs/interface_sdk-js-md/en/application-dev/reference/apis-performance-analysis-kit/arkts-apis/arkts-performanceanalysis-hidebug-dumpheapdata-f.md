@@ -18,7 +18,7 @@ Exports the VM heap data and generates a filename.heapsnapshot file. The input p
 
 **Deprecated since:** 9
 
-**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)
+**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 

@@ -12,7 +12,6 @@ Information about continuousTask notification progress.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## continuousTaskId

@@ -253,7 +253,7 @@ Scales a matrix to map a source rectangle to a destination rectangle.This API ma
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if dst is empty, and sets matrix to:<br> | 0 0 0 |<br> | 0 0 0 |<br> | 0 0 1 | |
+| bool | Returns true if dst is empty, and sets matrix to:  | 0 0 0 |  | 0 0 0 |  | 0 0 1 | |
 
 ### OH_Drawing_MatrixPreRotate()
 
@@ -442,7 +442,7 @@ Obtains all element values of a matrix.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or value is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or value is nullptr. |
 
 ### OH_Drawing_MatrixPreConcat()
 
@@ -467,7 +467,7 @@ Left-multiplies matrix a by matrix b.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if a or b is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if a or b is nullptr. |
 
 ### OH_Drawing_MatrixGetValue()
 
@@ -580,7 +580,7 @@ Inverts a matrix and returns the result.This API may return an error code. For d
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the matrix is not nullptr and can be inverted;<br> returns false if the matrix is nullptr or cannot be inverted. |
+| bool | Returns true if the matrix is not nullptr and can be inverted;  returns false if the matrix is nullptr or cannot be inverted. |
 
 ### OH_Drawing_MatrixSetPolyToPoly()
 
@@ -728,7 +728,7 @@ Checks whether the existing matrix is an affine matrix, which includes transform
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or isAffine is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or isAffine is nullptr. |
 
 ### OH_Drawing_MatrixPreSkew()
 
@@ -756,7 +756,7 @@ Left multiplies the current matrix by a matrix constructed based on (px, py) and
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix is nullptr. |
 
 ### OH_Drawing_MatrixRectStaysRect()
 
@@ -781,7 +781,7 @@ Checks whether the rectangle remains rectangular after being mapped by the curre
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or isRectStaysRect is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix or isRectStaysRect is nullptr. |
 
 ### OH_Drawing_MatrixSetSinCos()
 
@@ -809,7 +809,7 @@ Sets the matrix to rotate around the rotation center (px, py) with the specified
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix is nullptr. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if matrix is nullptr. |
 
 ### OH_Drawing_MatrixDestroy()
 

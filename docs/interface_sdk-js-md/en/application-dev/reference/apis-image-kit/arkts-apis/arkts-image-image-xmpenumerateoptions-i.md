@@ -12,7 +12,6 @@ Describes XMP enumerate option parameters.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## isRecursive

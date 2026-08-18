@@ -12,10 +12,7 @@ Enumerates the return results of intent execution.
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntent } from '@kit.AbilityKit';
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
@@ -45,7 +42,7 @@ Error code returned by the intent execution, defined by the developer.
 flags?: int
 ```
 
-Permissions to be granted to the system entry point for the URI list returned by the intent execution. **NOTE：**This parameter supports only FLAG_AUTH_READ_URI_PERMISSION, FLAG_AUTH_WRITE_URI_PERMISSION, and FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION. For details about the permissions, see [Flags](arkts-ability-wantconstant-flags-e.md#flags).
+Permissions to be granted to the system entry point for the URI list returned by the intent execution. **NOTE：**This parameter supports only FLAG_AUTH_READ_URI_PERMISSION, FLAG_AUTH_WRITE_URI_PERMISSION, and FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION. For details about the permissions, see [Flags](arkts-ability-wantconstant-flags-e.md).
 
 **Type:** int
 
@@ -67,7 +64,7 @@ result?: Record<string, RecordData>
 
 Indicates execute result.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

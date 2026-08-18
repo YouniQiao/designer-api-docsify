@@ -1,6 +1,6 @@
 # Locale
 
-**Inheritance/Implementation:** Locale extends [LocaleOptions](arkts-na-intl-localeoptions-i.md#localeoptions)
+**Inheritance/Implementation:** Locale extends [LocaleOptions](arkts-na-intl-localeoptions-i.md)
 
 **Since:** -1
 

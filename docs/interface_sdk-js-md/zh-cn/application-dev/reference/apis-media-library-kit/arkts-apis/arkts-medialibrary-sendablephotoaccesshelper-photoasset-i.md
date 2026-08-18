@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify
@@ -281,8 +282,8 @@ set(member: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| member | string | 是 | 成员参数名称例如： [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys) .TITLE。字符串长度的取值范围为[1, 255]。 |
-| value | string | 是 | 设置成员参数名称，只能修改 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys).TITLE的值。title的参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | 是 | 成员参数名称例如： [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) .TITLE。字符串长度的取值范围为[1, 255]。 |
+| value | string | 是 | 设置成员参数名称，只能修改 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为： <br>- 不应包含扩展名。 <br>- 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。 <br>- 不允许出现的非法英文字符，包括：. \ / : ? " ' ` &lt; &gt; \| { } [ ] |
 
 **错误码：**
 

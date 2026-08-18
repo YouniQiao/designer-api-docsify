@@ -1,6 +1,6 @@
 # Server
 
-Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) to create a SSAP server instance.
+Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md) to create a SSAP server instance.
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ Unsubscribes from server connection state changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No | Callback used to listen for the SSAP connection state changed event. |
 
 ## offMtuChange
 
@@ -158,7 +158,7 @@ Unsubscribes from MTU changed events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to listen for the MTU changed event. |
 
 ## offPropertyRead
 
@@ -180,7 +180,7 @@ Unsubscribes from property read events from the client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
 
 ## offPropertyWrite
 
@@ -202,7 +202,7 @@ Unsubscribes from property write events from the client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | No | Callback used to listen for the property operation event. |
 
 ## onConnectionStateChange
 
@@ -224,7 +224,7 @@ Subscribes to server connection state changed events. This event is accessible o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
 
 ## onMtuChange
 
@@ -246,7 +246,7 @@ Subscribes to MTU changed events. This event is accessible only to applications 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the MTU changed event. |
 
 ## onPropertyRead
 
@@ -268,7 +268,7 @@ Subscribes to property read events from the client. This event is accessible onl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
 
 ## onPropertyWrite
 
@@ -290,7 +290,7 @@ Subscribes to property write events from the client. This event is accessible on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | Yes | Callback used to listen for the property operation event. |
 
 ## removeService
 

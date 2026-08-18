@@ -27,7 +27,7 @@ This file declares the functions related to the pixel map in the drawing module.
 | -- | -- |
 | [OH_Drawing_PixelMap* OH_Drawing_PixelMapGetFromNativePixelMap(NativePixelMap_* nativePixelMap)](#oh_drawing_pixelmapgetfromnativepixelmap) | Obtains the pixel map defined by this module from a pixel map defined by the image framework. |
 | [OH_Drawing_PixelMap* OH_Drawing_PixelMapGetFromOhPixelMapNative(OH_PixelmapNative* pixelmapNative)](#oh_drawing_pixelmapgetfromohpixelmapnative) | Obtains the pixel map defined by this module from a pixel map defined by the image framework. |
-| [void OH_Drawing_PixelMapDissolve(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_pixelmapdissolve) | Removes the relationship between a pixel map defined by this module and a pixel map defined by the imageframework. The relationship is established by calling  [OH_Drawing_PixelMapGetFromNativePixelMap](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromnativepixelmap)  or[OH_Drawing_PixelMapGetFromOhPixelMapNative](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromohpixelmapnative). |
+| [void OH_Drawing_PixelMapDissolve(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_pixelmapdissolve) | Removes the relationship between a pixel map defined by this module and a pixel map defined by the imageframework. The relationship is established by calling [OH_Drawing_PixelMapGetFromNativePixelMap](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromnativepixelmap) or[OH_Drawing_PixelMapGetFromOhPixelMapNative](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromohpixelmapnative). |
 
 ## Function description
 
@@ -53,7 +53,7 @@ Obtains the pixel map defined by this module from a pixel map defined by the ima
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PixelMap*](capi-drawing-oh-drawing-pixelmap.md) | Returns the pointer to an [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md) object, which is the pixel map defined by this module.<br> If NULL is returned, the creation fails. The possible failure cause is that NativePixelMap_ is NULL. |
+| [OH_Drawing_PixelMap*](capi-drawing-oh-drawing-pixelmap.md) | Returns the pointer to an [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md) object, which is the pixel map defined by this module.  If NULL is returned, the creation fails. The possible failure cause is that NativePixelMap_ is NULL. |
 
 ### OH_Drawing_PixelMapGetFromOhPixelMapNative()
 
@@ -77,7 +77,7 @@ Obtains the pixel map defined by this module from a pixel map defined by the ima
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_PixelMap*](capi-drawing-oh-drawing-pixelmap.md) | Returns the pointer to an [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md) object, which is the pixel map defined by this module.<br> If NULL is returned, the creation fails. The possible failure cause is that OH_PixelmapNative is NULL. |
+| [OH_Drawing_PixelMap*](capi-drawing-oh-drawing-pixelmap.md) | Returns the pointer to an [OH_Drawing_PixelMap](capi-drawing-oh-drawing-pixelmap.md) object, which is the pixel map defined by this module.  If NULL is returned, the creation fails. The possible failure cause is that OH_PixelmapNative is NULL. |
 
 ### OH_Drawing_PixelMapDissolve()
 
@@ -87,7 +87,7 @@ void OH_Drawing_PixelMapDissolve(OH_Drawing_PixelMap* pixelMap)
 
 **Description**
 
-Removes the relationship between a pixel map defined by this module and a pixel map defined by the imageframework. The relationship is established by calling  [OH_Drawing_PixelMapGetFromNativePixelMap](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromnativepixelmap)  or[OH_Drawing_PixelMapGetFromOhPixelMapNative](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromohpixelmapnative).
+Removes the relationship between a pixel map defined by this module and a pixel map defined by the imageframework. The relationship is established by calling [OH_Drawing_PixelMapGetFromNativePixelMap](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromnativepixelmap) or[OH_Drawing_PixelMapGetFromOhPixelMapNative](capi-drawing-pixel-map-h.md#oh_drawing_pixelmapgetfromohpixelmapnative).
 
 **Since**: 12
 

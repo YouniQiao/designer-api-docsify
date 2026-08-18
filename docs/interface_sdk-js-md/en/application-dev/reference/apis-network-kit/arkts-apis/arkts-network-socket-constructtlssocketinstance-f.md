@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructTLSSocketInstance(): TLSSocket
 ```
 
-Creates a TLSSocket object.
+Creates a **TLSSocket** object.
 
-**Since:** 10
+**Since:** 9
 
 <!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
 
@@ -24,7 +24,7 @@ Creates a TLSSocket object.
 
 | Type | Description |
 | --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
 
 **Examples**
 
@@ -41,9 +41,9 @@ let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 ```
 
-Creates a TLSSocket object with a TCPSocket object.
+Upgrades a **TCPSocket** connection to a **TLSSocket** connection. > **NOTE：**> > Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no > data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket** > object.
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
 
@@ -53,13 +53,13 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | TCPSocket | Yes | Parameter for creating a TLSSocket object. |
+| tcpSocket | TCPSocket | Yes | TCPSocket** connection to be upgraded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TLSSocket](arkts-network-socket-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-socket-tlssocket-i.md) | TLSSocket** object. |
 
 **Error codes:**
 

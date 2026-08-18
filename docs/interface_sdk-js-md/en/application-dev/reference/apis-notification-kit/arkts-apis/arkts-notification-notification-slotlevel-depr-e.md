@@ -6,7 +6,7 @@ Enumerates the notification level.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#slotlevel)
+**Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
 
 <!--Device-notification-export enum SlotLevel--><!--Device-notification-export enum SlotLevel-End-->
 
@@ -24,7 +24,7 @@ The notification function is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#levelnone)
+**Substitutes:** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#level_none)
 
 <!--Device-SlotLevel-LEVEL_NONE = 0--><!--Device-SlotLevel-LEVEL_NONE = 0-End-->
 
@@ -42,7 +42,7 @@ The notification function is enabled, but the notification icon is not displayed
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#levelmin)
+**Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#level_min)
 
 <!--Device-SlotLevel-LEVEL_MIN = 1--><!--Device-SlotLevel-LEVEL_MIN = 1-End-->
 
@@ -60,7 +60,7 @@ The notification function is enabled, and the notification icon is displayed in 
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#levellow)
+**Substitutes:** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#level_low)
 
 <!--Device-SlotLevel-LEVEL_LOW = 2--><!--Device-SlotLevel-LEVEL_LOW = 2-End-->
 
@@ -78,7 +78,7 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#leveldefault)
+**Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#level_default)
 
 <!--Device-SlotLevel-LEVEL_DEFAULT = 3--><!--Device-SlotLevel-LEVEL_DEFAULT = 3-End-->
 
@@ -96,7 +96,7 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#levelhigh)
+**Substitutes:** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#level_high)
 
 <!--Device-SlotLevel-LEVEL_HIGH = 4--><!--Device-SlotLevel-LEVEL_HIGH = 4-End-->
 

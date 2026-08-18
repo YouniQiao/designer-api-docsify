@@ -52,7 +52,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 ## axisHorizontal
 
 ```TypeScript
-axisHorizontal ?: number
+axisHorizontal?: number
 ```
 
 水平轴值。 默认值：0 **说明：** 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。 对于Shift+鼠标滚轮触发的横向滚动场景，axisHorizontal为0，滚动值体现在axisVertical中。
@@ -67,7 +67,7 @@ axisHorizontal ?: number
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BaseEvent-axisHorizontal ?: number--><!--Device-BaseEvent-axisHorizontal ?: number-End-->
+<!--Device-BaseEvent-axisHorizontal?: number--><!--Device-BaseEvent-axisHorizontal?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +96,7 @@ axisPinch?: number
 ## axisVertical
 
 ```TypeScript
-axisVertical ?: number
+axisVertical?: number
 ```
 
 垂直轴值。 默认值：0 **说明：** 当前仅在鼠标滚轮或触控板双指滑动触发的Pan手势，或使用Ctrl+鼠标滚轮触发的Pinch手势中可以获取。 对于Shift+鼠标滚轮触发的横向滚动场景，滚动值体现在axisVertical中。
@@ -111,7 +111,7 @@ axisVertical ?: number
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BaseEvent-axisVertical ?: number--><!--Device-BaseEvent-axisVertical ?: number-End-->
+<!--Device-BaseEvent-axisVertical?: number--><!--Device-BaseEvent-axisVertical?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

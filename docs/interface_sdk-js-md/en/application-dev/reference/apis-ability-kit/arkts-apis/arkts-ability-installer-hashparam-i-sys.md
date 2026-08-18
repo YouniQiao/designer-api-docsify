@@ -14,7 +14,6 @@ Defines the hash parameters for bundle installation and uninstall.
 
 ```TypeScript
 import { installer } from '@kit.AbilityKit';
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## hashValue

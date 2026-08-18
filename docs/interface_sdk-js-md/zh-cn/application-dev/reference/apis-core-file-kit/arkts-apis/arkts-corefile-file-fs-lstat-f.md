@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## lstat
@@ -11,7 +14,7 @@
 declare function lstat(path: string): Promise<Stat>
 ```
 
-获取符号链接文件信息，使用promise异步回调。
+获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -23,7 +26,7 @@ declare function lstat(path: string): Promise<Stat>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件的应用沙箱路径path或URI。<br>**说明：**从API version 22开始，支持传入URI。 |
+| path | string | 是 | 文件的应用沙箱路径或URI。<br>**说明：**从API version 22开始，支持传入URI。 |
 
 **返回值：**
 
@@ -53,7 +56,7 @@ declare function lstat(path: string): Promise<Stat>
 declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 ```
 
-获取符号链接文件信息，使用callback异步回调。
+获取符号链接文件信息，返回符号链接本身的属性而非目标文件的属性。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -65,8 +68,8 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 文件的应用沙箱路径path或URI。<br>**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件具体信息之后的回调。 |
+| path | string | 是 | 文件的应用沙箱路径或URI。<br>**说明：**从API version 22开始，支持传入URI。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 回调函数，返回Stat对象。 |
 
 **错误码：**
 

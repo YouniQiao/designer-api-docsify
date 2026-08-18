@@ -1,8 +1,8 @@
 # Stabilization
 
-Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#stabilizationquery)。 提供设备在录像模式下设置视频防抖的操作。 需要会话中有录像流（[VideoOutput](arkts-camera-camera-videooutput-i.md#videooutput)）的前提下，才可以对视频进行防抖设置。
+Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)。 提供设备在录像模式下设置视频防抖的操作。 需要会话中有录像流（[VideoOutput](arkts-camera-camera-videooutput-i.md)）的前提下，才可以对视频进行防抖设置。
 
-**继承/实现关系：** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#stabilizationquery)
+**继承/实现关系：** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquer
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getActiveVideoStabilizationMode

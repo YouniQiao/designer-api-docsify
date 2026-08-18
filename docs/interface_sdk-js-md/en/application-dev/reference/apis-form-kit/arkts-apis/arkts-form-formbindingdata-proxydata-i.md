@@ -12,7 +12,6 @@ Defines the form proxy data.
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
-import { formBindingData } from '@kit.FormKit';
 ```
 
 ## key

@@ -14,7 +14,7 @@
 AUTO = 0
 ```
 
-自适应，根据[pixelmap](arkts-image-image-pixelmap-i.md#pixelmap)内容处理。即如果pixelmap本身为HDR，则会按照HDR内容进行编码；反之按照SDR内容编码。
+自适应，根据[pixelmap](arkts-image-image-pixelmap-i.md)内容处理。即如果pixelmap本身为HDR，则会按照HDR内容进行编码；反之按照SDR内容编码。
 
 **起始版本：** 23
 

@@ -9,7 +9,7 @@
 | [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Fill fail result. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function showAppNetPolicySettings(context: Context): Promise<void>
 ```
 
-Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result.
+Sets whether the current application can connect to the Wi-Fi or cellular network. You can call this API to open the network access settings page of the current application and set the network access permission of the application. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -26,13 +26,13 @@ Open the network settings interface of the application, which is presented in a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Indicates Context instance. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context of the stage model. (Only **UIAbilityContext** and **ExtensionContext** are supported.) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

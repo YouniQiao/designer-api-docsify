@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setWaterMarkImage
@@ -25,7 +28,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 
 **返回值：**
@@ -131,7 +134,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true表示显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 | priority | int | 是 | 水印设置优先级。数值越小表示优先级越高，需大于等于0，小于0时返回1300016错误码。设置水印时，如果传入的优先级比上一次设置的低，则本次设置不会生效。 |
 
@@ -235,9 +238,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
 
 **错误码：**
 

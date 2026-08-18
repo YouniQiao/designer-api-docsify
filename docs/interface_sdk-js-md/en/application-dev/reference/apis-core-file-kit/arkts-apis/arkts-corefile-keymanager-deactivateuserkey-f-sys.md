@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { keyManager } from '@kit.CoreFileKit';
-import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey

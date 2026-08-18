@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Sets the notification slot for a specified application. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle-system-api)
+**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -38,7 +36,7 @@ Sets the notification slot for a specified application. This API uses an asynchr
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setSlotByBundle
@@ -53,7 +51,7 @@ Sets the notification slot for a specified application. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md#setslotbybundle-system-api)
+**Substitutes:** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

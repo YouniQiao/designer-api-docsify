@@ -12,7 +12,6 @@ Defines a brush, which is used to describe the style and color to fill in a shap
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

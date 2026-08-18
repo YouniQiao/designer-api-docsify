@@ -1,6 +1,6 @@
 # Credential
 
-HTTP credential. Some server or proxy server need this.
+Represents the credential used for server identity verification in a session, including the user name and password.
 
 **Since:** 23
 

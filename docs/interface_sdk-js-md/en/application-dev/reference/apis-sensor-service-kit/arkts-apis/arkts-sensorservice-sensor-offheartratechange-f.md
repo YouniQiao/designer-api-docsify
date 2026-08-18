@@ -27,7 +27,7 @@ Unsubscribe to heart rate sensor data, {@code SensorId.HEART_RATE}.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | callback heart rate data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HeartRateResponse&gt; | No | callback heart rate data. |
 
 **Error codes:**
 

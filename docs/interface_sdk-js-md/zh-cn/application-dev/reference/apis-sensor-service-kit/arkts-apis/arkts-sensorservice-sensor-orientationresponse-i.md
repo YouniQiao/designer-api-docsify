@@ -1,8 +1,8 @@
 # OrientationResponse
 
-方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
+方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**继承/实现关系：** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**继承/实现关系：** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## alpha

@@ -12,7 +12,6 @@ Describes thumbnail decoding parameters.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## generateThumbnailIfAbsent

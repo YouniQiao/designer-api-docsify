@@ -2,7 +2,7 @@
 
 Key event.
 
-**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#inputevent)
+**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
 **Since:** 23
 

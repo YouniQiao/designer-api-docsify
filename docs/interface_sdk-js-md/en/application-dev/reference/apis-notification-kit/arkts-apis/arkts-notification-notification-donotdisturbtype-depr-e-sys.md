@@ -6,7 +6,7 @@ Defines the DND time type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#donotdisturbtype-system-api)
+**Substitutes:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
 
 <!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
@@ -26,7 +26,7 @@ Non-DND.
 
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_NONE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typenone)
+**Substitutes:** [TYPE_NONE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_none)
 
 <!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
@@ -46,7 +46,7 @@ One-shot DND at the specified time segment (only considering the hour and minute
 
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typeonce)
+**Substitutes:** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_once)
 
 <!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
@@ -66,7 +66,7 @@ Daily DND at the specified time segment (only considering the hour and minute).
 
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typedaily)
+**Substitutes:** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_daily)
 
 <!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
@@ -86,7 +86,7 @@ DND at the specified time segment (considering the year, month, day, hour, and m
 
 **Deprecated since:** 9
 
-**Substitutes:** [TYPE_CLEARLY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#typeclearly)
+**Substitutes:** [TYPE_CLEARLY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_clearly)
 
 <!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 

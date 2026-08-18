@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## setPolicyByUid
 
 ```TypeScript
-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void
+function setPolicyByUid(uid: int, policy: NetUidPolicy, callback: AsyncCallback<void>): void
 ```
 
-Set the policy for the specified UID.
+Sets the metered network access policy for the application specified by a given UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void-End-->
+<!--Device-policy-function setPolicyByUid(uid: int, policy: NetUidPolicy, callback: AsyncCallback<void>): void--><!--Device-policy-function setPolicyByUid(uid: int, policy: NetUidPolicy, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,9 +28,9 @@ Set the policy for the specified UID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | the specified UID of application. |
-| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#netuidpolicy-system-api). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setPolicyByUid. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | Network access policy for the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -57,16 +57,16 @@ policy.setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE, (error: Busine
 ## setPolicyByUid
 
 ```TypeScript
-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>
+function setPolicyByUid(uid: int, policy: NetUidPolicy): Promise<void>
 ```
 
-Set the policy for the specified UID.
+Sets whether the application with the corresponding UID can access the metering network. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>-End-->
+<!--Device-policy-function setPolicyByUid(uid: int, policy: NetUidPolicy): Promise<void>--><!--Device-policy-function setPolicyByUid(uid: int, policy: NetUidPolicy): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -76,14 +76,14 @@ Set the policy for the specified UID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | the specified UID of application. |
-| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md#netuidpolicy-system-api). |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | Network access policy for the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

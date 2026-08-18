@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getRunningProcessInfoByBundleName
@@ -28,7 +27,7 @@ Obtains information about the running processes by bundle name. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -85,7 +84,7 @@ Obtains information about the running processes by bundle name and user ID. This
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | int | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

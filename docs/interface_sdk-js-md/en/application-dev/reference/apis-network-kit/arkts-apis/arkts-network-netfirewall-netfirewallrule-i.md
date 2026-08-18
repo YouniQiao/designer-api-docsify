@@ -1,6 +1,6 @@
-# NetFirewallRule
+# NetFirewallRule(Network Firewall)
 
-Firewall rules.
+Defines a firewall rule.
 
 **Since:** 15
 
@@ -20,7 +20,7 @@ import { netFirewall } from '@kit.NetworkKit';
 action: FirewallRuleAction
 ```
 
-Rule action.
+Action, which can be allowing or denying.
 
 **Type:** [FirewallRuleAction](arkts-network-netfirewall-firewallruleaction-e.md)
 
@@ -33,16 +33,16 @@ Rule action.
 ## appUid
 
 ```TypeScript
-appUid?: number
+appUid?: int
 ```
 
 Application or service UID.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-appUid?: number--><!--Device-NetFirewallRule-appUid?: number-End-->
+<!--Device-NetFirewallRule-appUid?: int--><!--Device-NetFirewallRule-appUid?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -52,7 +52,7 @@ Application or service UID.
 description?: string
 ```
 
-Rule description.
+Firewall rule description. This parameter is optional and can contain a maximum of 256 characters.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Rule description.
 direction: NetFirewallRuleDirection
 ```
 
-Rule direction, inbound or outbound.
+Rule direction, which can be inbound or outbound.
 
 **Type:** [NetFirewallRuleDirection](arkts-network-netfirewall-netfirewallruledirection-e.md)
 
@@ -84,7 +84,7 @@ Rule direction, inbound or outbound.
 dns?: NetFirewallDnsParams
 ```
 
-DNS: valid when ruleType = RULE_DNS, otherwise it will be ignored.
+List of DNS server names. This parameter is valid only when **type** is set to **RULE_DNS**. This parameter cannot be empty when **type** is set to **RULE_DNS**.
 
 **Type:** [NetFirewallDnsParams](arkts-network-netfirewall-netfirewalldnsparams-i.md)
 
@@ -100,7 +100,7 @@ DNS: valid when ruleType = RULE_DNS, otherwise it will be ignored.
 domains?: Array<NetFirewallDomainParams>
 ```
 
-Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignored.
+List of domain names. This parameter is valid only when **type** is set to **RULE_DOMAIN**. Currently, domain names cannot contain Chinese characters.
 
 **Type:** Array&lt;[NetFirewallDomainParams](arkts-network-netfirewall-netfirewalldomainparams-i.md)&gt;
 
@@ -113,16 +113,16 @@ Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignore
 ## id
 
 ```TypeScript
-id?: number
+id?: int
 ```
 
-Rule id: When a rule is added to the system, the system generates a rule ID.
+ID of the firewall rule.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-id?: number--><!--Device-NetFirewallRule-id?: number-End-->
+<!--Device-NetFirewallRule-id?: int--><!--Device-NetFirewallRule-id?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -150,7 +150,7 @@ Interface name: valid when type = RULE_IP, otherwise it will be ignored.
 isEnabled: boolean
 ```
 
-Whether the rule is enabled.
+Whether to enable the rule. The value **true** means to enable the rule, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -166,7 +166,7 @@ Whether the rule is enabled.
 localIps?: Array<NetFirewallIpParams>
 ```
 
-Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
+Local IP addresses. This parameter is valid only when **type** is set to **RULE_IP**. Otherwise, it will be ignored. A maximum of 10 IP addresses can be specified.
 
 **Type:** Array&lt;[NetFirewallIpParams](arkts-network-netfirewall-netfirewallipparams-i.md)&gt;
 
@@ -182,7 +182,7 @@ Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 localPorts?: Array<NetFirewallPortParams>
 ```
 
-Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
+Local ports. This parameter is valid only when **type** is set to **RULE_IP**. Otherwise, it will be ignored. A maximum of 10 IP addresses can be specified.
 
 **Type:** Array&lt;[NetFirewallPortParams](arkts-network-netfirewall-netfirewallportparams-i.md)&gt;
 
@@ -198,7 +198,7 @@ Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 name: string
 ```
 
-Rule name.
+Rule name. This parameter is mandatory and can contain a maximum of 128 characters.
 
 **Type:** string
 
@@ -211,16 +211,16 @@ Rule name.
 ## protocol
 
 ```TypeScript
-protocol?: number
+protocol?: int
 ```
 
-Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE_IP, otherwise it will be ignored.
+Protocol, which can be TCP (value **6**) or UDP (value **17**). This parameter is valid only when **type** is set to **RULE_IP**.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-protocol?: number--><!--Device-NetFirewallRule-protocol?: number-End-->
+<!--Device-NetFirewallRule-protocol?: int--><!--Device-NetFirewallRule-protocol?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -230,7 +230,7 @@ Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE_IP,
 remoteIps?: Array<NetFirewallIpParams>
 ```
 
-Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
+Remote IP addresses. This parameter is valid only when **type** is set to **RULE_IP**. Otherwise, it will be ignored. A maximum of 10 IP addresses can be specified.
 
 **Type:** Array&lt;[NetFirewallIpParams](arkts-network-netfirewall-netfirewallipparams-i.md)&gt;
 
@@ -246,7 +246,7 @@ Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 remotePorts?: Array<NetFirewallPortParams>
 ```
 
-Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
+Remote ports. This parameter is valid only when **type** is set to **RULE_IP**. Otherwise, it will be ignored. A maximum of 10 ports can be specified.
 
 **Type:** Array&lt;[NetFirewallPortParams](arkts-network-netfirewall-netfirewallportparams-i.md)&gt;
 
@@ -262,7 +262,7 @@ Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 type: NetFirewallRuleType
 ```
 
-Rule type.
+Rule type, which can be IP, Domain, or DNS.
 
 **Type:** [NetFirewallRuleType](arkts-network-netfirewall-netfirewallruletype-e.md)
 
@@ -275,16 +275,16 @@ Rule type.
 ## userId
 
 ```TypeScript
-userId: number
+userId: int
 ```
 
-User id.
+System user ID, which must exist.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallRule-userId: number--><!--Device-NetFirewallRule-userId: number-End-->
+<!--Device-NetFirewallRule-userId: int--><!--Device-NetFirewallRule-userId: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

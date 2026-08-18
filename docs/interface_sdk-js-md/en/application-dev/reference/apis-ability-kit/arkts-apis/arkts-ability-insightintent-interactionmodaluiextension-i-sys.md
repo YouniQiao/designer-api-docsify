@@ -2,7 +2,7 @@
 
 Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
 
-**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#interactionui-system-api)
+**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **Since:** 26.1.0
 
@@ -16,10 +16,7 @@ Defines the information of the modal UIExtension to be displayed as the interact
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntent } from '@kit.AbilityKit';
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
@@ -111,7 +108,7 @@ parameters: Record<string, RecordData>
 
 Parameters passed to the target UIExtension ability.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 26.1.0
 

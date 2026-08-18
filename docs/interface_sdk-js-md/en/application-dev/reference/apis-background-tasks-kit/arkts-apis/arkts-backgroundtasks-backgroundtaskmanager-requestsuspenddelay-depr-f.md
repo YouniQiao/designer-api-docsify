@@ -17,7 +17,7 @@ Requests delayed suspension after the application switches to the background. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay)
+**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md)
 
 <!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
@@ -28,7 +28,7 @@ Requests delayed suspension after the application switches to the background. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | string | Yes | Reason for delayed transition to the suspended state. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
 
 **Return value:**
 

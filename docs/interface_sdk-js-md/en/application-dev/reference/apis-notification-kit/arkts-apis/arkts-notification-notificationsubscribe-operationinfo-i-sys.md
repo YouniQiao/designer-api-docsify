@@ -14,7 +14,6 @@ Defines cross-device collaborative operation information.
 
 ```TypeScript
 import { notificationSubscribe } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## actionName
@@ -23,7 +22,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 actionName?: string
 ```
 
-Operation button displayed in the notification. The value must be the same as that of **title** in [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#notificationactionbutton).
+Operation button displayed in the notification. The value must be the same as that of **title** in [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md).
 
 **Type:** string
 
@@ -77,7 +76,7 @@ Operation type. - **0**: The user taps the non-live view. - **1**: The user taps
 userInput?: string
 ```
 
-User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#notificationuserinput).
+User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md).
 
 **Type:** string
 

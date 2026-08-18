@@ -2,13 +2,13 @@
 
 Defines a reminder for a scheduled timer.
 
-**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#reminderrequesttimer)
+**Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md)
 
 <!--Device-reminderAgent-interface ReminderRequestTimer--><!--Device-reminderAgent-interface ReminderRequestTimer-End-->
 
@@ -18,7 +18,6 @@ Defines a reminder for a scheduled timer.
 
 ```TypeScript
 import { reminderAgent } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

@@ -22,7 +22,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addLcdJumpCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord-system-api). This API uses a promise to return the result.
+Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord-system-api). |
+| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 
@@ -58,7 +58,7 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 addShareCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord-system-api). This API uses a promise to return the result.
+Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ Increases the value of **shareCount** by 1 for the data in the database based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#photoassetcustomrecord-system-api). |
+| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 

@@ -18,7 +18,7 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 23
 
-**Substitutes:** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate-system-api)
+**Substitutes:** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void-End-->
 
@@ -30,7 +30,7 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate-system-api)
+**Substitutes:** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function stop(): Promise<void>--><!--Device-inputDeviceCooperate-function stop(): Promise<void>-End-->
 

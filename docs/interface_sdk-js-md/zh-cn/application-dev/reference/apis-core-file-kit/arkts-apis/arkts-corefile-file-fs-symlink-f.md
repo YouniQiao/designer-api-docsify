@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## symlink
@@ -11,7 +14,7 @@
 declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
-基于文件路径创建符号链接，使用promise异步回调。 > **说明：** > > 从API version 11开始，不支持三方应用使用。
+基于文件路径创建符号链接。使用Promise异步回调。 > **说明：** > > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
 
@@ -58,7 +61,7 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-基于文件路径创建符号链接，使用callback异步回调。 > **说明：** > > 从API version 11开始，不支持三方应用使用。
+基于文件路径创建符号链接。使用callback异步回调。 > **说明：** > > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
 
@@ -72,7 +75,7 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 | --- | --- | --- | --- |
 | target | string | 是 | 要链接的目标文件的应用沙箱路径。 |
 | srcPath | string | 是 | 符号链接文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步创建符号链接信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建符号链接成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

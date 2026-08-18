@@ -1,6 +1,6 @@
 # MediaKeySystem(Defines the DRM capability.)
 
-MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem) to create a MediaKeySystem instance.
+MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md) to create a MediaKeySystem instance.
 
 **Since:** 23
 
@@ -275,7 +275,7 @@ Obtains the value of a configuration item in the form of a byte array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 
 **Return value:**
 
@@ -311,7 +311,7 @@ Obtains the value of a configuration item in the form of a string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 
 **Return value:**
 
@@ -476,7 +476,7 @@ Unregister keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_keySystemRequired
+## off_keySystemRequired('keySystemRequired')
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -496,7 +496,7 @@ Unsubscribes from events indicating that the application requests a device certi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem). |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). |
 | callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
@@ -532,7 +532,7 @@ Register keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_keySystemRequired
+## on_keySystemRequired('keySystemRequired')
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
@@ -552,7 +552,7 @@ Subscribes to events indicating that the application requests a device certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem). It is triggered when a device certificate is required. |
+| type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). It is triggered when a device certificate is required. |
 | callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
 
 **Error codes:**
@@ -618,7 +618,7 @@ Sets a configuration item in the form of a byte array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 | value | Uint8Array | Yes | Value of the configuration item in the form of an array. The specific value is determined by the DRM solution on the device. |
 
 **Error codes:**
@@ -649,7 +649,7 @@ Sets a configuration item in the form of a string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#predefinedconfigname). |
+| configName | string | Yes | Name of the configuration item, which is determined by the DRM solution on the device and cannot be empty. For details about available options, see [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md). |
 | value | string | Yes | Value of the configuration item. |
 
 **Error codes:**

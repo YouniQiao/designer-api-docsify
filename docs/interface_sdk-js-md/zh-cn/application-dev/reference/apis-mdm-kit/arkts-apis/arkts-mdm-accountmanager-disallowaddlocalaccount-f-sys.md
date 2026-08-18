@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## disallowAddLocalAccount
@@ -17,7 +18,7 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
+**替代接口：** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -35,7 +36,7 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | disallow | boolean | 是 | 是否禁止创建本地账号，true表示禁止创建，false表示允许创建。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -81,7 +82,7 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
+**替代接口：** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

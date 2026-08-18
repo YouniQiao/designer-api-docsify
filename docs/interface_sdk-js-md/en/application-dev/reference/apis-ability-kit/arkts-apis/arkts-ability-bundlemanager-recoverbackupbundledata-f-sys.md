@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## recoverBackupBundleData
@@ -30,7 +29,7 @@ Restores the backup data for a specified application under a given user. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value is greater than or equal to 0. |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The value is greater than or equal to 0. |
 | appIndex | int | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**

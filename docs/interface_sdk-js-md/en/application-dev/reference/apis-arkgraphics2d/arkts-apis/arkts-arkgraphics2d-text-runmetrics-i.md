@@ -12,7 +12,6 @@ Describes the layout information and measurement information of a run of text in
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## fontMetrics

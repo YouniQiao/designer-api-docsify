@@ -2,7 +2,7 @@
 
 Component content cover options
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-na-common-bindoptions-i.md#bindoptions)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-na-common-bindoptions-i.md)
 
 **Since:** 23
 

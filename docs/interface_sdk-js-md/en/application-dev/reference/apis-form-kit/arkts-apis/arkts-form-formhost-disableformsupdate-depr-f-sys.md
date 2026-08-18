@@ -17,7 +17,7 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableformsupdate-system-api)
+**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -32,7 +32,7 @@ Instructs the widget framework to make a widget not updatable. After this API is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget not updatable, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget not updatable, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## disableFormsUpdate
@@ -47,7 +47,7 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableformsupdate-system-api)
+**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

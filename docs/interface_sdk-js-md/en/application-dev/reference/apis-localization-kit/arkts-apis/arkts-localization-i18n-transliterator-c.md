@@ -12,7 +12,6 @@ Provides text transliteration capabilities, such as obtaining the supported lang
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAvailableIDs

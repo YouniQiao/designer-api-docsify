@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ActionMenuOptions](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#actionmenuoptions)
+**替代接口：** [ActionMenuOptions](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons

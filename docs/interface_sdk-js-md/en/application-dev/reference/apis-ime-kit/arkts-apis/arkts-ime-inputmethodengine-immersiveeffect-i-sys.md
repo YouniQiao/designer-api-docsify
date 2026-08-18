@@ -12,7 +12,6 @@ Describes the immersive effect.
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## fluidLightMode

@@ -6,7 +6,7 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 **Deprecated since:** 9
 
-**Substitutes:** [statfs](arkts-file-statvfs.md#ohosfilestatvfs)
+**Substitutes:** [statfs](arkts-file-statvfs.md)
 
 <!--Device-unnamed-declare namespace Statfs--><!--Device-unnamed-declare namespace Statfs-End-->
 

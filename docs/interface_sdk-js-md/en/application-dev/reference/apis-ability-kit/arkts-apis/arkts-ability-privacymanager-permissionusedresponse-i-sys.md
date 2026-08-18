@@ -14,7 +14,6 @@ Represents the access records of all applications or devices.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## beginTime

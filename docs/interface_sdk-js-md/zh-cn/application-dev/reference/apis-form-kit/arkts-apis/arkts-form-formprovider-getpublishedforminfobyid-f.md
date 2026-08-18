@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedFormInfoById
@@ -17,7 +18,7 @@ function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 
 **废弃版本：** 20
 
-**替代接口：** [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid)
+**替代接口：** [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

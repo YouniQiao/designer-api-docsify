@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## setDefaultVoiceSlotId
@@ -28,7 +29,7 @@ Set the card slot ID of the default voice service.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of setDefaultVoiceSlotId. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of setDefaultVoiceSlotId. |
 
 **错误码：**
 

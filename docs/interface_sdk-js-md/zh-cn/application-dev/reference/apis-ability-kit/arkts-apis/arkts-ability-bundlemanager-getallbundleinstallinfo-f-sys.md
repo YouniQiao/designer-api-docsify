@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInstallInfo
@@ -105,7 +106,7 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | The install information. |
+| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | The install information. |
 
 **错误码：**
 

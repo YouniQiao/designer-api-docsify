@@ -12,7 +12,6 @@ Defines font features, which are typesetting rules within a font that determine 
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## name

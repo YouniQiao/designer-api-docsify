@@ -14,39 +14,38 @@ Provides APIs for device-cloud data sharing, including sharing or unsharing data
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses a promise to return the result set of the data to share, which also includes the column names if they are specified. |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-system-api) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result. |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-system-api) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result set of the data to share, which includes the shared resource ID and column names. |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share) | Shares data based on the specified shared resource ID and participants. This API uses an asynchronous callback to return the result. |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share-system-api) | Shares data based on the specified shared resource ID and participants. This API uses a promise to return the result. |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare) | Unshares data based on the specified shared resource ID and participants. This API uses an asynchronous callback to return the result. |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-system-api) | Unshares data based on the specified shared resource ID and participants. This API uses a promise to return the result. |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit) | Exits the share of the specified shared resource. This API uses an asynchronous callback to return the result. |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-system-api) | Exits the share of the specified shared resource. This API uses a promise to return the result. |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege) | Changes the privilege on the shared data. This API uses an asynchronous callback to return the result. |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege-system-api) | Changes the privilege on the shared data. This API uses a promise to return the result. |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants) | Queries the participants of the specified shared data. This API uses an asynchronous callback to return the result. |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants-system-api) | Queries the participants of the specified shared data. This API uses a promise to return the result. |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation) | Queries the participants based on the sharing invitation code. This API uses an asynchronous callback to return the result. |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation-system-api) | Queries the participants based on the sharing invitation code. This API uses a promise to return the result. |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses an asynchronous callback to return the result. |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation-system-api) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses a promise to return the result. |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation) | Changes the invitation confirmation state based on the shared resource ID. This API uses an asynchronous callback to return the result. |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation-system-api) | Changes the invitation confirmation state based on the shared resource ID. This API uses a promise to return the result. |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses a promise to return the result set of the data to share, which also includes the column names if they are specified. |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result. |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | Allocates a shared resource ID based on the data that matches the specified predicates. This API uses an asynchronous callback to return the result set of the data to share, which includes the shared resource ID and column names. |
+| [share](arkts-arkdata-sharing-share-f-sys.md) | Shares data based on the specified shared resource ID and participants. This API uses an asynchronous callback to return the result. |
+| [share](arkts-arkdata-sharing-share-f-sys.md) | Shares data based on the specified shared resource ID and participants. This API uses a promise to return the result. |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | Unshares data based on the specified shared resource ID and participants. This API uses an asynchronous callback to return the result. |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | Unshares data based on the specified shared resource ID and participants. This API uses a promise to return the result. |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md) | Exits the share of the specified shared resource. This API uses an asynchronous callback to return the result. |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md) | Exits the share of the specified shared resource. This API uses a promise to return the result. |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md) | Changes the privilege on the shared data. This API uses an asynchronous callback to return the result. |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md) | Changes the privilege on the shared data. This API uses a promise to return the result. |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md) | Queries the participants of the specified shared data. This API uses an asynchronous callback to return the result. |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md) | Queries the participants of the specified shared data. This API uses a promise to return the result. |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md) | Queries the participants based on the sharing invitation code. This API uses an asynchronous callback to return the result. |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md) | Queries the participants based on the sharing invitation code. This API uses a promise to return the result. |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses an asynchronous callback to return the result. |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses a promise to return the result. |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md) | Changes the invitation confirmation state based on the shared resource ID. This API uses an asynchronous callback to return the result. |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md) | Changes the invitation confirmation state based on the shared resource ID. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -56,7 +55,7 @@ import { cloudData } from '@kit.ArkData';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

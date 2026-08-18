@@ -30,7 +30,7 @@ Set the system dark-mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [DarkMode](arkts-na-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setDarkMode |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setDarkMode |
 
 **Error codes:**
 

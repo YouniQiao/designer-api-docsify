@@ -2,7 +2,7 @@
 
 BounceSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#symboleffect)
+**继承/实现关系：** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md)
 
 **起始版本：** 23
 

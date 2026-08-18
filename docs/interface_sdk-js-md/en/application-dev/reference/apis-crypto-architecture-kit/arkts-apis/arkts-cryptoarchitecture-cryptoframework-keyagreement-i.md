@@ -1,6 +1,6 @@
 # KeyAgreement
 
-Key agreement interface, defining methods for generating shared secrets based on asymmetric key pairs. Before use, you must create a **KeyAgreement** instance by using [createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement).
+Key agreement interface, defining methods for generating shared secrets based on asymmetric key pairs. Before use, you must create a **KeyAgreement** instance by using [createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md).
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Key agreement interface, defining methods for generating shared secrets based on
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
@@ -41,7 +40,7 @@ Generates a shared secret based on the given private key and public key. This AP
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for key agreement. |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for key agreement. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

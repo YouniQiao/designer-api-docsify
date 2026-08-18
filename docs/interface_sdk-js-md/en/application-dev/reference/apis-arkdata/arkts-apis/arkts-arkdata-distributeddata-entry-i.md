@@ -16,7 +16,6 @@ Defines the KV pairs stored in the KV store.
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## key

@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function addVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>
 ```
 
-Add ip of vlan interface by vlanId. To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Adds a specified IP address and subnet mask for the VLAN specified by **vlanId** on an Ethernet NIC. This API uses a promise to return the result. > **NOTE：**> > - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this > API is called.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -30,21 +30,21 @@ Add ip of vlan interface by vlanId. To invoke this method, you must have the {@c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifName | string | Yes | interface name. |
-| vlanId | int | Yes | vlan id. |
-| address | LinkAddress | Yes | vlan ip address. |
+| ifName | string | Yes | NIC name. |
+| vlanId | int | Yes | VLAN ID. The value range is [0, 4094]. |
+| address | LinkAddress | Yes | Network link information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-nonethernet) | The input network interface name is incorrect. |
+| [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) | The input network interface name is incorrect. |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |

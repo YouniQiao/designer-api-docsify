@@ -2,7 +2,7 @@
 
 实现IRemoteObject代理对象。
 
-**继承/实现关系：** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#iremoteobject)
+**继承/实现关系：** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## addDeathRecipient
@@ -812,7 +813,7 @@ sendMessageRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将 在[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调， 回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md#requestresult)获取服务端返回的数据。
+以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将 在[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调， 回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md)获取服务端返回的数据。
 
 **起始版本：** 23
 
@@ -828,7 +829,7 @@ sendMessageRequest(
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **错误码：**
 
@@ -1085,7 +1086,7 @@ sendRequest(
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
 
 ## unregisterDeathRecipient
 

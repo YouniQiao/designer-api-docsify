@@ -38,7 +38,7 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |  |
 | [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
 
 **Examples**

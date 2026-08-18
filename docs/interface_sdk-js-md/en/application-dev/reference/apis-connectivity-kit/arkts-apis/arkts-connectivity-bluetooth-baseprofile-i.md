@@ -6,7 +6,7 @@ Base interface of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#baseprofile)
+**Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
 
 <!--Device-bluetooth-interface BaseProfile--><!--Device-bluetooth-interface BaseProfile-End-->
 

@@ -2,7 +2,7 @@
 
 Defines PulseSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#symboleffect)
+**Inheritance/Implementation:** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 

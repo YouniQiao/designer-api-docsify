@@ -14,7 +14,6 @@ Represents information about the last device-cloud sync.
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## code

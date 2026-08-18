@@ -6,7 +6,7 @@ typedef struct Input_InterceptorEventCallback {...} Input_InterceptorEventCallba
 
 ## Overview
 
-Defines the structure for the interceptor of event callbacks,including mouseCallback, touchCallback, and axisCallback.
+Defines the interceptor callback event structure, which is used to define the callback functiontypes required for input event interception. Mouse interception events, touch input events, key events,and axis events are supported.
 
 **Since**: 12
 
@@ -20,8 +20,8 @@ Defines the structure for the interceptor of event callbacks,including mouseCall
 
 | Name | Description |
 | -- | -- |
-| [Input_MouseEventCallback](capi-oh-input-manager-h.md#input_mouseeventcallback) mouseCallback | Defines a lifecycle callback for **mouseEvent**. |
-| [Input_TouchEventCallback](capi-oh-input-manager-h.md#input_toucheventcallback) touchCallback | Defines a lifecycle callback for **touchEvent**. |
-| [Input_AxisEventCallback](capi-oh-input-manager-h.md#input_axiseventcallback) axisCallback | Defines a lifecycle callback for **axisEvent**. |
+| [Input_MouseEventCallback](capi-oh-input-manager-h.md#input_mouseeventcallback) mouseCallback | Callback for mouse events. * |
+| [Input_TouchEventCallback](capi-oh-input-manager-h.md#input_toucheventcallback) touchCallback | Callback used to return the touch event. * |
+| [Input_AxisEventCallback](capi-oh-input-manager-h.md#input_axiseventcallback) axisCallback | Callback for axis events. * |
 
 

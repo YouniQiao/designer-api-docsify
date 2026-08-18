@@ -1,8 +1,8 @@
 # UdpNetPortStatesInfo
 
-Defines UDP port states of system network.
+Describes the UDP port state information.
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-connection-export interface UdpNetPortStatesInfo--><!--Device-connection-export interface UdpNetPortStatesInfo-End-->
 
@@ -20,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 udpLocalIp: string
 ```
 
-Local IP of the UDP network.
+Local IP address of the UDP network.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +38,11 @@ Local IP of the UDP network.
 udpLocalPort: int
 ```
 
-Local port of the UDP network.
+Local port of the UDP network. The value range is [0, 65535].
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ Local port of the UDP network.
 udpPid: int
 ```
 
-PID of the UDP network.
+PID of the process that listens for the UDP port.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +74,11 @@ PID of the UDP network.
 udpUid: int
 ```
 
-UID of the UDP network.
+UID of the user who listens for the UDP port.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

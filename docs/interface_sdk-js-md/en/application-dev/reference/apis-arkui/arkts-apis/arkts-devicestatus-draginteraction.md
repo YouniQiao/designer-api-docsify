@@ -19,19 +19,19 @@ import { dragInteraction } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md#getdatasummary) | Obtains the data summary of all dragged objects. |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md#offdragstatechange) | Disables listening for dragging state change events. |
-| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#offdrag) | Disables listening for dragging status changes. |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md#ondragstatechange) | Listens for dragging state change events. |
-| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#ondrag) | Enables listening for dragging status changes. |
+| [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) | Obtains the data summary of all dragged objects. |
+| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) | Disables listening for dragging state change events. |
+| [off_drag](arkts-arkui-draginteraction-offdrag-f-sys.md#off_dragdrag) | Disables listening for dragging status changes. |
+| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) | Listens for dragging state change events. |
+| [on_drag](arkts-arkui-draginteraction-ondrag-f-sys.md#on_dragdrag) | Enables listening for dragging status changes. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -39,7 +39,7 @@ import { dragInteraction } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

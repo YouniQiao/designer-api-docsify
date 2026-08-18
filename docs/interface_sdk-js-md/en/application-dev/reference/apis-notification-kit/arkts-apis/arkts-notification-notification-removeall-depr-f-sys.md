@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,7 +35,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -52,7 +50,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -66,7 +64,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -81,7 +79,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -96,7 +94,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -111,7 +109,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -146,7 +144,7 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall-system-api)
+**Substitutes:** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

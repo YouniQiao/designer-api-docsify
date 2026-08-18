@@ -1,6 +1,6 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。 在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)方法获取RdbStore实例，并使用该实例调用对应接口方法。 在此基础上，建议优先使用[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
+提供管理关系数据库（RDB）方法的接口。 在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。 在此基础上，建议优先使用[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)方法完成数据库表结构和初始数据的 初始化，以确保相关接口调用的前置条件已满足。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## cleanDeviceDirtyData
@@ -84,8 +85,8 @@ cloudSync(
 | --- | --- | --- | --- |
 | mode | SyncMode | 是 | 表示数据库的同步模式。 |
 | predicates | RdbPredicates | 是 | 表示同步数据的谓词条件。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当同步成功，err为undefined；否则为错误对象。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当同步成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -118,7 +119,7 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 | --- | --- | --- | --- |
 | mode | SyncMode | 是 | 表示数据库的同步模式。 |
 | predicates | RdbPredicates | 是 | 表示同步数据的谓词条件。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
 
 **返回值：**
 
@@ -159,7 +160,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的删除条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当删除数据成功，err为undefined，data为受影响的行数量；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当删除数据成功，err为undefined，data为受影响的行数量；否则为错误对象。 |
 
 **错误码：**
 
@@ -296,7 +297,7 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
 **错误码：**
 
@@ -338,7 +339,7 @@ query(
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回ResultSet对象。 |
 
 **错误码：**
 
@@ -471,7 +472,7 @@ querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | 是 | 表示查询的谓词条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
 
 **错误码：**
 
@@ -520,7 +521,7 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | 是 | 表示查询的谓词条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查找的列字段名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
 
 **错误码：**
 
@@ -553,7 +554,7 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 restore(): Promise<void>
 ```
 
-从副本关系型数据库文件恢复数据库，使用Promise异步回调。此接口仅供[HAMode](arkts-arkdata-relationalstore-hamode-e-sys.md#hamode系统接口)为MAIN_REPLICA时使用，且不支持在事务中使用。
+从副本关系型数据库文件恢复数据库，使用Promise异步回调。此接口仅供[HAMode](arkts-arkdata-relationalstore-hamode-e-sys.md)为MAIN_REPLICA时使用，且不支持在事务中使用。
 
 **起始版本：** 23
 
@@ -695,7 +696,7 @@ update(
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
 | values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | DataSharePredicates的实例对象指定的更新条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。返回受影响的行数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。返回受影响的行数。 |
 
 **错误码：**
 
@@ -787,7 +788,7 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>
 ```
 
-更新分布式信息，只支持单版本表模式，使用Promise异步回调。 不支持对多设备协同表模式分布式数据表进行更新。 要更新数据越多，执行所需的时间越长。 > **说明：** > > 入参info中若要传入设备id信息，则设备id必须是已与当前设备建立网络连接的设备id。 > > 入参predicates中若要传入[ORIGIN_ORIDEVICE](arkts-arkdata-relationalstore-distributedfield-e-sys.md#distributedfield系统接口)，则只允许使用等于空或不等于空。
+更新分布式信息，只支持单版本表模式，使用Promise异步回调。 不支持对多设备协同表模式分布式数据表进行更新。 要更新数据越多，执行所需的时间越长。 > **说明：** > > 入参info中若要传入设备id信息，则设备id必须是已与当前设备建立网络连接的设备id。 > > 入参predicates中若要传入[ORIGIN_ORIDEVICE](arkts-arkdata-relationalstore-distributedfield-e-sys.md)，则只允许使用等于空或不等于空。
 
 **起始版本：** 24
 

@@ -12,7 +12,6 @@ Target Device Information Definition
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## devices

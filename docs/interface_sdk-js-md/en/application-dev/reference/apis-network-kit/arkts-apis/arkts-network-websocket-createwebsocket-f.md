@@ -12,11 +12,11 @@ import { webSocket } from '@kit.NetworkKit';
 function createWebSocket(): WebSocket
 ```
 
-Creates a web socket connection.
+Creates a **WebSocket** object, which provides methods to create or close a WebSocket connection, send data over the connection, and enable or disable listening for the **open**, **close**, **message**, and **error** events.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-webSocket-function createWebSocket(): WebSocket--><!--Device-webSocket-function createWebSocket(): WebSocket-End-->
 
@@ -26,7 +26,7 @@ Creates a web socket connection.
 
 | Type | Description |
 | --- | --- |
-| [WebSocket](arkts-network-websocket-websocket-i.md) | the WebSocket of the createWebSocket. |
+| [WebSocket](arkts-network-websocket-websocket-i.md) | A **WebSocket** object, which contains the **connect**, **send**, **close**, **on**, or **off** method. |
 
 **Examples**
 

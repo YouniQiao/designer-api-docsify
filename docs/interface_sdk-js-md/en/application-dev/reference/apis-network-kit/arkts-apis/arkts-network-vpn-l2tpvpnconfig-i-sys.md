@@ -2,7 +2,7 @@
 
 Define configuration of the l2tp VPN network.
 
-**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#sysvpnconfig-system-api)
+**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)
 
 **Since:** 12
 

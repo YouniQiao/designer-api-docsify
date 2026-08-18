@@ -6,7 +6,7 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_didLayout
+## on_didLayout('didLayout')
 
 ```TypeScript
 export function on(type: 'didLayout', context: UIContext, callback: Callback<void>): void
@@ -30,7 +30,7 @@ Listens for layout completion status in each frame.
 | --- | --- | --- | --- |
 | type | 'didLayout' | Yes | Event type. The value **'didLayout'** indicates whether the layout has been completed. |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

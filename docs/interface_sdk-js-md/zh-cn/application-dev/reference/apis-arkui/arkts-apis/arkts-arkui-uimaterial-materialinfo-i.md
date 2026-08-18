@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## state
@@ -21,7 +22,7 @@ state: MaterialState
 
 材质使能状态配置。
 
-**类型：** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
+**类型：** [MaterialState](../../apis-na/arkts-apis/arkts-na-uimaterial-materialstate-e.md)
 
 **默认值：** MaterialState.DEFAULT
 

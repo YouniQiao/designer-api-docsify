@@ -13,6 +13,13 @@
 ## 导入模块
 
 ```TypeScript
+import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { NodeRenderType, RenderOptions, BuilderNode, ReactiveBuilderNode, BuildOptions, NodeController, FrameNode, DrawContext, Size, Offset, Position, Pivot, Scale, Translation, Matrix4, Rotation, Frame, RenderNode, XComponentNode, LengthMetrics, ColorMetrics, BackgroundBlur, ContentBlur, ForegroundBlur, LengthUnit, LengthMetricsUnit, LayoutConstraint, ComponentContent, ReactiveComponentContent, NodeContent, Content, typeNode, NodeAdapter, ShapeMask, ShapeClip, Rect, RoundRect, edgeColors, edgeWidths, borderStyles, borderRadiuses, ExpandMode, ChildrenCountMode, UIState, InputEventType } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -97,7 +104,7 @@ caretColor(color: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -239,7 +246,7 @@ draggable(value: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 12
 
@@ -311,7 +318,7 @@ enableAutoSpacing(enabled: Optional<boolean>)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 > **说明：** > > - 设备底层需要具备文本识别能力，该接口才能生效。 > > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 > **说明：** > > - 设备底层需要具备文本识别能力，该接口才能生效。 > > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 <!--RP2--><!--RP2End-->
 
 **起始版本：** 11
 
@@ -628,7 +635,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions)
 ```
 
-设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以 fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。 仅Text组件生效，其子组件不生效。&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
+设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以 fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。 仅Text组件生效，其子组件不生效。<!--RP4--><!--RP4End-->
 
 **起始版本：** 12
 
@@ -1240,7 +1247,7 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordbreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#textstyle)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。 孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordbreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1553,7 +1560,7 @@ textIndent(value: Length)
 textOverflow(options: TextOverflowOptions)
 ```
 
-设置文本超长时的显示方式。 当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#textoverflowoptions)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时超出显示区域的文本用省略号代替。 - 需配合[maxLines](#maxlines)使用，单独设置不生效。 - 断行规则参考[wordBreak](#wordbreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](#linebreakstrategy)。该属性在[wordBreak](#wordbreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和 [wordBreak](#wordbreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)&lt;!--RP1--&gt;&lt;!--RP1 End--&gt;。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](#maxlines)、[copyOption](#copyoption)、 [selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即 [enableDataDetector](#enabledatadetector)设置enable为true时不生效）。 - Text组件clip属性默认为true。 - 属性字符串的CustomSpan不支持跑马灯模式。 - [textAlign](#textalign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
+设置文本超长时的显示方式。 当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时： - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。 - 设置为TextOverflow.Ellipsis，文本超长时超出显示区域的文本用省略号代替。 - 需配合[maxLines](#maxlines)使用，单独设置不生效。 - 断行规则参考[wordBreak](#wordbreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。 - 折行规则参考[lineBreakStrategy](#linebreakstrategy)。该属性在[wordBreak](#wordbreak)不等 于WordBreak.BREAK_ALL的时候生效，不支持连词符。 - 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和 [wordBreak](#wordbreak)属性来设置截断方式，具体详见 [示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)<!--RP1--><!--RP1 End-->。 当TextOverflowOptions设置为TextOverflow.MARQUEE时： - 文本在一行内滚动显示。 - 设置[maxLines](#maxlines)、[copyOption](#copyoption)、 [selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即 [enableDataDetector](#enabledatadetector)设置enable为true时不生效）。 - Text组件clip属性默认为true。 - 属性字符串的CustomSpan不支持跑马灯模式。 - [textAlign](#textalign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。
 
 **起始版本：** 7
 

@@ -2,7 +2,7 @@
 
 RecentPhotoOptions Object
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
 <!--Device-photoAccessHelper-export class RecentPhotoOptions--><!--Device-photoAccessHelper-export class RecentPhotoOptions-End-->
 
@@ -24,9 +24,9 @@ Types of the file displayed. The default value is **PhotoViewMIMETypes.IMAGE_VID
 
 **Type:** [photoAccessHelper.PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-RecentPhotoOptions-MIMEType?: photoAccessHelper.PhotoViewMIMETypes-End-->
 
@@ -42,9 +42,9 @@ Time range for displaying the recent images or videos, measured in seconds. Afte
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-RecentPhotoOptions-period?: int--><!--Device-RecentPhotoOptions-period?: int-End-->
 
@@ -60,9 +60,9 @@ Source of the recent image or video, for example, image or video taken by the ca
 
 **Type:** PhotoSource
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-RecentPhotoOptions-photoSource?: PhotoSource--><!--Device-RecentPhotoOptions-photoSource?: PhotoSource-End-->
 

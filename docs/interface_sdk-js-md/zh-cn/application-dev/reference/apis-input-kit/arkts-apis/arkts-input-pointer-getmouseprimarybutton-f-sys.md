@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pointer } from '@kit.InputKit';
 ```
 
 ## getMousePrimaryButton
@@ -25,7 +26,7 @@ function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | 是 | 回调函数。当获取当前鼠标主键成功，err为undefined，PrimaryButton为获取到的键值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PrimaryButton](arkts-input-pointer-primarybutton-e.md)&gt; | 是 | 回调函数。当获取当前鼠标主键成功，err为undefined，PrimaryButton为获取到的键值；否则为错误对象。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # HttpRequestOptions
 
-Specifies the type and value range of the optional parameters in the HTTP request.
+Defines the options for initiating an HTTP request.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 addressFamily?: AddressFamily
 ```
 
-Address family option.
+IP address family. You can specify an address type for domain name resolution.
 
 **Type:** [AddressFamily](arkts-network-http-addressfamily-e.md)
 
@@ -36,7 +36,7 @@ Address family option.
 body?: string | Object | ArrayBuffer
 ```
 
-The body content of the HTTP request. This parameter explicitly specifies the payload to be sent in the request body. When this field is set, the framework forces the data into the body, regardless of the HTTP request method (GET, POST, etc.). Serialization rules: - string: sent directly as the request body. - Object: serialized to a JSON string before being sent. - ArrayBuffer: sent as raw binary data without additional serialization. If both body and extraData are specified, body takes precedence, and extraData will be ignored.
+HTTP request body. After this field is set, the framework preferentially sends this field as the request body. - The value can be a string, an object, or an **ArrayBuffer**. A string is sent as the original value, an object is serialized before being sent, and an **ArrayBuffer** is sent in binary format. - If both **body** and **extraData** are configured, **body** takes precedence and **extraData** will be ignored. - This field can be used with any request method to explicitly specify the request body. **Since**: 26.0.0
 
 **Type:** string \| Object \| ArrayBuffer
 
@@ -54,7 +54,7 @@ The body content of the HTTP request. This parameter explicitly specifies the pa
 caData?: string
 ```
 
-A PEM representation of a certificate. The system will create an X.509 certificate object in the SSL process. If the caPath option is set, the caData option will be ignored. Certificate chain is not supported. Maxium length is 8000 Bytes.
+CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. If both **caPath** and **caData** are set, **caData** is ignored by the system. Currently, only certificates in **.pem** format are supported. The maximum length is 8000 bytes. Only one certificate can be specified. A certificate chain is not allowed. The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**. This path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs.
 
 **Type:** string
 
@@ -72,13 +72,13 @@ A PEM representation of a certificate. The system will create an X.509 certifica
 caPath?: string
 ```
 
-If this parameter is set, the system will use ca path specified by user, or else use preset ca by the system.
+CA certificate data. If this parameter is set and the certificate is valid, the system uses the specified CA certificate and the preset CA certificate. Otherwise, the system uses only the preset CA certificate. The CA certificate path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs. Currently, only **.pem** certificates are supported. The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-caPath?: string--><!--Device-HttpRequestOptions-caPath?: string-End-->
 
@@ -90,7 +90,7 @@ If this parameter is set, the system will use ca path specified by user, or else
 certificatePinning?: CertificatePinning | CertificatePinning[]
 ```
 
-Certificate pinning option. If server certificate's digest does not match [publicKeyHash](arkts-network-http-certificatepinning-i.md#publickeyhash), request will fail.
+Dynamic configuration of certificate pinning. One or more certificate PINs can be specified.
 
 **Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
@@ -106,7 +106,7 @@ Certificate pinning option. If server certificate's digest does not match [publi
 clientCert?: ClientCert
 ```
 
-Support the application to pass in client certificates, allowing the server to verify the client's identity.
+Client certificate.
 
 **Type:** ClientCert
 
@@ -122,7 +122,7 @@ Support the application to pass in client certificates, allowing the server to v
 clientEncCert?: ClientCert
 ```
 
-Support the application to pass in client certificates, allowing the server to verify the client's encryption identity.
+Client certificate, which is used by the server to verify the client identity.
 
 **Type:** ClientCert
 
@@ -140,13 +140,13 @@ Support the application to pass in client certificates, allowing the server to v
 connectTimeout?: int
 ```
 
-Connection timeout interval. The default value is 60,000, in ms.
+Connection timeout interval. The default value is **60000**, in ms. The input value must be an uint32_t integer.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-connectTimeout?: int--><!--Device-HttpRequestOptions-connectTimeout?: int-End-->
 
@@ -158,11 +158,11 @@ Connection timeout interval. The default value is 60,000, in ms.
 customMethod?: string
 ```
 
-Supports specifying the user custom defined http request method
+Custom request method. For example, when the WebDAV extension protocol is implemented, **customMethod** has a higher priority than **method**. - The default value is an empty string. The value can contain a maximum of 128 characters. If the value exceeds 1 28 characters, the setting does not take effect. - If **customMethod** meets the WebDAV extension protocol request requirements but the server does not support the request, the server response code of the request is usually 405 or 501 (the actual result depends on the server behavior). - If **customMethod** does not meet the WebDAV extension protocol request requirements, the server response code of the request is usually 400 or 405 (the actual result depends on the server behavior).
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-HttpRequestOptions-customMethod?: string--><!--Device-HttpRequestOptions-customMethod?: string-End-->
 
@@ -174,11 +174,11 @@ Supports specifying the user custom defined http request method
 dnsOverHttps?: string
 ```
 
-If this parameter is set, incoming DNS resolution server URL for the DoH server to use for name resolving. The parameter must be URL-encoded in the following format: "https://host:port/path". It MUST specify an HTTPS URL.
+Whether to use an HTTPS server for DNS resolution. - The value must be URL-encoded in the following format: "https:// host:port/path".
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-HttpRequestOptions-dnsOverHttps?: string--><!--Device-HttpRequestOptions-dnsOverHttps?: string-End-->
 
@@ -190,11 +190,11 @@ If this parameter is set, incoming DNS resolution server URL for the DoH server 
 dnsServers?: Array<string>
 ```
 
-If this parameter is set, use the specified DNS server for DNS resolution. Multiple DNS resolution servers can be set up, with a maximum of 3 servers. Only take the first three if there are more than three.
+Array of DNS servers used for DNS resolution. - A maximum of three DNS servers can be set. If there are more than three DNS servers, only the first three DNS servers are used. - The DNS servers must be expressed as IPv4 or IPv6 addresses.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-HttpRequestOptions-dnsServers?: Array<string>--><!--Device-HttpRequestOptions-dnsServers?: Array<string>-End-->
 
@@ -224,13 +224,13 @@ Indicates whether to enable partial chain verification. The default value is tru
 expectDataType?: HttpDataType
 ```
 
-Data type to be returned. If this parameter is set, the system preferentially returns the specified type.
+Type of the returned data. This parameter is not used by default. If this parameter is set, the system returns the specified type of data preferentially. If the specified type is **Object**, the value can contain a maximum of 65536 characters.
 
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-expectDataType?: HttpDataType--><!--Device-HttpRequestOptions-expectDataType?: HttpDataType-End-->
 
@@ -242,13 +242,13 @@ Data type to be returned. If this parameter is set, the system preferentially re
 extraData?: string | Object | ArrayBuffer
 ```
 
-Additional data of the request. extraData can be a string or an Object (API 6) or an ArrayBuffer(API 8).
+Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially. **Note：**: Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "". - If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request and is encoded in UTF-8 format. Example: (1) If **content-Type** is **application/x-www-form-urlencoded**, the data in the request body must be encoded in the format of **key1=value1&key2=value2&key3=value3** after URL transcoding (**encodeURIComponent/encodeURI**) and this field is usually in the String format. (2) If **content-Type** is **text/xml**, this field is usually in the String format. (3) If **content-Type** is **application/json**, this field is usually in the Object format. (4) If **content-Type** is **application/octet-stream**, this field is usually in the ArrayBuffer format. (5) If **content-Type** is **multipart/form-data** and the content to be uploaded is a file, this field is usually in the ArrayBuffer format. The preceding information is for reference only and may vary according to the actual situation. - If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer--><!--Device-HttpRequestOptions-extraData?: string | Object | ArrayBuffer-End-->
 
@@ -260,13 +260,13 @@ Additional data of the request. extraData can be a string or an Object (API 6) o
 header?: Object
 ```
 
-HTTP request header. default is 'content-type': 'application/json'
+HTTP request header. If the request method is POST, PUT, DELETE, or null, the default value is {'content-Type': ' application/json'}. Otherwise, the default value is {'content-Type': 'application/x-www-form-urlencoded'}. If the header contains fields of numeric type, the maximum value must be an int64 integer. The header field supports the JSON format (as shown in Example) and the Record&lt;string, string&gt; format.
 
 **Type:** Object
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-header?: Object--><!--Device-HttpRequestOptions-header?: Object-End-->
 
@@ -278,7 +278,7 @@ HTTP request header. default is 'content-type': 'application/json'
 inactivityMs?: int
 ```
 
-Maximum HTTP idle time (unit: ms)
+Maximum idle time of a connection in the connection pool. If this value is exceeded, the connection is closed. The unit is ms. The default value is 118s. The system calculates the connection idle time, rounds it down to seconds, and then compares it with the configured value. - The value range is (0, 2147483647]. If a value less than or equal to 0 is passed, the system uses the default value 118s. This parameter does not take effect when **reuseConnections** is set to **false**. **Since**: 26.0.0
 
 **Type:** int
 
@@ -296,11 +296,11 @@ Maximum HTTP idle time (unit: ms)
 maxLimit?: int
 ```
 
-The maximum limit of the response body. The default value is 5 * 1024 * 1024, in Byte. The maximum value is 100 * 1024 *1024, in Byte.
+Maximum number of bytes in a response. The default value is 5*1024*1024, in bytes. The maximum value is **100*1024*1024**.
 
 **Type:** int
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-HttpRequestOptions-maxLimit?: int--><!--Device-HttpRequestOptions-maxLimit?: int-End-->
 
@@ -312,11 +312,11 @@ The maximum limit of the response body. The default value is 5 * 1024 * 1024, in
 maxRedirects?: int
 ```
 
-Support specifying the configuration of maximum redirect count
+The maximum number of redirections can be specified for HttpRequest. - The default value is 30. - The value range is [0, 2147483647]. If the value is set to **0**, redirection is disabled. If the number of redirections on the server exceeds the maximum number of redirections, error code 2300047 is returned. If the value is out of the range, the default value **30** takes effect.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-HttpRequestOptions-maxRedirects?: int--><!--Device-HttpRequestOptions-maxRedirects?: int-End-->
 
@@ -328,13 +328,13 @@ Support specifying the configuration of maximum redirect count
 method?: RequestMethod
 ```
 
-Request method,default is GET.
+Request method. The default value is **GET**.
 
 **Type:** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-method?: RequestMethod--><!--Device-HttpRequestOptions-method?: RequestMethod-End-->
 
@@ -346,7 +346,7 @@ Request method,default is GET.
 multiFormDataList?: Array<MultiFormData>
 ```
 
-The data fields which is supported by the HTTP protocol to post forms and by the SMTP and IMAP protocols to provide the email data to send/upload.
+Form data list. This field is valid when **content-Type** is set to **multipart/form-data**.
 
 **Type:** Array&lt;[MultiFormData](arkts-network-http-multiformdata-i.md)&gt;
 
@@ -362,11 +362,11 @@ The data fields which is supported by the HTTP protocol to post forms and by the
 pathPreference?: PathPreference
 ```
 
-Support specifying a preferred network when making HTTP requests. If the specified network is unavailable, the default network will be selected to send the request.
+Used to specify the network to be activated in an HTTP request.
 
 **Type:** [PathPreference](arkts-network-http-pathpreference-t.md)
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-HttpRequestOptions-pathPreference?: PathPreference--><!--Device-HttpRequestOptions-pathPreference?: PathPreference-End-->
 
@@ -378,13 +378,13 @@ Support specifying a preferred network when making HTTP requests. If the specifi
 priority?: int
 ```
 
-[1, 1000], default is 1.
+Priority of concurrent HTTP/HTTPS requests. A larger value indicates a higher priority. The value range is [1, 1000]. The default value is **1**.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-priority?: int--><!--Device-HttpRequestOptions-priority?: int-End-->
 
@@ -396,7 +396,7 @@ priority?: int
 queryParams?: string | QueryParamObject
 ```
 
-Query parameters to append to the request URL. Supports two input forms: - `string`: a pre-encoded query string provided by the caller. It is appended to the URL as-is and is not encoded again by the system. - `QueryParamObject`: a key-value object. The system encodes keys and values and serializes them into the URL query string automatically. Notes: 1. For `string`, do not include the leading `?` (for example, use `"key=value"`, not `"?key=value"`). 2. For `string`, the caller is responsible for encoding special characters. 3. For `string`, use `&` to separate multiple parameters. If both `queryParams` and `extraData` are specified, `queryParams` takes precedence for URL construction, and `extraData` will be ignored.
+Request parameters appended to the URL. - The value can be a string or a **QueryParamObject**. A string is directly appended to the URL (without repeated encoding). A **QueryParamObject** is automatically encoded and serialized by the system. - When a string is used, the leading **?** is not required. Use **&** to separate multiple parameters. - If both **queryParams** and **extraData** are configured, **queryParams** takes precedence, and the URL parameter supplementation logic in **extraData** is ignored. **Since**: 26.0.0
 
 **Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
@@ -414,13 +414,13 @@ Query parameters to append to the request URL. Supports two input forms: - `stri
 readTimeout?: int
 ```
 
-Read timeout period. The default value is 60,000, in ms.
+Read timeout duration. The default value is **60000**, in ms. The input value must be an uint32_t integer. The value **0** indicates no timeout.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-readTimeout?: int--><!--Device-HttpRequestOptions-readTimeout?: int-End-->
 
@@ -432,7 +432,7 @@ Read timeout period. The default value is 60,000, in ms.
 remoteValidation?: RemoteValidation
 ```
 
-Certificate authority(CA) which is used to verify the remote server's identification.
+Certificate authority (CA), which is used to verify the identity of a remote server. If the parameter is not set, the default value is used. The options are as follows:
 
 **Type:** [RemoteValidation](arkts-network-http-remotevalidation-t.md)
 
@@ -450,11 +450,11 @@ Certificate authority(CA) which is used to verify the remote server's identifica
 resumeFrom?: long
 ```
 
-Used to set to uploading or downloading the start bytes. The default value is 0. HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests. For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 723 3, servers are allowed to ignore range requests. - If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
 
 **Type:** long
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-HttpRequestOptions-resumeFrom?: long--><!--Device-HttpRequestOptions-resumeFrom?: long-End-->
 
@@ -466,11 +466,11 @@ Used to set to uploading or downloading the start bytes. The default value is 0.
 resumeTo?: long
 ```
 
-Used to set to uploading or downloading the end bytes. Translate to the end if not set. HTTP standard (RFC 7233 section 3.1) allows servers to ignore range requests. For HTTP PUT uploads this option should not be used, since it may conflict with other options.
+Download end position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 7233, servers are allowed to ignore range requests. - If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
 
 **Type:** long
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-HttpRequestOptions-resumeTo?: long--><!--Device-HttpRequestOptions-resumeTo?: long-End-->
 
@@ -482,7 +482,7 @@ Used to set to uploading or downloading the end bytes. Translate to the end if n
 reuseConnections?: boolean
 ```
 
-Supports forbidding reuse of HTTP/HTTPS connections
+Whether to reuse the connection for an HTTP request. The default value is **true**, meaning to reuse the existing connection. The value **false** means the opposite. This field can be used together with the **inactivityMs** field to customize the connection timeout interval. - Connection reuse means that after an HTTP request is completed, the underlying TCP connection is not immediately closed. Instead, it remains in the connection pool. If subsequent HTTP requests have the same target address, the connection can be reused, reducing the overhead of TCP and TLS handshakes and improving performance. **Since**: 26.0.0
 
 **Type:** boolean
 
@@ -500,7 +500,7 @@ Supports forbidding reuse of HTTP/HTTPS connections
 serverAuthentication?: ServerAuthentication
 ```
 
-HTTP server authentication settings. No authentication by default.
+Whether to verify the server identity during a secure connection. The identity is not verified by default.
 
 **Type:** [ServerAuthentication](arkts-network-http-serverauthentication-i.md)
 
@@ -518,11 +518,11 @@ HTTP server authentication settings. No authentication by default.
 sniHostName?: string
 ```
 
-Support specifying an SNI domain name to include the SNI field during the TLS connection process
+Used to allow the client to declare the target domain name to the server in the TLS handshake phase by configuring the server name indication (SNI). In this way, the server can select the corresponding SSL/TLS certificate based on the domain name for encrypted communication. - The default value is an empty string. The value of **sniHostName** can contain a maximum of 255 characters. If the length limit is exceeded or the value is an empty string, the setting does not take effect.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-HttpRequestOptions-sniHostName?: string--><!--Device-HttpRequestOptions-sniHostName?: string-End-->
 
@@ -534,7 +534,7 @@ Support specifying an SNI domain name to include the SNI field during the TLS co
 sslType?: SslType
 ```
 
-Which secure communication protocol is used, TLS (by defaul) or TLCP. If TLCP is used, all TLS related options, such as caPath, caData and clientCert, are ignored.
+Security communication protocol. You can use TLS (default) or TLCP. If TLCP is used, the related options (such as **caPath**, **clientCert**, and **clientEncCert**) must be set to valid values.
 
 **Type:** SslType
 
@@ -552,7 +552,7 @@ Which secure communication protocol is used, TLS (by defaul) or TLCP. If TLCP is
 tlsOptions?: TlsOptions
 ```
 
-TLS option.
+TLS configuration.
 
 **Type:** [TlsOptions](arkts-network-http-tlsoptions-t.md)
 
@@ -570,13 +570,13 @@ TLS option.
 usingCache?: boolean
 ```
 
-default is true
+Whether to use the cache. The value **true** indicates that the cache is preferentially read when a request is initiated, and the value **false** indicates that the cache is not used. The default value is **true**. The cache function takes effect when the process is started. The new cached data will replace the existing cached data.
 
 **Type:** boolean
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-usingCache?: boolean--><!--Device-HttpRequestOptions-usingCache?: boolean-End-->
 
@@ -588,13 +588,13 @@ default is true
 usingProtocol?: HttpProtocol
 ```
 
-default is automatically specified by the system.
+Protocol. The default value is automatically specified by the system.
 
 **Type:** [HttpProtocol](arkts-network-http-httpprotocol-e.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol--><!--Device-HttpRequestOptions-usingProtocol?: HttpProtocol-End-->
 
@@ -606,13 +606,13 @@ default is automatically specified by the system.
 usingProxy?: boolean | HttpProxy
 ```
 
-If this parameter is set as type of boolean, the system will use default proxy or not use proxy. If this parameter is set as type of HttpProxy, the system will use the specified HttpProxy.
+HTTP proxy configuration. If this item is not configured, the system proxy is used by default. - If **usingProxy** is set to **true**, the default network proxy is used. If **usingProxy** is set to **false**, no proxy is used. - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the **username** and **password** fields from API version 22.
 
 **Type:** boolean \| HttpProxy
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy--><!--Device-HttpRequestOptions-usingProxy?: boolean | HttpProxy-End-->
 
@@ -624,7 +624,7 @@ If this parameter is set as type of boolean, the system will use default proxy o
 usingSocks5Proxy?: Socks5Proxy
 ```
 
-Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy. It is recommend not to configure both simultaneously.
+Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy. It is recommended not to configure both simultaneously.
 
 **Type:** Socks5Proxy
 

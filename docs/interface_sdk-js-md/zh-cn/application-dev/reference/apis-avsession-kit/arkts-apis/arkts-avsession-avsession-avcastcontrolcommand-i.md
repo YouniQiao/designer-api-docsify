@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## command
@@ -19,7 +20,7 @@
 command: AVCastControlCommandType
 ```
 
-命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md#avcastcontrolcommandtype)。
+命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)。
 
 **类型：** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 

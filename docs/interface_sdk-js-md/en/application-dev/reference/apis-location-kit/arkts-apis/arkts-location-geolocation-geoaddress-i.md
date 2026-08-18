@@ -6,7 +6,7 @@ Data struct describes geographic locations.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md#geoaddress)
+**Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

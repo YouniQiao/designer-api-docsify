@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## persistPermission

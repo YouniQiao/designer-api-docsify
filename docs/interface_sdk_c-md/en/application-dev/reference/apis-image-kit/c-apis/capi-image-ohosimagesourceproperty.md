@@ -21,10 +21,8 @@ Defines the property string (in key-value format) of the image source.It is used
 | Name | Description |
 | -- | -- |
 | char* value = nullptr |  |
-| size_t size = 0;
-#else |  |
+| size_t size = 0; #else |  |
 | char* value |  |
-| size_t size;
-#endif |  |
+| size_t size; #endif |  |
 
 

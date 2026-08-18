@@ -11,6 +11,7 @@ Web组件发送的资源请求信息。
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## formData

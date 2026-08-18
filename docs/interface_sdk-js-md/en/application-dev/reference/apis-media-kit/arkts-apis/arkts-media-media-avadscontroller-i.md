@@ -107,7 +107,7 @@ Unregisters the processing function of the event triggered by the completion of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsSkipped
 
@@ -129,7 +129,7 @@ Unregisters the processing function of the event triggered when advertisement is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsStarted
 
@@ -195,7 +195,7 @@ Registers the processing function of the event triggered by the completion of ad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
 
 ## onAdsListenerAdsSkipped
 
@@ -217,7 +217,7 @@ Registers the processing function of the event triggered when advertisement is s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
 
 ## onAdsListenerAdsStarted
 

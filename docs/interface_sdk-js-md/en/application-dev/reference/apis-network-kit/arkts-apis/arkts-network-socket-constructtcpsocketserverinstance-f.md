@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructTCPSocketServerInstance(): TCPSocketServer
 ```
 
-Creates a TCPSocketServer object.
+Creates a **TCPSocketServer** object.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer--><!--Device-socket-function constructTCPSocketServerInstance(): TCPSocketServer-End-->
 
@@ -24,7 +24,7 @@ Creates a TCPSocketServer object.
 
 | Type | Description |
 | --- | --- |
-| [TCPSocketServer](arkts-network-socket-tcpsocketserver-i.md) | the TCPSocketServer of the constructTCPSocketServerInstance. |
+| [TCPSocketServer](arkts-network-socket-tcpsocketserver-i.md) | TCPSocketServer** object. |
 
 **Examples**
 

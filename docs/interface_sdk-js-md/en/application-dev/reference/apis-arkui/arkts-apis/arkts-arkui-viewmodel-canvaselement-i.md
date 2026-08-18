@@ -2,7 +2,7 @@
 
 &lt;canvas&gt; provides a rectangular canvas component for drawing graphics on the screen. You can control each pixel to draw on the canvas. &lt;canvas&gt; offers a variety of functions for drawing paths, rectangles, circles, text, and allows for adding images to it.
 
-**Inheritance/Implementation:** CanvasElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** CanvasElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 4
 
@@ -10,7 +10,7 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## getContext
+## getContext("2d")
 
 ```TypeScript
 getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D
@@ -39,7 +39,7 @@ Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas d
 | --- | --- |
 | [CanvasRenderingContext2D](arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md) |  |
 
-## getContext
+## getContext("webgl")
 
 ```TypeScript
 getContext(type: "webgl", options?: WebGLContextAttributes): WebGLRenderingContext
@@ -68,7 +68,7 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 | --- | --- |
 | [WebGLRenderingContext](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) |  |
 
-## getContext
+## getContext("webgl2")
 
 ```TypeScript
 getContext(type: "webgl2", options?: WebGLContextAttributes): WebGL2RenderingContext

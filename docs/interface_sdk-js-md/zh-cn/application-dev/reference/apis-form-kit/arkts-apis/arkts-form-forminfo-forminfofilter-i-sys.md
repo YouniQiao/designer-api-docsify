@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## bundleName
@@ -37,7 +38,7 @@ bundleName?: string
 supportedDimensions?: Array<int>
 ```
 
-选填，仅保留含supportedDimensions提供值相符的卡片信息，未填写时则不通过supportedDimensions进行过滤。 **系统接口：** 此接口为系统接口。 **说明：** 最大长度为9，数值取值范围[1, 9]的整数的数组，数值5从API version 9开始支持，从API version 20开始废弃。 具体规格参考 [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md#formdimension)。
+选填，仅保留含supportedDimensions提供值相符的卡片信息，未填写时则不通过supportedDimensions进行过滤。 **系统接口：** 此接口为系统接口。 **说明：** 最大长度为9，数值取值范围[1, 9]的整数的数组，数值5从API version 9开始支持，从API version 20开始废弃。 具体规格参考 [formInfo.FormDimension](arkts-form-forminfo-formdimension-e.md)。
 
 **类型：** Array&lt;int&gt;
 

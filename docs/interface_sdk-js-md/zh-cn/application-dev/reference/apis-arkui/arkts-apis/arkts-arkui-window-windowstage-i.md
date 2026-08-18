@@ -1,6 +1,6 @@
 # WindowStage
 
-窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md#window)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
+窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## createSubWindow
@@ -74,7 +77,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 子窗口的名字。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的子窗口对象。 |
 
 **错误码：**
 
@@ -177,7 +180,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的主窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前WindowStage下的主窗口对象。 |
 
 **错误码：**
 
@@ -270,7 +273,7 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | 是 | 回调函数。返回当前WindowStage下的所有子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Window](arkts-arkui-window-window-i.md)&gt;&gt; | 是 | 回调函数。返回当前WindowStage下的所有子窗口对象。 |
 
 **错误码：**
 
@@ -335,7 +338,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
 | storage | LocalStorage | 是 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -407,7 +410,7 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -441,7 +444,7 @@ Loads content by named router
 | --- | --- | --- | --- |
 | name | string | 是 | name of the page to which the content will be loaded. |
 | storage | LocalStorage | 是 | The data object shared within the content instance loaded by the window. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -473,7 +476,7 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | name of the page to which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -711,7 +714,7 @@ off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifec
 onWindowStageClose(callback: Callback<void, boolean>): void
 ```
 
-开启点击主窗三键区的关闭按钮监听事件。点击主窗口的三键区域的关闭键时触发该回调函数，将不执行注册的[UIAbility.onPrepareToTerminate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminate)生命周期回调函数。 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 触发的回调函数是同步执行，主窗口的异步关闭事件监听参考[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)方法。 如果存在[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)监听事件，只响应[on('windowWillClose')](arkts-arkui-window-window-i.md#onwindowwillclose)接口。
+开启点击主窗三键区的关闭按钮监听事件。点击主窗口的三键区域的关闭键时触发该回调函数，将不执行注册的[UIAbility.onPrepareToTerminate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminate)生命周期回调函数。 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 触发的回调函数是同步执行，主窗口的异步关闭事件监听参考[on('windowWillClose')](arkts-arkui-window-window-i.md#on_windowwillclosewindowwillclose)方法。 如果存在[on('windowWillClose')](arkts-arkui-window-window-i.md#on_windowwillclosewindowwillclose)监听事件，只响应[on('windowWillClose')](arkts-arkui-window-window-i.md#on_windowwillclosewindowwillclose)接口。
 
 **起始版本：** 23
 
@@ -1069,7 +1072,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。 <br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。 <br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 <br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。 <br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。 <br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 <br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 
 **返回值：**
 
@@ -1105,7 +1108,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。 <br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。 <br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 <br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | 是 | 设置主窗的窗口支持模式。 <br>- FULL_SCREEN：支持全屏模式。<br>- FLOATING：支持自由悬浮窗口模式。 <br>- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 <br> 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
 | grayOutMaximizeButton | boolean | 是 | 是否显示并将主窗口的最大化按钮置灰 true表示显示并将主窗口的最大化按钮置灰，此时最大化按钮不可用；false表示不显示主窗口的最大化按钮。 此参数配置仅在supportedWindowModes不支持FULL_SCREEN时生效。 |
 
 **返回值：**

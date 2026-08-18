@@ -62,7 +62,7 @@ Closes the current file. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md#close)
+**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-PhotoAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -73,7 +73,7 @@ Closes the current file. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file to close. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the current file is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the current file is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Closes the current file. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md#close)
+**Substitutes:** [close](../../apis-na/arkts-apis/arkts-na-fileio-close-f.md)
 
 <!--Device-PhotoAsset-close(fd: number): Promise<void>--><!--Device-PhotoAsset-close(fd: number): Promise<void>-End-->
 
@@ -143,7 +143,7 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the file metadata is modified successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. If the file metadata is modified successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -211,7 +211,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the member parameter to obtain. Except **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'**, you need to pass in [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys) in **fetchColumns**. For example, to obtain the title, pass in **fetchColumns: ['title']**. |
+| member | string | Yes | Name of the member parameter to obtain. Except **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'**, you need to pass in [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md) in **fetchColumns**. For example, to obtain the title, pass in **fetchColumns: ['title']**. |
 
 **Return value:**
 
@@ -238,7 +238,7 @@ Opens this file in read-only mode. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -250,7 +250,7 @@ Opens this file in read-only mode. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback function. If the current file is opened successfully, **err** is **undefined**, and **data** is the file descriptor. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback function. If the current file is opened successfully, **err** is **undefined**, and **data** is the file descriptor. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -273,7 +273,7 @@ Opens this file in read-only mode. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -318,7 +318,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback function. If the thumbnail of a file is successfully obtained, **err** is **undefined**, and **data** is the PixelMap of the thumbnail. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback function. If the thumbnail of a file is successfully obtained, **err** is **undefined**, and **data** is the PixelMap of the thumbnail. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -352,7 +352,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | image.Size | Yes | Size of the thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback function. If the thumbnail of a file is successfully obtained, **err** is **undefined**, and **data** is the PixelMap of the thumbnail. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback function. If the thumbnail of a file is successfully obtained, **err** is **undefined**, and **data** is the PixelMap of the thumbnail. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -420,8 +420,8 @@ Sets a **PhotoAsset** member parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the member parameter to set, for example, [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys).TITLE. The string length ranges from 1 to 255. |
-| value | string | Yes | Value of the member parameter to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys).TITLE can be changed. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- It must not contain any invalid characters, which are:\ / : ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | Yes | Name of the member parameter to set, for example, [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE. The string length ranges from 1 to 255. |
+| value | string | Yes | Value of the member parameter to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE can be changed. The title must meet the following requirements: <br>- It must not contain a file name extension. <br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.) <br>- It must not contain any invalid characters, which are:\ / : ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Error codes:**
 

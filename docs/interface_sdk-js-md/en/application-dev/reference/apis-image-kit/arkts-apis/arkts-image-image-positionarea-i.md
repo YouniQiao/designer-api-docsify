@@ -12,7 +12,6 @@ Describes area information in an image.
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## offset

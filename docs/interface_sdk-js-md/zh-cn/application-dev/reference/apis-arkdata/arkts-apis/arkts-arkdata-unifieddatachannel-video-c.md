@@ -1,8 +1,8 @@
 # Video
 
-视频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md#file)的子类，用于描述视频文件。
+视频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述视频文件。
 
-**继承/实现关系：** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md#file)
+**继承/实现关系：** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
 **起始版本：** 23
 
@@ -17,5 +17,6 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

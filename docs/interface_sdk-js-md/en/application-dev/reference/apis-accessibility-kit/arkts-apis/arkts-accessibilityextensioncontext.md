@@ -9,12 +9,12 @@
 | [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
 | [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
-| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#accessibilityaction-system-api) (actions that can be performed by an accessibility node element). |
+| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (actions that can be performed by an accessibility node element). |
 <!--DelEnd-->
 
 ### Interfaces
@@ -26,13 +26,13 @@
 | [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | Defines a rectangle. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
 | [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement). |
-| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement). |
-| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#accessibilityelement). |
+| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
+| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
 | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines an accessibility virtual node. |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | Provides attribute names and value types of a node element. |
 | [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Return value type of the accessibility node query. |
@@ -48,7 +48,7 @@
 | [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

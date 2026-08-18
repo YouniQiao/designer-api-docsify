@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -307,7 +308,7 @@ getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys)的BURST_KEY）。 字符串长度为36字节。 |
+| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。 字符串长度为36字节。 |
 | options | photoAccessHelper.FetchOptions | 是 | 连拍照片检索选项。 |
 
 **返回值：**

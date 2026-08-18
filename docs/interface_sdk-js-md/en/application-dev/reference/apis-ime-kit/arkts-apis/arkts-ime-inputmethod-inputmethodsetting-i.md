@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -12,16 +12,10 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
-import { inputMethod } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
@@ -35,7 +29,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
@@ -45,7 +39,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of displayOptionalInputMethod. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of displayOptionalInputMethod. |
 
 **Examples**
 
@@ -71,7 +65,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
 
@@ -113,7 +107,7 @@ List all input methods
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of getInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
@@ -266,7 +260,7 @@ List input methods
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of getInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
@@ -394,7 +388,7 @@ List subtype of current input method
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listCurrentInputMethodSubtype. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listCurrentInputMethodSubtype. |
 
 **Error codes:**
 
@@ -481,7 +475,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of listInputMethod. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | the callback of listInputMethod. |
 
 **Examples**
 
@@ -553,7 +547,7 @@ List subtype of the specified input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | the property of the specified inputmethod. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listInputMethodSubtype. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listInputMethodSubtype. |
 
 **Error codes:**
 
@@ -662,7 +656,7 @@ Unsubscribe input method or subtype change.
 | --- | --- | --- | --- |
 | callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | No | the callback called when the current input method changes, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
-## off_imeChange
+## off_imeChange('imeChange')
 
 ```TypeScript
 off(
@@ -712,7 +706,7 @@ Subscribe input method or subtype change.
 | --- | --- | --- | --- |
 | callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | Yes | the callback called when the current input method changes. |
 
-## on_imeChange
+## on_imeChange('imeChange')
 
 ```TypeScript
 on(
@@ -760,7 +754,7 @@ Show input method setting extension dialog
 
 **Deprecated since:** 18
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
@@ -770,7 +764,7 @@ Show input method setting extension dialog
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of showOptionalInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of showOptionalInputMethods. |
 
 **Error codes:**
 
@@ -808,7 +802,7 @@ Show input method setting extension dialog
 
 **Deprecated since:** 18
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#inputmethodlistdialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 

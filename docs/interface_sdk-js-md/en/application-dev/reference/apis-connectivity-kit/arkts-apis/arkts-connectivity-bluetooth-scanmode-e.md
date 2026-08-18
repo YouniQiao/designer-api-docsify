@@ -6,7 +6,7 @@ The enum of BR scan mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmode)
+**Substitutes:** [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md)
 
 <!--Device-bluetooth-enum ScanMode--><!--Device-bluetooth-enum ScanMode-End-->
 
@@ -24,7 +24,7 @@ Indicates the scan mode is none
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_NONE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodenone)
+**Substitutes:** [SCAN_MODE_NONE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_none)
 
 <!--Device-ScanMode-SCAN_MODE_NONE = 0--><!--Device-ScanMode-SCAN_MODE_NONE = 0-End-->
 
@@ -42,7 +42,7 @@ Indicates the scan mode is connectable
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectable)
+**Substitutes:** [SCAN_MODE_CONNECTABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_connectable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1-End-->
 
@@ -60,7 +60,7 @@ Indicates the scan mode is general discoverable
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodegeneraldiscoverable)
+**Substitutes:** [SCAN_MODE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_general_discoverable)
 
 <!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2--><!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2-End-->
 
@@ -78,7 +78,7 @@ Indicates the scan mode is limited discoverable
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodelimiteddiscoverable)
+**Substitutes:** [SCAN_MODE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_limited_discoverable)
 
 <!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3--><!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3-End-->
 
@@ -96,7 +96,7 @@ Indicates the scan mode is connectable and general discoverable
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectablegeneraldiscoverable)
+**Substitutes:** [SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_connectable_general_discoverable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4-End-->
 
@@ -114,7 +114,7 @@ Indicates the scan mode is connectable and limited discoverable
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scanmodeconnectablelimiteddiscoverable)
+**Substitutes:** [SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE](arkts-connectivity-bluetoothmanager-scanmode-e.md#scan_mode_connectable_limited_discoverable)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5-End-->
 

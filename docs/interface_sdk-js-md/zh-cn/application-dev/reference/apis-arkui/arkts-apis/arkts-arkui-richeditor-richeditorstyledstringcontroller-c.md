@@ -1,8 +1,8 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#richeditorbasecontroller)。
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)。
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#richeditorbasecontroller) implements StyledStringController
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md) implements StyledStringController
 
 **起始版本：** 23
 
@@ -106,5 +106,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类 [MutableStyledString](arkts-arkui-mutablestyledstring-c.md#mutablestyledstring)也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类 [MutableStyledString](arkts-arkui-mutablestyledstring-c.md)也可以作为入参值。 |
 

@@ -22,5 +22,8 @@ Compile Options
 | -- | -- |
 | [JSVM_CompileOptionId](capi-jsvm-types-h.md#jsvm_compileoptionid) id | compile option id. |
 | union | option content. |
+| void *ptr | ptr type. |
+| int num | int type. |
+| bool boolean; } content | bool type. |
 
 

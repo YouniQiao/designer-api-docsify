@@ -139,7 +139,7 @@ Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. <br>
 
 | Type | Description |
 | -- | -- |
-| OH_NativeBuffer* | Returns the pointer to the <b>OH_NativeBuffer</b> instance created if the operation is successful, <br> returns <b>NULL</b> otherwise. |
+| OH_NativeBuffer* | Returns the pointer to the <b>OH_NativeBuffer</b> instance created if the operation is successful, \n  returns <b>NULL</b> otherwise. |
 
 ### OH_NativeBuffer_Reference()
 
@@ -400,7 +400,7 @@ Get the color space of the OH_NativeBuffer.<br> This interface is a non-thread-s
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
 
 ### OH_NativeBuffer_SetMetadataValue()
 
@@ -429,7 +429,7 @@ Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or metadata is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or metadata is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeBuffer_GetMetadataValue()
 
@@ -458,7 +458,7 @@ Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer, metadata, or size is NULL.<br>     {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>     {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer, metadata, or size is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeBuffer_MapWaitFence()
 
@@ -486,7 +486,7 @@ Provide direct cpu access to the OH_NativeBuffer in the process's address space 
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br> {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr is NULL or invalid fenceFd.<br> {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr is NULL or invalid fenceFd.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
 
 ### OH_NativeBuffer_WriteToParcel()
 
@@ -513,7 +513,7 @@ Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> obj
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br> {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or parcel is NULL.<br> {@link SURFACE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or parcel is NULL.  {@link SURFACE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeBuffer_ReadFromParcel()
 
@@ -540,7 +540,7 @@ Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br> {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel or buffer is NULL.<br> {@link NATIVE_ERROR_UNKNOWN} 50002000 - deserialize failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel or buffer is NULL.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - deserialize failed. |
 
 ### OH_NativeBuffer_IsSupported()
 
@@ -567,7 +567,7 @@ Check whether the system supports the <b>NativeBufferConfig</b>.<br> This interf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br> {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - isSupported is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - isSupported is NULL. |
 
 ### OH_NativeBuffer_MapAndGetConfig()
 
@@ -595,6 +595,6 @@ Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br> {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr or config is NULL or invalid fenceFd.<br> {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr or config is NULL or invalid fenceFd.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
 
 

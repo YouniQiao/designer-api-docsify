@@ -12,8 +12,6 @@ The **cloudSync** module provides the device-cloud sync capabilities for applica
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -23,21 +21,21 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getcorefilesyncstate) | Obtains the upload sync state of a cloud file. This API returns the result synchronously. |
-| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerchange) | Subscribes to the change of a file. The callback returns the changed data. |
-| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterchange) | Unsubscribes from the change of a file. |
+| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md) | Obtains the upload sync state of a cloud file. This API returns the result synchronously. |
+| [registerChange](arkts-corefile-cloudsync-registerchange-f.md) | Subscribes to the change of a file. The callback returns the changed data. |
+| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md) | Unsubscribes from the change of a file. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate) | Obtains the file sync state. This API uses a promise to return the result. |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-system-api) | Obtains the file sync state. This API uses an asynchronous callback to return the result. |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-system-api) | Obtains the file sync state. |
-| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizestorage) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |
-| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startoptimizespace) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed. |
-| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopoptimizespace) | Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**. |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. This API uses a promise to return the result. |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. This API uses an asynchronous callback to return the result. |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. |
+| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |
+| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed. |
+| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md) | Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**. |
 <!--DelEnd-->
 
 ### Classes
@@ -50,7 +48,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md) | Represents the batch download progress of a file from the Drive Kit. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -67,12 +65,12 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [ChangeData](arkts-corefile-cloudsync-changedata-i.md) | Represents the data change information. |
 | [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md) | Represents information about the download progress of a cloud file. |
 | [FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md) | Represents a list of files that fail to be downloaded from the Drive Kit and failure causes. |
-| [HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md) | Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md#fileversion) class is called. |
+| [HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md) | Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called. |
 | [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md) | Represents information about the device-cloud sync progress. |
-| [VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md#fileversion) class is called. |
+| [VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -94,7 +92,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [SyncState](arkts-corefile-cloudsync-syncstate-e.md) | Enumerates the device-cloud sync states. > **NOTE：**> > If a sync progress event listener is registered for an application, a callback will be invoked to notify the > application when the device-cloud sync state is changed. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

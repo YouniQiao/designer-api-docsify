@@ -50,7 +50,7 @@ Creates an [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the created font collection object. The font collection pointer object created by this function<br>     can only be used by one [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) object and does not support shared use among<br>     multiple OH_Drawing_TypographyCreate objects. To share the same OH_Drawing_FontCollection among multiple<br>     OH_Drawing_TypographyCreate objects, use the [OH_Drawing_CreateSharedFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createsharedfontcollection) function to create<br>     the OH_Drawing_FontCollection object. |
+| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the created font collection object. The font collection pointer object created by this function      can only be used by one [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) object and does not support shared use among      multiple OH_Drawing_TypographyCreate objects. To share the same OH_Drawing_FontCollection among multiple      OH_Drawing_TypographyCreate objects, use the [OH_Drawing_CreateSharedFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createsharedfontcollection) function to create      the OH_Drawing_FontCollection object. |
 
 ### OH_Drawing_DestroyFontCollection()
 
@@ -134,7 +134,7 @@ Creates a shareable [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcoll
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the created font collection object, which can be used by multiple<br>     [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) objects. |
+| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the created font collection object, which can be used by multiple      [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) objects. |
 
 ### OH_Drawing_ClearFontCaches()
 
@@ -174,6 +174,6 @@ Obtains the global font collection object [OH_Drawing_FontCollection](capi-drawi
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the global font collection object, which can be used by multiple<br>     [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) objects and is prohibited from being released. |
+| [OH_Drawing_FontCollection*](capi-drawing-oh-drawing-fontcollection.md) | Pointer to the global font collection object, which can be used by multiple      [OH_Drawing_TypographyCreate](capi-drawing-oh-drawing-typographycreate.md) objects and is prohibited from being released. |
 
 

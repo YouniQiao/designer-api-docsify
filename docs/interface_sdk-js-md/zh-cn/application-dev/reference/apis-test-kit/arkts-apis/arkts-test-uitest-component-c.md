@@ -11,6 +11,8 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## clearText
@@ -665,7 +667,7 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode)。  **说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。  **说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
 
 **返回值：**
 

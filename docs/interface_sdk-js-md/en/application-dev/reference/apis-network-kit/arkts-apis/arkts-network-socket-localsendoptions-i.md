@@ -1,8 +1,8 @@
 # LocalSendOptions
 
-Defines the parameters for sending data over the LocalSocket connection.
+Defines the request parameters for the **LocalSocket** object.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-export interface LocalSendOptions--><!--Device-socket-export interface LocalSendOptions-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 data: string | ArrayBuffer
 ```
 
-Data to send.
+Data to be transmitted.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSendOptions-data: string | ArrayBuffer--><!--Device-LocalSendOptions-data: string | ArrayBuffer-End-->
 
@@ -36,11 +36,11 @@ Data to send.
 encoding?: string
 ```
 
-Character encoding format.
+Encoding format of the string.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSendOptions-encoding?: string--><!--Device-LocalSendOptions-encoding?: string-End-->
 

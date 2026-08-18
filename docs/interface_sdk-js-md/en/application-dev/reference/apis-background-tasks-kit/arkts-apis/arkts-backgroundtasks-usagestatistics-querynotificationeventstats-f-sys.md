@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryNotificationEventStats
@@ -35,7 +34,7 @@ Queries app notification number within a specified period identified by the star
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md#deviceeventstats-system-api) object Array containing the event states data. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md) object Array containing the event states data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

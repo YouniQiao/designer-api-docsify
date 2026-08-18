@@ -3,11 +3,11 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendviewmodel) |  |
+| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md) |  |
 <!--DelEnd-->
 
 ### Interfaces
@@ -25,7 +25,7 @@
 | [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) | View model |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

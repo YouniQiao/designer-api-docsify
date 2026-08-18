@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## off_locationServiceState
+## off_locationServiceState('locationServiceState')
 
 ```TypeScript
 function off(type: 'locationServiceState', callback?: Callback<boolean>): void
@@ -31,7 +31,7 @@ Unsubscribe location switch changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Indicates the callback for reporting the location result. |
 
 **Examples**
 

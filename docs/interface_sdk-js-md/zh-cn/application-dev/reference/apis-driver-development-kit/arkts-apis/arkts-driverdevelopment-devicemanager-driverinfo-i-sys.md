@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## busType
@@ -39,7 +40,7 @@ busType: BusType
 description: string
 ```
 
-驱动描述。
+驱动的描述信息，用于提供驱动的功能说明、使用场景、注意事项等详细信息。
 
 **类型：** string
 
@@ -75,7 +76,7 @@ driverName: string
 driverSize: string
 ```
 
-驱动大小(单位为Byte)。
+驱动文件的大小，单位：字节，用于标识驱动文件占用的存储空间大小。
 
 **类型：** string
 
@@ -93,7 +94,7 @@ driverSize: string
 driverUid: string
 ```
 
-驱动Uid。
+驱动UID。
 
 **类型：** string
 

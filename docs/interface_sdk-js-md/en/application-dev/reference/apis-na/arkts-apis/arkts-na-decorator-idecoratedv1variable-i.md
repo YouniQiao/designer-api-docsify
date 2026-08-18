@@ -2,7 +2,7 @@
 
 Define V1 decorated variable interface.
 
-**Inheritance/Implementation:** IDecoratedV1Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md#idecoratedvariable)
+**Inheritance/Implementation:** IDecoratedV1Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md)
 
 **Since:** 23
 

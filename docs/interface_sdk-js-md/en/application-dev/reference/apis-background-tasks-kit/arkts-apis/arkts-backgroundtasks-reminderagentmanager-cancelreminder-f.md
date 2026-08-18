@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminder
@@ -25,8 +24,8 @@ Cancels a reminder published. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the reminders are canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the reminders are canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -71,7 +70,7 @@ Cancels a reminder published. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be canceled. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called. |
 
 **Return value:**
 

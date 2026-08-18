@@ -38,7 +38,7 @@ Period for which the update is postponed, in hours.
 disableSystemOtaUpdate?: boolean
 ```
 
-Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled, and the value **false** indicates the opposite. If this field is used as an input parameter of [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy), the default value can be retained. The current configuration can be obtained via the [systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
+Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled, and the value **false** indicates the opposite. If this field is used as an input parameter of [systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md), the default value can be retained. The current configuration can be obtained via the [systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md) API. After public network upgrade is disabled, you can perform intranet upgrade.
 
 **Type:** boolean
 

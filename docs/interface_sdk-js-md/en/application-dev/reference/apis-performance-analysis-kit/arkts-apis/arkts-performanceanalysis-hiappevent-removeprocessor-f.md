@@ -26,7 +26,7 @@ Removes the data processor of a reported event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor) or [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig). |
+| id | long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md) or [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md). |
 
 **Error codes:**
 

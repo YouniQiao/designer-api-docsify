@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItemAsUser
@@ -29,7 +31,7 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于查询时指定密钥的属性TAG，如使用 [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 用于查询时指定密钥的属性TAG，如使用 [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 

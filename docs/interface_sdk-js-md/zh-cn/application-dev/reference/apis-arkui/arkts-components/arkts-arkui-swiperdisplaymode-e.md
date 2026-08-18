@@ -38,7 +38,7 @@ AutoLinear
 
 **废弃版本：** 10
 
-**替代接口：** [AUTO_LINEAR](#autolinear)
+**替代接口：** [AUTO_LINEAR](#auto_linear)
 
 **卡片能力：** 从API版本7开始，该接口支持在ArkTS卡片中使用。
 

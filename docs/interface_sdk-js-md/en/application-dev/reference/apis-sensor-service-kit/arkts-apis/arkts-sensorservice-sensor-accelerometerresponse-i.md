@@ -1,8 +1,8 @@
 # AccelerometerResponse
 
-Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

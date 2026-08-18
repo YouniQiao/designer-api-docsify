@@ -2,7 +2,7 @@
 
 The definition of Album.
 
-**Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#mediaentity)
+**Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ The definition of Album.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
 import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -30,7 +29,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -188,7 +187,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true，表示允许发布通知；返回false，表示禁止发布通知；调用失败返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true，表示允许发布通知；返回false，表示禁止发布通知；调用失败返回错误对象。 |
 
 **错误码：**
 
@@ -326,7 +325,7 @@ function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | int | 是 | 指定的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 

@@ -6,7 +6,7 @@ Implements user authentication.
 
 **Deprecated since:** 10
 
-**Substitutes:** [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#userauthinstance)
+**Substitutes:** [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)
 
 <!--Device-userAuth-interface AuthInstance--><!--Device-userAuth-interface AuthInstance-End-->
 
@@ -16,8 +16,6 @@ Implements user authentication.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -49,7 +47,7 @@ Cancels this authentication. > **NOTE：**> > Use the obtained [AuthInstance](#a
 off: (name: AuthEventKey) => void
 ```
 
-Unsubscribes from the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#autheventkey). > **NOTE：**> > The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to > subscribe to the event.
+Unsubscribes from the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md). > **NOTE：**> > The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to > subscribe to the event.
 
 **Type:** (name: AuthEventKey) =&gt; void
 
@@ -57,7 +55,7 @@ Unsubscribes from the user authentication events of the specified type. - **name
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-userauthentication-userauth-userauthinstance-i.md#offresult)
+**Substitutes:** [off](arkts-userauthentication-userauth-userauthinstance-i.md#off_resultresult)
 
 <!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
@@ -69,7 +67,7 @@ Unsubscribes from the user authentication events of the specified type. - **name
 on: (name: AuthEventKey, callback: AuthEvent) => void
 ```
 
-Subscribes to the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means that the callback returns the authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#autheventkey). - **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-userauth-authevent-i.md#authevent). > **NOTE：**> > Use the [AuthInstance](#authinstance) instance obtained to call this API.
+Subscribes to the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means that the callback returns the authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md). - **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-userauth-authevent-i.md). > **NOTE：**> > Use the [AuthInstance](#authinstance) instance obtained to call this API.
 
 **Type:** (name: AuthEventKey, callback: AuthEvent) =&gt; void
 
@@ -77,7 +75,7 @@ Subscribes to the user authentication events of the specified type. - **name**: 
 
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-userauthentication-userauth-userauthinstance-i.md#onresult)
+**Substitutes:** [on](arkts-userauthentication-userauth-userauthinstance-i.md#on_resultresult)
 
 <!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 

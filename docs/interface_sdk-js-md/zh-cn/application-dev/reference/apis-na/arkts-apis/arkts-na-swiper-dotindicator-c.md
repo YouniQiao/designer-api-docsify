@@ -2,7 +2,7 @@
 
 Define DotIndicator, the indicator type is dot.
 
-**继承/实现关系：** DotIndicator extends [Indicator](arkts-na-swiper-indicator-c.md#indicator)
+**继承/实现关系：** DotIndicator extends [Indicator](arkts-na-swiper-indicator-c.md)
 
 **起始版本：** 23
 

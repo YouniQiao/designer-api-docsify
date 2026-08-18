@@ -2,7 +2,7 @@
 
 Touch Action Function Parameters
 
-**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **起始版本：** 23
 

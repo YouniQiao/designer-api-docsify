@@ -12,7 +12,6 @@ Defines the RDB store configuration.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -53,7 +52,7 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 cryptoParam?: CryptoParam
 ```
 
-Custom encryption parameters. If this parameter is left empty, the default encryption parameters are used. For details, see default values of [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#cryptoparam). This parameter is valid only when **encrypt** is set to **true** or the key is not empty. This parameter is supported since API version 14. SystemCapability.DistributedDataManager.RelationalStore.Core
+Custom encryption parameters. If this parameter is left empty, the default encryption parameters are used. For details, see default values of [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md). This parameter is valid only when **encrypt** is set to **true** or the key is not empty. This parameter is supported since API version 14. SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Type:** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
@@ -85,7 +84,7 @@ Custom database path. **Constraints**: The maximum length of the database path i
 dataGroupId?: string
 ```
 
-Application group ID. &lt;!--RP1--&gt;Currently, this parameter is not supported.&lt;!--RP1End--&gt; **Model restriction**: This parameter can be used only in the stage model. This parameter is supported since API version 10. If **dataGroupId** is specified, the **RdbStore** instance will be created in the sandbox directory of the specified **dataGroupId**. However, the encrypted RDB store in this sandbox directory does not support multi-process access. If this parameter is left blank, the **RdbStore** instance will be created in the sandbox directory of the application by default. SystemCapability.DistributedDataManager.RelationalStore.Core
+Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--RP1End--> **Model restriction**: This parameter can be used only in the stage model. This parameter is supported since API version 10. If **dataGroupId** is specified, the **RdbStore** instance will be created in the sandbox directory of the specified **dataGroupId**. However, the encrypted RDB store in this sandbox directory does not support multi-process access. If this parameter is left blank, the **RdbStore** instance will be created in the sandbox directory of the application by default. SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Type:** string
 

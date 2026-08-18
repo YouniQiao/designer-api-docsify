@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function setPreferredApn(apnId: int): Promise<boolean>
 ```
 
-Set preferred APN.
+Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously. > **NOTE：**> > If the input APN ID is invalid, the default preferred APN configured by the carrier is used.
 
 **Since:** 23
 
@@ -26,13 +26,13 @@ Set preferred APN.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnId | int | Yes | The APN ID which is used to be set. |
+| apnId | int | Yes | APN ID, which can be obtained by calling [queryApnIds](arkts-telephony-data-queryapnids-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. If no SIM card is installed, the value **false** is returned. |
 
 **Error codes:**
 

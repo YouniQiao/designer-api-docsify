@@ -64,7 +64,7 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 Indicates the callback for reporting the fence transition status.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
 
 **Since:** 26.1.0
 
@@ -82,7 +82,7 @@ Indicates the callback for reporting the fence transition status.
 fenceType: int
 ```
 
-Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md#fusionfencetype-system-api). The value range is all integers.
+Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md). The value range is all integers.
 
 **Type:** int
 
@@ -162,7 +162,7 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 monitorTransitionEvents: int
 ```
 
-Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md#geofencetransitionevent). The value range is all integers.
+Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md). The value range is all integers.
 
 **Type:** int
 

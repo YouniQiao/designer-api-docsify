@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { agentManager } from '@kit.AbilityKit';
-import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility
@@ -13,7 +12,7 @@ import { agentManager } from '@kit.AbilityKit';
 function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>
 ```
 
-Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectserviceextensionability-system-api).
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md).
 
 **Since:** 26.0.0
 

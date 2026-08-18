@@ -9,7 +9,7 @@
 | [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Declares the interface for the method of a security component. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

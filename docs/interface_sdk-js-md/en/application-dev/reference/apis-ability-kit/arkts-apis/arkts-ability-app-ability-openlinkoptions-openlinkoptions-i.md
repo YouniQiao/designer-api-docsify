@@ -12,7 +12,6 @@
 
 ```TypeScript
 import { OpenLinkOptions } from '@kit.AbilityKit';
-import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly
@@ -21,7 +20,7 @@ import { OpenLinkOptions } from '@kit.AbilityKit';
 appLinkingOnly?: boolean
 ```
 
-Whether the UIAbility must be started using &lt;!--RP1--&gt; [App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP1End--&gt;. - If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned directly. - If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to [Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**. When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or **--pb appLinkingOnly false** to start the ability in App Linking mode.
+Whether the UIAbility must be started using <!--RP1--> [App Linking](../../../application-models/app-linking-startup.md)<!--RP1End-->. - If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned directly. - If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to [Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**. When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or **--pb appLinkingOnly false** to start the ability in App Linking mode.
 
 **Type:** boolean
 
@@ -85,7 +84,7 @@ parameters?: Record<string, RecordData>
 
 OpenLinkOptions parameters in the form of custom key-value pairs.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

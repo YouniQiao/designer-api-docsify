@@ -88,7 +88,7 @@ Remove a specified candidate hotspot configuration, only the configuration which
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | int | Yes | Network ID which will be removed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates call back of removeCandidateConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates call back of removeCandidateConfig. |
 
 **Error codes:**
 

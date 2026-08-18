@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { freeInstall } from '@kit.AbilityKit';
-import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getBundlePackInfo
@@ -32,7 +31,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundlePackFlag | [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) | Yes | Flag of the bundle package. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 

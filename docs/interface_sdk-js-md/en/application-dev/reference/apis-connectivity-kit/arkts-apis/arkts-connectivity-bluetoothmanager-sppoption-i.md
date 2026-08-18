@@ -6,7 +6,7 @@ Describes the spp parameters.
 
 **Deprecated since:** 10
 
-**Substitutes:** [SppOptions](arkts-connectivity-socket-sppoptions-i.md#sppoptions)
+**Substitutes:** [SppOptions](arkts-connectivity-socket-sppoptions-i.md)
 
 <!--Device-bluetoothManager-interface SppOption--><!--Device-bluetoothManager-interface SppOption-End-->
 
@@ -44,7 +44,7 @@ Indicates secure channel or not
 type: SppType
 ```
 
-Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#spptype)
+Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 
 **Type:** SppType
 

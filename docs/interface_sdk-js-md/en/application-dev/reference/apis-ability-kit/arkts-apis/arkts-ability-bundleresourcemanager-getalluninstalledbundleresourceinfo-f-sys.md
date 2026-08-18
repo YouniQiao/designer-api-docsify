@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
-import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getAllUninstalledBundleResourceInfo
@@ -29,7 +28,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#resourceflag-system-api). |
+| resourceFlags | int | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md). |
 
 **Return value:**
 

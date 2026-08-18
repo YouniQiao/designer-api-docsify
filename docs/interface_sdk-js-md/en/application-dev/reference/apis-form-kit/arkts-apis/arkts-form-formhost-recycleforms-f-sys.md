@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { formHost } from '@kit.FormKit';
-import { formHost } from '@kit.FormKit';
 ```
 
 ## recycleForms

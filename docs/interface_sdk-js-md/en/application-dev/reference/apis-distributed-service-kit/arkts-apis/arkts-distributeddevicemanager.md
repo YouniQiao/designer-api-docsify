@@ -12,7 +12,6 @@ The **distributedDeviceManager** module provides APIs for distributed device man
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -21,8 +20,8 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager) | Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices. |
-| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager) | Releases a **DeviceManager** instance that is no longer used. |
+| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md) | Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices. |
+| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md) | Releases a **DeviceManager** instance that is no longer used. |
 
 ### Interfaces
 
@@ -38,7 +37,7 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 | [ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md) | ServiceDie data. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -60,7 +59,7 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 | [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md) | Enumerates the device states. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

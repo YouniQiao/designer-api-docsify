@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getAllContinuousTasks
@@ -25,7 +26,7 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。 <br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。 <br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 
 **返回值：**
 
@@ -111,7 +112,7 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。 <br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。 <br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | includeSuspended | boolean | 是 | 是否获取暂停的长时任务信息， true表示获取， false表示不获取。 |
 
 **返回值：**

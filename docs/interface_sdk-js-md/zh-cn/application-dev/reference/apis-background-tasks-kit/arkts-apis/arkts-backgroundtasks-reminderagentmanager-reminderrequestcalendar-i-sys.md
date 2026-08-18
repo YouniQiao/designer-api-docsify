@@ -2,7 +2,7 @@
 
 ReminderRequestCalendar extends ReminderRequest 日历实例对象，用于设置提醒的时间。
 
-**继承/实现关系：** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
+**继承/实现关系：** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ ReminderRequestCalendar extends ReminderRequest 日历实例对象，用于设�
 ## 导入模块
 
 ```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## rruleWantAgent

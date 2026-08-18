@@ -12,7 +12,6 @@ Describes the continuous task information.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityId
@@ -69,7 +68,7 @@ Index of an application clone.
 backgroundModes: string[]
 ```
 
-[Type of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#backgroundmode).
+[Type of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md).
 
 **Type:** string[]
 
@@ -85,7 +84,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[Subtype of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md#backgroundsubmode).
+[Subtype of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md).
 
 **Type:** string[]
 
@@ -213,7 +212,7 @@ Application UID.
 wantAgentAbilityName: string
 ```
 
-Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
+Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
@@ -229,7 +228,7 @@ Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-a
 wantAgentBundleName: string
 ```
 
-Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md#wantagent). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
+Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-n.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 

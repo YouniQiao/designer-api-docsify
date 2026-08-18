@@ -2,7 +2,7 @@
 
 Manager hid host profile.
 
-**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HidHostProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md)
 
 **Since:** 23
 

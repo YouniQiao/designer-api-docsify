@@ -4,11 +4,11 @@
 type HttpProxy = connection.HttpProxy
 ```
 
-Http Proxy Configuration Information.
+Defines the network proxy configuration.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-http-type HttpProxy = connection.HttpProxy--><!--Device-http-type HttpProxy = connection.HttpProxy-End-->
 

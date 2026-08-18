@@ -6,7 +6,7 @@ Defines the prompt info of button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md#button)
+**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 

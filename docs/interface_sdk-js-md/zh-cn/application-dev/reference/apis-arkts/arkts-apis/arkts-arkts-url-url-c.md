@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { url } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -401,7 +402,7 @@ readonly searchParams: URLSearchParams
 
 **废弃版本：** 9
 
-**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#urlparams)
+**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

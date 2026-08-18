@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSimpleNumberFormatBySkeleton
@@ -70,7 +69,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleNumberFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
+**Substitutes:** [getSimpleNumberFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimplenumberformatbyskeleton-f.md)(skeleton: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

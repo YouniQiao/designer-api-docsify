@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## onFingerprint
@@ -27,7 +28,7 @@ function onFingerprint(receiver: Callback<FingerprintEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)&gt; | 是 | 用于接收上报数据的回调函数。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)&gt; | 是 | 用于接收上报数据的回调函数。 |
 
 **错误码：**
 

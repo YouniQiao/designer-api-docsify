@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedWifiList
@@ -11,7 +12,7 @@
 function addAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 ```
 
-添加Wi-Fi允许名单。添加允许名单后当前设备仅允许连接该名单下的Wi-Fi。适用于企业安全管理场景，例如限制员工设备只能连接公司授权的Wi-Fi网络，防止连接不安全的外部Wi-Fi，保障企业网络安全和数据安全。 以下情况下，调用本接口会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备Wi-Fi能力。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)解除Wi-Fi禁用后，可解除冲突。 2. 已经通过[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md#adddisallowedwifilist)接口添加了Wi-Fi禁用名单。通过[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md#removedisallowedwifilist)移除Wi-Fi禁用名单后，可解除冲突。
+添加Wi-Fi允许名单。添加允许名单后当前设备仅允许连接该名单下的Wi-Fi。适用于企业安全管理场景，例如限制员工设备只能连接公司授权的Wi-Fi网络，防止连接不安全的外部Wi-Fi，保障企业网络安全和数据安全。 以下情况下，调用本接口会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备Wi-Fi能力。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)解除Wi-Fi禁用后，可解除冲突。 2. 已经通过[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md)接口添加了Wi-Fi禁用名单。通过[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md)移除Wi-Fi禁用名单后，可解除冲突。
 
 **起始版本：** 19
 

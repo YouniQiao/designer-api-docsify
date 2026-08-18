@@ -18,7 +18,7 @@ Disallows a user to add accounts.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
+**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

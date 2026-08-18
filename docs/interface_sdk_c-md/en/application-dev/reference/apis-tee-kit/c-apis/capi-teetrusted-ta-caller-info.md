@@ -20,8 +20,10 @@ Defines the caller information.
 
 | Name | Description |
 | -- | -- |
-| uint32_t session_type;
-    union | The session type. |
+| uint32_t session_type; union | The session type. |
+| [TEE_UUID](capi-teetrusted-tee-uuid.md) caller_uuid | The caller's UUID. |
+| uint32_t group_id; } | The caller's group ID. |
+| uint8_t ca_info[RESERVED_BUF_SIZE]; } caller_identity | The buffer used to store CA information. |
 | uint8_t smc_from_kernel_mode | Indicates whether the SMC is sent from kernel mode. |
 | uint8_t reserved[RESERVED_BUF_SIZE - 1] | Reserved buffer. |
 

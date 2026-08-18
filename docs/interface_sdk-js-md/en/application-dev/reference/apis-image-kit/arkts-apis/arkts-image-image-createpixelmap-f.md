@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -13,7 +12,7 @@ import { image } from '@kit.ImageKit';
 function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels) instead for better exception handling capabilities.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) instead for better exception handling capabilities.
 
 **Since:** 23
 
@@ -27,7 +26,7 @@ Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to u
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
 | options | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
 
 **Examples**
 
@@ -55,7 +54,7 @@ async function CreatePixelMap() {
 function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>
 ```
 
-Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels) instead for better exception handling capabilities.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) instead for better exception handling capabilities.
 
 **Since:** 23
 

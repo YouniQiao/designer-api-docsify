@@ -24,7 +24,7 @@ Cancel callback when the network state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkState&gt; | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 

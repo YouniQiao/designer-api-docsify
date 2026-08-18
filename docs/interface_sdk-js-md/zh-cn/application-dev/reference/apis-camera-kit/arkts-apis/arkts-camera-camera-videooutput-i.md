@@ -1,8 +1,8 @@
 # VideoOutput
 
-录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)。
+录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
-**继承/实现关系：** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput)
+**继承/实现关系：** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getActiveFrameRate
@@ -142,7 +144,7 @@ Unsubscribes from error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the video output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to get the video output errors. |
 
 ## offFrameEnd
 
@@ -162,7 +164,7 @@ Unsubscribes from frame end event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to return the result. |
 
 ## offFrameStart
 
@@ -182,9 +184,9 @@ Unsubscribes from frame start event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | Callback used to return the result. |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -205,9 +207,9 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，photoOutput创建成功后可监听。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_frameEnd
+## off_frameEnd('frameEnd')
 
 ```TypeScript
 off(type: 'frameEnd', callback?: AsyncCallback<void>): void
@@ -228,9 +230,9 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameEnd' | 是 | 监听事件，固定为'frameEnd'，videoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_frameStart
+## off_frameStart('frameStart')
 
 ```TypeScript
 off(type: 'frameStart', callback?: AsyncCallback<void>): void
@@ -251,7 +253,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameStart' | 是 | 监听事件，固定为'frameStart'，videoOutput创建成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## onError
 
@@ -271,7 +273,7 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the video output errors. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to get the video output errors. |
 
 ## onFrameEnd
 
@@ -291,7 +293,7 @@ Subscribes frame end event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 ## onFrameStart
 
@@ -311,9 +313,9 @@ Subscribes frame start event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -334,9 +336,9 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，videoOutput创建成功后可监听。录像接口调用出现错误时触发该事件并返回对应错误码，比如调用 [start](#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)接口时出现错误返 回对应错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
-## on_frameEnd
+## on_frameEnd('frameEnd')
 
 ```TypeScript
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
@@ -357,9 +359,9 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameEnd' | 是 | 监听事件，固定为'frameEnd'，videoOutput创建成功后可监听。录像完全结束最后一帧时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取结果。 只要有该事件返回就证明录像结束。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取结果。 只要有该事件返回就证明录像结束。 |
 
-## on_frameStart
+## on_frameStart('frameStart')
 
 ```TypeScript
 on(type: 'frameStart', callback: AsyncCallback<void>): void
@@ -380,7 +382,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameStart' | 是 | 监听事件，固定为'frameStart'，videoOutput创建成功后可监听。底层第一次曝光时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取结果。 只要有该事件返回就证明录像开始。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取结果。 只要有该事件返回就证明录像开始。 |
 
 ## setFrameRate
 
@@ -388,7 +390,7 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-设置录像流帧率范围，设置的范围必须在支持的帧率范围内。 进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。 > **说明：** > > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#photosession)或[VideoSession](arkts-camera-camera-videosession-i.md#videosession)模式下支持。 > > 接口调用前，先调用[getActiveFrameRate](#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则 > 下发的帧率不会生效。
+设置录像流帧率范围，设置的范围必须在支持的帧率范围内。 进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。 > **说明：** > > 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。 > > 接口调用前，先调用[getActiveFrameRate](#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则 > 下发的帧率不会生效。
 
 **起始版本：** 23
 
@@ -432,7 +434,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动录制成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动录制成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -490,7 +492,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当结束录制成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当结束录制成功，err为undefined，否则为错误对象。 |
 
 ## stop
 

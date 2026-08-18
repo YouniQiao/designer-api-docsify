@@ -1,8 +1,8 @@
 # HoverEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md#baseevent)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
-**继承/实现关系：** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#baseevent)
+**继承/实现关系：** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **起始版本：** 10
 
@@ -81,7 +81,7 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-相对于全局显示的点的 Y 坐标。
+鼠标光标或手写笔位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 

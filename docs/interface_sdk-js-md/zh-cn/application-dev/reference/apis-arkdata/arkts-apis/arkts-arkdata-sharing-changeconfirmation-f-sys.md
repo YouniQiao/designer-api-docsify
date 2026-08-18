@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## changeConfirmation
@@ -27,7 +28,7 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
 | state | State | 是 | 更改邀请的状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回更改邀请状态的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回更改邀请状态的结果。 |
 
 **错误码：**
 

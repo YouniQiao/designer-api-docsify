@@ -18,7 +18,7 @@ Obtains the default Display object. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
+**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md)
 
 <!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void--><!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void-End-->
 
@@ -28,7 +28,7 @@ Obtains the default Display object. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | Yes | Callback used to return the default Display object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | Yes | Callback used to return the default Display object. |
 
 **Examples**
 
@@ -60,7 +60,7 @@ Obtains the default Display object. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
+**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md)
 
 <!--Device-display-function getDefaultDisplay(): Promise<Display>--><!--Device-display-function getDefaultDisplay(): Promise<Display>-End-->
 

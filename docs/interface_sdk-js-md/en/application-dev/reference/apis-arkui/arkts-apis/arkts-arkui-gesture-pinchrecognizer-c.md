@@ -2,7 +2,7 @@
 
 Defines the pinch gesture recognizer.
 
-**Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#gesturerecognizer)
+**Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 
 **Since:** 23
 

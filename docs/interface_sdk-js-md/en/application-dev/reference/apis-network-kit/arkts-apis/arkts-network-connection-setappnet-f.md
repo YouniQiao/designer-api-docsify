@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
+Binds an application to the network specified by **netHandle**, so that the application can access the external network only through this network. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setAppNet. |
+| netHandle | NetHandle | Yes | Network handle. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the application is successfully bound to the specified network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle)
 function setAppNet(netHandle: NetHandle): Promise<void>
 ```
 
-Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
+Binds an application to the network specified by **netHandle**, so that the application can access the external network only through this network. This API uses a promise to return the result. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -82,13 +82,13 @@ Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

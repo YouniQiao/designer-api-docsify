@@ -33,7 +33,7 @@ import { window } from '@kit.ArkUI';
 | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Callback function for window event |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

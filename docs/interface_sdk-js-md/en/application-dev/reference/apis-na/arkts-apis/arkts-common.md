@@ -16,11 +16,11 @@ Defines the namespace of focus controller.
 | Name | Description |
 | --- | --- |
 | [$$](arkts-na-common-$$-f.md#) | Convert to a bindable property. |
-| [$r](arkts-na-common-$r-f.md#r) | global \\$r function |
-| [$rawfile](arkts-na-common-$rawfile-f.md#rawfile) | global \\$rawfile function |
-| [animateToImmediately](arkts-na-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution. This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use animateToImmediately to explicitly specify the UI context. |
-| [applyStyles](arkts-na-common-applystyles-f.md#applystyles) | Apply style function on this CommonMethod. |
-| [makeBindable](arkts-na-common-makebindable-f.md#makebindable) | Create a bindable property instance. |
+| [$r](arkts-na-common-$r-f.md) | global \\$r function |
+| [$rawfile](arkts-na-common-$rawfile-f.md) | global \\$rawfile function |
+| [animateToImmediately](arkts-na-common-animatetoimmediately-f.md) | Define animation functions for immediate distribution. This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use animateToImmediately to explicitly specify the UI context. |
+| [applyStyles](arkts-na-common-applystyles-f.md) | Apply style function on this CommonMethod. |
+| [makeBindable](arkts-na-common-makebindable-f.md) | Create a bindable property instance. |
 
 ### Classes
 
@@ -39,7 +39,7 @@ Defines the namespace of focus controller.
 | [TransitionEffect](arkts-na-common-transitioneffect-c.md) | Defines the transition effect |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -183,7 +183,7 @@ Defines the namespace of focus controller.
 | [sharedTransitionOptions](arkts-na-common-sharedtransitionoptions-i.md) | Defines the shard transition function params. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -241,7 +241,7 @@ Defines the namespace of focus controller.
 | [ModalMode](arkts-na-common-modalmode-e.md) | Define the modal mode of menu. |
 | [ModalTransition](arkts-na-common-modaltransition-e.md) | Defines modal transition type. |
 | [OutlineStyle](arkts-na-common-outlinestyle-e.md) | Outline Style |
-| [PreDragStatus](arkts-na-common-predragstatus-e.md) | Defines the drag status before drag action. |
+| [PreDragStatus](arkts-na-common-predragstatus-e.md) | 定义拖拽手势触发前的各阶段状态。 |
 | [PreviewScaleMode](arkts-na-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu. |
 | [RepeatMode](arkts-na-common-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
 | [SafeAreaEdge](arkts-na-common-safeareaedge-e.md) | Enumerates the safe area edges. |
@@ -260,7 +260,7 @@ Defines the namespace of focus controller.
 | [TransitionEdge](arkts-na-common-transitionedge-e.md) | Defines the Edge object. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -334,7 +334,7 @@ Defines the namespace of focus controller.
 | [TipsMessageType](arkts-na-tipsmessagetype-t.md) | Defines the TipsMessageType property with ResourceStr and StyledString. |
 | [TouchTestDoneCallback](arkts-na-touchtestdonecallback-t.md) | Defines the callback type used in onTouchTestDone. When the user touch down, the system performs hit test process to collect all gesture recognizers based on the press location, when the collection is completed, and before gesture begin to be recognizing, the callback is triggered, you can get all recognizer's information from this callback. |
 | [TransitionFinishCallback](arkts-na-transitionfinishcallback-t.md) | Defines the finish callback type used in transition. |
-| [TripleLengthDetents](arkts-na-triplelengthdetents-t.md) | Defines the detent array of a three-length. |
+| [TripleLengthDetents](arkts-na-triplelengthdetents-t.md) | Defines the detent array of a three-length. TripleLengthDetents |
 | [UIContext](arkts-na-uicontext-t.md) | UIContext. |
 | [UnifiedData](arkts-na-unifieddata-t.md) | Import the UnifiedData type object for ui component. |
 | [UniformDataType](arkts-na-uniformdatatype-t.md) | Import the UniformDataType type object for ui component. |
@@ -342,7 +342,7 @@ Defines the namespace of focus controller.
 | [VisualEffect](arkts-na-visualeffect-t.md) | VisualEffect |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

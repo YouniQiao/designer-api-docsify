@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor
@@ -467,7 +468,7 @@ try {
 readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 ```
 
-从MessageSequence读取ArrayBuffer类型数据。 - 必须与[writeArrayBuffer](#writearraybuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md#typecode)。
+从MessageSequence读取ArrayBuffer类型数据。 - 必须与[writeArrayBuffer](#writearraybuffer)配对使用。 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。 - typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md)。
 
 **起始版本：** 23
 
@@ -2825,7 +2826,7 @@ try {
 writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 ```
 
-将ArrayBuffer类型数据写入MessageSequence对象。 - 此方法与[readArrayBuffer](#readarraybuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readarraybuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md#typecode)枚举值。
+将ArrayBuffer类型数据写入MessageSequence对象。 - 此方法与[readArrayBuffer](#readarraybuffer)方法配对使用。 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。 - 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readarraybuffer)读取数据。 - typeCode参数决定了数据的写入和读取方式。 - 读写typeCode不匹配会导致数据解析错误。 - 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md)枚举值。
 
 **起始版本：** 23
 

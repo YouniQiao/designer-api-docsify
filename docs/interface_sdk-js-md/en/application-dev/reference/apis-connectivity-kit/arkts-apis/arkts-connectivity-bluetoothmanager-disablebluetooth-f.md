@@ -18,7 +18,7 @@ Disables Bluetooth on a device. On API 10 and above, the permission required by 
 
 **Deprecated since:** 10
 
-**Substitutes:** [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md#disablebluetooth)
+**Substitutes:** [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

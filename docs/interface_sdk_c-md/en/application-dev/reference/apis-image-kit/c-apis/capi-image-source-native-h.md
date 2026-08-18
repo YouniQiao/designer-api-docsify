@@ -190,7 +190,7 @@ Creates the pointer to an OH_ImageSource_Info object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr.</li>          </ul> |
 
 ### OH_ImageSourceInfo_GetWidth()
 
@@ -215,7 +215,7 @@ Obtains the image width.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or width is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or width is nullptr. |
 
 ### OH_ImageSourceInfo_GetHeight()
 
@@ -240,7 +240,7 @@ Obtains the image height.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or height is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or height is nullptr. |
 
 ### OH_ImageSourceInfo_GetDynamicRange()
 
@@ -265,7 +265,7 @@ Obtains the dynamic range of an image.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or isHdr is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or isHdr is nullptr. |
 
 ### OH_ImageSourceInfo_GetMimeType()
 
@@ -290,7 +290,7 @@ Obtains the MIME type of an image source.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or mimeType is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr, or mimeType is nullptr. |
 
 ### OH_ImageSourceInfo_Release()
 
@@ -314,7 +314,7 @@ Releases the pointer to an OH_ImageSource_Info object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) info is nullptr. |
 
 ### OH_DecodingOptions_Create()
 
@@ -338,7 +338,7 @@ Creates the pointer to an OH_DecodingOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptions_GetPixelFormat()
 
@@ -363,7 +363,7 @@ Obtains the pixel format.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or pixelFormat is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or pixelFormat is nullptr. |
 
 ### OH_DecodingOptions_SetPixelFormat()
 
@@ -388,7 +388,7 @@ Sets the pixel format.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_DecodingOptions_GetIndex()
 
@@ -413,7 +413,7 @@ Obtains the index of an image.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or index is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or index is nullptr. |
 
 ### OH_DecodingOptions_SetIndex()
 
@@ -438,7 +438,7 @@ Sets the index for an image.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_DecodingOptions_GetRotate()
 
@@ -463,7 +463,7 @@ Obtains the rotation degree.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or rotate is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or rotate is nullptr. |
 
 ### OH_DecodingOptions_SetRotate()
 
@@ -488,7 +488,7 @@ Sets the rotation angle.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredSize()
 
@@ -513,7 +513,7 @@ Obtains the desired output size.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredSize is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredSize is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredSize()
 
@@ -538,7 +538,7 @@ Sets the desired output size.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredSize is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredSize is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredRegion()
 
@@ -563,7 +563,7 @@ Obtains the region to decode.Since the corresponding **SetDesiredRegion** functi
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredRegion is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredRegion is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredRegion()
 
@@ -588,7 +588,7 @@ Sets the region to decode.The actual decoding will process the entire original i
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredRegion is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredRegion is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredDynamicRange()
 
@@ -613,7 +613,7 @@ Obtains the desired dynamic range configured during decoding.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredDynamicRange is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, or desiredDynamicRange is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredDynamicRange()
 
@@ -638,7 +638,7 @@ Sets the desired dynamic range during decoding.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_DecodingOptions_GetCropAndScaleStrategy()
 
@@ -663,7 +663,7 @@ Obtains the cropping and scaling strategy used during decoding.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The execution is successful. <br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): options or cropAndScaleStrategy is a null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The execution is successful.       <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode): options or cropAndScaleStrategy is a null pointer. |
 
 ### OH_DecodingOptions_SetCropAndScaleStrategy()
 
@@ -688,7 +688,7 @@ Sets the cropping and scaling strategy used during decoding.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is a null pointer or cropAndScaleStrategy is not in the range of Image_CropAndScaleStrategy. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is a null pointer or cropAndScaleStrategy is not in the range of Image_CropAndScaleStrategy. |
 
 ### OH_DecodingOptions_SetDesiredColorSpace()
 
@@ -713,7 +713,7 @@ Sets the desired color space for the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options is a null pointer or colorSpace is not supported. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options is a null pointer or colorSpace is not supported. |
 
 ### OH_DecodingOptions_GetDesiredColorSpace()
 
@@ -738,7 +738,7 @@ Obtains the color space set in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or colorSpace is null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or colorSpace is null pointer. |
 
 ### OH_DecodingOptions_SetCropRegion()
 
@@ -763,7 +763,7 @@ Sets the cropping region in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or cropRegion is null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or cropRegion is null pointer. |
 
 ### OH_DecodingOptions_GetCropRegion()
 
@@ -788,7 +788,7 @@ Obtains the cropping region in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or cropRegion is null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or cropRegion is null pointer. |
 
 ### OH_DecodingOptions_Release()
 
@@ -812,7 +812,7 @@ Releases the pointer to an OH_DecodingOptions object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if options is a null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if options is a null pointer. |
 
 ### OH_ImageSourceNative_CreateFromUri()
 
@@ -838,7 +838,7 @@ Creates the pointer to an OH_ImageSourceNative object based on a URI.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if uri is a null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if uri is a null pointer. |
 
 ### OH_ImageSourceNative_CreateFromFd()
 
@@ -863,7 +863,7 @@ Creates the pointer to an OH_ImageSourceNative object based on a file descriptor
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if fd is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if fd is invalid. |
 
 ### OH_ImageSourceNative_CreateFromData()
 
@@ -889,7 +889,7 @@ Creates the pointer to an OH_ImageSourceNative object based on buffer data.The b
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if data is a null pointer or if dataSize is 0. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if data is a null pointer or if dataSize is 0. |
 
 ### OH_ImageSourceNative_CreateFromDataWithUserBuffer()
 
@@ -915,7 +915,7 @@ Creates an image source from data buffer. The data buffer is directly accessed b
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful. <br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if data or imageSource is a null pointer or if datalength is 0. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.       <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if data or imageSource is a null pointer or if datalength is 0. |
 
 ### OH_ImageSourceNative_CreateFromRawFile()
 
@@ -933,14 +933,14 @@ Creates the pointer to an OH_ImageSourceNative object by using the raw file desc
 
 | Parameter | Description |
 | -- | -- |
-| [RawFileDescriptor](../LocalizationKit/capi-rawfile-rawfiledescriptor.md) *rawFile | Pointer to the file descriptor of the raw file. |
+| RawFileDescriptor *rawFile | Pointer to the file descriptor of the raw file. |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) **res | Double pointer to the OH_ImageSourceNative object created at the C++ local layer. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if rawFile is a null pointer. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) if rawFile is a null pointer. |
 
 ### OH_ImageSourceNative_CreatePixelmap()
 
@@ -966,7 +966,7 @@ Creates the pointer to an OH_PixelmapNative object based on decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_OPTIONS](capi-image-common-h.md#image_errorcode) unsupported options,<br>         e.g, cannot convert image into desired pixel format. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_OPTIONS](capi-image-common-h.md#image_errorcode) unsupported options,          e.g, cannot convert image into desired pixel format. |
 
 ### OH_ImageSourceNative_CreatePixelmapUsingAllocator()
 
@@ -1020,7 +1020,7 @@ Creates an array of OH_PixelmapNative objects based on decoding options.This fun
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or options is nullptr, or resVecPixMap is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or options is nullptr, or resVecPixMap is nullptr. |
 
 ### OH_ImageSourceNative_CreatePicture()
 
@@ -1046,7 +1046,7 @@ Creates the pointer to an OH_PictureNative object based on decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or picture is nullptr.<br>     <br>[IMAGE_DECODE_FAILED](capi-image-common-h.md#image_errorcode) decode failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or picture is nullptr.      <br>[IMAGE_DECODE_FAILED](capi-image-common-h.md#image_errorcode) decode failed. |
 
 ### OH_ImageSourceNative_CreatePictureAtIndex()
 
@@ -1072,7 +1072,7 @@ Creates the pointer to an OH_PictureNative object at the specified index.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The execution is successful.<br>     <br>[IMAGE_BAD_SOURCE](capi-image-common-h.md#image_errorcode): The data source is abnormal.<br>     <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIMETYPE}: The image format is unsupported.<br>     <br>[IMAGE_SOURCE_TOO_LARGE](capi-image-common-h.md#image_errorcode): The image is too large.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_OPTIONS](capi-image-common-h.md#image_errorcode): The operation is not supported, for example, invalid index.<br>     <br>[IMAGE_DECODE_FAILED](capi-image-common-h.md#image_errorcode): Decoding fails. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode): The execution is successful.      <br>[IMAGE_BAD_SOURCE](capi-image-common-h.md#image_errorcode): The data source is abnormal.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIMETYPE}: The image format is unsupported.      <br>[IMAGE_SOURCE_TOO_LARGE](capi-image-common-h.md#image_errorcode): The image is too large.      <br>[IMAGE_SOURCE_UNSUPPORTED_OPTIONS](capi-image-common-h.md#image_errorcode): The operation is not supported, for example, invalid index.      <br>[IMAGE_DECODE_FAILED](capi-image-common-h.md#image_errorcode): Decoding fails. |
 
 ### OH_ImageSourceNative_GetDelayTimeList()
 
@@ -1098,7 +1098,7 @@ Obtains the image delay time list.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or delayTimeList is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or delayTimeList is nullptr. |
 
 ### OH_ImageSourceNative_GetImageInfo()
 
@@ -1124,7 +1124,7 @@ Obtains the information about an image with a given index.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or info is nullptr, or failed to get image info. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or info is nullptr, or failed to get image info. |
 
 ### OH_ImageSourceNative_GetImageProperty()
 
@@ -1150,7 +1150,7 @@ Obtains the value of an image property.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or key is nullptr, or value is nullptr.<br>     <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) allocate memory failed.<br>     <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) copy memory failed. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or key is nullptr, or value is nullptr.      <br>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) allocate memory failed.      <br>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) copy memory failed. |
 
 ### OH_ImageSourceNative_GetImagePropertyWithNull()
 
@@ -1176,7 +1176,7 @@ Obtains the value of an image property from an <b>ImageSource</b> object. The ou
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr. |
 
 ### OH_ImageSourceNative_ModifyImageProperty()
 
@@ -1202,7 +1202,7 @@ Obtains the value of an image property. The output **value.data** is terminated 
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or key is nullptr, or value is nullptr,<br>         or failed to modify image property because of invalid parameters. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or key is nullptr, or value is nullptr,          or failed to modify image property because of invalid parameters. |
 
 ### OH_ImageSourceNative_GetFrameCount()
 
@@ -1227,7 +1227,7 @@ Obtains the number of image frames.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or frameCount is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr, or frameCount is nullptr. |
 
 ### OH_ImageSourceNative_Release()
 
@@ -1251,7 +1251,7 @@ Releases the pointer to an OH_ImageSourceNative object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) source is nullptr. |
 
 ### OH_DecodingOptionsForPicture_Create()
 
@@ -1275,7 +1275,7 @@ Creates the pointer to an OH_DecodingOptionsForPicture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures()
 
@@ -1301,7 +1301,7 @@ Obtains desired auxiliary pictures in the decoding options (auxiliary pictures c
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, desiredAuxiliaryPictures is nullptr,<br>         or length is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
 
 ### OH_DecodingOptionsForPicture_SetDesiredAuxiliaryPictures()
 
@@ -1327,7 +1327,7 @@ Sets desired auxiliary pictures in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, desiredAuxiliaryPictures is nullptr,<br>         or length is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
 
 ### OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData()
 
@@ -1352,7 +1352,7 @@ Obtains the **needsDecodeDfxData** parameter in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or needsDecodeDfxData is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or needsDecodeDfxData is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData()
 
@@ -1377,7 +1377,7 @@ Sets the **needsDecodeDfxData** parameter in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap()
 
@@ -1402,7 +1402,7 @@ Gets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap()
 
@@ -1427,7 +1427,7 @@ Sets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_GetDesiredPixelFormat()
 
@@ -1452,7 +1452,7 @@ Get pixelFormat number for DecodingOptionsForPicture struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_SetDesiredPixelFormat()
 
@@ -1477,7 +1477,7 @@ Set pixelFormat number for DecodingOptionsForPicture struct.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptionsForPicture_Release()
 
@@ -1501,7 +1501,7 @@ Releases the pointer to an OH_DecodingOptionsForPicture object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr. |
 
 ### OH_ImageSourceNative_GetSupportedFormats()
 
@@ -1526,7 +1526,7 @@ Obtains the supported image formats that can be decoded.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if <b>supportedFormats</b> or <b>length</b> is empty. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if <b>supportedFormats</b> or <b>length</b> is empty. |
 
 ### OH_ImageSourceNative_GetImagePropertyShort()
 
@@ -1552,7 +1552,7 @@ Obtains the value of an image property as short int type.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a short int value. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a short int value. |
 
 ### OH_ImageSourceNative_GetImagePropertyLong()
 
@@ -1578,7 +1578,7 @@ Obtains the value of an image property as long int type.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a long int value. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a long int value. |
 
 ### OH_ImageSourceNative_GetImagePropertyDouble()
 
@@ -1604,7 +1604,7 @@ Obtains the value of an image property as double type.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double value. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double value. |
 
 ### OH_ImageSourceNative_GetImagePropertyArraySize()
 
@@ -1630,7 +1630,7 @@ Gets the array length of an array type property or the string length of a string
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or size is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a array\string value. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or size is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a array\string value. |
 
 ### OH_ImageSourceNative_GetImagePropertyString()
 
@@ -1657,7 +1657,7 @@ Obtains the value of an image property as string type.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a string value. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a string value. |
 
 ### OH_ImageSourceNative_GetImagePropertyIntArray()
 
@@ -1684,7 +1684,7 @@ Obtains the value of an image property as int array.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a int array. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a int array. |
 
 ### OH_ImageSourceNative_GetImagePropertyDoubleArray()
 
@@ -1711,7 +1711,7 @@ Obtains the value of an image property as double array.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double array. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double array. |
 
 ### OH_ImageSourceNative_GetImagePropertyBlob()
 
@@ -1738,7 +1738,7 @@ Obtains the value of an image property as blob.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a blob. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key, value or size is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a blob. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyShort()
 
@@ -1764,7 +1764,7 @@ Modify the value of an image property as short int.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a short int. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a short int. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyLong()
 
@@ -1790,7 +1790,7 @@ Modify the value of an image property as long int.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a long int. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a long int. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyDouble()
 
@@ -1816,7 +1816,7 @@ Modify the value of an image property as double.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyIntArray()
 
@@ -1843,7 +1843,7 @@ Modify the value of an image property as int array.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not an int array. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not an int array. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyDoubleArray()
 
@@ -1870,7 +1870,7 @@ Modify the value of an image property as double array.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double array. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a double array. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyBlob()
 
@@ -1897,7 +1897,7 @@ Modify the value of an image property as blob.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a blob. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, key or value is nullptr.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) if query image property of current mimetype is not supported.      <br>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if indicated metadata doesn't exist, or is not a blob. |
 
 ### OH_ImageSourceNative_ReadImageMetadataByType()
 
@@ -1926,7 +1926,7 @@ Read metadata of the image source, use metadatatype to specify metadata of inter
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul><br>         <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>         <li>202 if a non-system application calls this system API.</li><br>         <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, outMetadataArray or metadataCount is nullptr.</li><br>         <li>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if metadata doesn't exist, or types are unsupported.</li><br>         <li>[IMAGE_SOURCE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li><br>         </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if source, outMetadataArray or metadataCount is nullptr.</li>          <li>[IMAGE_SOURCE_UNSUPPORTED_METADATA](capi-image-common-h.md#image_errorcode) if metadata doesn't exist, or types are unsupported.</li>          <li>[IMAGE_SOURCE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          </ul> |
 
 ### OH_ImageSourceNative_CreateImageRawData()
 
@@ -1951,7 +1951,7 @@ Obtains rawData object from an image.The rawData object usually occupies a large
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_BAD_SOURCE](capi-image-common-h.md#image_errorcode) Bad source.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid.<br>     <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) Unsupported MIME type. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_BAD_SOURCE](capi-image-common-h.md#image_errorcode) Bad source.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid.      <br>[IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE](capi-image-common-h.md#image_errorcode) Unsupported MIME type. |
 
 ### OH_ImageSourceNative_GetBufferFromRawData()
 
@@ -1977,7 +1977,7 @@ Gets binary data from the rawData object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
 
 ### OH_ImageSourceNative_GetBitsPerPixelFromRawData()
 
@@ -2002,7 +2002,7 @@ Gets number of bits that each pixel actually occupies in the buffer data.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
 
 ### OH_ImageSourceNative_DestroyImageRawData()
 
@@ -2026,6 +2026,6 @@ Destroys the rawData object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.<br>     <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.      <br>[IMAGE_SOURCE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if the rawData object is invalid. |
 
 

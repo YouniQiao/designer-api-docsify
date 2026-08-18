@@ -1,12 +1,12 @@
 # URLSearchParams(URL字符串解析)
 
-URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md#urlparams)。
+URLSearchParams接口定义了一些处理URL查询字符串的实用方法，从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md)。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#urlparams)
+**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md)
 
 <!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
 
@@ -15,6 +15,7 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 ## 导入模块
 
 ```TypeScript
+import { url } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

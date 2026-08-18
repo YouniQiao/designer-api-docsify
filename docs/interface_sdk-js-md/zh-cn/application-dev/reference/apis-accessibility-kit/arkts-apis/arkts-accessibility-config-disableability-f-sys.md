@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## disableAbility
@@ -11,7 +12,7 @@
 function disableAbility(name: string): Promise<void>
 ```
 
-关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability系统接口)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback系统接口)配对使用。使用Promise异步回调。
+关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -66,7 +67,7 @@ config.disableAbility(name).then(() => {
 function disableAbility(name: string, callback: AsyncCallback<void>): void
 ```
 
-关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability系统接口)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback系统接口)配对使用。使用callback异步回调。
+关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -83,7 +84,7 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 辅助扩展应用的名称，格式为：'bundleName/abilityName'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭辅助扩展成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭辅助扩展成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

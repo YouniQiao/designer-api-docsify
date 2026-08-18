@@ -1,8 +1,8 @@
 # FunctionIntentDecoratorInfo
 
-Parameter type of the @InsightIntentFunctionMethod decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo).
+Parameter type of the @InsightIntentFunctionMethod decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md).
 
-**Inheritance/Implementation:** FunctionIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
+**Inheritance/Implementation:** FunctionIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
 **Since:** 20
 

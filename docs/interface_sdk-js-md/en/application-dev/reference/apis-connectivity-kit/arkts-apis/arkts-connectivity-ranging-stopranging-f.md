@@ -28,7 +28,7 @@ Stops ongoing ranging operations. If no target device is specified, stops rangin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RangingResult](arkts-connectivity-ranging-rangingresult-i.md)&gt; | Yes | Callback used to return the ranging result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RangingResult](arkts-connectivity-ranging-rangingresult-i.md)&gt; | Yes | Callback used to return the ranging result. |
 | params | [RangingParams](arkts-connectivity-ranging-rangingparams-i.md) | No | Parameters for ranging include deviceId and ranging types. |
 
 **Error codes:**

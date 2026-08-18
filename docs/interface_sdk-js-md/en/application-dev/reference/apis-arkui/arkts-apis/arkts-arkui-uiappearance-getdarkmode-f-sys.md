@@ -12,7 +12,7 @@ import { uiAppearance } from '@kit.ArkUI';
 function getDarkMode(): DarkMode
 ```
 
-Obtains the current system dark mode configuration. &lt;!--Del--&gt; > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. &lt;!--DelEnd--&gt;
+Obtains the current system dark mode configuration. <!--Del--> > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. <!--DelEnd-->
 
 **Since:** 10
 

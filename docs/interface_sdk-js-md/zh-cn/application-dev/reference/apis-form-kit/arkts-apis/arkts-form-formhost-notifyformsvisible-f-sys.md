@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formHost } from '@kit.FormKit';
 ```
 
 ## notifyFormsVisible
@@ -29,7 +30,7 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
 | isVisible | boolean | 是 | 表示卡片是否可见。 <br>true: 表示卡片可见。 <br>false: 表示卡片不可见。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否可见成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否可见成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 

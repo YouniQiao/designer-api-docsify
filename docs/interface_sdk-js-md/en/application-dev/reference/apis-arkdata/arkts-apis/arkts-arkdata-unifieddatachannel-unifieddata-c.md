@@ -12,7 +12,6 @@ Provides APIs for encapsulating a set of data records.
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addRecord
@@ -262,7 +261,7 @@ Checks whether this **UnifiedData** object contains the specified data type, inc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Data type to check. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype). |
+| type | string | Yes | Data type to check. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 

@@ -1,8 +1,8 @@
 # ScaleRingStyleOptions
 
-环形有刻度样式选项。 继承自[CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)。
+环形有刻度样式选项。 继承自[CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**继承/实现关系：** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **起始版本：** 23
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## setAppGroup
@@ -31,7 +30,7 @@ Set app group by bundleName.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
 | newGroup | [GroupType](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md) | Yes | the group of the application whose name is bundleName. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

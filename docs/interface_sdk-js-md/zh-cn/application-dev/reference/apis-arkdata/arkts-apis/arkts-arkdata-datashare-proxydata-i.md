@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## allowList
@@ -91,7 +93,7 @@ uri: string
 value?: ValueType
 ```
 
-共享配置的值。不填则为空字符串。 **说明：** 1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md#dataproxyconfig)中配置maxValueLength将最大长度扩展到102400字节。 2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
+共享配置的值。不填则为空字符串。 **说明：** 1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在 [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。 2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
 
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md)
 

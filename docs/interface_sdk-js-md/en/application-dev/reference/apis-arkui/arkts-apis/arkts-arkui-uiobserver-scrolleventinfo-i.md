@@ -82,7 +82,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**Type:** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
+**Type:** [ScrollEventType](../../apis-na/arkts-apis/arkts-na-uiobserver-scrolleventtype-e.md)
 
 **Since:** 12
 

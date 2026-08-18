@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function isBackgroundAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Get the status if applications can use data on background.
+Checks whether the current application is allowed to access the network in the background. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ Get the status if applications can use data on background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of allowed or not to use data on background. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, the value **true** is returned, indicating that the application is allowed to access the network when running at the background. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ policy.isBackgroundAllowed((error: BusinessError, data: boolean) => {
 function isBackgroundAllowed(): Promise<boolean>
 ```
 
-Get the status if applications can use data on background.
+Checks whether the current application is allowed to access the network in the background. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -75,7 +75,7 @@ Get the status if applications can use data on background.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the background policy is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -18,7 +18,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getpowermode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,7 +45,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md#getpowermode)
+**Substitutes:** [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -57,5 +57,5 @@ Obtains the current Wi-Fi power mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Yes | callback function, no return value. |
 

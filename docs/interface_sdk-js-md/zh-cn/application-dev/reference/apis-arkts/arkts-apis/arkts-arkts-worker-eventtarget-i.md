@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#workereventtarget)
+**替代接口：** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## addEventListener

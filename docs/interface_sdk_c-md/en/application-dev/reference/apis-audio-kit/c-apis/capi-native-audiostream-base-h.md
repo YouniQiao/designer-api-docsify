@@ -58,7 +58,7 @@ Declare the underlying data structure.
 | [typedef void (\*OH_AudioRenderer_OutputDeviceChangeCallback)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_DeviceChangeReason reason)](#oh_audiorenderer_outputdevicechangecallback) | OH_AudioRenderer_OutputDeviceChangeCallback | Callback when the output device of an audio renderer changed. |
 | [typedef void (\*OH_AudioRenderer_OnMarkReachedCallback)(OH_AudioRenderer* renderer, uint32_t samplePos, void* userData)](#oh_audiorenderer_onmarkreachedcallback) | OH_AudioRenderer_OnMarkReachedCallback | Callback when the mark position reached. |
 | [typedef int32_t (\*OH_AudioRenderer_WriteDataWithMetadataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize, void* metadata, int32_t metadataSize)](#oh_audiorenderer_writedatawithmetadatacallback) | OH_AudioRenderer_WriteDataWithMetadataCallback | This function pointer will point to the callback function thatis used to write audio data with metadata |
-| [typedef OH_AudioData_Callback_Result (\*OH_AudioRenderer_OnWriteDataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize)](#oh_audiorenderer_onwritedatacallback) | OH_AudioRenderer_OnWriteDataCallback | Callback function of  write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played. |
+| [typedef OH_AudioData_Callback_Result (\*OH_AudioRenderer_OnWriteDataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize)](#oh_audiorenderer_onwritedatacallback) | OH_AudioRenderer_OnWriteDataCallback | Callback function of write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played. |
 
 ## Enum type description
 
@@ -489,7 +489,7 @@ Callback when the output device of an audio renderer changed.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioRenderer\* renderer | AudioRenderer where this event occurs. |
+| [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)\* renderer | AudioRenderer where this event occurs. |
 | void\* userData | User data which is passed by user. |
 | [OH_AudioStream_DeviceChangeReason](capi-native-audiostream-base-h.md#oh_audiostream_devicechangereason) reason | Indicates that why does the output device changes. |
 
@@ -509,7 +509,7 @@ Callback when the mark position reached.
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioRenderer\* renderer | AudioRenderer where this event occurs. |
+| [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)\* renderer | AudioRenderer where this event occurs. |
 | uint32_t samplePos | Mark position in samples. |
 | void\* userData | User data which is passed by user. |
 
@@ -529,7 +529,7 @@ This function pointer will point to the callback function thatis used to write a
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioRenderer\* renderer | AudioRenderer where this event occurs. |
+| [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)\* renderer | AudioRenderer where this event occurs. |
 | void\* userData | User data which is passed by user. |
 | void\* audioData | Audio data which is written by user. |
 | int32_t audioDataSize | Audio data size which is the size of audio data written by user, unit is byte. |
@@ -550,7 +550,7 @@ typedef OH_AudioData_Callback_Result (*OH_AudioRenderer_OnWriteDataCallback)(OH_
 
 **Description**
 
-Callback function of  write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played.
+Callback function of write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played.
 
 **Since**: 12
 
@@ -558,7 +558,7 @@ Callback function of  write data.This function is similar with OH_AudioRenderer_
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioRenderer\* renderer | AudioRenderer where this callback occurs. |
+| [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)\* renderer | AudioRenderer where this callback occurs. |
 | void\* userData | User data which is passed by user. |
 | void\* audioData | Audio data pointer, where user should fill in audio data. |
 | int32_t audioDataSize | Size of audio data that user should fill in, unit is byte. |

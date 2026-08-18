@@ -6,8 +6,8 @@
 
 | Name | Description |
 | --- | --- |
-| [Button](arkts-na-button-button-f.md#button) | Defines Button Component. |
-| [Button](arkts-na-button-button-f.md#button) | Defines Button Component. |
+| [Button](arkts-na-button-button-f.md) | Defines Button Component. |
+| [Button](arkts-na-button-button-f.md) | Defines Button Component. |
 
 ### Classes
 

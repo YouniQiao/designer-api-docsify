@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## getCrossingSwitchState
@@ -17,7 +18,7 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 
 **废弃版本：** 11
 
-**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
+**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -30,7 +31,7 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 键鼠穿越目标设备描述符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示目标设备键鼠穿越的开关开启， 返回false表示开关未开启。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示目标设备键鼠穿越的开关开启， 返回false表示开关未开启。 |
 
 **错误码：**
 
@@ -71,7 +72,7 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 
 **废弃版本：** 11
 
-**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate系统接口)(networkId: string)
+**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
 

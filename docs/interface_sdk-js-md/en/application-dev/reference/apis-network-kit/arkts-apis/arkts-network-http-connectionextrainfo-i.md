@@ -1,8 +1,8 @@
 # ConnectionExtraInfo
 
-Information details of the HTTP request
+Defines the detailed information about the HTTP request interaction.
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-http-export interface ConnectionExtraInfo--><!--Device-http-export interface ConnectionExtraInfo-End-->
 
@@ -20,11 +20,11 @@ import { http } from '@kit.NetworkKit';
 cipherSuite?: CipherSuite
 ```
 
-The cipher suite used to fetch the resource.
+Cipher suite used in the request. It is returned only when the TLS protocol is used.
 
 **Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +38,11 @@ The cipher suite used to fetch the resource.
 isCacheHit: boolean
 ```
 
-A Boolean value that indicates whether the http request hit cache.
+Whether the local cache is hit in the request process. **true**: yes; **false**: no.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ A Boolean value that indicates whether the http request hit cache.
 isProxyConnection: boolean
 ```
 
-A Boolean value that indicastes whether the task used a proxy connection to fetch the resource.
+Whether to use a proxy in the request process. **true**: yes; **false**: no.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +74,11 @@ A Boolean value that indicastes whether the task used a proxy connection to fetc
 isReusedConnection: boolean
 ```
 
-The HTTP request is a reused connection or not.
+Whether to reuse the connection in the request process. **true**: yes; **false**: no.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,11 +92,11 @@ The HTTP request is a reused connection or not.
 localAddress: string
 ```
 
-localAddress of the HTTP request.
+IP address of the client in the request process.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,11 +110,11 @@ localAddress of the HTTP request.
 localPort: int
 ```
 
-localPort of the HTTP request. -1 for unknown.
+Port number of the client in the request process. The value ranges from 1 to 65535.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,11 +128,11 @@ localPort of the HTTP request. -1 for unknown.
 networkProtocolName: string
 ```
 
-The network protocol used to fetch the resource.
+HTTP version used in the [request](arkts-network-http-httprequest-i.md#request), for example, 'HTTP /1.0', 'HTTP/1.1', 'HTTP/2', 'HTTP/2 over TLS', 'HTTP/3', or 'Unknown/Non-HTTP'.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,11 +146,11 @@ The network protocol used to fetch the resource.
 redirectCount: int
 ```
 
-The HTTP request redirect count.
+Number of redirections in the request process.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,11 +164,11 @@ The HTTP request redirect count.
 remoteAddress: string
 ```
 
-remoteAddress of the HTTP request.
+IP address of the server in the request process.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,11 +182,11 @@ remoteAddress of the HTTP request.
 remotePort: int
 ```
 
-remotePort of the HTTP request. -1 for unknown.
+Port number of the server in the request process. The value ranges from 1 to 65535.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,11 +200,11 @@ remotePort of the HTTP request. -1 for unknown.
 tlsVersion?: TlsVersion
 ```
 
-The tls version used to fetch the resource.
+TLS version used in the request. It is returned only when the TLS protocol is used.
 
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

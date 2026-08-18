@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## createStreamSync
@@ -11,7 +14,7 @@
 declare function createStreamSync(path: string, mode: string): Stream
 ```
 
-以同步方法基于文件路径创建文件流。需要配合[Stream](arkts-corefile-file-fs-stream-i.md#stream)中的close()函数关闭文件流。
+以同步方法基于文件路径创建文件流。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
 

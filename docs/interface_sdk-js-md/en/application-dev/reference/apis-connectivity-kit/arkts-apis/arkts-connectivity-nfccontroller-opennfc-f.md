@@ -18,7 +18,7 @@ Enables NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md#enablenfc)
+**Substitutes:** [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

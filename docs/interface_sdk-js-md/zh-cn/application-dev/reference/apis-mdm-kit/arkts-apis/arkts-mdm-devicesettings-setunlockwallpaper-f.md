@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## setUnlockWallpaper
@@ -28,7 +29,7 @@ function setUnlockWallpaper(admin: Want, fd: number):  Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| fd | number | 是 | 需要设置为锁屏壁纸图片的文件描述符，可以通过file.fs的[openSync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-opensync-f.md#opensync)接口获取应用沙箱目录下的图片文件描述符。壁纸 图片大小不能超过100MB。 |
+| fd | number | 是 | 需要设置为锁屏壁纸图片的文件描述符，可以通过file.fs的[openSync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-opensync-f.md)接口获取应用沙箱目录下的图片文件描述符。壁纸 图片大小不能超过100MB。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Defines an ellipse drawing class.
 
-**Inheritance/Implementation:** EllipseShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
+**Inheritance/Implementation:** EllipseShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md)
 
 **Since:** 23
 

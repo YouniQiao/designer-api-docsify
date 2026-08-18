@@ -56,5 +56,10 @@ Row(options?: RowOptions | RowOptionsV2)
 
 ## 汇总
 
-- [RowOptions](arkts-arkui-rowoptions-i.md)
-- [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [RowOptions](arkts-arkui-rowoptions-i.md) | 设置Row组件的子组件间距属性。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | 设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
+

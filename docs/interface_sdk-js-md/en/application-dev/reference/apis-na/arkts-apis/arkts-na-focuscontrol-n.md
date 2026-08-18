@@ -18,5 +18,5 @@ Defines the namespace of focus controller.
 
 | Name | Description |
 | --- | --- |
-| [requestFocus](arkts-na-focuscontrol-requestfocus-f.md#requestfocus) | Request focus to the specific component by param: 'id/key'. |
+| [requestFocus](arkts-na-focuscontrol-requestfocus-f.md) | Request focus to the specific component by param: 'id/key'. |
 

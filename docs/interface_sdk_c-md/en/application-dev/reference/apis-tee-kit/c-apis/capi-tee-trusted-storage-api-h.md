@@ -178,7 +178,7 @@ Creates a persistent object.This function creates a persistent object with initi
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the storage specified by <b>storageID</b> does not exist.<br>         Returns <b>TEE_ERROR_ACCESS_CONFLICT</b> if an access conflict occurs.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation.<br>         Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if there is no enough space to create the object. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the storage specified by <b>storageID</b> does not exist.          Returns <b>TEE_ERROR_ACCESS_CONFLICT</b> if an access conflict occurs.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation.          Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if there is no enough space to create the object. |
 
 ### TEE_OpenPersistentObject()
 
@@ -206,7 +206,7 @@ Opens an existing persistent object.The handle returned can be used to access th
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the storage specified by <b>storageID</b> does not exist<br> or the object identifier cannot be found in the storage.<br>         Returns <b>TEE_ERROR_ACCESS_CONFLICT</b> if an access conflict occurs.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_ITEM_NOT_FOUND</b> if the storage specified by <b>storageID</b> does not exist  or the object identifier cannot be found in the storage.          Returns <b>TEE_ERROR_ACCESS_CONFLICT</b> if an access conflict occurs.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation. |
 
 ### TEE_ReadObjectData()
 
@@ -233,7 +233,7 @@ Reads data from the data stream associated with an object into the buffer.The <b
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation. |
 
 ### TEE_WriteObjectData()
 
@@ -259,7 +259,7 @@ Writes bytes from the buffer to the data stream associated with an object.The <b
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation.<br>         Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if the storage space is not sufficient to complete the operation. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OUT_OF_MEMORY</b> if the memory is not sufficient to complete the operation.          Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if the storage space is not sufficient to complete the operation. |
 
 ### TEE_TruncateObjectData()
 
@@ -284,7 +284,7 @@ Changes the size of a data stream.If the size is less than the current size of t
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if the storage space is not sufficient to complete the operation. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_STORAGE_NO_SPACE</b> if the storage space is not sufficient to complete the operation. |
 
 ### TEE_SeekObjectData()
 
@@ -310,7 +310,7 @@ Sets the position of the data stream to which <b>TEE_ObjectHandle</b> points.The
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW</b> if the position indicator resulting from this operation<br> is greater than <b>TEE_DATA_MAX_POSIT</b>. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW</b> if the position indicator resulting from this operation  is greater than <b>TEE_DATA_MAX_POSIT</b>. |
 
 ### TEE_SyncPersistentObject()
 
@@ -384,6 +384,6 @@ Closes a <b>TEE_ObjectHandle</b> and deletes the object.The object must be a per
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_STORAGE_NOT_AVAILABLE</b> if the object is stored<br> in a storage area that is inaccessible currently. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_STORAGE_NOT_AVAILABLE</b> if the object is stored  in a storage area that is inaccessible currently. |
 
 

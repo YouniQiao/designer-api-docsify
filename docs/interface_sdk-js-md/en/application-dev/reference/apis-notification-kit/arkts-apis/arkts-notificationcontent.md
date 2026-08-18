@@ -18,7 +18,7 @@
 | [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md) | Describes the notification timing information. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -32,7 +32,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -41,7 +41,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

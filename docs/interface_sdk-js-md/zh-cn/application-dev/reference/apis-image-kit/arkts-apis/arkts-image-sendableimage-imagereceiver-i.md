@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -54,7 +55,7 @@ async function GetReceivingSurfaceId() {
 }
 ```
 
-## on_imageArrival
+## on_imageArrival('imageArrival')
 
 ```TypeScript
 on(type: 'imageArrival', callback: AsyncCallback<void>): void
@@ -73,7 +74,7 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 注册的事件回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 注册的事件回调。 |
 
 **示例**
 
@@ -99,7 +100,7 @@ async function On() {
 readLatestImage(): Promise<Image>
 ```
 
-从ImageReceiver读取最新的图片。使用promise异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md#image)对象使 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取最新的图片。使用promise异步回调。 > **注意**： > > 此接口需要在[on](#on_imagearrivalimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
 
@@ -140,7 +141,7 @@ async function ReadLatestImage() {
 readNextImage(): Promise<Image>
 ```
 
-从ImageReceiver读取下一张图片。使用promise异步回调。 > **注意**： > > 此接口需要在[on](#onimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md#image)对象使 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
+从ImageReceiver读取下一张图片。使用promise异步回调。 > **注意**： > > 此接口需要在[on](#on_imagearrivalimagearrival)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使 > 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
 

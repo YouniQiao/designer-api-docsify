@@ -6,7 +6,7 @@
 export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void
 ```
 
-Binds a TextController instance to a [Text](arkts-arkui-typenode-text-t.md#text) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a TextController instance to a [Text](../../apis-na/arkts-apis/arkts-na-typenode-text-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ Binds a TextController instance to a [Text](arkts-arkui-typenode-text-t.md#text)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node for controller binding. |
 | controller | TextController | Yes | TextController** instance to bind. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
@@ -87,7 +87,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-Binds a SwiperController instance to the [Swiper](arkts-arkui-typenode-swiper-t.md#swiper) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a SwiperController instance to the [Swiper](../../apis-na/arkts-apis/arkts-na-typenode-swiper-t.md) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -103,7 +103,7 @@ Binds a SwiperController instance to the [Swiper](arkts-arkui-typenode-swiper-t.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node for controller binding. |
 | controller | SwiperController | Yes | SwiperController** instance. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
@@ -125,7 +125,7 @@ See the example for createNode('Swiper')12+.
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-Binds the Scroller to the [Scroll](arkts-arkui-typenode-scroll-t.md#scroll) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the Scroller to the [Scroll](../../apis-na/arkts-apis/arkts-na-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 15
 
@@ -141,7 +141,7 @@ Binds the Scroller to the [Scroll](arkts-arkui-typenode-scroll-t.md#scroll) node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'Scroll' | Yes | Node type, which is **Scroll** in this API. |
 
@@ -165,7 +165,7 @@ typeNode.bindController(node, scroller, 'Scroll');
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-Binds a Scroller instance to the [List](arkts-arkui-typenode-list-t.md#list) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [List](../../apis-na/arkts-apis/arkts-na-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -181,7 +181,7 @@ Binds a Scroller instance to the [List](arkts-arkui-typenode-list-t.md#list) nod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
@@ -205,7 +205,7 @@ typeNode.bindController(node, scroller, 'List');
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-Binds the TextInputController to the [TextInput](arkts-arkui-typenode-textinput-t.md#textinput) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the TextInputController to the [TextInput](../../apis-na/arkts-apis/arkts-na-typenode-textinput-t.md) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -221,7 +221,7 @@ Binds the TextInputController to the [TextInput](arkts-arkui-typenode-textinput-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
 | controller | TextInputController | Yes | Input box controller. |
 | nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
@@ -279,7 +279,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void
 ```
 
-Binds a Scroller instance to the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#waterflow) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [WaterFlow](../../apis-na/arkts-apis/arkts-na-typenode-waterflow-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -295,7 +295,7 @@ Binds a Scroller instance to the [WaterFlow](arkts-arkui-typenode-waterflow-t.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
@@ -319,7 +319,7 @@ typeNode.bindController(node, scroller, 'WaterFlow');
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-Binds a TextAreaController instance to the [TextArea](arkts-arkui-typenode-textarea-t.md#textarea) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a TextAreaController instance to the [TextArea](../../apis-na/arkts-apis/arkts-na-typenode-textarea-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -335,7 +335,7 @@ Binds a TextAreaController instance to the [TextArea](arkts-arkui-typenode-texta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the input box controller is bound. |
 | controller | TextAreaController | Yes | Input box controller. |
 | nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
@@ -393,7 +393,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-Binds a Scroller instance to the [Grid](arkts-arkui-typenode-grid-t.md#grid) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [Grid](../../apis-na/arkts-apis/arkts-na-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
@@ -409,7 +409,7 @@ Binds a Scroller instance to the [Grid](arkts-arkui-typenode-grid-t.md#grid) nod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
+| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | Yes | Target node to which the scroll controller is bound. |
 | controller | Scroller | Yes | Scroll controller. |
 | nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 

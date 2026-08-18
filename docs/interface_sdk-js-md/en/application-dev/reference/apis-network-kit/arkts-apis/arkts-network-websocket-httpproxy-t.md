@@ -4,7 +4,9 @@
 type HttpProxy = connection.HttpProxy
 ```
 
-**Since:** 24
+Defines the global HTTP proxy configuration of the network.
+
+**Since:** 23
 
 <!--Device-webSocket-type HttpProxy = connection.HttpProxy--><!--Device-webSocket-type HttpProxy = connection.HttpProxy-End-->
 

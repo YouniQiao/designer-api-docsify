@@ -2,7 +2,7 @@
 
 Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery-system-api)
+**Inheritance/Implementation:** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
 
 **Since:** 23
 

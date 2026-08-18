@@ -12,7 +12,6 @@ Failed policy result on URI.
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## code

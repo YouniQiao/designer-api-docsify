@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { startupManager } from '@kit.AbilityKit';
-import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## isStartupTaskInitialized
@@ -27,7 +26,7 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#startuptask) or name of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 

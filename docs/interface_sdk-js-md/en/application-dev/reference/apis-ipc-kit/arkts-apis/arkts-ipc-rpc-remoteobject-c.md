@@ -2,7 +2,7 @@
 
 Provides methods to implement **RemoteObject**. The service provider must inherit from this class.
 
-**Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#iremoteobject)
+**Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
 
 **Since:** 23
 
@@ -707,7 +707,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
@@ -900,5 +900,5 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 

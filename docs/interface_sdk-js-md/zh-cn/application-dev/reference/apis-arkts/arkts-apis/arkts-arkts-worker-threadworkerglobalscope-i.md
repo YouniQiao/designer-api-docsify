@@ -2,7 +2,7 @@
 
 Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。 ThreadWorkerGlobalScope类继承GlobalScope9+。
 
-**继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#globalscope)
+**继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
 
 **起始版本：** 9
 
@@ -13,6 +13,7 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 ## 导入模块
 
 ```TypeScript
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod

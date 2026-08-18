@@ -1,6 +1,6 @@
 # CertificatePinning
 
-Certificate pinning option.
+Defines the dynamic configuration of certificate pinning.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 hashAlgorithm: 'SHA-256'
 ```
 
-Certificate public key hash algorithm.
+Encryption algorithm. Currently, only SHA-256 is supported.
 
 **Type:** 'SHA-256'
 
@@ -36,7 +36,7 @@ Certificate public key hash algorithm.
 publicKeyHash: string
 ```
 
-Public key hash.
+Certificate PIN of the string type.
 
 **Type:** string
 

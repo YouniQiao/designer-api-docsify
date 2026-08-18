@@ -18,7 +18,7 @@ blurEffectiveEndOffset?: LengthMetrics
 
 标题栏达到最终模糊样式的内容区最大滑动距离。 默认值： 8vp。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ blurEffectiveStartOffset?: LengthMetrics
 
 开启标题栏滑动模糊效果的内容区最小滑动距离。 默认值： 0vp。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 

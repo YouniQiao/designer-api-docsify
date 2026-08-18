@@ -29,7 +29,7 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Bluetooth protocol array. |
 
 **Error codes:**
@@ -86,7 +86,7 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br> You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 | protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be removed from the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy. |
 

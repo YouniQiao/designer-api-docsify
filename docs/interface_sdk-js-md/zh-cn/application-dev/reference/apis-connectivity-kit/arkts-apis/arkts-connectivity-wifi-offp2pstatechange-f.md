@@ -3,9 +3,13 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_p2pStateChange
+## off_p2pStateChange('p2pStateChange')
 
 ```TypeScript
 function off(type: 'p2pStateChange', callback?: Callback<number>): void
@@ -30,7 +34,7 @@ function off(type: 'p2pStateChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。1:空闲，2:打开中，3:已打开，4:关闭中，5:已关闭 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。1:空闲，2:打开中，3:已打开，4:关闭中，5:已关闭 |
 
 **示例**
 

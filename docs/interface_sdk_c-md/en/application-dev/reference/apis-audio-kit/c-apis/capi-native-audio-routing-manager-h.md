@@ -24,8 +24,7 @@ Declare audio routing manager related interfaces.This file interface is used for
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef int32_t (\*OH_AudioRoutingManager_OnDeviceChangedCallback)(OH_AudioDevice_ChangeType type, OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray
-)](#oh_audioroutingmanager_ondevicechangedcallback) | OH_AudioRoutingManager_OnDeviceChangedCallback | This function pointer will point to the callback function thatis used to return the changing audio device descriptors.There may be more than one audio device descriptor returned. |
+| [typedef int32_t (\*OH_AudioRoutingManager_OnDeviceChangedCallback)(OH_AudioDevice_ChangeType type, OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray)](#oh_audioroutingmanager_ondevicechangedcallback) | OH_AudioRoutingManager_OnDeviceChangedCallback | This function pointer will point to the callback function thatis used to return the changing audio device descriptors.There may be more than one audio device descriptor returned. |
 | [typedef int32_t (\*OH_AudioRoutingManager_OnPreferredOutputDeviceChangedCallback)(OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray)](#oh_audioroutingmanager_onpreferredoutputdevicechangedcallback) | OH_AudioRoutingManager_OnPreferredOutputDeviceChangedCallback | This callback function pointer is used to return the preferred audio output devicedescriptors. Multiple audio device descriptors may be returned. |
 | [typedef int32_t (\*OH_AudioRoutingManager_OnPreferredInputDeviceChangedCallback)(OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray)](#oh_audioroutingmanager_onpreferredinputdevicechangedcallback) | OH_AudioRoutingManager_OnPreferredInputDeviceChangedCallback | This callback function pointer is used to return the preferred audio input devicedescriptors. Multiple audio device descriptors may be returned. |
 | [OH_AudioCommon_Result OH_AudioManager_GetAudioRoutingManager(OH_AudioRoutingManager **audioRoutingManager)](#oh_audiomanager_getaudioroutingmanager) | - | Query the audio routing manager handle.which should be set as the first parameter in routing releated functions. |
@@ -49,8 +48,7 @@ Declare audio routing manager related interfaces.This file interface is used for
 ### OH_AudioRoutingManager_OnDeviceChangedCallback()
 
 ```c
-typedef int32_t (*OH_AudioRoutingManager_OnDeviceChangedCallback)(OH_AudioDevice_ChangeType type, OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray
-)
+typedef int32_t (*OH_AudioRoutingManager_OnDeviceChangedCallback)(OH_AudioDevice_ChangeType type, OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray)
 ```
 
 **Description**
@@ -63,7 +61,7 @@ This function pointer will point to the callback function thatis used to return 
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioDevice_ChangeType type | the [OH_AudioDevice_ChangeType](capi-native-audio-device-base-h.md#oh_audiodevice_changetype) is connect or disconnect. |
+| [OH_AudioDevice_ChangeType](capi-native-audio-device-base-h.md#oh_audiodevice_changetype) type | the [OH_AudioDevice_ChangeType](capi-native-audio-device-base-h.md#oh_audiodevice_changetype) is connect or disconnect. |
 | [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) \*audioDeviceDescriptorArray | the [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md)pointer variable which will be set the audio device descriptors value.Do not release the audioDeviceDescriptorArray pointer separatelyinstead call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor arraywhen it is no use anymore. |
 
 ### OH_AudioRoutingManager_OnPreferredOutputDeviceChangedCallback()
@@ -82,7 +80,7 @@ This callback function pointer is used to return the preferred audio output devi
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioDeviceDescriptorArray \*audioDeviceDescriptorArray | a pointer to [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) that willbe populated with the audio output device descriptor values. Do not release this pointerseparately; instead, call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the devicedescriptor array when it is no longer needed. |
+| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) \*audioDeviceDescriptorArray | a pointer to [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) that willbe populated with the audio output device descriptor values. Do not release this pointerseparately; instead, call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the devicedescriptor array when it is no longer needed. |
 
 ### OH_AudioRoutingManager_OnPreferredInputDeviceChangedCallback()
 
@@ -100,7 +98,7 @@ This callback function pointer is used to return the preferred audio input devic
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioDeviceDescriptorArray \*audioDeviceDescriptorArray | pointer to [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) that willbe populated with the audio input device descriptor values. Do not release this pointerseparately; instead, call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the devicedescriptor array when it is no longer needed. |
+| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) \*audioDeviceDescriptorArray | pointer to [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) that willbe populated with the audio input device descriptor values. Do not release this pointerseparately; instead, call [OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the devicedescriptor array when it is no longer needed. |
 
 ### OH_AudioManager_GetAudioRoutingManager()
 
@@ -124,7 +122,7 @@ Query the audio routing manager handle.which should be set as the first paramete
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful. |
 
 ### OH_AudioRoutingManager_GetDevices()
 
@@ -150,7 +148,7 @@ Query the available devices according to the input deviceFlag.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of deviceFlag invalid;<br>                                                        3.The param of audioDeviceDescriptorArray is nullptr.<br>         [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) The param of audioDeviceDescriptorArray is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of deviceFlag invalid;                                                         3.The param of audioDeviceDescriptorArray is nullptr.          [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) The param of audioDeviceDescriptorArray is nullptr. |
 
 ### OH_AudioRoutingManager_GetAvailableDevices()
 
@@ -176,7 +174,7 @@ Get available devices by device usage.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of deviceUsage is invalid;<br>                                                        3.The param of audioDeviceDescriptorArray is nullptr.<br>         [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of deviceUsage is invalid;                                                         3.The param of audioDeviceDescriptorArray is nullptr.          [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
 
 ### OH_AudioRoutingManager_GetPreferredOutputDevice()
 
@@ -202,7 +200,7 @@ Get preferred output devices by audio usage.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of streamUsage is invalid;<br>                                                        3.The param of audioDeviceDescriptorArray is nullptr.<br>         [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of streamUsage is invalid;                                                         3.The param of audioDeviceDescriptorArray is nullptr.          [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
 
 ### OH_AudioRoutingManager_GetPreferredInputDevice()
 
@@ -228,7 +226,7 @@ Get preferred input devices by audio source type.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of sourceType is invalid;<br>                                                        3.The param of audioDeviceDescriptorArray is nullptr.<br>         [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of sourceType is invalid;                                                         3.The param of audioDeviceDescriptorArray is nullptr.          [AUDIOCOMMON_RESULT_ERROR_NO_MEMORY](capi-native-audio-common-h.md#oh_audiocommon_result) No memory error. |
 
 ### OH_AudioRoutingManager_RegisterDeviceChangeCallback()
 
@@ -254,7 +252,7 @@ Register the device change callback of the audio routing manager.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of deviceFlag invalid;<br>                                                        3.The param of callback is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of deviceFlag invalid;                                                         3.The param of callback is nullptr. |
 
 ### OH_AudioRoutingManager_UnregisterDeviceChangeCallback()
 
@@ -279,7 +277,7 @@ Unregister the device change callback of the audio routing manager.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of callback is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of callback is nullptr. |
 
 ### OH_AudioRoutingManager_RegisterPreferredOutputDevicesChangeCallback()
 
@@ -305,7 +303,7 @@ Subscribes to preferred output device change events. When the preferred output d
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
 
 ### OH_AudioRoutingManager_UnregisterPreferredOutputDevicesChangeCallback()
 
@@ -330,7 +328,7 @@ Unsubscribes from the preferred output device change events that were registered
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
 
 ### OH_AudioRoutingManager_RegisterPreferredInputDevicesChangeCallback()
 
@@ -356,7 +354,7 @@ Subscribes to preferred input device change events. When preferred input device 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
 
 ### OH_AudioRoutingManager_UnregisterPreferredInputDevicesChangeCallback()
 
@@ -381,7 +379,7 @@ Unsubscribes from the preferred input device change events that were registered 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,<br>     or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,<br>     or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds,      or [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result) if parameter validation fails,      or [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) Audio client call audio service error, System error. |
 
 ### OH_AudioRoutingManager_ReleaseDevices()
 
@@ -406,7 +404,7 @@ Release the audio device descriptor array object.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>         [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>         [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                        1.The param of audioRoutingManager is nullptr;<br>                                                        2.The param of audioDeviceDescriptorArray is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioRoutingManager is nullptr;                                                         2.The param of audioDeviceDescriptorArray is nullptr. |
 
 ### OH_AudioRoutingManager_OnDeviceBlockStatusCallback()
 
@@ -424,7 +422,7 @@ This type defines the callback function that is used to receive the audio device
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AudioDeviceDescriptorArray \*audioDeviceDescriptorArray | The [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md)pointer variable which will be set the audio device descriptors value.Do not release the audioDeviceDescriptorArray pointer separately instead of calling[OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
+| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) \*audioDeviceDescriptorArray | The [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md)pointer variable which will be set the audio device descriptors value.Do not release the audioDeviceDescriptorArray pointer separately instead of calling[OH_AudioRoutingManager_ReleaseDevices](capi-native-audio-routing-manager-h.md#oh_audioroutingmanager_releasedevices) to release the DeviceDescriptor array when it is no use anymore. |
 | [OH_AudioDevice_BlockStatus](capi-native-audio-device-base-h.md#oh_audiodevice_blockstatus) status | The [OH_AudioDevice_BlockStatus](capi-native-audio-device-base-h.md#oh_audiodevice_blockstatus) is the block status. |
 | void \*userData | User data which is passed by user. |
 
@@ -451,7 +449,7 @@ Query whether microphone block detection is supported on current device.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                    1.The param of audioRoutingManager is nullptr;<br>                                                    2.The param of supported is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                     1.The param of audioRoutingManager is nullptr;                                                     2.The param of supported is nullptr. |
 
 ### OH_AudioRoutingManager_SetMicBlockStatusCallback()
 
@@ -477,6 +475,6 @@ Set the microphone block status callback. Before using this function, users shou
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:<br>     [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.<br>     [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):<br>                                                    1.The param of audioRoutingManager is nullptr;<br>                                                    2.The param of callback is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                     1.The param of audioRoutingManager is nullptr;                                                     2.The param of callback is nullptr. |
 
 

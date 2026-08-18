@@ -14,7 +14,6 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## amPMSymbol

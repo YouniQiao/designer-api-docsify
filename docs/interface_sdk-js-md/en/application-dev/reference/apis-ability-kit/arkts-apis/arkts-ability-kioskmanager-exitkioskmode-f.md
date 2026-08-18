@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { kioskManager } from '@kit.AbilityKit';
-import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## exitKioskMode

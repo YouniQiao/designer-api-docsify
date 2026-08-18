@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#backgroundmode)
+**替代接口：** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)
 
 <!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
 

@@ -36,7 +36,7 @@ range: ParticleTuple<double, double>
 updater?: ParticleUpdaterOptions
 ```
 
-属性变化配置。属性变化类型type有三类： 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.NONE]。 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.RANDOM]。 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#particlepropertyupdaterconfigs)[ParticleUpdater.CURVE] 默认值：type默认为ParticleUpdater.NONE。
+属性变化配置。属性变化类型type有三类： 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.NONE]。 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.RANDOM]。 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为 [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)[ParticleUpdater.CURVE] 默认值：type默认为ParticleUpdater.NONE。
 
 **类型：** [ParticleUpdaterOptions](arkts-arkui-particle-particleupdateroptions-i.md)
 

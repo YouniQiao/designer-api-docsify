@@ -12,7 +12,7 @@
 | [LunarSwitchStyle](arkts-na-datepicker-lunarswitchstyle-i.md) | Defines the style of the lunar calendar switch in the DatePickerDialog component. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

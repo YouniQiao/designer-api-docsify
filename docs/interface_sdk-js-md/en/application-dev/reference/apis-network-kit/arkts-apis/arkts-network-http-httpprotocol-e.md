@@ -1,6 +1,6 @@
 # HttpProtocol
 
-Supported protocols.
+Enumerates HTTP protocol versions.
 
 **Since:** 23
 
@@ -11,46 +11,46 @@ Supported protocols.
 ## HTTP1_1
 
 ```TypeScript
-HTTP1_1
+HTTP1_1 = 0
 ```
 
-Protocol http1.1
+HTTP1.1.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpProtocol-HTTP1_1--><!--Device-HttpProtocol-HTTP1_1-End-->
+<!--Device-HttpProtocol-HTTP1_1 = 0--><!--Device-HttpProtocol-HTTP1_1 = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## HTTP2
 
 ```TypeScript
-HTTP2
+HTTP2 = 1
 ```
 
-Protocol http2
+HTTP2.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpProtocol-HTTP2--><!--Device-HttpProtocol-HTTP2-End-->
+<!--Device-HttpProtocol-HTTP2 = 1--><!--Device-HttpProtocol-HTTP2 = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## HTTP3
 
 ```TypeScript
-HTTP3
+HTTP3 = 2
 ```
 
-Protocol http3 for https only. Cause error if using http only or not supporting http3 on this device. Fallback to http2 or http1.1 if needed.
+HTTP3. If the system or server does not support HTTP3, the HTTP protocol of an earlier version is used. **Note：**: This parameter takes effect only for HTTPS URLs. If this parameter is set to HTTP, the request will fail.
 
 **Since:** 23
 
-<!--Device-HttpProtocol-HTTP3--><!--Device-HttpProtocol-HTTP3-End-->
+<!--Device-HttpProtocol-HTTP3 = 2--><!--Device-HttpProtocol-HTTP3 = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

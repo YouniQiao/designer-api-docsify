@@ -1,6 +1,6 @@
 # ProcessInformation
 
-The module defines the process information. The information can be obtained through [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation) of appManager.
+The module defines the process information. The information can be obtained through [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md) of appManager.
 
 **Since:** 23
 

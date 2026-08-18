@@ -17,7 +17,7 @@ declare function accessSync(path: string, mode?: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [accessSync](arkts-corefile-file-fs-accesssync-f.md#accesssync)
+**替代接口：** [accessSync](arkts-corefile-file-fs-accesssync-f.md)
 
 <!--Device-unnamed-declare function accessSync(path: string, mode?: number): void--><!--Device-unnamed-declare function accessSync(path: string, mode?: number): void-End-->
 

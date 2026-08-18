@@ -12,7 +12,6 @@ Indicates the size of the enhanced input method panel, including the custom avoi
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## fullScreenMode

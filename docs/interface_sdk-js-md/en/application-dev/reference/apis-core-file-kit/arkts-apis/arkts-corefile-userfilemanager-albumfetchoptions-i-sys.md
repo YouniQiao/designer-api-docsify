@@ -6,7 +6,7 @@ Defines the options for fetching file attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchoptions)
+**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
 
 <!--Device-userFileManager-interface AlbumFetchOptions--><!--Device-userFileManager-interface AlbumFetchOptions-End-->
 

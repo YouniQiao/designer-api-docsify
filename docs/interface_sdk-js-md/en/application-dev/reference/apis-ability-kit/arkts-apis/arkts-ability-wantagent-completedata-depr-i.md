@@ -6,7 +6,7 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md#completedata)
+**Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 

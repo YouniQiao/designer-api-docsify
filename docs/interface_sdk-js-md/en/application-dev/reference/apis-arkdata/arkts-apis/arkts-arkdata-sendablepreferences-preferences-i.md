@@ -1,6 +1,6 @@
 # Preferences
 
-Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences).
+Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md).
 
 **Inheritance/Implementation:** Preferences extends lang.ISendable
 
@@ -512,7 +512,7 @@ if (isExist) {
 }
 ```
 
-## off_change
+## off_change('change')
 
 ```TypeScript
 off(type: 'change', callback?: Callback<string>): void
@@ -533,7 +533,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -560,7 +560,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## off_dataChange
+## off_dataChange('dataChange')
 
 ```TypeScript
 off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void
@@ -582,7 +582,7 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -612,13 +612,13 @@ preferences.flush().then(() => {
 });
 ```
 
-## off_multiProcessChange
+## off_multiProcessChange('multiProcessChange')
 
 ```TypeScript
 off(type: 'multiProcessChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -633,7 +633,7 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -660,7 +660,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## on_change
+## on_change('change')
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
@@ -681,7 +681,7 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
@@ -707,7 +707,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## on_dataChange
+## on_dataChange('dataChange')
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
@@ -729,7 +729,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
 
@@ -758,13 +758,13 @@ preferences.flush().then(() => {
 });
 ```
 
-## on_multiProcessChange
+## on_multiProcessChange('multiProcessChange')
 
 ```TypeScript
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -779,7 +779,7 @@ Subscribes to data changes between processes. When multiple processes hold the s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 

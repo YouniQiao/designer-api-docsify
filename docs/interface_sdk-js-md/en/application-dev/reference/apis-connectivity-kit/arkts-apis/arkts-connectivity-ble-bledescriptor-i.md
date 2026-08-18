@@ -20,7 +20,7 @@ import { ble } from '@kit.ConnectivityKit';
 characteristicUuid: string
 ```
 
-The UUID of the [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#blecharacteristic) instance to which the descriptor belongs
+The UUID of the [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md) instance to which the descriptor belongs
 
 **Type:** string
 
@@ -120,7 +120,7 @@ The permissions of a BLEDescriptor instance. The default value is Readable and W
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#gattservice) instance to which the descriptor belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md) instance to which the descriptor belongs
 
 **Type:** string
 

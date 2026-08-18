@@ -1,8 +1,8 @@
 # AnimatedDrawableDescriptor
 
-使用Image组件播放PixelMap数组或动图资源时传入 AnimatedDrawableDescriptor对象， 该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)。
+使用Image组件播放PixelMap数组或动图资源时传入 AnimatedDrawableDescriptor对象， 该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
-**继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
+**继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 12
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -62,7 +63,7 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ResourceStr \| Array&lt;image.PixelMap&gt; | 是 | 动图资源地址或者 [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap)对象构成的数组。<br/> ResourceStr当前支持的范围： 应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
+| src | ResourceStr \| Array&lt;image.PixelMap&gt; | 是 | 动图资源地址或者 [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)对象构成的数组。<br/> ResourceStr当前支持的范围： 应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 否 | 动画控制参数。 |
 
 **示例**

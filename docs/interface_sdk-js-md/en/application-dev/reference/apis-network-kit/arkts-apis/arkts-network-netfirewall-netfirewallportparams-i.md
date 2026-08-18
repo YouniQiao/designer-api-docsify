@@ -1,6 +1,6 @@
-# NetFirewallPortParams
+# NetFirewallPortParams(Network Firewall)
 
-Firewall port parameters.
+Defines the port parameters of a firewall rule.
 
 **Since:** 15
 
@@ -17,32 +17,32 @@ import { netFirewall } from '@kit.NetworkKit';
 ## endPort
 
 ```TypeScript
-endPort: number
+endPort: int
 ```
 
-End port, when there is only one port, the start port is the same as the end port.
+End port number.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallPortParams-endPort: number--><!--Device-NetFirewallPortParams-endPort: number-End-->
+<!--Device-NetFirewallPortParams-endPort: int--><!--Device-NetFirewallPortParams-endPort: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startPort
 
 ```TypeScript
-startPort: number
+startPort: int
 ```
 
-Start port, when there is only one port, the start port is the same as the end port.
+Start port number.
 
-**Type:** number
+**Type:** int
 
 **Since:** 15
 
-<!--Device-NetFirewallPortParams-startPort: number--><!--Device-NetFirewallPortParams-startPort: number-End-->
+<!--Device-NetFirewallPortParams-startPort: int--><!--Device-NetFirewallPortParams-startPort: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

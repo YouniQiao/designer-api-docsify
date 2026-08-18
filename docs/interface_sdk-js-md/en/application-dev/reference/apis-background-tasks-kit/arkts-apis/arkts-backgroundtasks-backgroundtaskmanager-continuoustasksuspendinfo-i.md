@@ -12,7 +12,6 @@ Describes the information about a suspended continuous task.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## continuousTaskId

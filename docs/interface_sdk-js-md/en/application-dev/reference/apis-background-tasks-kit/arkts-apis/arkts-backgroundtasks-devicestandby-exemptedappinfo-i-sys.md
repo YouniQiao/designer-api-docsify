@@ -14,7 +14,6 @@ Information about an exempted application.
 
 ```TypeScript
 import { deviceStandby } from '@kit.BackgroundTasksKit';
-import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

@@ -16,7 +16,6 @@ Defines the configuration options for a **RelativeTimeFormat** object. Since API
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## localeMatcher

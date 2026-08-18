@@ -30,6 +30,16 @@ Creates a check box.
 
 ## Summary
 
-- [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)
-- [CheckboxOptions](arkts-arkui-checkboxoptions-i.md)
-- [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+| [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | Provides information about the check box. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | Represents the callback invoked when the selected state of the check box changes. |
+

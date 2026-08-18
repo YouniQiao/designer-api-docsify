@@ -20,7 +20,7 @@ import { webSocket } from '@kit.NetworkKit';
 caPath?: string
 ```
 
-File path for client cert.
+Path of CA certificates. If a path is set, the system uses the CA certificates in this path. If a path is not set, the system uses the preset CA certificate, namely, **\/etc/ssl/certs/cacert.pem**. This path is the sandbox mapping path, which can be obtained by using **UIAbilityContext** APIs. Currently, only text certificates in PEM format are supported.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ File path for client cert.
 clientCert?: ClientCert
 ```
 
-Client cert.
+Client certificate.
 
 **Type:** ClientCert
 
@@ -70,7 +70,7 @@ HTTP request header.
 minSupportTlsProtocol?: TlsProtocol
 ```
 
-The minimum support version of TLS protocol.
+Custom minimum TLS version supported. For example, if this parameter is set to **TLS_V_1_1**, the client supports TLS 1.1, TLS 1.2, and TLS 1.3.
 
 **Type:** [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md)
 
@@ -88,7 +88,7 @@ The minimum support version of TLS protocol.
 pingInterval?: int
 ```
 
-Self defined interval of ping frame. default: 30. disable: 0. max: 30000. unit:second. Ping is performed at every pingInterval.
+Custom [heartbeat detection interval](../../../network/websocket-connection.md). The default value is 30s. Heartbeat detection is initiated at the specified interval. If the value is set to **0**, heartbeat detection is disabled. The maximum value is 30000s, and the minimum value is 0s.
 
 **Type:** int
 
@@ -104,7 +104,7 @@ Self defined interval of ping frame. default: 30. disable: 0. max: 30000. unit:s
 pongTimeout?: int
 ```
 
-Self defined timeout of pong frame. default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval. If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
+Timeout interval for disconnecting a connection after heartbeat detection is initiated. The default value is 30s. If no response is received during the specified interval, the connection is disconnected. The maximum value is 30 000s, and the minimum value is 0s. **pongTimeout** must be less than or equal to **pingInterval**.
 
 **Type:** int
 
@@ -120,11 +120,11 @@ Self defined timeout of pong frame. default: 30. max: 30000. unit:second. The va
 protocol?: string
 ```
 
-Self defined protocol.
+Custom **Sec-WebSocket-Protocol** field. The default value is "".
 
 **Type:** string
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketRequestOptions-protocol?: string--><!--Device-WebSocketRequestOptions-protocol?: string-End-->
 
@@ -136,11 +136,11 @@ Self defined protocol.
 proxy?: ProxyConfiguration
 ```
 
-HTTP proxy configuration. Use 'system' if this field is not set.
+Proxy configuration. By default, the system network proxy is used.
 
 **Type:** [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration--><!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration-End-->
 
@@ -152,7 +152,7 @@ HTTP proxy configuration. Use 'system' if this field is not set.
 skipServerCertVerification?: boolean
 ```
 
-Whether or not to skip the verification of the server's certification.
+Whether to skip server certificate verification. The value **true** means to skip server certificate verification, and the value **false** means the opposite. Default value: **false**.
 
 **Type:** boolean
 

@@ -12,7 +12,7 @@ import { sendableContextManager } from '@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#eventhub) in Context. > **NOTE：**> > - When multiple Context objects communicate, you need to call this API to set each Context object to support > EventHub cross-thread data transfer.
+Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in Context. > **NOTE：**> > - When multiple Context objects communicate, you need to call this API to set each Context object to support > EventHub cross-thread data transfer.
 
 **Since:** 20
 
@@ -33,7 +33,7 @@ Enables the cross-thread data transfer feature of [EventHub](arkts-ability-event
 
 **Examples**
 
-Enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#eventhub) in a [Context](arkts-ability-context-c.md#context) object on the main thread, convert the Context object to a [SendableContext](arkts-ability-sendablecontext-i.md#sendablecontext) object, and send the SendableContext object to the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) thread.
+Enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in a [Context](arkts-ability-context-c.md) object on the main thread, convert the Context object to a [SendableContext](arkts-ability-sendablecontext-i.md) object, and send the SendableContext object to the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) thread.
 
 ```TypeScript
 import { common, sendableContextManager } from '@kit.AbilityKit';
@@ -90,7 +90,7 @@ struct Index {
 }
 ```
 
-After receiving the [SendableContext](arkts-ability-sendablecontext-i.md#sendablecontext) object on the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker) thread, convert it to a [Context](arkts-ability-context-c.md#context) object. Then, enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#eventhub) in the Context object on the Worker thread, and send a message back to the main thread using this feature.
+After receiving the [SendableContext](arkts-ability-sendablecontext-i.md) object on the [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md) thread, convert it to a [Context](arkts-ability-context-c.md) object. Then, enable the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in the Context object on the Worker thread, and send a message back to the main thread using this feature.
 
 ```TypeScript
 import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';

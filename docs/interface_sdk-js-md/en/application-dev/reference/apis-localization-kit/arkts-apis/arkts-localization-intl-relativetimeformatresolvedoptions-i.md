@@ -16,7 +16,6 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## locale

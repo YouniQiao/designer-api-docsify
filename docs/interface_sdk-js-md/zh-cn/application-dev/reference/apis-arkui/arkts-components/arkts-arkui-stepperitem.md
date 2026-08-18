@@ -26,4 +26,9 @@ StepperItem()
 
 ## 汇总
 
-- [ItemState](arkts-arkui-itemstate-e.md)
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [ItemState](arkts-arkui-itemstate-e.md) | 步骤导航器nextLabel的显示状态。 |
+

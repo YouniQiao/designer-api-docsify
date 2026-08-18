@@ -6,7 +6,7 @@ Enumerates the media file types that can be selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#photoviewmimetypes)
+**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 <!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
@@ -24,7 +24,7 @@ Image.
 
 **Deprecated since:** 18
 
-**Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagetype)
+**Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +44,7 @@ Video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#videotype)
+**Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +64,7 @@ Image and video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagevideotype)
+**Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

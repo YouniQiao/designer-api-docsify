@@ -24,9 +24,9 @@ Information about the context of exiting the PhotoPicker. This information is re
 
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo--><!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo-End-->
 
@@ -60,9 +60,9 @@ Array of moving photo badge states for the media files selected from Gallery. If
 
 **Type:** Array&lt;[MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>--><!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>-End-->
 

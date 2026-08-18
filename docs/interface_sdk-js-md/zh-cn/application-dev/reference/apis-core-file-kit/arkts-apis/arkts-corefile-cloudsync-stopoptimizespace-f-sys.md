@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## stopOptimizeSpace

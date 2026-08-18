@@ -22,11 +22,11 @@ Plugin component request event callback.
 | --- | --- | --- | --- |
 | source | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request the sender to provide relevant information. |
 | name | string | Yes | Template name. |
-| data | [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | data info. |
+| data | [KVObject](arkts-na-plugincomponentmanager-kvobject-t.md) | Yes | data info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RequestEventResult](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | - |
+| [RequestEventResult](arkts-na-plugincomponentmanager-requesteventresult-i.md) | - |
 

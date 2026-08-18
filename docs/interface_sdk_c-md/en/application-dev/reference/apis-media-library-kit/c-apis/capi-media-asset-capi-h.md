@@ -61,7 +61,7 @@ Obtains the URI of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetMediaType()
 
@@ -86,7 +86,7 @@ Obtains the type of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetMediaSubType()
 
@@ -111,7 +111,7 @@ Obtains the subtype of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDisplayName()
 
@@ -136,7 +136,7 @@ Obtains the display name of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetSize()
 
@@ -161,7 +161,7 @@ Obtains the size of a media asset file.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateAdded()
 
@@ -186,7 +186,7 @@ Obtains the date when a media asset was added.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateModified()
 
@@ -211,7 +211,7 @@ Obtains the date when a media asset (content not the media asset name) was last 
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateTaken()
 
@@ -236,7 +236,7 @@ Obtains the date when a media asset was taken.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateAddedMs()
 
@@ -261,7 +261,7 @@ Obtains the date when a media asset was added, in ms.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDateModifiedMs()
 
@@ -286,7 +286,7 @@ Obtains the date when a media asset (content not the media asset name) was last 
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetDuration()
 
@@ -311,7 +311,7 @@ Obtains the duration of a media asset, in ms.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetWidth()
 
@@ -336,7 +336,7 @@ Obtains the image width (in pixels) of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetHeight()
 
@@ -361,7 +361,7 @@ Obtains the image height (in pixels) of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetOrientation()
 
@@ -386,7 +386,7 @@ Obtains the orientation of a media asset, in degrees.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_IsFavorite()
 
@@ -411,7 +411,7 @@ Checks whether a media asset is favorited.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_GetTitle()
 
@@ -436,7 +436,7 @@ Obtains the title of a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 ### OH_MediaAsset_Release()
 
@@ -460,6 +460,6 @@ Releases a media asset.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed. |
 
 

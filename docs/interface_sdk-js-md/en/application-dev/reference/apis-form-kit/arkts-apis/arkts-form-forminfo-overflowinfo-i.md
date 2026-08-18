@@ -12,7 +12,6 @@ Provides OverflowInfo about funInteraction or sceneAnimation form
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## area

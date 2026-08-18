@@ -49,7 +49,7 @@
 | [TextRange](arkts-arkui-textcommon-textrange-i.md) | Defines range of text type component. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -78,7 +78,7 @@
 | [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md) | Vertical Alignment of text. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

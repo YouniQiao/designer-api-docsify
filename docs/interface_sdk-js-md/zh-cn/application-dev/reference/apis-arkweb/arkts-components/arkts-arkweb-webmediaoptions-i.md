@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## audioExclusive
@@ -37,7 +42,7 @@ audioExclusive?: boolean
 audioSessionType?: AudioSessionType
 ```
 
-应用中Web音频类型。默认值对应系统音频流类型[StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#streamusage)中的STREAM_USAGE_MUSIC。用于改变组件音频类型 与系统音频类型映射关系，影响ArkWeb音频焦点策略。
+应用中Web音频类型。默认值对应系统音频流类型[StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)中的STREAM_USAGE_MUSIC。用于改变组件音频类型 与系统音频类型映射关系，影响ArkWeb音频焦点策略。
 
 **类型：** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 

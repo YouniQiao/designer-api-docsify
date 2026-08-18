@@ -12,7 +12,6 @@ Describes the direction in which the cursor moves when the text is selected.
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## direction

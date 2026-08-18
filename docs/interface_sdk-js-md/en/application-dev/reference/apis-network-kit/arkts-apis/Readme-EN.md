@@ -420,6 +420,8 @@
   - [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md)
   - [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md)
   <!--Del-->
+  - [getTrafficPlanInfo(system api)](arkts-network-statistics-gettrafficplaninfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getTrafficStatsByIface(system api)](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getTrafficStatsByNetwork(system api)](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md)<!--DelEnd-->
@@ -440,6 +442,8 @@
   <!--Del-->
   - [setCalibrationTraffic(system api)](arkts-network-statistics-setcalibrationtraffic-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [setTrafficPlanInfo(system api)](arkts-network-statistics-settrafficplaninfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [updateIfacesStats(system api)](arkts-network-statistics-updateifacesstats-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateStatsData(system api)](arkts-network-statistics-updatestatsdata-f-sys.md)<!--DelEnd-->
@@ -447,10 +451,12 @@
   - [IfaceInfo(system api)](arkts-network-statistics-ifaceinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [NetStatsChangeInfo(system api)](arkts-network-statistics-netstatschangeinfo-i-sys.md)<!--DelEnd-->
-  - [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)
+  <!--Del-->
+  - [NetStatsInfo(system api)](arkts-network-statistics-netstatsinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [NetStatsInfoSequenceItem(system api)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)<!--DelEnd-->
-  - [NetworkInfo](arkts-network-statistics-networkinfo-i.md)
+  <!--Del-->
+  - [NetworkInfo(system api)](arkts-network-statistics-networkinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UidInfo(system api)](arkts-network-statistics-uidinfo-i-sys.md)<!--DelEnd-->
   - [NetBearType](arkts-network-statistics-netbeartype-t.md)
@@ -458,6 +464,8 @@
   - [NetStatsInfoSequence(system api)](arkts-network-statistics-netstatsinfosequence-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UidNetStatsInfo(system api)](arkts-network-statistics-uidnetstatsinfo-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TrafficPlanParam(system api)](arkts-network-statistics-trafficplanparam-e-sys.md)<!--DelEnd-->
 - [@ohos.net.vpn](arkts-net-vpn.md)
   <!--Del-->
   - [addSysVpnConfig(system api)](arkts-network-vpn-addsysvpnconfig-f-sys.md)<!--DelEnd-->

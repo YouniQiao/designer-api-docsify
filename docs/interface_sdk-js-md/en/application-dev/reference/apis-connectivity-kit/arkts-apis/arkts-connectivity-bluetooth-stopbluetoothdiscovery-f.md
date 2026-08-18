@@ -35,7 +35,7 @@ Stops Bluetooth device scanning.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md#stopbluetoothdiscovery)
+**Substitutes:** [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

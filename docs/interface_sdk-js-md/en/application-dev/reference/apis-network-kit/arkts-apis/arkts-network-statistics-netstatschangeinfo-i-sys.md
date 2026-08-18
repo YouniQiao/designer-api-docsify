@@ -1,6 +1,6 @@
 # NetStatsChangeInfo (System API)
 
-Used to monitor and manage the status and usage of network interfaces.
+Defines the NIC status and usage of an application.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { statistics } from '@kit.NetworkKit';
 iface: string
 ```
 
-Network interface for querying traffic.
+NIC name.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Network interface for querying traffic.
 uid?: int
 ```
 
-Network interface for querying traffic.
+Application UID.
 
 **Type:** int
 

@@ -36,7 +36,7 @@ Link address.
 prefixLength: int
 ```
 
-The length of the link address prefix.
+Length of the link address prefix.
 
 **Type:** int
 

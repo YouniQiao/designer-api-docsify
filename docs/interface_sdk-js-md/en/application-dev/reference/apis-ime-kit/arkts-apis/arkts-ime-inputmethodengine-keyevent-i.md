@@ -1,6 +1,6 @@
 # KeyEvent
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
@@ -37,7 +36,7 @@ Key event type. - **2**: keydown event. - **3**: keyup event.
 readonly keyCode: int
 ```
 
-Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode).
+Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md).
 
 **Type:** int
 

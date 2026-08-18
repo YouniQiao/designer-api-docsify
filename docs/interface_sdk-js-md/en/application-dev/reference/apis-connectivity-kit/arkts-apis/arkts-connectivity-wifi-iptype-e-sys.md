@@ -6,7 +6,7 @@ Wi-Fi IP type enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md#iptype-system-api)
+**Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
 
 <!--Device-wifi-enum IpType--><!--Device-wifi-enum IpType-End-->
 

@@ -45,7 +45,7 @@ The `arkweb_scheme_handler.h` file is a complete C API header file in ArkWeb for
 | [void OH_ArkWebRequestHeaderList_Destroy(ArkWeb_RequestHeaderList* requestHeaderList)](#oh_arkwebrequestheaderlist_destroy) | - | Destroys an **ArkWeb_RequestHeaderList** object. |
 | [int32_t OH_ArkWebRequestHeaderList_GetSize(const ArkWeb_RequestHeaderList* requestHeaderList)](#oh_arkwebrequestheaderlist_getsize) | - | Obtains the size of a request header list. |
 | [void OH_ArkWebRequestHeaderList_GetHeader(const ArkWeb_RequestHeaderList* requestHeaderList, int32_t index, char** key, char** value)](#oh_arkwebrequestheaderlist_getheader) | - | Obtains a specified request header. |
-| [int32_t OH_ArkWebResourceRequest_SetUserData(ArkWeb_ResourceRequest* resourceRequest, void* userData)](#oh_arkwebresourcerequest_setuserdata) | - | Sets user data to the **ArkWeb_ResourceRequest** object. It is used to pass context information betweendifferent request callbacks or store request-associated state, which can later be retrieved through{@link OH_ArkWebResourceRequest_GetUserData()}. |
+| [int32_t OH_ArkWebResourceRequest_SetUserData(ArkWeb_ResourceRequest* resourceRequest, void* userData)](#oh_arkwebresourcerequest_setuserdata) | - | Sets user data to the **ArkWeb_ResourceRequest** object. It is used to pass context information betweendifferent request callbacks or store request-associated state, which can later be retrieved through[OH_ArkWebResourceRequest_GetUserData()](capi-arkweb-scheme-handler-h.md#oh_arkwebresourcerequest_getuserdata()). |
 | [void* OH_ArkWebResourceRequest_GetUserData(const ArkWeb_ResourceRequest* resourceRequest)](#oh_arkwebresourcerequest_getuserdata) | - | Obtains user data from **ArkWeb_ResourceRequest**. |
 | [void OH_ArkWebResourceRequest_GetMethod(const ArkWeb_ResourceRequest* resourceRequest, char** method)](#oh_arkwebresourcerequest_getmethod) | - | Obtains the method of a request. |
 | [void OH_ArkWebResourceRequest_GetUrl(const ArkWeb_ResourceRequest* resourceRequest, char** url)](#oh_arkwebresourcerequest_geturl) | - | Obtains the URL of a request. |
@@ -203,7 +203,7 @@ Called when a request starts. This callback is used on the IO thread. It interce
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkWeb_SchemeHandler\* schemeHandler | **ArkWeb_SchemeHandler**. |
+| [const ArkWeb_SchemeHandler](capi-web-arkweb-schemehandler-.md)\* schemeHandler | **ArkWeb_SchemeHandler**. |
 | [ArkWeb_ResourceRequest](capi-web-arkweb-resourcerequest-.md)\* resourceRequest | Object used to obtain the request information. |
 | [const ArkWeb_ResourceHandler](capi-web-arkweb-resourcehandler-.md)\* resourceHandler | **ArkWeb_ResourceHandler** of the request. If **intercept** is set to **false**, thisparameter should not be used. |
 | bool\* intercept | Whether to intercept the request. If the value is **true**, the request will be intercepted.Otherwise, the request will not be intercepted. |
@@ -224,7 +224,7 @@ Called when the request stops. This callback is used on the IO thread. It is use
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkWeb_SchemeHandler\* schemeHandler | **ArkWeb_SchemeHandler**. |
+| [const ArkWeb_SchemeHandler](capi-web-arkweb-schemehandler-.md)\* schemeHandler | **ArkWeb_SchemeHandler**. |
 | [const ArkWeb_ResourceRequest](capi-web-arkweb-resourcerequest-.md)\* resourceRequest | **ArkWeb_ResourceRequest**. |
 
 ### ArkWeb_HttpBodyStreamReadCallback()
@@ -245,7 +245,7 @@ Called when the **OH_ArkWebHttpBodyStream_Read** read operation is complete. Thi
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkWeb_HttpBodyStream\* httpBodyStream | **ArkWeb_HttpBodyStream**. |
+| [const ArkWeb_HttpBodyStream](capi-web-arkweb-httpbodystream-.md)\* httpBodyStream | **ArkWeb_HttpBodyStream**. |
 | uint8_t\* buffer | Buffer for receiving data. |
 | int bytesRead | Number of bytes read. If bytesRead is greater than 0, the buffer has been filled with bytesReadbytes of data. The developer can read data from the buffer. If the return value of OH_ArkWebHttpBodyStream_IsEofis false, the developer can continue to read the remaining data. |
 
@@ -265,7 +265,7 @@ Called when the **OH_ArkWebHttpBodyStream_AsyncRead** read operation is complete
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkWeb_HttpBodyStream \*httpBodyStream | **ArkWeb_HttpBodyStream**. |
+| [const ArkWeb_HttpBodyStream](capi-web-arkweb-httpbodystream-.md) \*httpBodyStream | **ArkWeb_HttpBodyStream**. |
 | uint8_t \*buffer | Pointer to the buffer for receiving data. |
 | int bytesRead | Byte count representing the result of the asynchronous read operation. If bytesRead is greater than0, the buffer has been filled with bytesRead bytes of data. The developer can read data from the buffer. IfOH_ArkWebHttpBodyStream_IsEof returns false, the developer can continue reading the remaining data. |
 
@@ -287,7 +287,7 @@ Called when **ArkWeb_HttpBodyStream** initialization is complete.
 
 | Parameter | Description |
 | -- | -- |
-| (const ArkWeb_HttpBodyStream\* httpBodyStream | **ArkWeb_HttpBodyStream**. |
+| [const ArkWeb_HttpBodyStream](capi-web-arkweb-httpbodystream-.md)\* httpBodyStream | **ArkWeb_HttpBodyStream**. |
 | ArkWeb_NetError result | Operation result. If the operation is successful, **ARKWEB_NET_OK** is returned. Otherwise, see{@link arkweb_net_error_list.h}. |
 
 ### OH_ArkWebRequestHeaderList_Destroy()
@@ -367,7 +367,7 @@ int32_t OH_ArkWebResourceRequest_SetUserData(ArkWeb_ResourceRequest* resourceReq
 
 **Description**
 
-Sets user data to the **ArkWeb_ResourceRequest** object. It is used to pass context information betweendifferent request callbacks or store request-associated state, which can later be retrieved through{@link OH_ArkWebResourceRequest_GetUserData()}.
+Sets user data to the **ArkWeb_ResourceRequest** object. It is used to pass context information betweendifferent request callbacks or store request-associated state, which can later be retrieved through[OH_ArkWebResourceRequest_GetUserData()](capi-arkweb-scheme-handler-h.md#oh_arkwebresourcerequest_getuserdata()).
 
 **System capability**: SystemCapability.Web.Webview.Core
 
@@ -410,7 +410,7 @@ Obtains user data from **ArkWeb_ResourceRequest**.
 
 | Type | Description |
 | -- | -- |
-| void* | Pointer to the user data. This pointer is set by the developer through<br>     [OH_ArkWebResourceRequest_SetUserData](capi-arkweb-scheme-handler-h.md#oh_arkwebresourcerequest_setuserdata) and can be used to pass custom context information in the callback. |
+| void* | Pointer to the user data. This pointer is set by the developer through      [OH_ArkWebResourceRequest_SetUserData](capi-arkweb-scheme-handler-h.md#oh_arkwebresourcerequest_setuserdata) and can be used to pass custom context information in the callback. |
 
 ### OH_ArkWebResourceRequest_GetMethod()
 
@@ -519,7 +519,7 @@ Obtains the resource type of a request.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Resource type of the request. If resourceRequest is invalid, the value is -1, indicating that the<br>     request object is null or invalid. For other values, see [ArkWeb_ResourceType](capi-arkweb-scheme-handler-h.md#arkweb_resourcetype). |
+| int32_t | Resource type of the request. If resourceRequest is invalid, the value is -1, indicating that the      request object is null or invalid. For other values, see [ArkWeb_ResourceType](capi-arkweb-scheme-handler-h.md#arkweb_resourcetype). |
 
 ### OH_ArkWebResourceRequest_GetFrameUrl()
 
@@ -593,7 +593,7 @@ Obtains user data from **ArkWeb_HttpBodyStream**.
 
 | Type | Description |
 | -- | -- |
-| void* | Pointer to the user data. This pointer is set by the developer through OH_ArkWebHttpBodyStream_SetUserData<br>     and can be used to pass custom context information in the callback. |
+| void* | Pointer to the user data. This pointer is set by the developer through OH_ArkWebHttpBodyStream_SetUserData      and can be used to pass custom context information in the callback. |
 
 ### OH_ArkWebHttpBodyStream_SetReadCallback()
 
@@ -1015,7 +1015,7 @@ Registers a custom scheme with **ArkWeb**. This function should not be called fo
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code. Returns 0 if successful; returns 17100100 if an unknown error occurs, in which case check the<br>     call timing and parameter configuration; returns 17100101 if the parameter is invalid; returns 17100102 if the<br>     scheme configuration fails to be registered, in which case register before creating ArkWeb. |
+| int32_t | Result code. Returns 0 if successful; returns 17100100 if an unknown error occurs, in which case check the      call timing and parameter configuration; returns 17100101 if the parameter is invalid; returns 17100102 if the      scheme configuration fails to be registered, in which case register before creating ArkWeb. |
 
 ### OH_ArkWebServiceWorker_SetSchemeHandler()
 
@@ -1042,7 +1042,7 @@ Sets an **ArkWeb_SchemeHandler** for a specified scheme to intercept requests of
 
 | Type | Description |
 | -- | -- |
-| bool | true is returned if the SchemeHandler is successfully set for the specified scheme. Otherwise,<br>     false is returned. |
+| bool | true is returned if the SchemeHandler is successfully set for the specified scheme. Otherwise,      false is returned. |
 
 ### OH_ArkWeb_SetSchemeHandler()
 
@@ -1070,7 +1070,7 @@ Sets an **ArkWeb_SchemeHandler** to intercept requests of a specified scheme typ
 
 | Type | Description |
 | -- | -- |
-| bool | true is returned if the SchemeHandler is successfully set for the specified scheme. Otherwise,<br>     false is returned. |
+| bool | true is returned if the SchemeHandler is successfully set for the specified scheme. Otherwise,      false is returned. |
 
 ### OH_ArkWebServiceWorker_ClearSchemeHandlers()
 
@@ -1207,7 +1207,7 @@ Obtains the user data from **ArkWeb_SchemeHandler**.
 
 | Type | Description |
 | -- | -- |
-| void* | Pointer to user data. This pointer is set by the developer through OH_ArkWebSchemeHandler_SetUserData and<br>     can be used to pass custom context information in callbacks. |
+| void* | Pointer to user data. This pointer is set by the developer through OH_ArkWebSchemeHandler_SetUserData and      can be used to pass custom context information in callbacks. |
 
 ### OH_ArkWebSchemeHandler_SetOnRequestStart()
 
@@ -1867,7 +1867,7 @@ Sets whether to automatically generate a response if no response has been receiv
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.          [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
 
 ### OH_ArkWebErrorInfo_GetCompleteIfNoResponse()
 
@@ -1891,7 +1891,7 @@ Gets whether to automatically generate a response if no response has been receiv
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if automatically generating a response when no response has been received is enabled,<br>         returns false otherwise. |
+| bool | Returns true if automatically generating a response when no response has been received is enabled,          returns false otherwise. |
 
 ### OH_ArkWebErrorInfo_SetCustomErrorCode()
 
@@ -1916,7 +1916,7 @@ Sets the custom error code for ArkWeb_ErrorInfo.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.          [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
 
 ### OH_ArkWebErrorInfo_GetCustomErrorCode()
 
@@ -1965,7 +1965,7 @@ Sets the error code for ArkWeb_ErrorInfo.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.          [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, errorInfo is nullptr. |
 
 ### OH_ArkWebErrorInfo_GetErrorCode()
 
@@ -2014,7 +2014,7 @@ Sets the error info for the ArkWeb_Response.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, response or errorInfo is nullptr. |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.          [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, response or errorInfo is nullptr. |
 
 ### OH_ArkWebResponse_GetErrorInfo()
 
@@ -2063,7 +2063,7 @@ Notify the web engine that this request should fail with error info.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, resourceHandler or errorInfo is nullptr. |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.          [ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode) 17100101 - Invalid param, resourceHandler or errorInfo is nullptr. |
 
 ### OH_ArkWeb_ReleaseString()
 

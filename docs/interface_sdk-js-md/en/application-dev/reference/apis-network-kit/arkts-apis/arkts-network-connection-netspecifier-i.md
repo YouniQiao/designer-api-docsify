@@ -1,6 +1,6 @@
 # NetSpecifier
 
-Provides an instance that bear data network capabilities.
+Provides an instance that bears data network capabilities.
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ import { connection } from '@kit.NetworkKit';
 bearerPrivateIdentifier?: string
 ```
 
-Network identifier, the identifier for Wi Fi networks is "wifi", and the identifier for cellular networks is "simId1" (corresponding to SIM card 1).
+Network identifier. The identifier of the cellular network is **slot0** for SIM card 1 and **slot1** for SIM card 2. Since API version 12, you can pass the registered WLAN hotspot to the API to specify the WLAN network to be activated.
 
 **Type:** string
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetSpecifier-bearerPrivateIdentifier?: string--><!--Device-NetSpecifier-bearerPrivateIdentifier?: string-End-->
 
@@ -38,13 +38,13 @@ Network identifier, the identifier for Wi Fi networks is "wifi", and the identif
 netCapabilities: NetCapabilities
 ```
 
-The transmission capacity and support of the network's global proxy storage data network.
+Network transmission capabilities and bearer types of the data network.
 
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetSpecifier-netCapabilities: NetCapabilities--><!--Device-NetSpecifier-netCapabilities: NetCapabilities-End-->
 

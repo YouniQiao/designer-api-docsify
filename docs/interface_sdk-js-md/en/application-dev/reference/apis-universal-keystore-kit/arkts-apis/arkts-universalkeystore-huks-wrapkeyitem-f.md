@@ -13,7 +13,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Wraps a key. This API uses a promise to return the result. > **NOTE：**> > Wrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--Del--&gt;This feature is not supported currently.&lt;!--DelEnd--&gt;
+Wraps a key. This API uses a promise to return the result. > **NOTE：**> > Wrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission. <!--Del-->This feature is not supported currently.<!--DelEnd-->
 
 **Since:** 20
 

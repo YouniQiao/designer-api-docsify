@@ -23,7 +23,7 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 
 Callback invoked when the icon on the right is clicked.
 
-**Type:** [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md)
+**Type:** [OnActionTextClickCallback](../../apis-na/arkts-apis/arkts-na-onactiontextclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Callback invoked when the icon on the right is clicked.
 
 Callback invoked when the prompt text on the left is clicked.
 
-**Type:** [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md)
+**Type:** [OnTipClickCallback](../../apis-na/arkts-apis/arkts-na-ontipclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -65,7 +65,7 @@ Callback invoked when the prompt text on the left is clicked.
 
 ExceptionPromptV2 configuration.
 
-**Type:** [PromptOptionsV2](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
+**Type:** [PromptOptionsV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **Since:** 26.0.0
 

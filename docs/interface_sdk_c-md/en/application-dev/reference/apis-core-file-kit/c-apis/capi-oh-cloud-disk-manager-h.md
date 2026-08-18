@@ -158,14 +158,14 @@ Registers a callback to obtain file changes in the sync root path.
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | Sync root path. For details, see [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md). |
+| onst CloudDisk_SyncFolderPath syncFolderPath | Sync root path. For details, see [CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md). |
 | void (\*callback)(const CloudDisk_SyncFolderPath syncFolderPath | Registered callback. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_UnregisterSyncFolderChanges()
 
@@ -189,7 +189,7 @@ Unregisters the callback for file changes in the sync root path.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_GetSyncFolderChanges()
 
@@ -216,7 +216,7 @@ Obtains the change history in the sync root path.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_SetFileSyncStates()
 
@@ -244,7 +244,7 @@ Sets the file sync state in the sync root path.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_GetFileSyncStates()
 
@@ -272,7 +272,7 @@ Obtains the file sync state in the sync root path.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_RegisterSyncFolder()
 
@@ -296,7 +296,7 @@ Registers a sync root.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_UnregisterSyncFolder()
 
@@ -320,7 +320,7 @@ Unregisters the sync root.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_ActiveSyncFolder()
 
@@ -344,7 +344,7 @@ Activates the sync root.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_DeactiveSyncFolder()
 
@@ -368,7 +368,7 @@ Deactivates the sync root.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_GetSyncFolders()
 
@@ -393,7 +393,7 @@ Obtains all sync roots.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_UpdateCustomAlias()
 
@@ -419,7 +419,7 @@ Updates the sync root alias.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)<br>     otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully; returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)      otherwise. |
 
 ### OH_CloudDisk_CreatePlaceholder()
 
@@ -445,7 +445,7 @@ Creates a placeholder in a registered sync folder.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;<br>     <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;      <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
 
 ### OH_CloudDisk_IsPlaceholderFile()
 
@@ -471,7 +471,7 @@ Checks whether a file in a sync folder is a placeholder file.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;<br>     <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;      <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
 
 ### OH_CloudDisk_ConvertPlaceholderToFile()
 
@@ -496,7 +496,7 @@ Converts a placeholder file to a 0-byte normal file.
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;<br>     <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;      <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
 
 ### OH_CloudDisk_UpdatePlaceholder()
 
@@ -522,6 +522,6 @@ Updates file metadata (supports placeholder and normal files).
 
 | Type | Description |
 | -- | -- |
-| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;<br>     <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | Returns [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) if the API is called successfully;      <br>returns [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) otherwise. |
 
 

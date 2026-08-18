@@ -1,6 +1,6 @@
 # KeyboardDelegate
 
-KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过 [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取该实例。 **核心功能概述：** - **物理键盘按键事件**：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回 false表示不消费。 - **光标与选区变化事件**：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。 - **文本变化事件**：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。 - **编辑框属性变化事件**：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。 **使用场景：** - 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。 - 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。 下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取到KeyboardDelegate实例后，通过实例调用。
+KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过 [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取该实例。 **核心功能概述：** - **物理键盘按键事件**：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回 false表示不消费。 - **光标与选区变化事件**：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。 - **文本变化事件**：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。 - **编辑框属性变化事件**：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。 **使用场景：** - 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。 - 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。 下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取到KeyboardDelegate实例后，通过实例调用。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听�
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## offCursorContextChange
@@ -62,7 +63,7 @@ offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -229,7 +230,7 @@ offTextChange(callback?: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -242,7 +243,7 @@ if (inputMethodEngineDelegate) {
 }
 ```
 
-## off_cursorContextChange
+## off_cursorContextChange('cursorContextChange')
 
 ```TypeScript
 off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
@@ -269,7 +270,7 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 inputMethodEngine.getKeyboardDelegate().off('cursorContextChange');
 ```
 
-## off_editorAttributeChanged
+## off_editorAttributeChanged('editorAttributeChanged')
 
 ```TypeScript
 off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
@@ -296,7 +297,7 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 ```
 
-## off_keyDown
+## off_keyDown('keyDown' | 'keyUp')
 
 ```TypeScript
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
@@ -330,7 +331,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 });
 ```
 
-## off_keyEvent
+## off_keyEvent('keyEvent')
 
 ```TypeScript
 off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
@@ -363,7 +364,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent', (keyEvent: KeyEvent) => 
 inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 ```
 
-## off_keyUp
+## off_keyUp('keyDown' | 'keyUp')
 
 ```TypeScript
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
@@ -397,7 +398,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 });
 ```
 
-## off_selectionChange
+## off_selectionChange('selectionChange')
 
 ```TypeScript
 off(
@@ -430,7 +431,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## off_textChange
+## off_textChange('textChange')
 
 ```TypeScript
 off(type: 'textChange', callback?: (text: string) => void): void
@@ -508,7 +509,7 @@ onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
 
 **示例**
 
@@ -690,7 +691,7 @@ onTextChange(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回订阅的文本内容。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回订阅的文本内容。 |
 
 **示例**
 
@@ -703,7 +704,7 @@ if (inputMethodEngineDelegate) {
 }
 ```
 
-## on_cursorContextChange
+## on_cursorContextChange('cursorContextChange')
 
 ```TypeScript
 on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
@@ -734,7 +735,7 @@ inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y:
 });
 ```
 
-## on_editorAttributeChanged
+## on_editorAttributeChanged('editorAttributeChanged')
 
 ```TypeScript
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
@@ -764,7 +765,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## on_keyDown
+## on_keyDown('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
@@ -800,7 +801,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 });
 ```
 
-## on_keyEvent
+## on_keyEvent('keyEvent')
 
 ```TypeScript
 on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
@@ -819,7 +820,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br/>- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#keyevent)。<br/>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br/>- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)。<br/>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
 
 **示例**
 
@@ -835,7 +836,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 });
 ```
 
-## on_keyUp
+## on_keyUp('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
@@ -871,7 +872,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 });
 ```
 
-## on_selectionChange
+## on_selectionChange('selectionChange')
 
 ```TypeScript
 on(
@@ -907,7 +908,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## on_textChange
+## on_textChange('textChange')
 
 ```TypeScript
 on(type: 'textChange', callback: (text: string) => void): void

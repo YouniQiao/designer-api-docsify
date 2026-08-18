@@ -56,7 +56,7 @@ No span flag. When this flag is set, no span information is created. By default,
 TP_INFO = 1 << 2
 ```
 
-Trace point flag. When this flag is set in the debugging scenario, the HiLog logs of the trace point are printed upon calling the **[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint)** API. By default, the HiLog logs are not printed.
+Trace point flag. When this flag is set in the debugging scenario, the HiLog logs of the trace point are printed upon calling the **[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md)** API. By default, the HiLog logs are not printed.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Trace point flag. When this flag is set in the debugging scenario, the HiLog log
 NO_BE_INFO = 1 << 3
 ```
 
-No begin and end flag. When this flag is set in the debugging scenario, the HiLog logs about the begin and end of tracing are printed when the [begin()](arkts-performanceanalysis-hitracechain-begin-f.md#begin) and [end()](arkts-performanceanalysis-hitracechain-end-f.md#end) APIs are called. By default, the HiLog logs about the begin and end of tracing are not printed.
+No begin and end flag. When this flag is set in the debugging scenario, the HiLog logs about the begin and end of tracing are printed when the [begin()](arkts-performanceanalysis-hitracechain-begin-f.md) and [end()](arkts-performanceanalysis-hitracechain-end-f.md) APIs are called. By default, the HiLog logs about the begin and end of tracing are not printed.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Failure trigger flag. This is a reserved flag.
 D2D_TP_INFO = 1 << 6
 ```
 
-Device-to-device trace point flag. It is a subset of **TP_INFO** and is used in debugging scenarios. When the **TP_INFO** flag is set, the **D2D_TP_INFO** flag does not take effect. When **TP_INFO** is not set and **D2D_TP_INFO** is set, the HiLog logs of the trace point are printed only when the mode parameter is set to **DEVICE** upon calling [tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint).
+Device-to-device trace point flag. It is a subset of **TP_INFO** and is used in debugging scenarios. When the **TP_INFO** flag is set, the **D2D_TP_INFO** flag does not take effect. When **TP_INFO** is not set and **D2D_TP_INFO** is set, the HiLog logs of the trace point are printed only when the mode parameter is set to **DEVICE** upon calling [tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md).
 
 **Since:** 23
 

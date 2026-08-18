@@ -18,7 +18,7 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)
+**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
 
 <!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
 

@@ -2,7 +2,7 @@
 
 流图片类型，继承自Image。
 
-**继承/实现关系：** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md#image)
+**继承/实现关系：** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md)
 
 **起始版本：** 26.0.0
 

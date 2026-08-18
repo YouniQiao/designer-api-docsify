@@ -1,6 +1,6 @@
 # EvalErrorConstructor
 
-**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md#errorconstructor)
+**Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md)
 
 **Since:** -1
 

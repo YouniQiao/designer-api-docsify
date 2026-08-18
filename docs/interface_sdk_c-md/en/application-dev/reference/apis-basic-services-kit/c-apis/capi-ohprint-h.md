@@ -316,7 +316,7 @@ Defines a callback used to return the file write-back result.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*jobId | Pointer to the print job ID. |
+| const char \*jobId | Pointer to the print job ID. |
 | uint32_t code | File write-back result. |
 
 ### Print_OnStartLayoutWrite()
@@ -335,7 +335,7 @@ Defines a callback to be invoked when the file write-back starts.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*jobId | Pointer to the print job ID. |
+| const char \*jobId | Pointer to the print job ID. |
 | uint32_t fd | File descriptor to write. |
 | [const Print_PrintAttributes](capi-print-print-printattributes.md) \*oldAttrs | Pointer to the old attribute. |
 | [const Print_PrintAttributes](capi-print-print-printattributes.md) \*newAttrs | Pointer to the new attribute. |
@@ -357,7 +357,7 @@ Defines a callback to be invoked when the print job state changes.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*jobId | Pointer to the print job ID. |
+| const char \*jobId | Pointer to the print job ID. |
 | uint32_t state | Print job state. |
 
 ### Print_PrinterDiscoveryCallback()
@@ -376,7 +376,7 @@ Defines a callback used to return the discovered printers.
 
 | Parameter | Description |
 | -- | -- |
-| (Print_DiscoveryEvent event | Printer discovery event. |
+| [Print_DiscoveryEvent](capi-ohprint-h.md#print_discoveryevent) event | Printer discovery event. |
 | [const Print_PrinterInfo](capi-print-print-printerinfo.md) \*printerInfo | Printer information when the discovery event occurs. |
 
 ### Print_PrinterChangeCallback()
@@ -395,7 +395,7 @@ Defines a callback to be invoked when a printer is changed.
 
 | Parameter | Description |
 | -- | -- |
-| (Print_PrinterEvent event | Printer change event during the running of the print service. |
+| [Print_PrinterEvent](capi-ohprint-h.md#print_printerevent) event | Printer change event during the running of the print service. |
 | [const Print_PrinterInfo](capi-print-print-printerinfo.md) \*printerInfo | Printer information when the change event occurs. |
 
 ### OH_Print_Init()
@@ -416,7 +416,7 @@ Checks and starts the print service, initializes the print client, and connects 
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to start the CUPS service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to start the CUPS service. |
 
 ### OH_Print_Release()
 
@@ -434,7 +434,7 @@ Disconnects from the print service, dismisses the previous callback, and release
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>Currently, no other error codes will be returned. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>Currently, no other error codes will be returned. |
 
 ### OH_Print_StartPrinterDiscovery()
 
@@ -460,7 +460,7 @@ Starts printer discovery.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to query the print extension list from the BMS.<br>     <br>[PRINT_ERROR_INVALID_EXTENSION](capi-ohprint-h.md#print_errorcode): No available print extension is found. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to query the print extension list from the BMS.      <br>[PRINT_ERROR_INVALID_EXTENSION](capi-ohprint-h.md#print_errorcode): No available print extension is found. |
 
 ### OH_Print_StopPrinterDiscovery()
 
@@ -480,7 +480,7 @@ Stops printer discovery.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
 
 ### OH_Print_ConnectPrinter()
 
@@ -506,7 +506,7 @@ Connects to a printer by the printer ID.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Printer does not exist in the list of discovered printers.<br>     <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to find the printer extension. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Printer does not exist in the list of discovered printers.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to find the printer extension. |
 
 ### OH_Print_StartPrintJob()
 
@@ -532,7 +532,7 @@ Starts a print job.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Printer does not exist in the list of connected printers.<br>     <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to create a print job in the print service.<br>     <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Failed to find the specified task in the task queue. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Printer does not exist in the list of connected printers.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to create a print job in the print service.      <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Failed to find the specified task in the task queue. |
 
 ### OH_Print_RegisterPrinterChangeListener()
 
@@ -558,7 +558,7 @@ Registers a listener for printer changes.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
 
 ### OH_Print_UnregisterPrinterChangeListener()
 
@@ -598,7 +598,7 @@ Queries the list of added printers.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): printerIdList is null.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to query any connected printers.<br>     <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to copy printer ID list. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): printerIdList is null.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to query any connected printers.      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to copy printer ID list. |
 
 ### OH_Print_ReleasePrinterList()
 
@@ -643,7 +643,7 @@ Queries printer information by printer ID.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The printerId or printerInfo is null.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The printerId or printerInfo is null.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers. |
 
 ### OH_Print_ReleasePrinterInfo()
 
@@ -679,7 +679,7 @@ Starts the printer management window of the system.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to start the printer management window. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to start the printer management window. |
 
 ### OH_Print_QueryPrinterProperties()
 
@@ -707,7 +707,7 @@ Queries the printer properties based on the list of property keys.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): One of the parameters is null or the key list is empty.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find properties of the specified printer.<br>     <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to copy printer properties. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): One of the parameters is null or the key list is empty.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find properties of the specified printer.      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to copy printer properties. |
 
 ### OH_Print_ReleasePrinterProperties()
 
@@ -752,7 +752,7 @@ Updates the printer properties based on the KV pairs.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
 
 ### OH_Print_RestorePrinterProperties()
 
@@ -779,7 +779,7 @@ Restores printer properties to the default settings based on the property key li
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
 
 ### OH_Print_StartPrintByNative()
 
@@ -807,7 +807,7 @@ Starts the printing dialog box.
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The ohos.permission.PRINT permission is required.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service. |
 
 ### OH_Print_OnJobStateChanged()
 
@@ -825,7 +825,7 @@ Defines a callback to be invoked when the print job state changes.
 
 | Parameter | Description |
 | -- | -- |
-| (const char \*jobId | Pointer to the print job ID. |
+| const char \*jobId | Pointer to the print job ID. |
 | [OH_Print_JobState](capi-ohprint-h.md#oh_print_jobstate) state | Print job state. |
 
 ### OH_Print_StartPrintWithJobStateCallback()
@@ -853,6 +853,6 @@ Starts a print job with the callback to be invoked when the print job state chan
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>     <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The {@link ohos.permission.PRINT} permission is required.<br>     <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The jobStateChangedCb is null.<br>     <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): The callback function cannot be copied.<br>     <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>     <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): The print job struct cannot be created in the print service.<br>     <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers.<br>     <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Print job cannot be found in the job queue. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The {@link ohos.permission.PRINT} permission is required.      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The jobStateChangedCb is null.      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): The callback function cannot be copied.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): The print job struct cannot be created in the print service.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers.      <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Print job cannot be found in the job queue. |
 
 

@@ -1,6 +1,6 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager) 获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md) 获取实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## getPermissionFlags
@@ -35,7 +36,7 @@ getPermissionFlags(tokenID: int, permissionName: Permissions): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 查询的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
@@ -178,7 +179,7 @@ getPermissionRequestToggleStatus(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | Permissions | 是 | 待查询弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字。 |
-| subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 |
+| subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
 **返回值：**
 
@@ -236,7 +237,7 @@ getPermissionsStatus(tokenID: int, permissionList: Array<Permissions>): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 待获取权限状态的权限名列表。传入无效值时返回错误码12100001。 <br>最大长度为1024且不能为空。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
@@ -364,7 +365,7 @@ grantPermission(tokenID: int, permissionName: Permissions, permissionFlags: int)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被授予的权限名称。权限名长度不能超过256个字符，超过限制时返回错误码12100001。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
@@ -443,7 +444,7 @@ grantUserGrantedPermission(tokenID: int, permissionName: Permissions, permission
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被授予的权限名称。超过限制时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
@@ -530,10 +531,10 @@ grantUserGrantedPermission(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被授予的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当授予权限成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当授予权限成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -599,7 +600,7 @@ offPermissionStateChange(
     ): void
 ```
 
-取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[onPermissionStateChange](#onpermissionstatechange) > 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
+取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[onPermissionStateChange](#on_permissionstatechangepermissionstatechange) > 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 
@@ -617,9 +618,9 @@ offPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 onPermissionStateChange注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 onPermissionStateChange注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
 
 **错误码：**
 
@@ -648,7 +649,7 @@ try {
 }
 ```
 
-## off_permissionStateChange
+## off_permissionStateChange('permissionStateChange')
 
 ```TypeScript
 off(
@@ -659,7 +660,7 @@ off(
     ): void
 ```
 
-取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[on](#onpermissionstatechange)配套使用，用于取消通过on创建的监听关系。
+取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[on](#on_permissionstatechangepermissionstatechange)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 9
 
@@ -676,9 +677,9 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | 是 | 订阅事件类型，固定为'permissionStateChange'，权限状态变更事件。 |
-| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 取消订阅的tokenID列表，为空时表示取消订阅所有的应用的权限状态变化，必须与on的输入一致。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on的输入一致。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 on注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。返回取消订阅指定tokenID与指定权限名状态变更事件的对象，需与 on注册时的callback一致。不传入此参数时，将取消与tokenIDList和permissionList完全匹配的所有监听回调。 |
 
 **错误码：**
 
@@ -718,7 +719,7 @@ onPermissionStateChange(
     ): void
 ```
 
-订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 允许指定tokenID列表与权限列表订阅多个callback。 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。 该接口通常与[offPermissionStateChange](#offpermissionstatechange)配套使用， 当不再需要监听时应调用offPermissionStateChange取消订阅。
+订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 允许指定tokenID列表与权限列表订阅多个callback。 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。 该接口通常与[offPermissionStateChange](#off_permissionstatechangepermissionstatechange)配套使用， 当不再需要监听时应调用offPermissionStateChange取消订阅。
 
 **起始版本：** 23
 
@@ -736,9 +737,9 @@ onPermissionStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -772,7 +773,7 @@ try {
 }
 ```
 
-## on_permissionStateChange
+## on_permissionStateChange('permissionStateChange')
 
 ```TypeScript
 on(
@@ -800,9 +801,9 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | 是 | 订阅事件类型，固定为'permissionStateChange'，权限状态变更事件。 |
-| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 订阅的tokenID列表，为空时表示订阅所有的应用的权限状态变化。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024且不能为空。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定tokenID与指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -921,7 +922,7 @@ queryStatusByTokenID(tokenIDList: Array<int>): Promise<Array<PermissionStatusInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenIDList | Array&lt;int&gt; | 是 | 待查询的应用tokenID列表。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024且不能为空。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenIDList | Array&lt;int&gt; | 是 | 待查询的应用tokenID列表。应用的身份标识可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>最大长度为1024且不能为空。取值约束：列表中的tokenID必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 
 **返回值：**
 
@@ -996,7 +997,7 @@ requestPermissionOnApplicationSetting(tokenID: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 
 **返回值：**
 
@@ -1054,7 +1055,7 @@ requestPermissionsFromUserWithWindowId(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| windowId | int | 是 | 应用窗口的ID。可通过[window.findWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-findwindow-f.md#findwindow)(窗口名). [getWindowProperties()](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getwindowproperties).id获取。该参数必须对应当前有效窗口，传入已销毁、不可见或无效 窗口ID时将返回12100001。 <br>取值限定为整数。 |
+| windowId | int | 是 | 应用窗口的ID。可通过[window.findWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-findwindow-f.md)(窗口名). [getWindowProperties()](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getwindowproperties).id获取。该参数必须对应当前有效窗口，传入已销毁、不可见或无效 窗口ID时将返回12100001。 <br>取值限定为整数。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前窗口场景下真正需要的敏感权限。 <br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
@@ -1139,7 +1140,7 @@ revokePermission(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 | killProcess | boolean | 否 | 是否终止应用进程。 <br>- true表示终止应用进程。 <br>- false表示不终止应用进程。 <br>- 默认值为true。 <br><br>**起始版本：** 26.0.0 |
@@ -1233,7 +1234,7 @@ revokeUserGrantedPermission(tokenID: int, permissionName: Permissions, permissio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
 
@@ -1320,10 +1321,10 @@ revokeUserGrantedPermission(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 被撤销的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | permissionFlags | int | 是 | 授权选项。 <br>取值限定为整数。 <br>- 1表示当次用户若选择禁止该权限，下次权限弹窗仍可以弹出申请用户授权。 <br>- 2表示当次用户若选择禁止该权限，下次不会再弹出权限弹窗，用户需要在系统设置的权限管理中进行授权。 <br>- 64表示当次用户若选择仅本次允许，权限仅本次授权。应用切换后台状态或退出后取消授权。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当撤销权限成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当撤销权限成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1468,7 +1469,7 @@ setPermissionRequestToggleStatus(
 | --- | --- | --- | --- |
 | permissionName | Permissions | 是 | 待设置弹窗开关状态的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
 | status | [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 是 | 指定权限的弹窗开关状态值。 |
-| subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 |
+| subProfileId | int | 是 | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 |
 
 **返回值：**
 

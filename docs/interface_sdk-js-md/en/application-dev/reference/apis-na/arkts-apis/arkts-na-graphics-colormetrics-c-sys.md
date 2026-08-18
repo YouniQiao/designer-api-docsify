@@ -44,7 +44,7 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLinearExposure
 
@@ -82,7 +82,7 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLogExposure
 
@@ -120,7 +120,7 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## getBlueValue
 

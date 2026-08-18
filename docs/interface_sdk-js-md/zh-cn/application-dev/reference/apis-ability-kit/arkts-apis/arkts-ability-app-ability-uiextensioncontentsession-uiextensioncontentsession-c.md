@@ -11,6 +11,7 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 ## 导入模块
 
 ```TypeScript
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionWindowProxy
@@ -131,7 +132,7 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)组件加载页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载页面。
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件加载页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载页面。
 
 **起始版本：** 23
 
@@ -210,7 +211,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)组件加载 [命名路由](../../../ui/arkts-routing.md#命名路由)页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载命名路由页面。
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件加载 [命名路由](../../../ui/arkts-routing.md#命名路由)页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)生命周期中加载命名路由页面。
 
 **起始版本：** 23
 
@@ -442,7 +443,7 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | 是 | 表示是否开启隐私模式。true表示开启；false表示关闭。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -506,7 +507,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 | type | string | 是 | UIExtensionAbility组件类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
 | wantParam | Record&lt;string, Object&gt; | 是 | 表示启动UIExtensionAbility组件时传递的参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 表示启动UIExtensionAbility组件的执行结果。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -578,9 +579,9 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示扩展参数。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示扩展参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 回调函数，返回启动失败后的详细错误信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -731,7 +732,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示扩展参数。 |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 表示扩展参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 回调函数，返回启动失败后的详细错误信息。 |
 
 **返回值：**
@@ -807,7 +808,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1003,7 +1004,7 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给宿主应用的信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

@@ -4,9 +4,6 @@
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 import { GesturePath } from '@kit.AccessibilityKit';
@@ -19,7 +16,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 function onAudioMonoStateChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of mono audio mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md#offaudiomonostatechange) is used to unsubscribe > before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle callback). > Otherwise, a crash may occur.
+Subscribes to the state changes of mono audio mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md) is used to unsubscribe > before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle callback). > Otherwise, a crash may occur.
 
 **Since:** 23
 
@@ -33,7 +30,7 @@ Subscribes to the state changes of mono audio mode. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the mono audio mode enabled state changes. The value **true** indicates that the mono audio mode is enabled, and **false** indicates that the mono audio mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the mono audio mode enabled state changes. The value **true** indicates that the mono audio mode is enabled, and **false** indicates that the mono audio mode is disabled. |
 
 **Examples**
 

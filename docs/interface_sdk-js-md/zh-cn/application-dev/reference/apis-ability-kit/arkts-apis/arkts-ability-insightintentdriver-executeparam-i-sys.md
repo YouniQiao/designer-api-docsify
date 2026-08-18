@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -121,7 +122,7 @@ executeMode: insightIntent.ExecuteMode
 flags?: int
 ```
 
-意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md#flags)。 **说明：** 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
+意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md)。 **说明：** 该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
 
 **类型：** int
 
@@ -163,7 +164,7 @@ insightIntentParam: Record<string, RecordData>
 
 Indicates the insight intent param.
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

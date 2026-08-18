@@ -17,7 +17,7 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [renameSync](arkts-corefile-file-fs-renamesync-f.md#renamesync)
+**替代接口：** [renameSync](arkts-corefile-file-fs-renamesync-f.md)
 
 <!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void--><!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void-End-->
 

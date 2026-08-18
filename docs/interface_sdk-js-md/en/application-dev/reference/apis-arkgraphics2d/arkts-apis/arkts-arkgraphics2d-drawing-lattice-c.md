@@ -12,7 +12,6 @@ Lattice object. which is used to divide an image by lattice. > **NOTE：**> > - 
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createImageLattice

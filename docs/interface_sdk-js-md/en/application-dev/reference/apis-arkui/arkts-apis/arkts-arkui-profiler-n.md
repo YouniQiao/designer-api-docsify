@@ -19,11 +19,11 @@ import { inspector } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md#registervsynccallback) | Registers vsync callback for profiler. |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback) | Unregisters vsync callback. |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md) | Registers vsync callback for profiler. |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md) | Unregisters vsync callback. |
 <!--DelEnd-->
 

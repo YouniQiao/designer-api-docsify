@@ -1,18 +1,6 @@
 # @ohos.deviceInfo
 
-/*
- Copyright (c) 2026 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License"),
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The **deviceInfo** module provides terminal device information query, which cannot be configured by developers. > **NOTE：**> > The initial APIs of this module are supported since API version 6. Newly added APIs > will be marked with a superscript to indicate their earliest API version. > Some parameters whose return value is the default value are not yet available. > The APIs of this module return information about device getants. You are not expected to call these APIs > frequently.
 
 **Since:** 24
 
@@ -35,7 +23,7 @@
 
 | Name | Description |
 | --- | --- |
-| [apiAvailable](arkts-na-deviceinfo-apiavailable-f.md#apiavailable) | Checks whether a specified API version is available on the current device. This API provides compatibility check across different OpenHarmony/Distribution OS versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
+| [apiAvailable](arkts-na-deviceinfo-apiavailable-f.md) | Checks whether a specified API version is available on the current device. This API provides compatibility check across different OpenHarmony/Distribution OS versions. A suitable version check method is automatically selected based on the input format and supported API versions. |
 
 ### Enums
 

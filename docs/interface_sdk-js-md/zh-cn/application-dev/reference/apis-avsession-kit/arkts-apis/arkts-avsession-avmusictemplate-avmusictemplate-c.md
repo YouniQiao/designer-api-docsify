@@ -1,6 +1,6 @@
 # AVMusicTemplate
 
-调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。 > **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
+调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。 > **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## destroy

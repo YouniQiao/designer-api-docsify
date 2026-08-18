@@ -43,7 +43,7 @@ public itemDisplayRatio?: ItemDisplayRatio
 
 item display ratio
 
-**Type:** [ItemDisplayRatio](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
+**Type:** [ItemDisplayRatio](arkts-na-file-photopickercomponent-itemdisplayratio-e.md)
 
 **Since:** 26.0.0
 

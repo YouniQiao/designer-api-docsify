@@ -1,6 +1,6 @@
 # AsyKeyGenerator
 
-非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过 [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator)方法创建一个AsyKeyGenerator实例。
+非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过 [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md)方法创建一个AsyKeyGenerator实例。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertKey
@@ -39,7 +40,7 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 | --- | --- | --- | --- |
 | pubKey | DataBlob | 是 | 公钥材料。 |
 | priKey | DataBlob | 是 | 私钥材料。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 
@@ -74,7 +75,7 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 | --- | --- | --- | --- |
 | pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
 | priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 
@@ -724,7 +725,7 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 

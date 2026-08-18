@@ -2,7 +2,7 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#oisquery)
+**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md)
 
 **Since:** 24
 

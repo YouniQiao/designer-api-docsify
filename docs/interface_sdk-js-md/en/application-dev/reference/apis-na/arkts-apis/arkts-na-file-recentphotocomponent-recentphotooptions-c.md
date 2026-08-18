@@ -43,7 +43,7 @@ public colorMode?: PickerColorMode
 
 color mode of recentPhotoComponent placeholder
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 
@@ -103,7 +103,7 @@ public photoSource?: PhotoSource
 
 PhotoSource
 
-**Type:** [PhotoSource](arkts-na-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 26.0.0
 

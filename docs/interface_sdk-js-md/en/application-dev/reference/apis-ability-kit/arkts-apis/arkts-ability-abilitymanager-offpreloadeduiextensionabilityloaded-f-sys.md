@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## offPreloadedUIExtensionAbilityLoaded
@@ -13,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process.
+Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 

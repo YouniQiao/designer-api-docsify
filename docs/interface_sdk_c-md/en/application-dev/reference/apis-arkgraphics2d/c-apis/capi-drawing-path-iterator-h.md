@@ -80,7 +80,7 @@ Creates an **OH_Drawing_PathIterator** object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if path or pathIterator is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if path or pathIterator is a null pointer. |
 
 ### OH_Drawing_PathIteratorDestroy()
 
@@ -104,7 +104,7 @@ Destroys an **OH_Drawing_PathIterator** object and reclaims the memory occupied 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator is a null pointer. |
 
 ### OH_Drawing_PathIteratorHasNext()
 
@@ -129,7 +129,7 @@ Checks whether there is any next operation in the path operation iterator.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator or hasNext is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator or hasNext is a null pointer. |
 
 ### OH_Drawing_PathIteratorNext()
 
@@ -157,7 +157,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator, points, or verb is a null pointer.<br> OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if count is less than offset + 4. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator, points, or verb is a null pointer.  OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if count is less than offset + 4. |
 
 ### OH_Drawing_PathIteratorPeek()
 
@@ -182,6 +182,6 @@ Retrieves the next operation in this path, without moving the iterator.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator or verb is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if pathIterator or verb is a null pointer. |
 
 

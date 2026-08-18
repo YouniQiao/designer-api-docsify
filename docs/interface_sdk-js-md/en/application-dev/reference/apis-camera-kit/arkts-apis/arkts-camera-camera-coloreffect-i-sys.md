@@ -1,8 +1,8 @@
 # ColorEffect (System API)
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery-system-api) Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) Provides the APIs to obtain and set the lens color effect.
 
-**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#coloreffectquery-system-api)
+**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md)
 
 **Since:** 23
 

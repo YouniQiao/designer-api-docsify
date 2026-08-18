@@ -43,10 +43,10 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | [24010004](../errorcode-abilityToolAccessCtrl-sys.md#24010004-权限不存在) | Invalid permission. A permission in permissionInfo does not exist. |
 | [24010005](../errorcode-abilityToolAccessCtrl-sys.md#24010005-授权失败) | Grant permission failed. The application specified by the tokenID is not allowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
-| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
 | [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) | The account is not logged in, network is unavailable, timeout, etc. |
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. PermissionName exceeds 256 characters, permissionStatus is invalid, etc. |
-| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. Possible cause: IPC failed. |
 
 **示例**
 

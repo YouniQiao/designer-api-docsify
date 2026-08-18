@@ -26,9 +26,9 @@ Obtains a property value. This API uses a promise to return the result. The **pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) . The result contains **resourceId**. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md) . The result contains **resourceId**. |
 | propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 001 6-2023. You need to make adaptation based on the API name. |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Parameters to be passed to [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#cryptoextensionability). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#huksexternalcryptotagtype), the parameter is invalid. |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Parameters to be passed to [Extension Ability](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 
 **Return value:**
 

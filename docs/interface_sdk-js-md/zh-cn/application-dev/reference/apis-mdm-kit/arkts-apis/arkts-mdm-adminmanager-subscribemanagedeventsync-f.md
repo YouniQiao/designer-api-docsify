@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## subscribeManagedEventSync
@@ -11,7 +12,7 @@
 function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。 从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md#managedevent)事件时返回9200002错误码。
+订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。 从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。
 
 **起始版本：** 12
 
@@ -28,7 +29,7 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | 是 | 订阅事件数组，用于指定需要订阅的系统管理事件。数组元素为 [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md#managedevent)枚举值，可订阅多个事件类型，如应用安装/卸载/启动/停止事件、系统更新事件等。 |
+| managedEvents | Array&lt;[ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)&gt; | 是 | 订阅事件数组，用于指定需要订阅的系统管理事件。数组元素为 [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)枚举值，可订阅多个事件类型，如应用安装/卸载/启动/停止事件、系统更新事件等。 |
 
 **错误码：**
 

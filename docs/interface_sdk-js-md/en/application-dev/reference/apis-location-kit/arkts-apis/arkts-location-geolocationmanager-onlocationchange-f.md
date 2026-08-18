@@ -30,7 +30,7 @@ Subscribe location changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | LocationRequest \| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md) | Yes | Indicates the location request parameters.<br>**Since:** 23 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result.<br>**Since:** 23 |
 
 **Error codes:**
 

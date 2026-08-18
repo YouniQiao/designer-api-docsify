@@ -545,7 +545,7 @@ Displays the menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | the callback of showActionMenu. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | the callback of showActionMenu. |
 
 **Error codes:**
 
@@ -615,7 +615,7 @@ Displays the dialog box.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | the callback of showDialog. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | the callback of showDialog. |
 
 **Error codes:**
 

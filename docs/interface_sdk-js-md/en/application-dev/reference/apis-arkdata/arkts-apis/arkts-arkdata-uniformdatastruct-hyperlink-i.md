@@ -12,7 +12,6 @@ Represents data of the hyperlink type.
 
 ```TypeScript
 import { uniformDataStruct } from '@kit.ArkData';
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## description
@@ -57,7 +56,7 @@ Object of the dictionary type used to describe the attributes of the hyperlink. 
 readonly uniformDataType: 'general.hyperlink'
 ```
 
-Uniform data type, which has a fixed value of **general.hyperlink**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.hyperlink**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'general.hyperlink'
 

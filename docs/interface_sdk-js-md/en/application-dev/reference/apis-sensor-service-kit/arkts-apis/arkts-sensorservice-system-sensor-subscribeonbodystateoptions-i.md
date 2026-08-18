@@ -6,7 +6,7 @@ Defines the callback invoked upon change in the wearing state of the device that
 
 **Deprecated since:** 8
 
-**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#weardetection)
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
 
 <!--Device-unnamed-export interface SubscribeOnBodyStateOptions--><!--Device-unnamed-export interface SubscribeOnBodyStateOptions-End-->
 
@@ -32,7 +32,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -54,7 +54,7 @@ Callback invoked when the wearing state of the device that houses the sensor is 
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 

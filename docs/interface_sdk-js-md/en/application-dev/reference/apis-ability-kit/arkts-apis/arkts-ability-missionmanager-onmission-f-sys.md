@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
-import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## onMission

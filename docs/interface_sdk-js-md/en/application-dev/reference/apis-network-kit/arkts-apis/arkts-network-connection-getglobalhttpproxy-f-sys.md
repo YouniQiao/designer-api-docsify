@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
+Obtains the global network proxy configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Obtains the network independent global [HttpProxy](arkts-network-connection-http
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpProxy&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is obtained successfully, **error** is **undefined** and **data** is the global HTTP proxy configuration. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 function getGlobalHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the network independent global [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings.
+Obtains the global network proxy configuration information. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Obtains the network independent global [HttpProxy](arkts-network-connection-http
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
+| Promise&lt;HttpProxy&gt; | Promise used to return the result. |
 
 **Error codes:**
 

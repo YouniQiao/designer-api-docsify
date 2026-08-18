@@ -30,7 +30,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md#access)(path: string, mode?: AccessModeType)
+**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, mode?: AccessModeType)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -130,7 +130,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Deprecated since:** 23
 
-**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md#access)(path: string, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [access](../../apis-na/arkts-apis/arkts-na-fileio-access-f.md)(path: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -145,7 +145,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceFileUri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
 
 **Error codes:**
 
@@ -227,7 +227,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, options?: CopyOptions)
+**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options?: CopyOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -263,7 +263,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -279,7 +279,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 **Examples**
 
@@ -328,7 +328,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Deprecated since:** 23
 
-**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md#copy)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copy](../../apis-na/arkts-apis/arkts-na-fileio-copy-f.md)(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -345,7 +345,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
 | force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 **Examples**
 
@@ -394,7 +394,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyfile)(src: string | number, dest: string | number, mode?: number)
+**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -486,7 +486,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Deprecated since:** 23
 
-**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md#copyfile)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [copyFile](../../apis-na/arkts-apis/arkts-na-fileio-copyfile-f.md)(src: string | number, dest: string | number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -505,7 +505,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
 | fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | URI of the file generated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | URI of the file generated. |
 
 **Error codes:**
 
@@ -572,7 +572,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createrandomaccessfile)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
+**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, mode?: number, options?: RandomAccessFileOptions)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -675,7 +675,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md#createrandomaccessfile)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
+**Substitutes:** [createRandomAccessFile](../../apis-na/arkts-apis/arkts-na-fileio-createrandomaccessfile-f.md)(file: string | File, callback: AsyncCallback&lt;RandomAccessFile&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -691,7 +691,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | uri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new file name, and supports with suffix. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
 
 **Error codes:**
 
@@ -882,7 +882,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the file or directory to be deleted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes |  |
 
 **Error codes:**
 
@@ -960,7 +960,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1015,7 +1015,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1030,7 +1030,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
@@ -1069,7 +1069,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1125,7 +1125,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1140,7 +1140,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
 
 **Examples**
 
@@ -1174,7 +1174,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#rootinfo-system-api).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1270,7 +1270,7 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#rootinfo-system-api).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1288,7 +1288,7 @@ Obtains information about the device root nodes of the file management services 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes | The callback is used to return a RootIterator. |
 
 **Error codes:**
 
@@ -1373,7 +1373,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md#mkdir)(path: string)
+**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1476,7 +1476,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md#mkdir)(path: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [mkdir](../../apis-na/arkts-apis/arkts-na-fileio-mkdir-f.md)(path: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1492,7 +1492,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | parentUri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new directory name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
 
 **Error codes:**
 
@@ -1571,7 +1571,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1669,7 +1669,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1685,7 +1685,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | sourceFile | string | Yes | Indicates the file or directory to be moved. |
 | destFile | string | Yes | Represents the destination folder. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
 
 **Error codes:**
 
@@ -1764,7 +1764,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1856,7 +1856,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1875,7 +1875,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | sourceUri | string | Yes | URI of the source file to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file is moved. |
 | fileName | string | Yes | New name of the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
@@ -1945,7 +1945,7 @@ Moves a file or directory. This API uses a promise to return the result. You can
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode?: number)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2012,7 +2012,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2030,7 +2030,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
@@ -2108,7 +2108,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md#movefile)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [moveFile](../../apis-na/arkts-apis/arkts-na-fileio-movefile-f.md)(src: string, dest: string, mode: number, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2127,7 +2127,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | sourceUri | string | Yes | URI of the source file or directory to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
 | force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
@@ -2205,7 +2205,7 @@ Opens a file. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)(path: string, mode?: number)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, mode?: number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2301,7 +2301,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md#open)(path: string, callback: AsyncCallback&lt;File&gt;)
+**Substitutes:** [open](../../apis-na/arkts-apis/arkts-na-fileio-open-f.md)(path: string, callback: AsyncCallback&lt;File&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2317,7 +2317,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
 | flags | [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
 
 **Error codes:**
 
@@ -2395,7 +2395,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2409,8 +2409,8 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#filekey-system-api) to query. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
 
 **Return value:**
 
@@ -2452,7 +2452,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md#stat)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
+**Substitutes:** [stat](../../apis-na/arkts-apis/arkts-na-fileio-stat-f.md)(file: string | number, callback: AsyncCallback&lt;Stat&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2466,9 +2466,9 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api). |
-| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md#filekey-system-api) to query. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
 **Examples**
 
@@ -2509,7 +2509,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Deprecated since:** 23
 
-**Substitutes:** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md#createwatcher)
+**Substitutes:** [createWatcher](../../apis-na/arkts-apis/arkts-na-fileio-createwatcher-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2525,7 +2525,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
 | notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes | Callback invoked to return the notification. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes | Callback invoked to return the notification. |
 
 **Error codes:**
 
@@ -2545,7 +2545,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md#rename)(oldPath: string, newPath: string)
+**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2642,7 +2642,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md#rename)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [rename](../../apis-na/arkts-apis/arkts-na-fileio-rename-f.md)(oldPath: string, newPath: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2658,7 +2658,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
 | displayName | string | Yes | Indicates the new directory or file name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback is used to return a URI representing the new file or directory. |
 
 **Error codes:**
 
@@ -2749,7 +2749,7 @@ Unregisters a callback that is used to listen for the specified URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
 
 **Error codes:**
 

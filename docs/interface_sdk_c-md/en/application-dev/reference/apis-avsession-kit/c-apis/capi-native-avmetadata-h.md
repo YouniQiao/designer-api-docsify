@@ -69,7 +69,7 @@ Creates an AVMetadataBuilder instance.
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr.<br>         [AVMETADATA_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avmetadata_result) No memory to allocate a new instance. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr.          [AVMETADATA_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avmetadata_result) No memory to allocate a new instance. |
 
 ### OH_AVMetadataBuilder_Destroy()
 
@@ -93,7 +93,7 @@ Destroy a builder.
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
 
 ### OH_AVMetadataBuilder_SetAssetId()
 
@@ -118,7 +118,7 @@ Set current asset id of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of assetId is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of assetId is nullptr. |
 
 ### OH_AVMetadataBuilder_SetTitle()
 
@@ -143,7 +143,7 @@ Set the title of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of title is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of title is nullptr. |
 
 ### OH_AVMetadataBuilder_SetArtist()
 
@@ -168,7 +168,7 @@ Set the artist of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of artist is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of artist is nullptr. |
 
 ### OH_AVMetadataBuilder_SetAuthor()
 
@@ -193,7 +193,7 @@ Set the author of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of author is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of author is nullptr. |
 
 ### OH_AVMetadataBuilder_SetAlbum()
 
@@ -218,7 +218,7 @@ Set the album information
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Return code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of album is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Return code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1. The param of builder is nullptr.                                                  2. The param of album is nullptr. |
 
 ### OH_AVMetadataBuilder_SetWriter()
 
@@ -243,7 +243,7 @@ Set the writer of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of writer is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1. The param of builder is nullptr.                                                  2. The param of writer is nullptr. |
 
 ### OH_AVMetadataBuilder_SetComposer()
 
@@ -268,7 +268,7 @@ Set the composer of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of composer is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1. The param of builder is nullptr.                                                  2. The param of composer is nullptr. |
 
 ### OH_AVMetadataBuilder_SetDuration()
 
@@ -293,7 +293,7 @@ Set the duration of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
 
 ### OH_AVMetadataBuilder_SetMediaImageUri()
 
@@ -318,7 +318,7 @@ Set the media image uri of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of mediaImageUri nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of mediaImageUri nullptr. |
 
 ### OH_AVMetadataBuilder_SetSubtitle()
 
@@ -343,7 +343,7 @@ Set the subtitle of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of subtitle nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of subtitle nullptr. |
 
 ### OH_AVMetadataBuilder_SetDescription()
 
@@ -368,7 +368,7 @@ Set the media description of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of description nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of description nullptr. |
 
 ### OH_AVMetadataBuilder_SetLyric()
 
@@ -393,7 +393,7 @@ Set the media lyric content of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of lyric nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of lyric nullptr. |
 
 ### OH_AVMetadataBuilder_SetSkipIntervals()
 
@@ -418,7 +418,7 @@ Set the skip intervals of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of intervals is invalid. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of intervals is invalid. |
 
 ### OH_AVMetadataBuilder_SetDisplayTags()
 
@@ -443,7 +443,7 @@ Set the display tags of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of builder is nullptr. |
 
 ### OH_AVMetadataBuilder_SetFilter()
 
@@ -468,7 +468,7 @@ Set the protocols supported
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of filter is invalid. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of filter is invalid. |
 
 ### OH_AVMetadataBuilder_GenerateAVMetadata()
 
@@ -493,7 +493,7 @@ Create the avmetadata.
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avmetadata_result) No memory to allocate a new instance.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of avMetadata is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avmetadata_result) No memory to allocate a new instance.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result):                                                  1.The param of builder is nullptr;                                                  2.The param of avMetadata is nullptr. |
 
 ### OH_AVMetadata_Destroy()
 
@@ -517,6 +517,6 @@ Request to release the avmetadata.
 
 | Type | Description |
 | -- | -- |
-| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:<br>         [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.<br>         [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of avMetadata is nullptr. |
+| [AVMetadata_Result](capi-native-avsession-errors-h.md#avmetadata_result) | Function result code:          [AVMETADATA_SUCCESS](capi-native-avsession-errors-h.md#avmetadata_result) If the execution is successful.          [AVMETADATA_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avmetadata_result) The param of avMetadata is nullptr. |
 
 

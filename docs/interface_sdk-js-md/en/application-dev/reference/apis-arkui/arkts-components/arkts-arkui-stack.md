@@ -28,4 +28,9 @@ Stack(options?: StackOptions)
 
 ## Summary
 
-- [StackOptions](arkts-arkui-stackoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [StackOptions](arkts-arkui-stackoptions-i.md) | > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The > initial version information of the historical anonymous objects has been retained, which may result in the outer > element's @since version number being later than the inner element's version number. However, this does not affect > the use of the API. |
+

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -41,7 +42,7 @@ bundleName?: string
 intentFlags: int
 ```
 
-意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo系统接口)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考 [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#getinsightintentflag系统接口)。
+意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考 [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。
 
 **类型：** int
 

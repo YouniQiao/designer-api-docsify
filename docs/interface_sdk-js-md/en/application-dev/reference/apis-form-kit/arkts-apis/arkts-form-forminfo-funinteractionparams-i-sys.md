@@ -14,7 +14,6 @@ The fun interaction form params.
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName

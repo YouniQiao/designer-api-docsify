@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getdeviceremindtype-system-api)
+**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,7 +34,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
 
 
 ## getDeviceRemindType
@@ -51,7 +49,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getdeviceremindtype-system-api)
+**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

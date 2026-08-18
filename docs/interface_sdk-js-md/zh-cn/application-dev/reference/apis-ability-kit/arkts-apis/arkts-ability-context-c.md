@@ -69,7 +69,7 @@ export default class EntryAbility extends UIAbility {
 createDisplayContext(displayId: long): Context
 ```
 
-根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#screendensity)和屏幕方向 [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#direction)）的应用上下文。
+根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md)和屏幕方向 [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md)）的应用上下文。
 
 **起始版本：** 23
 
@@ -133,7 +133,7 @@ createModuleContext(moduleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,7 +254,7 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dataGroupID | string | 是 | 原子化服务类型的应用创建时，系统会指定分配唯一Group ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取共享目录成功，err为undefined，data为对应的共享目录，如果不存在则返回为空；否则为错误对象。<br>**说明：**仅支持应用el2加密级别。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取共享目录成功，err为undefined，data为对应的共享目录，如果不存在则返回为空；否则为错误对象。<br>**说明：**仅支持应用el2加密级别。 |
 
 **错误码：**
 
@@ -438,7 +438,7 @@ area: contextConstant.AreaMode
 bundleCodeDir: string
 ```
 
-安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager)访问资源，详情参考 [应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)访问资源，详情参考 [应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
 
 **类型：** string
 

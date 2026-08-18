@@ -2,7 +2,7 @@
 
 Defines ComponentContent.
 
-**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md#componentcontentbase)
+**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilder&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 
 ## constructor
@@ -59,7 +59,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 
@@ -85,7 +85,7 @@ Constructor.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 | options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | 是 | Defines the options that will be used when building. |
@@ -196,7 +196,7 @@ reuse(param?: RecordData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用ComponentContent的参数。该参数将直接用于ComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定义组件的aboutToReuse生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ComponentContent中的自定义组件将直接使用构造时的数据源。 |
+| param | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用ComponentContent的参数。该参数将直接用于ComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定义组件的aboutToReuse生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ComponentContent中的自定义组件将直接使用构造时的数据源。 |
 
 ## update
 

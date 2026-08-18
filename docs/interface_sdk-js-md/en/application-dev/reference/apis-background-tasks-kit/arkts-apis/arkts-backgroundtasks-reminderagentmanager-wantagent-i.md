@@ -12,7 +12,6 @@ Defines the information about the redirected-to ability.
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -39,7 +38,7 @@ parameters?: RecordData
 
 The description of the WantParams object in an Want
 
-**Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**Type:** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **Since:** 23
 

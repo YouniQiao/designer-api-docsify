@@ -17,7 +17,7 @@ Obtains file information. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md)
 
 <!--Device-unnamed-declare function stat(path: string): Promise<Stat>--><!--Device-unnamed-declare function stat(path: string): Promise<Stat>-End-->
 
@@ -48,7 +48,7 @@ Obtains file information. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md)
 
 <!--Device-unnamed-declare function stat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function stat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
@@ -59,5 +59,5 @@ Obtains file information. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the file information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the file information obtained. |
 

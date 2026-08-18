@@ -2,7 +2,7 @@
 
 Represents boxed long value and related operations.
 
-**Inheritance/Implementation:** Long extends [Integral](arkts-na-numeric-integral-c.md#integral) and implements Comparable<Long>
+**Inheritance/Implementation:** Long extends [Integral](arkts-na-numeric-integral-c.md) and implements Comparable<Long>
 
 **Since:** 24
 

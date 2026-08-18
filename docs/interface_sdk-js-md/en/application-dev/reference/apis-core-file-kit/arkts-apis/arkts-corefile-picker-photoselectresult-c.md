@@ -6,7 +6,7 @@ Defines information about the images or videos selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoselectresult)
+**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 

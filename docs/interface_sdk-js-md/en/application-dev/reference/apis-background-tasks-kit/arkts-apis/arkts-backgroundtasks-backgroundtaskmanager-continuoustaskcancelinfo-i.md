@@ -12,7 +12,6 @@ Describes the information about the cancellation of a continuous task.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## detailedReason

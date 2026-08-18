@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Reports the network state is connected.
+Reports the network availability to the network management module. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is used by the browser to connect to the portal network. After the network authentication is successful, > the browser reports the network connection success to the network management module. The network management > module then triggers network detection and updates the network status. > **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
-**Since:** 26.0.0
+**Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -26,8 +26,8 @@ Reports the network state is connected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network whose state is to be reported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of reportNetConnected. |
+| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -59,9 +59,9 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function reportNetConnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports the network state is connected.
+Reports that the network is available to the network management module. This API uses a promise to return the result. **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
-**Since:** 26.0.0
+**Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -73,7 +73,7 @@ Reports the network state is connected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network whose state is to be reported. |
+| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
 
 **Return value:**
 

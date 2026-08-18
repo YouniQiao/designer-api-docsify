@@ -1,6 +1,6 @@
 # CameraManager
 
-相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager)接口获取相机管理实例。
+相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md)接口获取相机管理实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## createCameraInputWithTokenId
@@ -386,7 +388,7 @@ Mutes the camera device permanently.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mute | boolean | 是 | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-| type | PolicyType | 是 | Policy type. For details about the available options, see [PolicyType](arkts-camera-camera-policytype-e-sys.md#policytype系统接口). |
+| type | PolicyType | 是 | Policy type. For details about the available options, see [PolicyType](arkts-camera-camera-policytype-e-sys.md). |
 
 **错误码：**
 
@@ -425,7 +427,7 @@ Unsubscribes from camera mute change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the camera mute change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the camera mute change. |
 
 **错误码：**
 
@@ -453,7 +455,7 @@ Unsubscribes control center status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
 
 **错误码：**
 
@@ -461,7 +463,7 @@ Unsubscribes control center status change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## off_cameraMute
+## off_cameraMute('cameraMute')
 
 ```TypeScript
 off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
@@ -482,7 +484,7 @@ Unsubscribes from camera mute status events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraMute' | 是 | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return the camera mute status. **true** if muted, **false** otherwise. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to return the camera mute status. **true** if muted, **false** otherwise. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **错误码：**
 
@@ -504,7 +506,7 @@ function unregisterCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## off_controlCenterStatusChange
+## off_controlCenterStatusChange('controlCenterStatusChange')
 
 ```TypeScript
 off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
@@ -525,7 +527,7 @@ Unsubscribes control center status change event callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | Callback used to get the control center status change. |
 
 **错误码：**
 
@@ -553,7 +555,7 @@ Subscribes camera mute change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the camera mute change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the camera mute change. |
 
 **错误码：**
 
@@ -581,7 +583,7 @@ Subscribes control center status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
 
 **错误码：**
 
@@ -589,7 +591,7 @@ Subscribes control center status change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-## on_cameraMute
+## on_cameraMute('cameraMute')
 
 ```TypeScript
 on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
@@ -610,7 +612,7 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraMute' | 是 | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. This event is triggered and the status is returned when the camera device is muted or unmuted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return the camera mute status. **true** if muted, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to return the camera mute status. **true** if muted, **false** otherwise. |
 
 **错误码：**
 
@@ -637,7 +639,7 @@ function registerCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## on_controlCenterStatusChange
+## on_controlCenterStatusChange('controlCenterStatusChange')
 
 ```TypeScript
 on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
@@ -658,7 +660,7 @@ Subscribes control center status change event callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback used to get the control center status change. |
 
 **错误码：**
 

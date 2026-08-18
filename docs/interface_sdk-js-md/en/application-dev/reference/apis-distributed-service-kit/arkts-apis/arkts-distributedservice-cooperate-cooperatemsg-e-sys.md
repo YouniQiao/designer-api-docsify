@@ -6,7 +6,7 @@ Represents a screen hopping message notification.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatestate-system-api)
+**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 
 <!--Device-cooperate-enum CooperateMsg--><!--Device-cooperate-enum CooperateMsg-End-->
 
@@ -26,7 +26,7 @@ The preparation for screen hopping is finished.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateprepare)
+**Substitutes:** [COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_prepare)
 
 <!--Device-CooperateMsg-COOPERATE_PREPARE = 0--><!--Device-CooperateMsg-COOPERATE_PREPARE = 0-End-->
 
@@ -46,7 +46,7 @@ The preparation for screen hopping is cancelled.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateunprepare)
+**Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_unprepare)
 
 <!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1--><!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1-End-->
 
@@ -66,7 +66,7 @@ Screen hopping starts.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivate)
+**Substitutes:** [COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2--><!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2-End-->
 
@@ -86,7 +86,7 @@ Starting screen hopping succeeds.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatesuccess)
+**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3-End-->
 
@@ -106,7 +106,7 @@ Starting screen hopping fails.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperateactivatefailure)
+**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_failure)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4-End-->
 
@@ -126,7 +126,7 @@ Stopping screen hopping succeeds.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatedeactivatesuccess)
+**Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_success)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5-End-->
 
@@ -146,7 +146,7 @@ Stopping screen hopping fails.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatedeactivatefailure)
+**Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_failure)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6-End-->
 
@@ -166,7 +166,7 @@ The screen hopping session is disconnected.
 
 **Deprecated since:** 11
 
-**Substitutes:** [COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperatesessiondisconnected)
+**Substitutes:** [COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_session_disconnected)
 
 <!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7--><!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7-End-->
 

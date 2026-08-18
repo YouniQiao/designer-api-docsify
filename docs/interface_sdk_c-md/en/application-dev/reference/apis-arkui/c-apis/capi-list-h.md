@@ -162,7 +162,7 @@ Sets the default size of the list item in the {@link List} component along the m
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_GetDefaultMainSize()
 
@@ -186,7 +186,7 @@ Obtains the default size of the list item in the {@link List} component along th
 
 | Type | Description |
 | -- | -- |
-| float | Default size of the list item along the main axis. The default value is 0. The unit is {@link vp}. If <br>     option is a null pointer, -1 is returned. |
+| float | Default size of the list item along the main axis. The default value is 0. The unit is {@link vp}. If       option is a null pointer, -1 is returned. |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_Resize()
 
@@ -232,7 +232,7 @@ Adjusts the children item size array in the {@link List} component along the mai
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_UpdateSize()
 
@@ -258,7 +258,7 @@ Updates the size at the specified index in the children item size array of the {
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.<br>     <ul><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>     </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_GetMainSize()
 

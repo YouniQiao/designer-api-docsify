@@ -4,13 +4,14 @@ LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的
 
 **起始版本：** 26.1.0
 
-<!--Device-jsLeakWatcher-interface LeakWatcherConfig--><!--Device-jsLeakWatcher-interface LeakWatcherConfig-End-->
+<!--Device-jsLeakWatcher-export interface LeakWatcherConfig--><!--Device-jsLeakWatcher-export interface LeakWatcherConfig-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## 导入模块
 
 ```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## bgLeakCountThreshold

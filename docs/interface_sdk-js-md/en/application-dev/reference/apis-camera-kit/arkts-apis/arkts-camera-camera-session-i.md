@@ -1,6 +1,6 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ import { cameraPicker } from '@kit.CameraKit';
 addInput(cameraInput: CameraInput): void
 ```
 
-Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instance to this session.
+Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this session.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instance 
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instance to this session.
+Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this session.
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). For example, if the aspect ratio of the preview stream is different from that of the video output stream, error code 7400201 is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). For example, if the aspect ratio of the preview stream is different from that of the video output stream, error code 7400201 is returned. |
 
 **Error codes:**
 
@@ -234,7 +234,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -276,7 +276,7 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instance from this session. This API must be called after [beginConfig](#beginconfig) and before [commitConfig](#commitconfig).
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](#beginconfig) and before [commitConfig](#commitconfig).
 
 **Since:** 23
 
@@ -307,7 +307,7 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) instan
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instance from this session.
+Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from this session.
 
 **Since:** 23
 
@@ -352,7 +352,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -412,7 +412,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 

@@ -11,6 +11,7 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## callback

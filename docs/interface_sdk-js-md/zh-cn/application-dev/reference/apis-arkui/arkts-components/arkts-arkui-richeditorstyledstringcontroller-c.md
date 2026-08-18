@@ -1,10 +1,10 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller)。
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
 ## 导入对象 ```ts controller: RichEditorStyledStringController = new RichEditorStyledStringController(); ```
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#richeditorbasecontroller) implements StyledStringController
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements StyledStringController
 
 **起始版本：** 12
 

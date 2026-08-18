@@ -12,7 +12,6 @@ Defines the request for publishing a reminder.
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actionButton

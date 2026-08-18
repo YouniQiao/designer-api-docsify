@@ -73,11 +73,26 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 ## 汇总
 
-- [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)
-- [ButtonOptions](arkts-arkui-buttonoptions-i.md)
-- [LabelStyle](arkts-arkui-labelstyle-i.md)
-- [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md)
-- [ButtonRole](arkts-arkui-buttonrole-e.md)
-- [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
-- [ButtonType](arkts-arkui-buttontype-e.md)
-- [ControlSize](arkts-arkui-controlsize-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
+| [ButtonOptions](arkts-arkui-buttonoptions-i.md) | 按钮的样式。 |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) | Button组件的label文本及其字体样式。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) | 定义ButtonConfiguration中使用的回调类型。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [ButtonRole](arkts-arkui-buttonrole-e.md) | 按钮的角色。 |
+| [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 按钮的重要程度。 |
+| [ButtonType](arkts-arkui-buttontype-e.md) | 按钮的类型。 |
+| [ControlSize](arkts-arkui-controlsize-e.md) | 按钮的尺寸。 |
+

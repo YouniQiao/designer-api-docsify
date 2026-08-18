@@ -74,7 +74,7 @@ AboutToResize Method. Executed when the associated NodeContainer performs the me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](arkts-na-graphics-size-i.md) | Yes | size used to resize |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md) | Yes | size used to resize |
 
 ## makeNode
 
@@ -106,7 +106,7 @@ MakeNode Method. Used to build a node tree and return a FrameNode or null, and a
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode or null. |
+| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode or null. |
 
 ## onAttach
 

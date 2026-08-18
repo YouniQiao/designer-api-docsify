@@ -14,7 +14,6 @@ Describes the object related to the exception event name, message, error stack i
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
-import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## instanceName

@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayout](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md#lazycolumnlayout) | Defines LazyColumnLayout Component. |
+| [LazyColumnLayout](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayout-f.md) | Defines LazyColumnLayout Component. |
 
 ### Interfaces
 

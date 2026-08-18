@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## off_p2pPersistentGroupChange
+## off_p2pPersistentGroupChange('p2pPersistentGroupChange')
 
 ```TypeScript
 function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void
@@ -34,7 +34,7 @@ Unsubscribe P2P persistent group change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPersistentGroupChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback of on |
 
 **Examples**
 

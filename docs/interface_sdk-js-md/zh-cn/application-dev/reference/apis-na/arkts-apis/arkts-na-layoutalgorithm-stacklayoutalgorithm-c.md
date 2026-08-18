@@ -2,7 +2,7 @@
 
 堆叠布局算法类。 > **说明：** > > StackLayoutAlgorithm类对象可以作为 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
 
-**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md#layoutalgorithm)
+**继承/实现关系：** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **起始版本：** 24
 

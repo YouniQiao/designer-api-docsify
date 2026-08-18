@@ -6,7 +6,7 @@ ListItem吸顶效果枚举。
 
 **废弃版本：** 9
 
-**替代接口：** [list/StickyStyle](arkts-arkui-stickystyle-e.md#stickystyle)
+**替代接口：** [list/StickyStyle](arkts-arkui-stickystyle-e.md)
 
 <!--Device-unnamed-declare enum Sticky--><!--Device-unnamed-declare enum Sticky-End-->
 

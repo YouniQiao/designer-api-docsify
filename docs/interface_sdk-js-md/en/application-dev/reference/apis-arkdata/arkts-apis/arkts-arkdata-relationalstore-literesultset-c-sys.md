@@ -12,7 +12,6 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getFloat32Array

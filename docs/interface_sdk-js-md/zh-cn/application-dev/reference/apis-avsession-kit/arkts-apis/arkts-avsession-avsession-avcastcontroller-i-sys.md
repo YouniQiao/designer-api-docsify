@@ -1,6 +1,6 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller系统接口)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
+在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## setDisplaySurface
@@ -34,7 +35,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | 设置播放的surfaceId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回当前设置结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回当前设置结果。 |
 
 **错误码：**
 

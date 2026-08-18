@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -31,7 +31,7 @@ Navigates to a specified page in the application. > **NOTE：**> > - Since API v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ router.pushUrl({
 function pushUrl(options: RouterOptions): Promise<void>
 ```
 
-Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -159,7 +159,7 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -178,8 +178,8 @@ Navigates to a specified page in the application. > **NOTE：**> > - Since API v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -230,7 +230,7 @@ router.pushUrl({
 function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Navigates to a specified page in the application. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -249,7 +249,7 @@ Navigates to a specified page in the application. > **NOTE：**> > - Since API v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 

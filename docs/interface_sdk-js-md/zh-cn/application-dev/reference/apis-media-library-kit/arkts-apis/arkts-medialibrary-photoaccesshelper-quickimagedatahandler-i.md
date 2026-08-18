@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## onDataPrepared
@@ -31,7 +32,7 @@ onDataPrepared(data: T, imageSource: image.ImageSource, map: Map<string, string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | T | 是 | 已就绪的图片资源数据。 It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md#picture) type. |
+| data | T | 是 | 已就绪的图片资源数据。 It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) type. |
 | imageSource | image.ImageSource | 是 | 已就绪的图片资源数据。 |
 | map | Map&lt;string, string&gt; | 是 | 用于获取图片资源的额外信息，如图片质量。仅支持'quality'。 |
 

@@ -12,7 +12,6 @@ This module provides APIs for obtaining file system information, including the t
 
 ```TypeScript
 import { statfs } from '@kit.CoreFileKit';
-import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -21,10 +20,10 @@ import { statfs } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md#getfreesize) | Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result. |
-| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md#getfreesize) | Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md#getfreesizesync) | Obtains the free size of the specified file system, in bytes. This API returns the result synchronously. |
-| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md#gettotalsize) | Obtains the total size of the specified file system, in bytes. This API uses a promise to return the result. |
-| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md#gettotalsize) | Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
-| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md#gettotalsizesync) | Obtains the total size of the specified file system, in bytes. This API returns the result synchronously. |
+| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) | Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result. |
+| [getFreeSize](arkts-corefile-statfs-getfreesize-f.md) | Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
+| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md) | Obtains the free size of the specified file system, in bytes. This API returns the result synchronously. |
+| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) | Obtains the total size of the specified file system, in bytes. This API uses a promise to return the result. |
+| [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md) | Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
+| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md) | Obtains the total size of the specified file system, in bytes. This API returns the result synchronously. |
 

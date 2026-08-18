@@ -1,6 +1,6 @@
 # InteractionUI (System API)
 
-Defines the base information of the interaction UI to be displayed after the current intent execution completes. This is a base class. Use its subclasses such as [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md#interactionmodaluiextension-system-api) in practice.
+Defines the base information of the interaction UI to be displayed after the current intent execution completes. This is a base class. Use its subclasses such as [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md) in practice.
 
 **Since:** 26.1.0
 
@@ -14,10 +14,7 @@ Defines the base information of the interaction UI to be displayed after the cur
 
 ```TypeScript
 import { insightIntent } from '@kit.AbilityKit';
-import { insightIntent } from '@kit.AbilityKit';
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 

@@ -17,7 +17,7 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 
 **废弃版本：** 9
 
-**替代接口：** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo系统接口)
+**替代接口：** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +31,7 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上所有应用提供的卡片信息成功，error为undefined，data为查询到的卡片信 息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上所有应用提供的卡片信息成功，error为undefined，data为查询到的卡片信 息；否则为错误对象。 |
 
 
 ## getAllFormsInfo
@@ -46,7 +46,7 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo系统接口)
+**替代接口：** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

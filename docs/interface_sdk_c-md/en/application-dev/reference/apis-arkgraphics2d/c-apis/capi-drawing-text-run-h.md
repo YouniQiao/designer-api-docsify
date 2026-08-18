@@ -67,7 +67,7 @@ Obtains an array of character indices of glyphs within a specified range of a ru
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the character index array of the glyph. Call [OH_Drawing_DestroyRunStringIndices](capi-drawing-text-run-h.md#oh_drawing_destroyrunstringindices) to release<br>     this pointer when the object is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the character index array of the glyph. Call [OH_Drawing_DestroyRunStringIndices](capi-drawing-text-run-h.md#oh_drawing_destroyrunstringindices) to release      this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetRunStringIndicesByIndex()
 
@@ -214,7 +214,7 @@ Obtains the image boundary of a run. The image boundary is related to characters
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Rect*](capi-drawing-oh-drawing-rect.md) | Returns the pointer to an [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) object. Call [OH_Drawing_DestroyRunImageBounds](capi-drawing-text-run-h.md#oh_drawing_destroyrunimagebounds) to<br>     release this pointer when the object is no longer needed. |
+| [OH_Drawing_Rect*](capi-drawing-oh-drawing-rect.md) | Returns the pointer to an [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) object. Call [OH_Drawing_DestroyRunImageBounds](capi-drawing-text-run-h.md#oh_drawing_destroyrunimagebounds) to      release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_DestroyRunImageBounds()
 
@@ -262,7 +262,7 @@ Obtains an array of glyphs within the specified range of a run.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph array in a run. Call<br>     [OH_Drawing_DestroyRunGlyphs](capi-drawing-text-run-h.md#oh_drawing_destroyrunglyphs) to release this pointer when the object is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph array in a run. Call      [OH_Drawing_DestroyRunGlyphs](capi-drawing-text-run-h.md#oh_drawing_destroyrunglyphs) to release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetRunGlyphsByIndex()
 
@@ -337,7 +337,7 @@ Obtains the positions of glyphs within the specified range of a run.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph position array in a run. Call<br>     [OH_Drawing_DestroyRunPositions](capi-drawing-text-run-h.md#oh_drawing_destroyrunpositions) to release this pointer when the object is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph position array in a run. Call      [OH_Drawing_DestroyRunPositions](capi-drawing-text-run-h.md#oh_drawing_destroyrunpositions) to release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetRunPositionsByIndex()
 
@@ -364,7 +364,7 @@ Obtains the positions of individual glyphs in a run by index.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Point*](capi-drawing-oh-drawing-point.md) | Returns the pointer to an [OH_Drawing_Point](capi-drawing-oh-drawing-point.md) object, which holds the positions of individual glyphs in<br>     the run. |
+| [OH_Drawing_Point*](capi-drawing-oh-drawing-point.md) | Returns the pointer to an [OH_Drawing_Point](capi-drawing-oh-drawing-point.md) object, which holds the positions of individual glyphs in      the run. |
 
 ### OH_Drawing_DestroyRunPositions()
 
@@ -436,7 +436,7 @@ Obtains the font object of a run.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Font*](capi-drawing-oh-drawing-font.md) | Returns the pointer to an [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) object in a run. Call [OH_Drawing_FontDestroy](capi-drawing-font-h.md#oh_drawing_fontdestroy) to<br>     release this pointer when the object is no longer needed. |
+| [OH_Drawing_Font*](capi-drawing-oh-drawing-font.md) | Returns the pointer to an [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) object in a run. Call [OH_Drawing_FontDestroy](capi-drawing-font-h.md#oh_drawing_fontdestroy) to      release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetRunTextDirection()
 
@@ -462,7 +462,7 @@ Obtains the text direction of a run.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection) | Returns the text direction of a run. 0: TEXT_DIRECTION_RTL, which means right-to-left; 1: <br>     TEXT_DIRECTION_LTR, which means left-to-right. For details, see [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection). |
+| [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection) | Returns the text direction of a run. 0: TEXT_DIRECTION_RTL, which means right-to-left; 1:       TEXT_DIRECTION_LTR, which means left-to-right. For details, see [OH_Drawing_TextDirection](capi-drawing-text-typography-h.md#oh_drawing_textdirection). |
 
 ### OH_Drawing_GetRunGlyphAdvances()
 
@@ -490,7 +490,7 @@ Obtains the glyph advance array of a run.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph advance array in a run. Call<br>     [OH_Drawing_DestroyRunGlyphAdvances](capi-drawing-text-run-h.md#oh_drawing_destroyrunglyphadvances) to release this pointer when the object is no longer needed. |
+| [OH_Drawing_Array*](capi-drawing-oh-drawing-array.md) | Returns the pointer to an [OH_Drawing_Array](capi-drawing-oh-drawing-array.md) object of a glyph advance array in a run. Call      [OH_Drawing_DestroyRunGlyphAdvances](capi-drawing-text-run-h.md#oh_drawing_destroyrunglyphadvances) to release this pointer when the object is no longer needed. |
 
 ### OH_Drawing_GetRunGlyphAdvanceByIndex()
 
@@ -517,7 +517,7 @@ Obtains the advances of individual glyphs in a run by index.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Point*](capi-drawing-oh-drawing-point.md) | Returns the pointer to an [OH_Drawing_Point](capi-drawing-oh-drawing-point.md) object, which holds the advance of individual glyphs in<br>     the run. x indicates the advance, and y is a reserved field and defaults to 0. |
+| [OH_Drawing_Point*](capi-drawing-oh-drawing-point.md) | Returns the pointer to an [OH_Drawing_Point](capi-drawing-oh-drawing-point.md) object, which holds the advance of individual glyphs in      the run. x indicates the advance, and y is a reserved field and defaults to 0. |
 
 ### OH_Drawing_DestroyRunGlyphAdvances()
 

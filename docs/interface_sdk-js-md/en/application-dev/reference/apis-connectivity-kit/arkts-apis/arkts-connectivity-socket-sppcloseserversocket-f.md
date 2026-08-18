@@ -24,7 +24,7 @@ Disables an spp server socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#spplisten). |
+| socket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md). |
 
 **Error codes:**
 

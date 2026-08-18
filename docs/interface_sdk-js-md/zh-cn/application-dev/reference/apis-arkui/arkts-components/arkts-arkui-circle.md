@@ -54,4 +54,9 @@ Circle(value?: CircleOptions)
 
 ## 汇总
 
-- [CircleOptions](arkts-arkui-circleoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [CircleOptions](arkts-arkui-circleoptions-i.md) | 用于描述Circle组件绘制属性。 |
+

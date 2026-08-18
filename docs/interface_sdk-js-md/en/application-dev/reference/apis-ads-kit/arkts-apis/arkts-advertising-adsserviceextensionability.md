@@ -9,7 +9,7 @@ import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ## Summary
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

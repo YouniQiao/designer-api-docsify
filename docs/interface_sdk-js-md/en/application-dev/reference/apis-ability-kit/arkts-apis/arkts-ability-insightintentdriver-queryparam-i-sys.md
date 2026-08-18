@@ -14,7 +14,6 @@ Param when query insight intent entity.
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName

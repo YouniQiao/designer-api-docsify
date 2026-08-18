@@ -9,7 +9,7 @@
 | [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. > **NOTE：**> > The APIs of this module can be used only in the stage model. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

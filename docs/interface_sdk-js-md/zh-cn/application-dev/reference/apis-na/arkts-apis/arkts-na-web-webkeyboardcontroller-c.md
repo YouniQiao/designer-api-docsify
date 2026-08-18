@@ -128,5 +128,5 @@ Send the function of the key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | int | 是 | action indicates the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#ohosinputmethodengine) |
+| key | int | 是 | action indicates the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md) |
 

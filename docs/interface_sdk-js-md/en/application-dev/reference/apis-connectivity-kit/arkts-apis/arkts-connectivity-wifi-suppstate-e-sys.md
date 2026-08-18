@@ -6,7 +6,7 @@ The state of the supplicant enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md#suppstate-system-api)
+**Substitutes:** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md)
 
 <!--Device-wifi-export enum SuppState--><!--Device-wifi-export enum SuppState-End-->
 
@@ -46,7 +46,7 @@ The network interface is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interfacedisabled)
+**Substitutes:** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interface_disabled)
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -166,7 +166,7 @@ The four-way handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#fourwayhandshake)
+**Substitutes:** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#four_way_handshake)
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -186,7 +186,7 @@ The group handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#grouphandshake)
+**Substitutes:** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#group_handshake)
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 

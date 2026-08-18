@@ -14,7 +14,7 @@ Enumerates the directions of barriers with mirror mode support.
 START = 0
 ```
 
-The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle).
+The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ The barrier is on the left (for left-to-right scripts) or right (for right-to-le
 END = 1
 ```
 
-The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle).
+The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ The barrier is on the right (for left-to-right scripts) or left (for right-to-le
 TOP = 2
 ```
 
-The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle).
+The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ The barrier is at the top of all the referenced components specified by [referen
 BOTTOM = 3
 ```
 
-The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#localizedbarrierstyle).
+The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 

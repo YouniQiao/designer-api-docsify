@@ -6,7 +6,7 @@ Enumerates the sticky effects for list items.
 
 **Deprecated since:** 9
 
-**Substitutes:** [list/StickyStyle](arkts-arkui-stickystyle-e.md#stickystyle)
+**Substitutes:** [list/StickyStyle](arkts-arkui-stickystyle-e.md)
 
 <!--Device-unnamed-declare enum Sticky--><!--Device-unnamed-declare enum Sticky-End-->
 

@@ -2,7 +2,7 @@
 
 Implements imaging mode.
 
-**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#imagingmodequery-system-api)
+**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md)
 
 **Since:** 26.0.0
 

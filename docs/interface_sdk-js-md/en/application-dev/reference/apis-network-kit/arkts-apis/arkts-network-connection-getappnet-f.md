@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getAppNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).
+Obtains the network handle bound to an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 9
 
 <!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void-End-->
 
@@ -24,7 +24,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Returns the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to the process; returns {@code null} if no [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) is bound to the process.For details, see [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. If information about the network bound to the application is successfully obtained, **error** is **undefined** and **data** is the obtained network information. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -56,9 +56,9 @@ connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
 function getAppNet(): Promise<NetHandle>
 ```
 
-Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).
+Obtains the network information bound to an application. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 9
 
 <!--Device-connection-function getAppNet(): Promise<NetHandle>--><!--Device-connection-function getAppNet(): Promise<NetHandle>-End-->
 
@@ -68,7 +68,7 @@ Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) bound
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | the promise returned by the function. |
+| Promise&lt;NetHandle&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -40,7 +40,7 @@ Configures custom frontend AI sessions for the **Web** component, used to regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | Yes | Array of frontend AI session configuration objects. Each object contains an AI session type and the corresponding lifecycle callback methods. Currently, only models included in [AISessionType](arkts-arkweb-aisessiontype-e.md#aisessiontype) are supported. |
+| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | Yes | Array of frontend AI session configuration objects. Each object contains an AI session type and the corresponding lifecycle callback methods. Currently, only models included in [AISessionType](arkts-arkweb-aisessiontype-e.md) are supported. |
 
 ## allowWindowOpenMethod
 
@@ -156,7 +156,7 @@ Sets whether to block online downloads. When this attribute is not explicitly ca
 blurOnKeyboardHideMode(mode: BlurOnKeyboardHideMode)
 ```
 
-Sets the blur mode for **Web** elements when the soft keyboard is dismissed. If this attribute is not explicitly called, the [BlurOnKeyboardHideMode.SILENT](arkts-arkweb-bluronkeyboardhidemode-e.md#bluronkeyboardhidemode) mode is used by default.
+Sets the blur mode for **Web** elements when the soft keyboard is dismissed. If this attribute is not explicitly called, the [BlurOnKeyboardHideMode.SILENT](arkts-arkweb-bluronkeyboardhidemode-e.md) mode is used by default.
 
 **Since:** 14
 
@@ -414,7 +414,7 @@ Sets a custom text selection menu for the **Web** component. > **NOTE：**> > Th
 enableAutoFill(value: boolean)
 ```
 
-Sets whether to enable web page autofill. By default, this feature is enabled. &lt;!--RP1--&gt; > **NOTE：**> > The autofill feature of this API depends on SmartFill service and Password Autofill Service. &lt;!--RP1End--&gt;
+Sets whether to enable web page autofill. By default, this feature is enabled. <!--RP1--> > **NOTE：**> > The autofill feature of this API depends on SmartFill service and Password Autofill Service. <!--RP1End-->
 
 **Since:** 23
 
@@ -434,7 +434,7 @@ Sets whether to enable web page autofill. By default, this feature is enabled. &
 enableDataDetector(enable: boolean)
 ```
 
-Sets whether to recognize special entities of web texts, such as emails, phone numbers, and URLs. This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting is invalid. When this attribute is not explicitly called, the detector is disabled by default. > **NOTE：**> > Attributes such as [dataDetectorConfig](#datadetectorconfig) and > [enableSelectedDataDetector](#enableselecteddatadetector) take effect only when this attribute > is enabled. > If **enableDataDetector** is set to **true** and [dataDetectorConfig](#datadetectorconfig) is > not set, all types of entities will be recognized, and the **color** and **decoration** attributes of the > recognized entities will be changed to the following styles: &lt;!--code_no_check--&gt; When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from TextMenuItemId. When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in TextMenuItemId do not appear at the same time. For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
+Sets whether to recognize special entities of web texts, such as emails, phone numbers, and URLs. This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting is invalid. When this attribute is not explicitly called, the detector is disabled by default. > **NOTE：**> > Attributes such as [dataDetectorConfig](#datadetectorconfig) and > [enableSelectedDataDetector](#enableselecteddatadetector) take effect only when this attribute > is enabled. > If **enableDataDetector** is set to **true** and [dataDetectorConfig](#datadetectorconfig) is > not set, all types of entities will be recognized, and the **color** and **decoration** attributes of the > recognized entities will be changed to the following styles: <!--code_no_check--> When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from TextMenuItemId. When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in TextMenuItemId do not appear at the same time. For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
 
 **Since:** 20
 
@@ -753,7 +753,7 @@ Sets whether to enable forcible dark mode for the web page. This API is applicab
 forceDisplayScrollBar(enabled: boolean)
 ```
 
-Sets whether the scroll bar is always visible. Under the always-visible settings, when the page size exceeds one page, the scroll bar appears and remains visible. When this attribute is not explicitly called, the scroll bar is not always visible by default. When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** parameter is set to **false**. > **NOTE：**> > - This interface takes effect globally across all web components in the current application. When multiple web > components are set with different values, the value set for the first time will be used. > > - It is recommended that you use > [setScrollbarMode](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setscrollbarmode) to set the scrollbar > mode for all web components currently applied. If the setScrollbarMode interface is invoked at the same time, > the setting of the forceDisplayScrollBar interface does not take effect.
+Sets whether the scroll bar is always visible. Under the always-visible settings, when the page size exceeds one page, the scroll bar appears and remains visible. When this attribute is not explicitly called, the scroll bar is not always visible by default. When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** parameter is set to **false**. > **NOTE：**> > - This interface takes effect globally across all web components in the current application. When multiple web > components are set with different values, the value set for the first time will be used. > > - It is recommended that you use > [setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode) to set the scrollbar > mode for all web components currently applied. If the setScrollbarMode interface is invoked at the same time, > the setting of the forceDisplayScrollBar interface does not take effect.
 
 **Since:** 14
 
@@ -837,7 +837,7 @@ Sets the gesture focus mode of the **Web** component, which controls the focus r
 horizontalScrollBarAccess(horizontalScrollBar: boolean)
 ```
 
-Sets whether to display the horizontal scrollbar, including the system default scrollbar and user-defined scrollbars. If this attribute is not explicitly called, the scrollbar is displayed by default. > **NOTE：**> > - If an [@State](../../../ui/state-management/arkts-state.md) decorated variable is used to control the > visibility of the horizontal scrollbar, > [controller.refresh()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#refresh) must be called for the > settings to take effect. > > - When the [@State](../../../ui/state-management/arkts-state.md) decorated variable changes frequently and > dynamically, it is recommended to maintain a one-to-one correspondence between the toggle variable and the > **Web** component.
+Sets whether to display the horizontal scrollbar, including the system default scrollbar and user-defined scrollbars. If this attribute is not explicitly called, the scrollbar is displayed by default. > **NOTE：**> > - If an [@State](../../../ui/state-management/arkts-state.md) decorated variable is used to control the > visibility of the horizontal scrollbar, > [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) must be called for the > settings to take effect. > > - When the [@State](../../../ui/state-management/arkts-state.md) decorated variable changes frequently and > dynamically, it is recommended to maintain a one-to-one correspondence between the toggle variable and the > **Web** component.
 
 **Since:** 9
 
@@ -925,7 +925,7 @@ Sets whether to allow execution of JavaScript scripts. If this attribute is not 
 javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 ```
 
-Injects a JavaScript script into the **Web** component. When the specified page or document has been loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default. > **NOTE：**> > - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at > that point. > > - The scripts are executed in lexicographic order, not in the order of the array. > > - When scripts with identical content are injected multiple times, they are silently deduplicated without display > or notification, and the **scriptRules** from the first injection are used. > > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md#urlregexrule). > > - You are advised to use [runJavaScriptOnDocumentEnd](#runjavascriptondocumentend) instead.
+Injects a JavaScript script into the **Web** component. When the specified page or document has been loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default. > **NOTE：**> > - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at > that point. > > - The scripts are executed in lexicographic order, not in the order of the array. > > - When scripts with identical content are injected multiple times, they are silently deduplicated without display > or notification, and the **scriptRules** from the first injection are used. > > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md). > > - You are advised to use [runJavaScriptOnDocumentEnd](#runjavascriptondocumentend) instead.
 
 **Since:** 11
 
@@ -947,7 +947,7 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 ```
 
-Injects a JavaScript script into the **Web** component. When the specified page or document starts to be loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default. > **NOTE：**> > - The script is injected after the root element (HTML Element) of the web document is created but before any > other content is loaded. > > - The scripts are executed in lexicographic order, not in the order of the array. If the original array order is > required, use the [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) API instead. > > - When scripts with identical content are injected multiple times, they are silently deduplicated without display > or notification, and the **scriptRules** from the first injection are used. > > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md#urlregexrule). > > - You are advised to use [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) instead.
+Injects a JavaScript script into the **Web** component. When the specified page or document starts to be loaded, the script is executed on any page whose source matches **scriptRules**. When this attribute is not explicitly called, JavaScript scripts are not injected into the **Web** component by default. > **NOTE：**> > - The script is injected after the root element (HTML Element) of the web document is created but before any > other content is loaded. > > - The scripts are executed in lexicographic order, not in the order of the array. If the original array order is > required, use the [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) API instead. > > - When scripts with identical content are injected multiple times, they are silently deduplicated without display > or notification, and the **scriptRules** from the first injection are used. > > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md). > > - You are advised to use [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) instead.
 
 **Since:** 11
 
@@ -969,7 +969,7 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 ```
 
-Registers the ArkTS object in **javaScriptProxy** with the **Web** component. The object will be registered in all frames of the web page, including all iframes, using the name specified in **JavaScriptProxy**. This enables JavaScript to call methods of the ArkTS object in **javaScriptProxy**. > **NOTE：**> > The **javaScriptProxy** API must be used together with > [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#deletejavascriptregister) > to prevent memory leaks. > > All parameters of the **javaScriptProxy** object cannot be updated. > > When registering a **javaScriptProxy** object, at least one of the synchronous or asynchronous method lists must > be non-empty. Both types of methods can be registered simultaneously. > > This API supports registering only one object. To register multiple objects, use > [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#registerjavascriptproxy).
+Registers the ArkTS object in **javaScriptProxy** with the **Web** component. The object will be registered in all frames of the web page, including all iframes, using the name specified in **JavaScriptProxy**. This enables JavaScript to call methods of the ArkTS object in **javaScriptProxy**. > **NOTE：**> > The **javaScriptProxy** API must be used together with > [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister) > to prevent memory leaks. > > All parameters of the **javaScriptProxy** object cannot be updated. > > When registering a **javaScriptProxy** object, at least one of the synchronous or asynchronous method lists must > be non-empty. Both types of methods can be registered simultaneously. > > This API supports registering only one object. To register multiple objects, use > [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy).
 
 **Since:** 8
 
@@ -1013,7 +1013,7 @@ Sets the keyboard appearance mode, which controls the appearance style of the ke
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Sets the custom soft keyboard avoidance mode. If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md#keyboardavoidmode), this API does not take effect.
+Sets the custom soft keyboard avoidance mode. If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
 
 **Since:** 12
 
@@ -1057,7 +1057,7 @@ Sets the layout mode of the **Web** component. If this attribute is not explicit
 mediaOptions(options: WebMediaOptions)
 ```
 
-Sets the web-based media playback policy, including the validity period for automatically resuming a paused web audio, and whether the audio of multiple **Web** instances in an application is exclusive. When this attribute is not explicitly set, the web audio cannot be automatically resumed after regaining the focus by default, and the audio of multiple **Web** instances in an application is exclusive. > **NOTE：**> > - Audios in the same **Web** instance are considered as the same audio. > > - The media playback policy controls videos with an audio track. > > - You are advised to set [audioExclusive](arkts-arkweb-webmediaoptions-i.md#webmediaoptions) to the same value for all **Web** components. > > - Audio and video interruption takes effect within an application and between applications, and playback > resumption takes effect only between applications.
+Sets the web-based media playback policy, including the validity period for automatically resuming a paused web audio, and whether the audio of multiple **Web** instances in an application is exclusive. When this attribute is not explicitly set, the web audio cannot be automatically resumed after regaining the focus by default, and the audio of multiple **Web** instances in an application is exclusive. > **NOTE：**> > - Audios in the same **Web** instance are considered as the same audio. > > - The media playback policy controls videos with an audio track. > > - You are advised to set [audioExclusive](arkts-arkweb-webmediaoptions-i.md) to the same value for all **Web** components. > > - Audio and video interruption takes effect within an application and between applications, and playback > resumption takes effect only between applications.
 
 **Since:** 10
 
@@ -1361,7 +1361,7 @@ Called when the page refresh is about to complete or the current page is closed.
 onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 ```
 
-Triggered to notify the user of the camera state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result. You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#startcamera). > **NOTE：**> > **Active** is returned when the camera is being used on the current web page. > > **Paused** is returned when the camera is paused on the current web page. > > **None** is returned when the camera is not being used on the current web page.
+Triggered to notify the user of the camera state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result. You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera). > **NOTE：**> > **Active** is returned when the camera is being used on the current web page. > > **Paused** is returned when the camera is paused on the current web page. > > **None** is returned when the camera is not being used on the current web page.
 
 **Since:** 23
 
@@ -1491,7 +1491,7 @@ Triggered when a context menu is displayed after the user clicks the right mouse
 onControllerAttached(callback: () => void)
 ```
 
-Triggered when the controller is successfully bound to the **Web** component. The controller must be **WebviewController**. Do not call APIs related to the **Web** component before this callback event. Otherwise, a js-error exception will be thrown. The web page has not been loaded when the callback is called. Therefore, APIs related to web page operations, such as [zoomIn](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#zoomin), [zoomOut](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#zoomout), cannot be used in the callback. You can use APIs irrelevant to web page operations, such as [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl), [getWebId](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getwebid). For details about the component lifecycle, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
+Triggered when the controller is successfully bound to the **Web** component. The controller must be **WebviewController**. Do not call APIs related to the **Web** component before this callback event. Otherwise, a js-error exception will be thrown. The web page has not been loaded when the callback is called. Therefore, APIs related to web page operations, such as [zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin), [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout), cannot be used in the callback. You can use APIs irrelevant to web page operations, such as [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl), [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid). For details about the component lifecycle, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
 
 **Since:** 10
 
@@ -1929,7 +1929,7 @@ Triggered before any editable element (such as the **input** tag) on the web pag
 onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse>)
 ```
 
-Triggered when the **Web** component is about to access a URL. This API is used to block the URL and return the response data. The **onInterceptRequest** API can intercept all redirection requests and return response data, but cannot access POST request body content and obtain buffer data. In this scenario, use [WebSchemeHandler](../../apis-na/arkts-apis/arkts-na-webview-webschemehandler-c.md#webschemehandler) based on service requirements.
+Triggered when the **Web** component is about to access a URL. This API is used to block the URL and return the response data. The **onInterceptRequest** API can intercept all redirection requests and return response data, but cannot access POST request body content and obtain buffer data. In this scenario, use [WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) based on service requirements.
 
 **Since:** 9
 
@@ -2035,7 +2035,7 @@ Triggered to notify the host application that the page loading starts. This meth
 onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 ```
 
-Triggered to notify the user of the microphone state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result. You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone** APIs to resume, pause, and stop the microphone. For details about how to use them, see [resumeMicrophone](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#resumemicrophone). > **NOTE：**> > **Active** is returned when the current web page is using the microphone; **Paused** is returned when the > current web page pauses using the microphone; **None** is returned when the current web page does not use the > microphone. > > When the microphone is being used and the **pauseMicrophone** API is called, the microphone pauses capturing > audio and **Paused** is returned. You can call the **resumeMicrophone** API using ArkWeb to resume the capture. > > When the microphone is being used and the **stopMicrophone** API is called, the microphone stops capturing audio > and **None** is returned. Capture cannot be resumed unless the frontend capture is restarted. > > When the microphone is paused and the **resumeMicrophone** API is called, the microphone continues capturing > audio and **Active** is returned. > > When the microphone is paused and the **stopMicrophone** API is called, the microphone stops capturing audio and > **None** is returned. Capture cannot be resumed unless the frontend capture is restarted. > > When the microphone is in the **None** state and the **resumeMicrophone** or **pauseMicrophone** API is called, > the microphone state remains unchanged.
+Triggered to notify the user of the microphone state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result. You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone** APIs to resume, pause, and stop the microphone. For details about how to use them, see [resumeMicrophone](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone). > **NOTE：**> > **Active** is returned when the current web page is using the microphone; **Paused** is returned when the > current web page pauses using the microphone; **None** is returned when the current web page does not use the > microphone. > > When the microphone is being used and the **pauseMicrophone** API is called, the microphone pauses capturing > audio and **Paused** is returned. You can call the **resumeMicrophone** API using ArkWeb to resume the capture. > > When the microphone is being used and the **stopMicrophone** API is called, the microphone stops capturing audio > and **None** is returned. Capture cannot be resumed unless the frontend capture is restarted. > > When the microphone is paused and the **resumeMicrophone** API is called, the microphone continues capturing > audio and **Active** is returned. > > When the microphone is paused and the **stopMicrophone** API is called, the microphone stops capturing audio and > **None** is returned. Capture cannot be resumed unless the frontend capture is restarted. > > When the microphone is in the **None** state and the **resumeMicrophone** or **pauseMicrophone** API is called, > the microphone state remains unchanged.
 
 **Since:** 23
 
@@ -2139,7 +2139,7 @@ Called when the **param** element embedded in the same-layer rendering tag **obj
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-Triggered when the visibility of a same-layer tag (such as an **\&lt;embed&gt;** tag or an **\&lt;object&gt;** tag) on a web page changes in the viewport. Same-layer tags are invisible by default. If a tag is visible when the page is loaded for the first time, it is reported. If a tag is invisible, it is not reported. Same-layer tags are considered invisible only when they are all invisible. Partially visible or all visible tags are considered visible. To obtain the visible status change caused by the CSS attributes (including visibility, display, and size change) of the same -layer tag, configure [nativeEmbedOptions](#nativeembedoptions) and set **supportCssDisplayChange** in [EmbedOptions](arkts-arkweb-embedoptions-i.md#embedoptions) to **true**.
+Triggered when the visibility of a same-layer tag (such as an **\&lt;embed&gt;** tag or an **\&lt;object&gt;** tag) on a web page changes in the viewport. Same-layer tags are invisible by default. If a tag is visible when the page is loaded for the first time, it is reported. If a tag is invisible, it is not reported. Same-layer tags are considered invisible only when they are all invisible. Partially visible or all visible tags are considered visible. To obtain the visible status change caused by the CSS attributes (including visibility, display, and size change) of the same -layer tag, configure [nativeEmbedOptions](#nativeembedoptions) and set **supportCssDisplayChange** in [EmbedOptions](arkts-arkweb-embedoptions-i.md) to **true**.
 
 **Since:** 12
 
@@ -2203,7 +2203,7 @@ Triggered when the web page is overscrolled. It is used to notify the applicatio
 onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 ```
 
-Triggered when an error occurs during web page loading of main resources. You can use this API to customize the error display page. > **NOTE：**> > This feature takes effect only after the default error page is enabled by calling the > [setErrorPageEnabled](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#seterrorpageenabled) > API. > > If the error code obtained through [errorPageEvent.error.getErrorCode()](arkts-arkweb-webresourceerror-c.md#geterrorcode) is > greater than 0, it indicates an HTTP error. If the error code is less than 0, it indicates a network error.
+Triggered when an error occurs during web page loading of main resources. You can use this API to customize the error display page. > **NOTE：**> > This feature takes effect only after the default error page is enabled by calling the > [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled) > API. > > If the error code obtained through [errorPageEvent.error.getErrorCode()](arkts-arkweb-webresourceerror-c.md#geterrorcode) is > greater than 0, it indicates an HTTP error. If the error code is less than 0, it indicates a network error.
 
 **Since:** 20
 
@@ -2439,7 +2439,7 @@ Triggered for the application to update its access history when the navigation i
 onRenderExited(callback: Callback<OnRenderExitedEvent>)
 ```
 
-Triggered when the rendering process exits abnormally. A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback. You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#refresh) and [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl). For details about the component lifecycle, see [Lifecycle of the Web Components](../../../web/web-event-sequence.md).
+Triggered when the rendering process exits abnormally. A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback. You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl). For details about the component lifecycle, see [Lifecycle of the Web Components](../../../web/web-event-sequence.md).
 
 **Since:** 9
 
@@ -2461,7 +2461,7 @@ Triggered when the rendering process exits abnormally. A rendering process may b
 onRenderExited(callback: (event?: { detail: object }) => boolean)
 ```
 
-Triggered when the rendering process exits due to an error or crash. A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback. You can call the bound **WebViewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#refresh) and [loadUrl](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl). For details, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
+Triggered when the rendering process exits due to an error or crash. A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback. You can call the bound **WebViewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl). For details, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
 
 **Since:** 8
 
@@ -2485,7 +2485,7 @@ Triggered when the rendering process exits due to an error or crash. A rendering
 onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 ```
 
-Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered. If the web page process does not respond, this callback may be triggered until the web page process responds again. In this case, [onRenderProcessResponding](#onrenderprocessresponding) is triggered. You can terminate the associated rendering process through [terminateRenderProcess](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#terminaterenderprocess), which may affect other **Web** components in the same rendering process.
+Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered. If the web page process does not respond, this callback may be triggered until the web page process responds again. In this case, [onRenderProcessResponding](#onrenderprocessresponding) is triggered. You can terminate the associated rendering process through [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess), which may affect other **Web** components in the same rendering process.
 
 **Since:** 12
 

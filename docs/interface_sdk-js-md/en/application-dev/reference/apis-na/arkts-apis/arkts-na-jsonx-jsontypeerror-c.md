@@ -2,7 +2,7 @@
 
 Error thrown when attempting to access a JSON element with an incompatible type. For example, trying to get a string value from a number element.
 
-**Inheritance/Implementation:** JsonTypeError extends [JsonError](arkts-na-jsonx-jsonerror-c.md#jsonerror)
+**Inheritance/Implementation:** JsonTypeError extends [JsonError](arkts-na-jsonx-jsonerror-c.md)
 
 **Since:** 26.0.0
 

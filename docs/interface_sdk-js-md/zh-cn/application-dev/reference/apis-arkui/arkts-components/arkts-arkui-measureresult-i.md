@@ -2,7 +2,7 @@
 
 Sub component MeasureResult info.
 
-**继承/实现关系：** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md#sizeresult)
+**继承/实现关系：** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md)
 
 **起始版本：** 10
 

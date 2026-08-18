@@ -12,7 +12,6 @@ Represents a text shadow.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## blurRadius

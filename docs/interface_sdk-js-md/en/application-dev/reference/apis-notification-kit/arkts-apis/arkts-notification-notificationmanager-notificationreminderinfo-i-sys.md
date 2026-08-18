@@ -14,7 +14,6 @@ Describes the information about the application reminder.
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle

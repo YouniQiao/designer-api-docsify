@@ -1,6 +1,6 @@
 # DataFlowType
 
-Describes the cellular data flow type.
+Defines the cellular data flow type.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Describes the cellular data flow type.
 DATA_FLOW_TYPE_NONE = 0
 ```
 
-Indicates that there is no uplink or downlink data.
+No uplink or downlink data is available.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Indicates that there is no uplink or downlink data.
 DATA_FLOW_TYPE_DOWN = 1
 ```
 
-Indicates that there is only downlink data.
+Only the downlink data is available.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Indicates that there is only downlink data.
 DATA_FLOW_TYPE_UP = 2
 ```
 
-Indicates that there is only uplink data.
+Only the uplink data is available.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ Indicates that there is only uplink data.
 DATA_FLOW_TYPE_UP_DOWN = 3
 ```
 
-Indicates that there is uplink and downlink data.
+Both the uplink data and downlink data are available.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Indicates that there is uplink and downlink data.
 DATA_FLOW_TYPE_DORMANT = 4
 ```
 
-Indicates that there is no uplink or downlink data, and the bottom-layer link is in the dormant state.
+No uplink or downlink data is available because the lower-layer link is in the dormant state.
 
 **Since:** 23
 

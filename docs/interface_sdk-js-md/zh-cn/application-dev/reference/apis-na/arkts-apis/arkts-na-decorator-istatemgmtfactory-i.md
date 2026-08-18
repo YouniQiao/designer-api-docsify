@@ -170,7 +170,7 @@ makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string
 | owner | [IVariableOwner](arkts-na-decorator-ivariableowner-i.md) | 是 | 该变量的自定义组件所有者。 |
 | envKey | [CustomEnvKey](arkts-na-decorator-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量键。 |
 | varName | string | 是 | 被@CustomEnv装饰的变量名。 |
-| localInitValue | T | 是 | @CustomEnv本地初始值。 |
+| localInitValue | T | 是 |  |
 
 **返回值：**
 
@@ -202,7 +202,7 @@ makeEnv<T>(owner: IVariableOwner, envValue: string | SystemEnvKey<T>, varName: s
 | --- | --- | --- | --- |
 | owner | [IVariableOwner](arkts-na-decorator-ivariableowner-i.md) | 是 | 自定义组件。 |
 | envValue | string \| [SystemEnvKey](arkts-na-decorator-systemenvkey-c.md)&lt;T&gt; | 是 | 支持的环境变量类型 [APi22 - API24] |
-| varName | string | 是 | @Env装饰的变量名。 |
+| varName | string | 是 |  |
 | envOptions | [EnvOptions](arkts-na-decorator-envoptions-i.md)&lt;T&gt; | 否 | makeEnv的其他选项。 |
 
 **返回值：**

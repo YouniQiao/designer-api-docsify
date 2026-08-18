@@ -1,6 +1,6 @@
 # Transaction
 
-Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md#transactiontype). Currently, an RDB store supports only one write transaction at a time. If the current [RdbStore](arkts-data-relationalstore.md#ohosdatarelationalstore) has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time. After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the [RdbStore](arkts-data-relationalstore.md#ohosdatarelationalstore) will also return error 14800024. When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries. Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction) method and then call the corresponding method through the instance. **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core **Example**: For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#context) of the stage model.
+Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md). Currently, an RDB store supports only one write transaction at a time. If the current [RdbStore](arkts-data-relationalstore.md) has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time. After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the [RdbStore](arkts-data-relationalstore.md) will also return error 14800024. When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries. Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction) method and then call the corresponding method through the instance. **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core **Example**: For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
 
 **Since:** 23
 
@@ -12,7 +12,6 @@ Provides APIs for managing databases in transaction mode. A transaction object i
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## batchInsert
@@ -21,7 +20,7 @@ import { relationalStore } from '@kit.ArkData';
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-Inserts data into a table in batches. This API uses a promise to return the result. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. This API uses a promise to return the result. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -56,7 +55,7 @@ Inserts data into a table in batches. This API uses a promise to return the resu
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -68,7 +67,7 @@ Inserts data into a table in batches. This API uses a promise to return the resu
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-Inserts data into a table in batches. This API returns the result synchronously. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. This API returns the result synchronously. Data is written in batches of up to 32,766 parameters each with the [ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md) policy. The total number of parameters is calculated as the number of inserted data records multiplied by the size of the union set of all fields in the inserted data. If the operation fails, an error is returned. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -103,7 +102,7 @@ Inserts data into a table in batches. This API returns the result synchronously.
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -119,7 +118,7 @@ batchInsertWithConflictResolution(
     ): Promise<long>
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution). This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md). This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -158,7 +157,7 @@ Inserts data into a table with conflict resolutions in batches. You can use the 
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -171,7 +170,7 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
       conflict: ConflictResolution): long
 ```
 
-Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution). A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table with conflict resolutions in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md). A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800000 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -210,7 +209,7 @@ Inserts data into a table with conflict resolutions in batches. You can use the 
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -223,7 +222,7 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-relationalstore-result-i.md#result) is returned. This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md), and [Result](arkts-arkdata-relationalstore-result-i.md) is returned. This API uses a promise to return the result. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -271,7 +270,7 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-relationalstore-result-i.md#result) is returned. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
+Inserts data into a table in batches. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md), and [Result](arkts-arkdata-relationalstore-result-i.md) is returned. A maximum of 32,766 parameters can be inserted at a time. If the number of parameters exceeds this limit, the error code 14800001 is returned. The number of inserted data records multiplied by the size of the union across all fields in the inserted data equals the number of parameters. For example, if the size of the union set is 10, a maximum of 3,276 data records can be inserted (3276 × 10 = 327 60). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results. A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 23
 
@@ -340,7 +339,7 @@ Commits this executed SQL statement. This API uses a promise to return the resul
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -386,7 +385,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -432,7 +431,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -444,7 +443,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-relationalstore-result-i.md#result). This API uses a promise to return the result.
+Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-relationalstore-result-i.md). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -489,7 +488,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result
 ```
 
-Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-relationalstore-result-i.md#result).
+Deletes data from the RDB store based on the specified **RdbPredicates** object and returns [Result](arkts-arkdata-relationalstore-result-i.md).
 
 **Since:** 23
 
@@ -570,7 +569,7 @@ Executes an SQL statement that contains parameters but does not return data. Thi
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -618,7 +617,7 @@ Executes an SQL statement that contains specified arguments. The number of relat
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -666,7 +665,7 @@ Inserts a row of data into a table. This API uses a promise to return the result
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -715,7 +714,7 @@ Inserts a row of data into a table. This API returns the result synchronously. D
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -740,8 +739,8 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#valuesbucket) to be inserted into the table. |
-| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution) to insert data into the table. |
+| values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) to be inserted into the table. |
+| conflict | ConflictResolution | No | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) to insert data into the table. |
 
 **Return value:**
 
@@ -763,7 +762,7 @@ Inserts a row of data into the target table with sync interface, just use in Tas
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -860,7 +859,7 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 ```
 
-Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) thread.
+Queries data in the RDB store using the specified SQL statement. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -939,7 +938,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) thread.
+Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -975,7 +974,7 @@ Queries data from the RDB store based on specified SQL statements without calcul
 querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
-Queries data in a database based on specified conditions. This API returns the result synchronously. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) thread.
+Queries data in a database based on specified conditions. This API returns the result synchronously. If complex logic and a large number of loops are involved in the operations on the **resultSet** obtained by **querySync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -1053,7 +1052,7 @@ Queries data from the RDB store based on specified conditions without calculatin
 queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **queryWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#ohostaskpool) thread.
+Queries data from the RDB store based on specified conditions without calculating the row count. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by **queryWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the [taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -1110,7 +1109,7 @@ Rolls back this executed SQL statement. This API uses a promise to return the re
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -1158,7 +1157,7 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -1206,7 +1205,7 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
 | [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
@@ -1219,7 +1218,7 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-relationalstore-result-i.md#result) is returned. This API uses a promise to return the result. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md), and [Result](arkts-arkdata-relationalstore-result-i.md) is returned. This API uses a promise to return the result. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
 
 **Since:** 23
 
@@ -1267,7 +1266,7 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
       conflict?: ConflictResolution): Result
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#conflictresolution), and [Result](arkts-arkdata-relationalstore-result-i.md#result) is returned. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
+Updates data in the RDB store based on the specified **RdbPredicates** instance object. You can use the **conflict** parameter to specify [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md), and [Result](arkts-arkdata-relationalstore-result-i.md) is returned. It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict** parameter, as this may prevent the return of correct results.
 
 **Since:** 23
 

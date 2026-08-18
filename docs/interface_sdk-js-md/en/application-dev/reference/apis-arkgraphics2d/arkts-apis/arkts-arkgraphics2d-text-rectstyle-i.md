@@ -12,7 +12,6 @@ Describes the style of a rectangle.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## color

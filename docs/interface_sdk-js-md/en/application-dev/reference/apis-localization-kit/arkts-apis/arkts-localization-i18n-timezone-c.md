@@ -12,7 +12,6 @@ Provides time zone management capabilities, such as time zone name translation, 
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone

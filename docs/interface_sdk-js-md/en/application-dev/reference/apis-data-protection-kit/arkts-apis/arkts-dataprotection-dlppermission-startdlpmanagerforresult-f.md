@@ -12,7 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) page in borderless mode. This API uses a promise to return the result. This API starts the DLP manager application to configure file permissions and return the user operation result to the caller. > **NOTE：**> > This API can be called only by domain accounts.
+Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. This API starts the DLP manager application to configure file permissions and return the user operation result to the caller. > **NOTE：**> > This API can be called only by domain accounts.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ Starts the DLP manager application on the current [UIAbility](../../apis-ability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability) context. |
+| context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) context. |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
 
 **Return value:**

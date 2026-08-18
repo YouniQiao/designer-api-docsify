@@ -11,6 +11,7 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 ## 导入模块
 
 ```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -73,7 +74,7 @@ plainContent?: string
 readonly uniformDataType: 'general.html'
 ```
 
-统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype)。
+统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'general.html'
 
@@ -91,7 +92,7 @@ readonly uniformDataType: 'general.html'
 uriAuthorizationPolicies?: Array<int>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md#uripermission)。
+用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
 **类型：** Array&lt;int&gt;
 

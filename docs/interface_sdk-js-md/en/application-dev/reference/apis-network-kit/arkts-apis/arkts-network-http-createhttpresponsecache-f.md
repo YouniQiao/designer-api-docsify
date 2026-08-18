@@ -12,11 +12,11 @@ import { http } from '@kit.NetworkKit';
 function createHttpResponseCache(cacheSize?: int): HttpResponseCache
 ```
 
-Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests.
+Creates an **HttpResponseCache** object that stores the response data of HTTP requests. You can call [flush](arkts-network-http-httpresponsecache-i.md#flush) and [delete](arkts-network-http-httpresponsecache-i.md#delete) in the object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache--><!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache-End-->
 
@@ -26,13 +26,13 @@ Creates a default {@code HttpResponseCache} object to store the responses of HTT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cacheSize | int | No | the size of cache(max value is 10MB), default is 10*1024*1024(10MB). |
+| cacheSize | int | No | Cache size. The maximum value is 10*1024*1024 (10 MB). The maximum value is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | the HttpResponseCache of the createHttpResponseCache. |
+| [HttpResponseCache](arkts-network-http-httpresponsecache-i.md) | Object that stores the response to the HTTP request. |
 
 **Examples**
 

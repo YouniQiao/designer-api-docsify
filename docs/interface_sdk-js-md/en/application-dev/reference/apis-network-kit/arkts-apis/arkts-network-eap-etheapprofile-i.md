@@ -1,8 +1,8 @@
 # EthEapProfile
 
-Eth EAP profile.
+Represents the EAP profile information.
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-eap-interface EthEapProfile--><!--Device-eap-interface EthEapProfile-End-->
 
@@ -20,11 +20,11 @@ import { eap } from '@kit.NetworkKit';
 altSubjectMatch: string
 ```
 
-Alternate subject match
+A string to match the alternate subject.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-altSubjectMatch: string--><!--Device-EthEapProfile-altSubjectMatch: string-End-->
 
@@ -36,11 +36,11 @@ Alternate subject match
 anonymousIdentity: string
 ```
 
-Anonymous identity
+Anonymous identity.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-anonymousIdentity: string--><!--Device-EthEapProfile-anonymousIdentity: string-End-->
 
@@ -52,11 +52,11 @@ Anonymous identity
 caCertAliases: string
 ```
 
-CA certificate alias
+CA certificate alias.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-caCertAliases: string--><!--Device-EthEapProfile-caCertAliases: string-End-->
 
@@ -68,11 +68,11 @@ CA certificate alias
 caPath: string
 ```
 
-CA certificate path
+CA certificate path.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-caPath: string--><!--Device-EthEapProfile-caPath: string-End-->
 
@@ -84,11 +84,11 @@ CA certificate path
 certEntry: Uint8Array
 ```
 
-content of user's certificate
+CA certificate content.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-certEntry: Uint8Array--><!--Device-EthEapProfile-certEntry: Uint8Array-End-->
 
@@ -100,11 +100,11 @@ content of user's certificate
 certPassword: string
 ```
 
-Password of user's certificate
+CA certificate password.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-certPassword: string--><!--Device-EthEapProfile-certPassword: string-End-->
 
@@ -116,11 +116,11 @@ Password of user's certificate
 clientCertAliases: string
 ```
 
-Client certificate alias
+Client certificate alias.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-clientCertAliases: string--><!--Device-EthEapProfile-clientCertAliases: string-End-->
 
@@ -132,11 +132,11 @@ Client certificate alias
 domainSuffixMatch: string
 ```
 
-Domain suffix match
+A string to match the domain suffix.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-domainSuffixMatch: string--><!--Device-EthEapProfile-domainSuffixMatch: string-End-->
 
@@ -148,11 +148,11 @@ Domain suffix match
 eapMethod: EapMethod
 ```
 
-EAP authentication method
+EAP authentication method.
 
 **Type:** EapMethod
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-eapMethod: EapMethod--><!--Device-EthEapProfile-eapMethod: EapMethod-End-->
 
@@ -161,16 +161,16 @@ EAP authentication method
 ## eapSubId
 
 ```TypeScript
-eapSubId: number
+eapSubId: int
 ```
 
-Sub ID of the SIM card
+Sub-ID of the SIM card.
 
-**Type:** number
+**Type:** int
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EthEapProfile-eapSubId: number--><!--Device-EthEapProfile-eapSubId: number-End-->
+<!--Device-EthEapProfile-eapSubId: int--><!--Device-EthEapProfile-eapSubId: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -180,11 +180,11 @@ Sub ID of the SIM card
 identity: string
 ```
 
-The identity
+Identity information.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-identity: string--><!--Device-EthEapProfile-identity: string-End-->
 
@@ -196,11 +196,11 @@ The identity
 password: string
 ```
 
-Password
+Password.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-password: string--><!--Device-EthEapProfile-password: string-End-->
 
@@ -212,11 +212,11 @@ Password
 phase2Method: Phase2Method
 ```
 
-Phase 2 authentication method
+Phase 2 authentication method.
 
 **Type:** Phase2Method
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-phase2Method: Phase2Method--><!--Device-EthEapProfile-phase2Method: Phase2Method-End-->
 
@@ -228,11 +228,11 @@ Phase 2 authentication method
 plmn: string
 ```
 
-Public Land Mobile Network of the provider of Passpoint credential
+Public land mobile network (PLMN) of the passpoint credential provider.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-plmn: string--><!--Device-EthEapProfile-plmn: string-End-->
 
@@ -244,11 +244,11 @@ Public Land Mobile Network of the provider of Passpoint credential
 realm: string
 ```
 
-Realm for Passpoint credential
+Realm for the passpoint credential.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-EthEapProfile-realm: string--><!--Device-EthEapProfile-realm: string-End-->
 

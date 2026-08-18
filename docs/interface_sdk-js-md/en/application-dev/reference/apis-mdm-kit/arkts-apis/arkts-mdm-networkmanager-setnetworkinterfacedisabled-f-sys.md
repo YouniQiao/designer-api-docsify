@@ -18,7 +18,7 @@ Disables a network interface. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync)
+**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_NETWORK
 
@@ -37,7 +37,7 @@ Disables a network interface. This API uses an asynchronous callback to return t
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network port. |
 | isDisabled | boolean | Yes | Network port status to set. The value **true** means to disable the network port, and **false** means to enable the network port. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Disables a network interface. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync)
+**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_NETWORK
 

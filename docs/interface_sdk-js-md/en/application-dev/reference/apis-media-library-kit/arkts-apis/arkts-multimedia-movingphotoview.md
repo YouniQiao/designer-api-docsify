@@ -16,7 +16,7 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 | [MovingPhotoViewController](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewcontroller-c.md) | Defines the MovingPhotoView controller. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -32,7 +32,7 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 | [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i.md) | Defines the moving photo view options. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -46,7 +46,7 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 | [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Enumerates pixel map formats. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

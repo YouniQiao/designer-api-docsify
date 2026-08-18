@@ -6,7 +6,7 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Deprecated since:** 9
 
-**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md#base64helper)
+**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 

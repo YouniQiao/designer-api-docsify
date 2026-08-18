@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## buildX509CertChain
@@ -25,7 +28,7 @@ function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainB
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | 是 | 构建证书链的参数对象。 <br> [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md#certchainbuildparameters)中的maxLength要小于证书集合中证书数量。 |
+| param | [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md) | 是 | 构建证书链的参数对象。 <br> [CertChainBuildParameters](arkts-devicecertificate-cert-certchainbuildparameters-i.md)中的maxLength要小于证书集合中证书数量。 |
 
 **返回值：**
 

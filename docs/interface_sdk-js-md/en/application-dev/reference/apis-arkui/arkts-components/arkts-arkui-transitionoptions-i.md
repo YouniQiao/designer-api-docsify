@@ -6,7 +6,7 @@ Defines the transition effect by setting parameters in the struct. > **NOTE：**
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -111,7 +111,7 @@ Transition type. Default value: **TransitionType.All** **NOTE：**If **type** is
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

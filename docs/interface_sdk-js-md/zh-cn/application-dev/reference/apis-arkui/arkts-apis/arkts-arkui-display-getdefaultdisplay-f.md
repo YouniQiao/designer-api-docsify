@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
 ```
 
 ## getDefaultDisplay
@@ -17,7 +18,7 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
+**替代接口：** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md)
 
 <!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void--><!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void-End-->
 
@@ -27,7 +28,7 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
 
 **示例**
 
@@ -59,7 +60,7 @@ function getDefaultDisplay(): Promise<Display>
 
 **废弃版本：** 9
 
-**替代接口：** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
+**替代接口：** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md)
 
 <!--Device-display-function getDefaultDisplay(): Promise<Display>--><!--Device-display-function getDefaultDisplay(): Promise<Display>-End-->
 

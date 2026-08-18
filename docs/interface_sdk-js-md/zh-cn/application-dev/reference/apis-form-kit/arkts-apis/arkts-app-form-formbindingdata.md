@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## 汇总
@@ -19,8 +20,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata) | 创建一个FormBindingData对象。 |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata) | Create an FormBindingData instance. |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | 创建一个FormBindingData对象。 |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | Create an FormBindingData instance. |
 
 ### 接口
 

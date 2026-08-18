@@ -14,7 +14,6 @@ This filter value is used to filter business ability info
 
 ```TypeScript
 import { businessAbilityRouter } from '@kit.AbilityKit';
-import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## businessType

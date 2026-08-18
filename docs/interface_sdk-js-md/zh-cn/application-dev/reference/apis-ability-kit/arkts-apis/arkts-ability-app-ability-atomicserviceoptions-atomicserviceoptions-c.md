@@ -1,8 +1,8 @@
 # AtomicServiceOptions
 
-**AtomicServiceOptions**可以作为 [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice)的入参，用于携带参数。继承自 [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions)。
+**AtomicServiceOptions**可以作为 [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice)的入参，用于携带参数。继承自 [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)。
 
-**继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions)
+**继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService
@@ -23,7 +24,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 打开原子化服务结果的操作类，用于接收打开原子化服务的结果。
 
-**类型：** [CompletionHandlerForAtomicService](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+**类型：** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **起始版本：** 23
 
@@ -61,9 +62,9 @@ flags?: int
 parameters?: Record<string, RecordData>
 ```
 
-表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md#want)中parameters字段描述。
+表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
 
-**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 23
 

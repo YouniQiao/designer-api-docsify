@@ -40,7 +40,7 @@ Batch inserts data into the database. This API is called by the server and can b
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
 **Examples**
 
@@ -91,7 +91,7 @@ Batch updates data into the database. This API is called by the server and can b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes | Collection of the path of the data to update, update conditions, and new data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | Callback used to return an array of updated data records. The value **-1** means the update operation fails. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | Callback used to return an array of updated data records. The value **-1** means the update operation fails. |
 
 **Examples**
 
@@ -151,7 +151,7 @@ Deletes data from the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for deleting data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 **Examples**
 
@@ -197,8 +197,8 @@ Denormalizes a URI. This API can be overridden as required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the denormalized URI is returned. If the URI passed in is returned, denormalization is not required. If denormalization is not supported, **null** is returned. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the denormalized URI is returned. If the URI passed in is returned, denormalization is not required. If denormalization is not supported, **null** is returned. |
 
 **Examples**
 
@@ -245,7 +245,7 @@ Inserts data into the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
 **Examples**
 
@@ -293,8 +293,8 @@ Normalizes a URI. This API can be overridden as required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri) to normalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the normalized URI is returned. Otherwise, **null** is returned. |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md) to normalize. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the normalized URI is returned. Otherwise, **null** is returned. |
 
 **Examples**
 
@@ -340,7 +340,7 @@ Called by the server to initialize service logic when the DataShare client conne
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -404,7 +404,7 @@ Queries data from the database. This API can be overridden as required.
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for querying data. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
 
 **Examples**
 
@@ -461,7 +461,7 @@ Updates data in the database. This API can be overridden as required.
 | uri | string | Yes | URI of the data to update. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for updating data. |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | New data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
 
 **Examples**
 

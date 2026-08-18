@@ -12,7 +12,7 @@ import { asset } from '@kit.AssetStoreKit';
 function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets in the specified user space. If user authentication is required for the access to the asset, call [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser-system-api) before this API and call [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser-system-api) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.
+Queries one or more assets in the specified user space. If user authentication is required for the access to the asset, call [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md) before this API and call [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.
 
 **Since:** 12
 

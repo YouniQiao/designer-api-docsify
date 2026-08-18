@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstructorOptions, ArcSliderLayoutOptions, ArcSliderLayoutOptionsConstructorOptions, ArcSliderStyleOptions, ArcSliderStyleOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderValueOptionsConstructorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -61,7 +62,7 @@ ArcSliderOptions的构造函数。
   layoutOptions?: ArcSliderLayoutOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
@@ -137,7 +138,7 @@ ArcSliderOptions的构造函数。
   styleOptions?: ArcSliderStyleOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
@@ -156,7 +157,7 @@ ArcSliderOptions的构造函数。
   valueOptions?: ArcSliderValueOptions
 ```
 
-配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#arcsliderstyleoptions)的各项子属性均取其默认值。
+配置弧形Slider的样式信息。 默认值：[ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)的各项子属性均取其默认值。
 
 **类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 

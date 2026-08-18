@@ -72,7 +72,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 **Examples**
@@ -333,7 +333,7 @@ Obtains the unique instance ID of this application. This API can be called only 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
+| [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) | The multi-instance is not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 **Examples**
@@ -430,7 +430,7 @@ Obtains the information about running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -613,7 +613,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the processes are killed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the processes are killed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -660,7 +660,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | int | Yes | ID of the listener to unregister. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 ## offAbilityLifecycle
 
@@ -733,7 +733,7 @@ Unregister environment callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | int | Yes | Indicates the number code of the callback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of unregisterEnvironmentCallback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of unregisterEnvironmentCallback. |
 
 ## offEnvironment
 
@@ -809,7 +809,7 @@ unregisters a listener for system configuration updated. &lt;p&gt;**NOTE：**: <
 | --- | --- | --- | --- |
 | callback | systemConfiguration.UpdatedCallback | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
-## off_abilityLifecycle
+## off_abilityLifecycle('abilityLifecycle')
 
 ```TypeScript
 off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>): void
@@ -832,8 +832,8 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -868,7 +868,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## off_abilityLifecycle
+## off_abilityLifecycle('abilityLifecycle')
 
 ```TypeScript
 off(type: 'abilityLifecycle', callbackId: number): Promise<void>
@@ -891,7 +891,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 **Return value:**
 
@@ -926,7 +926,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-## off_applicationStateChange
+## off_applicationStateChange('applicationStateChange')
 
 ```TypeScript
 off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): void
@@ -949,7 +949,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#onabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilitylifecycleabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -988,7 +988,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-## off_environment
+## off_environment('environment')
 
 ```TypeScript
 off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): void
@@ -1011,8 +1011,8 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#onabilitylifecycle) API is called to register a listener for system environment changes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for system environment changes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1046,7 +1046,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## off_environment
+## off_environment('environment')
 
 ```TypeScript
 off(type: 'environment', callbackId: number): Promise<void>
@@ -1069,7 +1069,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#onabilitylifecycle) API is called to register a listener for system environment changes. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for system environment changes. |
 
 **Return value:**
 
@@ -1227,7 +1227,7 @@ Registers a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br
 | --- | --- | --- | --- |
 | callback | systemConfiguration.UpdatedCallback | Yes | The system configuration updated callback. |
 
-## on_abilityLifecycle
+## on_abilityLifecycle('abilityLifecycle')
 
 ```TypeScript
 on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
@@ -1321,7 +1321,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## on_applicationStateChange
+## on_applicationStateChange('applicationStateChange')
 
 ```TypeScript
 on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): void
@@ -1383,13 +1383,13 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-## on_environment
+## on_environment('environment')
 
 ```TypeScript
 on(type: 'environment', callback: EnvironmentCallback): number
 ```
 
-Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to > listen for system environment changes. Unlike > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this > API offers greater flexibility. It can be used both within application components and pages. However, the > environment variables that can be subscribed to are different from those of > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the > description of each environment variable in > [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#configuration). > > - There are certain restrictions when this API is triggered. For example, if you set the application language by > calling [setLanguage](#setlanguage), the system does not trigger the > callback for the current API even if the system language changes. For details, see > [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Registers a listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to > listen for system environment changes. Unlike > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this > API offers greater flexibility. It can be used both within application components and pages. However, the > environment variables that can be subscribed to are different from those of > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the > description of each environment variable in > [Configuration](arkts-ability-app-ability-configuration-configuration-i.md). > > - There are certain restrictions when this API is triggered. For example, if you set the application language by > calling [setLanguage](#setlanguage), the system does not trigger the > callback for the current API even if the system language changes. For details, see > [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -1458,7 +1458,7 @@ export default class EntryAbility extends UIAbility {
 restartApp(want: Want): void
 ```
 
-Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active. > **NOTE：**> > When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the > application is not triggered. > > If an atomic service calls this API, > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice) > , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064. > > If an application calls this API or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064.
+Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active. > **NOTE：**> > When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the > application is not triggered. > > If an atomic service calls this API, > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md) > , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064. > > If an application calls this API or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a > successful call to this API, the system returns error code 16000064.
 
 **Since:** 23
 
@@ -1747,7 +1747,7 @@ export default class MyAbility extends UIAbility {
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread. This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset. This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - This API only sets the application to be ready for quick startup after caching. It does not mean that quick > startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup. > > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are > advised to call this API within the **onCreate()** callback of the > [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#abilitystage). > > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and > configured with the same value in each AbilityStage.
+Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread. This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset. This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - This API only sets the application to be ready for quick startup after caching. It does not mean that quick > startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup. > > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are > advised to call this API within the **onCreate()** callback of the > [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md). > > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and > configured with the same value in each AbilityStage.
 
 **Since:** 23
 

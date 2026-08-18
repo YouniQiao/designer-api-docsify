@@ -2,7 +2,7 @@
 
 Manager hfp source profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md#baseprofile)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md)
 
 **Since:** 23
 

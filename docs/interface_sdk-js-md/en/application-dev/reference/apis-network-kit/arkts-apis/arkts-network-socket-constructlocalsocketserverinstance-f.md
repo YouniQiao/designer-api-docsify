@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructLocalSocketServerInstance(): LocalSocketServer
 ```
 
-Creates a LocalSocketServer object.
+Creates a **LocalSocketServer** object.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
 
@@ -24,7 +24,7 @@ Creates a LocalSocketServer object.
 
 | Type | Description |
 | --- | --- |
-| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) | the LocalSocketServer of the constructLocalSocketServerInstance. |
+| [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) | LocalSocketServer** object. |
 
 **Examples**
 

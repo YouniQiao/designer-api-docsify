@@ -6,10 +6,10 @@
 
 | Name | Description |
 | --- | --- |
-| [borderRadiuses](arkts-na-graphics-borderradiuses-f.md#borderradiuses) | Obtain a BorderRadiuses object with all edges are set to the same radius. |
-| [borderStyles](arkts-na-graphics-borderstyles-f.md#borderstyles) | Obtain an object with all edges are set to the same style. |
-| [edgeColors](arkts-na-graphics-edgecolors-f.md#edgecolors) | Obtain an object with all edges are set to the same color. |
-| [edgeWidths](arkts-na-graphics-edgewidths-f.md#edgewidths) | Obtain an object with all edges are set to the same width. |
+| [borderRadiuses](arkts-na-graphics-borderradiuses-f.md) | Obtain a BorderRadiuses object with all edges are set to the same radius. |
+| [borderStyles](arkts-na-graphics-borderstyles-f.md) | Obtain an object with all edges are set to the same style. |
+| [edgeColors](arkts-na-graphics-edgecolors-f.md) | Obtain an object with all edges are set to the same color. |
+| [edgeWidths](arkts-na-graphics-edgewidths-f.md) | Obtain an object with all edges are set to the same width. |
 
 ### Classes
 
@@ -22,7 +22,7 @@
 | [ShapeMask](arkts-na-graphics-shapemask-c.md) | Defines ShapeMask. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

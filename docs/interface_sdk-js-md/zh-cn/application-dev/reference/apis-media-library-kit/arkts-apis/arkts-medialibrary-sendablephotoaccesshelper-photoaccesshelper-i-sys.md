@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -58,7 +59,7 @@ createAsset(displayName: string): Promise<PhotoAsset>
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper)的示例使用。
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -118,7 +119,7 @@ createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions):
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper)的示例使用。
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -220,7 +221,7 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper)的示例使用。
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper, context: Context) {

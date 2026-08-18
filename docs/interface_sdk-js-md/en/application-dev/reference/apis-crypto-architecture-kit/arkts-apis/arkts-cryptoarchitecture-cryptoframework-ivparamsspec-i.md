@@ -1,8 +1,8 @@
 # IvParamsSpec
 
-Encapsulates the parameters for encryption or decryption using a block cipher mode that requires an IV. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. <br>This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB. > **NOTE：**> > Before passing a value to > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec).
+Encapsulates the parameters for encryption or decryption using a block cipher mode that requires an IV. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. <br>This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB. > **NOTE：**> > Before passing a value to > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 
-**Inheritance/Implementation:** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#paramsspec)
+**Inheritance/Implementation:** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
 **Since:** 23
 
@@ -15,7 +15,6 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 

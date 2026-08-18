@@ -1,8 +1,8 @@
 # SheetOptions
 
-继承自[BindOptions](arkts-na-common-bindoptions-i.md#bindoptions)。 半模态页面内容选项。
+继承自[BindOptions](arkts-na-common-bindoptions-i.md)。 半模态页面内容选项。
 
-**继承/实现关系：** SheetOptions extends [BindOptions](arkts-na-common-bindoptions-i.md#bindoptions)
+**继承/实现关系：** SheetOptions extends [BindOptions](arkts-na-common-bindoptions-i.md)
 
 **起始版本：** 23
 
@@ -166,7 +166,7 @@ dragBar?: boolean
 effectEdge?: int
 ```
 
-设置半模态面板内容区边缘回弹效果，支持单边生效。 **默认值**：默认双边生效，即[EffectEdge](arkts-na-common-effectedge-e.md#effectedge).START | [EffectEdge](arkts-na-common-effectedge-e.md#effectedge).END（即数值3）。 **说明：** 1. 仅上边缘生效：[EffectEdge](arkts-na-common-effectedge-e.md#effectedge).START。 2. 仅下边缘生效：[EffectEdge](arkts-na-common-effectedge-e.md#effectedge).END。 3. 双边生效：[EffectEdge](arkts-na-common-effectedge-e.md#effectedge).START | [EffectEdge](arkts-na-common-effectedge-e.md#effectedge).END（即数值3）。 4. 双边不生效：[EffectEdge](arkts-na-common-effectedge-e.md#effectedge).START & [EffectEdge](arkts-na-common-effectedge-e.md#effectedge).END（即数值0）。
+设置半模态面板内容区边缘回弹效果，支持单边生效。 **默认值**：默认双边生效，即[EffectEdge](arkts-na-common-effectedge-e.md).START | [EffectEdge](arkts-na-common-effectedge-e.md).END（即数值3）。 **说明：** 1. 仅上边缘生效：[EffectEdge](arkts-na-common-effectedge-e.md).START。 2. 仅下边缘生效：[EffectEdge](arkts-na-common-effectedge-e.md).END。 3. 双边生效：[EffectEdge](arkts-na-common-effectedge-e.md).START | [EffectEdge](arkts-na-common-effectedge-e.md).END（即数值3）。 4. 双边不生效：[EffectEdge](arkts-na-common-effectedge-e.md).START & [EffectEdge](arkts-na-common-effectedge-e.md).END（即数值0）。
 
 **类型：** int
 
@@ -466,7 +466,7 @@ onWidthDidChange?: Callback<int>
 onWillDismiss?: Callback<DismissSheetAction>
 ```
 
-半模态页面的交互式关闭回调函数。允许开发者注册，以获取关闭操作的类型，并决定是否关闭半模态状态。 **说明：** 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-na-common-dismisssheetaction-i.md#dismisssheetaction) 中的reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。 如果不注册该回调函数，则用户执行关闭操作时，正常关闭半模态，无其他行为。 侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。 在onWillDismiss回调中，不能再做onWillDismiss拦截。 建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
+半模态页面的交互式关闭回调函数。允许开发者注册，以获取关闭操作的类型，并决定是否关闭半模态状态。 **说明：** 当用户执行下拉关闭、侧拉关闭、点击遮罩层关闭、点击关闭按钮的交互操作时，若已注册回调函数，则不会立即关闭页面，而是由开发者通过回调函数[DismissSheetAction](arkts-na-common-dismisssheetaction-i.md) 中的reason参数判断关闭操作的类型，进而根据具体原因自主选择是否关闭半模态页面。 如果不注册该回调函数，则用户执行关闭操作时，正常关闭半模态，无其他行为。 侧拉关闭又包含侧滑（左滑/右滑）、三键back、键盘ESC关闭。 在onWillDismiss回调中，不能再做onWillDismiss拦截。 建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
 **类型：** [Callback](arkts-na-callback-t.md)&lt;[DismissSheetAction](arkts-na-common-dismisssheetaction-i.md)&gt;
 
@@ -572,7 +572,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 设置半模态页面圆角半径。 不建议设置4个圆角大小不相等，圆角大小相等时面板视觉体验最佳。 **默认值**：32vp **说明：** 1. 根据设置的圆角半径值显示，如果未设置，则使用默认值。底部样式不显示半模态底部2个圆角，即使设置了底部2个圆角也不生效。 2. 分别设置4个方向的圆角半径后，如果某个方向的值异常，异常方向的圆角值重置为默认值，非异常方向的圆角值为已设置的值。统一设置4个方向的圆角时，如果设置的值异常，4个方向的圆角都重置为默认值。 3. 半径设置为百分比时，以半模态页面的宽度为基准。 4. 当圆角的半径大于半模态页面宽度一半时，圆角的半径取值为半模态页面宽度的一半。 5. 当半模态页面高度过小且圆角半径设置过大时，可能导致显示异常。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [BorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../../apis-arkui/arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 23
 

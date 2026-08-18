@@ -1,6 +1,6 @@
 # AvoidAreaType
 
-窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-window-avoidarea-i.md#avoidarea)做窗口内容避让。 &lt;!--RP13--&gt; &lt;!--RP13End--&gt;
+窗口内容的避让区域的类型枚举。 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的 [AvoidArea](arkts-arkui-window-avoidarea-i.md)做窗口内容避让。 <!--RP13--> <!--RP13End-->
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 TYPE_SYSTEM = 0
 ```
 
-表示系统默认区域。&lt;!--RP11--&gt;包含状态栏和三键导航栏区域。&lt;!--RP11End--&gt;
+表示系统默认区域。<!--RP11-->包含状态栏和三键导航栏区域。<!--RP11End-->
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ TYPE_KEYBOARD = 3
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。&lt;!--Del--&gt;OpenHarmony各设备不支持此能力。&lt;!--DelEnd--&gt;
+表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。<!--Del-->OpenHarmony各设备不支持此能力。<!--DelEnd-->
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ TYPE_NAVIGATION_INDICATOR = 4
 TYPE_FLOAT_NAVIGATION = 5
 ```
 
-表示三键导航区域。&lt;!--RP12--&gt;OpenHarmony各设备不支持此能力。&lt;!--RP12End--&gt;
+表示三键导航区域。<!--RP12-->OpenHarmony各设备不支持此能力。<!--RP12End-->
 
 **起始版本：** 26.0.0
 

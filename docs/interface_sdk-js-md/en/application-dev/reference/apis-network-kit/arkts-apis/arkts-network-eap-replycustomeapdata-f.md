@@ -12,9 +12,9 @@ import { eap } from '@kit.NetworkKit';
 function replyCustomEapData(result: CustomResult, data: EapData): void
 ```
 
-send Customized eap packets to system
+Notifies the system of the extensible authentication result. > **NOTE：**> > - If this callback is used to process received EAP data packets, the customized portion added by the server must > be removed from the EAP data transmitted to the system. > > - If this callback is used to process sent EAP data packets, the EAP data transmitted to the system is the EAP > data with the customized portion added by the server.
 
-**Since:** 23
+**Since:** 20
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -26,8 +26,8 @@ send Customized eap packets to system
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes | Indicates the result of custom authentication. |
-| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes | Indicates eap packet data after customization. |
+| result | [CustomResult](arkts-network-eap-customresult-e.md) | Yes | Extensible authentication result. |
+| data | [EapData](arkts-network-eap-eapdata-i.md) | Yes | EAP data. |
 
 **Error codes:**
 

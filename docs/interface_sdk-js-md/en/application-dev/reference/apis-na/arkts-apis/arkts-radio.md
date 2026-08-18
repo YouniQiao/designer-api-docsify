@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Radio](arkts-na-radio-radio-f.md#radio) | Defines Radio Component. |
+| [Radio](arkts-na-radio-radio-f.md) | Defines Radio Component. |
 
 ### Interfaces
 

@@ -6,7 +6,7 @@ Defines the option of show dialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#showdialogoptions)
+**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 

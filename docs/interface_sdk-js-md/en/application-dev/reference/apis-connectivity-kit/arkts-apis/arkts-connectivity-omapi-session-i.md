@@ -320,7 +320,7 @@ This method is provided to ease the development of mobile applications and for b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
 
 **Error codes:**
 
@@ -452,7 +452,7 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
 | p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
 
 **Error codes:**
 
@@ -582,7 +582,7 @@ This method is provided to ease the development of mobile applications and for b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
 
 **Error codes:**
 
@@ -714,7 +714,7 @@ Open a logical channel with the SE, selecting the applet represented by the give
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
 | p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the instance of channel. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the instance of channel. Null if the SE is unable to provide. |
 
 **Error codes:**
 

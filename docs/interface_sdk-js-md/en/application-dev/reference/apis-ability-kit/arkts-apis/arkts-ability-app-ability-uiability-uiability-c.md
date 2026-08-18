@@ -2,7 +2,7 @@
 
 Application component that has the UI. It provides lifecycle callbacks such as component creation, destruction, and foreground/background switching, and supports background communication.
 
-**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#ability)
+**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
@@ -91,7 +90,7 @@ export default class MyUIAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE：**> > - This callback does not support ability launch in > [specified mode](../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-wantconstant-flags-e.md#flags) in the Want object. > > - During a > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](#onforeground) or after > [onBackground](#onbackground). During a > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](#onnewwant).
+Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE：**> > - This callback does not support ability launch in > [specified mode](../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object. > > - During a > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](#onforeground) or after > [onBackground](#onbackground). During a > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](#onnewwant).
 
 **Since:** 18
 
@@ -131,7 +130,7 @@ export default class MyAbility extends UIAbility {
 onCollaborate(wantParam: Record<string, RecordData>): AbilityConstant.CollaborateResult
 ```
 
-Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE：**> > - This callback does not support ability launch in > [specified mode](../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-wantconstant-flags-e.md#flags) in the Want object. > > - During a > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](#onforeground) or after > [onBackground](#onbackground). During a > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](#onnewwant).
+Callback invoked to return the collaboration result in multi-device collaboration scenarios. > **NOTE：**> > - This callback does not support ability launch in > [specified mode](../../../application-models/uiability-launch-type.md#specified). > > - When you use methods such as > [startAbility](arkts-ability-uiabilitycontext-c.md#startability) > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in > [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object. > > - During a > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this > callback must be invoked before [onForeground](#onforeground) or after > [onBackground](#onbackground). During a > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this > callback must be invoked before [onNewWant](#onnewwant).
 
 **Since:** 23
 
@@ -145,7 +144,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
@@ -506,7 +505,7 @@ export default class MyUIAbility extends UIAbility {
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md#scenarios). This API returns the result synchronously and does not support asynchronous callback.
+Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md). This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 23
 
@@ -644,7 +643,7 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE：**> > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](#onsavestateasync) > is implemented.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE：**> > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](#onsavestateasync) > is implemented.
 
 **Since:** 9
 
@@ -689,7 +688,7 @@ export default class MyUIAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE：**> > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](#onsavestateasync) > is implemented.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. > **NOTE：**> > Starting from API version 20, this callback is not executed when > [onSaveStateAsync](#onsavestateasync) > is implemented.
 
 **Since:** 23
 
@@ -704,7 +703,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
 
 **Return value:**
 
@@ -718,7 +717,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosap
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -765,7 +764,7 @@ class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, RecordData>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosappabilityapprecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md) set to **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -780,7 +779,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#ohosap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently , only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
 
 **Return value:**
 
@@ -845,7 +844,7 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to share. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to share. |
 
 ## onWillBackground
 
@@ -973,7 +972,7 @@ export default class EntryAbility extends UIAbility {
 onWindowStageCreate(windowStage: window.WindowStage): void
 ```
 
-Called when a [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md#window) instance is created. You can load a page through the WindowStage instance in this callback.
+Called when a [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md) instance is created. You can load a page through the WindowStage instance in this callback.
 
 **Since:** 23
 

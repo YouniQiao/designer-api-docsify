@@ -14,7 +14,6 @@ This module provides basic capabilities for managing system sound effects, inclu
 
 ```TypeScript
 import { systemSoundManager } from '@kit.AudioKit';
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## Summary
@@ -23,19 +22,19 @@ import { systemSoundManager } from '@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions. |
+| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs) | Create customized tone attributes. |
-| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md#getsystemsoundmanager) | Gets system sound manager for all type sound. |
+| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f-sys.md) | Create customized tone attributes. |
+| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md) | Gets system sound manager for all type sound. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -52,7 +51,7 @@ import { systemSoundManager } from '@kit.AudioKit';
 | [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Enumerates the system sound effect types. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -73,7 +72,7 @@ import { systemSoundManager } from '@kit.AudioKit';
 | [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md) | Represents the system sound effect player object. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |
@@ -86,15 +85,15 @@ import { systemSoundManager } from '@kit.AudioKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryalarm) | Define the alarm tone category. |
-| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tonecategorycontacts) | Define the contact tone category. |
-| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotification) | Define the notification tone category. |
-| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotificationapp) | Define the app notification tone category. |
-| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryringtone) | Define the ringtone category. |
-| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tonecategorytextmessage) | Define the text message tone category. |
+| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm) | Define the alarm tone category. |
+| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tone_category_contacts) | Define the contact tone category. |
+| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification) | Define the notification tone category. |
+| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification_app) | Define the app notification tone category. |
+| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone) | Define the ringtone category. |
+| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message) | Define the text message tone category. |
 <!--DelEnd-->
 

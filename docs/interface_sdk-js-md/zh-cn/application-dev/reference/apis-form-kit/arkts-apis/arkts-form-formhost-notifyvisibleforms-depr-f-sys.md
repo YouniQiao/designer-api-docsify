@@ -17,7 +17,7 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms系统接口)
+**替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -32,7 +32,7 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识列表。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向卡片框架发送通知以使指定的卡片可见成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向卡片框架发送通知以使指定的卡片可见成功，error为undefined，否则为错误对象。 |
 
 
 ## notifyVisibleForms
@@ -47,7 +47,7 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms系统接口)
+**替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 

@@ -236,7 +236,7 @@ Server location information. It is left empty by default. The length of the inpu
 userIds?: string[]
 ```
 
-Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 
@@ -254,7 +254,7 @@ Name array of user IDs that can be reported by the data processor. **name** corr
 userProperties?: string[]
 ```
 
-Name array of user properties that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
+Name array of user properties that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md) API. The default value is an empty array. **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Type:** string[]
 

@@ -43,10 +43,10 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29700005](../errorcode-certManagerDialog.md#29700005-nonsecure-operation) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user.<br>**Applicable version:** 18 and later |
+| [29700005](../errorcode-certManagerDialog.md#29700005-non-secure-operation) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user.<br>**Applicable version:** 18 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
-| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog) to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
+| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | For security purposes, the current device does not support this API. You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md) to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The user install certificate failed in the certificate manager dialog, such as the certificate is in an invalid format. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the installation operation. |

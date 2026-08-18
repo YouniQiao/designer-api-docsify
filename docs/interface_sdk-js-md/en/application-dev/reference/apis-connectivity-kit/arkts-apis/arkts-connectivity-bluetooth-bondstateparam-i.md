@@ -6,7 +6,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md#bondstateparam)
+**Substitutes:** [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md)
 
 <!--Device-bluetooth-interface BondStateParam--><!--Device-bluetooth-interface BondStateParam-End-->
 

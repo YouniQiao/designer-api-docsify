@@ -27,7 +27,7 @@ Decodes MMS messages. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mmsFilePathName | string \| Array&lt;int&gt; | Yes | MMS message file path. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Yes | Callback used to return the result, which is carried in {@code MmsInformation}. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | Yes | Callback used to return the result, which is carried in {@code MmsInformation}. |
 
 **Error codes:**
 

@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## getPowerSaveTrustlist
 
 ```TypeScript
-function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void
+function getPowerSaveTrustlist(callback: AsyncCallback<Array<int>>): void
 ```
 
-Obtain the list of uids that are allowed to access the Internet in power saving mode.
+Obtains the UID array of applications that are on the power saving allowlist. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void--><!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void-End-->
+<!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<int>>): void--><!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,7 +28,7 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | the callback of UIDs list. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -56,16 +56,16 @@ policy.getPowerSaveTrustlist((error: BusinessError, data: number[]) => {
 ## getPowerSaveTrustlist
 
 ```TypeScript
-function getPowerSaveTrustlist(): Promise<Array<number>>
+function getPowerSaveTrustlist(): Promise<Array<int>>
 ```
 
-Obtain the list of uids that are allowed to access the Internet in power saving mode.
+Obtains the UID array of applications that are on the device idle allowlist. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<number>>--><!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<number>>-End-->
+<!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<int>>--><!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -75,7 +75,7 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

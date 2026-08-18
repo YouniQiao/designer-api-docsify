@@ -12,7 +12,6 @@ Defines type and quantity of the data to load. - Used by the **data sender** to 
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## recordCount

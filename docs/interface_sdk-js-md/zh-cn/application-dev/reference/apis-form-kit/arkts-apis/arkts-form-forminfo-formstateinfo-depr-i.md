@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md#formstateinfo)
+**替代接口：** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)
 
 <!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
 

@@ -1,8 +1,8 @@
 # FormIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo) and is used to describe the parameters supported by the @InsightIntentForm decorator.
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and is used to describe the parameters supported by the @InsightIntentForm decorator.
 
-**Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
+**Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
 **Since:** 20
 

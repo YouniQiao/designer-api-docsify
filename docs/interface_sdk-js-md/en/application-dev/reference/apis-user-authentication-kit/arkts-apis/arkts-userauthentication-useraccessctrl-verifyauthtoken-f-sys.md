@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { userAccessCtrl } from '@kit.UserAuthenticationKit';
-import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## verifyAuthToken

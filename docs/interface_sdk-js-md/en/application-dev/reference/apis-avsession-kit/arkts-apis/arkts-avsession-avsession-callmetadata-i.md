@@ -12,7 +12,6 @@ The metadata of the current call.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## avatar

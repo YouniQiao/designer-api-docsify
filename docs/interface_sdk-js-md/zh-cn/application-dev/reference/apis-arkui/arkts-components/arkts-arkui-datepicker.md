@@ -28,8 +28,18 @@ DatePicker(options?: DatePickerOptions)
 
 ## 汇总
 
-- [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)
-- [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
-- [DatePickerResult](arkts-arkui-datepickerresult-i.md)
-- [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
-- [DatePickerMode](arkts-arkui-datepickermode-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | 日期选择器弹窗选项。 继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。 |
+| [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 日期选择器组件的参数说明。 |
+| [DatePickerResult](arkts-arkui-datepickerresult-i.md) | 日期选择器返回的时间格式。 |
+| [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md) | 定义了DatePickerDialog组件中农历切换开关的样式。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [DatePickerMode](arkts-arkui-datepickermode-e.md) | 设置日期展示模式。 |
+

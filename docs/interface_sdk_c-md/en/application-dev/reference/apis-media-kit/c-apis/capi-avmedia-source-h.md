@@ -101,7 +101,7 @@ Creates an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVHttpHeader *](capi-avmedia-source-oh-avhttpheader.md) | Pointer to the OH_AVHttpHeader instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVHttpHeader *](capi-avmedia-source-oh-avhttpheader.md) | Pointer to the OH_AVHttpHeader instance if the operation is successful; null pointer if the operation  fails. |
 
 ### OH_AVHttpHeader_Destroy()
 
@@ -125,7 +125,7 @@ Releases an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer or the instance fails to be destroyed. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer or the instance fails to be destroyed. |
 
 ### OH_AVHttpHeader_GetCount()
 
@@ -150,7 +150,7 @@ Obtains the number of records in an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer. |
 
 ### OH_AVHttpHeader_AddRecord()
 
@@ -176,7 +176,7 @@ Adds a key-value pair record to an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): Any parameter is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): Any parameter is a null pointer. |
 
 ### OH_AVHttpHeader_GetRecord()
 
@@ -203,7 +203,7 @@ Obtains a key-value pair record in an HTTP header instance by index.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer or the index is out of range. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The header is a null pointer or the index is out of range. |
 
 ### OH_AVMediaSource_CreateWithUrl()
 
@@ -228,7 +228,7 @@ Creates a media source using a URL.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation  fails. |
 
 ### OH_AVMediaSource_CreateWithDataSource()
 
@@ -252,7 +252,7 @@ Creates a media source using **OH_AVDataSource**.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation  fails. |
 
 ### OH_AVMediaSource_CreateWithFd()
 
@@ -278,7 +278,7 @@ Creates a media source using a file descriptor.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation<br> fails. |
+| [OH_AVMediaSource *](capi-avmedia-source-oh-avmediasource.md) | Pointer to the OH_AVMediaSource instance if the operation is successful; null pointer if the operation  fails. |
 
 ### OH_AVMediaSource_Destroy()
 
@@ -302,7 +302,7 @@ Releases a media source instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source is a null pointer or fails to be released. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source is a null pointer or fails to be released. |
 
 ### OH_AVMediaSource_SetMimeType()
 
@@ -327,7 +327,7 @@ Sets the MIME type to process extended media sources.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source or mimetype is a null pointer.<br> [AV_ERR_UNSUPPORTED_FORMAT](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The mimetype is not supported. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source or mimetype is a null pointer.  [AV_ERR_UNSUPPORTED_FORMAT](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The mimetype is not supported. |
 
 ### OH_AVMediaSourceLoadingRequest_GetUrl()
 
@@ -352,7 +352,7 @@ Obtains the URL of a request.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The request is a null pointer or the URL does not exist. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The request is a null pointer or the URL does not exist. |
 
 ### OH_AVMediaSourceLoadingRequest_GetHttpHeader()
 
@@ -377,7 +377,7 @@ Obtains the HTTP header of a request.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The request is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The request is a null pointer. |
 
 ### OH_AVMediaSourceLoadingRequest_RespondData()
 
@@ -405,7 +405,7 @@ Sends request data to the AVPlayer.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Number of bytes accepted by the current read operation. If the return value is less than 0, the operation<br> fails.<br> The value -2 indicates that the player no longer needs the current data, and the client should stop the current<br> read process.<br> The value -3 indicates that the player's buffer is full, and the client should wait for the next read. |
+| int32_t | Number of bytes accepted by the current read operation. If the return value is less than 0, the operation  fails.  The value -2 indicates that the player no longer needs the current data, and the client should stop the current  read process.  The value -3 indicates that the player's buffer is full, and the client should wait for the next read. |
 
 ### OH_AVMediaSourceLoadingRequest_RespondHeader()
 
@@ -488,7 +488,7 @@ Releases an **OH_AVMediaSourceLoader** instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or fails to be released. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or fails to be released. |
 
 ### OH_AVMediaSource_SetMediaSourceLoader()
 
@@ -513,7 +513,7 @@ Sets a source loader for the media source instance.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source or loader is a null pointer, or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The source or loader is a null pointer, or the operation fails. |
 
 ### OH_AVMediaSourceLoaderOnSourceOpenedCallback()
 
@@ -531,14 +531,14 @@ Defines the SourceOpenCallback function which is called by the service.client sh
 
 | Parameter | Description |
 | -- | -- |
-| (OH_AVMediaSourceLoadingRequest \*request | Parameters for the resource open request,including detailed information about the requested resource and the data push method. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmedia-source-oh-avmediasourceloadingrequest.md) \*request | Parameters for the resource open request,including detailed information about the requested resource and the data push method. |
 | void \*userData | The data set by user in OH_AVMediaSourceLoader_SetSourceOpenCallback |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int64_t | The handler of current resource open request, the handler for the request object is unique.<br>     A value greater than 0 means the request is successful.<br>     A value less than or equal to 0 means it fails. |
+| int64_t | The handler of current resource open request, the handler for the request object is unique.      A value greater than 0 means the request is successful.      A value less than or equal to 0 means it fails. |
 
 ### OH_AVMediaSourceLoaderOnSourceReadCallback()
 
@@ -556,7 +556,7 @@ Defines the **SourceReadCallback** function called by the server. The client sho
 
 | Parameter | Description |
 | -- | -- |
-| (int64_t uuid | ID of the resource handle. |
+| int64_t uuid | ID of the resource handle. |
 | int64_t requestedOffset | Offset of the current media data relative to the start of the resource. |
 | int64_t requestedLength | Length of the requested data. The value **-1** indicates that the end of the resource hasbeen reached. In this case, call the [OH_AVMediaSourceLoadingRequest_FinishLoading](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_finishloading) method to notify theplayer that the push is complete. |
 | void \*userData | The data set by user in OH_AVMediaSourceLoader_SetSourceReadCallback |
@@ -577,7 +577,7 @@ Defines the **SourceCloseCallback** function called by the server. The client sh
 
 | Parameter | Description |
 | -- | -- |
-| (int64_t uuid | ID of the resource handle. |
+| int64_t uuid | ID of the resource handle. |
 | void \*userData | The data set by user in OH_AVMediaSourceLoader_SetSourceCloseCallback |
 
 ### OH_AVMediaSourceLoader_SetSourceOpenCallback()
@@ -604,7 +604,7 @@ Sets the open callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
 
 ### OH_AVMediaSourceLoader_SetSourceReadCallback()
 
@@ -630,7 +630,7 @@ Sets the read callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
 
 ### OH_AVMediaSourceLoader_SetSourceCloseCallback()
 
@@ -656,6 +656,6 @@ Sets the close callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | Execution result of the function.<br> [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.<br> [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  [AV_ERR_OK](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The execution is successful.  [AV_ERR_INVALID_VAL](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode): The loader is a null pointer or the operation fails. |
 
 

@@ -38,7 +38,7 @@ selfIdealSize?: Size
 
 节点的理想大小。 默认值：{ width: 0, height: 0 }
 
-**类型：** [Size](arkts-na-graphics-size-i.md)
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **起始版本：** 23
 

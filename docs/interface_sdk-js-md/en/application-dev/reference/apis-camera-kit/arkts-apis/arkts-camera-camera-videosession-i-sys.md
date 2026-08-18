@@ -1,8 +1,8 @@
 # VideoSession
 
-VideoSession inherits from [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Focus](arkts-camera-camera-focus-i.md#focus), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [Stabilization](arkts-camera-camera-stabilization-i.md#stabilization), [ColorManagement](arkts-camera-camera-colormanagement-i.md#colormanagement), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#autodeviceswitch), [Macro](arkts-camera-camera-macro-i-sys.md#macro-system-api), [ControlCenter](arkts-camera-camera-controlcenter-i.md#controlcenter), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md). It implements a video session, which provides operations on the flash, exposure, white balance, focus, zoom, video stabilization, color space, macro mode and controller, manual exposure, manual focus, manual ISO, optical image stabilization, and aperture. **VideoSession** is provided for the default video recording mode. It applies to common scenarios. It supports recording at various resolutions (such as 720p and 1080p) and frame rates (such as 30 fps and 60 fps).
+VideoSession inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md), [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md), [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md), [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md), and [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md). It implements a video session, which provides operations on the flash, exposure, white balance, focus, zoom, video stabilization, color space, macro mode and controller, manual exposure, manual focus, manual ISO, optical image stabilization, and aperture. **VideoSession** is provided for the default video recording mode. It applies to common scenarios. It supports recording at various resolutions (such as 720p and 1080p) and frame rates (such as 30 fps and 60 fps).
 
-**Inheritance/Implementation:** VideoSession extends [Session](arkts-camera-camera-session-i.md#session), [Flash](arkts-camera-camera-flash-i.md#flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#autoexposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#whitebalance-system-api), [Focus](arkts-camera-camera-focus-i.md#focus), [Zoom](arkts-camera-camera-zoom-i.md#zoom), [Stabilization](arkts-camera-camera-stabilization-i.md#stabilization), [ColorManagement](arkts-camera-camera-colormanagement-i.md#colormanagement), [ControlCenter](arkts-camera-camera-controlcenter-i.md#controlcenter), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#autodeviceswitch), [Macro](arkts-camera-camera-macro-i-sys.md#macro-system-api), [ManualExposure](arkts-camera-camera-manualexposure-i.md#manualexposure-system-api), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#manualfocus-system-api), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#manualiso-system-api), [OIS](arkts-camera-camera-ois-i.md#ois), [Aperture](arkts-camera-camera-aperture-i-sys.md#aperture-system-api)
+**Inheritance/Implementation:** VideoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i-sys.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md), [ManualIso](arkts-camera-camera-manualiso-i-sys.md), [OIS](arkts-camera-camera-ois-i.md), [Aperture](arkts-camera-camera-aperture-i-sys.md)
 
 **Since:** 23
 
@@ -102,7 +102,7 @@ Unsubscribes from aperture info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | No | Callback used to get the aperture info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | No | Callback used to get the aperture info. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Unsubscribes from effect suggestion change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -158,7 +158,7 @@ Unsubscribes from focus tracking info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | No | Callback used to get the focus tracking info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | No | Callback used to get the focus tracking info. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Unsubscribes from lcd flash status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to get the lcd flash status. |
 
 **Error codes:**
 
@@ -214,7 +214,7 @@ Unsubscribes camera light status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -222,7 +222,7 @@ Unsubscribes camera light status event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## off_effectSuggestionChange
+## off_effectSuggestionChange('effectSuggestionChange')
 
 ```TypeScript
 off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void
@@ -243,7 +243,7 @@ Unsubscribes from effect suggestion change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -251,7 +251,7 @@ Unsubscribes from effect suggestion change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## off_focusTrackingInfoAvailable
+## off_focusTrackingInfoAvailable('focusTrackingInfoAvailable')
 
 ```TypeScript
 off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>): void
@@ -272,7 +272,7 @@ Unsubscribes from focus tracking information events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusTrackingInfoAvailable' | Yes | Event type. The value is fixed at **'focusTrackingInfoAvailable'**. The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusTrackingInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusTrackingInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -288,7 +288,7 @@ function unregisterFocusTrackingInfoChanged(session: camera.VideoSessionForSys):
 }
 ```
 
-## off_lcdFlashStatus
+## off_lcdFlashStatus('lcdFlashStatus')
 
 ```TypeScript
 off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
@@ -309,7 +309,7 @@ Unsubscribes from LCD flash status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -325,7 +325,7 @@ function unregisterLcdFlashStatus(videoSession: camera.VideoSession): void {
 }
 ```
 
-## off_lightStatusChange
+## off_lightStatusChange('lightStatusChange')
 
 ```TypeScript
 off(type: 'lightStatusChange', callback?: AsyncCallback<LightStatus>): void
@@ -346,7 +346,7 @@ Unsubscribes from camera light status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lightStatusChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lightStatusChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -378,7 +378,7 @@ function handleLightStatusOff(mSession: camera.VideoSessionForSys): void {
 }
 ```
 
-## off_macroStatusChanged
+## off_macroStatusChanged('macroStatusChanged')
 
 ```TypeScript
 off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
@@ -401,7 +401,7 @@ Unsubscribes from macro state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. If **true** is returned, the unsubscription is successful. If **false** is returned, the unsubscription fails. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. If **true** is returned, the unsubscription is successful. If **false** is returned, the unsubscription fails. |
 
 **Error codes:**
 
@@ -431,7 +431,7 @@ Subscribes aperture info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | Yes | Callback used to get the aperture info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | Yes | Callback used to get the aperture info. |
 
 **Error codes:**
 
@@ -459,7 +459,7 @@ Subscribes to effect suggestion change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -487,7 +487,7 @@ Subscribes to focus tracking info event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | Yes | Callback used to get the focus tracking info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | Yes | Callback used to get the focus tracking info. |
 
 **Error codes:**
 
@@ -515,7 +515,7 @@ Subscribes to lcd flash status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to get the lcd flash status. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Subscribes camera light status event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -551,7 +551,7 @@ Subscribes camera light status event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## on_effectSuggestionChange
+## on_effectSuggestionChange('effectSuggestionChange')
 
 ```TypeScript
 on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void
@@ -572,7 +572,7 @@ Subscribes to effect suggestion change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -580,7 +580,7 @@ Subscribes to effect suggestion change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-## on_focusTrackingInfoAvailable
+## on_focusTrackingInfoAvailable('focusTrackingInfoAvailable')
 
 ```TypeScript
 on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): void
@@ -601,7 +601,7 @@ Subscribes to focus tracking information events. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusTrackingInfoAvailable' | Yes | Event type. The value is fixed at **'focusTrackingInfoAvailable'**. The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | Yes | Callback used to return the focus tracking information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | Yes | Callback used to return the focus tracking information. |
 
 **Error codes:**
 
@@ -625,7 +625,7 @@ function registerFocusTrackingInfoChanged(session: camera.VideoSessionForSys): v
 }
 ```
 
-## on_lcdFlashStatus
+## on_lcdFlashStatus('lcdFlashStatus')
 
 ```TypeScript
 on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
@@ -646,7 +646,7 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes | Callback used to return the LCD flash status change. |
 
 **Error codes:**
 
@@ -673,7 +673,7 @@ function registerLcdFlashStatus(videoSession: camera.VideoSession): void {
 }
 ```
 
-## on_lightStatusChange
+## on_lightStatusChange('lightStatusChange')
 
 ```TypeScript
 on(type: 'lightStatusChange', callback: AsyncCallback<LightStatus>): void
@@ -694,7 +694,7 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes | Callback used to return the light status information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes | Callback used to return the light status information. |
 
 **Error codes:**
 
@@ -726,7 +726,7 @@ function handleLightStatusOn(mSession: camera.VideoSessionForSys): void {
 }
 ```
 
-## on_macroStatusChanged
+## on_macroStatusChanged('macroStatusChanged')
 
 ```TypeScript
 on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
@@ -749,7 +749,7 @@ Subscribes to macro state change events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'macroStatusChanged' | Yes | Event type. The value is fixed at **'macroStatusChanged'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the macro state. **true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the macro state. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 

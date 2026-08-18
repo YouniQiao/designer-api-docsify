@@ -1,6 +1,6 @@
 # ConnectionProperties
 
-Defines the network connection properties.
+Defines the network connection properties. > **NOTE：**> > The values of **linkAddresses**, **routes**, and **dnses** may be empty. You need to protect the empty values. > You are advised to check whether the objects exist before using the values.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 dnses: Array<NetAddress>
 ```
 
-Network address, refer to [NetAddress].
+Network address. For details, see [NetAddress](arkts-network-connection-netaddress-i.md).
 
 **Type:** Array&lt;NetAddress&gt;
 
@@ -36,7 +36,7 @@ Network address, refer to [NetAddress].
 domains: string
 ```
 
-Domain. The default value is "".
+Domain name.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ Domain. The default value is "".
 interfaceName: string
 ```
 
-Network card name.
+Network interface card (NIC) name.
 
 **Type:** string
 
@@ -68,11 +68,11 @@ Network card name.
 isIPv4LinkValid?: boolean
 ```
 
-Whether the IPv4 address of the interface is valid.
+Whether IPv4 is available on the current network. **true**: IPv4 is available when the IPv4 address is valid and the default IPv4 route exists. **false**: IPv4 is unavailable when the IPv4 address is invalid or the default IPv 4 route does not exist.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,11 +86,11 @@ Whether the IPv4 address of the interface is valid.
 isIPv6LinkValid?: boolean
 ```
 
-Whether the IPv6 address of the interface is valid.
+Whether IPv6 is available on the current network. **true**: IPv6 is available when the IPv6 address is valid and the default IPv6 route exists. **false**: IPv6 is unavailable when the IPv6 address is invalid or the default IPv 6 route does not exist.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +104,7 @@ Whether the IPv6 address of the interface is valid.
 linkAddresses: Array<LinkAddress>
 ```
 
-Link information.
+Network link information.
 
 **Type:** Array&lt;LinkAddress&gt;
 
@@ -120,7 +120,7 @@ Link information.
 mtu: int
 ```
 
-Maximum transmission unit.
+Maximum transmission unit (MTU).
 
 **Type:** int
 
@@ -136,7 +136,7 @@ Maximum transmission unit.
 routes: Array<RouteInfo>
 ```
 
-Routing information.
+Network route information.
 
 **Type:** Array&lt;RouteInfo&gt;
 

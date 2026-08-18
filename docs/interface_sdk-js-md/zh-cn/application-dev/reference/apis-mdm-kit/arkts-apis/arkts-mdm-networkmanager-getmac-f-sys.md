@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getMac
@@ -17,7 +18,7 @@ function getMac(admin: Want, networkInterface: string, callback: AsyncCallback<s
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
+**替代接口：** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -35,7 +36,7 @@ function getMac(admin: Want, networkInterface: string, callback: AsyncCallback<s
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | networkInterface | string | 是 | 指定网络接口。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备MAC地址，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备MAC地址，否则err为错误对象。 |
 
 **错误码：**
 
@@ -82,7 +83,7 @@ function getMac(admin: Want, networkInterface: string): Promise<string>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
+**替代接口：** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

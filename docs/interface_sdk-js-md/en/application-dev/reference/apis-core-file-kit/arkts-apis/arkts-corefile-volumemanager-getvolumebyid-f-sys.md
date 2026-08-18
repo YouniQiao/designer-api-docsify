@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
-import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getVolumeById
@@ -30,7 +29,7 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Volume](arkts-corefile-volumemanager-volume-i-sys.md)&gt; | Yes | Callback used to return the volume information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Volume](arkts-corefile-volumemanager-volume-i-sys.md)&gt; | Yes | Callback used to return the volume information obtained. |
 
 **Error codes:**
 

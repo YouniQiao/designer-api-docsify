@@ -3,15 +3,16 @@
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_tabContentUpdate
+## on_tabContentUpdate('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-监听指定Tabs组件id的TabContent页面切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。
+监听指定Tabs组件id的TabContent页面切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。
 
 **起始版本：** 12
 
@@ -29,16 +30,16 @@ export function on(type: 'tabContentUpdate', options: ObserverOptions, callback:
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 | 监听事件，固定为'tabContentUpdate'，即TabContent页面的切换事件。 |
 | options | ObserverOptions | 是 | 指定监听的Tabs组件的id。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
 
 
-## on_tabContentUpdate
+## on_tabContentUpdate('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void
 ```
 
-监听TabContent页面的切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。
+监听TabContent页面的切换事件。相比[on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate)，本接口不支持监听Tabs组件初始化时，显示首个页签的事件。
 
 **起始版本：** 12
 
@@ -55,5 +56,5 @@ export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 | 监听事件，固定为'tabContentUpdate'，即TabContent页面的切换事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
 

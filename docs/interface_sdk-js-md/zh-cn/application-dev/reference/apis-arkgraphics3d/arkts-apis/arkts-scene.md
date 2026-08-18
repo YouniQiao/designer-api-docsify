@@ -29,7 +29,7 @@
 | [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md) | 渲染配置接口。 |
 | [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | 定义了所有渲染资源的上下文。在同一渲染上下文中创建的多个场景之间，可以共享渲染资源。 |
 | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | 渲染参数接口。 |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | 用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md#scene)）中共享的渲染资源。 |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | 用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md)）中共享的渲染资源。 |
 | [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | 表示基础场景组件，用于描述场景节点的组件信息，包括组件名称及其对应的属性集合。 |
 | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | 场景节点参数对象，用于提供场景节点层次中的名称和路径。 |
 | [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | 用于创建3D场景中资源的接口，例如相机、光源等，继承自RenderResourceFactory。 |
@@ -40,7 +40,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i-sys.md) | 用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md#scene)）中共享的渲染资源。 |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i-sys.md) | 用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md)）中共享的渲染资源。 |
 | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 场景加载参数对象，用于指定加载3D模型资源时的额外配置选项。典型使用场景为从MP4容器文件中加载内嵌的glb模型。 |
 <!--DelEnd-->
 

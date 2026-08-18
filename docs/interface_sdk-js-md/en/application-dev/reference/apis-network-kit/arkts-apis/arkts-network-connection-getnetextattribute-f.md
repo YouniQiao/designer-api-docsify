@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getNetExtAttribute(netHandle: NetHandle): Promise<string>
 ```
 
-Get the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20
 
@@ -26,13 +26,13 @@ Get the network extended attribute for a [NetHandle](arkts-network-connection-ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| Promise&lt;string&gt; | Promise used to return the network extension attributes. |
 
 **Error codes:**
 

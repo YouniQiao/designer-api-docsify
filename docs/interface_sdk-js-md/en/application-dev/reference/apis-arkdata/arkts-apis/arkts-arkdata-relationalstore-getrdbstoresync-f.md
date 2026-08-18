@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getRdbStoreSync
@@ -28,7 +27,7 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of an application or ability. |
-| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#storeconfig) configuration of the database related to this RDB store. |
+| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) configuration of the database related to this RDB store. |
 
 **Return value:**
 
@@ -46,7 +45,7 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 | [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) | The secret key is corrupted or lost. |
 | [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-read-only-database) | SQLite: Attempt to write a readonly database. |
 | [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) | Invalid database path. |
 | [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) | Invalid data group ID. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |

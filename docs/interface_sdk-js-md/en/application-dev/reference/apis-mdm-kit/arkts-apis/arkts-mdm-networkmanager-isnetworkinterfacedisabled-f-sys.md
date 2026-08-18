@@ -18,7 +18,7 @@ Queries whether a specified network interface is disabled. This API uses an asyn
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync)
+**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -36,7 +36,7 @@ Queries whether a specified network interface is disabled. This API uses an asyn
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | networkInterface | string | Yes | Network port. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**, and **data** indicates whether the network port is disabled. The value **true** means the network port is disabled; and **false** means the opposite. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**, and **data** indicates whether the network port is disabled. The value **true** means the network port is disabled; and **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Queries whether a specified network interface is disabled. This API uses a promi
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync)
+**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

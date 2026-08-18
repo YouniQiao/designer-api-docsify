@@ -81,7 +81,7 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection) object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
@@ -121,7 +121,7 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## off_connectionAccepted
+## off_connectionAccepted('connectionAccepted')
 
 ```TypeScript
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
@@ -144,7 +144,7 @@ Unregisters the callback listener for **connectionAccepted** event. This API mus
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback. The parameter is [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection). The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback. The parameter is [Connection](arkts-distributedservice-linkenhance-connection-i.md). The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ try {
 }
 ```
 
-## off_serverStopped
+## off_serverStopped('serverStopped')
 
 ```TypeScript
 off(type: 'serverStopped', callback?: Callback<number>): void
@@ -203,7 +203,7 @@ Unregisters the callback listener for **serverStopped** event. This API must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. The callback last registered using **on** needs to be passed to unregister the callback. The default effect is the same as the passing behavior. |
 
 **Error codes:**
 
@@ -261,7 +261,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
 
 **Error codes:**
 
@@ -292,7 +292,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
@@ -301,7 +301,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## on_connectionAccepted
+## on_connectionAccepted('connectionAccepted')
 
 ```TypeScript
 on(type: 'connectionAccepted', callback: Callback<Connection>): void
@@ -324,7 +324,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to receive server connection events. The callback parameter **connection** is the connection object used to establish the connection. The type is [Connection](arkts-distributedservice-linkenhance-connection-i.md#connection). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to receive server connection events. The callback parameter **connection** is the connection object used to establish the connection. The type is [Connection](arkts-distributedservice-linkenhance-connection-i.md). |
 
 **Error codes:**
 
@@ -360,7 +360,7 @@ try {
 }
 ```
 
-## on_serverStopped
+## on_serverStopped('serverStopped')
 
 ```TypeScript
 on(type: 'serverStopped', callback: Callback<number>): void
@@ -383,7 +383,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. This event is triggered when the server is stopped abnormally. |
 
 **Error codes:**
 

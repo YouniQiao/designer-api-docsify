@@ -12,7 +12,6 @@ Represents the asset (such as a document, image, or video).
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## createTime

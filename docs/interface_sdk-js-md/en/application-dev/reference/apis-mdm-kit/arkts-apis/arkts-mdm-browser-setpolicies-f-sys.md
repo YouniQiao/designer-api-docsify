@@ -18,7 +18,7 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync)
+**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -37,7 +37,7 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which is used to specify the browser. |
 | policies | string | Yes | Policies to set. If this parameter is set to an empty string, the policies of the specified browser are canceled. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync)
+**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 

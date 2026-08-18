@@ -1,6 +1,6 @@
 # KeyItem
 
-Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md#keycode) event occurs.
+Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md) event occurs.
 
 **Since:** 23
 

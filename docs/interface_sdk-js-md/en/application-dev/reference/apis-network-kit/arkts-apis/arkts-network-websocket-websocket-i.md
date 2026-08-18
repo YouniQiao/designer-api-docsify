@@ -1,6 +1,6 @@
 # WebSocket
 
-&lt;p&gt;Defines a WebSocket object. Before invoking WebSocket APIs, you need to call webSocket.createWebSocket to create a WebSocket object.&lt;/p&gt;
+Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call [webSocket.createWebSocket](arkts-network-websocket-createwebsocket-f.md) to create a **WebSocket** object.
 
 **Since:** 23
 
@@ -20,13 +20,13 @@ import { webSocket } from '@kit.NetworkKit';
 close(callback: AsyncCallback<boolean>): void
 ```
 
-Closes a WebSocket connection.
+Closes the WebSocket connection. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-close(callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(callback: AsyncCallback<boolean>): void-End-->
 
@@ -36,7 +36,7 @@ Closes a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of close. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -67,13 +67,13 @@ ws.close((err: BusinessError) => {
 close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Closes a WebSocket connection.
+Closes the WebSocket connection based on the options parameter. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -83,8 +83,8 @@ Closes a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#websocketcloseoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of close. |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Request options. For details, see [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -121,13 +121,13 @@ ws.close(options, (err: BusinessError) => {
 close(options?: WebSocketCloseOptions): Promise<boolean>
 ```
 
-Closes a WebSocket connection.
+Closes a WebSocket connection based on the specified options. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-close(options?: WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocket-close(options?: WebSocketCloseOptions): Promise<boolean>-End-->
 
@@ -137,13 +137,13 @@ Closes a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Optional parameters [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md#websocketcloseoptions). |
+| options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | No | Request options. For details, see [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -177,13 +177,13 @@ promise.then((value: boolean) => {
 connect(url: string, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a WebSocket request to establish a WebSocket connection to a given URL.
+Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > The boolean value returned in the callback indicates only whether the connection request is created > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** > event via [on('open')](#on_openopen) before > calling this API. > > **NOTE：**> > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-connect(url: string, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -194,18 +194,18 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of connect. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -231,13 +231,13 @@ ws.connect(url, (err: BusinessError, value: boolean) => {
 connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a WebSocket request to establish a WebSocket connection to a given URL.
+Initiates a WebSocket request to establish a WebSocket connection to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > The boolean value returned in the callback indicates only whether the connection request is created > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** > event via [on('open')](#on_openopen) before > calling this API. > > **NOTE：**> > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -248,19 +248,19 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#websocketrequestoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of connect. |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Request options. For details, see [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -310,13 +310,13 @@ ws.connect(url, options, (err: BusinessError, value: Object) => {
 connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>
 ```
 
-Initiates a WebSocket request to establish a WebSocket connection to a given URL.
+Establishes a WebSocket connection to a given URL. This API uses a promise to return the result. > **NOTE：**> > The boolean value returned in the callback indicates only whether the connection request is created > successfully. To detect whether the WebSocket connection is successful, you need to subscribe to the **open** > event via [on('open')](#on_openopen) before > calling this API. > > **NOTE：**> > The URL cannot contain more than 1024 characters. Otherwise, the connection fails. Since API version 15, the > maximum length of URLs is changed from 1024 characters to 2048 characters. Since API version 26, the maximum > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>--><!--Device-WebSocket-connect(url: string, options?: WebSocketRequestOptions): Promise<boolean>-End-->
 
@@ -327,24 +327,24 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No | Optional parameters [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md#websocketrequestoptions). |
+| options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | No | Request options. For details, see [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
-| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
-| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
-| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist.<br>**Applicable version:** 12 and later |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error.<br>**Applicable version:** 12 and later |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error.<br>**Applicable version:** 10 and later |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -380,7 +380,7 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No |  |
 
 ## offHeaderReceive
 
@@ -394,13 +394,14 @@ Unregisters the observer for HTTP Response Header events.
 
 <!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-offHeaderReceive(callback?: Callback<ResponseHeaders>): void-End-->
 
-**System capability:** SystemCapability.Communication.NetStack
+**System capability:** 
+- API version 23 and later: SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
 
 ## offMessage
 
@@ -422,7 +423,7 @@ Cancels listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
 
 ## offOpen
 
@@ -444,29 +445,7 @@ Cancels listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | No | the callback used to return the result. |
-
-## offOpenInfo
-
-```TypeScript
-offOpenInfo(callback?: Callback<WebSocketOpenInfo>): void
-```
-
-Cancels listening for the open info events of a WebSocket connection.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WebSocket-offOpenInfo(callback?: Callback<WebSocketOpenInfo>): void--><!--Device-WebSocket-offOpenInfo(callback?: Callback<WebSocketOpenInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | No | the callback used to return the result. |
 
 ## offWebSocketClose
 
@@ -486,7 +465,7 @@ Cancels listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 ## offWebSocketError
 
@@ -506,17 +485,17 @@ Cancels listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
 
-## off_close
+## off_close('close')
 
 ```TypeScript
 off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 ```
 
-Cancels listening for the close events of a WebSocket connection.
+Unsubscribes from WebSocket close events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -528,8 +507,8 @@ Cancels listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | event indicating that a WebSocket connection has been closed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| type | 'close' | Yes | Event type.&lt;br /&gt; **close**: event indicating that a WebSocket connection has been closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -540,15 +519,15 @@ let ws = webSocket.createWebSocket();
 ws.off('close');
 ```
 
-## off_dataEnd
+## off_dataEnd('dataEnd')
 
 ```TypeScript
 off(type: 'dataEnd', callback?: Callback<void>): void
 ```
 
-Cancels listening for receiving data ends events of a WebSocket connection.
+Unsubscribes from WebSocket data receiving end events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void--><!--Device-WebSocket-off(type: 'dataEnd', callback?: Callback<void>): void-End-->
 
@@ -558,8 +537,8 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataEnd' | Yes | event indicating the WebSocket connection has received data ends. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
+| type | 'dataEnd' | Yes | Event type.&lt;br /&gt; **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No |  |
 
 **Examples**
 
@@ -570,15 +549,15 @@ let ws = webSocket.createWebSocket();
 ws.off('dataEnd');
 ```
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Cancels listening for the error events of a WebSocket connection.
+Unsubscribes from WebSocket error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -590,8 +569,8 @@ Cancels listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | event indicating the WebSocket connection has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+| type | 'error' | Yes | Event type.&lt;br /&gt; **error**: event indicating the WebSocket connection has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. |
 
 **Examples**
 
@@ -602,15 +581,15 @@ let ws = webSocket.createWebSocket();
 ws.off('error');
 ```
 
-## off_headerReceive
+## off_headerReceive('headerReceive')
 
 ```TypeScript
 off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 ```
 
-Unregisters the observer for HTTP Response Header events.
+Unsubscribes from HTTP response header events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 24
+**Since:** 12
 
 <!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void--><!--Device-WebSocket-off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void-End-->
 
@@ -620,8 +599,8 @@ Unregisters the observer for HTTP Response Header events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result. |
+| type | 'headerReceive' | Yes | Event type.&lt;br /&gt; Event type. The value is **headerReceive**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -632,15 +611,15 @@ let ws = webSocket.createWebSocket();
 ws.off('headerReceive');
 ```
 
-## off_message
+## off_message('message')
 
 ```TypeScript
 off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Cancels listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+Unsubscribes from WebSocket server message receiving events. This API uses an asynchronous callback to return the result. > **NOTE：**> > The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8). > > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -652,8 +631,8 @@ Cancels listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
+| type | 'message' | Yes | Event type.&lt;br /&gt; **message**: event indicating that a message has been received from the server. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -664,15 +643,15 @@ let ws = webSocket.createWebSocket();
 ws.off('message');
 ```
 
-## off_open
+## off_open('open')
 
 ```TypeScript
 off(type: 'open', callback?: AsyncCallback<Object>): void
 ```
 
-Cancels listening for the open events of a WebSocket connection.
+Unsubscribes from WebSocket open events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -684,8 +663,8 @@ Cancels listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'open' | Yes | event indicating that a WebSocket connection has been opened. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | the callback used to return the result. |
+| type | 'open' | Yes | Event type.&lt;br /&gt; **open**: event indicating that a WebSocket connection has been opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -706,7 +685,7 @@ ws.on('open', callback1);
 ws.off('open', callback1);
 ```
 
-## off_openInfo
+## off_openInfo('openInfo')
 
 ```TypeScript
 off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
@@ -727,7 +706,7 @@ Cancels listening for the open info events of a WebSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## onDataEnd
 
@@ -747,7 +726,7 @@ Enables listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## onHeaderReceive
 
@@ -761,13 +740,14 @@ Registers an observer for HTTP Response Header events.
 
 <!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-onHeaderReceive(callback: Callback<ResponseHeaders>): void-End-->
 
-**System capability:** SystemCapability.Communication.NetStack
+**System capability:** 
+- API version 23 and later: SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
 
 ## onMessage
 
@@ -789,7 +769,7 @@ Enables listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
 
 ## onOpen
 
@@ -811,29 +791,7 @@ Enables listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | Yes | the callback used to return the result. |
-
-## onOpenInfo
-
-```TypeScript
-onOpenInfo(callback: Callback<WebSocketOpenInfo>): void
-```
-
-Enables listening for the open info events of a WebSocket connection.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WebSocket-onOpenInfo(callback: Callback<WebSocketOpenInfo>): void--><!--Device-WebSocket-onOpenInfo(callback: Callback<WebSocketOpenInfo>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## onWebSocketClose
 
@@ -853,7 +811,7 @@ Enables listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 ## onWebSocketError
 
@@ -873,17 +831,17 @@ Enables listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
 
-## on_close
+## on_close('close')
 
 ```TypeScript
 on(type: 'close', callback: AsyncCallback<CloseResult>): void
 ```
 
-Enables listening for the close events of a WebSocket connection.
+Subscribes to WebSocket close events. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -895,8 +853,8 @@ Enables listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | event indicating that a WebSocket connection has been closed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| type | 'close' | Yes | Event type.<br/> **close**: event indicating that a WebSocket connection has been closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -910,15 +868,15 @@ ws.on('close', (err: BusinessError, value: webSocket.CloseResult) => {
 });
 ```
 
-## on_dataEnd
+## on_dataEnd('dataEnd')
 
 ```TypeScript
 on(type: 'dataEnd', callback: Callback<void>): void
 ```
 
-Enables listening for receiving data ends events of a WebSocket connection.
+Subscribes to the WebSocket data receiving end event. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void--><!--Device-WebSocket-on(type: 'dataEnd', callback: Callback<void>): void-End-->
 
@@ -928,8 +886,8 @@ Enables listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataEnd' | Yes | event indicating the WebSocket connection has received data ends. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| type | 'dataEnd' | Yes | Event type.<br/> **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -942,15 +900,15 @@ ws.on('dataEnd', () => {
 });
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Enables listening for the error events of a WebSocket connection.
+Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result. The error code of the [error](#on_openopen) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket ( the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -962,8 +920,8 @@ Enables listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | event indicating the WebSocket connection has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
+| type | 'error' | Yes | Event type.<br/> **error**: event indicating the WebSocket connection has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -977,15 +935,15 @@ ws.on('error', (err: BusinessError) => {
 });
 ```
 
-## on_headerReceive
+## on_headerReceive('headerReceive')
 
 ```TypeScript
 on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void
 ```
 
-Registers an observer for HTTP Response Header events.
+Subscribes to HTTP response header events. This API uses an asynchronous callback to return the result.
 
-**Since:** 24
+**Since:** 12
 
 <!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void--><!--Device-WebSocket-on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void-End-->
 
@@ -995,8 +953,8 @@ Registers an observer for HTTP Response Header events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result. |
+| type | 'headerReceive' | Yes | Event type.<br/> Event type. The value is **headerReceive**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1009,15 +967,15 @@ ws.on('headerReceive', (data) => {
 });
 ```
 
-## on_message
+## on_message('message')
 
 ```TypeScript
 on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 ```
 
-Enables listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
+Subscribes to WebSocket server message receiving events. This API uses an asynchronous callback to return the result. > **NOTE：**> > The data in **AsyncCallback** can be in the format of string (API version 6) or ArrayBuffer (API version 8).
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1029,8 +987,8 @@ Enables listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
+| type | 'message' | Yes | Event type.<br/> **message**: event indicating that a message has been received from the server. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1044,15 +1002,15 @@ ws.on('message', (err: BusinessError<void>, value: string | ArrayBuffer) => {
 });
 ```
 
-## on_open
+## on_open('open')
 
 ```TypeScript
 on(type: 'open', callback: AsyncCallback<Object>): void
 ```
 
-Enables listening for the open events of a WebSocket connection.
+Subscribes to WebSocket open events. This API uses an asynchronous callback to return the result. This event indicates whether the WebSocket connection is successful. This API must be called before [connect](#connect) is called to initiate a connection request.
 
-**Since:** 11
+**Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1064,8 +1022,8 @@ Enables listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'open' | Yes | event indicating that a WebSocket connection has been opened. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | the callback used to return the result. |
+| type | 'open' | Yes | Event type.<br/> **open**: event indicating that a WebSocket connection has been opened. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1083,7 +1041,7 @@ ws.on('open', (err: BusinessError, value: Object) => {
 });
 ```
 
-## on_openInfo
+## on_openInfo('openInfo')
 
 ```TypeScript
 on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void
@@ -1104,7 +1062,7 @@ Enables listening for the open info events of a WebSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## send
 
@@ -1112,13 +1070,13 @@ Enables listening for the open info events of a WebSocket connection.
 send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 ```
 
-Sends data through a WebSocket connection.
+Sends data through a WebSocket connection. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void--><!--Device-WebSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void-End-->
 
@@ -1128,8 +1086,8 @@ Sends data through a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Data to send. It can be a string(API 6) or an ArrayBuffer(API 8). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of send. |
+| data | string \| ArrayBuffer | Yes | Data to send. <br>Only the string type is supported for API version 6 or earlier. Both the string and ArrayBuffer types are supported for API version 8 or later. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1175,13 +1133,13 @@ ws.on('open', (err: BusinessError, value: Object) => {
 send(data: string | ArrayBuffer): Promise<boolean>
 ```
 
-Sends data through a WebSocket connection.
+Sends data through the WebSocket connection. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>--><!--Device-WebSocket-send(data: string | ArrayBuffer): Promise<boolean>-End-->
 
@@ -1191,13 +1149,13 @@ Sends data through a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Data to send. It can be a string(API 6) or an ArrayBuffer(API 8). |
+| data | string \| ArrayBuffer | Yes | Data to send. <br>Only the string type is supported for API version 6 or earlier. Both the string and ArrayBuffer types are supported for API version 8 or later. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

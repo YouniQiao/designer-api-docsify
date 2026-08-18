@@ -84,7 +84,7 @@ BLOB = 4
 ASSET = 5
 ```
 
-表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md#asset)。
+表示列类型为[Asset](arkts-arkdata-relationalstore-asset-i.md)。
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ ASSET = 5
 ASSETS = 6
 ```
 
-表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md#assets)。
+表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md)。
 
 **起始版本：** 23
 

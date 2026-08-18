@@ -1,6 +1,6 @@
 # Paragraph
 
-保存文本内容及样式的载体，支持排版与绘制操作。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#paragraphbuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到 Paragraph对象实例，再通过此实例调用对应方法。
+保存文本内容及样式的载体，支持排版与绘制操作。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到 Paragraph对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -1361,7 +1362,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#paragraphstyle)的maxLines属性）截断或省略号模式（ [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#ellipsismode)）替换而未显示的文本。 **说明：** 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）： | 场景 | 说明 | |---|---| | 文本未被截断 | 范围包含全部已排版文本 | | 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 | | 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 | | 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 | | 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 | | 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 | | 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（ [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)）替换而未显示的文本。 **说明：** 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）： | 场景 | 说明 | |---|---| | 文本未被截断 | 范围包含全部已排版文本 | | 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 | | 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 | | 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 | | 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 | | 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 | | 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
 
 **起始版本：** 26.0.0
 

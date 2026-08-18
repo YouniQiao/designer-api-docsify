@@ -19,7 +19,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -31,7 +31,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 | --- | --- | --- | --- |
 | currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
 | preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Examples**
 
@@ -64,7 +64,7 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;)
+**Substitutes:** [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md)(currentRotationMatrix: Array&lt;double&gt;, preRotationMatrix: Array&lt;double&gt;)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

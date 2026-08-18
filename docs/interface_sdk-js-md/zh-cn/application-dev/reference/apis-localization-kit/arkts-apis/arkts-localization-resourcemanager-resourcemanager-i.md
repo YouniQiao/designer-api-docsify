@@ -1,6 +1,6 @@
 # ResourceManager
 
-提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 > **说明：** > > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。 > > - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 > 获取，例如`\$r('app.string.test').id`。 > > - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， > **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createmodulecontext)创建对应module的context**， > 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。 > > - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， > 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
+提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 > **说明：** > > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。 > > - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 > 获取，例如`\$r('app.string.test').id`。 > > - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， > **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**， > 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。 > > - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， > 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource
@@ -2368,7 +2369,7 @@ getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescripto
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | type | int | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 |
 
 **返回值：**
@@ -2488,7 +2489,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | type | number | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 |
 
 **返回值：**
@@ -2561,7 +2562,7 @@ getDrawableDescriptorByName(resName: string, density?: int, type?: int): Drawabl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | type | int | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 <br>2：表示获取主题资源包中应用的动态图标资源。 |
 
 **返回值：**
@@ -3464,7 +3465,7 @@ getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<str
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源名称的图片资源Base64编码。 |
 
 **错误码：**
@@ -3636,7 +3637,7 @@ getMediaBase64ByName(resName: string, density: int): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -3723,7 +3724,7 @@ getMediaBase64ByNameSync(resName: string, density?: int): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -3874,7 +3875,7 @@ getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源名称对应的媒体文件内容。 |
 
 **错误码：**
@@ -4046,7 +4047,7 @@ getMediaByName(resName: string, density: int): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -4133,7 +4134,7 @@ getMediaByNameSync(resName: string, density?: int): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -4268,7 +4269,7 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
@@ -4398,7 +4399,7 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -4547,7 +4548,7 @@ getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
 
 **错误码：**
@@ -4721,7 +4722,7 @@ getMediaContent(resId: long, density: int): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -4878,7 +4879,7 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
@@ -5008,7 +5009,7 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -5155,7 +5156,7 @@ getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 | callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
@@ -5329,7 +5330,7 @@ getMediaContentBase64(resId: long, density: int): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -5417,7 +5418,7 @@ getMediaContentBase64Sync(resId: long, density?: int): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -5521,7 +5522,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -5586,7 +5587,7 @@ getMediaContentSync(resId: long, density?: int): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 
@@ -5690,7 +5691,7 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#screendensity)。 |
+| density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
 
 **返回值：**
 

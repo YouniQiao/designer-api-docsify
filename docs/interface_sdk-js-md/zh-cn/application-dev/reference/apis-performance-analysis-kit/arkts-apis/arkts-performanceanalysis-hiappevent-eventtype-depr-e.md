@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md#eventtype)
+**替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 

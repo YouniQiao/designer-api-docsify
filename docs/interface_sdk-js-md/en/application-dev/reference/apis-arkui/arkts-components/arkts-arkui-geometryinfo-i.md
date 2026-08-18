@@ -1,8 +1,8 @@
 # GeometryInfo
 
-Provides layout geometry information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md#sizeresult).
+Provides layout geometry information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md).
 
-**Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md#sizeresult)
+**Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)
 
 **Since:** 10
 

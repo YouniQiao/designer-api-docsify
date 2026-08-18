@@ -30,7 +30,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
 
 **Error codes:**
 

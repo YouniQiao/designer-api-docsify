@@ -98,7 +98,7 @@ Creates an **OH_Drawing_Typeface** object with font arguments through a file.If 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns a pointer to the created [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object.<br> If a null pointer is returned, the creation fails. Possible causes are that no memory is available, the passed-in <br> path or fontArguments is NULL, or the path is invalid. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns a pointer to the created [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object.  If a null pointer is returned, the creation fails. Possible causes are that no memory is available, the passed-in   path or fontArguments is NULL, or the path is invalid. |
 
 ### OH_Drawing_TypefaceCreateFromCurrent()
 
@@ -123,7 +123,7 @@ Creates an **OH_Drawing_Typeface** object with font arguments based on an existi
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns a pointer to the created [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object.<br> If a null pointer is returned, the creation fails. Possible causes are that no memory is available, the passed-in <br> path or fontArguments is NULL, or the existing OH_Drawing_FontArguments object does not support the<br> variation described in the font arguments. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns a pointer to the created [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object.  If a null pointer is returned, the creation fails. Possible causes are that no memory is available, the passed-in   path or fontArguments is NULL, or the existing OH_Drawing_FontArguments object does not support the  variation described in the font arguments. |
 
 ### OH_Drawing_TypefaceCreateFromStream()
 
@@ -210,7 +210,7 @@ Adds a variation to an **OH_Drawing_FontArguments** object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if either fontArguments or axis is NULL or the length of axis is<br> not 4. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if either fontArguments or axis is NULL or the length of axis is  not 4. |
 
 ### OH_Drawing_FontArgumentsDestroy()
 
@@ -234,7 +234,7 @@ Destroys an **OH_Drawing_FontArguments** object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if fontArguments is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if fontArguments is NULL. |
 
 ### OH_Drawing_TypefaceIsBold()
 
@@ -259,7 +259,7 @@ Checks whether the typeface is bold.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if typeface or isBold is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if typeface or isBold is a null pointer. |
 
 ### OH_Drawing_TypefaceIsItalic()
 
@@ -284,6 +284,6 @@ Checks whether the typeface is italic.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INCORRECT_PARAMETER if typeface or isItalic is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INCORRECT_PARAMETER if typeface or isItalic is a null pointer. |
 
 

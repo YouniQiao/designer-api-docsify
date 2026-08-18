@@ -6,7 +6,7 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md#stream)
+**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md)
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -76,7 +76,7 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
 
 **Examples**
 
@@ -174,7 +174,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
 
 **Examples**
 
@@ -300,7 +300,7 @@ read.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | buffer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | callback. |
 
 ## read
 
@@ -334,7 +334,7 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
 | options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br> Constraints: offset + length &lt;= Buffer size |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
 
 **Examples**
 
@@ -503,7 +503,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 ## write
 
@@ -538,7 +538,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
 | options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 **Examples**
 

@@ -18,7 +18,7 @@ Obtains the Bluetooth scanning mode of a device. On API 10 and above, the permis
 
 **Deprecated since:** 10
 
-**Substitutes:** [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md#getbluetoothscanmode)
+**Substitutes:** [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

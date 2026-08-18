@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) acquisition and image resource loading.
+Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) acquisition and image resource loading.
 
 **Since:** 10
 

@@ -1,12 +1,12 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md) to create an GattClientDevice instance.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md#gattclientdevice)
+**Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md)
 
 <!--Device-bluetoothManager-interface GattClientDevice--><!--Device-bluetoothManager-interface GattClientDevice-End-->
 
@@ -176,7 +176,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 **Error codes:**
 
@@ -285,7 +285,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 **Error codes:**
 
@@ -391,7 +391,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 **Error codes:**
 
@@ -483,7 +483,7 @@ try {
 }
 ```
 
-## off_BLECharacteristicChange
+## off_BLECharacteristicChange('BLECharacteristicChange')
 
 ```TypeScript
 off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
@@ -510,7 +510,7 @@ Unsubscribe characteristic value changed event. On API 10 and above, the permiss
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -531,7 +531,7 @@ try {
 }
 ```
 
-## off_BLEConnectionStateChange
+## off_BLEConnectionStateChange('BLEConnectionStateChange')
 
 ```TypeScript
 off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void
@@ -558,7 +558,7 @@ Unsubscribe client connection state changed event. On API 10 and above, the perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -579,7 +579,7 @@ try {
 }
 ```
 
-## on_BLECharacteristicChange
+## on_BLECharacteristicChange('BLECharacteristicChange')
 
 ```TypeScript
 on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
@@ -606,7 +606,7 @@ Subscribe characteristic value changed event. On API 10 and above, the permissio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 **Error codes:**
 
@@ -632,7 +632,7 @@ try {
 }
 ```
 
-## on_BLEConnectionStateChange
+## on_BLEConnectionStateChange('BLEConnectionStateChange')
 
 ```TypeScript
 on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void
@@ -659,7 +659,7 @@ Subscribe client connection state changed event. On API 10 and above, the permis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -711,7 +711,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
 
@@ -861,7 +861,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
 

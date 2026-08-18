@@ -1,8 +1,8 @@
 # ControlCenter
 
-ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#controlcenterquery)。 控制中心类，用于使能相机控制器。
+ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)。 控制中心类，用于使能相机控制器。
 
-**继承/实现关系：** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#controlcenterquery)
+**继承/实现关系：** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquer
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableControlCenter

@@ -1,12 +1,12 @@
 # InputMethodEngine
 
-In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
 **Deprecated since:** 23
 
-**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#inputmethodability)
+**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)
 
 <!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
 
@@ -16,10 +16,9 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## off_inputStart
+## off_inputStart('inputStart')
 
 ```TypeScript
 off(
@@ -57,7 +56,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## off_keyboardHide
+## off_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -89,7 +88,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## off_keyboardShow
+## off_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -121,7 +120,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## on_inputStart
+## on_inputStart('inputStart')
 
 ```TypeScript
 on(
@@ -160,7 +159,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## on_keyboardHide
+## on_keyboardHide('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -196,7 +195,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 });
 ```
 
-## on_keyboardShow
+## on_keyboardShow('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void

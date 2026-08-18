@@ -1,3 +1,0 @@
-# ProgressModifier
-
-## Summary

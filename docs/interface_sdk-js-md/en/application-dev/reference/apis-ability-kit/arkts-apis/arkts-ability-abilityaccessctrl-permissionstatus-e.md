@@ -46,7 +46,7 @@ The permission is granted.
 NOT_DETERMINED = 1
 ```
 
-Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md#permissions) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
+Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ The permission is invalid. The application does not [declare permissions](../../
 RESTRICTED = 3
 ```
 
-Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. &lt;!--RP2End--&gt;
+Indicates restricted. <!--RP2-->The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. <!--RP2End-->
 
 **Since:** 23
 

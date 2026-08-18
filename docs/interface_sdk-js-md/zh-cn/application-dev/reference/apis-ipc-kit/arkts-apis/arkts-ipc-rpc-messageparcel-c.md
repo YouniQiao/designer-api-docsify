@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md#messagesequence)
+**替代接口：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 <!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor

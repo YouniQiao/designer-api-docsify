@@ -1,6 +1,6 @@
 # UIListEvent
 
-frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent)方法的返 回值，可用于给List节点设置滚动事件。 UIListEvent继承于UIScrollableCommonEvent。
+frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md)方法的返 回值，可用于给List节点设置滚动事件。 UIListEvent继承于UIScrollableCommonEvent。
 
 **继承/实现关系：** UIListEvent extends UIScrollableCommonEvent
 

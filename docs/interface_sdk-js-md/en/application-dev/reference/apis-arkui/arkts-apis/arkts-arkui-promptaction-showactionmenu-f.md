@@ -31,7 +31,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ActionMenuOptions | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 

@@ -532,7 +532,7 @@ Creates a keyframe animation parameter object.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_KeyframeAnimateOption*](capi-arkui-nativemodule-arkui-keyframeanimateoption.md) | Keyframe animation parameter object. If the value of size is less than 0 or if option is abnormal, <br>     NULL is returned. |
+| [ArkUI_KeyframeAnimateOption*](capi-arkui-nativemodule-arkui-keyframeanimateoption.md) | Keyframe animation parameter object. If the value of size is less than 0 or if option is abnormal,       NULL is returned. |
 
 ### OH_ArkUI_KeyframeAnimateOption_Dispose()
 
@@ -575,7 +575,7 @@ Sets the overall delay of a keyframe animation, in milliseconds. By default, the
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_SetIterations()
 
@@ -600,7 +600,7 @@ Sets the number of times that the keyframe animation is played. By default, the 
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_RegisterOnFinishCallback()
 
@@ -618,7 +618,7 @@ Sets the callback invoked when the keyframe animation playback is complete. This
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_KeyframeAnimateOption](capi-arkui-nativemodule-arkui-keyframeanimateoption.md)\* option | Keyframe animation parameters.<br>If **option** is set to **NULL**, the error code [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) is returned. |
+| rkUI_KeyframeAnimateOption\* option | Keyframe animation parameters.<br>If **option** is set to **NULL**, the error code [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) is returned. |
 | void\* userData | Pointer to a custom object.<br>Abnormal value processing is not involved. |
 | void (\*onFinish)(void\* userData) | Indicates the callback. |
 
@@ -626,7 +626,7 @@ Sets the callback invoked when the keyframe animation playback is complete. This
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_SetExpectedFrameRate()
 
@@ -651,7 +651,7 @@ Sets the expected frame rate for a keyframe animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_SetDuration()
 
@@ -677,7 +677,7 @@ Sets the duration of a keyframe animation, in milliseconds.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_SetCurve()
 
@@ -707,7 +707,7 @@ Sets the animation curve for a specific keyframe animation segment.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_RegisterOnEventCallback()
 
@@ -725,7 +725,7 @@ Sets the closure function of the state at the time of the keyframe, that is, the
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_KeyframeAnimateOption](capi-arkui-nativemodule-arkui-keyframeanimateoption.md)\* option | Keyframe animation parameters.<br>If **option** is set to **NULL**, the error code [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) is returned. |
+| rkUI_KeyframeAnimateOption\* option | Keyframe animation parameters.<br>If **option** is set to **NULL**, the error code [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) is returned. |
 | void (\*event)(void\* userData) | Indicates a closure function. |
 | void\* userData | Pointer to a user-defined object.<br>Abnormal value processing is not involved. |
 | int32_t index | Index of the keyframe state segment. Value range: [0, size – 1], where **size** indicates the number ofkeyframe animation states.<br>If the value of **index** is less than 0 or out of range, the error code[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) is returned. |
@@ -734,7 +734,7 @@ Sets the closure function of the state at the time of the keyframe, that is, the
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_KeyframeAnimateOption_GetDelay()
 
@@ -884,7 +884,7 @@ Creates an **AnimatorOption** object.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_AnimatorOption*](capi-arkui-nativemodule-arkui-animatoroption.md) | Pointer to the animator parameter object. If the value of size is less than 0 or if option is<br>     abnormal, NULL is returned. |
+| [ArkUI_AnimatorOption*](capi-arkui-nativemodule-arkui-animatoroption.md) | Pointer to the animator parameter object. If the value of size is less than 0 or if option is      abnormal, NULL is returned. |
 
 ### OH_ArkUI_AnimatorOption_Dispose()
 
@@ -927,7 +927,7 @@ Sets the duration of an animator animation, in milliseconds.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetDelay()
 
@@ -952,7 +952,7 @@ Sets the delay time of the animator playback, in milliseconds.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetIterations()
 
@@ -981,7 +981,7 @@ Sets the number of times that an animator animation is played. By default, the a
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetFill()
 
@@ -1006,7 +1006,7 @@ Sets the status of the component before and after the animator animation executi
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetDirection()
 
@@ -1031,7 +1031,7 @@ Set the playback direction.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetCurve()
 
@@ -1060,7 +1060,7 @@ Sets the interpolation curve for the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetBegin()
 
@@ -1088,7 +1088,7 @@ Sets the interpolation start point of an animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetEnd()
 
@@ -1116,7 +1116,7 @@ Sets the interpolation end point for the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetExpectedFrameRateRange()
 
@@ -1141,7 +1141,7 @@ Sets the expected frame rate range of an animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetKeyframe()
 
@@ -1168,7 +1168,7 @@ Sets the keyframe parameters of an animator animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_SetKeyframeCurve()
 
@@ -1198,7 +1198,7 @@ Sets the keyframe curve type for the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_GetDuration()
 
@@ -1294,7 +1294,7 @@ Obtains the status of the component before and after the animator animation exec
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_AnimationFillMode](capi-native-type-visual-h.md#arkui_animationfillmode) | Status of the component before and after the animator animation execution. If option is invalid,-1<br>     is returned. |
+| [ArkUI_AnimationFillMode](capi-native-type-visual-h.md#arkui_animationfillmode) | Status of the component before and after the animator animation execution. If option is invalid,-1      is returned. |
 
 ### OH_ArkUI_AnimatorOption_GetDirection()
 
@@ -1561,7 +1561,7 @@ Obtains the interpolation result in the animation frame callback event object.
 
 | Type | Description |
 | -- | -- |
-| float | Animation interpolation result.<br>     <br>NOTE<br>     <br>During the animation, the interpolation result changes between the interpolation start point<br>     [OH_ArkUI_AnimatorOption_SetBegin](capi-native-animate-h.md#oh_arkui_animatoroption_setbegin) and the interpolation end point [OH_ArkUI_AnimatorOption_SetEnd](capi-native-animate-h.md#oh_arkui_animatoroption_setend)<br>     based on the animation parameters. |
+| float | Animation interpolation result.      <br>NOTE      <br>During the animation, the interpolation result changes between the interpolation start point      [OH_ArkUI_AnimatorOption_SetBegin](capi-native-animate-h.md#oh_arkui_animatoroption_setbegin) and the interpolation end point [OH_ArkUI_AnimatorOption_SetEnd](capi-native-animate-h.md#oh_arkui_animatoroption_setend)      based on the animation parameters. |
 
 ### OH_ArkUI_AnimatorOption_RegisterOnFrameCallback()
 
@@ -1579,7 +1579,7 @@ Sets the callback invoked when the animator receives a frame.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_AnimatorOption](capi-arkui-nativemodule-arkui-animatoroption.md)\* option | Animator animation parameters. |
+| rkUI_AnimatorOption\* option | Animator animation parameters. |
 | void\* userData | User-defined parameter. |
 | void (\*callback)(ArkUI_AnimatorOnFrameEvent\* event) | Indicates the callback to set. |
 
@@ -1587,7 +1587,7 @@ Sets the callback invoked when the animator receives a frame.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_RegisterOnFinishCallback()
 
@@ -1605,7 +1605,7 @@ Sets the callback invoked when the animation playback is complete.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_AnimatorOption](capi-arkui-nativemodule-arkui-animatoroption.md)\* option | Animator animation parameters. |
+| rkUI_AnimatorOption\* option | Animator animation parameters. |
 | void\* userData | User-defined parameter. |
 | void (\*callback)(ArkUI_AnimatorEvent\* event) | Indicates the callback to set. |
 
@@ -1613,7 +1613,7 @@ Sets the callback invoked when the animation playback is complete.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_RegisterOnCancelCallback()
 
@@ -1631,7 +1631,7 @@ Sets the callback invoked when the animation playback is canceled.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_AnimatorOption](capi-arkui-nativemodule-arkui-animatoroption.md)\* option | Animator animation parameters. |
+| rkUI_AnimatorOption\* option | Animator animation parameters. |
 | void\* userData | User-defined parameter. |
 | void (\*callback)(ArkUI_AnimatorEvent\* event) | Indicates the callback to set. |
 
@@ -1639,7 +1639,7 @@ Sets the callback invoked when the animation playback is canceled.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_AnimatorOption_RegisterOnRepeatCallback()
 
@@ -1657,7 +1657,7 @@ Sets the callback invoked when the animation playback is repeated.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_AnimatorOption](capi-arkui-nativemodule-arkui-animatoroption.md)\* option | Animator animation parameters. |
+| rkUI_AnimatorOption\* option | Animator animation parameters. |
 | void\* userData | User-defined parameter. |
 | void (\*callback)(ArkUI_AnimatorEvent\* event) | Indicates the callback to set. |
 
@@ -1665,7 +1665,7 @@ Sets the callback invoked when the animation playback is repeated.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_ResetAnimatorOption()
 
@@ -1690,7 +1690,7 @@ Resets the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_Play()
 
@@ -1714,7 +1714,7 @@ Starts the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_Finish()
 
@@ -1738,7 +1738,7 @@ Ends the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_Pause()
 
@@ -1762,7 +1762,7 @@ Pauses the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_Cancel()
 
@@ -1786,7 +1786,7 @@ Cancels the animation of an animator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Animator_Reverse()
 
@@ -1810,7 +1810,7 @@ Plays this animation in reverse order.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_Curve_CreateCurveByType()
 
@@ -2022,7 +2022,7 @@ Creates a custom curve.
 
 | Parameter | Description |
 | -- | -- |
-| void\* userData | Pointer to user-defined data. |
+| oid\* userData | Pointer to user-defined data. |
 | float (\*interpolate)(float fraction | Indicates the custom interpolation callback. <b>fraction</b> indicates the input x value forinterpolation when the animation starts; value range: [0,1].The return value is the y value of the curve; value range: [0,1].If <b>fraction</b> is <b>0</b>, the return value <b>0</b> corresponds to the animation start point; any otherreturnvalue means that the animation jumps at the start point.If <b>fraction</b> is <b>1</b>, the return value <b>1</b> corresponds to the animation end point; any otherreturnvalue means that the end value of the animation is not the value of the state variable,which will result in an effect of transition from that end value to the value of the state variable. |
 
 **Returns**:
@@ -2261,7 +2261,7 @@ Sets a combination of transition effects.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_TransitionEffect_SetAnimation()
 
@@ -2290,6 +2290,6 @@ Sets transition effect animation settings.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| int32_t | <ul>           <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 

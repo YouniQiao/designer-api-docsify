@@ -18,7 +18,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 23
 
-**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-system-api)
+**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -32,7 +32,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
 | srcInputDeviceId | number | Yes | ID of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-system-api)
+**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 

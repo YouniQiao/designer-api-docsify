@@ -24,13 +24,13 @@ import { fileAccess } from '@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md#listfile)
+**Substitutes:** [listFile](../../apis-na/arkts-apis/arkts-na-fileio-listfile-f.md)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -46,7 +46,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -131,7 +131,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#fileinfo-system-api) is returned by [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 
@@ -151,7 +151,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 

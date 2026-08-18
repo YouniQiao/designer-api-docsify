@@ -30,6 +30,16 @@ Checkbox(options?: CheckboxOptions)
 
 ## 汇总
 
-- [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md)
-- [CheckboxOptions](arkts-arkui-checkboxoptions-i.md)
-- [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
+| [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 多选框的信息。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 选中的状态。 |
+

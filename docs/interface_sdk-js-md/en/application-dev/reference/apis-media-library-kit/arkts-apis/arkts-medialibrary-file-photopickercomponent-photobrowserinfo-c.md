@@ -22,7 +22,7 @@ animatorParams?: AnimatorParams
 
 Animation for entering or exiting the photo browser page.
 
-**Type:** [AnimatorParams](arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
+**Type:** [AnimatorParams](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-animatorparams-c.md)
 
 **Since:** 12
 

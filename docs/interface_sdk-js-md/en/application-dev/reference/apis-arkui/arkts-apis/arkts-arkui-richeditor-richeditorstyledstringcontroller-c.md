@@ -2,7 +2,7 @@
 
 Provides Controller for RichEditor with StyledString.
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#richeditorbasecontroller) and implements StyledStringController
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md) and implements StyledStringController
 
 **Since:** 23
 

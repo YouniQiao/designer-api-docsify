@@ -2,13 +2,13 @@
 
 Worker线程自身的运行环境，与宿主线程环境隔离。
 
-**继承/实现关系：** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#workerglobalscope)
+**继承/实现关系：** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#threadworkerglobalscope)
+**替代接口：** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md)
 
 <!--Device-unnamed-export interface DedicatedWorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope-End-->
 
@@ -17,6 +17,7 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 ## 导入模块
 
 ```TypeScript
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## close

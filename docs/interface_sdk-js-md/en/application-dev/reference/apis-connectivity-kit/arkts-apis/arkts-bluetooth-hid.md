@@ -20,8 +20,8 @@ import { hid } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md#createhiddeviceprofile) | Creates the instance of HID device profile. |
-| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md#createhidhostprofile) | create the instance of hid profile. |
+| [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md) | Creates the instance of HID device profile. |
+| [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md) | create the instance of hid profile. |
 
 ### Interfaces
 
@@ -36,7 +36,7 @@ import { hid } from '@kit.ConnectivityKit';
 | [SetReportData](arkts-connectivity-hid-setreportdata-i.md) | Describe the SET_REPORT data is received from remote host. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

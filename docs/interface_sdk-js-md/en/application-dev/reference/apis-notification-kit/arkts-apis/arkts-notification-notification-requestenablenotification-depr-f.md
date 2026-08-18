@@ -4,8 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -22,7 +20,7 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
 <!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
 
@@ -32,7 +30,7 @@ Requests notification to be enabled for this application. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## requestEnableNotification
@@ -47,7 +45,7 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
 <!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
 

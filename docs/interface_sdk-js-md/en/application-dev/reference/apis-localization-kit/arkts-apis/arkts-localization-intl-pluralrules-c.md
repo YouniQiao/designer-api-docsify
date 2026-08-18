@@ -16,7 +16,6 @@ Provides the capability for obtaining the plural rule type.
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

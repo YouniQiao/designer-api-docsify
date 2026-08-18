@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType
@@ -39,7 +40,7 @@ eventType: EventType
 hookId?: long
 ```
 
-控制事件对应的hook ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#pagecontent系统接口)提供。
+控制事件对应的hook ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
 
 **类型：** long
 
@@ -57,7 +58,7 @@ hookId?: long
 sessionId: long
 ```
 
-控制事件要操作的session ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#pagecontent系统接口)提供。
+控制事件要操作的session ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
 
 **类型：** long
 

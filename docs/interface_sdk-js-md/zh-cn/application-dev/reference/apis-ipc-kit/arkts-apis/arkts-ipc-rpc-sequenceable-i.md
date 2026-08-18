@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Parcelable](arkts-ipc-rpc-parcelable-i.md#parcelable)
+**替代接口：** [Parcelable](arkts-ipc-rpc-parcelable-i.md)
 
 <!--Device-rpc-interface Sequenceable--><!--Device-rpc-interface Sequenceable-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## marshalling

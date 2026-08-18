@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## id
@@ -39,7 +40,7 @@ id?: string
 primaryTitle?: ResourceStr
 ```
 
-标题内容。 当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md#subheaderv2)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。 默认值：undefined
+标题内容。 当[SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md)中同时使用primaryTitle、secondaryTitle、icon属性时，primaryTitle将不会显示。 默认值：undefined
 
 **类型：** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 

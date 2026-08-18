@@ -26,9 +26,24 @@ Select(options: Array<SelectOption>)
 
 ## Summary
 
-- [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)
-- [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md)
-- [OnSelectCallback](arkts-arkui-onselectcallback-t.md)
-- [ArrowPosition](arkts-arkui-arrowposition-e.md)
-- [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
-- [MenuAlignType](arkts-arkui-menualigntype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+| [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Defines the outline of the drop-down menu. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback invoked when a drop-down menu option is selected. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ArrowPosition](arkts-arkui-arrowposition-e.md) | Enumerates arrow positions. |
+| [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Enumerates the drop-down menu avoidance modes. |
+| [MenuAlignType](arkts-arkui-menualigntype-e.md) | Enumerates drop-down menu alignment modes. |
+

@@ -59,7 +59,7 @@ Registers an external key management extension provider.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_PERMISSION_FAIL 201: Permission verification fails. Apply for the required permission<br>     first.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT 12000002: Failed to obtain the provider parameters.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid providerName or paramSet.<br>     <br>OH_HUKS_ERR_CODE_ITEM_EXISTS 12000019: The provider has been registered.<br>     <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: An error occurs in the dependent module.<br>     <br>OH_HUKS_ERR_CODE_EXCEED_LIMIT 12000025: The number of providers exceeds the upper limit. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_PERMISSION_FAIL 201: Permission verification fails. Apply for the required permission      first.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT 12000002: Failed to obtain the provider parameters.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid providerName or paramSet.      <br>OH_HUKS_ERR_CODE_ITEM_EXISTS 12000019: The provider has been registered.      <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: An error occurs in the dependent module.      <br>OH_HUKS_ERR_CODE_EXCEED_LIMIT 12000025: The number of providers exceeds the upper limit. |
 
 ### OH_Huks_UnregisterProvider()
 
@@ -86,7 +86,7 @@ Unregisters an external key management extension provider.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_PERMISSION_FAIL 201: Permission verification fails. Apply for the required permission<br>     first.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified provider is not found.<br>     <br>[OH_HUKS_ERR_CODE_INTERNAL_ERROR](capi-native-huks-type-h.md#oh_huks_errcode) 12000012: An internal system error occurs. The key management<br>     extension module is not loaded.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid providerName. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_PERMISSION_FAIL 201: Permission verification fails. Apply for the required permission      first.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified provider is not found.      <br>[OH_HUKS_ERR_CODE_INTERNAL_ERROR](capi-native-huks-type-h.md#oh_huks_errcode) 12000012: An internal system error occurs. The key management      extension module is not loaded.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid providerName. |
 
 ### OH_Huks_OpenResource()
 
@@ -111,7 +111,7 @@ Opens a resource based on the specified resource ID.<br>Note: The opened resourc
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.<br>     <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The cached resource handle is not found. Open the resource<br>     based on the resource ID first.<br>     <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is<br>     not found.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_KEY_ALREADY_EXIST 12000017: The resource is already open.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.<br>     <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.<br>     <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy.<br>     <br>OH_HUKS_ERR_CODE_EXCEED_LIMIT 12000025: The number of opened resources exceeds the limit. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.      <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The cached resource handle is not found. Open the resource      based on the resource ID first.      <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is      not found.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_KEY_ALREADY_EXIST 12000017: The resource is already open.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.      <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.      <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy.      <br>OH_HUKS_ERR_CODE_EXCEED_LIMIT 12000025: The number of opened resources exceeds the limit. |
 
 ### OH_Huks_CloseResource()
 
@@ -136,7 +136,7 @@ Closes a resource based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.<br>     <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is<br>     not found.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.<br>     <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.<br>     <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.      <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is      not found.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.      <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.      <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy. |
 
 ### OH_Huks_GetUkeyPinAuthState()
 
@@ -162,7 +162,7 @@ Obtains the PIN authorization state of the specified UKey resource ID.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.<br>     <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified resource ID is invalid.<br>     <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is<br>     not found.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.<br>     <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.<br>     <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: The UKey driver reports an error.      <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified resource ID is invalid.      <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is      not found.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid resourceId or paramSet.      <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: Provider execution fails.      <br>OH_HUKS_ERR_CODE_BUSY 12000024: The provider or UKey is busy. |
 
 ### OH_Huks_GetProperty()
 
@@ -189,7 +189,7 @@ Obtains the property information of the external key management capability exten
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.<br>     <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.<br>     <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: Driver error.<br>     <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified handle in the cache is not found.<br>     <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is<br>     not found.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The resourceId, propertyId, paramSetIn, or <br>     paramSetOut parameter is invalid.<br>     <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: The provider or Ukey internal execution fails.<br>     <br>OH_HUKS_ERR_CODE_PIN_LOCKED 12000021: The PIN is locked.<br>     <br>OH_HUKS_ERR_CODE_PIN_NO_AUTH 12000023: PIN authentication fails.<br>     <br>OH_HUKS_ERR_CODE_BUSY 12000024: The resources in the provider or Ukey are being used. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_NOT_SUPPORTED_API 801: Unsupported API.      <br>OH_HUKS_ERR_CODE_COMMUNICATION_FAIL 12000005: IPC communication failed.      <br>OH_HUKS_ERR_CODE_CRYPTO_FAIL 12000006: Driver error.      <br>OH_HUKS_ERR_CODE_ITEM_NOT_EXIST 12000011: The specified handle in the cache is not found.      <br>OH_HUKS_ERR_CODE_INTERNAL_ERROR 12000012: An internal system error occurs. The processing function is      not found.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The resourceId, propertyId, paramSetIn, or       paramSetOut parameter is invalid.      <br>OH_HUKS_ERR_CODE_EXTERNAL_ERROR 12000020: The provider or Ukey internal execution fails.      <br>OH_HUKS_ERR_CODE_PIN_LOCKED 12000021: The PIN is locked.      <br>OH_HUKS_ERR_CODE_PIN_NO_AUTH 12000023: PIN authentication fails.      <br>OH_HUKS_ERR_CODE_BUSY 12000024: The resources in the provider or Ukey are being used. |
 
 ### OH_Huks_InitExternalCryptoParamSet()
 
@@ -213,7 +213,7 @@ Initializes a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid paramSet. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid paramSet. |
 
 ### OH_Huks_AddExternalCryptoParams()
 
@@ -239,7 +239,7 @@ Adds parameters to a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: params is NULL or paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: params is NULL or paramSet is invalid. |
 
 ### OH_Huks_BuildExternalCryptoParamSet()
 
@@ -263,7 +263,7 @@ Builds a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid paramSet.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: Invalid paramSet.      <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_FreeExternalCryptoParamSet()
 
@@ -307,6 +307,6 @@ Obtains a specified parameter from a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The paramSet or param is invalid, or the parameter<br>     does not exist in the set. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):      <br>OH_HUKS_SUCCESS 0: Operation successful.      <br>OH_HUKS_ERR_CODE_INVALID_ARGUMENT 12000018: The paramSet or param is invalid, or the parameter      does not exist in the set. |
 
 

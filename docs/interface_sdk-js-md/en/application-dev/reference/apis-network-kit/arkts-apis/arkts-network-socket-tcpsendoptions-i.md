@@ -1,8 +1,8 @@
 # TCPSendOptions
 
-Defines the parameters for sending data over the TCPSocket connection.
+Defines the parameters for sending data over a TCP socket connection.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-export interface TCPSendOptions--><!--Device-socket-export interface TCPSendOptions-End-->
 
@@ -24,7 +24,7 @@ Data to send.
 
 **Type:** string \| ArrayBuffer
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPSendOptions-data: string | ArrayBuffer--><!--Device-TCPSendOptions-data: string | ArrayBuffer-End-->
 
@@ -36,11 +36,11 @@ Data to send.
 encoding?: string
 ```
 
-Character encoding format.
+Character encoding format. The options are as follows: **UTF-8**, **UTF-16BE**, **UTF-16LE**, **UTF-16**, **US-ASCII**, and **ISO-8859-1**. The default value is **UTF-8**.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-TCPSendOptions-encoding?: string--><!--Device-TCPSendOptions-encoding?: string-End-->
 

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Tabs](arkts-na-tabs-tabs-f.md#tabs) | Defines Tabs Component |
+| [Tabs](arkts-na-tabs-tabs-f.md) | Defines Tabs Component |
 
 ### Classes
 

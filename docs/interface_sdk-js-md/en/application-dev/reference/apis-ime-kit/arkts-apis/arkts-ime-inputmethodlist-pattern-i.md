@@ -12,7 +12,6 @@ Define pattern of keyboard. The caller must be the current inputmethod.
 
 ```TypeScript
 import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## icon

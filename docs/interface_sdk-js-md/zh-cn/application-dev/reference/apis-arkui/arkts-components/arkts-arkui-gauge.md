@@ -30,7 +30,12 @@ Gauge(options: GaugeOptions)
 
 ## 汇总
 
-- [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)
-- [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md)
-- [GaugeOptions](arkts-arkui-gaugeoptions-i.md)
-- [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
+| [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | 数据量规图表指针选项。 |
+| [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | 数据量规图表选项。 |
+| [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | GaugeShadowOptions继承自MultiShadowOptions，具有MultiShadowOptions的全部属性。 |
+

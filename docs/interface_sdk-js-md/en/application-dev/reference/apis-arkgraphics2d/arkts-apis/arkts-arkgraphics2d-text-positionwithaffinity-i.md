@@ -12,7 +12,6 @@ Describes the position and affinity of a glyph.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D';
-import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## affinity

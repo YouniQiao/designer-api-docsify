@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## declareDeviceTypesCompatibility
@@ -33,7 +35,7 @@ declareDeviceTypesCompatibility(deviceTypes: DeviceTypeArray): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceTypes | [DeviceTypeArray](arkts-audio-audio-devicetypearray-t.md) | 是 | [DeviceType](arkts-audio-audio-devicetype-e.md#devicetype)数组。 |
+| deviceTypes | [DeviceTypeArray](arkts-audio-audio-devicetypearray-t.md) | 是 | [DeviceType](arkts-audio-audio-devicetype-e.md)数组。 |
 
 **错误码：**
 
@@ -93,7 +95,7 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceFlag | DeviceFlag | 是 | 音频设备类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频设备列表成功，err为undefined，data为获取到的音频设备列表；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频设备列表成功，err为undefined，data为获取到的音频设备列表；否则为错误对 象。 |
 
 ## getDevices
 
@@ -173,7 +175,7 @@ getPreferOutputDeviceForRendererInfo(rendererInfo: AudioRendererInfo, callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 音频渲染器信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取优先级最高的输出设备成功，err为undefined，data为获取到的优先级最高的输出设 备信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取优先级最高的输出设备成功，err为undefined，data为获取到的优先级最高的输出设 备信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -236,7 +238,7 @@ getPreferredInputDeviceForCapturerInfo(capturerInfo: AudioCapturerInfo, callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 是 | 音频采集器信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取优先级最高的输入设备成功，err为undefined，data为获取到的优先级最高的输入设 备信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取优先级最高的输入设备成功，err为undefined，data为获取到的优先级最高的输入设 备信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -365,7 +367,7 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 活跃音频设备类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定通信设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定通信设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对 象。 |
 
 ## isCommunicationDeviceActive
 
@@ -464,7 +466,7 @@ Unsubscribes to available device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -490,7 +492,7 @@ UnSubscribes to device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -516,7 +518,7 @@ Unsubscribes microphone blocked events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | Callback used to obtain the microphone block status. |
 
 **错误码：**
 
@@ -542,7 +544,7 @@ Unsubscribes to prefer output device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed prefer devices in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed prefer devices in subscribe. |
 
 **错误码：**
 
@@ -568,7 +570,7 @@ Unsubscribes to preferred input device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed preferred devices in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used to obtain the changed preferred devices in subscribe. |
 
 **错误码：**
 
@@ -576,7 +578,7 @@ Unsubscribes to preferred input device change events.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_availableDeviceChange
+## off_availableDeviceChange('availableDeviceChange')
 
 ```TypeScript
 off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
@@ -595,7 +597,7 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'，当取消监听音频可选设备连接变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回可选设备更新详情。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回可选设备更新详情。 |
 
 **错误码：**
 
@@ -604,7 +606,7 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_deviceChange
+## off_deviceChange('deviceChange')
 
 ```TypeScript
 off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
@@ -623,7 +625,7 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当取消监听音频设备连接变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回设备更新详情。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回设备更新详情。 |
 
 **错误码：**
 
@@ -632,7 +634,7 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_micBlockStatusChanged
+## off_micBlockStatusChanged('micBlockStatusChanged')
 
 ```TypeScript
 off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): void
@@ -651,7 +653,7 @@ off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micBlockStatusChanged' | 是 | 事件回调类型，支持的事件为'micBlockStatusChanged'，当取消监听音频麦克风是否被堵塞变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | 回调函数，返回麦克风被堵塞状态和设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | 回调函数，返回麦克风被堵塞状态和设备信息。 |
 
 **错误码：**
 
@@ -660,7 +662,7 @@ off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_preferOutputDeviceChangeForRendererInfo
+## off_preferOutputDeviceChangeForRendererInfo('preferOutputDeviceChangeForRendererInfo')
 
 ```TypeScript
 off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors>): void
@@ -679,7 +681,7 @@ off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferOutputDeviceChangeForRendererInfo' | 是 | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo '，当取消监听最高优先级输出音频设备变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输出设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输出设备信息。 |
 
 **错误码：**
 
@@ -688,7 +690,7 @@ off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDe
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_preferredInputDeviceChangeForCapturerInfo
+## off_preferredInputDeviceChangeForCapturerInfo('preferredInputDeviceChangeForCapturerInfo')
 
 ```TypeScript
 off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors>): void
@@ -707,7 +709,7 @@ off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<Audio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferredInputDeviceChangeForCapturerInfo' | 是 | 事件回调类型，支持的事件为' preferredInputDeviceChangeForCapturerInfo'，当取消监听最高优先级输入音频设备变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输入设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输入设备信息。 |
 
 **错误码：**
 
@@ -735,7 +737,7 @@ Subscribes to available device change events. When a device is connected/disconn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | Audio device usage. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -762,7 +764,7 @@ Subscribes to device change events. When a device is connected/disconnected, reg
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceFlag | DeviceFlag | 是 | Audio device flag. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | Callback used to obtain the device update details. |
 
 **错误码：**
 
@@ -788,7 +790,7 @@ Subscribes microphone blocked events. Before subscribing, users should query whe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | Callback used to obtain the microphone block status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | Callback used to obtain the microphone block status. |
 
 **错误码：**
 
@@ -815,7 +817,7 @@ Subscribes to prefer output device change events. When prefer device for target 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Audio renderer information. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed prefer devices information. |
 
 **错误码：**
 
@@ -842,7 +844,7 @@ Subscribes to preferred input device change events. When preferred device for ta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 是 | Audio capturer information. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
@@ -850,7 +852,7 @@ Subscribes to preferred input device change events. When preferred device for ta
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_availableDeviceChange
+## on_availableDeviceChange('availableDeviceChange')
 
 ```TypeScript
 on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void
@@ -870,7 +872,7 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'，当音频可选设备连接状态发生变化时，触发该事件。 |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 是 | 音频设备类型（根据用途分类）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
 
 **错误码：**
 
@@ -879,7 +881,7 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_deviceChange
+## on_deviceChange('deviceChange')
 
 ```TypeScript
 on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChangeAction>): void
@@ -899,7 +901,7 @@ on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChange
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当音频设备连接状态发生变化时，触发该事件。 |
 | deviceFlag | DeviceFlag | 是 | 音频设备类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
 
 **错误码：**
 
@@ -908,7 +910,7 @@ on(type: 'deviceChange', deviceFlag: DeviceFlag, callback: Callback<DeviceChange
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_micBlockStatusChanged
+## on_micBlockStatusChanged('micBlockStatusChanged')
 
 ```TypeScript
 on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void
@@ -927,7 +929,7 @@ on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micBlockStatusChanged' | 是 | 事件回调类型，支持的事件为'micBlockStatusChanged'，当麦克风堵塞状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | 回调函数，返回麦克风被堵塞状态和设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 是 | 回调函数，返回麦克风被堵塞状态和设备信息。 |
 
 **错误码：**
 
@@ -936,7 +938,7 @@ on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_preferOutputDeviceChangeForRendererInfo
+## on_preferOutputDeviceChangeForRendererInfo('preferOutputDeviceChangeForRendererInfo')
 
 ```TypeScript
 on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererInfo, callback: Callback<AudioDeviceDescriptors>): void
@@ -956,7 +958,7 @@ on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererI
 | --- | --- | --- | --- |
 | type | 'preferOutputDeviceChangeForRendererInfo' | 是 | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo '，当最高优先级输出设备发生变化时，触发该事件。 |
 | rendererInfo | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 音频渲染器信息。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回优先级最高的输出设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回优先级最高的输出设备信息。 |
 
 **错误码：**
 
@@ -965,7 +967,7 @@ on(type: 'preferOutputDeviceChangeForRendererInfo', rendererInfo: AudioRendererI
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_preferredInputDeviceChangeForCapturerInfo
+## on_preferredInputDeviceChangeForCapturerInfo('preferredInputDeviceChangeForCapturerInfo')
 
 ```TypeScript
 on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapturerInfo, callback: Callback<AudioDeviceDescriptors>): void
@@ -985,7 +987,7 @@ on(type: 'preferredInputDeviceChangeForCapturerInfo', capturerInfo: AudioCapture
 | --- | --- | --- | --- |
 | type | 'preferredInputDeviceChangeForCapturerInfo' | 是 | 事件回调类型，支持的事件为' preferredInputDeviceChangeForCapturerInfo'，当最高优先级输入设备发生变化时，触发该事件。 |
 | capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | 是 | 音频采集器信息。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回优先级最高的输入设备信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数，返回优先级最高的输入设备信息。 |
 
 **错误码：**
 
@@ -1014,7 +1016,7 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, cal
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 音频设备类型。 |
 | active | boolean | 是 | 是否设置设备为激活状态。true表示激活，false表示未激活。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置通信设备激活状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置通信设备激活状态成功，err为undefined，否则为错误对象。 |
 
 ## setCommunicationDevice
 

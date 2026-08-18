@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## formatPhoneNumberToE164
@@ -25,7 +26,7 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
 | countryCode | string | 是 | 国家码，支持所有国家码，如：中国（CN）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回将电话号码格式化为E.164表示形式的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回将电话号码格式化为E.164表示形式的结果。 |
 
 **错误码：**
 

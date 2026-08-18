@@ -1,6 +1,6 @@
 # SyncedPropertyTwoWay(System API) (System API)
 
-Inherits from SubscribedAbstractProperty&lt;T&gt;. Represents a property with two-way synchronization.
+Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with two-way synchronization.
 
 **Inheritance/Implementation:** SyncedPropertyTwoWay extends SubscribedAbstractProperty<T> and implements ISinglePropertyChangeSubscriber<T>
 

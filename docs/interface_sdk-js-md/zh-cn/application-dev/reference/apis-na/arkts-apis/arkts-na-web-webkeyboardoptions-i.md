@@ -34,7 +34,7 @@ Set the custom keyboard builder when the custom keyboard is used.
 enterKeyType?: int
 ```
 
-Set the enter key type when the system keyboard is used, the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#ohosinputmethodengine).
+Set the enter key type when the system keyboard is used, the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md).
 
 **类型：** int
 

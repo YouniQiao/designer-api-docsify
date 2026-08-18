@@ -4,7 +4,7 @@
 export type TlsV11CipherSuite = TlsV10CipherSuite
 ```
 
-TLS1.1 cipher suite is same as TLS1.0 cipher suite.
+Declares the cipher suite for TLS 1.1, which is the same as that for TLS1.0.
 
 **Since:** 23
 

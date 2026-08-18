@@ -6,7 +6,7 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md#flags)
+**Substitutes:** [Flags](arkts-ability-wantconstant-flags-e.md)
 
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 

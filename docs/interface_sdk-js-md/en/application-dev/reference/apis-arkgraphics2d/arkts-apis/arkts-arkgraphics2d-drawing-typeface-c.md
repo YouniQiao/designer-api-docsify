@@ -12,7 +12,6 @@ Describes the style of a typeface, such as SimSun or KaiTi. > **NOTE：**> > - T
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## getFamilyName

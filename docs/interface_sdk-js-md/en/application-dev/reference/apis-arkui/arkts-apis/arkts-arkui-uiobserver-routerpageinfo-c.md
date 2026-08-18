@@ -142,7 +142,7 @@ state: RouterPageState
 
 State of the router page that invokes the lifecycle callback.
 
-**Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpagestate-e.md)
 
 **Since:** 11
 

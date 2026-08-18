@@ -1,8 +1,8 @@
 # LinearGradientStyle
 
-Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle).
+Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
-**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#shaderstyle)
+**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 20
 

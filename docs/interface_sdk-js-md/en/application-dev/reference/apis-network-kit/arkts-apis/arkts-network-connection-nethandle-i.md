@@ -1,6 +1,6 @@
 # NetHandle
 
-Defines the handle of the data network.
+Represents the network handle. Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { connection } from '@kit.NetworkKit';
 bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
+Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -32,8 +32,8 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | Yes | Indicates the TCPSocket or UDPSocket object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of bindSocket. |
+| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **TCPSocket** or **UDPSocket** object is successfully bound to the current network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ interface Data {
 bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setappnet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
+Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -124,13 +124,13 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| UDPSocket | Yes | Indicates the TCPSocket or UDPSocket object. |
+| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void
 ```
 
-Resolves a host name to obtain the first IP address based on the specified NetHandle.
+Obtains the first IP address by using the network specified by **NetHandle** to resolve the host name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -218,8 +218,8 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | the callback of getAddressByName. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the first IP address is obtained successfully, **error** is **undefined**, and **data** is the first obtained IP address. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -259,7 +259,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 getAddressByName(host: string): Promise<NetAddress>
 ```
 
-Resolves a host name to obtain the first IP address based on the specified NetHandle.
+Obtains the first IP address by using the network specified by **NetHandle** to resolve the host name. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -273,13 +273,13 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| Promise&lt;NetAddress&gt; | Promise used to return the first IP address. |
 
 **Error codes:**
 
@@ -314,9 +314,9 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void
 ```
 
-Resolves a host name to obtain all IP addresses based on the specified NetHandle.
+Obtains all IP addresses by using the network specified by **NetHandle** to resolve the host name. This API uses an asynchronous callback to return the result.
 
-**Since:** 15
+**Since:** 8
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -330,8 +330,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | the callback of getAddressesByName. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NetAddress&gt;&gt; | Yes | Callback used to return the result. If all IP addresses are successfully obtained, **error** is **undefined**, and **data** is the list of all obtained IP addresses. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -371,9 +371,9 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 getAddressesByName(host: string): Promise<Array<NetAddress>>
 ```
 
-Resolves a host name to obtain all IP addresses based on the specified NetHandle.
+Obtains all IP addresses by using the network specified by **NetHandle** to resolve the host name. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 8
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -387,13 +387,13 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 
@@ -428,9 +428,9 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>
 ```
 
-Resolves a host name to obtain all IP addresses based on the specified NetHandle with specified query option.
+Performs DNS resolution using the network specified by **NetHandle** based on the specified IP address type. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -444,14 +444,14 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
-| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No | Indicates the query option. |
+| host | string | Yes | Host name to resolve. For example, www.example.com. |
+| option | [QueryOptions](arkts-network-connection-queryoptions-i.md) | No | Type of the IP address to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 
@@ -491,13 +491,13 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 netId: int
 ```
 
-Network ID, a value of 0 means that there is no default network, and the other values must be greater than or equal to 100.
+Network ID. The value **0** indicates that there is no default network. The other valid values must be greater than or equal to **100**.
 
 **Type:** int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
 

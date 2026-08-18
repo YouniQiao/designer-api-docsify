@@ -22,7 +22,7 @@ badgeType?: BadgeType
 
 Badge type.
 
-**Type:** [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md)
+**Type:** [BadgeType](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-badgetype-e.md)
 
 **Since:** 21
 

@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultNetSync(): NetHandle
 ```
 
-Obtains the data network that is activated by default. To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the network handle used by the system by default, including the network ID. This API returns the result synchronously. > **NOTE：**> > - Default network used by the system. The network must have the > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network. > > - The return value of this interface is determined by the system and is irrelevant to whether the application > specifies a network. > > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch) > Wi-Fi > Cellular. In special cases, > the actual returned result prevails. > > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available, > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more > network information. > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getDefaultNetSync(): NetHandle--><!--Device-connection-function getDefaultNetSync(): NetHandle-End-->
 
@@ -28,7 +28,7 @@ Obtains the data network that is activated by default. To call this method, you 
 
 | Type | Description |
 | --- | --- |
-| NetHandle | if the default network is not activated. |
+| NetHandle | Network handle of the default network. |
 
 **Error codes:**
 

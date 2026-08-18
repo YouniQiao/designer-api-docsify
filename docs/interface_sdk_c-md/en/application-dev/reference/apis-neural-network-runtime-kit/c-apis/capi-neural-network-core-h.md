@@ -19,7 +19,7 @@ Defines the Neural Network Core APIs. The AI inference framework uses the Native
 | Name | Description |
 | -- | -- |
 | [OH_NNCompilation *OH_NNCompilation_Construct(const OH_NNModel *model)](#oh_nncompilation_construct) | Creates a compilation instance of the [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) type.After the OH_NNModel module completes model construction, APIs provided by the OH_NNCompilation module pass themodel to underlying device for compilation. This method creates a [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instancebased on the passed [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) instance. The [OH_NNCompilation_SetDevice](capi-neural-network-core-h.md#oh_nncompilation_setdevice) method is calledto set the device to compile on, and [OH_NNCompilation_Build](capi-neural-network-core-h.md#oh_nncompilation_build) is then called to complete compilation.<br> In addition to computing device selection, the OH_NNCompilation module supports features such as model caching,performance preference, priority setting, and float16 computing, which can be implemented by the following methods:<br> [OH_NNCompilation_SetCache](capi-neural-network-core-h.md#oh_nncompilation_setcache)<br> [OH_NNCompilation_SetPerformanceMode](capi-neural-network-core-h.md#oh_nncompilation_setperformancemode)<br> [OH_NNCompilation_SetPriority](capi-neural-network-core-h.md#oh_nncompilation_setpriority)<br> [OH_NNCompilation_EnableFloat16](capi-neural-network-core-h.md#oh_nncompilation_enablefloat16)<br> After [OH_NNCompilation_Build](capi-neural-network-core-h.md#oh_nncompilation_build) is called, the [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) instance can be released.<br> |
-| [OH_NNCompilation *OH_NNCompilation_ConstructWithOfflineModelFile(const char *modelPath)](#oh_nncompilation_constructwithofflinemodelfile) | Creates a compilation instance based on an offline model file.This method conflicts with the way of passing an online built model or an offline model file buffer,and you have to choose only one of the three construction methods. <br> Offline model is a type of model that is offline compiled by the model converter provided by a device vendor. So that the offline model can only be used on the specified device, but the compilation time of offline model is usually much less than [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md).  You should perform the offline compilation during your development and deploy the offline model in your app package. <br> |
+| [OH_NNCompilation *OH_NNCompilation_ConstructWithOfflineModelFile(const char *modelPath)](#oh_nncompilation_constructwithofflinemodelfile) | Creates a compilation instance based on an offline model file.This method conflicts with the way of passing an online built model or an offline model file buffer,and you have to choose only one of the three construction methods. <br> Offline model is a type of model that is offline compiled by the model converter provided by a device vendor. So that the offline model can only be used on the specified device, but the compilation time of offline model is usually much less than [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md). You should perform the offline compilation during your development and deploy the offline model in your app package. <br> |
 | [OH_NNCompilation *OH_NNCompilation_ConstructWithOfflineModelBuffer(const void *modelBuffer, size_t modelSize)](#oh_nncompilation_constructwithofflinemodelbuffer) | Creates a compilation instance based on an offline model file buffer.This method conflicts with the way of passing an online built model or an offline model file path, and you have to choose only one of the three construction methods. <br> Note that the returned [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance only saves the <b>modelBuffer</b> pointer inside, instead of copying its data. You should not release <b>modelBuffer</b> before the [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance is destroied. <br> |
 | [OH_NNCompilation *OH_NNCompilation_ConstructForCache()](#oh_nncompilation_constructforcache) | Creates a empty compilation instance for restoration from cache later.See [OH_NNCompilation_SetCache](capi-neural-network-core-h.md#oh_nncompilation_setcache) for the description of cache.<br> The restoration time from the cache is less than compilation with [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md).<br> You should call [OH_NNCompilation_SetCache](capi-neural-network-core-h.md#oh_nncompilation_setcache) or [OH_NNCompilation_ImportCacheFromBuffer](capi-neural-network-core-h.md#oh_nncompilation_importcachefrombuffer) first,and then call [OH_NNCompilation_Build](capi-neural-network-core-h.md#oh_nncompilation_build) to complete the restoration.<br> |
 | [OH_NN_ReturnCode OH_NNCompilation_ExportCacheToBuffer(OH_NNCompilation *compilation, const void *buffer, size_t length, size_t *modelSize)](#oh_nncompilation_exportcachetobuffer) | Exports the cache to a given buffer.See [OH_NNCompilation_SetCache](capi-neural-network-core-h.md#oh_nncompilation_setcache) for the description of cache.<br> Note that the cache is the result of compilation building [OH_NNCompilation_Build](capi-neural-network-core-h.md#oh_nncompilation_build),so that this method must be called after [OH_NNCompilation_Build](capi-neural-network-core-h.md#oh_nncompilation_build).<br> |
@@ -28,7 +28,7 @@ Defines the Neural Network Core APIs. The AI inference framework uses the Native
 | [OH_NN_ReturnCode OH_NNCompilation_SetDevice(OH_NNCompilation *compilation, size_t deviceID)](#oh_nncompilation_setdevice) | Specifies the device for model compilation and computing.In the compilation phase, you need to specify the device for model compilation and computing. Call [OH_NNDevice_GetAllDevicesID](capi-neural-network-core-h.md#oh_nndevice_getalldevicesid) to obtain available device IDs. Call [OH_NNDevice_GetType](capi-neural-network-core-h.md#oh_nndevice_gettype) and [OH_NNDevice_GetName](capi-neural-network-core-h.md#oh_nndevice_getname) to obtain device information and pass target device ID to this method for setting. <br> |
 | [OH_NN_ReturnCode OH_NNCompilation_SetCache(OH_NNCompilation *compilation, const char *cachePath, uint32_t version)](#oh_nncompilation_setcache) | Set the cache directory and version of the compiled model.On the device that supports caching, a model can be saved as a cache file after being compiled on the device driver. The model can be directly read from the cache file in the next compilation, saving recompilation time. This method performs different operations based on the passed cache directory and version: <br> - No file exists in the cache directory:Caches the compiled model to the directory and sets the cache version to <b>version</b>. <br> - A complete cache file exists in the cache directory, and its version is <b>version</b>:Reads the cache file in the path and passes the data to the underlying device for conversion into executable model instances. <br> - A complete cache file exists in the cache directory, and its version is earlier than <b>version</b>:When model compilation is complete on the underlying device, overwrites the cache file and changes the version number to <b>version</b>. <br> - A complete cache file exists in the cache directory, and its version is later than <b>version</b>:Returns the [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code without reading the cache file. <br> - The cache file in the cache directory is incomplete or you do not have the permission to access the cache file.Returns the [OH_NN_INVALID_FILE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code. <br> - The cache directory does not exist or you do not have the access permission.Returns the [OH_NN_INVALID_PATH](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code. <br> |
 | [OH_NN_ReturnCode OH_NNCompilation_SetPerformanceMode(OH_NNCompilation *compilation, OH_NN_PerformanceMode performanceMode)](#oh_nncompilation_setperformancemode) | Sets the performance mode for model computing.Allows you to set the performance mode for model computing to meet the requirements of low power consumption and ultimate performance. If this method is not called to set the performance mode in the compilation phase, the compilation instance assigns the [OH_NN_PERFORMANCE_NONE](capi-neural-network-runtime-type-h.md#oh_nn_performancemode) mode for the model by default. In this case, the device performs computing in the default performance mode. <br> If this method is called on the device that does not support the setting of the performance mode, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br> |
-| [OH_NN_ReturnCode OH_NNCompilation_SetPriority(OH_NNCompilation *compilation, OH_NN_Priority priority)](#oh_nncompilation_setpriority) | Sets the model computing priority.Allows you to set computing priorities for models.  The priorities apply only to models created by the process with the same UID. The settings will not affect models created by processes with different UIDs on different devices. <br> If this method is called on the device that does not support the priority setting, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br> |
+| [OH_NN_ReturnCode OH_NNCompilation_SetPriority(OH_NNCompilation *compilation, OH_NN_Priority priority)](#oh_nncompilation_setpriority) | Sets the model computing priority.Allows you to set computing priorities for models. The priorities apply only to models created by the process with the same UID. The settings will not affect models created by processes with different UIDs on different devices. <br> If this method is called on the device that does not support the priority setting, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br> |
 | [OH_NN_ReturnCode OH_NNCompilation_EnableFloat16(OH_NNCompilation *compilation, bool enableFloat16)](#oh_nncompilation_enablefloat16) | Enables float16 for computing.Float32 is used by default for the model of float type. If this method is called on a device that supports float16, float16 will be used for computing the float32 model to reduce memory usage and execution time. <br> This option is useless for the model of int type, e.g. int8 type. <br> If this method is called on the device that does not support float16, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br> |
 | [OH_NN_ReturnCode OH_NNCompilation_Build(OH_NNCompilation *compilation)](#oh_nncompilation_build) | Compiles a model.After the compilation configuration is complete, call this method to return the compilation result. The compilation instance pushes the model andcompilation options to the device for compilation. After this method is called, additional compilation operations cannot be performed. <br> If the [OH_NNCompilation_SetDevice](capi-neural-network-core-h.md#oh_nncompilation_setdevice), [OH_NNCompilation_SetCache](capi-neural-network-core-h.md#oh_nncompilation_setcache), [OH_NNCompilation_SetPerformanceMode](capi-neural-network-core-h.md#oh_nncompilation_setperformancemode), [OH_NNCompilation_SetPriority](capi-neural-network-core-h.md#oh_nncompilation_setpriority), and [OH_NNCompilation_EnableFloat16](capi-neural-network-core-h.md#oh_nncompilation_enablefloat16) methods are called, [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) is returned. <br> |
 | [void OH_NNCompilation_Destroy(OH_NNCompilation **compilation)](#oh_nncompilation_destroy) | Releases the <b>Compilation</b> object.This method needs to be called to release the compilation instance created by [OH_NNCompilation_Construct](capi-neural-network-core-h.md#oh_nncompilation_construct), [OH_NNCompilation_ConstructWithOfflineModelFile](capi-neural-network-core-h.md#oh_nncompilation_constructwithofflinemodelfile), [OH_NNCompilation_ConstructWithOfflineModelBuffer](capi-neural-network-core-h.md#oh_nncompilation_constructwithofflinemodelbuffer) and [OH_NNCompilation_ConstructForCache](capi-neural-network-core-h.md#oh_nncompilation_constructforcache). Otherwise, the memory leak will occur. <br> If <b>compilation</b> or <b>*compilation</b> is a null pointer, this method only prints warning logs and does not execute the release. <br> |
@@ -93,7 +93,7 @@ Creates a compilation instance of the [OH_NNCompilation](capi-neuralnetworkrunti
 
 | Type | Description |
 | -- | -- |
-| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to a [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the parameters of model are invalid or there is a problem with the model format. |
+| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to a [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for          failure is that the parameters of model are invalid or there is a problem with the model format. |
 
 ### OH_NNCompilation_ConstructWithOfflineModelFile()
 
@@ -103,7 +103,7 @@ OH_NNCompilation *OH_NNCompilation_ConstructWithOfflineModelFile(const char *mod
 
 **Description**
 
-Creates a compilation instance based on an offline model file.This method conflicts with the way of passing an online built model or an offline model file buffer,and you have to choose only one of the three construction methods. <br> Offline model is a type of model that is offline compiled by the model converter provided by a device vendor. So that the offline model can only be used on the specified device, but the compilation time of offline model is usually much less than [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md).  You should perform the offline compilation during your development and deploy the offline model in your app package. <br>
+Creates a compilation instance based on an offline model file.This method conflicts with the way of passing an online built model or an offline model file buffer,and you have to choose only one of the three construction methods. <br> Offline model is a type of model that is offline compiled by the model converter provided by a device vendor. So that the offline model can only be used on the specified device, but the compilation time of offline model is usually much less than [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md). You should perform the offline compilation during your development and deploy the offline model in your app package. <br>
 
 **Since**: 11
 
@@ -117,7 +117,7 @@ Creates a compilation instance based on an offline model file.This method confli
 
 | Type | Description |
 | -- | -- |
-| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the modelPath is invalid. |
+| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for          failure is that the modelPath is invalid. |
 
 ### OH_NNCompilation_ConstructWithOfflineModelBuffer()
 
@@ -142,7 +142,7 @@ Creates a compilation instance based on an offline model file buffer.This method
 
 | Type | Description |
 | -- | -- |
-| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the modelBuffer or modelSize is invalid. |
+| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for          failure is that the modelBuffer or modelSize is invalid. |
 
 ### OH_NNCompilation_ConstructForCache()
 
@@ -160,7 +160,7 @@ Creates a empty compilation instance for restoration from cache later.See [OH_NN
 
 | Type | Description |
 | -- | -- |
-| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the cache file saved before is invalid. |
+| [OH_NNCompilation *](capi-neuralnetworkruntime-oh-nncompilation.md) | Pointer to an [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) instance, or NULL if it fails to create. The possible reason for          failure is that the cache file saved before is invalid. |
 
 ### OH_NNCompilation_ExportCacheToBuffer()
 
@@ -187,7 +187,7 @@ Exports the cache to a given buffer.See [OH_NNCompilation_SetCache](capi-neural-
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) export cache to buffer successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to export cache to buffer. The possible reason for failure<br>         is that the <b>compilation</b>, <b>buffer</b> or <b>modelSize</b> is nullptr, or <b>length</b> is 0,<br>         or <b>compilation</b> is invalid.<br>         [OH_NN_UNSUPPORTED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) exporting cache to buffer is unsupported. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) export cache to buffer successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to export cache to buffer. The possible reason for failure          is that the <b>compilation</b>, <b>buffer</b> or <b>modelSize</b> is nullptr, or <b>length</b> is 0,          or <b>compilation</b> is invalid.\n          [OH_NN_UNSUPPORTED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) exporting cache to buffer is unsupported.\n |
 
 ### OH_NNCompilation_ImportCacheFromBuffer()
 
@@ -213,7 +213,7 @@ Imports the cache from a given buffer.See [OH_NNCompilation_SetCache](capi-neura
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) import cache from buffer successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to import cache from buffer. The possible reason for failure is that<br>         the <b>compilation</b> or <b>buffer</b> is nullptr, or <b>modelSize</b> is 0, or content of <b>buffer</b><br>         is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) import cache from buffer successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to import cache from buffer. The possible reason for failure is that          the <b>compilation</b> or <b>buffer</b> is nullptr, or <b>modelSize</b> is 0, or content of <b>buffer</b>          is invalid.\n |
 
 ### OH_NNCompilation_AddExtensionConfig()
 
@@ -240,7 +240,7 @@ Adds an extension config for a custom hardware attribute.Some devices have their
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add extension config successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add extension config. The possible reason for failure is that the<br>         <b>compilation</b>, <b>configName</b> or <b>configValue</b> is nullptr, or <b>configValueSize</b> is 0.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) other failures, such as memory error during object creation. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) add extension config successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to add extension config. The possible reason for failure is that the          <b>compilation</b>, <b>configName</b> or <b>configValue</b> is nullptr, or <b>configValueSize</b> is 0.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) other failures, such as memory error during object creation.\n |
 
 ### OH_NNCompilation_SetDevice()
 
@@ -265,7 +265,7 @@ Specifies the device for model compilation and computing.In the compilation phas
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set device successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set device. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set device successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set device. The possible reason for failure          is that the <b>compilation</b> is nullptr.\n |
 
 ### OH_NNCompilation_SetCache()
 
@@ -291,7 +291,7 @@ Set the cache directory and version of the compiled model.On the device that sup
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set cache path and version successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set cache path and version. The possible reason for failure<br>         is that the <b>compilation</b> or <b>cachePath</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set cache path and version successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set cache path and version. The possible reason for failure          is that the <b>compilation</b> or <b>cachePath</b> is nullptr.\n |
 
 ### OH_NNCompilation_SetPerformanceMode()
 
@@ -316,7 +316,7 @@ Sets the performance mode for model computing.Allows you to set the performance 
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set performance mode successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set performance mode. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr, or <b>performanceMode</b> is invalid.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to query whether the backend device supports setting performance mode.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set performance mode. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set performance mode successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set performance mode. The possible reason for failure          is that the <b>compilation</b> is nullptr, or <b>performanceMode</b> is invalid.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to query whether the backend device supports setting performance mode.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set performance mode.\n |
 
 ### OH_NNCompilation_SetPriority()
 
@@ -326,7 +326,7 @@ OH_NN_ReturnCode OH_NNCompilation_SetPriority(OH_NNCompilation *compilation, OH_
 
 **Description**
 
-Sets the model computing priority.Allows you to set computing priorities for models.  The priorities apply only to models created by the process with the same UID. The settings will not affect models created by processes with different UIDs on different devices. <br> If this method is called on the device that does not support the priority setting, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br>
+Sets the model computing priority.Allows you to set computing priorities for models. The priorities apply only to models created by the process with the same UID. The settings will not affect models created by processes with different UIDs on different devices. <br> If this method is called on the device that does not support the priority setting, the [OH_NN_UNAVALIDABLE_DEVICE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) error code is returned. <br>
 
 **Since**: 9
 
@@ -341,7 +341,7 @@ Sets the model computing priority.Allows you to set computing priorities for mod
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set priority successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set priority. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr, or <b>priority</b> is invalid.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to query whether the backend device supports setting priority.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set priority. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set priority successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set priority. The possible reason for failure          is that the <b>compilation</b> is nullptr, or <b>priority</b> is invalid.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to query whether the backend device supports setting priority.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set priority.\n |
 
 ### OH_NNCompilation_EnableFloat16()
 
@@ -366,7 +366,7 @@ Enables float16 for computing.Float32 is used by default for the model of float 
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) enable fp16 successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to enable fp16. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) enable fp16 successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to enable fp16. The possible reason for failure          is that the <b>compilation</b> is nullptr.\n |
 
 ### OH_NNCompilation_Build()
 
@@ -390,7 +390,7 @@ Compiles a model.After the compilation configuration is complete, call this meth
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) build model successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to build model. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr, or the parameters set before is invalid.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to build model.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported the model. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) build model successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to build model. The possible reason for failure          is that the <b>compilation</b> is nullptr, or the parameters set before is invalid.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to build model.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported the model.\n |
 
 ### OH_NNCompilation_Destroy()
 
@@ -426,7 +426,7 @@ Creates an [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance.
 
 | Type | Description |
 | -- | -- |
-| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for failure<br>         is that the memory error occurred during object creation. |
+| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for failure          is that the memory error occurred during object creation. |
 
 ### OH_NNTensorDesc_Destroy()
 
@@ -450,7 +450,7 @@ Releases an [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy tensor description successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy tensor description. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>tensorDesc</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy tensor description successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy tensor description. The possible reason for failure          is that the <b>tensorDesc</b> or <b>tensorDesc</b> is nullptr.\n |
 
 ### OH_NNTensorDesc_SetName()
 
@@ -475,7 +475,7 @@ Sets the name of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md).A
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor name successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor name. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>name</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor name successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor name. The possible reason for failure          is that the <b>tensorDesc</b> or <b>name</b> is nullptr.\n |
 
 ### OH_NNTensorDesc_GetName()
 
@@ -500,7 +500,7 @@ Gets the name of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md).C
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor name successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor name. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>name</b> is nullptr, or <b>name</b> is not nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor name successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor name. The possible reason for failure          is that the <b>tensorDesc</b> or <b>name</b> is nullptr, or <b>name</b> is not nullptr.\n |
 
 ### OH_NNTensorDesc_SetDataType()
 
@@ -525,7 +525,7 @@ Sets the data type of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor data type successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data type. The possible reason for failure<br>         is that the <b>tensorDesc</b> is nullptr, or <b>dataType</b> is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor data type successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor data type. The possible reason for failure          is that the <b>tensorDesc</b> is nullptr, or <b>dataType</b> is invalid.\n |
 
 ### OH_NNTensorDesc_GetDataType()
 
@@ -550,7 +550,7 @@ Gets the data type of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor data type successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor data type. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>dataType</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor data type successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor data type. The possible reason for failure          is that the <b>tensorDesc</b> or <b>dataType</b> is nullptr.\n |
 
 ### OH_NNTensorDesc_SetShape()
 
@@ -576,7 +576,7 @@ Sets the shape of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md).
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor shape successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor shape. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>shape</b> is nullptr, or <b>shapeLength</b> is 0. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor shape successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor shape. The possible reason for failure          is that the <b>tensorDesc</b> or <b>shape</b> is nullptr, or <b>shapeLength</b> is 0.\n |
 
 ### OH_NNTensorDesc_GetShape()
 
@@ -602,7 +602,7 @@ Gets the shape of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md).
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor shape successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor shape. The possible reason for failure is that the<br>         <b>tensorDesc</b>, <b>shape</b> or <b>shapeLength</b> is nullptr, or <b>shape</b> is not nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor shape successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor shape. The possible reason for failure is that the          <b>tensorDesc</b>, <b>shape</b> or <b>shapeLength</b> is nullptr, or <b>shape</b> is not nullptr.\n |
 
 ### OH_NNTensorDesc_SetFormat()
 
@@ -627,7 +627,7 @@ Sets the format of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor format successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor format. The possible reason for failure<br>         is that the <b>tensorDesc</b> is nullptr, or <b>format</b> is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set tensor format successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set tensor format. The possible reason for failure          is that the <b>tensorDesc</b> is nullptr, or <b>format</b> is invalid.\n |
 
 ### OH_NNTensorDesc_GetFormat()
 
@@ -652,7 +652,7 @@ Gets the format of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md)
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor format successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor format. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>format</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor format successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor format. The possible reason for failure          is that the <b>tensorDesc</b> or <b>format</b> is nullptr.\n |
 
 ### OH_NNTensorDesc_GetElementCount()
 
@@ -677,7 +677,7 @@ Gets the element count of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensord
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor element count successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor element count. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>elementCount</b> is nullptr.<br>         [OH_NN_DYNAMIC_SHAPE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) dim is less than zero. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor element count successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor element count. The possible reason for failure          is that the <b>tensorDesc</b> or <b>elementCount</b> is nullptr.\n          [OH_NN_DYNAMIC_SHAPE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) dim is less than zero.\n |
 
 ### OH_NNTensorDesc_GetByteSize()
 
@@ -702,7 +702,7 @@ Gets the byte size of a [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor byte size successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor byte size. The possible reason for failure<br>         is that the <b>tensorDesc</b> or <b>byteSize</b> is nullptr, or tensor data type is invalid.<br>         [OH_NN_DYNAMIC_SHAPE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) dim is less than zero. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor byte size successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor byte size. The possible reason for failure          is that the <b>tensorDesc</b> or <b>byteSize</b> is nullptr, or tensor data type is invalid.\n          [OH_NN_DYNAMIC_SHAPE](capi-neural-network-runtime-type-h.md#oh_nn_returncode) dim is less than zero.\n |
 
 ### OH_NNTensor_Create()
 
@@ -727,7 +727,7 @@ Creates a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance from [NN_
 
 | Type | Description |
 | -- | -- |
-| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pointer to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure<br>         is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b> is invalid, or memory error occurred. |
+| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pointer to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure          is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b> is invalid, or memory error occurred. |
 
 ### OH_NNTensor_CreateWithSize()
 
@@ -753,7 +753,7 @@ Creates a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance with spec
 
 | Type | Description |
 | -- | -- |
-| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pointer to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure<br>         is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b> or size is invalid, or memory error occurred. |
+| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pointer to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure          is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b> or size is invalid, or memory error occurred. |
 
 ### OH_NNTensor_CreateWithFd()
 
@@ -781,7 +781,7 @@ Creates a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance with spec
 
 | Type | Description |
 | -- | -- |
-| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pinter to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure<br>         is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b>, <b>fd</b>, <b>size</b> or <b>offset</b> is<br>         invalid, or memory error occurred. |
+| [NN_Tensor *](capi-neuralnetworkruntime-nn-tensor.md) | Pinter to a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance, or NULL if it fails to create. The possible reason for failure          is that the <b>tensorDesc</b> is nullptr, or <b>deviceID</b>, <b>fd</b>, <b>size</b> or <b>offset</b> is          invalid, or memory error occurred. |
 
 ### OH_NNTensor_Destroy()
 
@@ -805,7 +805,7 @@ Releases a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) instance.When the
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy tensor successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy tensor. The possible reason for failure<br>         is that the <b>tensor</b> is nullptr, or <b>tensor</b> is not nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) destroy tensor successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to destroy tensor. The possible reason for failure          is that the <b>tensor</b> is nullptr, or <b>tensor</b> is not nullptr.\n |
 
 ### OH_NNTensor_GetTensorDesc()
 
@@ -829,7 +829,7 @@ Gets the [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance of
 
 | Type | Description |
 | -- | -- |
-| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to the [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the <b>tensor</b> is nullptr, or <b>tensor</b> is invalid. |
+| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to the [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for          failure is that the <b>tensor</b> is nullptr, or <b>tensor</b> is invalid. |
 
 ### OH_NNTensor_GetDataBuffer()
 
@@ -853,7 +853,7 @@ Gets the data buffer of a [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md).Yo
 
 | Type | Description |
 | -- | -- |
-| void * | Pointer to data buffer of the tensor, or NULL if it fails to create. The possible reason for failure<br>         is that the <b>tensor</b> is nullptr, or <b>tensor</b> is invalid. |
+| void * | Pointer to data buffer of the tensor, or NULL if it fails to create. The possible reason for failure          is that the <b>tensor</b> is nullptr, or <b>tensor</b> is invalid. |
 
 ### OH_NNTensor_GetFd()
 
@@ -878,7 +878,7 @@ Gets the file descriptor of the shared memory of a [NN_Tensor](capi-neuralnetwor
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor fd successfully. The return value is saved in parameter fd.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor fd. The possible reason for failure<br>         is that the <b>tensor</b> or <b>fd</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor fd successfully. The return value is saved in parameter fd.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor fd. The possible reason for failure          is that the <b>tensor</b> or <b>fd</b> is nullptr.\n |
 
 ### OH_NNTensor_GetSize()
 
@@ -903,7 +903,7 @@ Gets the size of the shared memory of a [NN_Tensor](capi-neuralnetworkruntime-nn
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor size successfully. The return value is saved in <b>size</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor size. The possible reason for failure<br>         is that the <b>tensor</b> or <b>size</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor size successfully. The return value is saved in <b>size</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor size. The possible reason for failure          is that the <b>tensor</b> or <b>size</b> is nullptr.\n |
 
 ### OH_NNTensor_GetOffset()
 
@@ -928,7 +928,7 @@ Get the data offset of a tensor.The <b>offset</b> corresponds to the shared memo
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor offset successfully. The return value is saved in <b>offset</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor offset. The possible reason for failure<br>         is that the <b>tensor</b> or <b>offset</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor offset successfully. The return value is saved in <b>offset</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor offset. The possible reason for failure          is that the <b>tensor</b> or <b>offset</b> is nullptr.\n |
 
 ### OH_NNExecutor_Construct()
 
@@ -952,7 +952,7 @@ Creates an executor instance of the [OH_NNExecutor](capi-neuralnetworkruntime-oh
 
 | Type | Description |
 | -- | -- |
-| [OH_NNExecutor *](capi-neuralnetworkruntime-oh-nnexecutor.md) | Pointer to a [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) instance, or NULL if it fails to create. The possible reason for failure<br>         is that the <b>compilation</b> is nullptr, or memory error occurred. |
+| [OH_NNExecutor *](capi-neuralnetworkruntime-oh-nnexecutor.md) | Pointer to a [OH_NNExecutor](capi-neuralnetworkruntime-oh-nnexecutor.md) instance, or NULL if it fails to create. The possible reason for failure          is that the <b>compilation</b> is nullptr, or memory error occurred. |
 
 ### OH_NNExecutor_GetOutputShape()
 
@@ -979,7 +979,7 @@ Obtains the dimension information about the output tensor.After {@link OH_NNExec
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor output shape successfully. The return value is saved in<br>         <b>shape</b> and <b>shapeLength</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor output shape. The possible reason for failure is that<br>         the <b>executor</b>, <b>shape</b> or <b>shapeLength</b> is nullptr, or <b>shape</b> is not nullptr,<br>         or <b>outputIndex</b> is out of range. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get tensor output shape successfully. The return value is saved in          <b>shape</b> and <b>shapeLength</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get tensor output shape. The possible reason for failure is that          the <b>executor</b>, <b>shape</b> or <b>shapeLength</b> is nullptr, or <b>shape</b> is not nullptr,          or <b>outputIndex</b> is out of range.\n |
 
 ### OH_NNExecutor_Destroy()
 
@@ -1022,7 +1022,7 @@ Gets the input tensor count.You can get the input tensor count from the executor
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get input count successfully. The return value is saved in <b>inputCount</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get input count. The possible reason for failure is that<br>         the <b>executor</b> or <b>inputCount</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get input count successfully. The return value is saved in <b>inputCount</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get input count. The possible reason for failure is that          the <b>executor</b> or <b>inputCount</b> is nullptr.\n |
 
 ### OH_NNExecutor_GetOutputCount()
 
@@ -1047,7 +1047,7 @@ Gets the output tensor count.You can get the output tensor count from the execut
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get output count successfully. The return value is saved in <b>outputCount</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get output count. The possible reason for failure is that<br>         the <b>executor</b> or <b>outputCount</b> is nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get output count successfully. The return value is saved in <b>outputCount</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get output count. The possible reason for failure is that          the <b>executor</b> or <b>outputCount</b> is nullptr.\n |
 
 ### OH_NNExecutor_CreateInputTensorDesc()
 
@@ -1072,7 +1072,7 @@ Creates an input tensor descriptor with its index.The input tensor descriptor co
 
 | Type | Description |
 | -- | -- |
-| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the <b>executor</b> is nullptr, or <b>index</b> is out of range. |
+| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for          failure is that the <b>executor</b> is nullptr, or <b>index</b> is out of range. |
 
 ### OH_NNExecutor_CreateOutputTensorDesc()
 
@@ -1097,7 +1097,7 @@ Creates an output tensor descriptor with its index.The output tensor descriptor 
 
 | Type | Description |
 | -- | -- |
-| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for<br>         failure is that the <b>executor</b> is nullptr, or <b>index</b> is out of range. |
+| [NN_TensorDesc *](capi-neuralnetworkruntime-nn-tensordesc.md) | Pointer to [NN_TensorDesc](capi-neuralnetworkruntime-nn-tensordesc.md) instance, or NULL if it fails to create. The possible reason for          failure is that the <b>executor</b> is nullptr, or <b>index</b> is out of range. |
 
 ### OH_NNExecutor_GetInputDimRange()
 
@@ -1125,7 +1125,7 @@ Gets the dimension ranges of an input tensor.The supported dimension ranges of a
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get input dim range successfully. The return value is saved in <b>minInputDims</b>,<br>         <b>maxInputDims</b> and <b>shapeLength</b>.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get input dim range. The possible reason for failure is that<br>         the <b>executor</b>, <b>minInputDims</b>, <b>maxInputDims</b> or <b>shapeLength</b> is nullptr, or<br>         <b>minInputDims</b> or <b>maxInputDims</b> is not nullptr, or <b>index</b> is out of range.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to get input dim range. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get input dim range successfully. The return value is saved in <b>minInputDims</b>,          <b>maxInputDims</b> and <b>shapeLength</b>.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get input dim range. The possible reason for failure is that          the <b>executor</b>, <b>minInputDims</b>, <b>maxInputDims</b> or <b>shapeLength</b> is nullptr, or          <b>minInputDims</b> or <b>maxInputDims</b> is not nullptr, or <b>index</b> is out of range.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to get input dim range.\n |
 
 ### OH_NNExecutor_SetOnRunDone()
 
@@ -1150,7 +1150,7 @@ Sets the callback function handle for the post-process when the asynchronous exe
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set on run done successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set on run done. The possible reason for failure is that<br>         the <b>executor</b> or <b>onRunDone</b> is nullptr.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set on run done. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set on run done successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set on run done. The possible reason for failure is that          the <b>executor</b> or <b>onRunDone</b> is nullptr.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set on run done.\n |
 
 ### OH_NNExecutor_SetOnServiceDied()
 
@@ -1175,7 +1175,7 @@ Sets the callback function handle for the post-process when the device driver se
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set on service died successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set on service died. The possible reason for failure is that<br>         the <b>executor</b> or <b>onServiceDied</b> is nullptr.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set on service died. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) set on service died successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to set on service died. The possible reason for failure is that          the <b>executor</b> or <b>onServiceDied</b> is nullptr.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to set on service died.\n |
 
 ### OH_NNExecutor_RunSync()
 
@@ -1203,7 +1203,7 @@ Synchronous execution of the model inference.Input and output tensors should be 
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run. The possible reason for failure is that the <b>executor</b>,<br>         <b>inputTensor</b> or <b>outputTensor</b> is nullptr, or <b>inputCount</b> or <b>outputCount</b> is 0.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device failed to run.<br>         [OH_NN_NULL_PTR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the parameters of input or output tensor is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run. The possible reason for failure is that the <b>executor</b>,          <b>inputTensor</b> or <b>outputTensor</b> is nullptr, or <b>inputCount</b> or <b>outputCount</b> is 0.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device failed to run.\n          [OH_NN_NULL_PTR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the parameters of input or output tensor is invalid.\n |
 
 ### OH_NNExecutor_RunAsync()
 
@@ -1233,7 +1233,7 @@ Asynchronous execution of the model inference.Input and output tensors should be
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run. The possible reason for failure is that the <b>executor</b>,<br>         <b>inputTensor</b>, <b>outputTensor</b> or <b>userData</b> is nullptr, or <b>inputCount</b> or<br>         <b>outputCount</b> is 0.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device failed to run.<br>         [OH_NN_NULL_PTR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the parameters of input or output tensor is invalid.<br>         [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to run async. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) run successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to run. The possible reason for failure is that the <b>executor</b>,          <b>inputTensor</b>, <b>outputTensor</b> or <b>userData</b> is nullptr, or <b>inputCount</b> or          <b>outputCount</b> is 0.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device failed to run.\n          [OH_NN_NULL_PTR](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the parameters of input or output tensor is invalid.\n          [OH_NN_OPERATION_FORBIDDEN](capi-neural-network-runtime-type-h.md#oh_nn_returncode) the backend device is not supported to run async.\n |
 
 ### OH_NNDevice_GetAllDevicesID()
 
@@ -1258,7 +1258,7 @@ Obtains the IDs of all devices connected.Each device has an unique and fixed ID.
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get all devices id successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get all devices id. The possible reason for failure is that<br>         the <b>allDevicesID</b> or <b>deviceCount</b> is nullptr, or <b>allDevicesID</b> is not nullptr. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get all devices id successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get all devices id. The possible reason for failure is that          the <b>allDevicesID</b> or <b>deviceCount</b> is nullptr, or <b>allDevicesID</b> is not nullptr.\n |
 
 ### OH_NNDevice_GetName()
 
@@ -1283,7 +1283,7 @@ Obtains the name of the specified device.<b>deviceID</b> specifies the device wh
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get name of specific device successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get name of specific device. The possible reason for failure is that<br>         the <b>name</b> is nullptr or <b>name</b> is not nullptr.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get name of specific device. The possible reason for failure is that<br>         the <b>deviceID</b> is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get name of specific device successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get name of specific device. The possible reason for failure is that          the <b>name</b> is nullptr or <b>name</b> is not nullptr.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get name of specific device. The possible reason for failure is that          the <b>deviceID</b> is invalid.\n |
 
 ### OH_NNDevice_GetType()
 
@@ -1308,6 +1308,6 @@ Obtains the type information of the specified device.<b>deviceID</b> specifies t
 
 | Type | Description |
 | -- | -- |
-| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.<br>         [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get type of specific device successfully.<br>         [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get type of specific device. The possible reason for failure is that<br>         the <b>deviceType</b> is nullptr.<br>         [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get type of specific device. The possible reason for failure is that<br>         the <b>deviceID</b> is invalid. |
+| [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) | Execution result of the function.          [OH_NN_SUCCESS](capi-neural-network-runtime-type-h.md#oh_nn_returncode) get type of specific device successfully.\n          [OH_NN_INVALID_PARAMETER](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get type of specific device. The possible reason for failure is that          the <b>deviceType</b> is nullptr.\n          [OH_NN_FAILED](capi-neural-network-runtime-type-h.md#oh_nn_returncode) fail to get type of specific device. The possible reason for failure is that          the <b>deviceID</b> is invalid.\n |
 
 

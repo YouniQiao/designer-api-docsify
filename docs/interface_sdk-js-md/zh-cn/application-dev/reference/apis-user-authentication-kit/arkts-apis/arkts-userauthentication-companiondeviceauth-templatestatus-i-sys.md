@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## addedTime
@@ -61,7 +62,7 @@ deviceStatus: DeviceStatus
 enabledBusinessIds: int[]
 ```
 
-支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids系统接口)接口更新。
+支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md)接口更新。
 
 **类型：** int[]
 

@@ -81,7 +81,7 @@ Sets the OH_Predicates to match the field whose data type is string and value is
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_Glob()
 
@@ -107,7 +107,7 @@ Sets the OH_Predicates to match the specified field whose data type is string an
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_NotGlob()
 
@@ -133,7 +133,7 @@ Sets the OH_Predicates to not match the specified field whose data type is strin
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_Having()
 
@@ -159,6 +159,6 @@ Sets the OH_Predicates to specify conditions to filter grouped results that will
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 

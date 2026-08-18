@@ -17,7 +17,7 @@
 | [TextPickerTextStyle](arkts-na-textpicker-textpickertextstyle-i.md) | Defines the text style options. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

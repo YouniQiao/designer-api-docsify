@@ -6,7 +6,7 @@ Wi-Fi IP configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md#ipconfig-system-api)
+**Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
 
 <!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
 

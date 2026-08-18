@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## importWrappedKeyItem
@@ -16,7 +18,7 @@ function importWrappedKeyItem(
   ): void
 ```
 
-Imports a wrapped key. This API uses an asynchronous callback to return the result. > **说明：** > > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。
+Imports a wrapped key. This API uses an asynchronous callback to return the result. > **说明：** > > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 
@@ -35,7 +37,7 @@ Imports a wrapped key. This API uses an asynchronous callback to return the resu
 | keyAlias | string | 是 | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | 是 | Alias of the data used to unwrap the key imported. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Tags required for the import and the wrapped key to import. The algorithm, key purpose, and key length are mandatory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
 
 **错误码：**
 
@@ -242,7 +244,7 @@ function huksImportWrappedKey() {
 function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions): Promise<void>
 ```
 
-Imports a wrapped key. This API uses a promise to return the result. > **说明：** > > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。
+Imports a wrapped key. This API uses a promise to return the result. > **说明：** > > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 

@@ -6,7 +6,7 @@ Ability的状态信息。
 
 **废弃版本：** 9
 
-**替代接口：** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md#abilitystate)
+**替代接口：** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
 
 <!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 

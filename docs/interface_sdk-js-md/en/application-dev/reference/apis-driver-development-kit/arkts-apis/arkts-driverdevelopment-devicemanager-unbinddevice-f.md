@@ -18,7 +18,7 @@ Unbinds a peripheral device.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -31,7 +31,7 @@ Unbinds a peripheral device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)(deviceId: long)
+**Substitutes:** [unbindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md)(deviceId: long)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 

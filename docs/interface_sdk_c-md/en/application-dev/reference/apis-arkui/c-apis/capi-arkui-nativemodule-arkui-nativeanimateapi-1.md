@@ -53,7 +53,7 @@ Defines an explicit animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>             <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>             <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>             </ul> |
+| int32_t | <ul>               <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>              <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>              </ul> |
 
 ### keyframeAnimateTo()
 
@@ -76,7 +76,7 @@ Defines a keyframe animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul> <br>             <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>             <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>             </ul> |
+| int32_t | <ul>               <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>              <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>              </ul> |
 
 ### createAnimator()
 

@@ -23,11 +23,7 @@ Includes some memory-related methods and structures,such as: malloc, calloc, rea
 
 | Name | Description |
 | -- | -- |
-| [int malloc_check_from_ptr(void *ptr)
-
-struct mallinfo 
-
-struct mallinfo2](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated usingStandard C library Memory Allocator.		    This function is MT-Safe(multi-thread safe) but not signal-safe. |
+| [int malloc_check_from_ptr(void *ptr) struct mallinfo  struct mallinfo2](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated usingStandard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe. |
 | [struct mallinfo mallinfo(void)](#mallinfo) | Obtains the memory information allocated by malloc-related operations. |
 | [struct mallinfo2 mallinfo2(void)](#mallinfo2) | Obtains the memory information allocated by malloc-related operations. |
 
@@ -36,18 +32,12 @@ struct mallinfo2](#malloc_check_from_ptr) | This function determines whether a g
 ### malloc_check_from_ptr()
 
 ```c
-int malloc_check_from_ptr(void *ptr)
-
-struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost
-}
-
-struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost
-}
+int malloc_check_from_ptr(void *ptr) struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost } struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost }
 ```
 
 **Description**
 
-This function determines whether a given memory block was allocated usingStandard C library Memory Allocator.		    This function is MT-Safe(multi-thread safe) but not signal-safe.
+This function determines whether a given memory block was allocated usingStandard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe.
 
 **Since**: 19
 
@@ -61,7 +51,7 @@ This function determines whether a given memory block was allocated usingStandar
 
 | Type | Description |
 | -- | -- |
-| int | 1 - The memory block was allocated using Standard C library Memory Allocator.<br>          0 - The memory block was not allocated using Standard C library Memory Allocator.<br>          -1 - The function is not implemented or other error. |
+| int | 1 - The memory block was allocated using Standard C library Memory Allocator.           0 - The memory block was not allocated using Standard C library Memory Allocator.           -1 - The function is not implemented or other error. |
 
 ### mallinfo()
 
@@ -97,6 +87,6 @@ Obtains the memory information allocated by malloc-related operations.
 
 | Type | Description |
 | -- | -- |
-| struct | A mallinfo2 struct containing details about memory allocation. Unlike mallinfo, this struct uses<br> size_t for its counters, providing a larger range. |
+| struct | A mallinfo2 struct containing details about memory allocation. Unlike mallinfo, this struct uses  size_t for its counters, providing a larger range. |
 
 

@@ -1,8 +1,8 @@
 # SceneDetection (System API)
 
-Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#scenedetectionquery-system-api).
+Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md).
 
-**Inheritance/Implementation:** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md#scenedetectionquery-system-api)
+**Inheritance/Implementation:** SceneDetection extends [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md)
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ import { cameraPicker } from '@kit.CameraKit';
 enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 ```
 
-Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md#scenefeaturedetectionresult-system-api) of the corresponding scene feature is received.
+Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is received.
 
 **Since:** 23
 

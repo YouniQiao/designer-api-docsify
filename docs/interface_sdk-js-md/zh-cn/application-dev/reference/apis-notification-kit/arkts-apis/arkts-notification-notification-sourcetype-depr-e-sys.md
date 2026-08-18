@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md#sourcetype系统接口)
+**替代接口：** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md)
 
 <!--Device-notification-export enum SourceType--><!--Device-notification-export enum SourceType-End-->
 
@@ -26,7 +26,7 @@ TYPE_NORMAL = 0
 
 **废弃版本：** 9
 
-**替代接口：** [TYPE_NORMAL](arkts-notification-notificationmanager-sourcetype-e-sys.md#typenormal)
+**替代接口：** [TYPE_NORMAL](arkts-notification-notificationmanager-sourcetype-e-sys.md#type_normal)
 
 <!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
 
@@ -46,7 +46,7 @@ TYPE_CONTINUOUS = 1
 
 **废弃版本：** 9
 
-**替代接口：** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#typecontinuous)
+**替代接口：** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#type_continuous)
 
 <!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
 
@@ -66,7 +66,7 @@ TYPE_TIMER = 2
 
 **废弃版本：** 9
 
-**替代接口：** [TYPE_TIMER](arkts-notification-notificationmanager-sourcetype-e-sys.md#typetimer)
+**替代接口：** [TYPE_TIMER](arkts-notification-notificationmanager-sourcetype-e-sys.md#type_timer)
 
 <!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
 

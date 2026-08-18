@@ -1,12 +1,12 @@
 # Stat
 
-Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat) method synchronously or asynchronously to create a **Stat** instance.
+Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md) method synchronously or asynchronously to create a **Stat** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md#stat)
+**Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 

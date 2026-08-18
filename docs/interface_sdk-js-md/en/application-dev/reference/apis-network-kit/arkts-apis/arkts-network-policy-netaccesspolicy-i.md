@@ -1,6 +1,6 @@
 # NetAccessPolicy
 
-Network policies that limit the specified UID of application to access the network.
+Defines the network access policy information.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { policy } from '@kit.NetworkKit';
 allowCellular: boolean
 ```
 
-Indicate whether the application can be allowed to access the network by cellular.
+Whether to allow Internet access over the cellular network. **true**: yes. **false**: no.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ Indicate whether the application can be allowed to access the network by cellula
 allowWiFi: boolean
 ```
 
-Indicate whether the application can be allowed to access the network by wifi.
+Whether to allow Internet access over Wi-Fi. **true**: yes; **false**: no.
 
 **Type:** boolean
 

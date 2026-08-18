@@ -32,7 +32,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FileInfo&gt; | Returns the next level FileInfo Object. |
+| Array&lt;FileInfo&gt; | List of the files and directories obtained. |
 
 **Error codes:**
 

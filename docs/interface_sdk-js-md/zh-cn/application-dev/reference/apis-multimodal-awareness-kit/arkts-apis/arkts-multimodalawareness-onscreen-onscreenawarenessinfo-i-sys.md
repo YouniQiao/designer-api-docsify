@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## appIndex
@@ -81,7 +82,7 @@ bundleName?: string
 collectStrategy?: int
 ```
 
-页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#collectstrategy系统接口) 的按位或运算组合。
+页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) 的按位或运算组合。
 
 **类型：** int
 

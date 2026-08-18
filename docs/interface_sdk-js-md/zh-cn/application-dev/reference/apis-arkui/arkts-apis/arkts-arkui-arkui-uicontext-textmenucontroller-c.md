@@ -1,6 +1,6 @@
 # TextMenuController
 
-TextMenuController用于控制文本选择菜单的行为，支持设置菜单显示选项（如优先使用独立窗口显示）、屏蔽系统服务菜单项或指定菜单项，适用于需要自定义文本选择菜单显示方式或限制特定菜单功能的应用场景，如在特定业务场景下禁用翻译、搜索等功能。 > **说明：**> - setMenuOptions接口为非静态API，需先使用UIContext中的[getTextMenuController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#gettextmenucontroller)方法获取TextMenuController实例，再通过此实例调用对应方法。disableSystemServiceMenuItems和disableMenuItems为静态方法，可直接通过TextMenuController类调用。
+TextMenuController用于控制文本选择菜单的行为，支持设置菜单显示选项（如优先使用独立窗口显示）、屏蔽系统服务菜单项或指定菜单项，适用于需要自定义文本选择菜单显示方式或限制特定菜单功能的应用场景，如在特定业务场景下禁用翻译、搜索等功能。 > **说明：**> - setMenuOptions接口为非静态API，需先使用UIContext中的[getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller)方法获取TextMenuController实例，再通过此实例调用对应方法。disableSystemServiceMenuItems和disableMenuItems为静态方法，可直接通过TextMenuController类调用。
 
 **起始版本：** 16
 
@@ -11,6 +11,10 @@ TextMenuController用于控制文本选择菜单的行为，支持设置菜单�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## disableMenuItems
@@ -19,7 +23,7 @@ TextMenuController用于控制文本选择菜单的行为，支持设置菜单�
 static disableMenuItems(items: Array<TextMenuItemId>): void
 ```
 
-屏蔽文本选择菜单内指定的系统服务菜单项。适用于需要按需禁用特定菜单功能的场景，例如禁用搜索和翻译菜单以简化用户界面或限制对外部服务的访问。未通过该接口设置时，默认不禁用任何菜单。 > **说明：**> > > - 此接口调用后整个应用进程都会生效。 > > > - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability)使用。 > > > - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法 > onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > > > - 涉及文本选择菜单的组件有 Text、TextArea > 、TextInput、Search、 > RichEditor、Web。 > > > - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。 > > > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先设置的disableSystemServiceMenuItems的设置结果为准。。 > > > - 使用该接口时，全局生效，多次调用以最后一次为准。 > > > - 可以通过以下三种方式恢复禁用菜单： > > > - 仅设置disableSystemServiceMenuItems(true)禁用菜单时，设置false即可恢复菜单； > > > - 仅设置disableMenuItems禁用菜单时，设置为空数组即可恢复菜单； > > > - 当disableSystemServiceMenuItems与disableMenuItems同时使用时，则前者设置为false，后者设置为空数组，即可恢复菜单。
+屏蔽文本选择菜单内指定的系统服务菜单项。适用于需要按需禁用特定菜单功能的场景，例如禁用搜索和翻译菜单以简化用户界面或限制对外部服务的访问。未通过该接口设置时，默认不禁用任何菜单。 > **说明：**> > > - 此接口调用后整个应用进程都会生效。 > > > - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)使用。 > > > - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法 > onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > > > - 涉及文本选择菜单的组件有 Text、TextArea > 、TextInput、Search、 > RichEditor、Web。 > > > - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。 > > > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先设置的disableSystemServiceMenuItems的设置结果为准。。 > > > - 使用该接口时，全局生效，多次调用以最后一次为准。 > > > - 可以通过以下三种方式恢复禁用菜单： > > > - 仅设置disableSystemServiceMenuItems(true)禁用菜单时，设置false即可恢复菜单； > > > - 仅设置disableMenuItems禁用菜单时，设置为空数组即可恢复菜单； > > > - 当disableSystemServiceMenuItems与disableMenuItems同时使用时，则前者设置为false，后者设置为空数组，即可恢复菜单。
 
 **起始版本：** 20
 
@@ -43,7 +47,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 static disableSystemServiceMenuItems(disable: boolean): void
 ```
 
-屏蔽文本选择菜单内所有系统服务菜单项。适用于需要完全自定义文本选择菜单的场景，例如企业安全应用中仅保留复制、剪切、全选、粘贴等基础功能，禁用搜索、翻译、分享等可能涉及数据外发的服务菜单。未通过该接口设置时，默认不禁用系统服务菜单项。 > **说明：**> > > - 此接口调用后整个应用进程都会生效。 > > > - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#uiability)使用。 > > > - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > > > - 涉及文本选择菜单的组件有 Text、TextArea、TextInput、Search、RichEditor、Web。 > > > - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。 > > > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先调用的方法为准。例如：先调用disableSystemServiceMenuItems(true)，再调用disableMenuItems([...])时，以disableSystemServiceMenuItems的设置为准；反之，先调用disableMenuItems([...])时，则以disableMenuItems的设置为准。建议根据实际禁用范围需求选择使用其中一个方法，避免同时调用。 > > > - 使用该接口时，全局生效，多次调用以最后一次为准。 > > > - 可以通过以下三种方式恢复禁用菜单： > > > - 仅设置disableSystemServiceMenuItems(true)禁用菜单时，设置false即可恢复菜单； > > > - 仅设置disableMenuItems禁用菜单时，设置为空数组即可恢复菜单； > > > - 当disableSystemServiceMenuItems与disableMenuItems同时使用时，则前者设置为false，后者设置为空数组，即可恢复菜单。
+屏蔽文本选择菜单内所有系统服务菜单项。适用于需要完全自定义文本选择菜单的场景，例如企业安全应用中仅保留复制、剪切、全选、粘贴等基础功能，禁用搜索、翻译、分享等可能涉及数据外发的服务菜单。未通过该接口设置时，默认不禁用系统服务菜单项。 > **说明：**> > > - 此接口调用后整个应用进程都会生效。 > > > - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)使用。 > > > - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > > > - 涉及文本选择菜单的组件有 Text、TextArea、TextInput、Search、RichEditor、Web。 > > > - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。 > > > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先调用的方法为准。例如：先调用disableSystemServiceMenuItems(true)，再调用disableMenuItems([...])时，以disableSystemServiceMenuItems的设置为准；反之，先调用disableMenuItems([...])时，则以disableMenuItems的设置为准。建议根据实际禁用范围需求选择使用其中一个方法，避免同时调用。 > > > - 使用该接口时，全局生效，多次调用以最后一次为准。 > > > - 可以通过以下三种方式恢复禁用菜单： > > > - 仅设置disableSystemServiceMenuItems(true)禁用菜单时，设置false即可恢复菜单； > > > - 仅设置disableMenuItems禁用菜单时，设置为空数组即可恢复菜单； > > > - 当disableSystemServiceMenuItems与disableMenuItems同时使用时，则前者设置为false，后者设置为空数组，即可恢复菜单。
 
 **起始版本：** 20
 

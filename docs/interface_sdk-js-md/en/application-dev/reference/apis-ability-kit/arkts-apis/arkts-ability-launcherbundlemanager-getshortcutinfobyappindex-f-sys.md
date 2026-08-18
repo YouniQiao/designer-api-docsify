@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getShortcutInfoByAppIndex

@@ -13,6 +13,11 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## aiSessionOptions
@@ -35,7 +40,7 @@ aiSessionOptions(aiSessions: Array<AISessionEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | 是 | 前端AI会话配置对象数组，每个对象包含AI会话类型及对应的生命周期回调方法。当前仅支持 [AISessionType](arkts-arkweb-aisessiontype-e.md#aisessiontype)中包含的模型。 |
+| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | 是 | 前端AI会话配置对象数组，每个对象包含AI会话类型及对应的生命周期回调方法。当前仅支持 [AISessionType](arkts-arkweb-aisessiontype-e.md)中包含的模型。 |
 
 ## allowWindowOpenMethod
 
@@ -151,7 +156,7 @@ blockNetwork(block: boolean)
 blurOnKeyboardHideMode(mode: BlurOnKeyboardHideMode)
 ```
 
-设置当软键盘收起时Web元素失焦模式。当属性没有显式调用时，默认按[BlurOnKeyboardHideMode.SILENT](arkts-arkweb-bluronkeyboardhidemode-e.md#bluronkeyboardhidemode)模式处理。
+设置当软键盘收起时Web元素失焦模式。当属性没有显式调用时，默认按[BlurOnKeyboardHideMode.SILENT](arkts-arkweb-bluronkeyboardhidemode-e.md)模式处理。
 
 **起始版本：** 14
 
@@ -409,7 +414,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 enableAutoFill(value: boolean)
 ```
 
-设置是否启用网页自动填充，默认开启。 &lt;!--RP1--&gt; > **说明：** > > 本接口的自动填充功能，依赖“智能填充服务”和“密码填充服务”的支持。 &lt;!--RP1End--&gt;
+设置是否启用网页自动填充，默认开启。 <!--RP1--> > **说明：** > > 本接口的自动填充功能，依赖“智能填充服务”和“密码填充服务”的支持。 <!--RP1End-->
 
 **起始版本：** 23
 
@@ -429,7 +434,7 @@ enableAutoFill(value: boolean)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否识别网页文本特殊实体，如邮件、电话、网址等。该接口依赖设备底层具备文本识别能力，否则设置无效。该属性没有显式调用时，默认不启用。 > **说明：** > > [dataDetectorConfig](#datadetectorconfig)和 > [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。 > 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的 > color和decoration会被更改为如下样式： &lt;!--code_no_check--&gt; 当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在 网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address （导航至该位置）、dateTime（新建日程提醒）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
+设置是否识别网页文本特殊实体，如邮件、电话、网址等。该接口依赖设备底层具备文本识别能力，否则设置无效。该属性没有显式调用时，默认不启用。 > **说明：** > > [dataDetectorConfig](#datadetectorconfig)和 > [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。 > 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的 > color和decoration会被更改为如下样式： <!--code_no_check--> 当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在 网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address （导航至该位置）、dateTime（新建日程提醒）。 AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。 示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
 
 **起始版本：** 20
 
@@ -920,7 +925,7 @@ javaScriptAccess(javaScriptAccess: boolean)
 javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 > **说明：** > > - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。 > > - 该脚本按照字典序执行，非数组本身顺序。 > > - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 > > - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md#urlregexrule)。 > > - 建议使用[runJavaScriptOnDocumentEnd](#runjavascriptondocumentend)代替。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档加载完成时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 > **说明：** > > - 该脚本将在页面的任何JavaScript代码之后运行，并且DOM树此时已经加载、渲染完毕。 > > - 该脚本按照字典序执行，非数组本身顺序。 > > - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 > > - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。 > > - 建议使用[runJavaScriptOnDocumentEnd](#runjavascriptondocumentend)代替。
 
 **起始版本：** 11
 
@@ -942,7 +947,7 @@ javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 ```
 
-将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 > **说明：** > > - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。 > > - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) > 接口。 > > - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 > > - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md#urlregexrule)。 > > - 建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart)代替。
+将JavaScript脚本注入到Web组件中，当指定页面或者文档开始加载时，该脚本将在其来源与scriptRules匹配的任何页面中执行。当属性没有显式调用时，默认不将JavaScript脚本注入到Web组件中。 > **说明：** > > - 网页文档根元素（HTML Element）创建后、但尚未加载任何其他内容之前注入脚本。 > > - 该脚本按照字典序执行，非数组本身顺序，若需数组本身顺序，建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) > 接口。 > > - 内容相同的脚本多次注入时将被静默去重，不展示，不提醒，使用首次注入时的scriptRules。 > > - 本接口不支持[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)。 > > - 建议使用[runJavaScriptOnDocumentStart](#runjavascriptondocumentstart)代替。
 
 **起始版本：** 11
 
@@ -1008,7 +1013,7 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode)
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md#keyboardavoidmode)模式时，该接口功能不生效。
+Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
 
 **起始版本：** 12
 
@@ -1052,7 +1057,7 @@ layoutMode(mode: WebLayoutMode)
 mediaOptions(options: WebMediaOptions)
 ```
 
-设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。 > **说明：** > > - 同一Web实例中的多个音频均视为同一音频。 > > - 该媒体播放策略将同时管控有声视频。 > > - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md#webmediaoptions)值。 > > - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
+设置Web媒体播放的策略，其中包括：Web中的音频在重新获焦后能够自动续播的有效期、应用内多个Web实例的音频是否独占。当该属性未显式设置时，默认Web中的音频重新获焦后无法自动续播、应用内多个Web实例的音频是独占的。 > **说明：** > > - 同一Web实例中的多个音频均视为同一音频。 > > - 该媒体播放策略将同时管控有声视频。 > > - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md)值。 > > - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
 
 **起始版本：** 10
 
@@ -1924,7 +1929,7 @@ onInterceptKeyboardAttach(callback: WebKeyboardCallback)
 onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse>)
 ```
 
-当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。 此类场景需改用[WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md#webschemehandler)实现，依据具体业务需求进行判断。
+当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。 此类场景需改用[WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md)实现，依据具体业务需求进行判断。
 
 **起始版本：** 9
 
@@ -2134,7 +2139,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-当网页中同层标签（例如&lt;embed\&gt;标签或&lt;object\&gt;标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或 全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置 [nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md#embedoptions)中的 supportCssDisplayChange参数设为true。
+当网页中同层标签（例如&lt;embed\&gt;标签或&lt;object\&gt;标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或 全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置 [nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md)中的 supportCssDisplayChange参数设为true。
 
 **起始版本：** 12
 

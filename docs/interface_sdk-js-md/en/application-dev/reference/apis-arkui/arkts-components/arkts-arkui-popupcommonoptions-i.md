@@ -1,6 +1,6 @@
 # PopupCommonOptions
 
-Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) is called.
+Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) is called.
 
 **Since:** 18
 
@@ -523,7 +523,7 @@ Preferred position of the popup. If the set position is insufficient for holding
 popupColor?: ResourceColor
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#blurstyle)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
 **Type:** ResourceColor
 

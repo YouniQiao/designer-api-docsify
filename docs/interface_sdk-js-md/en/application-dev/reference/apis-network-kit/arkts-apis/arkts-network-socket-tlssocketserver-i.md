@@ -1,8 +1,8 @@
 # TLSSocketServer
 
-Defines a TLSSocketServer server connection.
+Defines a TLS socket server connection. Before calling TLSSocketServer APIs, you need to call [socket.constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md) to create a **TLSSocketServer** object.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-export interface TLSSocketServer--><!--Device-socket-export interface TLSSocketServer-End-->
 
@@ -20,9 +20,9 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-Close the TLSSocketServer. Close the TLSSocketServer listening port.
+Stops listening for events of the **TLSSocketServer** object and releases the port bound by [listen](arkts-network-socket-tcpsocketserver-i.md#listen). This API uses a promise to return the result. > **NOTE：**> > This API does not close existing connections. To close the connection, call the > [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of > [TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md).
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -34,7 +34,7 @@ Close the TLSSocketServer. Close the TLSSocketServer listening port.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -88,9 +88,9 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-Returns an object representing a local certificate.
+Obtains the local digital certificate after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketServer-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
@@ -100,7 +100,7 @@ Returns an object representing a local certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | The callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the local certificate is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -117,9 +117,9 @@ Returns an object representing a local certificate.
 getCertificate(): Promise<X509CertRawData>
 ```
 
-Returns an object representing a local certificate.
+Obtains the local digital certificate after a **TLSSocketServer** connection is established. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketServer-getCertificate(): Promise<X509CertRawData>-End-->
 
@@ -129,7 +129,7 @@ Returns an object representing a local certificate.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | The promise returned by the function. |
+| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -145,9 +145,9 @@ Returns an object representing a local certificate.
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local address of the TLSSocketServer connection.
+Obtains the local socket address of a **TLSSocketServer** connection. This API uses a promise to return the result. > **NOTE：**> > Call this API only after the **TLSSocketServer** connection is successfully established.
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -157,7 +157,7 @@ Obtains the local address of the TLSSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Obtains the local address of the TLSSocketServer connection.
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -187,9 +187,9 @@ tlsServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
 getProtocol(callback: AsyncCallback<string>): void
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection. For connected sockets that have not completed the handshake process, the value 'unknown' will be returned. Server sockets or disconnected client sockets will return a value of null.
+Obtains the communication protocol version after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocketServer-getProtocol(callback: AsyncCallback<string>): void-End-->
 
@@ -199,7 +199,7 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getProtocol. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -256,9 +256,9 @@ tlsServer.getProtocol((err: BusinessError, data: string) => {
 getProtocol(): Promise<string>
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection. For connected sockets that have not completed the handshake process, the value 'unknown' will be returned. Server sockets or disconnected client sockets will return a value of null.
+Obtains the communication protocol version after a **TLSSocketServer** connection is established. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getProtocol(): Promise<string>--><!--Device-TLSSocketServer-getProtocol(): Promise<string>-End-->
 
@@ -268,7 +268,7 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| Promise&lt;string&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -322,9 +322,9 @@ tlsServer.getProtocol().then((data: string) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the TLSSocketServer.
+Obtains the file descriptor bound to the TLSSocketServer listening port. This API uses a promise to return the result. > **NOTE：**> > - This method can be called only after the [listen](arkts-network-socket-tcpsocketserver-i.md#listen) method is successfully > called. When listen is called for multiple times, the file descriptor bound to the latest listening port is > obtained. > > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after > close is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly > operating the file descriptor.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -336,7 +336,7 @@ Obtains the file descriptor of the TLSSocketServer.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returns the file descriptor of the TLS socket server. |
+| Promise&lt;int&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -388,9 +388,9 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-Obtains the status of the TLSSocketServer connection.
+Obtains the status of the TLS socket server connection upon successful listening. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocketServer-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
@@ -400,7 +400,7 @@ Obtains the status of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | The callback of getState. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the status of the TLS socket server connection is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -408,7 +408,7 @@ Obtains the status of the TLSSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -456,9 +456,9 @@ tlsServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of the TLSSocketServer connection.
+Obtains the status of the TLS socket server connection upon successful listening. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>--><!--Device-TLSSocketServer-getState(): Promise<SocketStateBase>-End-->
 
@@ -468,14 +468,14 @@ Obtains the status of the TLSSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -521,9 +521,9 @@ tlsServer.getState().then(() => {
 listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system. &lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Listens for client connections after **bind** is successfully called to bind the IP address and port of **TLSSocketServer**. This API uses an asynchronous callback to return the result. After a connection is established, a TLS session will be created and initialized and a certificate key will be loaded and verified. > **NOTE：**> > If the IP address is set to 0.0.0.0, all local IP addresses can be listened on.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -535,8 +535,8 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | TLS connection options [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md#tlsconnectoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of listen. |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Parameters required for the connection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -593,9 +593,9 @@ tlsServer.listen(tlsConnectOptions, (err: BusinessError) => {
 listen(options: TLSConnectOptions): Promise<void>
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system. &lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Listens for client connections after **bind** is successfully called to bind the IP address and port of **TLSSocketServer**. This API uses an asynchronous callback to return the result. After a connection is established, a TLS session will be created and initialized and a certificate key will be loaded and verified.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -607,13 +607,13 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | TLS connection options [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md#tlsconnectoptions). |
+| options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Parameters required for the connection. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -666,15 +666,15 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## off_connect
+## off_connect('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 ```
 
-Cancels listening for connect events of the TLSSocketServer connection.
+Unsubscribes from **connect** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called. > > You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-off(type: 'connect', callback?: Callback<TLSSocketConnection>): void-End-->
 
@@ -684,8 +684,8 @@ Cancels listening for connect events of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | No | The callback of off. |
+| type | 'connect' | Yes | Event type.<br/> **connect**: connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | No | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -734,15 +734,15 @@ tlsServer.off('connect', callback);
 tlsServer.off('connect');
 ```
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Cancels listening for error events of the TLSSocketServer connection.
+Unsubscribes from **error** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called. > > You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. > If you do not pass the callback, you will cancel listening for all events.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -752,8 +752,8 @@ Cancels listening for error events of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | The callback of off. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -802,15 +802,15 @@ tlsServer.off('error', callback);
 tlsServer.off('error');
 ```
 
-## on_connect
+## on_connect('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 ```
 
-Listens for connect events of the TLSSocketServer connection.
+Subscribes to TLS socket server connection events. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void--><!--Device-TLSSocketServer-on(type: 'connect', callback: Callback<TLSSocketConnection>): void-End-->
 
@@ -820,8 +820,8 @@ Listens for connect events of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | Yes | The callback of on. |
+| type | 'connect' | Yes | Event type.<br/> **connect**: connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -865,15 +865,15 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Listens for error events of the TLSSocketServer connection.
+Subscribes to **error** events of the **TLSSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -883,8 +883,8 @@ Listens for error events of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | The callback of on. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -934,9 +934,9 @@ tlsServer.on('error', (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets other attributes of the TLSSocketServer connection.
+Sets other properties of the **TLSSocketServer** object after **listen** is successfully called. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -946,8 +946,8 @@ Sets other attributes of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setExtraOptions. |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TLSSocketServer** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -955,7 +955,7 @@ Sets other attributes of the TLSSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -1019,9 +1019,9 @@ tlsServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions): Promise<void>
 ```
 
-Sets other attributes of the TLSSocketServer connection.
+Sets other properties of the **TLSSocketServer** object after **listen** is successfully called. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocketServer-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
@@ -1031,13 +1031,13 @@ Sets other attributes of the TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TLSSocketServer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1045,7 +1045,7 @@ Sets other attributes of the TLSSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 

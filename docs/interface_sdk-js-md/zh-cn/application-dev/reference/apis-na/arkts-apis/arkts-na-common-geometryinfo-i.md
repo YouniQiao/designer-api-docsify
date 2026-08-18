@@ -2,7 +2,7 @@
 
 Sub component layout info.
 
-**继承/实现关系：** GeometryInfo extends [SizeResult](arkts-na-common-sizeresult-i.md#sizeresult)
+**继承/实现关系：** GeometryInfo extends [SizeResult](arkts-na-common-sizeresult-i.md)
 
 **起始版本：** 23
 

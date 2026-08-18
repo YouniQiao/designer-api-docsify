@@ -21,7 +21,7 @@ Checks whether a Wi-Fi connection has been set up.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isConnected](arkts-connectivity-wifimanager-isconnected-f.md#isconnected)
+**Substitutes:** [isConnected](arkts-connectivity-wifimanager-isconnected-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

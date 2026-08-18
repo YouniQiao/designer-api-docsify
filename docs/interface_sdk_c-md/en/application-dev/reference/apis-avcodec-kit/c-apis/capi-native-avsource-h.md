@@ -57,7 +57,7 @@ Creates an OH_AVSource instance with a user-defined data source. You can release
 
 | Type | Description |
 | -- | -- |
-| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of dataSource is nullptr.<br>     <br>2. The size of the data source is 0.<br>     <br>3. Setting the data source fails.<br>     <br>4. The memory is insufficient.<br>     <br>5. The decoder engine is nullptr.<br>     <br>6. dataSource-&gt;readAt == nullptr. |
+| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of dataSource is nullptr.      <br>2. The size of the data source is 0.      <br>3. Setting the data source fails.      <br>4. The memory is insufficient.      <br>5. The decoder engine is nullptr.      <br>6. dataSource-&gt;readAt == nullptr. |
 
 ### OH_AVSource_CreateWithDataSourceExt()
 
@@ -82,7 +82,7 @@ Creates an OH_AVSource instance with a user-defined data source. You can release
 
 | Type | Description |
 | -- | -- |
-| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of dataSource is nullptr.<br>     <br>2. The size of the data source is 0.<br>     <br>3. Setting the data source fails.<br>     <br>4. The memory is insufficient.<br>     <br>5. The decoder engine is nullptr.<br>     <br>6. dataSource-&gt;readAt == nullptr. |
+| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of dataSource is nullptr.      <br>2. The size of the data source is 0.      <br>3. Setting the data source fails.      <br>4. The memory is insufficient.      <br>5. The decoder engine is nullptr.      <br>6. dataSource-&gt;readAt == nullptr. |
 
 ### OH_AVSource_CreateWithURI()
 
@@ -106,7 +106,7 @@ Creates an OH_AVSource instance based on a URI. You can release the instance by 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.<br>  The possible causes of an operation failure are as follows:<br>     <br>1. The network is abnormal.<br>     <br>2. The resource is invalid.<br>     <br>3. The file format is not supported.<br>     <br>4. The application configuration is intercepted because it contains plaintext data. |
+| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.   The possible causes of an operation failure are as follows:      <br>1. The network is abnormal.      <br>2. The resource is invalid.      <br>3. The file format is not supported.      <br>4. The application configuration is intercepted because it contains plaintext data. |
 
 ### OH_AVSource_CreateWithFD()
 
@@ -132,7 +132,7 @@ Creates an OH_AVSource instance based on an FD. You can release the instance by 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The FD is invalid.<br>     <br>2. The offset is not the start position of the file.<br>     <br>3. The size is incorrect.<br>     <br>4. The resource is invalid.<br>     <br>5. The file format is not supported. |
+| [OH_AVSource *](capi-avsource-oh-avsource.md) | Pointer to the OH_AVSource instance created. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The FD is invalid.      <br>2. The offset is not the start position of the file.      <br>3. The size is incorrect.      <br>4. The resource is invalid.      <br>5. The file format is not supported. |
 
 ### OH_AVSource_Destroy()
 
@@ -156,7 +156,7 @@ Destroys an OH_AVSource instance and clears internal resources.An instance can b
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode):<br>     <br>1. The value of source is nullptr.<br>     <br>2. The value of source does not point to an OH_AVSource instance. |
+| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode):      <br>1. The value of source is nullptr.      <br>2. The value of source does not point to an OH_AVSource instance. |
 
 ### OH_AVSource_GetSourceFormat()
 
@@ -180,7 +180,7 @@ Obtains the basic information about a media resource file.You must call [OH_AVFo
 
 | Type | Description |
 | -- | -- |
-| [OH_AVFormat *](capi-core-oh-avformat.md) | Basic information about the file. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of source is nullptr.<br>     <br>2. The pointer is null or does not point to an OH_AVSource instance.<br>     <br>3. The source is not initialized. |
+| OH_AVFormat * | Basic information about the file. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of source is nullptr.      <br>2. The pointer is null or does not point to an OH_AVSource instance.      <br>3. The source is not initialized. |
 
 ### OH_AVSource_GetTrackFormat()
 
@@ -205,7 +205,7 @@ Obtains the basic information about a track.You must call [OH_AVFormat_Destroy](
 
 | Type | Description |
 | -- | -- |
-| [OH_AVFormat *](capi-core-oh-avformat.md) | Basic information about the track. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of source is invalid (either nullptr or a pointer to a non-OH_AVSource instance).<br>     <br>2. The track index is out of range.<br>     <br>3. The source is not initialized. |
+| OH_AVFormat * | Basic information about the track. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of source is invalid (either nullptr or a pointer to a non-OH_AVSource instance).      <br>2. The track index is out of range.      <br>3. The source is not initialized. |
 
 ### OH_AVSource_GetCustomMetadataFormat()
 
@@ -229,6 +229,6 @@ Obtains the basic information about custom metadata.You must call [OH_AVFormat_D
 
 | Type | Description |
 | -- | -- |
-| [OH_AVFormat *](capi-core-oh-avformat.md) | Basic information about the metadata. If the operation fails, NULL is returned.<br>     <br>The possible causes of an operation failure are as follows:<br>     <br>1. The value of source is nullptr.<br>     <br>2. The pointer is null or does not point to an OH_AVSource instance.<br>     <br>3. The source is not initialized. |
+| OH_AVFormat * | Basic information about the metadata. If the operation fails, NULL is returned.      <br>The possible causes of an operation failure are as follows:      <br>1. The value of source is nullptr.      <br>2. The pointer is null or does not point to an OH_AVSource instance.      <br>3. The source is not initialized. |
 
 

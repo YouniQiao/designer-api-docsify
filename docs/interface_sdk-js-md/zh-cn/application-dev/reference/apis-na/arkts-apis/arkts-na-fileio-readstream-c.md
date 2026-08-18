@@ -1,8 +1,8 @@
 # ReadStream
 
-文件可读流，需要先通过[fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md#createreadstream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)。 **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
+文件可读流，需要先通过[fileIo.createReadStream](arkts-na-fileio-createreadstream-f.md)方法来构建一个ReadStream实例。ReadStream继承自数据流基类 [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)。 **规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md#readable)
+**继承/实现关系：** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
 
 **起始版本：** 23
 

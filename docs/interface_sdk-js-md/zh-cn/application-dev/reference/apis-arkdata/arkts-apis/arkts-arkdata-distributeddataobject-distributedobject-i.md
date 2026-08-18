@@ -1,6 +1,6 @@
 # DistributedObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject)获取 DistributedObject对象。
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取 DistributedObject对象。
 
 **起始版本：** 8
 
@@ -15,9 +15,10 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
-## off_change
+## off_change('change')
 
 ```TypeScript
 off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void
@@ -72,7 +73,7 @@ g_object.off('change', (sessionId: string, fields: Array<string>) => {
 g_object.off('change');
 ```
 
-## off_status
+## off_status('status')
 
 ```TypeScript
 off(
@@ -125,7 +126,7 @@ g_object.off('status', (sessionId: string, networkId: string, status: 'online' |
 g_object.off('status');
 ```
 
-## on_change
+## on_change('change')
 
 ```TypeScript
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void
@@ -177,7 +178,7 @@ g_object.on('change', (sessionId: string, fields: Array<string>) => {
 });
 ```
 
-## on_status
+## on_status('status')
 
 ```TypeScript
 on(

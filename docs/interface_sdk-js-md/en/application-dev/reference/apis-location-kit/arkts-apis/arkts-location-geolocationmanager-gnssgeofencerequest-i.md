@@ -54,7 +54,7 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 Indicates the callback for reporting the geofence transition status.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
 
 **Since:** 23
 

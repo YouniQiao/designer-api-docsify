@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { StartupTask } from '@kit.AbilityKit';
-import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## Summary

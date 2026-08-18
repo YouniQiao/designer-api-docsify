@@ -14,7 +14,6 @@ Tone attributes.
 
 ```TypeScript
 import { systemSoundManager } from '@kit.AudioKit';
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## getCategory
@@ -241,7 +240,7 @@ Sets tone category.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | int | Yes | tone category. This parameter can be one of [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryringtone), [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tonecategorytextmessage), [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tonecategorynotification), [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tonecategoryalarm). In addition, this parameter can be result of OR logical operator of these constants. |
+| category | int | Yes | tone category. This parameter can be one of [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone), [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message), [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification), [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm). In addition, this parameter can be result of OR logical operator of these constants. |
 
 **Error codes:**
 

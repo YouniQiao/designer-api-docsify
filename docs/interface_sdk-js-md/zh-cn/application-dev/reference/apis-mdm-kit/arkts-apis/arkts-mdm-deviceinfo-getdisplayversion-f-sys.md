@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDisplayVersion
@@ -17,7 +18,7 @@ function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
+**替代接口：** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -34,7 +35,7 @@ function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备版本号，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当接口调用成功，err为null，data为设备版本号，否则err为错误对象。 |
 
 **错误码：**
 
@@ -80,7 +81,7 @@ function getDisplayVersion(admin: Want): Promise<string>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
+**替代接口：** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 

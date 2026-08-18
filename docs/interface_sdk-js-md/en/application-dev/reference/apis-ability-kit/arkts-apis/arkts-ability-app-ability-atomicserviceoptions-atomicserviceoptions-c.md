@@ -1,8 +1,8 @@
 # AtomicServiceOptions
 
-**AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions).
+**AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md).
 
-**Inheritance/Implementation:** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions)
+**Inheritance/Implementation:** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
 **Since:** 23
 
@@ -14,7 +14,6 @@
 
 ```TypeScript
 import { AtomicServiceOptions } from '@kit.AbilityKit';
-import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService
@@ -25,7 +24,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 Operation class for receiving the result of opening an atomic service.
 
-**Type:** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+**Type:** [CompletionHandlerForAtomicService](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **Since:** 23
 
@@ -63,9 +62,9 @@ Mode in which the system processes the startup. For example, **wantConstant.Flag
 parameters?: Record<string, RecordData>
 ```
 
-Additional parameters. For details, see the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#want).
+Additional parameters. For details, see the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md).
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

@@ -24,9 +24,19 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditemstyle-e.md#griditemstyle) enum type. |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditemstyle-e.md) enum type. |
 
 ## Summary
 
-- [GridItemOptions](arkts-arkui-griditemoptions-i.md)
-- [GridItemStyle](arkts-arkui-griditemstyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [GridItemOptions](arkts-arkui-griditemoptions-i.md) | Defines the style of a grid item. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [GridItemStyle](arkts-arkui-griditemstyle-e.md) | Enumerates styles of grid items. > **NOTE：**> > To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for > accommodating the focus frame of the grid item. |
+

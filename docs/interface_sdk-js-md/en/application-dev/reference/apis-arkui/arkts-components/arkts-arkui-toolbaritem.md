@@ -24,9 +24,19 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md#toolbaritemplacement) type.<br>Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md) type.<br>Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## Summary
 
-- [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md)
-- [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | Provides optional parameters for **ToolBarItem** configuration. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md) | Enumerates the placement options for toolbar items in the title bar. |
+

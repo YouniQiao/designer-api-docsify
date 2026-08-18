@@ -28,8 +28,8 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Checks whether a key exists. This API uses a promise to return the result. If th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#huksauthstoragelevel) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 

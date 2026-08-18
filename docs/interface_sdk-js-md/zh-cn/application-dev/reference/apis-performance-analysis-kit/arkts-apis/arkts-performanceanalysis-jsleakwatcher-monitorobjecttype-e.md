@@ -4,7 +4,7 @@
 
 **起始版本：** 26.1.0
 
-<!--Device-jsLeakWatcher-export declare enum MonitorObjectType--><!--Device-jsLeakWatcher-export declare enum MonitorObjectType-End-->
+<!--Device-jsLeakWatcher-export enum MonitorObjectType--><!--Device-jsLeakWatcher-export enum MonitorObjectType-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

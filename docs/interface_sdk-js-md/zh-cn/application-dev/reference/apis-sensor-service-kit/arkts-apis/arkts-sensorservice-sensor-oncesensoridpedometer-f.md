@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorId.PEDOMETER
@@ -26,7 +27,7 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.PEDOMETER | 是 | Sensor type. 传感器类型，该值固定为SensorId.PEDOMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为PedometerResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为PedometerResponse。 |
 
 **错误码：**
 

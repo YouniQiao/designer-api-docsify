@@ -52,4 +52,9 @@ Defines the constructor of Line component.
 
 ## Summary
 
-- [LineOptions](arkts-arkui-lineoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [LineOptions](arkts-arkui-lineoptions-i.md) | Describes the options of the line. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element's > @since version number is higher than inner elements'. This does not affect interface usability. |
+

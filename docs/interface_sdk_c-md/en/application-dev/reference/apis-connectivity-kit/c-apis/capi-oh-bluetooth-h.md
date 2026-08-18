@@ -93,6 +93,6 @@ Get the bluetooth switch state.
 
 | Type | Description |
 | -- | -- |
-| [Bluetooth_ResultCode](capi-oh-bluetooth-h.md#bluetooth_resultcode) | Bluetooth functions result code.<br>     For a detailed definition, please refer to [Bluetooth_ResultCode](capi-oh-bluetooth-h.md#bluetooth_resultcode).<br>     [BLUETOOTH_SUCCESS](capi-oh-bluetooth-h.md#bluetooth_resultcode) Successfully obtained the bluetooth switch status.<br>     [BLUETOOTH_INVALID_PARAM](capi-oh-bluetooth-h.md#bluetooth_resultcode) The input parameter enabled is a null pointer. |
+| [Bluetooth_ResultCode](capi-oh-bluetooth-h.md#bluetooth_resultcode) | Bluetooth functions result code.      For a detailed definition, please refer to [Bluetooth_ResultCode](capi-oh-bluetooth-h.md#bluetooth_resultcode).      [BLUETOOTH_SUCCESS](capi-oh-bluetooth-h.md#bluetooth_resultcode) Successfully obtained the bluetooth switch status.      [BLUETOOTH_INVALID_PARAM](capi-oh-bluetooth-h.md#bluetooth_resultcode) The input parameter enabled is a null pointer. |
 
 

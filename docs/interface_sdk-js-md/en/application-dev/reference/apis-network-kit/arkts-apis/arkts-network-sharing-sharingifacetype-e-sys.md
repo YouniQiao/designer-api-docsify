@@ -16,7 +16,7 @@ Enumerates the network sharing types of an NIC.
 SHARING_WIFI = 0
 ```
 
-Network sharing type for Wi-Fi.
+Wi-Fi hotspot sharing.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Network sharing type for Wi-Fi.
 SHARING_USB = 1
 ```
 
-Network sharing type for USB.
+USB sharing.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Network sharing type for USB.
 SHARING_BLUETOOTH = 2
 ```
 
-Network sharing type for BLUETOOTH.
+Bluetooth sharing.
 
 **Since:** 23
 

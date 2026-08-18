@@ -28,7 +28,17 @@ SideBarContainer(type?: SideBarContainerType)
 
 ## 汇总
 
-- [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
-- [ButtonStyle](arkts-arkui-buttonstyle-i.md)
-- [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md)
-- [SideBarPosition](arkts-arkui-sidebarposition-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | 设置侧边栏控制按钮的图标。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 设置侧边栏控制按钮的样式。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 容器内侧边栏样式枚举。 |
+| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 侧边栏显示位置。 |
+

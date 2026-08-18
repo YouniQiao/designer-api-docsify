@@ -6,7 +6,7 @@ The **fileAccess** module provides a framework for accessing and operating user 
 
 **Deprecated since:** 23
 
-**Substitutes:** [fileIo](arkts-corefile-fileio-n.md#fileio)
+**Substitutes:** [fileIo](../../apis-na/arkts-apis/arkts-na-fileio-n.md)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 
@@ -21,18 +21,18 @@ import { fileAccess } from '@kit.CoreFileKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper) | Creates a **Helper** object to bind with all file management services in the system. This API returns the result synchronously. |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper-system-api) | Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The **Helper** object provides file access and management capabilities. |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo) | Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result. |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-system-api) | Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result. |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md) | Creates a **Helper** object to bind with all file management services in the system. This API returns the result synchronously. |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md) | Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The **Helper** object provides file access and management capabilities. |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md) | Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result. |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md) | Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -47,7 +47,7 @@ import { fileAccess } from '@kit.CoreFileKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -57,10 +57,10 @@ import { fileAccess } from '@kit.CoreFileKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Constants（系统接口）
+### Constants(System API)
 
 | Name | Description |
 | --- | --- |
-| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#devicesuri) | Indicates the root uri of the device |
+| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#devices_uri) | Indicates the root uri of the device |
 <!--DelEnd-->
 

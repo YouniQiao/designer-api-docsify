@@ -136,7 +136,7 @@ Request next vsync with callback.If you call this interface multiple times in on
 
 | Type | Description |
 | -- | -- |
-| int | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or callback is NULL.<br>     {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or callback is NULL.      {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeVSync_RequestFrameWithMultiCallback()
 
@@ -164,7 +164,7 @@ Request next vsync with callback.If this function is called multiple times in on
 
 | Type | Description |
 | -- | -- |
-| int | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or callback is NULL.<br>     {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or callback is NULL.      {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeVSync_GetPeriod()
 
@@ -218,7 +218,7 @@ Enables DVSync to improve the smoothness of self-drawing animations.DVSync, shor
 
 | Type | Description |
 | -- | -- |
-| int | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL.<br>     {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL.      {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeVSync_SetExpectedFrameRateRange()
 
@@ -245,6 +245,6 @@ Set vsync expected frame rate range.
 
 | Type | Description |
 | -- | -- |
-| int | {@link NATIVE_ERROR_OK} 0 - Success.<br>     {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or range is NULL or Invalid. |
+| int | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - the parameter nativeVsync is NULL or range is NULL or Invalid. |
 
 

@@ -1,8 +1,8 @@
 # X963KdfSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#kdfspec). It is a parameter for X963KDF key derivation function (KDF). > **NOTE：**> > **key** is the original key material entered by the user.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for X963KDF key derivation function (KDF). > **NOTE：**> > **key** is the original key material entered by the user.
 
-**Inheritance/Implementation:** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#kdfspec)
+**Inheritance/Implementation:** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 

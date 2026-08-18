@@ -28,5 +28,10 @@ Creates a **Flex** component.
 
 ## Summary
 
-- [FlexOptions](arkts-arkui-flexoptions-i.md)
-- [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [FlexOptions](arkts-arkui-flexoptions-i.md) | Describes the layout and alignment of child components within the **Flex** component. |
+| [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md) | Sets the spacing between child components along the main axis or cross axis of the **Flex** component. |
+

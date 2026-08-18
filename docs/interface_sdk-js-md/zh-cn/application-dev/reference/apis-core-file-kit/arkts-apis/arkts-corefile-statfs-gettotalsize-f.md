@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getTotalSize
@@ -11,7 +12,7 @@
 function getTotalSize(path: string): Promise<long>
 ```
 
-异步方法获取指定文件系统总字节数，以Promise形式返回结果。
+获取指定文件或目录所在文件系统的总字节数。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -23,13 +24,13 @@ function getTotalSize(path: string): Promise<long>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回总字节数。 |
+| Promise&lt;long&gt; | Promise对象，返回总字节数，单位为Byte。 |
 
 **错误码：**
 
@@ -72,7 +73,7 @@ statfs.getTotalSize(path).then((totalSize: number) => {
 function getTotalSize(path: string, callback: AsyncCallback<long>): void
 ```
 
-异步方法获取指定文件系统总字节数，使用callback形式返回结果。
+获取指定文件或目录所在文件系统的总字节数。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -84,8 +85,8 @@ function getTotalSize(path: string, callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 需要查询的文件系统的文件路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 异步获取总字节数之后的回调。 |
+| path | string | 是 | 文件或目录的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数，返回总字节数，单位为Byte。 |
 
 **错误码：**
 

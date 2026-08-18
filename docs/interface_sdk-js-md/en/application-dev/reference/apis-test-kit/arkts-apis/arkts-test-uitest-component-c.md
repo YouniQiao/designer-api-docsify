@@ -639,7 +639,7 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode). <br> **Note：**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). <br> **Note：**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md#arktscollections), [Uint8Array](arkts-collections.md#arktscollections), [Int16Array](arkts-collections.md#arktscollections), [Uint16Array](arkts-collections.md#arktscollections), [Int32Array](arkts-collections.md#arktscollections), [Uint32Array](arkts-collections.md#arktscollections), [Uint8ClampedArray](arkts-collections.md#arktscollections), and [Float32Array](arkts-collections.md#arktscollections)). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md), [Uint8Array](arkts-collections.md), [Int16Array](arkts-collections.md), [Uint16Array](arkts-collections.md), [Int32Array](arkts-collections.md), [Uint32Array](arkts-collections.md), [Uint8ClampedArray](arkts-collections.md), and [Float32Array](arkts-collections.md)). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 

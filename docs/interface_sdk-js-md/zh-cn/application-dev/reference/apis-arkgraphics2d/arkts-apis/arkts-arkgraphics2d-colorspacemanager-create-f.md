@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## create

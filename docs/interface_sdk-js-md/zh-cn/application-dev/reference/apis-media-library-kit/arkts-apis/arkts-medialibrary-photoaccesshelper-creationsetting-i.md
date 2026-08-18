@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -39,7 +40,7 @@ fileNameExtension: string
 photoType: PhotoType
 ```
 
-创建的媒体文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype)，包含IMAGE或VIDEO。
+创建的媒体文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)，包含IMAGE或VIDEO。
 
 **类型：** PhotoType
 

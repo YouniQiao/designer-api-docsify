@@ -28,7 +28,17 @@ Toggle(options: ToggleOptions)
 
 ## Summary
 
-- [SwitchStyle](arkts-arkui-switchstyle-i.md)
-- [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)
-- [ToggleOptions](arkts-arkui-toggleoptions-i.md)
-- [ToggleType](arkts-arkui-toggletype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [SwitchStyle](arkts-arkui-switchstyle-i.md) | Sets the style for the component of the **Switch** type. |
+| [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. This API inherits from CommonConfiguration. |
+| [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Options of the toggle. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is larger than inner elements'. This does not affect interface usability. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ToggleType](arkts-arkui-toggletype-e.md) | Enumerates toggle types. |
+

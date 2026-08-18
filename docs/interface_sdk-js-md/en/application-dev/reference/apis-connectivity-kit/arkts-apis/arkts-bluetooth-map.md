@@ -20,10 +20,10 @@ import { map } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md#createmapmseprofile) | create the instance of MAP MSE profile. |
+| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md) | create the instance of MAP MSE profile. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -37,7 +37,7 @@ import { map } from '@kit.ConnectivityKit';
 | [BaseProfile](arkts-connectivity-map-baseprofile-t.md) | Base interface of profile. |
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

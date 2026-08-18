@@ -1,6 +1,6 @@
 # HttpDataType
 
-Indicates the type of the returned data.
+Enumerates HTTP data types. | Name| Value| Description | | ------------------ | -- | ----------- | | STRING | 0 | String type.| | OBJECT | 1 | Object type. | | ARRAY_BUFFER | 2 | Binary array type.|
 
 **Since:** 23
 
@@ -11,16 +11,16 @@ Indicates the type of the returned data.
 ## STRING
 
 ```TypeScript
-STRING
+STRING = 0
 ```
 
 The returned type is string.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-HttpDataType-STRING--><!--Device-HttpDataType-STRING-End-->
+<!--Device-HttpDataType-STRING = 0--><!--Device-HttpDataType-STRING = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -34,7 +34,7 @@ The returned type is Object.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpDataType-OBJECT = 1--><!--Device-HttpDataType-OBJECT = 1-End-->
 
@@ -50,7 +50,7 @@ The returned type is ArrayBuffer.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpDataType-ARRAY_BUFFER = 2--><!--Device-HttpDataType-ARRAY_BUFFER = 2-End-->
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## lockScreen
@@ -17,7 +18,7 @@ function lockScreen(admin: Want): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice)(admin: Want, operation: Operation, addition?: string)
+**替代接口：** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)(admin: Want, operation: Operation, addition?: string)
 
 **需要权限：** ohos.permission.ENTERPRISE_LOCK_DEVICE
 

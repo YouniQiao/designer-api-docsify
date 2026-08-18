@@ -14,7 +14,6 @@ Provides session information, including the requester information, target abilit
 
 ```TypeScript
 import { dialogSession } from '@kit.AbilityKit';
-import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## callerAbilityInfo
@@ -45,7 +44,7 @@ parameters?: Record<string, RecordData>
 
 Other parameters.
 
-**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **Since:** 23
 

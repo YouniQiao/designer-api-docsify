@@ -1,6 +1,6 @@
 # WindowStage
 
-窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md#window)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
+窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage 的实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## disableWindowDecor

@@ -13,6 +13,7 @@ USB设备接口描述符。
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## bClass

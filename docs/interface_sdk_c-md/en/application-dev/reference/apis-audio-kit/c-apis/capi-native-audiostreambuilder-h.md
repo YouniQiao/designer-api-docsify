@@ -77,7 +77,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_Create(OH_AudioStreamBuilder** build
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful. |
 
 ### OH_AudioStreamBuilder_Destroy()
 
@@ -99,7 +99,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_Destroy(OH_AudioStreamBuilder* build
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr.<br>         [AUDIOSTREAM_ERROR_ILLEGAL_STATE](capi-native-audiostream-base-h.md#oh_audiostream_result) Execution status exception. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr.          [AUDIOSTREAM_ERROR_ILLEGAL_STATE](capi-native-audiostream-base-h.md#oh_audiostream_result) Execution status exception. |
 
 ### OH_AudioStreamBuilder_SetSamplingRate()
 
@@ -124,7 +124,7 @@ Set the sampling rate of the stream client.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of rate invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of rate invalid. |
 
 ### OH_AudioStreamBuilder_SetChannelCount()
 
@@ -147,7 +147,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetChannelCount(OH_AudioStreamBuilde
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of channelCount invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of channelCount invalid. |
 
 ### OH_AudioStreamBuilder_SetSampleFormat()
 
@@ -170,7 +170,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetSampleFormat(OH_AudioStreamBuilde
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetEncodingType()
 
@@ -193,7 +193,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetEncodingType(OH_AudioStreamBuilde
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetLatencyMode()
 
@@ -216,7 +216,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetLatencyMode(OH_AudioStreamBuilder
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetChannelLayout()
 
@@ -241,7 +241,7 @@ Set the channel layout to the stream client
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetRendererInfo()
 
@@ -264,7 +264,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetRendererInfo(OH_AudioStreamBuilde
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of usage invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of usage invalid. |
 
 ### OH_AudioStreamBuilder_SetCapturerInfo()
 
@@ -287,7 +287,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetCapturerInfo(OH_AudioStreamBuilde
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of sourceType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of sourceType invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererCallback()
 
@@ -315,7 +315,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetRendererCallback(OH_AudioStreamBu
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererOutputDeviceChangeCallback()
 
@@ -341,7 +341,7 @@ Set the callback when the output device of an audio renderer changed.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererPrivacy()
 
@@ -366,7 +366,7 @@ Set the privacy of audio render.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_SetCapturerCallback()
 
@@ -394,7 +394,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetCapturerCallback(OH_AudioStreamBu
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_GenerateRenderer()
 
@@ -417,7 +417,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateRenderer(OH_AudioStreamBuild
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid;<br>                                                 3.Create OHAudioRenderer failed. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid;                                                  3.Create OHAudioRenderer failed. |
 
 ### OH_AudioStreamBuilder_GenerateCapturer()
 
@@ -440,7 +440,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_GenerateCapturer(OH_AudioStreamBuild
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid;<br>                                                 3.Create OHAudioRenderer failed. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid;                                                  3.Create OHAudioRenderer failed. |
 
 ### OH_AudioStreamBuilder_SetFrameSizeInCallback()
 
@@ -463,7 +463,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetFrameSizeInCallback(OH_AudioStrea
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetWriteDataWithMetadataCallback()
 
@@ -489,7 +489,7 @@ Set the callback of writing metadata to the renderer client
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererInterruptMode()
 
@@ -514,7 +514,7 @@ Set the interrupt mode of the stream client
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of mode invalid;<br>                                                 3.StreamType invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of mode invalid;                                                  3.StreamType invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererWriteDataCallback()
 
@@ -540,7 +540,7 @@ Set the callback of writing data to renderer client.This function is similar wit
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) Success.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) Parameter is invalid, e.g. builder is nullptr, e.t.c. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) Success.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) Parameter is invalid, e.g. builder is nullptr, e.t.c. |
 
 ### OH_AudioStreamBuilder_SetRendererWriteDataCallbackAdvanced()
 
@@ -566,7 +566,7 @@ Set the callback of writing data to renderer client.This function is similar wit
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) Success.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) Parameter is invalid, e.g. builder is nullptr, e.t.c. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) Success.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) Parameter is invalid, e.g. builder is nullptr, e.t.c. |
 
 ### OH_AudioStreamBuilder_SetVolumeMode()
 
@@ -589,7 +589,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetVolumeMode(OH_AudioStreamBuilder*
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:<br>         [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.<br>         [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of volumeMode invalid. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Function result code:          [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.          [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result):                                                  1.The param of builder is nullptr;                                                  2.The param of volumeMode invalid. |
 
 ### OH_AudioStreamBuilder_SetRendererInterruptCallback()
 
@@ -615,7 +615,7 @@ Sets a callback to handle interrupt events for an AudioRenderer instance. This f
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetRendererErrorCallback()
 
@@ -641,7 +641,7 @@ Sets a callback to handle error events for an AudioRenderer instance.This functi
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerReadDataCallback()
 
@@ -667,7 +667,7 @@ Sets a callback to handle audio data read events for an AudioCapturer instance. 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerDeviceChangeCallback()
 
@@ -693,7 +693,7 @@ Sets a callback to handle device change events for an AudioCapturer instance. Th
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerInterruptCallback()
 
@@ -719,7 +719,7 @@ Sets a callback to handle interrupt events for an AudioCapturer instance.This fu
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerErrorCallback()
 
@@ -745,7 +745,7 @@ Sets a callback to handle error events for an AudioCapturer instance. This funct
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder<br> is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | Result code.      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if the operation is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) is returned if a parameter is invalid, for example, if builder  is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerWillMuteWhenInterrupted()
 
@@ -770,7 +770,7 @@ Set audio capturer configuration, if app want its recorder only to be muted inst
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | function result code:<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | function result code:      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetRendererFastStatusChangeCallback()
 
@@ -796,7 +796,7 @@ Set the callback of fast status change event for audio renderer.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | @return<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder or callback is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | @return      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder or callback is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerFastStatusChangeCallback()
 
@@ -822,7 +822,7 @@ Set the callback of fast status change event for audio capturer.
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | @return<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder or callback is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | @return      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder or callback is nullptr. |
 
 ### OH_AudioStreamBuilder_SetCapturerLoopbackEffectEnabled()
 
@@ -847,7 +847,7 @@ Sets if the audio capturer can capture the audio data affected by loopback effec
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | function result code:<br>     [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.<br>     [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder is nullptr. |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | function result code:      [AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) if the execution is successful.      [AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) the param of builder is nullptr. |
 
 ### OH_AudioStreamBuilder_SetPlaybackCaptureMode()
 
@@ -870,7 +870,7 @@ OH_AudioStream_Result OH_AudioStreamBuilder_SetPlaybackCaptureMode(OH_AudioStrea
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul><br>     <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li><br>     <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1.The param of builder is nullptr;<br>                        2.The param of mode is invalid.</li><br>     </ul> |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul>      <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li>      <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) 1.The param of builder is nullptr;                         2.The param of mode is invalid.</li>      </ul> |
 
 ### OH_AudioStreamBuilder_SetSensitiveRecordPermitCallback()
 
@@ -896,7 +896,7 @@ Sets the callback to receive when the sensitive warning message playback is fini
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul><br>         <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li><br>         <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder or callback is nullptr.</li><br>         </ul> |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul>          <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li>          <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder or callback is nullptr.</li>          </ul> |
 
 ### OH_AudioStreamBuilder_SetCellularRecordSecurityParams()
 
@@ -922,6 +922,6 @@ Sets phone number and token for voice downlink capturer stream.This function is 
 
 | Type | Description |
 | -- | -- |
-| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul><br>         <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li><br>         <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder,<br>              cellularRecordPhoneNum or cellularRecordToken is nullptr.</li><br>         </ul> |
+| [OH_AudioStream_Result](capi-native-audiostream-base-h.md#oh_audiostream_result) | <ul>          <li>[AUDIOSTREAM_SUCCESS](capi-native-audiostream-base-h.md#oh_audiostream_result) If the execution is successful.</li>          <li>[AUDIOSTREAM_ERROR_INVALID_PARAM](capi-native-audiostream-base-h.md#oh_audiostream_result) The param of builder,               cellularRecordPhoneNum or cellularRecordToken is nullptr.</li>          </ul> |
 
 

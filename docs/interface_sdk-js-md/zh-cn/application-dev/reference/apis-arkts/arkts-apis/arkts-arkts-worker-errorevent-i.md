@@ -2,7 +2,7 @@
 
 错误事件类用于表示Worker执行过程中出现异常的详细信息，ErrorEvent类继承Event。
 
-**继承/实现关系：** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md#event)
+**继承/实现关系：** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md)
 
 **起始版本：** 7
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## colno

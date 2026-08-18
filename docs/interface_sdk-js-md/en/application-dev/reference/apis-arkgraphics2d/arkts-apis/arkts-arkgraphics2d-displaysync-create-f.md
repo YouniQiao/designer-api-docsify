@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { displaySync } from '@kit.ArkGraphics2D';
-import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## create

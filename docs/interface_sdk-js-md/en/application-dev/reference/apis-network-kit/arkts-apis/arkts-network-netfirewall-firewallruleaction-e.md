@@ -1,6 +1,6 @@
-# FirewallRuleAction
+# FirewallRuleAction(Network Firewall)
 
-Firewall rule behavior enumeration.
+Enumerates the firewall rule actions, including allowing or denying network connections.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Firewall rule behavior enumeration.
 RULE_ALLOW = 0
 ```
 
-Allow access.
+Allowing network connection.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ Allow access.
 RULE_DENY = 1
 ```
 
-Deny access.
+Denying network connection.
 
 **Since:** 15
 

@@ -14,7 +14,6 @@ Defines the service profile information. It is populated based on the data retur
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## data

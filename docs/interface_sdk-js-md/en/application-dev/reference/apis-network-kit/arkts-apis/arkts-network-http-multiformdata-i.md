@@ -1,6 +1,6 @@
 # MultiFormData
 
-Represents the properties of a form object.
+Defines the type of multi-form data.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 contentType: string
 ```
 
-Content type of the data field.
+Data type, for example, **text/plain**, **image/png**, **image/jpeg**, **audio/mpeg**, or **video/mp4**.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Content type of the data field.
 data?: string | Object | ArrayBuffer
 ```
 
-This parameter sets a mime part's body content from memory data.
+Form data content.
 
 **Type:** string \| Object \| ArrayBuffer
 
@@ -52,7 +52,7 @@ This parameter sets a mime part's body content from memory data.
 filePath?: string
 ```
 
-This parameter sets a mime part's body content from the file's contents. This is an alternative to curl_mime_data for setting data to a mime part. If data is empty, filePath must be set. If data has a value, filePath does not take effect.
+File path of the form data. If **data** is not specified, **filePath** must be set. **Note：**: The file format supported by the file management module must be passed. You can call [access](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-access-f.md) to check whether the file exists and is accessible.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ This parameter sets a mime part's body content from the file's contents. This is
 name: string
 ```
 
-MIME name for the data field.
+Data name.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ MIME name for the data field.
 remoteFileName?: string
 ```
 
-Remote file name for the data field.
+Name of the file uploaded to the server. **Note：**: If this field is specified, the **filename** field is added to the request header, indicating the name of the file uploaded to the server. (1) If the data to be uploaded is a file and the file content is specified via the **data** field, the **remoteFileName** field usually needs to be set to specify the name of the file to be uploaded to the server ( the actual result depends on the server). If the file path is specified via the **filePath** field, the **filename** field will be automatically added to the request header. Its default value is the file name in the **filePath** field. If a different name is required, it can also be changed via this field. (2) When the data to be uploaded is in binary format, the **remoteFileName** field must be set.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # PerfTest
 
-PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过[create](#create)创建实例。
+PerfTest类为白盒性能测试框架的总入口。 提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。 通过[create](#create)创建实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、
 ## 导入模块
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## create
@@ -85,7 +86,7 @@ async function demo() {
 destroy(): void
 ```
 
-销毁PerfTest对象。
+销毁PerfTest对象，释放该对象占用的相关资源。与[create](#create)方法配对使用，在PerfTest对象使用完毕后调用， 未调用此方法可能导致资源无法释放。调用后不应再使用该PerfTest对象。
 
 **起始版本：** 23
 
@@ -146,13 +147,13 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | 是 | 性能指标。 |
+| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | 是 | 指定要查询的性能指标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 性能指标对应测量结果数据。 |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 指定性能指标对应的测量结果，包含各轮测量数据值及 统计值（最大值、最小值、平均值）。 |
 
 **错误码：**
 
@@ -193,7 +194,7 @@ async function demo() {
 run(): Promise<void>
 ```
 
-运行性能测试，迭代执行测试代码段并采集性能数据，使用Promise回调。
+运行性能测试，按配置次数迭代执行测试代码段并采集性能数据，使用Promise回调。每次迭代中，框架依次执行 actionCode和resetCode（若已配置），并在actionCode执行期间采集性能数据。执行完成后，可通过 [getMeasureResult](#getmeasureresult)获取采集到的测量结果数据。
 
 **起始版本：** 23
 

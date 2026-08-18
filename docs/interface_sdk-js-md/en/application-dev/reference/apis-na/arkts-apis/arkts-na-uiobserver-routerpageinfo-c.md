@@ -143,7 +143,7 @@ state: RouterPageState
 
 The state of the changed router page.
 
-**Type:** [RouterPageState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](arkts-na-uiobserver-routerpagestate-e.md)
 
 **Since:** 23
 

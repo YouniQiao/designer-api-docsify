@@ -6,7 +6,7 @@ Describes the Gatt descriptor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#bledescriptor)
+**Substitutes:** [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md)
 
 <!--Device-bluetooth-interface BLEDescriptor--><!--Device-bluetooth-interface BLEDescriptor-End-->
 
@@ -41,7 +41,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 characteristicUuid: string
 ```
 
-The UUID of the [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#blecharacteristic) instance to which the descriptor belongs
+The UUID of the [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) instance to which the descriptor belongs
 
 **Type:** string
 
@@ -101,7 +101,7 @@ The value of the BLEDescriptor instance
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#gattservice) instance to which the descriptor belongs
+The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md) instance to which the descriptor belongs
 
 **Type:** string
 

@@ -1,8 +1,8 @@
 # EntryIntentDecoratorInfo
 
-EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)，用于描述 @InsightIntentEntry 装饰器支持的参数。
+EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述 @InsightIntentEntry 装饰器支持的参数。
 
-**继承/实现关系：** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md#intentdecoratorinfo)
+**继承/实现关系：** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
 **起始版本：** 20
 
@@ -13,6 +13,8 @@ EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability
 ## 导入模块
 
 ```TypeScript
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from '@kit.AbilityKit';
 ```
 
 ## abilityName

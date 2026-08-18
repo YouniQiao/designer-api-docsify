@@ -12,7 +12,6 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
-import { formBindingData } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -21,8 +20,8 @@ import { formBindingData } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata) | Creates a **FormBindingData** object. |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata) | Create an FormBindingData instance. |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | Creates a **FormBindingData** object. |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | Create an FormBindingData instance. |
 
 ### Interfaces
 

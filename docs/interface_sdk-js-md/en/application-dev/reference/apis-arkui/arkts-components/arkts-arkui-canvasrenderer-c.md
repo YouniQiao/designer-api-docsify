@@ -2,7 +2,7 @@
 
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component. > **NOTE：**> > * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be > encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent > lifecycle between them. > > * When you call drawing APIs in this module, the commands are stored in the associated **Canvas** > component's command queue. These commands are only executed when the current frame enters the rendering > phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is > invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue > buildup and excessive memory usage. > > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes > significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#canvaspath)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
 
 **Since:** 8
 
@@ -1168,7 +1168,7 @@ Sets whether to enable anti-aliasing for drawing graphics and text. Setting this
 direction: CanvasDirection
 ```
 
-Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#canvasdirection). Default value: **"inherit"**
+Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md). Default value: **"inherit"**
 
 **Type:** [CanvasDirection](arkts-arkui-canvasdirection-t.md)
 
@@ -1320,7 +1320,7 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 imageSmoothingQuality: ImageSmoothingQuality
 ```
 
-Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#imagesmoothingquality). Default value: **"low"** > **NOTE：**> > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting > from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not > packaged by default when a project or module is created. To package these resources, go to **buildOption** in the > module's **build-profile.json5** file > **resOptions** > **copyCodeResource**, and set **enable** to **true**. > For details, see the description of copyCodeResource in **resOptions**.
+Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md). Default value: **"low"** > **NOTE：**> > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting > from DevEco Studio 6.0.0 Beta2, the resources that are located outside the **resources** directory are not > packaged by default when a project or module is created. To package these resources, go to **buildOption** in the > module's **build-profile.json5** file > **resOptions** > **copyCodeResource**, and set **enable** to **true**. > For details, see the description of copyCodeResource in **resOptions**.
 
 **Type:** [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
 
@@ -1408,7 +1408,7 @@ Sets the dashed line offset of the canvas. The value is of the float type. This 
 lineJoin: CanvasLineJoin
 ```
 
-Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#canvaslinejoin). <br>Available values are as follows: <br>- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. <br>- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. <br>- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. <br>Default value: **'miter'**
+Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md). <br>Available values are as follows: <br>- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. <br>- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. <br>- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. <br>Default value: **'miter'**
 
 **Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
 

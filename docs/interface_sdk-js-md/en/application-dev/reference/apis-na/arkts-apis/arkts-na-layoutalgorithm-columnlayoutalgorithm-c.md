@@ -2,7 +2,7 @@
 
 Defines the column layout algorithm.
 
-**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md#layoutalgorithm)
+**Inheritance/Implementation:** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ColumnLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | set properties of column layout algorithm. |
+| option | [ColumnLayoutAlgorithmOptions](arkts-na-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | No | set properties of column layout algorithm. |
 
 ## alignItems
 
@@ -104,7 +104,7 @@ Alignment mode of the child components along the vertical axis.
 
 Vertical layout element spacing.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

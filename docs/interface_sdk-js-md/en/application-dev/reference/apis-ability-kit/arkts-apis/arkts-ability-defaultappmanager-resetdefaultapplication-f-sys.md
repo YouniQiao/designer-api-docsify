@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
-import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## resetDefaultApplication
@@ -13,7 +12,7 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function resetDefaultApplication(type: string, userId: int, callback: AsyncCallback<void>) : void
 ```
 
-Resets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). This API uses an asynchronous callback to return the result.
+Resets the default application for a user based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -29,9 +28,9 @@ Resets the default application for a user based on a system-defined application 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#applicationtype), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**. otherwise, **err** is an error object. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**. otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -86,7 +85,7 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : void
 ```
 
-Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). This API uses an asynchronous callback to return the result.
+Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -102,8 +101,8 @@ Resets the default application based on a system-defined application type, a fil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#applicationtype), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result. If the operation is successful, **err** is **null**. otherwise, **err** is an error object. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null**. otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -154,7 +153,7 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 function resetDefaultApplication(type: string, userId?: int) : Promise<void>
 ```
 
-Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). This API uses a promise to return the result.
+Resets the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -170,8 +169,8 @@ Resets the default application based on a system-defined application type, a fil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md#applicationtype), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md#ohosdatauniformtypedescriptor). |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . The default value is the user ID of the caller. |
 
 **Return value:**
 

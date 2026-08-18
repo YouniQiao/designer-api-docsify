@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_densityUpdate
+## off_densityUpdate('densityUpdate')
 
 ```TypeScript
 export function off(type: 'densityUpdate', context: UIContext, callback?: Callback<DensityInfo>): void
@@ -28,6 +29,6 @@ export function off(type: 'densityUpdate', context: UIContext, callback?: Callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | 是 | 监听事件，固定为'densityUpdate'，即屏幕像素密度变化。 |
-| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md)&gt; | 否 | 需要被注销的回调函数。若不指定具体的回调函数，则注销指定UIContext下所有densityUpdate事件监听。 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md)&gt; | 否 | 需要被注销的回调函数。若不指定具体的回调函数，则注销指定UIContext下所有densityUpdate事件监听。 |
 

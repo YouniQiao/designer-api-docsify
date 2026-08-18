@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## offInstalledAccessibilityListChange
@@ -27,7 +28,7 @@ Unregister listener that watches for changes in the installed status of accessib
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Indicates the listener. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Indicates the listener. |
 
 **错误码：**
 

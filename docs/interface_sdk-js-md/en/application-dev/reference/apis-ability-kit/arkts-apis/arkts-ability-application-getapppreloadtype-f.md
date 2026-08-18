@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { application } from '@kit.AbilityKit';
-import { application } from '@kit.AbilityKit';
 ```
 
 ## getAppPreloadType

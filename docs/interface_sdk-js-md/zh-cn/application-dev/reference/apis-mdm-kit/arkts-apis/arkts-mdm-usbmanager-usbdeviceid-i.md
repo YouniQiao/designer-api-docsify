@@ -11,6 +11,7 @@ USB设备ID信息。
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## productId

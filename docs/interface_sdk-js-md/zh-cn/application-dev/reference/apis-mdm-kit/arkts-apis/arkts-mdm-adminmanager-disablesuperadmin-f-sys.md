@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## disableSuperAdmin
@@ -30,7 +31,7 @@ function disableSuperAdmin(bundleName: String, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | String | 是 | 超级设备管理应用的包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 

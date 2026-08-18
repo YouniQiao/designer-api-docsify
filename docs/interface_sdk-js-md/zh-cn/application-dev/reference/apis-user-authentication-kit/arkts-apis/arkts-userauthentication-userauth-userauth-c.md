@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#authinstance)
+**替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth
@@ -140,7 +142,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -166,7 +168,7 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 **废弃版本：** 9
 
-**替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
+**替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 

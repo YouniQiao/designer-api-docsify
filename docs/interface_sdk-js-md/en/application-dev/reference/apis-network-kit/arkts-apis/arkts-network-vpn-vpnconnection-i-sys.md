@@ -1,6 +1,6 @@
 # VpnConnection (System API)
 
-Defines a VPN connection.
+Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling [vpn.createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md).
 
 **Since:** 10
 
@@ -23,7 +23,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 destroy(callback: AsyncCallback<void>): void
 ```
 
-Destroy the VPN network.
+Destroys a VPN. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -39,7 +39,7 @@ Destroy the VPN network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of destroy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ struct Index {
 destroy(): Promise<void>
 ```
 
-Destroy the VPN network.
+Destroys a VPN. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Destroy the VPN network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -136,16 +136,16 @@ struct Index {
 ## protect
 
 ```TypeScript
-protect(socketFd: number, callback: AsyncCallback<void>): void
+protect(socketFd: int, callback: AsyncCallback<void>): void
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
+Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
-<!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void-End-->
+<!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -155,8 +155,8 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketFd | number | Yes | File descriptor of socket, this socket from @ohos.net.socket. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of protect. |
+| socketFd | int | Yes | Socket file descriptor. It can be obtained through [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -214,16 +214,16 @@ struct Index {
 ## protect
 
 ```TypeScript
-protect(socketFd: number): Promise<void>
+protect(socketFd: int): Promise<void>
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
+Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
-<!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
+<!--Device-VpnConnection-protect(socketFd: int): Promise<void>--><!--Device-VpnConnection-protect(socketFd: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -233,13 +233,13 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketFd | number | Yes | File descriptor of socket, this socket from @ohos.net.socket. |
+| socketFd | int | Yes | Socket file descriptor. It can be obtained through [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -299,16 +299,16 @@ struct Index {
 ## setUp
 
 ```TypeScript
-setUp(config: VpnConfig, callback: AsyncCallback<number>): void
+setUp(config: VpnConfig, callback: AsyncCallback<int>): void
 ```
 
-Create a VPN network using the VpnConfig.
+Creates a VPN based on the specified configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
-<!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void-End-->
+<!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -318,8 +318,8 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#vpnconfig-system-api) configuration of the VPN network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback is used to return file descriptor of VPN interface. |
+| config | VpnConfig | Yes | VPN configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If a VPN is created successfully, **error** is **undefined** and **data** is the file descriptor of the vNIC. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -372,16 +372,16 @@ struct Index {
 ## setUp
 
 ```TypeScript
-setUp(config: VpnConfig): Promise<number>
+setUp(config: VpnConfig): Promise<int>
 ```
 
-Create a VPN network using the VpnConfig.
+Creates a VPN based on the specified configuration. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
-<!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>-End-->
+<!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -391,13 +391,13 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#vpnconfig-system-api) configuration of the VPN network. |
+| config | VpnConfig | Yes | VPN configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns file descriptor of VPN interface. |
+| Promise&lt;int&gt; | Promise used to return the result, which is the file descriptor of the vNIC. |
 
 **Error codes:**
 

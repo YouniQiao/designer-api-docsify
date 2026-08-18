@@ -17,7 +17,7 @@ declare function openSync(path: string, flags?: number, mode?: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [openSync](arkts-corefile-file-fs-opensync-f.md#opensync)
+**替代接口：** [openSync](arkts-corefile-file-fs-opensync-f.md)
 
 <!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number--><!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number-End-->
 

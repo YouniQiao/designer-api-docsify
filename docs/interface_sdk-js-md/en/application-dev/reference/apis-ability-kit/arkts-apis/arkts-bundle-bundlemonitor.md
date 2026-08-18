@@ -14,28 +14,27 @@ Bundle monitor
 
 ```TypeScript
 import { bundleMonitor } from '@kit.AbilityKit';
-import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offadd) | Unregister installation listener. |
-| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offremove) | Unregister uninstallation listener. |
-| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offupdate) | Unregister update listener. |
-| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#offbundlechangedevent) | Unregister to monitor the installation status |
-| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onadd) | Register installation listener. |
-| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onremove) | Register uninstallation listener. |
-| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onupdate) | Register update listener. |
-| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#onbundlechangedevent) | Register to monitor the installation status |
+| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md) | Unregister installation listener. |
+| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md) | Unregister uninstallation listener. |
+| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md) | Unregister update listener. |
+| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_bundlechangedevent) | Unregister to monitor the installation status |
+| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md) | Register installation listener. |
+| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md) | Register uninstallation listener. |
+| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md) | Register update listener. |
+| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_bundlechangedevent) | Register to monitor the installation status |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -43,7 +42,7 @@ import { bundleMonitor } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void
 ```
 
-Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) object. To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
+Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API returns the result synchronously. > **NOTE：**> > Currently, this API is available only for PCs.
 
 **Since:** 20
 
@@ -26,8 +26,8 @@ Set the network extended attribute for a [NetHandle](arkts-network-connection-ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be set. See [NetHandle](arkts-network-connection-nethandle-i.md#nethandle). |
-| netExtAttribute | string | Yes | Indicates the extended attribute of the network. |
+| netHandle | NetHandle | Yes | Network handle. |
+| netExtAttribute | string | Yes | Extended network attributes. |
 
 **Error codes:**
 

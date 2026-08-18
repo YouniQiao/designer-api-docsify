@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## setAppClipboardPolicy
@@ -86,7 +87,7 @@ function setAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被设置剪贴板策略的应用包名。 |
-| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
+| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 | policy | [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md) | 是 | 剪贴板策略。 |
 
 **错误码：**

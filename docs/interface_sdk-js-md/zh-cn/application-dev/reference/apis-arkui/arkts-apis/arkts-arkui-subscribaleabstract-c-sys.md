@@ -118,7 +118,7 @@ public removeOwningPropertyById(subscriberId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者ID， 通过IPropertySubscriber.[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
+| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](#addowningproperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## owningProperties_
 

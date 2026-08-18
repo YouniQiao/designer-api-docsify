@@ -11,6 +11,7 @@ Navigation组件页面切换事件的监听选项。
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## navigationId

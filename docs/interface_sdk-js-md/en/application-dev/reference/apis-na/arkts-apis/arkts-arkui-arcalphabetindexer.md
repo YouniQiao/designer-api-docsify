@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md#arcalphabetindexer) | Defines ArcAlphabetIndexer Component. |
+| [ArcAlphabetIndexer](arkts-na-arkui-arcalphabetindexer-arcalphabetindexer-f.md) | Defines ArcAlphabetIndexer Component. |
 
 ### Interfaces
 

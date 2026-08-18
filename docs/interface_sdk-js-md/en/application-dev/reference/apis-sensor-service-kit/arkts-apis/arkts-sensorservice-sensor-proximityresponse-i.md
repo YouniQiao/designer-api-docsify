@@ -1,8 +1,8 @@
 # ProximityResponse
 
-Describes the proximity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the proximity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

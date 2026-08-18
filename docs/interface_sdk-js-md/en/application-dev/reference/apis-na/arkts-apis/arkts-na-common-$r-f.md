@@ -23,7 +23,7 @@ global \$r function
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string | Yes |  |
-| params | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | Yes |  |
+| params | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | Yes |  |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # CdsmClient
 
-Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) to create a CDSM client instance.
+Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) to create a CDSM client instance.
 
 **Since:** 26.0.0
 
@@ -66,7 +66,7 @@ Unsubscribes from coordinated devices set information change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | No | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | No | Callback used to listen for the coordinated devices set information. |
 
 ## onCdsmInfoChange
 
@@ -88,5 +88,5 @@ Subscribes to coordinated devices set information change event. This event is ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | Yes | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | Yes | Callback used to listen for the coordinated devices set information. |
 

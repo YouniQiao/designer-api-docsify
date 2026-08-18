@@ -3,6 +3,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## isOpenAccessibility
@@ -17,7 +22,7 @@ function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 10
 
-**替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
 
 <!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
 
@@ -27,7 +32,7 @@ function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示辅助应用已启用；返回false表示辅助应用未启用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示辅助应用已启用；返回false表示辅助应用未启用。 |
 
 **示例**
 
@@ -57,7 +62,7 @@ function isOpenAccessibility(): Promise<boolean>
 
 **废弃版本：** 10
 
-**替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**替代接口：** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md)
 
 <!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 

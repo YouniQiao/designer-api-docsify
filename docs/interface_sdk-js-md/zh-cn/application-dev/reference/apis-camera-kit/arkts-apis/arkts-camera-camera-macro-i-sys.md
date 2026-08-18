@@ -1,8 +1,8 @@
 # Macro（系统接口）
 
-Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery系统接口)。 提供使能微距能力的接口。
+Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md)。 提供使能微距能力的接口。
 
-**继承/实现关系：** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery系统接口)
+**继承/实现关系：** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery系
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableMacro

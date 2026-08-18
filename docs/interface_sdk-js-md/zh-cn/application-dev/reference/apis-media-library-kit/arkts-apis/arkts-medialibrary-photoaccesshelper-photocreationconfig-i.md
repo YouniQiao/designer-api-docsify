@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -37,7 +38,7 @@ fileNameExtension: string
 photoType: PhotoType
 ```
 
-创建的文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype)，IMAGE或者VIDEO。
+创建的文件类型[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)，IMAGE或者VIDEO。
 
 **类型：** PhotoType
 
@@ -55,7 +56,7 @@ photoType: PhotoType
 subtype?: PhotoSubtype
 ```
 
-图片或者视频的文件子类型[PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md#photosubtype系统接口)，不传入时默认为DEFAULT。
+图片或者视频的文件子类型[PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)，不传入时默认为DEFAULT。
 
 **类型：** PhotoSubtype
 

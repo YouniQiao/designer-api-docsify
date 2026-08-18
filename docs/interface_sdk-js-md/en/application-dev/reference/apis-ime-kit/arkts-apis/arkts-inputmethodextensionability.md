@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { InputMethodExtensionAbility } from '@kit.IMEKit';
-import { InputMethodExtensionAbility } from '@kit.IMEKit';
 ```
 
 ## Summary

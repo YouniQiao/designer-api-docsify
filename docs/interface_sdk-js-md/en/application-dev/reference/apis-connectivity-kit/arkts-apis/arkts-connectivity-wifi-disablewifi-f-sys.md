@@ -21,7 +21,7 @@ Disables Wi-Fi.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableWifi](arkts-connectivity-wifimanager-disablewifi-f.md#disablewifi)
+**Substitutes:** [disableWifi](arkts-connectivity-wifimanager-disablewifi-f.md)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

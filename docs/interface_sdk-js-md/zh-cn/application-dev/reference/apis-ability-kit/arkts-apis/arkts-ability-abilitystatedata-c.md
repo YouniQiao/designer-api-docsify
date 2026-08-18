@@ -1,6 +1,6 @@
 # AbilityStateData
 
-AbilityStateData是Ability状态信息的数据结构。使用 [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) 注册生命周期变化监听后，可以通过ApplicationStateObserver的onAbilityStateChanged回调的入参获取该数据结构。
+AbilityStateData是Ability状态信息的数据结构。使用 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationstateapplicationstate) 注册生命周期变化监听后，可以通过ApplicationStateObserver的onAbilityStateChanged回调的入参获取该数据结构。
 
 **起始版本：** 23
 
@@ -30,7 +30,7 @@ Ability名称。
 abilityType: int
 ```
 
-[Ability类型](#abilitytype)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability)等。
+[Ability类型](#abilitytype)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)等。
 
 **类型：** int
 
@@ -142,7 +142,7 @@ pid: int
 state: int
 ```
 
-Ability状态。 - [Stage模型](../../../application-models/ability-terminology.md#stage模型)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiability)的状态参见 UIAbility状态； [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#extensionability)的状态参见 ExtensionAbility状态 ；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability)的状态参见 UIExtensionAbility状态 。 - [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见 Ability状态。
+Ability状态。 - [Stage模型](../../../application-models/ability-terminology.md#stage模型)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)的状态参见 UIAbility状态； [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的状态参见 ExtensionAbility状态 ；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的状态参见 UIExtensionAbility状态 。 - [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见 Ability状态。
 
 **类型：** int
 

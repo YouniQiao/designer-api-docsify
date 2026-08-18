@@ -6,13 +6,13 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## on_netQuotaPolicyChange
+## on_netQuotaPolicyChange('netQuotaPolicyChange')
 
 ```TypeScript
 function on(type: 'netQuotaPolicyChange', callback: Callback<Array<NetQuotaPolicy>>): void
 ```
 
-Register quota policies change listener.
+Registers the callback for network quota policy changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Register quota policies change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netQuotaPolicyChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | the callback of on. |
+| type | 'netQuotaPolicyChange' | Yes | Event type.<br/> The value **netQuotaPolicyChange** indicates a network quota policy change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. It is called when the registered network quota policy changes. |
 
 **Error codes:**
 

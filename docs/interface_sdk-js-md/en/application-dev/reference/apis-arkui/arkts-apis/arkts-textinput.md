@@ -27,7 +27,7 @@
 | [TextInputStyle](arkts-arkui-textinput-textinputstyle-e.md) | Text input style. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

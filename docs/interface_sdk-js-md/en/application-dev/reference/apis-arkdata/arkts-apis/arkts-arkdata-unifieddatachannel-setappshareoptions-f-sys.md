@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
-import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## setAppShareOptions
@@ -13,7 +12,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): void
 ```
 
-Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#shareoptions) for the application data. Currently, only the drag- and-drop data channel is supported.
+Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for the application data. Currently, only the drag- and-drop data channel is supported.
 
 **Since:** 23
 
@@ -33,7 +32,7 @@ Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md#share
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | intention | [Intention](arkts-arkdata-unifieddatachannel-intention-e.md) | Yes | Type of the data channel. Currently, only the data channel of the **DRAG** type is supported. |
-| shareOptions | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Yes | Usage scope of the [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md#unifieddataproperties). |
+| shareOptions | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Yes | Usage scope of the [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md). |
 
 **Error codes:**
 

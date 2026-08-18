@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getMaxAmplitudeForInputDevice
@@ -104,7 +106,7 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
 
 ## getMaxVolume
 
@@ -196,7 +198,7 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
 
 ## getMinVolume
 
@@ -283,7 +285,7 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
 
 ## getRingerMode
 
@@ -350,7 +352,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: Devic
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volumeLevel | int | 是 | 音量等级。 |
 | device | DeviceType | 是 | 设备类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音量增益dB值成功，err为undefined，data为获取到的音量增益dB值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数。当获取音量增益dB值成功，err为undefined，data为获取到的音量增益dB值；否则为错误对象。 |
 
 **错误码：**
 
@@ -462,7 +464,7 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过 [getMinVolume](#getminvolume) 和 [getMaxVolume](#getmaxvolume) 获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过 [getMinVolume](#getminvolume) 和 [getMaxVolume](#getmaxvolume) 获取。 |
 
 ## getVolume
 
@@ -549,7 +551,7 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMicrophoneMute
 
@@ -614,7 +616,7 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMute
 
@@ -721,7 +723,7 @@ Unsubscribes to the microphone state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | Callback used to get the system microphone state change event. |
 
 **错误码：**
 
@@ -747,7 +749,7 @@ Unsubscribes to the ringer mode state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | Callback used to get the updated ringer mode. |
 
 **错误码：**
 
@@ -755,7 +757,7 @@ Unsubscribes to the ringer mode state change events.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_micStateChange
+## off_micStateChange('micStateChange')
 
 ```TypeScript
 off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
@@ -774,7 +776,7 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'，当取消监听系统麦克风状态更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | 回调函数，返回变更后的麦克风状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -783,7 +785,7 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## off_ringerModeChange
+## off_ringerModeChange('ringerModeChange')
 
 ```TypeScript
 off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
@@ -802,7 +804,7 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当取消监听铃声模式变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | 回调函数，返回变化后的铃音模式。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -828,7 +830,7 @@ Listens for system microphone state change events. This method uses a callback t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | Callback used to get the system microphone state change event. |
 
 **错误码：**
 
@@ -854,7 +856,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | Callback used to get the updated ringer mode. |
 
 **错误码：**
 
@@ -862,7 +864,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_micStateChange
+## on_micStateChange('micStateChange')
 
 ```TypeScript
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
@@ -881,7 +883,7 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'，当检测到系统麦克风状态发生改变时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | 回调函数，返回变更后的麦克风状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 是 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -890,13 +892,13 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on_ringerModeChange
+## on_ringerModeChange('ringerModeChange')
 
 ```TypeScript
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 ```
 
-监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md#audioringmode)发生变化时触发）。使用callback异步回调。
+监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md)发生变化时触发）。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -909,7 +911,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当铃声模式发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -941,7 +943,7 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mute | boolean | 是 | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
 
 ## setMicrophoneMute
 

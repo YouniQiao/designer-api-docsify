@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel
@@ -55,7 +57,7 @@ authType: UserAuthType[]
 challenge: Uint8Array
 ```
 
-随机挑战值，可用于防重放攻击。最大长度为32字节，可传Uint8Array([])。建议使用[加解密算法库框架](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md#ohossecuritycryptoframework)生成的 随机数作为挑战值，以增强安全性。认证通过后，挑战值会被包含在认证令牌中，业务可通过验证令牌中的挑战值来确认认证结果的有效性。
+随机挑战值，可用于防重放攻击。最大长度为32字节，可传Uint8Array([])。建议使用[加解密算法库框架](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md)生成的 随机数作为挑战值，以增强安全性。认证通过后，挑战值会被包含在认证令牌中，业务可通过验证令牌中的挑战值来确认认证结果的有效性。
 
 **类型：** Uint8Array
 

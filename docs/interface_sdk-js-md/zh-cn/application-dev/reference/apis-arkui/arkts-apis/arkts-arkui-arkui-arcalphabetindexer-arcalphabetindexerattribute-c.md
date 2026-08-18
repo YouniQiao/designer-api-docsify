@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 ```
 
 ## autoCollapse
@@ -147,7 +148,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[OnSelectCallback](../../apis-na/arkts-apis/arkts-na-onselectcallback-t.md)&gt; | 是 | 回调函数，用于处理索引条选中事件。当用户点击或滑动索引条选中某项时触发，回调中返回当前选中项的索引值。 |
+| handler | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 | 回调函数，用于处理索引条选中事件。当用户点击或滑动索引条选中某项时触发，回调中返回当前选中项的索引值。 |
 
 **返回值：**
 

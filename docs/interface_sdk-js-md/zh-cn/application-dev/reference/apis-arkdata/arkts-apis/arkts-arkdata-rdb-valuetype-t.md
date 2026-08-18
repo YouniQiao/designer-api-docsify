@@ -10,7 +10,7 @@ type ValueType = number | string | boolean
 
 **废弃版本：** 9
 
-**替代接口：** [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype)
+**替代接口：** [ValueType](arkts-arkdata-relationalstore-valuetype-t.md)
 
 <!--Device-rdb-type ValueType = number | string | boolean--><!--Device-rdb-type ValueType = number | string | boolean-End-->
 

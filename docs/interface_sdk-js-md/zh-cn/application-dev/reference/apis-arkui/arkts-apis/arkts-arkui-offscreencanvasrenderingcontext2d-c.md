@@ -1,6 +1,6 @@
 # OffscreenCanvasRenderingContext2D
 
-**继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#canvasrenderer)
+**继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
 **起始版本：** -1
 

@@ -40,7 +40,7 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 ## delete
 
@@ -60,11 +60,11 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
-| 13900027 | Read-only file system |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
+| 13900027 |  |
 
 **Examples**
 
@@ -113,7 +113,7 @@ Rolls back the file after the file fails to be written.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900042 | Internal error |
+| 13900042 |  |
 
 **Examples**
 
@@ -155,7 +155,7 @@ Finishes writing file data when the write operation is complete.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900042 | Internal error |
+| 13900042 |  |
 
 **Examples**
 
@@ -202,10 +202,10 @@ Obtains the file object through the **AtomicFile** object. The FD needs to be cl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900005 | IO error |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
+| 13900005 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
 
 **Examples**
 
@@ -254,10 +254,10 @@ Creates a **ReadStream** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
 
 **Examples**
 
@@ -315,8 +315,8 @@ Reads all content of a file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900005 | I/O error |
-| 13900042 | Internal error |
+| 13900005 |  |
+| 13900042 |  |
 
 **Examples**
 
@@ -370,11 +370,11 @@ Starts to write new file data in the **WriteStream** object returned. If the fil
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900001 | Operation not permitted |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900042 | Internal error |
-| 13900027 | Read-only file system |
+| 13900001 |  |
+| 13900002 |  |
+| 13900012 |  |
+| 13900042 |  |
+| 13900027 |  |
 
 **Examples**
 

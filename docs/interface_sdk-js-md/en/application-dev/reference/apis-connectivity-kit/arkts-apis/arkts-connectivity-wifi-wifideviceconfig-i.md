@@ -6,7 +6,7 @@ Wi-Fi device configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#wifideviceconfig)
+**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 

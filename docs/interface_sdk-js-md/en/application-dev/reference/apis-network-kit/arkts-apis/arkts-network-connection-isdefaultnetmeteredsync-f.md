@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function isDefaultNetMeteredSync(): boolean
 ```
 
-Checks whether data traffic usage on the current network is metered.
+Checks whether the data traffic over the current network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -26,7 +26,7 @@ Checks whether data traffic usage on the current network is metered.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the current network is metered, else returns false. |
+| boolean | Boolean value indicating whether data traffic over the current network is metered. The value **true** indicates that the data traffic is metered, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

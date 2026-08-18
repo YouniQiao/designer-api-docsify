@@ -23,7 +23,7 @@ public animatorParams?: AnimatorParams
 
 AnimatorParams. include duration and curve
 
-**Type:** [AnimatorParams](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-animatorparams-c.md)
+**Type:** [AnimatorParams](arkts-na-file-photopickercomponent-animatorparams-c.md)
 
 **Since:** 26.0.0
 

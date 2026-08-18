@@ -6,7 +6,7 @@ supplicant状态枚举。
 
 **废弃版本：** 9
 
-**替代接口：** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md#suppstate系统接口)
+**替代接口：** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md)
 
 <!--Device-wifi-export enum SuppState--><!--Device-wifi-export enum SuppState-End-->
 
@@ -46,7 +46,7 @@ INTERFACE_DISABLED
 
 **废弃版本：** 9
 
-**替代接口：** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interfacedisabled)
+**替代接口：** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#interface_disabled)
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -166,7 +166,7 @@ FOUR_WAY_HANDSHAKE
 
 **废弃版本：** 9
 
-**替代接口：** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#fourwayhandshake)
+**替代接口：** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#four_way_handshake)
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -186,7 +186,7 @@ GROUP_HANDSHAKE
 
 **废弃版本：** 9
 
-**替代接口：** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#grouphandshake)
+**替代接口：** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#group_handshake)
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 

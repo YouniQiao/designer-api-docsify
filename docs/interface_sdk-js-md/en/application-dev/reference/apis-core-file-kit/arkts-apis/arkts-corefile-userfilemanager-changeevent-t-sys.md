@@ -1,13 +1,7 @@
 # ChangeEvent (System API)
 
 ```TypeScript
-type ChangeEvent =
-    'deviceChange'
-    | 'albumChange'
-    | 'imageChange'
-    | 'audioChange'
-    | 'videoChange'
-    | 'remoteFileChange'
+type ChangeEvent = 'deviceChange' | 'albumChange' | 'imageChange' | 'audioChange' | 'videoChange' | 'remoteFileChange'
 ```
 
 Enumerates the type of changes to observe.
@@ -16,9 +10,9 @@ Enumerates the type of changes to observe.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#changedata)
+**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
 
-<!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'-End-->
+<!--Device-userFileManager-type ChangeEvent = 'deviceChange' | 'albumChange' | 'imageChange' | 'audioChange' | 'videoChange' | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent = 'deviceChange' | 'albumChange' | 'imageChange' | 'audioChange' | 'videoChange' | 'remoteFileChange'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

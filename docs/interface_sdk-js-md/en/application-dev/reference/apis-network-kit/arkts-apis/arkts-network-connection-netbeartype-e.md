@@ -14,11 +14,11 @@ Enumerates network types.
 BEARER_CELLULAR = 0
 ```
 
-Indicates that the network is based on a cellular network.
+Cellular network.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
 
@@ -30,11 +30,11 @@ Indicates that the network is based on a cellular network.
 BEARER_WIFI = 1
 ```
 
-Indicates that the network is based on a Wi-Fi network.
+Wi-Fi network.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
 
@@ -46,7 +46,7 @@ Indicates that the network is based on a Wi-Fi network.
 BEARER_BLUETOOTH = 2
 ```
 
-Indicates that the network is based on a bluetooth network.
+Bluetooth network.
 
 **Since:** 23
 
@@ -62,11 +62,11 @@ Indicates that the network is based on a bluetooth network.
 BEARER_ETHERNET = 3
 ```
 
-Indicates that the network is an Ethernet network.
+Ethernet network.
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetBearType-BEARER_ETHERNET = 3--><!--Device-NetBearType-BEARER_ETHERNET = 3-End-->
 
@@ -78,7 +78,7 @@ Indicates that the network is an Ethernet network.
 BEARER_VPN = 4
 ```
 
-Indicates that the network is based on a VPN network.
+VPN.
 
 **Since:** 23
 

@@ -27,8 +27,8 @@ Connects to a remote device over the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the connect parameters [SppOptions](arkts-connectivity-socket-sppoptions-i.md#sppoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
+| options | [SppOptions](arkts-connectivity-socket-sppoptions-i.md) | Yes | Indicates the connect parameters [SppOptions](arkts-connectivity-socket-sppoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

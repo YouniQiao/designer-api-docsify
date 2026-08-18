@@ -1,6 +1,6 @@
 # PdfConfiguration
 
-Input parameter of the [createPdf](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#createpdf) function. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
+Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#createpdf) function. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
 **Since:** 14
 

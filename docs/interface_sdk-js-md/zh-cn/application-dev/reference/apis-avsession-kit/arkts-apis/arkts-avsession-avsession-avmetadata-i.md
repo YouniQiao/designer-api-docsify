@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## album
@@ -189,7 +190,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#displaytag)。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
 
 **类型：** int
 
@@ -257,7 +258,7 @@ fastForwardSkipIntervals?: SkipIntervals
 filter?: int
 ```
 
-当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)。
+当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
 
 **类型：** int
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## sendData
@@ -11,7 +12,7 @@
 function sendData(channelId: int, data: ArrayBuffer): Promise<void>
 ```
 
-向对端发送数据，使用Promise异步回调。适用于手机侧应用通过代理通道向穿戴设备侧应用发送指令或数据的场景，例如发送配置更新、通知消息等。必须在 [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel)成功打开代理通道后才能调用此方法发送数据。当代理通道处于不可用状态（如 [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md#channelstate).CHANNEL_WAIT_RESUME、CHANNEL_EXCEPTION_SOFTWARE_FAILED、 CHANNEL_BR_NO_PAIRED）时，调用此方法将失败，建议订阅 [on('channelStateChange')](arkts-distributedservice-proxychannelmanager-onreceivedata-f.md#onreceivedata) 事件监测通道状态，在通道不可用时暂停数据发送，通道恢复后继续发送。数据通过已建立的代理通道经蓝牙BR链路传输至对端设备，数据长度最大为4096字节，超出将返回错误码32390103。
+向对端发送数据，使用Promise异步回调。适用于手机侧应用通过代理通道向穿戴设备侧应用发送指令或数据的场景，例如发送配置更新、通知消息等。必须在 [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)成功打开代理通道后才能调用此方法发送数据。当代理通道处于不可用状态（如 [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md).CHANNEL_WAIT_RESUME、CHANNEL_EXCEPTION_SOFTWARE_FAILED、 CHANNEL_BR_NO_PAIRED）时，调用此方法将失败，建议订阅 on('channelStateChange') 事件监测通道状态，在通道不可用时暂停数据发送，通道恢复后继续发送。数据通过已建立的代理通道经蓝牙BR链路传输至对端设备，数据长度最大为4096字节，超出将返回错误码32390103。
 
 **起始版本：** 23
 

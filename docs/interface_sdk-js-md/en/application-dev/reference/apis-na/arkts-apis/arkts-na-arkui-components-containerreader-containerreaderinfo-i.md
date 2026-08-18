@@ -43,7 +43,7 @@ size: Bindable<Size>
 
 The target container size for layout analysis. Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
-**Type:** [Bindable](arkts-na-common-bindable-i.md)&lt;[Size](arkts-na-graphics-size-i.md)&gt;
+**Type:** [Bindable](arkts-na-common-bindable-i.md)&lt;[Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)&gt;
 
 **Since:** 26.0.0
 

@@ -12,7 +12,6 @@ Represents asset (such as a file, image, or video) information.
 
 ```TypeScript
 import { commonType } from '@kit.ArkData';
-import { commonType } from '@kit.ArkData';
 ```
 
 ## createTime

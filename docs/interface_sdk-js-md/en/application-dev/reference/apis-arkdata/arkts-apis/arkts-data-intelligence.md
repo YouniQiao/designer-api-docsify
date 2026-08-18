@@ -1,18 +1,6 @@
 # @ohos.data.intelligence
 
-/*
- Copyright (c) 2024 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+Provides methods for intelligent data processing.
 
 **Since:** 23
 
@@ -24,7 +12,6 @@
 
 ```TypeScript
 import { intelligence } from '@kit.ArkData';
-import { intelligence } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -33,10 +20,10 @@ import { intelligence } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getimageembeddingmodel) | Obtains an image embedding model. |
-| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel) | Obtains the supported cloud embedding models. |
-| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel) | Obtains a text embedding model. |
-| [splitText](arkts-arkdata-intelligence-splittext-f.md#splittext) | Splits text. |
+| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md) | Obtains an image embedding model. |
+| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md) | Obtains the supported cloud embedding models. |
+| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md) | Obtains a text embedding model. |
+| [splitText](arkts-arkdata-intelligence-splittext-f.md) | Splits text. |
 
 ### Interfaces
 

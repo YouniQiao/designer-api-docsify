@@ -12,7 +12,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function supportsCACertDialog(): boolean
 ```
 
-Check whether the device supports the [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#opencertificatedetaildialog), [openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openinstallcertificatedialog), and [openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openuninstallcertificatedialog) interfaces to open the dialog box for managing CA certificates.
+Check whether the device supports the [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md), [openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md), and [openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md) interfaces to open the dialog box for managing CA certificates.
 
 **Since:** 26.0.0
 

@@ -10,7 +10,6 @@
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## Summary
@@ -19,95 +18,95 @@ import { avSession } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession) | Create an AVSession instance. An ability can only create one AVSession |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession) | Create an AVSession instance. An ability can only create one AVSession |
-| [getAVSession](arkts-avsession-avsession-getavsession-f.md#getavsession) | Get an AVSession instance if already created. |
-| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md#isdesktoplyricsupported) | Whether desktop lyric feature is supported. |
-| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md#offsessioncreate) | Unregister session create callback |
-| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md#offsessiondestroy) | Unregister session destroy callback |
-| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md#offtopsessionchange) | Unregister top session changed callback |
-| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md#onsessioncreate) | Register session create callback |
-| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md#onsessiondestroy) | Register session destroy callback |
-| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md#ontopsessionchange) | Register top session changed callback |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md) | Create an AVSession instance. An ability can only create one AVSession |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md) | Create an AVSession instance. An ability can only create one AVSession |
+| [getAVSession](arkts-avsession-avsession-getavsession-f.md) | Get an AVSession instance if already created. |
+| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md) | Whether desktop lyric feature is supported. |
+| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md) | Unregister session create callback |
+| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md) | Unregister session destroy callback |
+| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md) | Unregister top session changed callback |
+| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md) | Register session create callback |
+| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md) | Register session destroy callback |
+| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md) | Register top session changed callback |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | Cast Audio to the remote devices or cast back local device |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio-system-api) | Cast Audio to the remote devices or cast back local device |
-| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md#castaudiosession) | Cast Audio to the remote devices or cast back local device |
-| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md#castaudiosession-system-api) | Cast Audio to the remote devices or cast back local device |
-| [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md#castaudiosessionall) | Cast all the media audio to the remote devices or cast back local device |
-| [createController](arkts-avsession-avsession-createcontroller-f-sys.md#createcontroller) | Create an avsession controller |
-| [createController](arkts-avsession-avsession-createcontroller-f-sys.md#createcontroller-system-api) | Create an avsession controller |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller-system-api) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller-system-api) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return null. |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller-system-api) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined. |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md#getallsessiondescriptors) | Get all avsession descriptors of the system |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md#getallsessiondescriptors-system-api) | Get all avsession descriptors which can be shown on system entrance. |
-| [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md#getdistributedsessioncontroller) | Get distributed avsession controller |
-| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos) | Get history play list information records. |
-| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos-system-api) | Get history play list information records. |
-| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md#gethistoricalsessiondescriptors) | Get history avsession records. These sessions have been destroyed. |
-| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md#gethistoricalsessiondescriptors-system-api) | Get history avsession records. These sessions have been destroyed. |
-| [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md#getsessiondescriptors) | Get session descriptors of the system based on different session category. |
-| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md#offactivesessionchanged) | Unregister active session changed callback. |
-| [offDeviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md#offdeviceavailable) | Unregister device discovery callback |
-| [offDeviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md#offdevicelogevent) | UnRegister log event callback. |
-| [offDeviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md#offdeviceoffline) | Unregister device offline callback |
-| [offDeviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md#offdevicestatechanged) | Unregisters a system callback for the device connection phase. |
-| [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md#offdistributedsessionchange) | Unregister distributed session changed callback |
-| [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md#offsessionservicedie) | Unregister Session service death callback, notifying the application to clean up resources. |
-| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md#offsystemcommonevent) | Unregister system common event callback |
-| [off_deviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md#offdeviceavailable) | Unregister device discovery callback |
-| [off_deviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md#offdevicelogevent) | UnRegister log event callback. |
-| [off_deviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md#offdeviceoffline) | Unregister device offline callback |
-| [off_deviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md#offdevicestatechanged) | Unregisters a system callback for the device connection phase. |
-| [off_distributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md#offdistributedsessionchange) | Unregister distributed session changed callback |
-| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#offsessioncreate) | Unregister session create callback |
-| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#offsessiondestroy) | Unregister session destroy callback |
-| [off_sessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md#offsessionservicedie) | Unregister Session service death callback, notifying the application to clean up resources. |
-| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#offtopsessionchange) | Unregister top session changed callback |
-| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md#onactivesessionchanged) | Register active session changed callback. |
-| [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md#ondeviceavailable) | Register device discovery callback |
-| [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md#ondevicelogevent) | Register log event callback. |
-| [onDeviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md#ondeviceoffline) | Register device offline callback |
-| [onDeviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md#ondevicestatechanged) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
-| [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md#ondistributedsessionchange) | Register distributed session changed callback |
-| [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md#onsessionservicedie) | Register Session service death callback, notifying the application to clean up resources. |
-| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md#onsystemcommonevent) | Register system common event callback |
-| [on_deviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md#ondeviceavailable) | Register device discovery callback |
-| [on_deviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md#ondevicelogevent) | Register log event callback. |
-| [on_deviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md#ondeviceoffline) | Register device offline callback |
-| [on_deviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md#ondevicestatechanged) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
-| [on_distributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md#ondistributedsessionchange) | Register distributed session changed callback |
-| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#onsessioncreate) | Register session create callback |
-| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#onsessiondestroy) | Register session destroy callback |
-| [on_sessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md#onsessionservicedie) | Register Session service death callback, notifying the application to clean up resources. |
-| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#ontopsessionchange) | Register top session changed callback |
-| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md#sendsystemavkeyevent) | Send system media key event.The system automatically selects the recipient. |
-| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md#sendsystemavkeyevent-system-api) | Send system media key event.The system automatically selects the recipient. |
-| [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md#sendsystemcommoncommand) | Send system control command. The system automatically selects the recipient. |
-| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md#sendsystemcontrolcommand) | Send system control command.The system automatically selects the recipient. |
-| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md#sendsystemcontrolcommand-system-api) | Send system control command.The system automatically selects the recipient. |
-| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md#setdiscoverable) | Enable or disable device to be discoverable, used at sink side. |
-| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md#setdiscoverable-system-api) | Enable or disable device to be discoverable, used at sink side. |
-| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md#startavplayback) | Start an application for media playback. |
-| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md#startavplayback-system-api) | Start an application for media playback with command info. |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery) | Start device discovery. |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery-system-api) | Start device discovery. |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery-system-api) | Start device discovery. |
-| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md#startcasting) | Cast resource to remote device. |
-| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md#startcasting-system-api) | Cast resource to remote device. |
-| [startDeviceLogging](arkts-avsession-avsession-startdevicelogging-f-sys.md#startdevicelogging) | Begin to write device logs into a file descriptor for the purpose of problem locating. If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL event will be omitted. |
-| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md#stopcastdevicediscovery) | Stop device discovery. |
-| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md#stopcastdevicediscovery-system-api) | Stop device discovery. |
-| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md#stopcasting) | Stop current cast and disconnect device connection. |
-| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md#stopcasting-system-api) | Stop current cast and disconnect device connection. |
-| [stopDeviceLogging](arkts-avsession-avsession-stopdevicelogging-f-sys.md#stopdevicelogging) | Stop the current device written even the discovery is ongoing. |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) | Cast Audio to the remote devices or cast back local device |
+| [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md) | Cast all the media audio to the remote devices or cast back local device |
+| [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | Create an avsession controller |
+| [createController](arkts-avsession-avsession-createcontroller-f-sys.md) | Create an avsession controller |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control. |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return null. |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) | Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined. |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | Get all avsession descriptors of the system |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) | Get all avsession descriptors which can be shown on system entrance. |
+| [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md) | Get distributed avsession controller |
+| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | Get history play list information records. |
+| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md) | Get history play list information records. |
+| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
+| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
+| [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) | Get session descriptors of the system based on different session category. |
+| [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) | Unregister active session changed callback. |
+| [offDeviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | Unregister device discovery callback |
+| [offDeviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | UnRegister log event callback. |
+| [offDeviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | Unregister device offline callback |
+| [offDeviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) | Unregisters a system callback for the device connection phase. |
+| [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
+| [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
+| [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | Unregister system common event callback |
+| off_deviceAvailable | Unregister device discovery callback |
+| off_deviceLogEvent | UnRegister log event callback. |
+| off_deviceOffline | Unregister device offline callback |
+| off_deviceStateChanged | Unregisters a system callback for the device connection phase. |
+| off_distributedSessionChange | Unregister distributed session changed callback |
+| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#off_sessioncreatesessioncreate) | Unregister session create callback |
+| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#off_sessiondestroysessiondestroy) | Unregister session destroy callback |
+| off_sessionServiceDie | Unregister Session service death callback, notifying the application to clean up resources. |
+| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#off_topsessionchangetopsessionchange) | Unregister top session changed callback |
+| [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | Register active session changed callback. |
+| [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
+| [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | Register log event callback. |
+| [onDeviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | Register device offline callback |
+| [onDeviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
+| [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
+| [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | Register system common event callback |
+| on_deviceAvailable | Register device discovery callback |
+| on_deviceLogEvent | Register log event callback. |
+| on_deviceOffline | Register device offline callback |
+| on_deviceStateChanged | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| on_distributedSessionChange | Register distributed session changed callback |
+| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#on_sessioncreatesessioncreate) | Register session create callback |
+| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#on_sessiondestroysessiondestroy) | Register session destroy callback |
+| on_sessionServiceDie | Register Session service death callback, notifying the application to clean up resources. |
+| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#on_topsessionchangetopsessionchange) | Register top session changed callback |
+| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
+| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
+| [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) | Send system control command. The system automatically selects the recipient. |
+| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) | Send system control command.The system automatically selects the recipient. |
+| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md) | Send system control command.The system automatically selects the recipient. |
+| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) | Enable or disable device to be discoverable, used at sink side. |
+| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) | Enable or disable device to be discoverable, used at sink side. |
+| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback. |
+| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback with command info. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
+| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) | Cast resource to remote device. |
+| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md) | Cast resource to remote device. |
+| [startDeviceLogging](arkts-avsession-avsession-startdevicelogging-f-sys.md) | Begin to write device logs into a file descriptor for the purpose of problem locating. If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL event will be omitted. |
+| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) | Stop device discovery. |
+| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md) | Stop device discovery. |
+| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) | Stop current cast and disconnect device connection. |
+| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md) | Stop current cast and disconnect device connection. |
+| [stopDeviceLogging](arkts-avsession-avsession-stopdevicelogging-f-sys.md) | Stop the current device written even the discovery is ongoing. |
 <!--DelEnd-->
 
 ### Classes
@@ -142,7 +141,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md) | Playback position definition |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -177,7 +176,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md) | Supported skip intervals definition |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

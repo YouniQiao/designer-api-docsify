@@ -18,7 +18,7 @@ cross?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ main?: LengthMetrics
 
 Space on the main axis of the Flex component.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

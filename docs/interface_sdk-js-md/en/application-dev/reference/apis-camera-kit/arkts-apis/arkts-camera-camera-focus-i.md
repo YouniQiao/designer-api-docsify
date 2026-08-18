@@ -1,8 +1,8 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery). It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md). It provides APIs related to focus operations.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # @ohos.resourceschedule.usageStatistics
 
-Provides methods for managing bundle usage statistics, including the methods for querying bundle usage information and state data. You can use the methods defined in this class to query the usage history and states of bundles in a specified period. The system stores the query result in a [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md#bundlestatsinfo-system-api) instance and then returns it to you.
+Provides methods for managing bundle usage statistics, including the methods for querying bundle usage information and state data. You can use the methods defined in this class to query the usage history and states of bundles in a specified period. The system stores the query result in a [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md) instance and then returns it to you.
 
 **Since:** 23
 
@@ -12,55 +12,54 @@ Provides methods for managing bundle usage statistics, including the methods for
 
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md#isidlestate) | Checks whether the application with a specified bundle name is in the idle state. |
-| [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md#isidlestate-system-api) | Checks whether the application with a specified bundle name is in the idle state. |
-| [isIdleStateSync](arkts-backgroundtasks-usagestatistics-isidlestatesync-f-sys.md#isidlestatesync) | Checks whether the application with a specified bundle name is in the idle state. |
-| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup-system-api) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup-system-api) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup-system-api) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md#queryappgroupsync) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md#queryappgroupsync-system-api) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
-| [queryAppStatsInfos](arkts-backgroundtasks-usagestatistics-queryappstatsinfos-f-sys.md#queryappstatsinfos) | Queries usage information about each application within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
-| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents-system-api) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents-system-api) | Queries state data of all bundles within a specified period identified by the start and end time. |
-| [queryBundleStatsInfoByInterval](arkts-backgroundtasks-usagestatistics-querybundlestatsinfobyinterval-f-sys.md#querybundlestatsinfobyinterval) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStatsInfoByInterval](arkts-backgroundtasks-usagestatistics-querybundlestatsinfobyinterval-f-sys.md#querybundlestatsinfobyinterval-system-api) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStatsInfos](arkts-backgroundtasks-usagestatistics-querybundlestatsinfos-f-sys.md#querybundlestatsinfos) | Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
-| [queryBundleStatsInfos](arkts-backgroundtasks-usagestatistics-querybundlestatsinfos-f-sys.md#querybundlestatsinfos-system-api) | Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
-| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md#querycurrentbundleevents) | Queries state data of the current bundle within a specified period. |
-| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md#querycurrentbundleevents-system-api) | Queries state data of the current bundle within a specified period. |
-| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md#querycurrentbundleevents-system-api) | Queries state data of the current bundle within a specified period. |
-| [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md#querydeviceeventstats) | Queries device event states data within a specified period identified by the start and end time. |
-| [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md#querydeviceeventstats-system-api) | Queries device event states data within a specified period identified by the start and end time. |
-| [queryLastUseTime](arkts-backgroundtasks-usagestatistics-querylastusetime-f-sys.md#querylastusetime) | Queries the last usage timestamp by bundleName and app index. |
-| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords) | Queries recently module usage records with maxNum. |
-| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords-system-api) | Queries recently module usage records with maxNum. |
-| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords-system-api) | Queries recently module usage records. |
-| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords-system-api) | Queries recently module usage records. |
-| [queryNotificationEventStats](arkts-backgroundtasks-usagestatistics-querynotificationeventstats-f-sys.md#querynotificationeventstats) | Queries app notification number within a specified period identified by the start and end time. |
-| [queryNotificationEventStats](arkts-backgroundtasks-usagestatistics-querynotificationeventstats-f-sys.md#querynotificationeventstats-system-api) | Queries app notification number within a specified period identified by the start and end time. |
-| [registerAppGroupCallBack](arkts-backgroundtasks-usagestatistics-registerappgroupcallback-f-sys.md#registerappgroupcallback) | Register appGroup change callback to service. |
-| [registerAppGroupCallBack](arkts-backgroundtasks-usagestatistics-registerappgroupcallback-f-sys.md#registerappgroupcallback-system-api) | Register appGroup change callback to service. |
-| [setAppGroup](arkts-backgroundtasks-usagestatistics-setappgroup-f-sys.md#setappgroup) | Set app group by bundleName. |
-| [setAppGroup](arkts-backgroundtasks-usagestatistics-setappgroup-f-sys.md#setappgroup-system-api) | Set app group by bundleName. |
-| [unregisterAppGroupCallBack](arkts-backgroundtasks-usagestatistics-unregisterappgroupcallback-f-sys.md#unregisterappgroupcallback) | Unregister appGroup change callback from service. |
-| [unregisterAppGroupCallBack](arkts-backgroundtasks-usagestatistics-unregisterappgroupcallback-f-sys.md#unregisterappgroupcallback-system-api) | Unregister appGroup change callback from service. |
+| [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md) | Checks whether the application with a specified bundle name is in the idle state. |
+| [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md) | Checks whether the application with a specified bundle name is in the idle state. |
+| [isIdleStateSync](arkts-backgroundtasks-usagestatistics-isidlestatesync-f-sys.md) | Checks whether the application with a specified bundle name is in the idle state. |
+| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md) | Queries the app group of the calling application. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md) | Queries the usage priority group by bundleName. The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks. |
+| [queryAppStatsInfos](arkts-backgroundtasks-usagestatistics-queryappstatsinfos-f-sys.md) | Queries usage information about each application within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
+| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
+| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
+| [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md) | Queries state data of all bundles within a specified period identified by the start and end time. |
+| [queryBundleStatsInfoByInterval](arkts-backgroundtasks-usagestatistics-querybundlestatsinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
+| [queryBundleStatsInfoByInterval](arkts-backgroundtasks-usagestatistics-querybundlestatsinfobyinterval-f-sys.md) | Queries usage information about each bundle within a specified period at a specified interval. |
+| [queryBundleStatsInfos](arkts-backgroundtasks-usagestatistics-querybundlestatsinfos-f-sys.md) | Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
+| [queryBundleStatsInfos](arkts-backgroundtasks-usagestatistics-querybundlestatsinfos-f-sys.md) | Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default. |
+| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md) | Queries state data of the current bundle within a specified period. |
+| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md) | Queries state data of the current bundle within a specified period. |
+| [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md) | Queries state data of the current bundle within a specified period. |
+| [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md) | Queries device event states data within a specified period identified by the start and end time. |
+| [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md) | Queries device event states data within a specified period identified by the start and end time. |
+| [queryLastUseTime](arkts-backgroundtasks-usagestatistics-querylastusetime-f-sys.md) | Queries the last usage timestamp by bundleName and app index. |
+| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md) | Queries recently module usage records with maxNum. |
+| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md) | Queries recently module usage records with maxNum. |
+| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md) | Queries recently module usage records. |
+| [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md) | Queries recently module usage records. |
+| [queryNotificationEventStats](arkts-backgroundtasks-usagestatistics-querynotificationeventstats-f-sys.md) | Queries app notification number within a specified period identified by the start and end time. |
+| [queryNotificationEventStats](arkts-backgroundtasks-usagestatistics-querynotificationeventstats-f-sys.md) | Queries app notification number within a specified period identified by the start and end time. |
+| [registerAppGroupCallBack](arkts-backgroundtasks-usagestatistics-registerappgroupcallback-f-sys.md) | Register appGroup change callback to service. |
+| [registerAppGroupCallBack](arkts-backgroundtasks-usagestatistics-registerappgroupcallback-f-sys.md) | Register appGroup change callback to service. |
+| [setAppGroup](arkts-backgroundtasks-usagestatistics-setappgroup-f-sys.md) | Set app group by bundleName. |
+| [setAppGroup](arkts-backgroundtasks-usagestatistics-setappgroup-f-sys.md) | Set app group by bundleName. |
+| [unregisterAppGroupCallBack](arkts-backgroundtasks-usagestatistics-unregisterappgroupcallback-f-sys.md) | Unregister appGroup change callback from service. |
+| [unregisterAppGroupCallBack](arkts-backgroundtasks-usagestatistics-unregisterappgroupcallback-f-sys.md) | Unregister appGroup change callback from service. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -73,7 +72,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -82,7 +81,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

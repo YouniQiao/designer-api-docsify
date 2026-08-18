@@ -17,7 +17,7 @@ declare function close(fd: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [close](arkts-corefile-file-fs-close-f.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-close-f.md)
 
 <!--Device-unnamed-declare function close(fd: number): Promise<void>--><!--Device-unnamed-declare function close(fd: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function close(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [close](arkts-corefile-file-fs-close-f.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-close-f.md)
 
 <!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -59,5 +59,5 @@ declare function close(fd: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | number | 是 | 待关闭文件的文件描述符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步关闭文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步关闭文件之后的回调。 |
 

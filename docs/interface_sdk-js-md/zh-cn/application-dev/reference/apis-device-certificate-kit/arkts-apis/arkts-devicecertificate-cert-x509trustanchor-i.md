@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## CACert
@@ -21,7 +24,7 @@ CACert?: X509Cert
 
 信任的CA证书。如果配置了CACert，则校验证书链时只使用CACert，不再使用CAPubKey和CASubject。
 
-**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
+**类型：** X509Cert
 
 **起始版本：** 23
 

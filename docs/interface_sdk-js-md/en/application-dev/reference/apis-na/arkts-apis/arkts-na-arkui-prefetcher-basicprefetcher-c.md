@@ -1,6 +1,6 @@
 # BasicPrefetcher
 
-Basic implementation of [IPrefetcher](arkts-na-arkui-prefetcher-iprefetcher-i.md#iprefetcher). It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
+Basic implementation of [IPrefetcher](arkts-na-arkui-prefetcher-iprefetcher-i.md). It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
 
 **Inheritance/Implementation:** BasicPrefetcher implements IPrefetcher<T>
 

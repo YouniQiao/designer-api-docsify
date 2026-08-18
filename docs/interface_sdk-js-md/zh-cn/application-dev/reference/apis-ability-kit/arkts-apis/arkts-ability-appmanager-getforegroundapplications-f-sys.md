@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundApplications
@@ -11,7 +12,7 @@
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)定义。使用callback异步回调。
+获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -27,7 +28,7 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | 是 | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | 是 | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -69,7 +70,7 @@ try {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md#appstatedata)定义。使用Promise异步回调。
+获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。
 
 **起始版本：** 23
 

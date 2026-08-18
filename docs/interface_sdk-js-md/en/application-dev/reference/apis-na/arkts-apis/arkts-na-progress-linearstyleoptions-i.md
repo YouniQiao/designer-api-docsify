@@ -2,7 +2,7 @@
 
 Defines the linear style Options.
 
-**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md#scaneffectoptions), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#commonprogressstyleoptions)
+**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-na-progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md)
 
 **Since:** 23
 

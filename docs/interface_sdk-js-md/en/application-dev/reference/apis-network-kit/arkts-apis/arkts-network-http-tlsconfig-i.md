@@ -1,6 +1,6 @@
 # TlsConfig
 
-TLS config.
+Defines the TLS configuration, including the version and cipher suite.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { http } from '@kit.NetworkKit';
 cipherSuites?: CipherSuite[]
 ```
 
-CipherSuites, cipherSuits must match tsl version, otherswise will set all system-supported cipherSuits.
+Array of cipher suite types. If no cipher suite type is set, all supported cipher suite types are carried by default. For details about the cipher suite types, see [TlsV13SpecificCipherSuite](arkts-network-http-tlsv13specificciphersuite-t.md), [TlsV12SpecificCipherSuite](arkts-network-http-tlsv12specificciphersuite-t.md) and [TlsV10SpecificCipherSuite](arkts-network-http-tlsv10specificciphersuite-t.md).
 
 **Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)[]
 
@@ -38,7 +38,7 @@ CipherSuites, cipherSuits must match tsl version, otherswise will set all system
 tlsVersionMax: TlsVersion
 ```
 
-Maximum version num of Tls protocol.
+Latest TLS version.
 
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
@@ -56,7 +56,7 @@ Maximum version num of Tls protocol.
 tlsVersionMin: TlsVersion
 ```
 
-Minimum version num of Tls protocol.
+Earliest TLS version.
 
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 

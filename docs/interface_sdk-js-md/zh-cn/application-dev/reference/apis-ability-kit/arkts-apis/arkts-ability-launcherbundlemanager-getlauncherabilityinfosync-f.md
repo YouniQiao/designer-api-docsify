@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfoSync
@@ -11,7 +12,7 @@
 function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>
 ```
 
-查询指定bundleName及用户的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo)。
+查询指定bundleName及用户的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。
 
 **起始版本：** 23
 
@@ -26,7 +27,7 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<Laun
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| userId | int | 是 | 被查询的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| userId | int | 是 | 被查询的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
 
 **返回值：**
 

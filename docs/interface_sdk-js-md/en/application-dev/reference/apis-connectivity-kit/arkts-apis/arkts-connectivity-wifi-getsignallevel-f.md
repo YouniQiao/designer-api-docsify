@@ -21,7 +21,7 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getsignallevel)
+**Substitutes:** [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

@@ -30,7 +30,7 @@ Add surface for the virtual screen.
 | --- | --- | --- | --- |
 | screenId | long | Yes | Indicates the screen id of the virtual screen. |
 | surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can use the getXComponentSurfaceId method to obtain the ID of the surface corresponding to an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
-| surfaceRegion | Rect | No | Rectangular area of the virtual screen displayed by the surface. If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) or [addVirtualScreenSurface()](#addvirtualscreensurface-system-api), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen. In independent display mode, the surfaceRegion is valid. |
+| surfaceRegion | Rect | No | Rectangular area of the virtual screen displayed by the surface. If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md) or [addVirtualScreenSurface()](#addvirtualscreensurface-system-api), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen. In independent display mode, the surfaceRegion is valid. |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ Add surface for the virtual screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function addVirtualScreenSurface can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |

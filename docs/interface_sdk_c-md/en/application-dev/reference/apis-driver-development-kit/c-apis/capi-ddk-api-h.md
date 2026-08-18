@@ -49,7 +49,7 @@ Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyA
 
 | Type | Description |
 | -- | -- |
-| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.<br>     [DDK_INVALID_PARAMETER](capi-ddk-types-h.md#ddk_retcode): The input name is a null pointer, the value of size is 0, or the input<br>     ashmem is a null pointer.<br>     [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The attempt to create an Ashmem object or the DDK_Ashmem structure fails. |
+| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.      [DDK_INVALID_PARAMETER](capi-ddk-types-h.md#ddk_retcode): The input name is a null pointer, the value of size is 0, or the input      ashmem is a null pointer.      [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The attempt to create an Ashmem object or the DDK_Ashmem structure fails. |
 
 ### OH_DDK_MapAshmem()
 
@@ -74,7 +74,7 @@ Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](
 
 | Type | Description |
 | -- | -- |
-| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.<br>     [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.<br>     [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid.<br>     [DDK_INVALID_OPERATION](capi-ddk-types-h.md#ddk_retcode): The attempt to call MapAshmem fails. |
+| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.      [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.      [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid.      [DDK_INVALID_OPERATION](capi-ddk-types-h.md#ddk_retcode): The attempt to call MapAshmem fails. |
 
 ### OH_DDK_UnmapAshmem()
 
@@ -98,7 +98,7 @@ Unmaps an **Ashmem** object.
 
 | Type | Description |
 | -- | -- |
-| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.<br>     [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.<br>     [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid. |
+| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.      [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.      [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid. |
 
 ### OH_DDK_DestroyAshmem()
 
@@ -122,6 +122,6 @@ Destroys an **Ashmem** object.
 
 | Type | Description |
 | -- | -- |
-| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.<br>     [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.<br>     [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid. |
+| [DDK_RetCode](capi-ddk-types-h.md#ddk_retcode) | [DDK_SUCCESS](capi-ddk-types-h.md#ddk_retcode): The API call is successful.      [DDK_NULL_PTR](capi-ddk-types-h.md#ddk_retcode): The input ashmem is a null pointer.      [DDK_FAILURE](capi-ddk-types-h.md#ddk_retcode): The file descriptor of the Ashmem object is invalid. |
 
 

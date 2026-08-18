@@ -22,21 +22,21 @@ import { inputEventClient } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
-| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
-| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
+| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
+| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
+| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectevent) | Injects keys (including single keys and combination keys). |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md#injectevent-system-api) | Inject system keys. |
-| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md#injectkeyevent) | Injects key events (for both single keys and combination keys). |
-| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md#injectmouseevent) | Injects a mouse/touchpad event. |
-| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md#injecttouchevent) | Injects a touch event. |
-| [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md#permitinjection) | Specifies whether to authorize event injection. |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | Injects keys (including single keys and combination keys). |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | Inject system keys. |
+| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md) | Injects key events (for both single keys and combination keys). |
+| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md) | Injects a mouse/touchpad event. |
+| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md) | Injects a touch event. |
+| [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md) | Specifies whether to authorize event injection. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -49,7 +49,7 @@ import { inputEventClient } from '@kit.InputKit';
 | [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | Represents information about a single touch point on the display. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

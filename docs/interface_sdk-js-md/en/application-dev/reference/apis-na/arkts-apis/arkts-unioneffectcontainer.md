@@ -3,12 +3,12 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#unioneffectcontainer-system-api) | Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with "useUnionEffect(true)" set inside it, when their distance is less than a certain threshold. |
-| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md#unioneffectcontainer-system-api) | Defines UnionEffectContainer |
+| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md) | Provides a UnionEffectContainer Component that generates a component fusion effect for descendant components with "useUnionEffect(true)" set inside it, when their distance is less than a certain threshold. |
+| [UnionEffectContainer](arkts-na-unioneffectcontainer-unioneffectcontainer-f-sys.md) | Defines UnionEffectContainer |
 <!--DelEnd-->
 
 ### Interfaces
@@ -18,7 +18,7 @@
 | [UnionEffectContainerAttribute](arkts-na-unioneffectcontainer-unioneffectcontainerattribute-i.md) | Defines the UnionEffectContainer attribute functions. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -27,7 +27,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

@@ -12,7 +12,7 @@ import { networkSecurity } from '@kit.NetworkKit';
 export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int
 ```
 
-Certificate verification to the server.
+Verifies the certificate passed by the application using the preset CA certificate and the CA certificate installed by the user in the certificate management. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -24,14 +24,14 @@ Certificate verification to the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob | Yes | Certificates to be verified. |
-| caCert | CertBlob | No | Incoming custom CA cert. |
+| cert | CertBlob | Yes | Certificate to be verified. |
+| caCert | CertBlob | No | Custom CA certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Returns 0 if verify of certification from server succeed, else verify failed. |
+| int | Certificate verification result. The value **0** indicates that the certificate verification is successful, and a non-0 value indicates that the verification has failed. |
 
 **Error codes:**
 
@@ -45,7 +45,7 @@ Certificate verification to the server.
 | [2305007](../errorcode-net-networkSecurity.md#2305007-failed-to-sign-the-certificate) | Certificate signature failure. |
 | [2305006](../errorcode-net-networkSecurity.md#2305006-failed-to-decode-the-issuer-public-key) | Unable to decode issuer public key. |
 | [2305005](../errorcode-net-networkSecurity.md#2305005-failed-to-decrypt-the-crl-signature) | Unable to decrypt CRL signature. |
-| [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) | Invalid certificate verification context. |
+| [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) | Invalid certificate verification context.<br>**Applicable version:** 12 and later |
 | [2305004](../errorcode-net-networkSecurity.md#2305004-failed-to-decrypt-the-certificate-signature) | Unable to decrypt certificate signature. |
 | [2305011](../errorcode-net-networkSecurity.md#2305011-invalid-crl) | CRL is not yet valid. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
@@ -53,7 +53,7 @@ Certificate verification to the server.
 | [2305009](../errorcode-net-networkSecurity.md#2305009-invalid-certificate) | Certificate is not yet valid. |
 | [2305008](../errorcode-net-networkSecurity.md#2305008-failed-to-sign-the-crl) | CRL signature failure. |
 | [2305012](../errorcode-net-networkSecurity.md#2305012-crl-expired) | CRL has expired. |
-| [2305018](../errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) | Self-signed certificate. |
+| [2305018](../errorcode-net-networkSecurity.md#2305018-self-signed-certificate) | Self-signed certificate.<br>**Applicable version:** 12 and later |
 | [2305023](../errorcode-net-networkSecurity.md#2305023-certificate-revoked) | Certificate has been revoked. |
 
 **Examples**

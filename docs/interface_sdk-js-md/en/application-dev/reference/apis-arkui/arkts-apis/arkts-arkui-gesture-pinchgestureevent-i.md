@@ -2,7 +2,7 @@
 
 Defines event info for pinch gesture.
 
-**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#basegestureevent)
+**Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md)
 
 **Since:** 23
 

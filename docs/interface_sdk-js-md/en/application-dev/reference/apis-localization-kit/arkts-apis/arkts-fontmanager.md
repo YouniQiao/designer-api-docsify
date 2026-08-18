@@ -1,18 +1,6 @@
 # @ohos.fontManager
 
-/*
- Copyright (c) 2025 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License"),
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+This module provides system applications with the capabilities to install and uninstall third-party fonts and migrate font data. Specifically: <br>- Installing font files from a specified path (.ttf and .ttc formats are supported). <br>- Uninstalling installed fonts by font name. <br>- Starting a font data migration task during device upgrades, and providing callbacks for migration progress and results.
 
 **Since:** 23
 
@@ -26,23 +14,22 @@
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
-import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#datamigration) | Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function. |
-| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installfont) | Installs a font file from a specified path into the system font library. This API uses a promise to return the result. After successful installation, applications can use the font by its font name. |
-| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallfont) | Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result. |
+| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md) | Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function. |
+| [installFont](arkts-localization-fontmanager-installfont-f-sys.md) | Installs a font file from a specified path into the system font library. This API uses a promise to return the result. After successful installation, applications can use the font by its font name. |
+| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md) | Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

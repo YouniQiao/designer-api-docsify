@@ -58,7 +58,7 @@ themeColorMode?: PickerColorMode
 
 Theme color of the album page. The options are **AUTO**, **Light**, and **Dark**. The default value is **AUTO**.
 
-**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 12
 

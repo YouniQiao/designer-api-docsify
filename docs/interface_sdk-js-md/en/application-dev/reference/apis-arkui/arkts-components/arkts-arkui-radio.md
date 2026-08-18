@@ -30,8 +30,23 @@ Creates a radio button.
 
 ## Summary
 
-- [RadioConfiguration](arkts-arkui-radioconfiguration-i.md)
-- [RadioOptions](arkts-arkui-radiooptions-i.md)
-- [RadioStyle](arkts-arkui-radiostyle-i.md)
-- [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)
-- [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+| [RadioOptions](arkts-arkui-radiooptions-i.md) | Radio button information. |
+| [RadioStyle](arkts-arkui-radiostyle-i.md) | Radio button color. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | Defines the callback type for radio button selected state changes. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | Radio button style. |
+

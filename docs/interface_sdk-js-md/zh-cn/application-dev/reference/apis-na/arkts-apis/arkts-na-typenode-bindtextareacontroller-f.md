@@ -22,7 +22,7 @@ export function bindTextAreaController(node: FrameNode, controller: TextAreaCont
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 目标节点。 |
+| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 目标节点。 |
 | controller | TextAreaController | 是 | the controller which is bind to 目标节点。 |
 
 **错误码：**

@@ -9,7 +9,7 @@
 | [MediaCachedImageAttribute](arkts-na-mediacachedimage-mediacachedimageattribute-i.md) | Defines the MediaCachedImage component attributes. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -17,7 +17,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

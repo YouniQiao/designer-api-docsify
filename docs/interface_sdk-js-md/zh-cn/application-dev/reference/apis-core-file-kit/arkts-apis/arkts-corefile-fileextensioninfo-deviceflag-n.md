@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -26,7 +27,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supportsread) | 此设备支持读。 |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supportswrite) | 此设备支持写。 |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | 此设备支持读。 |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | 此设备支持写。 |
 <!--DelEnd-->
 

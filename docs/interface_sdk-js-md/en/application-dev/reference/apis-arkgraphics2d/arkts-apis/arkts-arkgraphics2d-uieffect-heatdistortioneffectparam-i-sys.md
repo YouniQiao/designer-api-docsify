@@ -14,7 +14,6 @@ The parameters of heat distortion effect.
 
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## intensity

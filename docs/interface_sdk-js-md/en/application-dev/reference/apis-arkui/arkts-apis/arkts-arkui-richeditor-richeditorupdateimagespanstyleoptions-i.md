@@ -2,7 +2,7 @@
 
 Defines image span style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#richeditorspanstyleoptions)
+**Inheritance/Implementation:** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)
 
 **Since:** 23
 

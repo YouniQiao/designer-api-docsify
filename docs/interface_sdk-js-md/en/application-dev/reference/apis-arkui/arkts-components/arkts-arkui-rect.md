@@ -56,5 +56,10 @@ Defines the constructor of Rect component.
 
 ## Summary
 
-- [RectOptions](arkts-arkui-rectoptions-i.md)
-- [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [RectOptions](arkts-arkui-rectoptions-i.md) | Describes the options of the rectangle. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | Describes the options of the rounded rectangle. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability. |
+

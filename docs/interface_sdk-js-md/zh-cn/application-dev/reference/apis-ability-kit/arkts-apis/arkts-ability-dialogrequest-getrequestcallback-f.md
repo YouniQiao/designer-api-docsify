@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestCallback

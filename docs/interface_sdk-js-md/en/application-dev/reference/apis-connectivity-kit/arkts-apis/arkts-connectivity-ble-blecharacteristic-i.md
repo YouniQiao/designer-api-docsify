@@ -80,7 +80,7 @@ The characteristic value handle of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md#bledescriptor) contained in the characteristic
+The list of [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md) contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -140,7 +140,7 @@ The properties of a BLECharacteristic instance
 serviceUuid: string
 ```
 
-The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#gattservice) instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md) instance to which the characteristic belongs
 
 **Type:** string
 

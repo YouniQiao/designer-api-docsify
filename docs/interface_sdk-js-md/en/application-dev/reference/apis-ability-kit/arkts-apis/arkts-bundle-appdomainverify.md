@@ -1,18 +1,6 @@
 # @ohos.bundle.appDomainVerify(Define capabilities to access app domain verification info.)
 
-/*
- Copyright (c) 2022-2025 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+This module provides app domain verification info.
 
 **Since:** 23
 
@@ -33,11 +21,11 @@ import { appDomainVerify } from '@kit.AbilityKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [queryAssociatedBundleNames](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md#queryassociatedbundlenames) | query bundleNames associated with domain. |
-| [queryAssociatedDomains](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md#queryassociateddomains) | query domains verify associated with bundleName. |
+| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) | query bundleNames associated with domain. |
+| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) | query domains verify associated with bundleName. |
 <!--DelEnd-->
 

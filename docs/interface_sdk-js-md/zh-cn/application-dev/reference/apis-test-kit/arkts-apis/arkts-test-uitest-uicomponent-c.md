@@ -1,12 +1,12 @@
 # UiComponent
 
-UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。 该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[Component&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#component)替代。
+UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。 该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[Component&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [Component](arkts-test-uitest-component-c.md#component)
+**替代接口：** [Component](arkts-test-uitest-component-c.md)
 
 <!--Device-unnamed-declare class UiComponent--><!--Device-unnamed-declare class UiComponent-End-->
 
@@ -15,6 +15,8 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## click

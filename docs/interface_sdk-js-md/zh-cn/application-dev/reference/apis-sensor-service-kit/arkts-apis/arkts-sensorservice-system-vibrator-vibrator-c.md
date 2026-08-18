@@ -4,7 +4,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [vibrator/vibrator](arkts-vibrator.md#ohosvibrator)
+**替代接口：** [vibrator/vibrator](arkts-vibrator.md)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -23,13 +24,13 @@
 static vibrate(options?: VibrateOptions): void
 ```
 
-触发设备振动，根据指定的振动模式执行短振动或长振动效果。该接口通过callback方式返回调用结果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) > 替代。
+触发设备振动，根据指定的振动模式执行短振动或长振动效果。该接口通过callback方式返回调用结果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md) > 替代。
 
 **起始版本：** 3
 
 **废弃版本：** 8
 
-**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
 

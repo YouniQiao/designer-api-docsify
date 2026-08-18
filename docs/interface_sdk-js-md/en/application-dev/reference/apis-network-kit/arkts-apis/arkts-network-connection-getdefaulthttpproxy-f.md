@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
+Obtains the default HTTP proxy configuration of the network. This API uses an asynchronous callback to return the result. > **NOTE：**> > - If the global proxy is set, the global proxy configuration is returned. > > - If [setAppNet](arkts-network-connection-setappnet-f.md) is used to bind the application to the network specified by > [NetHandle](arkts-network-connection-nethandle-i.md), the HTTP proxy configuration of this network is returned. In other > cases, the HTTP proxy configuration of the default network is returned.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpprox
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpProxy&gt; | Yes | Returns the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) settings. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpProxy&gt; | Yes | Callback used to return the result. If the global HTTP proxy configuration of the network is obtained successfully, **error** is **undefined** and **data** is the global HTTP proxy configuration. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -55,7 +55,7 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 function getDefaultHttpProxy(): Promise<HttpProxy>
 ```
 
-Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpproxy) proxy settings. If an application level proxy is set, the application level proxy parameters are returned. If a global proxy is set, the global proxy parameters are returned. If the process is bound to a [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) using [setAppNet](arkts-network-connection-setappnet-f.md#setappnet), the [NetHandle](arkts-network-connection-nethandle-i.md#nethandle) proxy settings are returned. In other cases, the proxy settings of default network are returned.
+Obtains the default HTTP proxy configuration of the network. This API uses a promise to return the result. > **NOTE：**> > - If the global proxy is set, the global proxy configuration is returned. > > - If [setAppNet](arkts-network-connection-setappnet-f.md) is used to bind the application to the network specified by > [NetHandle](arkts-network-connection-nethandle-i.md), the HTTP proxy configuration of this network is returned. In other > cases, the HTTP proxy configuration of the default network is returned.
 
 **Since:** 23
 
@@ -67,7 +67,7 @@ Obtains the default [HttpProxy](arkts-network-connection-httpproxy-i.md#httpprox
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
+| Promise&lt;HttpProxy&gt; | Promise used to return the result. |
 
 **Error codes:**
 

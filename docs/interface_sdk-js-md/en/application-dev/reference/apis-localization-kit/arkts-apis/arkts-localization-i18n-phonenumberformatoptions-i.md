@@ -12,7 +12,6 @@ Options for **PhoneNumberFormat** object initialization.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## type

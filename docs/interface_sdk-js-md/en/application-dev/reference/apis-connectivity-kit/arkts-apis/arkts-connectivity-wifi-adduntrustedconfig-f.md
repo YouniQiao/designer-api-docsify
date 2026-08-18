@@ -21,7 +21,7 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 
 **Deprecated since:** 9
 
-**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
+**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -87,7 +87,7 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 
 **Deprecated since:** 9
 
-**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig)
+**Substitutes:** [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -100,7 +100,7 @@ Adds a specified untrusted hotspot configuration. &lt;p&gt;This method adds one 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes |  |
 
 **Examples**
 

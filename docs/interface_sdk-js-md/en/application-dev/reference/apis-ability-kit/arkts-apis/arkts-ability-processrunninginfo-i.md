@@ -6,7 +6,7 @@ The module defines the running information of a process. The information can be 
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md#processinformation)
+**Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 

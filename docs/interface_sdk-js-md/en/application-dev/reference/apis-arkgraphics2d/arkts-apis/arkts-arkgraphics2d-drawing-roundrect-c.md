@@ -12,7 +12,6 @@ Rounded rectangle. > **NOTE：**> > - The initial APIs of this class are support
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

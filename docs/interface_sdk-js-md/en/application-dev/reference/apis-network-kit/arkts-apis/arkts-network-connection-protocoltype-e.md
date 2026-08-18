@@ -1,8 +1,8 @@
 # ProtocolType
 
-Defines the protocol type.
+Enumerates network protocol types.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-export enum ProtocolType--><!--Device-connection-export enum ProtocolType-End-->
 
@@ -14,9 +14,9 @@ Defines the protocol type.
 PROTO_TYPE_TCP = 6
 ```
 
-Indicates that protocol type is TCP.
+TCP network protocol.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ProtocolType-PROTO_TYPE_TCP = 6--><!--Device-ProtocolType-PROTO_TYPE_TCP = 6-End-->
 
@@ -28,9 +28,9 @@ Indicates that protocol type is TCP.
 PROTO_TYPE_UDP = 17
 ```
 
-Indicates that protocol type is UDP.
+UDP network protocol.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-ProtocolType-PROTO_TYPE_UDP = 17--><!--Device-ProtocolType-PROTO_TYPE_UDP = 17-End-->
 

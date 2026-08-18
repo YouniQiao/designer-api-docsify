@@ -14,7 +14,6 @@ Provides APIs for interacting with the sharedCenter service. You need to inherit
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## changeConfirmation

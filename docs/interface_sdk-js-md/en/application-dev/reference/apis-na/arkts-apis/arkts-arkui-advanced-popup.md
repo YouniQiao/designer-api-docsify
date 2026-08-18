@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Popup](arkts-na-arkui-advanced-popup-popup-f.md#popup) | Build function of popup. This component is implemented based on state management V1. |
+| [Popup](arkts-na-arkui-advanced-popup-popup-f.md) | Build function of popup. This component is implemented based on state management V1. |
 
 ### Interfaces
 

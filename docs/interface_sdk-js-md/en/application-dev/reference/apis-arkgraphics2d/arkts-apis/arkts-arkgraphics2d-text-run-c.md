@@ -1,6 +1,6 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#textline) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#textline) class to create a **Run** object.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
 
 **Since:** 23
 
@@ -11,7 +11,6 @@ Represents a text typesetting unit, which is a continuous text segment with the 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
 import { text } from '@kit.ArkGraphics2D';
 ```
 

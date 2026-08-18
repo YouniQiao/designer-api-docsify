@@ -2,7 +2,7 @@
 
 Inherits from BadgeParam and has all attributes of BadgeParam.
 
-**Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-na-badge-badgeparam-i.md#badgeparam)
+**Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-na-badge-badgeparam-i.md)
 
 **Since:** 23
 

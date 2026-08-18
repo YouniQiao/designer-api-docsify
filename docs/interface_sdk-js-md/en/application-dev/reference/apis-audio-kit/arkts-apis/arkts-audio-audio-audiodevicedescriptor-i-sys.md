@@ -12,8 +12,6 @@ Describes an audio device.
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -43,7 +41,7 @@ Extended information for distributed device, includes whether the device support
 readonly dmDeviceType?: int
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remotecast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remotedaudio) has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remote_cast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remote_daudio) has dmDeviceType which indicated deviceTypeId.
 
 **Type:** int
 

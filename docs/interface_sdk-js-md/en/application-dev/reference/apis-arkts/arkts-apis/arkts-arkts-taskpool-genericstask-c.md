@@ -1,8 +1,8 @@
 # GenericsTask
 
-Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md#execute). During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
+Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md). During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
-**Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#task)
+**Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md)
 
 **Since:** 13
 
@@ -43,7 +43,7 @@ A constructor used to create a **GenericsTask** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
 
@@ -99,7 +99,7 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
 

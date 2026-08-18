@@ -19,15 +19,15 @@ import { opp } from '@kit.ConnectivityKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md#createoppserverprofile) | create the instance of OPP server profile. |
+| [createOppServerProfile](arkts-connectivity-opp-createoppserverprofile-f-sys.md) | create the instance of OPP server profile. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -37,7 +37,7 @@ import { opp } from '@kit.ConnectivityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

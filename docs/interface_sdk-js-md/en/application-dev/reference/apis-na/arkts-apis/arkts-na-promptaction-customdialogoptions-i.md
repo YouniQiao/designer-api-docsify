@@ -2,7 +2,7 @@
 
 Dialog's custom content options
 
-**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)
+**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
 
 **Since:** 23
 

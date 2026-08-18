@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function getDefaultCellularDataSimId(): int
 ```
 
-Obtains the default cellular data SIM ID.
+Obtains the default ID of the SIM card used for mobile data.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Obtains the default cellular data SIM ID.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the SIM ID of the default cellular data sim and SIM ID will increase from 1. |
+| int | Obtains the default ID of the SIM card used for mobile data. <br>The return value is bound to the SIM card and increases from 1. <br>- **0**: no SIM card. <br>- **9999**: ID of the SIM card used for mobile data in the eSIM scenario. <br>- **99999**: ID of the SIM card used for mobile data in the SkyTone scenario. The default value is **99999**. |
 
 **Examples**
 

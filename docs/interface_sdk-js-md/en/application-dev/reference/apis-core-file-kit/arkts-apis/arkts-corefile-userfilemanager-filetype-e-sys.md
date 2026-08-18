@@ -6,7 +6,7 @@ Enumerates media file types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#phototype)
+**Substitutes:** [PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md)
 
 <!--Device-userFileManager-enum FileType--><!--Device-userFileManager-enum FileType-End-->
 
@@ -37,7 +37,7 @@ Image.
 ## VIDEO
 
 ```TypeScript
-VIDEO
+VIDEO = 2
 ```
 
 Video.
@@ -48,7 +48,7 @@ Video.
 
 **Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#video)
 
-<!--Device-FileType-VIDEO--><!--Device-FileType-VIDEO-End-->
+<!--Device-FileType-VIDEO = 2--><!--Device-FileType-VIDEO = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ Video.
 ## AUDIO
 
 ```TypeScript
-AUDIO
+AUDIO = 3
 ```
 
 Audio.
@@ -66,9 +66,9 @@ Audio.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#audioviewpicker)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
 
-<!--Device-FileType-AUDIO--><!--Device-FileType-AUDIO-End-->
+<!--Device-FileType-AUDIO = 3--><!--Device-FileType-AUDIO = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

@@ -75,7 +75,7 @@ Creates a [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) insta
 
 | Type | Description |
 | -- | -- |
-| [OH_PreferencesOption *](capi-preferences-oh-preferencesoption.md) | Returns a pointer to the [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance created if the operation is successful;<br> returns a null pointer otherwise. |
+| [OH_PreferencesOption *](capi-preferences-oh-preferencesoption.md) | Returns a pointer to the [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance created if the operation is successful;  returns a null pointer otherwise. |
 
 **Reference**:
 
@@ -105,7 +105,7 @@ Sets the file name for an [OH_PreferencesOption](capi-preferences-oh-preferences
 
 | Type | Description |
 | -- | -- |
-| int | Error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
+| int | Error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
 
 **Reference**:
 
@@ -135,7 +135,7 @@ Sets the bundle name for an [OH_PreferencesOption](capi-preferences-oh-preferenc
 
 | Type | Description |
 | -- | -- |
-| int | Error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
+| int | Error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
 
 **Reference**:
 
@@ -165,7 +165,7 @@ Sets the application group ID for an [OH_PreferencesOption](capi-preferences-oh-
 
 | Type | Description |
 | -- | -- |
-| int | Error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
+| int | Error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
 
 **Reference**:
 
@@ -195,7 +195,7 @@ Sets the storage type for a **Preferences** instance.
 
 | Type | Description |
 | -- | -- |
-| int | Error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
+| int | Error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
 
 **Reference**:
 
@@ -224,7 +224,7 @@ Destroys an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) ins
 
 | Type | Description |
 | -- | -- |
-| int | Operation status code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
+| int | Operation status code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified. |
 
 **Reference**:
 

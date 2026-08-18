@@ -16,7 +16,7 @@
 ACCESSIBILITY_FOCUS = 0
 ```
 
-表示获得无障碍焦点。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).accessibilityFocusScene，参数值 为无障碍聚焦的场景类型。
+表示获得无障碍焦点。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).accessibilityFocusScene，参数值 为无障碍聚焦的场景类型。
 
 **起始版本：** 23
 
@@ -176,7 +176,7 @@ SELECT = 9
 SET_TEXT = 10
 ```
 
-表示设置组件的文本。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).setText，参数值为要设置的文本内容。
+表示设置组件的文本。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).setText，参数值为要设置的文本内容。
 
 **起始版本：** 23
 
@@ -192,7 +192,7 @@ SET_TEXT = 10
 SCROLL_FORWARD = 11
 ```
 
-表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).scrollType，参数值为' fullScreen'或'halfScreen'。
+表示向前滚动组件（向内容末尾方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为' fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 
@@ -208,7 +208,7 @@ SCROLL_FORWARD = 11
 SCROLL_BACKWARD = 12
 ```
 
-表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).scrollType，参数值为' fullScreen'或'halfScreen'。
+表示向后滚动组件（向内容起始方向滚动）。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType，参数值为' fullScreen'或'halfScreen'。
 
 **起始版本：** 23
 
@@ -224,7 +224,7 @@ SCROLL_BACKWARD = 12
 SET_SELECTION = 13
 ```
 
-表示选定组件内文本范围。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).selectTextBegin、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).selectTextEnd、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向 前选择。
+表示选定组件内文本范围。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextBegin、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextEnd、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向 前选择。
 
 **起始版本：** 23
 
@@ -240,7 +240,7 @@ SET_SELECTION = 13
 SET_CURSOR_POSITION = 14
 ```
 
-表示设置组件内的光标位置。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).offset，参数值为光标的字符偏移量。
+表示设置组件内的光标位置。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).offset，参数值为光标的字符偏移量。
 
 **起始版本：** 23
 
@@ -336,7 +336,7 @@ CONTROL_CENTER = 19
 SPAN_CLICK = 20
 ```
 
-表示对局部文本进行点击操作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).spanId，参数值为超链接文本编号。
+表示对局部文本进行点击操作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).spanId，参数值为超链接文本编号。
 
 **起始版本：** 23
 
@@ -352,7 +352,7 @@ SPAN_CLICK = 20
 INJECT_ACTION = 21
 ```
 
-表示注入模拟用户操作的动作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).injectActionType，参数值为注入 动作类型。
+表示注入模拟用户操作的动作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).injectActionType，参数值为注入 动作类型。
 
 **起始版本：** 26.0.0
 
@@ -370,7 +370,7 @@ INJECT_ACTION = 21
 EXECUTE_CUSTOM_ACTION = 22
 ```
 
-表示执行自定义操作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter系统接口).customAction，参数值为自定义操作的名称。
+表示执行自定义操作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).customAction，参数值为自定义操作的名称。
 
 **起始版本：** 26.0.0
 

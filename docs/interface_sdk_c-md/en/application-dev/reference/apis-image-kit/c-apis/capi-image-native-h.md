@@ -62,7 +62,7 @@ Obtains [Image_Size](capi-image-nativemodule-image-size.md) of an [OH_ImageNativ
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - An unknown error occurs. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_UNKNOWN_ERROR - An unknown error occurs. |
 
 ### OH_ImageNative_GetComponentTypes()
 
@@ -88,7 +88,7 @@ Obtains the component types of an [OH_ImageNative](capi-image-nativemodule-oh-im
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetByteBuffer()
 
@@ -114,7 +114,7 @@ Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetBufferSize()
 
@@ -140,7 +140,7 @@ Obtains the size of the buffer corresponding to a component type in an [OH_Image
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetRowStride()
 
@@ -166,7 +166,7 @@ Obtains the row stride corresponding to a component type in an [OH_ImageNative](
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetPixelStride()
 
@@ -192,7 +192,7 @@ Obtains the pixel stride corresponding to a component type in an [OH_ImageNative
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetTimestamp()
 
@@ -217,7 +217,7 @@ Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenat
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER A parameter is incorrect. |
 
 ### OH_ImageNative_Release()
 
@@ -241,7 +241,7 @@ Releases an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.<br>     <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - The operation is successful.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetColorSpace()
 
@@ -266,7 +266,7 @@ Obtains the color space in an [OH_ImageNative](capi-image-nativemodule-oh-imagen
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
 
 ### OH_ImageNative_GetFormat()
 
@@ -291,7 +291,7 @@ Obtains the image format in an [OH_ImageNative](capi-image-nativemodule-oh-image
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
 
 ### OH_ImageNative_GetBufferData()
 
@@ -316,6 +316,6 @@ Obtains the image buffer data object in an [OH_ImageNative](capi-image-nativemod
 
 | Type | Description |
 | -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.<br>     <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) The operation is successful.      <br>[IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) A parameter is incorrect. |
 
 

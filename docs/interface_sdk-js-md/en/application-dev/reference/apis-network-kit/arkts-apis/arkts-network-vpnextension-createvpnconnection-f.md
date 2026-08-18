@@ -12,7 +12,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function createVpnConnection(context: VpnExtensionContext): VpnConnection
 ```
 
-Create a VPN connection using the VpnExtensionContext.
+Creates a **VpnConnection** object. > **NOTE：**> > Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function.
 
 **Since:** 11
 
@@ -26,13 +26,13 @@ Create a VPN connection using the VpnExtensionContext.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | VpnExtensionContext | Yes | Indicates the context of application or capability. |
+| context | VpnExtensionContext | Yes | Specified context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnConnection | the VpnConnection of the construct VpnConnection instance. |
+| VpnConnection | VPN connection object. |
 
 **Error codes:**
 

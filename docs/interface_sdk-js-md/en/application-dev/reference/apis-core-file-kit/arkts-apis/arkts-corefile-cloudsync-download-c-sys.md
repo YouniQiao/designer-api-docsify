@@ -14,8 +14,6 @@ Provides APIs for downloading image files to **Gallery**. Before using the APIs 
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -63,7 +61,7 @@ Unsubscribes from download progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
 
 **Error codes:**
 
@@ -123,7 +121,7 @@ Removes the specified callback from the device-cloud download progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#downloadprogress), and the return value is **void**. |
+| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -215,7 +213,7 @@ Subscribes to download progress change event. This method uses a callback to get
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
 
 **Error codes:**
 
@@ -249,7 +247,7 @@ Registers a listener for the download progress of a cloud file.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md#downloadprogress), and the return value is **void**. |
+| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -352,7 +350,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file. |
 
 **Error codes:**
 
@@ -457,7 +455,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file. |
 
 **Error codes:**
 

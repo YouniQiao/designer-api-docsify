@@ -22,4 +22,9 @@ Menu()
 
 ## 汇总
 
-- [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md)
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Menu子菜单展开样式枚举。 |
+

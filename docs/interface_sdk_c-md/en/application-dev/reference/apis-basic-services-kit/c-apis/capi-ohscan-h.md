@@ -95,7 +95,7 @@ Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan
 
 | Parameter | Description |
 | -- | -- |
-| (Scan_ScannerDevice\*\* devices | Double pointer to the list of all discovered scanners. |
+| [Scan_ScannerDevice](capi-oh-scan-scan-scannerdevice.md)\*\* devices | Double pointer to the list of all discovered scanners. |
 | int32_t deviceCount | Number of scanners discovered. |
 
 ### OH_Scan_Init()
@@ -116,7 +116,7 @@ Initiates the scan service, initializes the scan client, and connects the client
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
 
 ### OH_Scan_StartScannerDiscovery()
 
@@ -142,7 +142,7 @@ Starts scanner discovery and registers a callback used to process the discovered
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
 
 ### OH_Scan_OpenScanner()
 
@@ -168,7 +168,7 @@ Opens a scanner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.<br>     <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.<br>     <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.<br>     <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.      <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.      <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.      <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory. |
 
 ### OH_Scan_CloseScanner()
 
@@ -194,7 +194,7 @@ Closes a connected scanner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter. |
 
 ### OH_Scan_GetScannerParameter()
 
@@ -249,7 +249,7 @@ Sets the option parameters of a scanner. The option values are obtained through 
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter. |
 
 ### OH_Scan_StartScan()
 
@@ -276,7 +276,7 @@ Starts scanning.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.<br>     <br>[SCAN_ERROR_JAMMED](capi-ohscan-h.md#scan_errorcode): paper jam in feeder.<br>     <br>[SCAN_ERROR_NO_DOCS](capi-ohscan-h.md#scan_errorcode): out of paper.<br>     <br>[SCAN_ERROR_COVER_OPEN](capi-ohscan-h.md#scan_errorcode): scanner cover open.<br>     <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.<br>     <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.<br>     <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.      <br>[SCAN_ERROR_JAMMED](capi-ohscan-h.md#scan_errorcode): paper jam in feeder.      <br>[SCAN_ERROR_NO_DOCS](capi-ohscan-h.md#scan_errorcode): out of paper.      <br>[SCAN_ERROR_COVER_OPEN](capi-ohscan-h.md#scan_errorcode): scanner cover open.      <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.      <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.      <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy. |
 
 ### OH_Scan_CancelScan()
 
@@ -302,7 +302,7 @@ Cancels scanning.
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
 
 ### OH_Scan_GetPictureScanProgress()
 
@@ -329,7 +329,7 @@ Obtains the progress of scanning a picture by the scanner. A non-null value must
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.<br>     <br>[SCAN_ERROR_JAMMED](capi-ohscan-h.md#scan_errorcode): paper jam in feeder.<br>     <br>[SCAN_ERROR_NO_DOCS](capi-ohscan-h.md#scan_errorcode): out of paper.<br>     <br>[SCAN_ERROR_COVER_OPEN](capi-ohscan-h.md#scan_errorcode): scanner cover open.<br>     <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.<br>     <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory.<br>     <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_INVALID_PARAMETER](capi-ohscan-h.md#scan_errorcode): invalid parameter.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error.      <br>[SCAN_ERROR_JAMMED](capi-ohscan-h.md#scan_errorcode): paper jam in feeder.      <br>[SCAN_ERROR_NO_DOCS](capi-ohscan-h.md#scan_errorcode): out of paper.      <br>[SCAN_ERROR_COVER_OPEN](capi-ohscan-h.md#scan_errorcode): scanner cover open.      <br>[SCAN_ERROR_IO_ERROR](capi-ohscan-h.md#scan_errorcode): scanner I/O error.      <br>[SCAN_ERROR_NO_MEMORY](capi-ohscan-h.md#scan_errorcode): insufficient memory.      <br>[SCAN_ERROR_DEVICE_BUSY](capi-ohscan-h.md#scan_errorcode): device busy. |
 
 ### OH_Scan_Exit()
 
@@ -349,6 +349,6 @@ Exits the scan service, releases the memory of the scan framework, and deregiste
 
 | Type | Description |
 | -- | -- |
-| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.<br>     <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.<br>     <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.<br>     <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
+| int32_t | [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode): operation successful.      <br>[SCAN_ERROR_NO_PERMISSION](capi-ohscan-h.md#scan_errorcode): permission denied.      <br>[SCAN_ERROR_RPC_FAILURE](capi-ohscan-h.md#scan_errorcode): RPC communication error.      <br>[SCAN_ERROR_SERVER_FAILURE](capi-ohscan-h.md#scan_errorcode): server error. |
 
 

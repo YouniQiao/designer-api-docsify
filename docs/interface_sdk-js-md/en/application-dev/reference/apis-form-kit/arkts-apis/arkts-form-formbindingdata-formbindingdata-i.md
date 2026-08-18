@@ -12,7 +12,6 @@ Defines the createFormBindingData result interface.
 
 ```TypeScript
 import { formBindingData } from '@kit.FormKit';
-import { formBindingData } from '@kit.FormKit';
 ```
 
 ## data
@@ -23,7 +22,7 @@ data: RecordData
 
 Data for updating.
 
-**Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
+**Type:** [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
 **Since:** 23
 

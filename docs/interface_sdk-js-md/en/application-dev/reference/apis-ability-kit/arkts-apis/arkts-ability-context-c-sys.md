@@ -16,13 +16,13 @@ Context is the context base class of the stage model. It is used to access appli
 createBundleContext(bundleName: string): Context
 ```
 
-Creates the context based on the bundle name. > **NOTE：**> > If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext) > instead. > > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createbundlecontext-system-api) > instead.
+Creates the context based on the bundle name. > **NOTE：**> > If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead. > > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) > instead.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createbundlecontext-system-api)
+**Substitutes:** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -79,13 +79,13 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(bundleName: string, moduleName: string): Context
 ```
 
-Creates the context based on the bundle name and module name. > **NOTE：**> > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext) > instead.
+Creates the context based on the bundle name and module name. > **NOTE：**> > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,7 +200,7 @@ export default class EntryAbility extends UIAbility {
 createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-Creates a [resource manager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) for an OEM-preset [system-level HSP](../../../quick-start/application-package-glossary.md#system-level-hsp).
+Creates a [resource manager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-getresourcemanager-f.md) for an OEM-preset [system-level HSP](../../../quick-start/application-package-glossary.md#system-level-hsp).
 
 **Since:** 23
 

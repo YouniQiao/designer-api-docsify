@@ -1,12 +1,12 @@
 # GrantStatus
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#permissiongrantstate) > instead. Enumerates the permission grant states.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md) > instead. Enumerates the permission grant states.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#permissiongrantstate)
+**Substitutes:** [PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)
 
 <!--Device-bundle-export enum GrantStatus--><!--Device-bundle-export enum GrantStatus-End-->
 
@@ -24,7 +24,7 @@ Permission denied.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PERMISSION_DENIED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permissiondenied)
+**Substitutes:** [PERMISSION_DENIED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permission_denied)
 
 <!--Device-GrantStatus-PERMISSION_DENIED = -1--><!--Device-GrantStatus-PERMISSION_DENIED = -1-End-->
 
@@ -42,7 +42,7 @@ Permission granted.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PERMISSION_GRANTED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permissiongranted)
+**Substitutes:** [PERMISSION_GRANTED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permission_granted)
 
 <!--Device-GrantStatus-PERMISSION_GRANTED = 0--><!--Device-GrantStatus-PERMISSION_GRANTED = 0-End-->
 

@@ -6,7 +6,7 @@ Describes the advertising data.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md#advertisedata)
+**Substitutes:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
 
 <!--Device-bluetoothManager-interface AdvertiseData--><!--Device-bluetoothManager-interface AdvertiseData-End-->
 

@@ -12,7 +12,6 @@ The definition of SearchPlayMusicItem.
 
 ```TypeScript
 import { avMusicTemplate } from '@kit.AVSessionKit';
-import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## entityId

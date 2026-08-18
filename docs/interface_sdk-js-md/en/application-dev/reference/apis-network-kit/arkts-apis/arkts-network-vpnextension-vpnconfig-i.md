@@ -1,6 +1,6 @@
 # VpnConfig
 
-Define configuration of the VPN network.
+Defines the VPN configuration.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 addresses: Array<LinkAddress>
 ```
 
-The array of addresses for VPN interface.
+IP addresses of vNICs. Before API version 23, a maximum of 64 IP addresses are supported. Starting from API version 23, a maximum of 2000 IP addresses are supported.
 
 **Type:** Array&lt;LinkAddress&gt;
 
@@ -36,7 +36,7 @@ The array of addresses for VPN interface.
 blockedApplications?: Array<string>
 ```
 
-The array of blocklist for the VPN network. The string indicates package name.
+List of blocked applications, which are represented by bundle names of the string type. After such a list is configured, only applications that are not in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 blocked application bundle names can be configured. Since API version 23, a maximum of 256 blocked application bundle names can be configured. **Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;
 
@@ -52,7 +52,7 @@ The array of blocklist for the VPN network. The string indicates package name.
 dnsAddresses?: Array<string>
 ```
 
-The array of DNS servers for the VPN network.
+IP address of the DNS server. After the IP address is configured, when the VPN is active and proxy-enabled applications access the Internet, the configured DNS server will be used for DNS queries.
 
 **Type:** Array&lt;string&gt;
 
@@ -68,7 +68,7 @@ The array of DNS servers for the VPN network.
 isBlocking?: boolean
 ```
 
-Whether the VPN interface's file descriptor is in blocking/non-blocking mode. The default value is false.
+Whether the blocking mode is used. The value **true** indicates that the blocking mode is used, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Whether the VPN interface's file descriptor is in blocking/non-blocking mode. Th
 isIPv4Accepted?: boolean
 ```
 
-Whether ipv4 is supported. The default value is true.
+Whether IPv4 is supported. The value **true** indicates that the IPv4 is supported, and the value **false** indicates the opposite. The default value is **true**. Note: If the IPv4 is supported, you need to configure IPv4 addresses in **addresses**.
 
 **Type:** boolean
 
@@ -100,7 +100,7 @@ Whether ipv4 is supported. The default value is true.
 isIPv6Accepted?: boolean
 ```
 
-Whether ipv6 is supported. The default value is false.
+Whether IPv6 is supported. The value **true** indicates that the IPV6 is supported, and the value **false** indicates the opposite. The default value is **false**. Note: If the IPv6 is supported, you need to configure IPv6 addresses in **addresses**.
 
 **Type:** boolean
 
@@ -116,7 +116,7 @@ Whether ipv6 is supported. The default value is false.
 isInternal?: boolean
 ```
 
-Whether to use the built-in VPN. The default value is false.
+Whether the built-in VPN is supported. The value **true** indicates that the built-in VPN is supported, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -129,16 +129,16 @@ Whether to use the built-in VPN. The default value is false.
 ## mtu
 
 ```TypeScript
-mtu?: number
+mtu?: int
 ```
 
-The maximum transmission unit (MTU) for the VPN interface.
+Maximum transmission unit (MTU), in bytes. The value range is [576,1500].
 
-**Type:** number
+**Type:** int
 
 **Since:** 11
 
-<!--Device-VpnConfig-mtu?: number--><!--Device-VpnConfig-mtu?: number-End-->
+<!--Device-VpnConfig-mtu?: int--><!--Device-VpnConfig-mtu?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -148,7 +148,7 @@ The maximum transmission unit (MTU) for the VPN interface.
 routes?: Array<RouteInfo>
 ```
 
-The array of routes for VPN interface.
+Route information of the vNIC. Before API version 23, a maximum of 1024 routes can be configured. Starting from API version 23, a maximum of 10,000 routes can be configured.
 
 **Type:** Array&lt;RouteInfo&gt;
 
@@ -164,7 +164,7 @@ The array of routes for VPN interface.
 searchDomains?: Array<string>
 ```
 
-The array of search domains for the DNS resolver.
+List of DNS search domains.
 
 **Type:** Array&lt;string&gt;
 
@@ -180,7 +180,7 @@ The array of search domains for the DNS resolver.
 trustedApplications?: Array<string>
 ```
 
-The array of trustlist for the VPN network. The string indicates package name.
+List of trusted applications, which are represented by bundle names of the string type. After such a list is configured, only the applications in the list can be proxied by the VPN according to the specified **routes**. Before API version 23, a maximum of 64 trusted application bundle names can be configured. Since API version 23, a maximum of 256 trusted application bundle names can be configured. **Note：**: Configure either **trustedApplications** or **blockedApplications** as they are mutually exclusive.
 
 **Type:** Array&lt;string&gt;
 
@@ -196,7 +196,7 @@ The array of trustlist for the VPN network. The string indicates package name.
 vpnId?: string
 ```
 
-The uuid for the VPN network.
+Unique VPN ID.
 
 **Type:** string
 

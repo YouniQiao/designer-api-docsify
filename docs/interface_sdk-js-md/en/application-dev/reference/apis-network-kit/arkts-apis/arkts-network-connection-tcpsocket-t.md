@@ -4,9 +4,9 @@
 type TCPSocket = socket.TCPSocket
 ```
 
-Get a TCPSocket object.
+Defines a TCPSocket object, which can be created using [socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md).
 
-**Since:** 10
+**Since:** 8
 
 <!--Device-connection-type TCPSocket = socket.TCPSocket--><!--Device-connection-type TCPSocket = socket.TCPSocket-End-->
 

@@ -1,6 +1,6 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
 
 **Since:** 23
 

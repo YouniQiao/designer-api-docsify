@@ -1,6 +1,6 @@
 # CdsmClient
 
-管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient)来创建CDSM客户端实例。
+管理CDSM客户端实例。在调用任何CDSM客户端方法之前， 您必须使用[createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md)来创建CDSM客户端实例。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## getCdsmInfo
@@ -65,7 +66,7 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 否 | 用于监听合作设备集信息的回调。 |
 
 ## onCdsmInfoChange
 
@@ -87,5 +88,5 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | 是 | 用于监听合作设备集信息的回调。 |
 

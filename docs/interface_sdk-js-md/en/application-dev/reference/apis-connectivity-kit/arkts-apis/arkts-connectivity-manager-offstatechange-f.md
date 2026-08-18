@@ -26,7 +26,7 @@ Unsubscribes from state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | No | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | No | Callback used to listen for the state change event. |
 
 **Error codes:**
 

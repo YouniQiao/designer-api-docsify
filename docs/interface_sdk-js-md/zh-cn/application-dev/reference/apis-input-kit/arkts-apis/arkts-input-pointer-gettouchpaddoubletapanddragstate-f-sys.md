@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pointer } from '@kit.InputKit';
 ```
 
 ## getTouchpadDoubleTapAndDragState
@@ -25,7 +26,7 @@ function getTouchpadDoubleTapAndDragState(callback: AsyncCallback<boolean>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取触控板双击拖拽开关的开启状态成功，err为undefined，返回true代表开启，返回false代表关闭；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取触控板双击拖拽开关的开启状态成功，err为undefined，返回true代表开启，返回false代表关闭；否则为错误对象。 |
 
 **错误码：**
 

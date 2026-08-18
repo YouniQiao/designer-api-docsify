@@ -3,12 +3,12 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#depthcomponent-system-api) | Defines DepthComponent Component |
-| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md#depthcomponent-system-api) | Defines DepthComponent |
+| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md) | Defines DepthComponent Component |
+| [DepthComponent](arkts-na-depthcomponent-depthcomponent-f-sys.md) | Defines DepthComponent |
 <!--DelEnd-->
 
 ### Interfaces
@@ -18,7 +18,7 @@
 | [DepthComponentAttribute](arkts-na-depthcomponent-depthcomponentattribute-i.md) | Style the DepthComponent. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -33,7 +33,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |
@@ -41,7 +41,7 @@
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

@@ -134,7 +134,7 @@ Defines the callback function of a common event.
 
 | Parameter | Description |
 | -- | -- |
-| (const CommonEvent_RcvData \*data | Pointer to the callback data of a common event. |
+| [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md) \*data | Pointer to the callback data of a common event. |
 
 ### OH_CommonEvent_CreateSubscribeInfo()
 
@@ -159,7 +159,7 @@ Creates the subscriber information.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_SubscribeInfo*](capi-oh-commonevent-commonevent-subscribeinfo.md) | Returns the subscriber information created if the operation is successful; returns<br>     NULL otherwise. This pointer is internally managed and is released when<br>     [OH_CommonEvent_DestroySubscribeInfo()](#oh_commonevent_destroysubscribeinfo) is called. |
+| [CommonEvent_SubscribeInfo*](capi-oh-commonevent-commonevent-subscribeinfo.md) | Returns the subscriber information created if the operation is successful; returns      NULL otherwise. This pointer is internally managed and is released when      [OH_CommonEvent_DestroySubscribeInfo()](#oh_commonevent_destroysubscribeinfo) is called. |
 
 ### OH_CommonEvent_SetPublisherPermission()
 
@@ -184,7 +184,7 @@ Sets the permission of the publisher.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_SetPublisherBundleName()
 
@@ -209,7 +209,7 @@ Sets a bundle name of the publisher.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_DestroySubscribeInfo()
 
@@ -252,7 +252,7 @@ Creates a subscriber.
 
 | Type | Description |
 | -- | -- |
-| CommonEvent_Subscriber* | Returns the subscriber created if the operation is successful; returns NULL<br>     otherwise. This pointer is internally managed and is released when<br>     [OH_CommonEvent_DestroySubscriber()](#oh_commonevent_destroysubscriber) is called. |
+| CommonEvent_Subscriber* | Returns the subscriber created if the operation is successful; returns NULL      otherwise. This pointer is internally managed and is released when      [OH_CommonEvent_DestroySubscriber()](#oh_commonevent_destroysubscriber) is called. |
 
 ### OH_CommonEvent_DestroySubscriber()
 
@@ -294,7 +294,7 @@ Subscribes to a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.<br>     <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized.<br>     <br>[COMMONEVENT_ERR_SUBSCRIBER_NUM_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): The number of subscribers in the<br>     process exceeds the system limit (200).<br>     <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.      <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized.      <br>[COMMONEVENT_ERR_SUBSCRIBER_NUM_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): The number of subscribers in the      process exceeds the system limit (200).      <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
 
 ### OH_CommonEvent_UnSubscribe()
 
@@ -318,7 +318,7 @@ Unsubscribes from a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.<br>     <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.      <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
 
 ### OH_CommonEvent_GetEventFromRcvData()
 
@@ -342,7 +342,7 @@ Obtains the name of a common event.
 
 | Type | Description |
 | -- | -- |
-| const char* | Name of a common event. This pointer is generated by the system and is released<br>     immediately after the callback function<br>     [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot<br>     be used outside the callback function. |
+| const char* | Name of a common event. This pointer is generated by the system and is released      immediately after the callback function      [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot      be used outside the callback function. |
 
 ### OH_CommonEvent_GetCodeFromRcvData()
 
@@ -390,7 +390,7 @@ Obtains the result data (string type) of a common event.
 
 | Type | Description |
 | -- | -- |
-| const char* | Result data (string type) of a common event. This pointer is generated by the system<br>     and is released immediately after the callback function<br>     [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot<br>     be used outside the callback function. |
+| const char* | Result data (string type) of a common event. This pointer is generated by the system      and is released immediately after the callback function      [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot      be used outside the callback function. |
 
 ### OH_CommonEvent_GetBundleNameFromRcvData()
 
@@ -414,7 +414,7 @@ Obtains the bundle name of a common event.
 
 | Type | Description |
 | -- | -- |
-| const char* | Bundle name obtained. This pointer is generated by the system and is released<br>     immediately after the callback function<br>     [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot<br>     be used outside the callback function. |
+| const char* | Bundle name obtained. This pointer is generated by the system and is released      immediately after the callback function      [CommonEvent_ReceiveCallback](#commonevent_receivecallback) ends. This parameter cannot      be used outside the callback function. |
 
 ### OH_CommonEvent_GetParametersFromRcvData()
 
@@ -462,7 +462,7 @@ Creates a property object of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_PublishInfo*](capi-oh-commonevent-commonevent-publishinfo.md) | Returns the property object if the operation is successful; returns NULL<br>     otherwise. This pointer is internally managed and is released when<br>     [OH_CommonEvent_DestroyPublishInfo()](#oh_commonevent_destroypublishinfo) is called. |
+| [CommonEvent_PublishInfo*](capi-oh-commonevent-commonevent-publishinfo.md) | Returns the property object if the operation is successful; returns NULL      otherwise. This pointer is internally managed and is released when      [OH_CommonEvent_DestroyPublishInfo()](#oh_commonevent_destroypublishinfo) is called. |
 
 ### OH_CommonEvent_DestroyPublishInfo()
 
@@ -505,7 +505,7 @@ Sets the bundle name of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_SetPublishInfoPermissions()
 
@@ -531,7 +531,7 @@ Sets permissions for a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_SetPublishInfoCode()
 
@@ -556,7 +556,7 @@ Sets the result code (integer type) of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_SetPublishInfoData()
 
@@ -582,7 +582,7 @@ Sets the result data (string type) of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_SetPublishInfoParameters()
 
@@ -607,7 +607,7 @@ Sets the additional information of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_CreateParameters()
 
@@ -625,7 +625,7 @@ Creates an additional information object of a common event.
 
 | Type | Description |
 | -- | -- |
-| CommonEvent_Parameters* | Returns additional information of the common event if operation is successful;<br>     returns NULL otherwise. This pointer is internally managed and is released when<br>     [OH_CommonEvent_DestroyParameters()](#oh_commonevent_destroyparameters) is called. |
+| CommonEvent_Parameters* | Returns additional information of the common event if operation is successful;      returns NULL otherwise. This pointer is internally managed and is released when      [OH_CommonEvent_DestroyParameters()](#oh_commonevent_destroyparameters) is called. |
 
 ### OH_CommonEvent_DestroyParameters()
 
@@ -668,7 +668,7 @@ Checks whether the additional information of a common event contains a KV pair.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the check result.<br>     <br>- true: The key exists.<br>     <br>- false: The key does not exist. |
+| bool | Returns the check result.      <br>- true: The key exists.      <br>- false: The key does not exist. |
 
 ### OH_CommonEvent_GetIntFromParameters()
 
@@ -720,7 +720,7 @@ Sets the int data with a specific key for the additional information of a common
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetIntArrayFromParameters()
 
@@ -773,7 +773,7 @@ Sets the int array with a specific key for the additional information of a commo
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
 
 ### OH_CommonEvent_GetLongFromParameters()
 
@@ -825,7 +825,7 @@ Sets the long data with a specific key for the additional information of a commo
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetLongArrayFromParameters()
 
@@ -878,7 +878,7 @@ Sets the long array for the additional information of a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
 
 ### OH_CommonEvent_GetBoolFromParameters()
 
@@ -930,7 +930,7 @@ Sets the Boolean data with a specific key for the additional information of a co
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetBoolArrayFromParameters()
 
@@ -983,7 +983,7 @@ Sets the Boolean array with a specific key for the additional information of a c
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
 
 ### OH_CommonEvent_GetCharFromParameters()
 
@@ -1035,7 +1035,7 @@ Sets the character data with a specific key for the additional information of a 
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetCharArrayFromParameters()
 
@@ -1088,7 +1088,7 @@ Sets the character array with a specific key for the additional information of a
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetDoubleFromParameters()
 
@@ -1140,7 +1140,7 @@ Sets the double data with a specific key for the additional information of a com
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter. |
 
 ### OH_CommonEvent_GetDoubleArrayFromParameters()
 
@@ -1193,7 +1193,7 @@ Sets the double array with a specific key for the additional information of a co
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_ALLOC_MEMORY_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to allocate memory. |
 
 ### OH_CommonEvent_Publish()
 
@@ -1217,7 +1217,7 @@ Publishes a common event.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_SENDING_LIMIT_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): Event sending frequency is too high.<br>     <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.<br>     <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_SENDING_LIMIT_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): Event sending frequency is too high.      <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.      <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
 
 ### OH_CommonEvent_PublishWithInfo()
 
@@ -1242,7 +1242,7 @@ Publishes a common event with specified properties.
 
 | Type | Description |
 | -- | -- |
-| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.<br>     <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.<br>     <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.<br>     <br>[COMMONEVENT_ERR_SENDING_LIMIT_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): Event sending frequency is too high.<br>     <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.<br>     <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
+| [CommonEvent_ErrCode](capi-oh-commonevent-h.md#commonevent_errcode) | Returns an execution result.      <br>[COMMONEVENT_ERR_OK](capi-oh-commonevent-h.md#commonevent_errcode): Operation successful.      <br>[COMMONEVENT_ERR_INVALID_PARAMETER](capi-oh-commonevent-h.md#commonevent_errcode): Invalid parameter.      <br>[COMMONEVENT_ERR_SENDING_LIMIT_EXCEEDED](capi-oh-commonevent-h.md#commonevent_errcode): Event sending frequency is too high.      <br>[COMMONEVENT_ERR_SENDING_REQUEST_FAILED](capi-oh-commonevent-h.md#commonevent_errcode): Failed to send IPC requests.      <br>[COMMONEVENT_ERR_INIT_UNDONE](capi-oh-commonevent-h.md#commonevent_errcode): Services not initialized. |
 
 ### OH_CommonEvent_IsOrderedCommonEvent()
 
@@ -1266,7 +1266,7 @@ Checks whether a common event is an ordered one.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the common event is an ordered one; returns false if the common event is an<br>     unordered one. |
+| bool | Returns true if the common event is an ordered one; returns false if the common event is an      unordered one. |
 
 ### OH_CommonEvent_FinishCommonEvent()
 

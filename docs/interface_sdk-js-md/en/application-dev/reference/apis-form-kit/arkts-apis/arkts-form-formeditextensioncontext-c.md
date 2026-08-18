@@ -1,6 +1,6 @@
 # FormEditExtensionContext
 
-**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#uiextensioncontext), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md#formeditextensionability). > **NOTE：**> - The APIs of this module can be used only in the stage model.
+**FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md). > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormEditExtensionContext extends UIExtensionContext
 
@@ -81,7 +81,7 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 | --- | --- |
 | [16000130](../../apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The target UIAbility does not belong to the caller. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
-| [16501014](../errorcode-form.md#16501014-semimodal-widget-editing-page-not-in-foreground) | The form edit page is not in the foreground. The current operation is not supported. |
+| [16501014](../errorcode-form.md#16501014-semi-modal-widget-editing-page-not-in-foreground) | The form edit page is not in the foreground. The current operation is not supported. |
 | [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) | The target component type is not a UIAbility. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 

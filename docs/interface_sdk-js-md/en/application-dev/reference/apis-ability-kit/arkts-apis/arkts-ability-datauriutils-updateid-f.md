@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { dataUriUtils } from '@kit.AbilityKit';
-import { dataUriUtils } from '@kit.AbilityKit';
 ```
 
 ## updateId

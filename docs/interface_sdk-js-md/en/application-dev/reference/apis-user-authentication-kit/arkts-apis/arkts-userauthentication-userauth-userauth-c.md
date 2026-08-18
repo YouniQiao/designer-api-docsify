@@ -6,7 +6,7 @@ Provides APIs for managing the **UserAuth** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#authinstance)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -16,8 +16,6 @@ Provides APIs for managing the **UserAuth** object.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -145,7 +143,7 @@ A constructor used to create a **UserAuth** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -171,7 +169,7 @@ Checks whether the specified authentication capability is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
+**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 

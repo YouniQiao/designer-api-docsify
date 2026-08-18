@@ -34,7 +34,7 @@ Notifies the player of the current request status. After pushing all the data fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
 ## respondData
@@ -57,7 +57,7 @@ Sends data to the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
 | buffer | ArrayBuffer | Yes | Media data sent to the player.<br>**Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
@@ -115,7 +115,7 @@ Sends response header information to the player. This API must be called before 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#sourceopencallback). |
+| uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.<br> - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
 

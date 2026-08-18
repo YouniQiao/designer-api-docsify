@@ -14,7 +14,6 @@ Represents the transparently transmitted data, which contains information requir
 
 ```TypeScript
 import { cloudData } from '@kit.ArkData';
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## eventId

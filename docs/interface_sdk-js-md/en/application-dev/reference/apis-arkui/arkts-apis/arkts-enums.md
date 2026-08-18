@@ -32,7 +32,7 @@
 | [CopyOptions](arkts-arkui-copyoptions-e.md) | Copy options. |
 | [CrownAction](arkts-arkui-crownaction-e.md) | Enumerates the crown actions. |
 | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) | Enumerates the sensitivity levels for crown rotation. |
-| [Curve](arkts-arkui-curve-e.md) | Enumerates the interpolation curves. For details about the animation, see &lt;!--RP1--&gt; [Bezier Curve](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;. |
+| [Curve](arkts-arkui-curve-e.md) | Enumerates the interpolation curves. For details about the animation, see <!--RP1--> [Bezier Curve](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->. |
 | [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md) | The Button Style of dialog, |
 | [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md) | Dialog display mode. |
 | [Direction](arkts-arkui-direction-e.md) | Sets the horizontal layout of elements. |
@@ -117,7 +117,7 @@
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

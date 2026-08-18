@@ -17,7 +17,7 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 **废弃版本：** 9
 
-**替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
+**替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
@@ -69,7 +69,7 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 
 **废弃版本：** 9
 
-**替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md#write)
+**替代接口：** [write](arkts-performanceanalysis-hiappevent-write-f.md)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
@@ -82,7 +82,7 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 | eventName | string | 是 | 事件名称。 |
 | eventType | EventType | 是 | 事件类型。 |
 | keyValues | object | 是 | 事件参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 事件回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 事件回调函数。 |
 
 **示例**
 

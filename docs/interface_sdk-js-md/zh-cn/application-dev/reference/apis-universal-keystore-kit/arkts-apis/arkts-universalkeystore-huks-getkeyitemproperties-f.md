@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyItemProperties
@@ -15,7 +17,7 @@ function getKeyItemProperties(
   ): void
 ```
 
-Obtains key properties. This API uses an asynchronous callback to return the result. > **说明：** > > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
+Obtains key properties. This API uses an asynchronous callback to return the result. > **说明：** > > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 
@@ -33,7 +35,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | Key alias, which must be the same as the alias used when the key was generated. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Empty object (leave this parameter empty). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
 
 **错误码：**
 
@@ -82,7 +84,7 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-获取密钥属性。使用Promise异步回调。 > **说明：** > > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
+获取密钥属性。使用Promise异步回调。 > **说明：** > > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 

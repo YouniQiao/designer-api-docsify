@@ -66,7 +66,7 @@ Defines a struct for the callback for data changes.
 
 | Parameter | Description |
 | -- | -- |
-| (void \*context | Pointer to the application context. |
+| void \*context | Pointer to the application context. |
 | [const OH_PreferencesPair](capi-preferences-oh-preferencespair.md) \*pairs | Pointer to the changed KV data. |
 | uint32_t count | Number of KV pairs changed. |
 
@@ -98,7 +98,7 @@ Opens a **Preferences** instance and creates a pointer to it.If this pointer is 
 
 | Type | Description |
 | -- | -- |
-| [OH_Preferences *](capi-preferences-oh-preferences.md) | Returns a pointer to the [OH_Preferences](capi-preferences-oh-preferences.md) instance opened if the operation is successful; returns a<br> null pointer otherwise. |
+| [OH_Preferences *](capi-preferences-oh-preferences.md) | Returns a pointer to the [OH_Preferences](capi-preferences-oh-preferences.md) instance opened if the operation is successful; returns a  null pointer otherwise. |
 
 **Reference**:
 
@@ -127,7 +127,7 @@ Closes a **Preferences** instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code. For details, see {@link OH_Preferences_ErrCode}.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code. For details, see {@link OH_Preferences_ErrCode}.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -156,7 +156,7 @@ Deletes the specified **Preferences** object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported.<br> PREFERENCES_ERROR_DELETE_FILE indicates the file fails to be deleted. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported.  PREFERENCES_ERROR_DELETE_FILE indicates the file fails to be deleted. |
 
 **Reference**:
 
@@ -187,7 +187,7 @@ Obtains an integer corresponding to the specified key in a **Preferences** insta
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
 
 **Reference**:
 
@@ -218,7 +218,7 @@ Obtains a Boolean value corresponding to the specified key in a **Preferences** 
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
 
 **Reference**:
 
@@ -250,7 +250,7 @@ Obtains a string corresponding to the specified key in a **Preferences** instanc
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
 
 **Reference**:
 
@@ -304,7 +304,7 @@ Sets an integer based on the specified key in a **Preferences** instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -335,7 +335,7 @@ Sets a Boolean value based on the specified key in a **Preferences** instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -366,7 +366,7 @@ Sets a string based on the specified key in a **Preferences** instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -396,7 +396,7 @@ Deletes the KV data corresponding to the specified key from a **Preferences** in
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -429,7 +429,7 @@ Subscribes to data changes of the specified keys. If the value of the specified 
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_GET_DATAOBSMGRCLIENT indicates a failure in obtaining the data change subscription service. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_GET_DATAOBSMGRCLIENT indicates a failure in obtaining the data change subscription service. |
 
 **Reference**:
 
@@ -462,7 +462,7 @@ Unsubscribes from data changes of the specified keys.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates the storage is abnormal.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -492,7 +492,7 @@ Check if a type is supported or not.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.<br>         {@link PREFERENCES_OK} indicates the operation is successful.<br>         {@link PREFERENCES_ERROR_INVALID_PARAM} indicates invalid args are passed in. |
+| int | Returns the status code of the execution.          {@link PREFERENCES_OK} indicates the operation is successful.          {@link PREFERENCES_ERROR_INVALID_PARAM} indicates invalid args are passed in. |
 
 ### OH_Preferences_SetValue()
 
@@ -518,7 +518,7 @@ Sets [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) in the **Pre
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 
@@ -549,7 +549,7 @@ Obtains the value from the **Preferences** object based on the given key.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
 
 **Reference**:
 
@@ -580,7 +580,7 @@ Obtains all the values from the **Preferences** object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_KEY_NOT_FOUND indicates the specified key does not exist. |
 
 **Reference**:
 
@@ -610,7 +610,7 @@ Checks whether the **Preferences** object contains KV data matching the specifie
 
 | Type | Description |
 | -- | -- |
-| bool | Returns true if the Preferences object contains KV data that matches the specified key; returns <br> false otherwise. |
+| bool | Returns true if the Preferences object contains KV data that matches the specified key; returns   false otherwise. |
 
 **Reference**:
 
@@ -639,7 +639,7 @@ Saves the cache of the [OH_Preferences](capi-preferences-oh-preferences.md) obje
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported. |
 
 **Reference**:
 
@@ -668,7 +668,7 @@ Clears all values in the cache of the [OH_Preferences](capi-preferences-oh-prefe
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_NOT_SUPPORTED indicates the system capability is not supported. |
 
 **Reference**:
 
@@ -699,7 +699,7 @@ Registers a multi-process data observer for the **Preferences** object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.<br> PREFERENCES_ERROR_GET_DATAOBSMGRCLIENT indicates a failure in obtaining the data change subscription service. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation.  PREFERENCES_ERROR_GET_DATAOBSMGRCLIENT indicates a failure in obtaining the data change subscription service. |
 
 **Reference**:
 
@@ -730,7 +730,7 @@ Unregisters the multi-process data observer of the **Preferences** object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns an error code.<br> PREFERENCES_OK indicates the operation is successful.<br> PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.<br> PREFERENCES_ERROR_STORAGE indicates a storage exception.<br> PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
+| int | Returns an error code.  PREFERENCES_OK indicates the operation is successful.  PREFERENCES_ERROR_INVALID_PARAM indicates invalid parameters are specified.  PREFERENCES_ERROR_STORAGE indicates a storage exception.  PREFERENCES_ERROR_MALLOC indicates a failure in memory allocation. |
 
 **Reference**:
 

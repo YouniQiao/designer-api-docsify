@@ -30,5 +30,10 @@ TextClock(options?: TextClockOptions)
 
 ## 汇总
 
-- [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)
-- [TextClockOptions](arkts-arkui-textclockoptions-i.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
+| [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 用于构建TextClock组件的选项。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+

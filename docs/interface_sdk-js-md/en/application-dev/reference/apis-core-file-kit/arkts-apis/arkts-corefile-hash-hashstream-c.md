@@ -1,8 +1,8 @@
 # HashStream
 
-The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md#createhash) to create a **HashStream** instance.
+The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](arkts-corefile-hash-createhash-f.md) to create a **HashStream** instance.
 
-**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#transform)
+**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ The **HashStream** class is a utility for creating a message digest of data. You
 ## Modules to Import
 
 ```TypeScript
-import { hash } from '@kit.CoreFileKit';
 import { hash } from '@kit.CoreFileKit';
 ```
 

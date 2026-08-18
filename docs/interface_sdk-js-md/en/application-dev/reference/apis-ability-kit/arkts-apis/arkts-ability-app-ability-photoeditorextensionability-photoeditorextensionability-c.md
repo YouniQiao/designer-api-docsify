@@ -14,7 +14,6 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 ```TypeScript
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground

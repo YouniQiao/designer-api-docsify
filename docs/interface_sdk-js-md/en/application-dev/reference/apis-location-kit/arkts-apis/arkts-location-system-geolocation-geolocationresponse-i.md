@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md)
 
 <!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
 

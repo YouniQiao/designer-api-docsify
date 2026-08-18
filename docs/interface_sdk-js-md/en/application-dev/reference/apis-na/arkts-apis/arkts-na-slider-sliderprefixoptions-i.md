@@ -2,7 +2,7 @@
 
 Options used for customizing the prefix part of the slider. It extends the SliderCustomContentOptions to inherit accessibility customization options.
 
-**Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-na-slider-slidercustomcontentoptions-i.md#slidercustomcontentoptions)
+**Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-na-slider-slidercustomcontentoptions-i.md)
 
 **Since:** 23
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnable
@@ -19,7 +18,7 @@ Sets whether to enable distributed notification on this device. This API uses an
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)(enable: boolean, deviceType: string)
+**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md)(enable: boolean, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -34,7 +33,7 @@ Sets whether to enable distributed notification on this device. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enable distributed notification, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -78,7 +77,7 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)(enable: boolean, deviceType: string)
+**Substitutes:** [setDistributedEnabled](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md)(enable: boolean, deviceType: string)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

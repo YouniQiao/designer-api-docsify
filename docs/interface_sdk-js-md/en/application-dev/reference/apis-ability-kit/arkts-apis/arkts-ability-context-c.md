@@ -66,7 +66,7 @@ export default class EntryAbility extends UIAbility {
 createDisplayContext(displayId: long): Context
 ```
 
-Creates an application context based on the specified display ID with screen information (including [ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#screendensity) and [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#direction)).
+Creates an application context based on the specified display ID with screen information (including [ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md) and [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md)).
 
 **Since:** 23
 
@@ -121,13 +121,13 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(moduleName: string): Context
 ```
 
-Creates the context based on the module name. > **NOTE：**> > - Only the context of other modules in the current application and the context of the intra-application HSP can > be obtained. The context of other applications cannot be obtained. > > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext) > instead. Otherwise, resource acquisition may fail. > > - Creating a module context involves resource querying and initialization, which can be time-consuming. In > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+Creates the context based on the module name. > **NOTE：**> > - Only the context of other modules in the current application and the context of the intra-application HSP can > be obtained. The context of other applications cannot be obtained. > > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead. Otherwise, resource acquisition may fail. > > - Creating a module context involves resource querying and initialization, which can be time-consuming. In > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,7 +246,7 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
@@ -412,7 +412,7 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#ohosresourcemanager) instead. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 

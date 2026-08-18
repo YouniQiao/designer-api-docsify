@@ -6,7 +6,7 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。 > **�
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -111,7 +111,7 @@ type?: TransitionType
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

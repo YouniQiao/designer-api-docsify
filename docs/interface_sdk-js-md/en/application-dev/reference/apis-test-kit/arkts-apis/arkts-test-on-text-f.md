@@ -26,7 +26,7 @@ Specifies the text for the target Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | the text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of the text value. <br>Default value: MatchPattern.EQUALS |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of the text value. <br>Default value: MatchPattern.EQUALS |
 
 **Return value:**
 

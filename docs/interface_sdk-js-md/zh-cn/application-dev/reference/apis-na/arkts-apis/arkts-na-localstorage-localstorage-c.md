@@ -56,7 +56,7 @@ Construct new instance of LocalStorage initialize with all properties and their 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| initializingProperties | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | initializing Properties |
+| initializingProperties | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | initializing Properties |
 
 ## delete
 

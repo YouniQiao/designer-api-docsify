@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getPacUrl(): string
 ```
 
-Obtain the URL pacUrl of the current PAC script.
+Obtains the URL of the system-level PAC script.
 
-**Since:** 26.0.0
+**Since:** 15
 
 <!--Device-connection-function getPacUrl(): string--><!--Device-connection-function getPacUrl(): string-End-->
 
@@ -24,7 +24,7 @@ Obtain the URL pacUrl of the current PAC script.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the URL of the current PAC script or empty string if there is no PAC script. |
+| string | URL of the PAC script. If the PAC script does not exist, error code 2100003 is reported. |
 
 **Error codes:**
 

@@ -3,6 +3,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## sendAccessibilityEvent
@@ -28,7 +33,7 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | EventInfo | 是 | 无障碍事件对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发送无障碍事件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发送无障碍事件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

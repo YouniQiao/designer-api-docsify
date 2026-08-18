@@ -12,7 +12,6 @@ Represents the keyboard area on the panel.
 
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## bottom

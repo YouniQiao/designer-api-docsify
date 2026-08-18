@@ -68,7 +68,7 @@ File name.
 readonly mode: number
 ```
 
-[Permissions on the file](arkts-corefile-file-fs-stat-i.md#stat).
+[Permissions on the file](arkts-corefile-file-fs-stat-i.md).
 
 **Type:** number
 

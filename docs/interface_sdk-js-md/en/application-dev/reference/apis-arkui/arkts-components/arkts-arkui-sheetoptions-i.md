@@ -1,8 +1,8 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions).
+Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md).
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
 **Since:** 10
 

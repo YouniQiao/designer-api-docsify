@@ -102,10 +102,25 @@ XComponent(params: NativeXComponentParameters)
 
 ## 汇总
 
-- [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md)
-- [SurfaceConfig](arkts-arkui-surfaceconfig-i.md)
-- [SurfaceRect](arkts-arkui-surfacerect-i.md)
-- [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)
-- [XComponentOptions](arkts-arkui-xcomponentoptions-i.md)
-- [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md)
-- [HdrType](arkts-arkui-hdrtype-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | 定义native xcomponent参数。使用此类构造参数创建的XComponent可以将其对应的FrameNode对象传递到Native侧，从而能够使用NDK接口进行surface生命周期相关设置和[组件事件监听](../../../ui/ndk-listen-to-component-events.md)。 |
+| [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Surface配置。 |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | 描述XComponent所持有的surface的矩形。 |
+| [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 定义屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
+| [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | 定义XComponent的选项。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | XComponent的Native加载完成后回调事件，用于向开发者传递XComponent实例对象的context。与[onSurfaceCreated](arkts-arkui-xcomponentcontroller-c.md#onsurfacecreated)的区别：onLoad回调参数为context对象，适用于设置libraryname参数的场景；onSurfaceCreated回调参数为surfaceId，适用于未设置libraryname参数的场景。onLoad触发时机早于onSurfaceCreated。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [HdrType](arkts-arkui-hdrtype-e.md) | 设置XComponent的HDR类型。 |
+

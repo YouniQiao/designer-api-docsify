@@ -3,6 +3,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## isAnimationReduceEnabledSync
@@ -11,7 +16,7 @@
 function isAnimationReduceEnabledSync(): boolean
 ```
 
-查询减弱动效模式是否开启。 本接口为同步版本，与[accessibility.isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md#isanimationreduceenabled)（异步版本）功能相同，如需立即获取结果 可使用本接口，如需在非阻塞场景下查询建议使用异步版本。
+查询减弱动效模式是否开启。 本接口为同步版本，与[accessibility.isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md)（异步版本）功能相同，如需立即获取结果 可使用本接口，如需在非阻塞场景下查询建议使用异步版本。
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # Run
 
-文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md#textline)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接 口获取。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md#textline)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调 用对应方法。
+文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接 口获取。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调 用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances

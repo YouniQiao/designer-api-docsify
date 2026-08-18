@@ -12,7 +12,6 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

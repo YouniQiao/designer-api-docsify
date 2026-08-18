@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_globalUnhandledRejectionDetected
+## on_globalUnhandledRejectionDetected('globalUnhandledRejectionDetected')
 
 ```TypeScript
 function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void

@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#accelerometerresponse)
+**替代接口：** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## x

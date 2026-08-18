@@ -429,9 +429,7 @@ Extracts the parameter type at the specified index from the TEE parameter types.
 ### check_param_type()
 
 ```c
-static inline bool check_param_type(uint32_t param_to_check, uint32_t valid0, uint32_t valid1, uint32_t valid2, uint32_t valid3)
-{return (TEE_PARAM_TYPES(valid0, valid1, valid2, valid3) == param_to_check)
-}
+static inline bool check_param_type(uint32_t param_to_check, uint32_t valid0, uint32_t valid1, uint32_t valid2, uint32_t valid3) {return (TEE_PARAM_TYPES(valid0, valid1, valid2, valid3) == param_to_check) }
 ```
 
 **Description**
@@ -454,12 +452,12 @@ Checks parameter types.
 
 | Type | Description |
 | -- | -- |
-| static inline bool | Returns <b>true</b> if the parameter types are correct.<br>         Returns <b>false</b> otherwise. |
+| static inline bool | Returns <b>true</b> if the parameter types are correct.          Returns <b>false</b> otherwise. |
 
 ### S_VAR_NOT_USED()
 
 ```c
-S_VAR_NOT_USED(variable) \do {                         \(void)(variable)        \} while (0)
+S_VAR_NOT_USED(variable) \do { \(void)(variable) \} while (0)
 ```
 
 **Description**

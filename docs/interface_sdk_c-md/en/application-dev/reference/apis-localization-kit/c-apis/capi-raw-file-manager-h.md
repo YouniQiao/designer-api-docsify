@@ -56,7 +56,7 @@ Initializes a `NativeResourceManager` object.
 
 | Type | Description |
 | -- | -- |
-| [NativeResourceManager *](capi-rawfile-nativeresourcemanager.md) | Pointer to the `NativeResourceManager` object. If the initialization fails, `NULL` is returned. The possible<br>     cause is that the `env` or `jsResMgr` parameter is invalid.<br>     <br>The memory is allocated by this function and must be released through<br>     [OH_ResourceManager_ReleaseNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_releasenativeresourcemanager) after use. |
+| [NativeResourceManager *](capi-rawfile-nativeresourcemanager.md) | Pointer to the `NativeResourceManager` object. If the initialization fails, `NULL` is returned. The possible      cause is that the `env` or `jsResMgr` parameter is invalid.      <br>The memory is allocated by this function and must be released through      [OH_ResourceManager_ReleaseNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_releasenativeresourcemanager) after use. |
 
 ### OH_ResourceManager_ReleaseNativeResourceManager()
 
@@ -99,7 +99,7 @@ Opens the `rawfile` directory.
 
 | Type | Description |
 | -- | -- |
-| [RawDir *](capi-rawfile-rawdir.md) | Pointer to the `RawDir` object. If the call fails or `mgr` is null, `NULL` is returned. After use, call<br>     [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) to release it. |
+| [RawDir *](capi-rawfile-rawdir.md) | Pointer to the `RawDir` object. If the call fails or `mgr` is null, `NULL` is returned. After use, call      [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) to release it. |
 
 **Reference**:
 
@@ -130,7 +130,7 @@ Opens a rawfile and returns a `RawFile` object for reading the rawfile content.
 
 | Type | Description |
 | -- | -- |
-| [RawFile *](capi-rawfile-rawfile.md) | Pointer to the `RawFile` object. If the call fails or the input parameter is null, `NULL` is returned. After<br>     use, call [OH_ResourceManager_CloseRawFile](capi-raw-file-h.md#oh_resourcemanager_closerawfile) to release it. |
+| RawFile * | Pointer to the `RawFile` object. If the call fails or the input parameter is null, `NULL` is returned. After      use, call [OH_ResourceManager_CloseRawFile](capi-raw-file-h.md#oh_resourcemanager_closerawfile) to release it. |
 
 **Reference**:
 
@@ -161,7 +161,7 @@ Opens a rawfile and returns a `RawFile` object for reading the rawfile content. 
 
 | Type | Description |
 | -- | -- |
-| [RawFile64 *](capi-rawfile-rawfile64.md) | Pointer to the `RawFile` object. If the call fails or the input parameter is null, `NULL` is returned. After<br>     use, call [OH_ResourceManager_CloseRawFile64](capi-raw-file-h.md#oh_resourcemanager_closerawfile64) to release it. |
+| RawFile64 * | Pointer to the `RawFile` object. If the call fails or the input parameter is null, `NULL` is returned. After      use, call [OH_ResourceManager_CloseRawFile64](capi-raw-file-h.md#oh_resourcemanager_closerawfile64) to release it. |
 
 **Reference**:
 

@@ -89,7 +89,7 @@ Obtains the CPU usage of an application. Note that this API involves cross-proce
 
 | Type | Description |
 | -- | -- |
-| double | Application CPU usage obtained if the operation is successful. If 0 is returned, the CPU usage of the<br>     current application is too low. |
+| double | Application CPU usage obtained if the operation is successful. If 0 is returned, the CPU usage of the      current application is too low. |
 
 ### OH_HiDebug_GetAppThreadCpuUsage()
 
@@ -107,7 +107,7 @@ Obtains the CPU usage of all threads of an application. Note that this API invol
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ThreadCpuUsagePtr | CPU usage of all threads. For details, see {@link HiDebug_ThreadCpuUsagePtr}.<br>     <br>If null is returned, the thread data may not be obtained. |
+| HiDebug_ThreadCpuUsagePtr | CPU usage of all threads. For details, see {@link HiDebug_ThreadCpuUsagePtr}.      <br>If null is returned, the thread data may not be obtained. |
 
 ### OH_HiDebug_FreeThreadCpuUsage()
 
@@ -226,7 +226,7 @@ Starts application trace collection.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | 0 - The operation is successful.<br>     <br>{@link HIDEBUG_INVALID_ARGUMENT} 401 - The fileName parameter is a null pointer, the input length<br>     parameter is too small, or the limitSize parameter is less than or equal to 0.<br>     <br>11400102 - A trace is already started.<br>     <br>11400103 - You do not have the permission to start the trace function.<br>     <br>11400104 - An internal system error occurs. |
+| HiDebug_ErrorCode | 0 - The operation is successful.      <br>{@link HIDEBUG_INVALID_ARGUMENT} 401 - The fileName parameter is a null pointer, the input length      parameter is too small, or the limitSize parameter is less than or equal to 0.      <br>11400102 - A trace is already started.      <br>11400103 - You do not have the permission to start the trace function.      <br>11400104 - An internal system error occurs. |
 
 ### OH_HiDebug_StopAppTraceCapture()
 
@@ -244,7 +244,7 @@ Stops application trace collection.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | 0 - The operation is successful.<br>     <br>11400104 - An internal system error occurs.<br>     <br>11400105 - No trace collection is running. |
+| HiDebug_ErrorCode | 0 - The operation is successful.      <br>11400104 - An internal system error occurs.      <br>11400105 - No trace collection is running. |
 
 ### OH_HiDebug_RequestTrace()
 
@@ -269,7 +269,7 @@ Requests application trace capture with specified configuration.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code.<br>         {@link HIDEBUG_SUCCESS} The operation is successful.<br>         {@link HIDEBUG_TRACE_ABNORMAL} Remote service exception.<br>         {@link OH_HIDEBUG_TRACE_STORAGE_LIMIT} Trace storage limit reached.<br>         {@link HIDEBUG_RESOURCE_UNAVAILABLE} Resource unavailable. |
+| HiDebug_ErrorCode | Result code.          {@link HIDEBUG_SUCCESS} The operation is successful.          {@link HIDEBUG_TRACE_ABNORMAL} Remote service exception.          {@link OH_HIDEBUG_TRACE_STORAGE_LIMIT} Trace storage limit reached.          {@link HIDEBUG_RESOURCE_UNAVAILABLE} Resource unavailable. |
 
 ### OH_HiDebug_GetGraphicsMemory()
 
@@ -293,7 +293,7 @@ Obtains the size of the GPU memory. Note that this API involves multiple cross-p
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | 0 - The API is obtained successfully.<br>     <br>401 - The parameter is a null pointer, which is invalid.<br>     <br>11400104 - An internal system error occurs. |
+| HiDebug_ErrorCode | 0 - The API is obtained successfully.      <br>401 - The parameter is a null pointer, which is invalid.      <br>11400104 - An internal system error occurs. |
 
 ### OH_HiDebug_SetMallocDispatchTable()
 
@@ -317,7 +317,7 @@ Sets the **MallocDispatch** table in the basic C library to temporarily replace 
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The custom memory operation function is set successfully.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li></ul> |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.      <ul><li>{@link HIDEBUG_SUCCESS}: The custom memory operation function is set successfully.</li>      <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li></ul> |
 
 ### OH_HiDebug_GetDefaultMallocDispatchTable()
 
@@ -374,7 +374,7 @@ Performs stack back-tracing based on the given fp address. This function is asyn
 
 | Type | Description |
 | -- | -- |
-| int | Number of stack frames that are successfully backtraced and written to pcArray. If 0 is returned, stack<br>     backtracing may fail. |
+| int | Number of stack frames that are successfully backtraced and written to pcArray. If 0 is returned, stack      backtracing may fail. |
 
 ### OH_HiDebug_SymbolicAddressCallback()
 
@@ -392,7 +392,7 @@ If the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress
 
 | Parameter | Description |
 | -- | -- |
-| (void\* pc | PC address transferred to the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API for parsing. |
+| void\* pc | PC address transferred to the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API for parsing. |
 | void\* arg | arg value of the [OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API. |
 | [const HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md)\* frame | Pointer to [HiDebug_StackFrame](capi-hidebug-hidebug-stackframe.md), which is obtained by parsing the PC address passed to the[OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress) API. What the pointer points to is valid only in the function scope. |
 
@@ -421,7 +421,7 @@ Obtains detailed symbol information based on the specified PC address. This func
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The detailed stack information is successfully obtained, and the callback<br>     input by the function is called.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS}: Failed to find the corresponding symbol based on the input<br>     PC address.</li></ul> |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.      <ul><li>{@link HIDEBUG_SUCCESS}: The detailed stack information is successfully obtained, and the callback      input by the function is called.</li>      <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li>      <li>{@link HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS}: Failed to find the corresponding symbol based on the input      PC address.</li></ul> |
 
 ### OH_HiDebug_CreateBacktraceObject()
 
@@ -482,7 +482,7 @@ Obtains the detailed GPU memory usage of an application.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: The GPU memory information of the application is obtained successfully.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_TRACE_ABNORMAL}: Internal system error.</li></ul> |
+| HiDebug_ErrorCode | For details, see {@link HiDebug_ErrorCode}.      <ul><li>{@link HIDEBUG_SUCCESS}: The GPU memory information of the application is obtained successfully.</li>      <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li>      <li>{@link HIDEBUG_TRACE_ABNORMAL}: Internal system error.</li></ul> |
 
 ### OH_HiDebug_ThreadLiteSamplingCallback()
 
@@ -500,7 +500,7 @@ Triggered for the lightweight Perf sampling stack content. Note: The sampling da
 
 | Parameter | Description |
 | -- | -- |
-| (const char\* stacks | Content of the sampling call stack. |
+| const char\* stacks | Content of the sampling call stack. |
 
 ### OH_HiDebug_RequestThreadLiteSampling()
 
@@ -523,7 +523,7 @@ HiDebug_ErrorCode OH_HiDebug_RequestThreadLiteSampling(HiDebug_ProcessSamplerCon
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code.<br>     <ul><li>{@link HIDEBUG_SUCCESS}: Sampling successful.</li><br>     <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li><br>     <li>{@link HIDEBUG_NOT_SUPPORTED}: Perf sampling not supported.</li><br>     <li>{@link HIDEBUG_UNDER_SAMPLING}: A sampling task is in progress.</li><br>     <li>{@link HIDEBUG_RESOURCE_UNAVAILABLE}: Sampling resources are insufficient or the upper call limit is<br>     reached.</li></ul> |
+| HiDebug_ErrorCode | Result code.      <ul><li>{@link HIDEBUG_SUCCESS}: Sampling successful.</li>      <li>{@link HIDEBUG_INVALID_ARGUMENT}: Invalid parameter.</li>      <li>{@link HIDEBUG_NOT_SUPPORTED}: Perf sampling not supported.</li>      <li>{@link HIDEBUG_UNDER_SAMPLING}: A sampling task is in progress.</li>      <li>{@link HIDEBUG_RESOURCE_UNAVAILABLE}: Sampling resources are insufficient or the upper call limit is      reached.</li></ul> |
 
 ### OH_HiDebug_SetCrashObj()
 
@@ -548,7 +548,7 @@ Adds debugging information to the crash logs. This function is used together wit
 
 | Type | Description |
 | -- | -- |
-| uint64_t | Object of the debugging information that was set last time. If no debugging information is set last time,<br>     the value is 0. |
+| uint64_t | Object of the debugging information that was set last time. If no debugging information is set last time,      the value is 0. |
 
 ### OH_HiDebug_ResetCrashObj()
 
@@ -592,7 +592,7 @@ Starts Resource Profiler for the current process asynchronously.The callback is 
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code<br>         {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler started successfully.<br>         {@link HIDEBUG_RES_PROF_INVALID_ARG} Invalid resource profiler argument.<br>         {@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} Invalid maximum duration.<br>         {@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} Invalid filter size.<br>         {@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} Invalid maximum stack depth.<br>         {@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} Invalid statistics interval.<br>         {@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} Invalid sample interval.<br>         {@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE} Invalid resource type.<br>         {@link HIDEBUG_RES_PROF_PERMISSION_DENIED} Resource profiler permission denied.<br>         {@link HIDEBUG_RES_PROF_ALREADY_STARTED} Resource profiler already started.<br>         {@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT} Resource profiler process count exceeds the limit.<br>         {@link HIDEBUG_RES_PROF_CONFLICT} Resource profiler conflicts with CLI tools or system profiling tasks.<br>         {@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED} Daily quota exceeded during resource profiling.<br>         {@link HIDEBUG_RES_PROF_CPU_OVERLOADED} System is experiencing high CPU utilization.<br>         {@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL} Insufficient available memory.<br>         {@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL} Insufficient available storage space.<br>         {@link HIDEBUG_RES_PROF_FAILURE} Failed to start the resource profiler. |
+| HiDebug_ErrorCode | Result code          {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler started successfully.          {@link HIDEBUG_RES_PROF_INVALID_ARG} Invalid resource profiler argument.          {@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} Invalid maximum duration.          {@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} Invalid filter size.          {@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} Invalid maximum stack depth.          {@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} Invalid statistics interval.          {@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} Invalid sample interval.          {@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE} Invalid resource type.          {@link HIDEBUG_RES_PROF_PERMISSION_DENIED} Resource profiler permission denied.          {@link HIDEBUG_RES_PROF_ALREADY_STARTED} Resource profiler already started.          {@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT} Resource profiler process count exceeds the limit.          {@link HIDEBUG_RES_PROF_CONFLICT} Resource profiler conflicts with CLI tools or system profiling tasks.          {@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED} Daily quota exceeded during resource profiling.          {@link HIDEBUG_RES_PROF_CPU_OVERLOADED} System is experiencing high CPU utilization.          {@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL} Insufficient available memory.          {@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL} Insufficient available storage space.          {@link HIDEBUG_RES_PROF_FAILURE} Failed to start the resource profiler. |
 
 ### OH_HiDebug_StopProfiler()
 
@@ -610,7 +610,7 @@ Stops resource profiler for the current process. This API can be called after th
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code<br>         {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler stopped successfully.<br>         {@link HIDEBUG_RES_PROF_NOT_STARTED} Resource profiler not started.<br>         {@link HIDEBUG_RES_PROF_FAILURE} Failed to stop the resource profiler. |
+| HiDebug_ErrorCode | Result code          {@link HIDEBUG_RES_PROF_SUCCESS} Resource profiler stopped successfully.          {@link HIDEBUG_RES_PROF_NOT_STARTED} Resource profiler not started.          {@link HIDEBUG_RES_PROF_FAILURE} Failed to stop the resource profiler. |
 
 ### OH_HiDebug_MemDumpListener()
 
@@ -628,7 +628,7 @@ Callback triggered for listening. You can use FDs to write memory data in your a
 
 | Parameter | Description |
 | -- | -- |
-| (int32_t fd | FD used to write memory data in the app. |
+| int32_t fd | FD used to write memory data in the app. |
 | [OH_HiDebug_MemListenerType](capi-hidebug-type-h.md#oh_hidebug_memlistenertype) tag | Callback type. You can process the related logic based on the callback type. |
 | bool mayReportToOEM | Whether the data will be uploaded to the OEM. If the value is true, the data will be uploadedto the OEM. Pay attention to data privacy and security issues. |
 | const char\* arg | Callback argument. You can pass different arguments based on the value of type. |
@@ -662,7 +662,7 @@ Registers a listener triggered when the memory watermark of an app is high or th
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code.<br> {@link HIDEBUG_SUCCESS } Operation succeeded.<br> {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
+| HiDebug_ErrorCode | Result code.  {@link HIDEBUG_SUCCESS } Operation succeeded.  {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
 
 ### OH_HiDebug_UnregisterMemDumpListener()
 
@@ -686,7 +686,7 @@ Unregisters a memory dump listener that has been successfully registered.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code.<br> {@link HIDEBUG_SUCCESS } Operation succeeded.<br> {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
+| HiDebug_ErrorCode | Result code.  {@link HIDEBUG_SUCCESS } Operation succeeded.  {@link HIDEBUG_INVALID_ARGUMENT } Invalid argument. |
 
 ### OH_HiDebug_AcquireAsyncContext()
 

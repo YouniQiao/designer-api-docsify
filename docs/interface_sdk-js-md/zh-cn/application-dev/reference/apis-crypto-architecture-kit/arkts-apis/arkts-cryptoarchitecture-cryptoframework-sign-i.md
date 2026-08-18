@@ -1,6 +1,6 @@
 # Sign
 
-签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过 [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign)方法创建一个Sign实例。按序调用Sign实例中的init、 update（可选）、sign方法完成签名操作。签名操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 <br>Sign实例不支持重复初始化，当业务方需要使用新密钥签名时，需要重新创建新Sign实例并调用init初始化。 <br>业务方使用时，调用createSign接口确定签名的模式，调用init接口设置密钥。 <br>当待签名数据长度较短时，可在初始化后直接调用sign接口传入数据进行签名，无需调用update。 <br>当待签名数据较长时，可通过update接口分段传入切分后的原文数据，最后调用sign接口对整体原文数据进行签名。 <br>当使用update分段传入原文时，sign接口API 10之前只支持传入DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环 结束后调用sign进行签名。 <br>使用DSA算法签名时，如果摘要算法设置为NoHash，则不支持update操作，调用update接口将返回错误码ERR_CRYPTO_OPERATION。
+签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过 [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、 update（可选）、sign方法完成签名操作。签名操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 <br>Sign实例不支持重复初始化，当业务方需要使用新密钥签名时，需要重新创建新Sign实例并调用init初始化。 <br>业务方使用时，调用createSign接口确定签名的模式，调用init接口设置密钥。 <br>当待签名数据长度较短时，可在初始化后直接调用sign接口传入数据进行签名，无需调用update。 <br>当待签名数据较长时，可通过update接口分段传入切分后的原文数据，最后调用sign接口对整体原文数据进行签名。 <br>当使用update分段传入原文时，sign接口API 10之前只支持传入DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环 结束后调用sign进行签名。 <br>使用DSA算法签名时，如果摘要算法设置为NoHash，则不支持update操作，调用update接口将返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getSignSpec
@@ -91,7 +92,7 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 是 | 用于Sign的初始化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名初始化成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -181,7 +182,7 @@ initSync(priKey: PriKey): void
 setSignSpec(itemType: SignSpecItem, itemValue: int): void
 ```
 
-设置签名参数。常用签名参数可通过 [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) 指定，其他参数则通过本接口设置。 <br>当前仅支持RSA算法、SM2算法，从API version11开始，支持SM2算法设置签名参数。
+设置签名参数。常用签名参数可通过 [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md) 指定，其他参数则通过本接口设置。 <br>当前仅支持RSA算法、SM2算法，从API version11开始，支持SM2算法设置签名参数。
 
 **起始版本：** 10
 
@@ -385,7 +386,7 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 待签名的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
 
 **错误码：**
 
@@ -420,7 +421,7 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
 
 **错误码：**
 
@@ -831,7 +832,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 传入的消息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名更新成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

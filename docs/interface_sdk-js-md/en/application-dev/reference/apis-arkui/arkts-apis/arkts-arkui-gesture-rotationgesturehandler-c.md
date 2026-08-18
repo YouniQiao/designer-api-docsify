@@ -2,7 +2,7 @@
 
 Defines the RotationGesture handler.
 
-**Inheritance/Implementation:** RotationGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** RotationGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

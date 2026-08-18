@@ -2,7 +2,7 @@
 
 滑动手势事件，当滑动的最小距离达到设定的最小值时触发滑动手势事件。
 
-**继承/实现关系：** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#gesture)
+**继承/实现关系：** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@
 static $_instantiate(factory: () => PanGesture, value?: PanGestureHandlerOptions | PanGestureOptions): PanGesture
 ```
 
-创建滑动手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#gesture)。
+创建滑动手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
 
 **起始版本：** 23
 

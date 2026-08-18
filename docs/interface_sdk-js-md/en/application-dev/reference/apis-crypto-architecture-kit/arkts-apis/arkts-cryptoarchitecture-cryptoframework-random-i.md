@@ -1,6 +1,6 @@
 # Random
 
-Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom).
+Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md).
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Random interface, defining methods for generating random numbers. Before use, yo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
@@ -94,7 +93,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | len | int | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

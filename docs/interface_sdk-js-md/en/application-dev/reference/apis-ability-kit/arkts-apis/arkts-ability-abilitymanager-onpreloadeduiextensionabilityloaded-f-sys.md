@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## onPreloadedUIExtensionAbilityLoaded
@@ -13,7 +12,7 @@ import { abilityManager } from '@kit.AbilityKit';
 function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance in the current process.
+Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 
@@ -31,7 +30,7 @@ Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#uiextensionability) instance that is loaded. |
+| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance that is loaded. |
 
 **Error codes:**
 

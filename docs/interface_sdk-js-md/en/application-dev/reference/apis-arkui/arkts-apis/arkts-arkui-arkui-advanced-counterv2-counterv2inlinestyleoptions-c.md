@@ -2,7 +2,7 @@
 
 Defines the inline style options.
 
-**Inheritance/Implementation:** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md#counterv2commonoptions)
+**Inheritance/Implementation:** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **Since:** 26.0.0
 

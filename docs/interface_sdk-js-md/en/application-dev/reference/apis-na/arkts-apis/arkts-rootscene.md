@@ -3,11 +3,11 @@
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [RootScene](arkts-na-rootscene-rootscene-f-sys.md#rootscene-system-api) | Defines the RootScene Component. |
+| [RootScene](arkts-na-rootscene-rootscene-f-sys.md) | Defines the RootScene Component. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -18,7 +18,7 @@
 | [RootSceneSession](arkts-na-rootscene-rootscenesession-i.md) | Defines the session of RootScene. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |

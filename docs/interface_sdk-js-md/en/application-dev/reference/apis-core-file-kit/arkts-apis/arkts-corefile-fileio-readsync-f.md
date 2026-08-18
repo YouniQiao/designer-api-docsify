@@ -25,7 +25,7 @@ Reads data from a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [readSync](arkts-corefile-file-fs-readsync-f.md#readsync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-readsync-f.md)
 
 <!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 

@@ -46,6 +46,6 @@ Applies changes to an asset or album.
 
 | Type | Description |
 | -- | -- |
-| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.<br>     <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:<br>     <br>1. Mandatory parameters are left unspecified.<br>     <br>2. Incorrect parameter types.<br>     <br>3. Parameter verification failed.<br>     <br>MEDIA_LIBRARY_PERMISSION_DENIED Permission is denied.<br>     <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
+| [MediaLibrary_ErrorCode](capi-media-asset-base-capi-h.md#medialibrary_errorcode) | MEDIA_LIBRARY_OK if the method call succeeds.      <br>MEDIA_LIBRARY_PARAMETER_ERROR Parameter error. Possible causes:      <br>1. Mandatory parameters are left unspecified.      <br>2. Incorrect parameter types.      <br>3. Parameter verification failed.      <br>MEDIA_LIBRARY_PERMISSION_DENIED Permission is denied.      <br>MEDIA_LIBRARY_INTERNAL_SYSTEM_ERROR if internal system error. |
 
 

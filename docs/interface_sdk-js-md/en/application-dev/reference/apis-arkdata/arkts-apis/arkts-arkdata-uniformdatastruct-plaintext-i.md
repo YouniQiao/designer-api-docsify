@@ -12,7 +12,6 @@ Represents data of the plain text type.
 
 ```TypeScript
 import { uniformDataStruct } from '@kit.ArkData';
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abstract
@@ -93,7 +92,7 @@ Plaintext content.
 readonly uniformDataType: 'general.plain-text'
 ```
 
-Uniform data type, which has a fixed value of **general.plain-text**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#uniformdatatype).
+Uniform data type, which has a fixed value of **general.plain-text**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'general.plain-text'
 

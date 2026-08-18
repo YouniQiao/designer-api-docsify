@@ -14,7 +14,6 @@ Represents optional configuration items for the SymbolNumberFormat object. Defin
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## groupingSeparator

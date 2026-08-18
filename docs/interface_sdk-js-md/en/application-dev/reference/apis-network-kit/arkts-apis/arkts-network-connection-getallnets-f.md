@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void
 ```
 
-Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the list of all connected networks. This API uses an asynchronous callback to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Obtains the list of data networks that are activated. To invoke this method, you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetHandle&gt;&gt; | Yes | the callback of getAllNets. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NetHandle&gt;&gt; | Yes | Callback used to return the result. If the list of all connected networks is obtained successfully, **error** is **undefined** and **data** is the list of activated networks. Otherwise, **error** is an error object. <br> Note: If Wi-Fi and cellular data are both enabled, and no application specifies the use of cellular data, only Wi-Fi is activated. In this case, only the **NetHandle** of Wi-Fi is returned. The NetHandle of Wi-Fi and cellular data can be obtained at the same time only when a specific application enables the cellular network. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ connection.getAllNets((error: BusinessError, data: connection.NetHandle[]) => {
 function getAllNets(): Promise<Array<NetHandle>>
 ```
 
-Obtains the list of data networks that are activated. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the list of all connected networks. This API uses a promise to return the result. **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -73,7 +73,7 @@ Obtains the list of data networks that are activated. To invoke this method, you
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetHandle&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;NetHandle&gt;&gt; | Promise used to return the list of activated networks. |
 
 **Error codes:**
 

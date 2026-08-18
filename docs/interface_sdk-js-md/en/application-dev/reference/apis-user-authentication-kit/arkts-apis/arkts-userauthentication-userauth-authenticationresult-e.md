@@ -6,7 +6,7 @@ Enumerates the authentication results.
 
 **Deprecated since:** 8
 
-**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#userauthresultcode)
+**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
 
 <!--Device-userAuth-export enum AuthenticationResult--><!--Device-userAuth-export enum AuthenticationResult-End-->
 
@@ -24,7 +24,7 @@ The device does not support the current authentication mode.
 
 **Deprecated since:** 8
 
-**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#typenotsupport)
+**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#type_not_support)
 
 <!--Device-AuthenticationResult-NO_SUPPORT = -1--><!--Device-AuthenticationResult-NO_SUPPORT = -1-End-->
 
@@ -148,7 +148,7 @@ The authentication parameters are invalid.
 
 **Deprecated since:** 8
 
-**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalidparameters)
+**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
 
 <!--Device-AuthenticationResult-INVALID_PARAMETERS = 6--><!--Device-AuthenticationResult-INVALID_PARAMETERS = 6-End-->
 
@@ -184,7 +184,7 @@ No authentication credential is registered.
 
 **Deprecated since:** 8
 
-**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#notenrolled)
+**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
 
 <!--Device-AuthenticationResult-NOT_ENROLLED = 8--><!--Device-AuthenticationResult-NOT_ENROLLED = 8-End-->
 
@@ -202,7 +202,7 @@ Other errors.
 
 **Deprecated since:** 8
 
-**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#generalerror)
+**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#general_error)
 
 <!--Device-AuthenticationResult-GENERAL_ERROR = 100--><!--Device-AuthenticationResult-GENERAL_ERROR = 100-End-->
 

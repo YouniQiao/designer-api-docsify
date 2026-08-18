@@ -1279,7 +1279,7 @@ Sets the background brightness of the component.
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## backgroundBrightness
 
@@ -3166,7 +3166,7 @@ Sets the preview image displayed during component drag operations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -3196,7 +3196,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#pixelmap) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md#dragiteminfo) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
+| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
 | config | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | No | Additional settings for the drag preview.<br>This parameter is effective only for previews set using [dragPreview](#dragpreview). |
 
 **Return value:**
@@ -3332,7 +3332,7 @@ Sets whether to enable the default click sound effect for a component. Whether t
 enabled(value: boolean): T
 ```
 
-Sets whether the component responds to user interactions. If **enabled** is not set, the component responds to user interactions by default.
+If the value is true, the component is available and can respond to operations such as clicking. If it is set to false, click operations are not responded.
 
 **Since:** 7
 
@@ -3348,13 +3348,13 @@ Sets whether the component responds to user interactions. If **enabled** is not 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component responds to user interactions, including clicks and touches. The value **true** means that the component responds to user interactions, and **false** means the opposite. |
+| value | boolean | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T |  |
 
 ## expandSafeArea
 
@@ -3680,7 +3680,7 @@ Applies a foreground blur style to the component. > **NOTE：**> > This API can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Settings of the foreground blur style. |
-| options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md#foregroundblurstyleoptions). |
+| options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
@@ -3711,7 +3711,7 @@ Applies a foreground blur style to the component. Compared to [foregroundBlurSty
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes | Settings of the foreground blur style.<br>If **style** is set to **undefined**, no blur is applied. |
-| options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md#foregroundblurstyleoptions). |
+| options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
@@ -4807,7 +4807,7 @@ Applies a linear gradient foreground blur effect to the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Blur radius. A larger value indicates a higher blur degree. If the value is 0, the content is not blurred.<br>Value range: [0, 1000] |
-| options | [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) | Yes | Linear gradient blur effect.<br>The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions) and [direction](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions). |
+| options | [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) | Yes | Linear gradient blur effect.<br>The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
@@ -4838,7 +4838,7 @@ Applies a linear gradient foreground blur effect to the component. Compared with
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blurRadius | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Blur radius. A larger value indicates a higher blur degree. If the value is 0, the content is not blurred.<br>Value range: [0, 1000]<br>If **blurRadius** is **undefined**, the gradient blur effect reverts to **0**. |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md)&gt; | Yes | Linear gradient blur effect.<br>If **options** is **undefined**, the gradient blur effect reverts to **0**.<br>The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions) and [direction](arkts-arkui-lineargradientbluroptions-i.md#lineargradientbluroptions). |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md)&gt; | Yes | Linear gradient blur effect.<br>If **options** is **undefined**, the gradient blur effect reverts to **0**.<br>The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
@@ -5294,7 +5294,7 @@ Sets how the component content is obscured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | Array&lt;ObscuredReasons&gt; | Yes | How the component content is obscured.<br>This API is only available for the Image&lt;!--Del--&gt;, FormComponent&lt;sup&gt;12+&lt;/sup&gt;,&lt;!--DelEnd--&gt; and Text components.<br>**NOTE：**<br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any styled string configured. <br>Default value: []. |
+| reasons | Array&lt;ObscuredReasons&gt; | Yes | How the component content is obscured.<br>This API is only available for the Image<!--Del-->, FormComponent&lt;sup&gt;12+&lt;/sup&gt;,<!--DelEnd--> and Text components.<br>**NOTE：**<br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any styled string configured. <br>Default value: []. |
 
 **Return value:**
 
@@ -5520,7 +5520,7 @@ Triggered when the component area changes in size or position due to layout upda
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#areachangeoptions). This event is triggered only in response to changes in component size or position caused by layout updates.
+Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
 
 **Since:** 26.0.0
 
@@ -5597,7 +5597,7 @@ Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-callback-i.md)&lt;[AxisEvent](arkts-arkui-axisevent-i.md)&gt; | Yes | [AxisEvent](arkts-arkui-axisevent-i.md#axisevent) object. |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[AxisEvent](arkts-arkui-axisevent-i.md)&gt; | Yes | [AxisEvent](arkts-arkui-axisevent-i.md) object. |
 
 **Return value:**
 
@@ -5669,7 +5669,7 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md#sourcetype) is **KEY** or **JOYSTICK**. > **NOTE：**> > Since API version 9, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. > **NOTE：**> > Since API version 9, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 
 **Since:** 7
 
@@ -5699,7 +5699,7 @@ Called when a click event occurs. When triggered by keyboard or gamepad input, t
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md#sourcetool) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md#sourcetype) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. > **NOTE：**> > - Since API version 12, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. > > - This API cannot be called within [attributeModifier](#attributemodifier).
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. > **NOTE：**> > - Since API version 12, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. > > - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -5953,7 +5953,7 @@ The component bound to this event can be used as a drag-response target with hov
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-arkui-callback-i.md)&lt;[SpringLoadingContext](arkts-arkui-springloadingcontext-t.md)&gt; \| null | Yes | Hover detection callback. If the value is **null**, hover detection is disabled. |
-| configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | No | Hover detection configuration. If the value is **undefined**, the default value of [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md#dragspringloadingconfiguration) is used. |
+| configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | No | Hover detection configuration. If the value is **undefined**, the default value of [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) is used. |
 
 **Return value:**
 
@@ -6467,7 +6467,7 @@ Called when component is focused, the return value indicates whether keyboard is
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md#predragstatus). This API cannot be triggered in mouse-based drag scenarios. > **NOTE：**> > This API can be called in [attributeModifier](#attributemodifier) since API version 20.
+Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios. > **NOTE：**> > This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -6497,7 +6497,7 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-Triggered when the component size changes due to layout updates. > **NOTE：**> > 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may > deviate slightly from the actual physical size. > > 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state > variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, > animations compare the layout state before the animation starts with the state after the animation closure is > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the > changes made in this callback will be processed as part of the animation, along with the changes in the animation > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md#settimeout) or > [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside > **onSizeChange** to defer the UI processing logic to asynchronous execution.
+Triggered when the component size changes due to layout updates. > **NOTE：**> > 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may > deviate slightly from the actual physical size. > > 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state > variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, > animations compare the layout state before the animation starts with the state after the animation closure is > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the > changes made in this callback will be processed as part of the animation, along with the changes in the animation > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or > [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside > **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
 
@@ -6529,7 +6529,7 @@ Triggered when the component size changes due to layout updates. > **NOTE：**> 
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md#touchevent). Mouse left-click events are converted to touch events and will also trigger this callback.
+Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md). Mouse left-click events are converted to touch events and will also trigger this callback.
 
 **Since:** 7
 
@@ -7091,7 +7091,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md#componentcontent). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid)) cannot access components within the overlay. > **NOTE：**> > The overlay places the floating layer component above the bound component, blocking all user interactions with > components beneath it. To enable interaction with underlying components, refer to > [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with > user interaction with the underlying content.
+Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md)) cannot access components within the overlay. > **NOTE：**> > The overlay places the floating layer component above the bound component, blocking all user interactions with > components beneath it. To enable interaction with underlying components, refer to > [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with > user interaction with the underlying content.
 
 **Since:** 7
 
@@ -8179,7 +8179,7 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | No | Options for configuring smart gesture shortcuts. In SmartGestureShortcutOptions: enabled is used to configure whether the component responds to smart gestures. selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation. action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping. It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md#smartgestureshortcutoptions). |
+| options | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | No | Options for configuring smart gesture shortcuts. In SmartGestureShortcutOptions: enabled is used to configure whether the component responds to smart gestures. selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation. action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping. It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md). |
 
 **Return value:**
 
@@ -8383,7 +8383,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab** key. When components with positive **tabIndex** values are present, only these components are reachable through sequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex** value. When components with positive **tabIndex** values are not present, those components with a **tabIndex** value of **0** are navigated based on the preset focus navigation rule.<br>The [UiExtension](../arkts-apis/arkts-arkui-uiextension.md#ohosarkuiuiextension) component does not support **tabIndex**. As such, using **tabIndex** on [hierarchical pages](../../../ui/arkts-common-events-focus-event.md#basic-concepts) that contain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** >= 0: The component is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 ( usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboard navigation.<br> **NOTE：**<br> **tabIndex** and **focusScopeId** cannot be used together. |
+| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab** key. When components with positive **tabIndex** values are present, only these components are reachable through sequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex** value. When components with positive **tabIndex** values are not present, those components with a **tabIndex** value of **0** are navigated based on the preset focus navigation rule.<br>The [UiExtension](../arkts-apis/arkts-arkui-uiextension.md) component does not support **tabIndex**. As such, using **tabIndex** on [hierarchical pages](../../../ui/arkts-common-events-focus-event.md#basic-concepts) that contain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** >= 0: The component is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 ( usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboard navigation.<br> **NOTE：**<br> **tabIndex** and **focusScopeId** cannot be used together. |
 
 **Return value:**
 
@@ -8499,7 +8499,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | object | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../arkts-apis/arkts-matrix4.md#ohosmatrix4) object type is supported. |
+| value | object | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../../apis-na/arkts-apis/arkts-matrix4.md) object type is supported. |
 
 **Return value:**
 
@@ -8529,7 +8529,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Optional](arkts-arkui-optional-t.md)&lt;object&gt; | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../arkts-apis/arkts-matrix4.md#ohosmatrix4) object type is supported.<br>If **transform** is **undefined**, the component reverts to the identity matrix (no transformation). |
+| transform | [Optional](arkts-arkui-optional-t.md)&lt;object&gt; | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../../apis-na/arkts-apis/arkts-matrix4.md) object type is supported.<br>If **transform** is **undefined**, the component reverts to the identity matrix (no transformation). |
 
 **Return value:**
 
@@ -8589,7 +8589,7 @@ Sets the transition effects used when a component is inserted or removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effects used when a component is inserted or removed.<br>**NOTE：**<br>For details, see [TransitionOptions](arkts-arkui-transitionoptions-i.md#transitionoptions) and [TransitionEffect](arkts-arkui-transitioneffect-c.md#transitioneffect). |
+| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effects used when a component is inserted or removed.<br>**NOTE：**<br>For details, see [TransitionOptions](arkts-arkui-transitionoptions-i.md) and [TransitionEffect](arkts-arkui-transitioneffect-c.md). |
 
 **Return value:**
 

@@ -40,7 +40,7 @@ colorMode?: PickerColorMode
 
 Color mode of the placeholder. This setting is used when **isAutoRefreshSupported** is set to **true** and no recent image or video meets the requirements, showing a placeholder instead. By default, it follows the system's dark/light color mode.
 
-**Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 20
 
@@ -94,7 +94,7 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 12
 

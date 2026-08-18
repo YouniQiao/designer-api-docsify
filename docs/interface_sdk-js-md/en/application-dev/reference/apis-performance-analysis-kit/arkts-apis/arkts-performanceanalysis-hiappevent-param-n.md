@@ -20,7 +20,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-con.md#userid) | Custom user ID. |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributedservicename) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributedserviceinstanceid) | Distributed service instance ID. |
+| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |
 

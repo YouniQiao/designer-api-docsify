@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pointer } from '@kit.InputKit';
 ```
 
 ## getHoverScrollState
@@ -25,7 +26,7 @@ function getHoverScrollState(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取鼠标悬停滚动开关状态成功，err为undefined，true代表开关开启，false代表开关关闭，默认开启；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取鼠标悬停滚动开关状态成功，err为undefined，true代表开关开启，false代表开关关闭，默认开启；否则为错误对 象。 |
 
 **错误码：**
 

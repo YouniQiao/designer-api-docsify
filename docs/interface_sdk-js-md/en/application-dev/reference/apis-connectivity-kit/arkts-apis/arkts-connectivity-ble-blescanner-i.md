@@ -1,6 +1,6 @@
 # BleScanner
 
-Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createblescanner) to create an BleScanner instance.
+Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md) to create an BleScanner instance.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Unsubscribe BLE scan result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -46,7 +46,7 @@ Unsubscribe BLE scan result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## off_BLEDeviceFind
+## off_BLEDeviceFind('BLEDeviceFind')
 
 ```TypeScript
 off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void
@@ -71,7 +71,7 @@ Unsubscribe BLE scan result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -121,7 +121,7 @@ Subscribe BLE scan result. If the application has ohos.permission.GET_BLUETOOTH_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Subscribe BLE scan result. If the application has ohos.permission.GET_BLUETOOTH_
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
-## on_BLEDeviceFind
+## on_BLEDeviceFind('BLEDeviceFind')
 
 ```TypeScript
 on(type: 'BLEDeviceFind', callback: Callback<ScanReport>): void
@@ -158,7 +158,7 @@ Subscribe BLE scan result. On API 26.0.0 and above, if the application has ohos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
@@ -210,7 +210,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scanmodelowpower) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#matchmodeaggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phyleallsupported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_power) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#match_mode_aggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phy_le_all_supported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
 
 **Return value:**
 
@@ -286,7 +286,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; \| null | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scanmodelowpower) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#matchmodeaggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phyleallsupported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_power) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#match_mode_aggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phy_le_all_supported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
 
 **Return value:**
 

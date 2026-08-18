@@ -12,8 +12,6 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -153,7 +151,7 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UploadProgress](arkts-corefile-cloudsync-uploadprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
 
 **Error codes:**
 

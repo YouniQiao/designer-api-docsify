@@ -147,7 +147,7 @@ Obtains the length of the {@link FlowItem} section configuration array.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Size of the array. If -1 is returned, an error code indicating failure is returned. The possible cause<br>     is that the option parameter is abnormal, for example, a null pointer. |
+| int32_t | Size of the array. If -1 is returned, an error code indicating failure is returned. The possible cause      is that the option parameter is abnormal, for example, a null pointer. |
 
 ### OH_ArkUI_WaterFlowSectionOption_SetItemCount()
 
@@ -210,7 +210,7 @@ Obtains the main axis size of a specified water flow item based on **itemIndex**
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_WaterFlowSectionOption](capi-arkui-nativemodule-arkui-waterflowsectionoption.md)\* option | Pointer to the {@link FlowItem} section configuration. |
+| rkUI_WaterFlowSectionOption\* option | Pointer to the {@link FlowItem} section configuration. |
 | int32_t index | Index of the target water flow section. |
 | float (\*callback)(int32_t itemIndex) | Callback used to return the result. **itemIndex** indicates the index of {@link FlowItem}. |
 
@@ -230,7 +230,7 @@ Obtains the main axis size of a specified water flow item based on **itemIndex**
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_WaterFlowSectionOption](capi-arkui-nativemodule-arkui-waterflowsectionoption.md)\* option | Pointer to the {@link FlowItem} section configuration. |
+| rkUI_WaterFlowSectionOption\* option | Pointer to the {@link FlowItem} section configuration. |
 | int32_t index | Index of the target water flow section. |
 | void\* userData | Pointer to user-defined data, which will be passed back to the user in the callback. |
 | float (\*callback)(int32_t itemIndex | Callback used to return the result. **itemIndex**: index of the {@link water flow item}; **userData: user-defined data. |

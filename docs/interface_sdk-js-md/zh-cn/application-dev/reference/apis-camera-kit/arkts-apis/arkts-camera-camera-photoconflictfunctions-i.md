@@ -2,7 +2,7 @@
 
 Photo Conflict Functions object.
 
-**继承/实现关系：** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery系统接口)
+**继承/实现关系：** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,5 +15,7 @@ Photo Conflict Functions object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 

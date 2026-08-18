@@ -14,24 +14,23 @@ Execution frequency information.
 
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## interval
 
 ```TypeScript
-interval: number
+interval: int
 ```
 
 Set app exec interval, in milliseconds. Unit:ms.
 
-**Type:** number
+**Type:** int
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FrequencyInfo-interval: number--><!--Device-FrequencyInfo-interval: number-End-->
+<!--Device-FrequencyInfo-interval: int--><!--Device-FrequencyInfo-interval: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -40,18 +39,18 @@ Set app exec interval, in milliseconds. Unit:ms.
 ## uid
 
 ```TypeScript
-uid: number
+uid: int
 ```
 
 App uid. The value should be an integer.
 
-**Type:** number
+**Type:** int
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FrequencyInfo-uid: number--><!--Device-FrequencyInfo-uid: number-End-->
+<!--Device-FrequencyInfo-uid: int--><!--Device-FrequencyInfo-uid: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -60,18 +59,18 @@ App uid. The value should be an integer.
 ## workId
 
 ```TypeScript
-workId: number
+workId: int
 ```
 
 ID of the deferred task. The value should be an integer.
 
-**Type:** number
+**Type:** int
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FrequencyInfo-workId: number--><!--Device-FrequencyInfo-workId: number-End-->
+<!--Device-FrequencyInfo-workId: int--><!--Device-FrequencyInfo-workId: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 

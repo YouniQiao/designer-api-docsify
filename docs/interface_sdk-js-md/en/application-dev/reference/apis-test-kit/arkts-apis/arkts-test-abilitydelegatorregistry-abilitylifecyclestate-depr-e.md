@@ -6,7 +6,7 @@ Enumerates the ability lifecycle states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#abilitylifecyclestate)
+**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md)
 
 <!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState--><!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState-End-->
 

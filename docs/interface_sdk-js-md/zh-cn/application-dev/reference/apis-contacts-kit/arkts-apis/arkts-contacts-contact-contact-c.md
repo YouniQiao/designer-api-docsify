@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## INVALID_CONTACT_ID

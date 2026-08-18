@@ -11,6 +11,7 @@ OperateCheckV2构造函数的参数选项。
 ## 导入模块
 
 ```TypeScript
+import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -103,7 +104,7 @@ onChange?: OnChangeCallback
 
 列表项右侧元素Switch/CheckBox/Radio选中状态改变时触发回调。 默认不设置或设置为undefined时，状态改变不触发回调。
 
-**类型：** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
+**类型：** [OnChangeCallback](../../apis-na/arkts-apis/arkts-na-onchangecallback-t.md)
 
 **起始版本：** 26.0.0
 

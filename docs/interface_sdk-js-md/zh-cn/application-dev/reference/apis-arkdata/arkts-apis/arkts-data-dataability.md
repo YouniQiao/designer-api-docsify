@@ -11,6 +11,7 @@ DataAbility谓词用于构造关系型数据库的谓词，提供用于实现不
 ## 导入模块
 
 ```TypeScript
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## 汇总
@@ -19,7 +20,7 @@ DataAbility谓词用于构造关系型数据库的谓词，提供用于实现不
 
 | 名称 | 说明 |
 | --- | --- |
-| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createrdbpredicates) | 通过表名和DataAbility谓词对象创建Rdb谓词对象。 |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md) | 通过表名和DataAbility谓词对象创建Rdb谓词对象。 |
 
 ### 类
 

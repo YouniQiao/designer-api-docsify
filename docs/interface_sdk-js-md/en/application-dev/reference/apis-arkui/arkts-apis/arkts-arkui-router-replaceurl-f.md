@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -31,7 +31,7 @@ Replaces the current page with another one in the application and destroys the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -137,7 +137,7 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -156,8 +156,8 @@ Replaces the current page with another one in the application and destroys the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Description of the new page. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -197,7 +197,7 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext) object associated > with the current UI context.
+Replaces the current page with another one in the application and destroys the current page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ Replaces the current page with another one in the application and destroys the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Description of the new page. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 

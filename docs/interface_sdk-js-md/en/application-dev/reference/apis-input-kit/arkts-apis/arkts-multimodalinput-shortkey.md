@@ -18,7 +18,7 @@ import { FingerprintEvent } from '@kit.InputKit';
 | [shortKey](arkts-input-shortkey-n.md) | The shortKey module provides APIs to set the delay for starting an ability using a shortcut key. For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -26,7 +26,7 @@ import { FingerprintEvent } from '@kit.InputKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

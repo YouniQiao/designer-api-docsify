@@ -17,7 +17,7 @@ declare function ftruncateSync(fd: number, len?: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncatesync)
+**替代接口：** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md)
 
 <!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void--><!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void-End-->
 

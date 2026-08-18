@@ -45,7 +45,7 @@
 | [UIObserver](arkts-na-arkui-uicontext-uiobserver-c.md) | Register callbacks to observe ArkUI behavior. |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

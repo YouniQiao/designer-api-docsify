@@ -1,6 +1,6 @@
 # Window
 
-当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、 [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、 [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
+当前窗口实例，窗口管理器管理的基本单元。 下列API示例中都需先使用 [getLastWindow()](arkts-arkui-window-getlastwindow-f.md)、 [createWindow()](arkts-arkui-window-createwindow-f.md)、 [findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## clearWindowMask
@@ -86,7 +89,7 @@ clientToGlobalDisplay(winX: int, winY: int): Position
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int
 ```
 
-提供窗口方向、屏幕方向和屏幕角度互相转换的能力。 窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo)和枚举类 [Orientation](arkts-arkui-window-orientation-e.md#orientation)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。 > **说明：** > > 示意图和表格展示了直板机窗口方向、屏幕方向和屏幕角度的关系。 > >  | 屏幕角度 | 屏幕方向 | 窗口方向 | | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+提供窗口方向、屏幕方向和屏幕角度互相转换的能力。 窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)和枚举类 [Orientation](arkts-arkui-window-orientation-e.md)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。 > **说明：** > > 示意图和表格展示了直板机窗口方向、屏幕方向和屏幕角度的关系。 > >  | 屏幕角度 | 屏幕方向 | 窗口方向 | | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **起始版本：** 23
 
@@ -179,7 +182,7 @@ destroy(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## destroy
 
@@ -225,7 +228,7 @@ destroyWindow(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -327,7 +330,7 @@ enableLandscapeMultiWindow(): Promise<void>
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
 
 **起始版本：** 7
 
@@ -344,7 +347,7 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回窗口内容避让区域。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回窗口内容避让区域。 |
 
 ## getAvoidArea
 
@@ -352,7 +355,7 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
 
 **起始版本：** 7
 
@@ -422,7 +425,7 @@ getColorSpace(callback: AsyncCallback<ColorSpace>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorSpace&gt; | 是 | 回调函数。当获取成功，err为undefined，data为当前色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorSpace&gt; | 是 | 回调函数。当获取成功，err为undefined，data为当前色域模式。 |
 
 ## getDecorButtonStyle
 
@@ -595,7 +598,7 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 | 回调函数。返回当前窗口属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 | 回调函数。返回当前窗口属性。 |
 
 ## getProperties
 
@@ -731,7 +734,7 @@ getUIContext() : UIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
 
 **错误码：**
 
@@ -745,7 +748,7 @@ getUIContext() : UIContext
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-获取当前窗口避让区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#windowstatustype)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。 该接口一般适用于两种场景： - 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
+获取当前窗口避让区域。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。 该接口一般适用于两种场景： - 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **起始版本：** 23
 
@@ -780,7 +783,7 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。 主窗口/子窗口： - 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#windowstatustype)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
+获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。 主窗口/子窗口： - 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
 
 **起始版本：** 23
 
@@ -1105,7 +1108,7 @@ getWindowStatus(): WindowStatusType
 getWindowSystemBarProperties(): SystemBarProperties
 ```
 
-获取主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。
+获取主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。
 
 **起始版本：** 23
 
@@ -1119,7 +1122,7 @@ getWindowSystemBarProperties(): SystemBarProperties
 
 | 类型 | 说明 |
 | --- | --- |
-| [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 当前&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏属性。 |
+| [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 当前<!--Del-->三键导航栏、<!--DelEnd-->状态栏属性。 |
 
 **错误码：**
 
@@ -1241,7 +1244,7 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 isFocused(): boolean
 ```
 
-判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md#windoweventtype)生命周期处于WINDOW_ACTIVE之后调用。 可使用[on('windowEvent')](#onrotationchange)监听对应状态变更， 再执行对应具体业务。
+判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。 可使用[on('windowEvent')](#on_rotationchangerotationchange)监听对应状态变更， 再执行对应具体业务。
 
 **起始版本：** 23
 
@@ -1355,7 +1358,7 @@ isInFreeWindowMode(): boolean
 isReceiveDragEventEnabled(): boolean
 ```
 
-获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#dragevent)的状态。
+获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)的状态。
 
 **起始版本：** 23
 
@@ -1431,7 +1434,7 @@ isShowing(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
 
 ## isShowing
 
@@ -1503,7 +1506,7 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 ## isSystemAvoidAreaEnabled
 
@@ -1511,7 +1514,7 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md#avoidarea)。
+获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md)。
 
 **起始版本：** 23
 
@@ -1542,7 +1545,7 @@ isSystemAvoidAreaEnabled(): boolean
 isWindowHighlighted(): boolean
 ```
 
-获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md#windoweventtype)生命周期处于WINDOW_ACTIVE之后调用。 可使用 [on('windowHighlightChange')](#onrotationchange) 监听对应状态变更，再执行对应具体业务。
+获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。 可使用 [on('windowHighlightChange')](#on_rotationchangerotationchange) 监听对应状态变更，再执行对应具体业务。
 
 **起始版本：** 23
 
@@ -1641,7 +1644,7 @@ isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 **错误码：**
 
@@ -1704,7 +1707,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
 | storage | LocalStorage | 是 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1776,7 +1779,7 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对 路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## loadContent
 
@@ -1832,7 +1835,7 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 | --- | --- | --- | --- |
 | name | string | 是 | 命名路由页面的名称。 |
 | storage | LocalStorage | 是 | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1865,7 +1868,7 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 命名路由页面的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2046,7 +2049,7 @@ minimize(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2141,7 +2144,7 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | x | number | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
 | y | number | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## moveWindowTo
 
@@ -2202,7 +2205,7 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | x | int | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示在原点右侧，值为负表示在原点左侧。 该参数仅支持整数输入，浮点数输入将向下取整。 |
 | y | int | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示在原点下方，值为负表示在原点上方。 该参数仅支持整数输入，浮点数输入将向下取整。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -3149,7 +3152,7 @@ offWindowWillClose(callback?: Callback<void, Promise<boolean>>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
-## off_avoidAreaChange
+## off_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
@@ -3178,7 +3181,7 @@ off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_dialogTargetTouch
+## off_dialogTargetTouch('dialogTargetTouch')
 
 ```TypeScript
 off(type: 'dialogTargetTouch', callback?: Callback<void>): void
@@ -3207,7 +3210,7 @@ off(type: 'dialogTargetTouch', callback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_displayIdChange
+## off_displayIdChange('displayIdChange')
 
 ```TypeScript
 off(type: 'displayIdChange', callback?: Callback<long>): void
@@ -3238,7 +3241,7 @@ off(type: 'displayIdChange', callback?: Callback<long>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_frameMetricsMeasured
+## off_frameMetricsMeasured('frameMetricsMeasured')
 
 ```TypeScript
 off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
@@ -3266,7 +3269,7 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_freeWindowModeChange
+## off_freeWindowModeChange('freeWindowModeChange')
 
 ```TypeScript
 off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
@@ -3296,7 +3299,7 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_keyboardDidHide
+## off_keyboardDidHide('keyboardDidHide')
 
 ```TypeScript
 off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
@@ -3326,7 +3329,7 @@ off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_keyboardDidShow
+## off_keyboardDidShow('keyboardDidShow')
 
 ```TypeScript
 off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
@@ -3356,7 +3359,7 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_keyboardHeightChange
+## off_keyboardHeightChange('keyboardHeightChange')
 
 ```TypeScript
 off(type: 'keyboardHeightChange', callback?: Callback<int>): void
@@ -3385,7 +3388,7 @@ off(type: 'keyboardHeightChange', callback?: Callback<int>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_keyboardWillHide
+## off_keyboardWillHide('keyboardWillHide')
 
 ```TypeScript
 off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
@@ -3415,7 +3418,7 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_keyboardWillShow
+## off_keyboardWillShow('keyboardWillShow')
 
 ```TypeScript
 off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
@@ -3445,7 +3448,7 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_noInteractionDetected
+## off_noInteractionDetected('noInteractionDetected')
 
 ```TypeScript
 off(type: 'noInteractionDetected', callback?: Callback<void>): void
@@ -3477,7 +3480,7 @@ off(type: 'noInteractionDetected', callback?: Callback<void>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_occlusionStateChanged
+## off_occlusionStateChanged('occlusionStateChanged')
 
 ```TypeScript
 off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
@@ -3506,7 +3509,7 @@ off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_rectChangeInGlobalDisplay
+## off_rectChangeInGlobalDisplay('rectChangeInGlobalDisplay')
 
 ```TypeScript
 off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void
@@ -3535,7 +3538,7 @@ off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_rotationChange
+## off_rotationChange('rotationChange')
 
 ```TypeScript
 off(type: 'rotationChange', 
@@ -3567,7 +3570,7 @@ off(type: 'rotationChange',
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
-## off_screenshot
+## off_screenshot('screenshot')
 
 ```TypeScript
 off(type: 'screenshot', callback?: Callback<void>): void
@@ -3596,7 +3599,7 @@ off(type: 'screenshot', callback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_screenshotAppEvent
+## off_screenshotAppEvent('screenshotAppEvent')
 
 ```TypeScript
 off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
@@ -3624,7 +3627,7 @@ off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_subWindowClose
+## off_subWindowClose('subWindowClose')
 
 ```TypeScript
 off(type: 'subWindowClose', callback?: Callback<void>): void
@@ -3656,19 +3659,19 @@ off(type: 'subWindowClose', callback?: Callback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
-## off_systemAvoidAreaChange
+## off_systemAvoidAreaChange('systemAvoidAreaChange')
 
 ```TypeScript
 off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 ```
 
-关闭当前窗口系统避让区变化的监听。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [off('avoidAreaChange')](#offrotationchange) > 替代。
+关闭当前窗口系统避让区变化的监听。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [off('avoidAreaChange')](#off_rotationchangerotationchange) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [off](#offrotationchange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
+**替代接口：** [off](#off_rotationchangerotationchange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
 
 <!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
 
@@ -3681,7 +3684,7 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 | type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 否 | 回调函数。返回当前避让区。若传入参数，则关闭该监听。若未传入参数，则关闭所有系统避让区变化的监听。 |
 
-## off_systemDensityChange
+## off_systemDensityChange('systemDensityChange')
 
 ```TypeScript
 off(type: 'systemDensityChange', callback?: Callback<double>): void
@@ -3712,7 +3715,7 @@ off(type: 'systemDensityChange', callback?: Callback<double>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_touchOutside
+## off_touchOutside('touchOutside')
 
 ```TypeScript
 off(type: 'touchOutside', callback?: Callback<void>): void
@@ -3772,7 +3775,7 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowEvent
+## off_windowEvent('windowEvent')
 
 ```TypeScript
 off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
@@ -3801,7 +3804,7 @@ off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_windowHighlightChange
+## off_windowHighlightChange('windowHighlightChange')
 
 ```TypeScript
 off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
@@ -3833,7 +3836,7 @@ off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowRectChange
+## off_windowRectChange('windowRectChange')
 
 ```TypeScript
 off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
@@ -3865,7 +3868,7 @@ off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowSizeChange
+## off_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 off(type: 'windowSizeChange', callback?: Callback<Size>): void
@@ -3894,7 +3897,7 @@ off(type: 'windowSizeChange', callback?: Callback<Size>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-## off_windowStatusChange
+## off_windowStatusChange('windowStatusChange')
 
 ```TypeScript
 off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
@@ -3924,7 +3927,7 @@ off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## off_windowStatusDidChange
+## off_windowStatusDidChange('windowStatusDidChange')
 
 ```TypeScript
 off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
@@ -3952,7 +3955,7 @@ off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowTitleButtonRectChange
+## off_windowTitleButtonRectChange('windowTitleButtonRectChange')
 
 ```TypeScript
 off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void
@@ -3983,7 +3986,7 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowVisibilityChange
+## off_windowVisibilityChange('windowVisibilityChange')
 
 ```TypeScript
 off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
@@ -4015,7 +4018,7 @@ off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## off_windowWillClose
+## off_windowWillClose('windowWillClose')
 
 ```TypeScript
 off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
@@ -4053,7 +4056,7 @@ off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
 onAvoidAreaChange(callback: Callback<AvoidAreaOptions>): void
 ```
 
-开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#windowstatustype)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 &lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
+开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 <!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
 **起始版本：** 23
 
@@ -4120,7 +4123,7 @@ onDisplayIdChange(callback: Callback<long>): void
 onFrameMetricsMeasured(callback: Callback<FrameMetrics>): void
 ```
 
-开启窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback)、 [postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback) 、 [displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#onframe) 中的任意一个时，即使无UI内容重绘，也可能触发回调。
+开启窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback)、 [postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback) 、 [displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#on_frameframe) 中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **起始版本：** 23
 
@@ -4132,7 +4135,7 @@ onFrameMetricsMeasured(callback: Callback<FrameMetrics>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md#framemetrics)。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md)。 |
 
 **错误码：**
 
@@ -4345,7 +4348,7 @@ onOcclusionStateChanged(callback: Callback<OcclusionState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md#occlusionstate) 。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md) 。 |
 
 **错误码：**
 
@@ -4663,7 +4666,7 @@ onWindowSizeChange(callback: Callback<Size>): void
 onWindowStatusChange(callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用 [on('windowStatusDidChange')](#onrotationchange) ）。 使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用 [on('windowStatusDidChange')](#onrotationchange) 。 > **说明：** > > 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
+开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用 [on('windowStatusDidChange')](#on_rotationchangerotationchange) ）。 使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用 [on('windowStatusDidChange')](#on_rotationchangerotationchange) 。 > **说明：** > > 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 23
 
@@ -4689,7 +4692,7 @@ onWindowStatusChange(callback: Callback<WindowStatusType>): void
 onWindowStatusDidChange(callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md#rect)属性已经完成更新）。
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
 
 **起始版本：** 23
 
@@ -4793,13 +4796,13 @@ onWindowWillClose(callback: Callback<void, Promise<boolean>>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
-## on_avoidAreaChange
+## on_avoidAreaChange('avoidAreaChange')
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#windowstatustype)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 &lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
+开启当前应用窗口系统避让区域变化的监听。 主窗口/子窗口： - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。 全局悬浮窗、模态窗或系统窗口： - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。 <!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
 **起始版本：** 9
 
@@ -4822,7 +4825,7 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_dialogTargetTouch
+## on_dialogTargetTouch('dialogTargetTouch')
 
 ```TypeScript
 on(type: 'dialogTargetTouch', callback: Callback<void>): void
@@ -4851,7 +4854,7 @@ on(type: 'dialogTargetTouch', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_displayIdChange
+## on_displayIdChange('displayIdChange')
 
 ```TypeScript
 on(type: 'displayIdChange', callback: Callback<long>): void
@@ -4882,13 +4885,13 @@ on(type: 'displayIdChange', callback: Callback<long>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_frameMetricsMeasured
+## on_frameMetricsMeasured('frameMetricsMeasured')
 
 ```TypeScript
 on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 ```
 
-开启窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback)、 [postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback) 、 [displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#onframe) 中的任意一个时，即使无UI内容重绘，也可能触发回调。
+开启窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback)、 [postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback) 、 [displaySync.on('frame')](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-displaysync-displaysync-i.md#on_frameframe) 中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **起始版本：** 22
 
@@ -4901,7 +4904,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frameMetricsMeasured' | 是 | 监听事件类型，固定为'frameMetricsMeasured'，即窗口帧率指标变化事件。 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md#framemetrics)。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md)。 |
 
 **错误码：**
 
@@ -4910,7 +4913,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_freeWindowModeChange
+## on_freeWindowModeChange('freeWindowModeChange')
 
 ```TypeScript
 on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
@@ -4940,7 +4943,7 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_keyboardDidHide
+## on_keyboardDidHide('keyboardDidHide')
 
 ```TypeScript
 on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
@@ -4970,7 +4973,7 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_keyboardDidShow
+## on_keyboardDidShow('keyboardDidShow')
 
 ```TypeScript
 on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
@@ -5000,7 +5003,7 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_keyboardHeightChange
+## on_keyboardHeightChange('keyboardHeightChange')
 
 ```TypeScript
 on(type: 'keyboardHeightChange', callback: Callback<int>): void
@@ -5029,7 +5032,7 @@ on(type: 'keyboardHeightChange', callback: Callback<int>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_keyboardWillHide
+## on_keyboardWillHide('keyboardWillHide')
 
 ```TypeScript
 on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
@@ -5059,7 +5062,7 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_keyboardWillShow
+## on_keyboardWillShow('keyboardWillShow')
 
 ```TypeScript
 on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
@@ -5089,7 +5092,7 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_noInteractionDetected
+## on_noInteractionDetected('noInteractionDetected')
 
 ```TypeScript
 on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void
@@ -5122,7 +5125,7 @@ on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): vo
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_occlusionStateChanged
+## on_occlusionStateChanged('occlusionStateChanged')
 
 ```TypeScript
 on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
@@ -5141,7 +5144,7 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'occlusionStateChanged' | 是 | 监听事件，固定为'occlusionStateChanged'，即窗口可见性变化事件。 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md#occlusionstate) 。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md) 。 |
 
 **错误码：**
 
@@ -5151,7 +5154,7 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_rectChangeInGlobalDisplay
+## on_rectChangeInGlobalDisplay('rectChangeInGlobalDisplay')
 
 ```TypeScript
 on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void
@@ -5180,13 +5183,13 @@ on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): vo
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_rotationChange
+## on_rotationChange('rotationChange')
 
 ```TypeScript
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo)中窗口旋转事件类型为窗口即将旋转时，必须返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult)。窗口旋转事件类型为窗口旋转结束时返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult)不生效。 该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult)，系统不处理该返回值。
+开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中窗口旋转事件类型为窗口即将旋转时，必须返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。窗口旋转事件类型为窗口旋转结束时返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)不生效。 该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)，系统不处理该返回值。
 
 **起始版本：** 19
 
@@ -5201,7 +5204,7 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotationChange' | 是 | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | 是 | 回调函数。返回窗口旋转信息 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#rotationchangeinfo)，应用返回当前窗口变化结果 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#rotationchangeresult)。 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void&gt; | 是 | 回调函数。返回窗口旋转信息 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，应用返回当前窗口变化结果 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。 |
 
 **错误码：**
 
@@ -5211,7 +5214,7 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
-## on_screenshot
+## on_screenshot('screenshot')
 
 ```TypeScript
 on(type: 'screenshot', callback: Callback<void>): void
@@ -5240,7 +5243,7 @@ on(type: 'screenshot', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_screenshotAppEvent
+## on_screenshotAppEvent('screenshotAppEvent')
 
 ```TypeScript
 on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
@@ -5268,13 +5271,13 @@ on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_subWindowClose
+## on_subWindowClose('subWindowClose')
 
 ```TypeScript
 on(type: 'subWindowClose', callback: Callback<void>): void
 ```
 
-开启子窗口关闭事件的监听。此监听仅在点击系统提供的右上角关闭按钮关闭子窗时触发，其余关闭方式不触发回调。 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考 [on('windowWillClose')](#onrotationchange) 方法。 如果存在 [on('windowWillClose')](#onrotationchange) 监听事件，只响应 [on('windowWillClose')](#onrotationchange) 接口。
+开启子窗口关闭事件的监听。此监听仅在点击系统提供的右上角关闭按钮关闭子窗时触发，其余关闭方式不触发回调。 当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。 该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考 [on('windowWillClose')](#on_rotationchangerotationchange) 方法。 如果存在 [on('windowWillClose')](#on_rotationchangerotationchange) 监听事件，只响应 [on('windowWillClose')](#on_rotationchangerotationchange) 接口。
 
 **起始版本：** 12
 
@@ -5300,19 +5303,19 @@ on(type: 'subWindowClose', callback: Callback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
-## on_systemAvoidAreaChange
+## on_systemAvoidAreaChange('systemAvoidAreaChange')
 
 ```TypeScript
 on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 ```
 
-开启当前窗口系统避让区变化的监听。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [on('avoidAreaChange')](#onrotationchange)替 > 代。
+开启当前窗口系统避让区变化的监听。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [on('avoidAreaChange')](#on_rotationchangerotationchange)替 > 代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [on](#onrotationchange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
+**替代接口：** [on](#on_rotationchangerotationchange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
 
 <!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
 
@@ -5325,7 +5328,7 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 | type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回当前避让区。 |
 
-## on_systemDensityChange
+## on_systemDensityChange('systemDensityChange')
 
 ```TypeScript
 on(type: 'systemDensityChange', callback: Callback<double>): void
@@ -5356,7 +5359,7 @@ on(type: 'systemDensityChange', callback: Callback<double>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_touchOutside
+## on_touchOutside('touchOutside')
 
 ```TypeScript
 on(type: 'touchOutside', callback: Callback<void>): void
@@ -5416,7 +5419,7 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowEvent
+## on_windowEvent('windowEvent')
 
 ```TypeScript
 on(type: 'windowEvent', callback: Callback<WindowEventType>): void
@@ -5445,7 +5448,7 @@ on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_windowHighlightChange
+## on_windowHighlightChange('windowHighlightChange')
 
 ```TypeScript
 on(type: 'windowHighlightChange', callback: Callback<boolean>): void
@@ -5477,7 +5480,7 @@ on(type: 'windowHighlightChange', callback: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowRectChange
+## on_windowRectChange('windowRectChange')
 
 ```TypeScript
 on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
@@ -5509,7 +5512,7 @@ on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowSizeChange
+## on_windowSizeChange('windowSizeChange')
 
 ```TypeScript
 on(type: 'windowSizeChange', callback: Callback<Size>): void
@@ -5538,13 +5541,13 @@ on(type: 'windowSizeChange', callback: Callback<Size>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-## on_windowStatusChange
+## on_windowStatusChange('windowStatusChange')
 
 ```TypeScript
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用 [on('windowStatusDidChange')](#onrotationchange) ）。 使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用 [on('windowStatusDidChange')](#onrotationchange) 。 > **说明：** > > 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
+开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用 [on('windowStatusDidChange')](#on_rotationchangerotationchange) ）。 使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用 [on('windowStatusDidChange')](#on_rotationchangerotationchange) 。 > **说明：** > > 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的 > [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 11
 
@@ -5568,13 +5571,13 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-## on_windowStatusDidChange
+## on_windowStatusDidChange('windowStatusDidChange')
 
 ```TypeScript
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md#rect)属性已经完成更新）。
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
 
 **起始版本：** 20
 
@@ -5596,7 +5599,7 @@ on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowTitleButtonRectChange
+## on_windowTitleButtonRectChange('windowTitleButtonRectChange')
 
 ```TypeScript
 on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void
@@ -5627,7 +5630,7 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowVisibilityChange
+## on_windowVisibilityChange('windowVisibilityChange')
 
 ```TypeScript
 on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
@@ -5659,13 +5662,13 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
-## on_windowWillClose
+## on_windowWillClose('windowWillClose')
 
 ```TypeScript
 on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 ```
 
-开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。 该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考 [on('subWindowClose')](#onrotationchange)方法。主窗口的同步关闭事件监听参考 [on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)方法。
+开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。 该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考 [on('subWindowClose')](#on_rotationchangerotationchange)方法。主窗口的同步关闭事件监听参考 [on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)方法。
 
 **起始版本：** 15
 
@@ -5808,7 +5811,7 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -5901,7 +5904,7 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../errorcode-universal.md#401-参数检查失败)）。 |
 | height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../errorcode-universal.md#401-参数检查失败)）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## resize
 
@@ -5909,7 +5912,7 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 resize(width: int, height: int): Promise<void>
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **起始版本：** 23
 
@@ -5946,7 +5949,7 @@ resize(width: int, height: int): Promise<void>
 resize(width: int, height: int, callback: AsyncCallback<void>): void
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
+基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。 调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。 > **说明：** > > - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **起始版本：** 23
 
@@ -5962,7 +5965,7 @@ resize(width: int, height: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | int | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
 | height | int | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -5978,7 +5981,7 @@ resize(width: int, height: int, callback: AsyncCallback<void>): void
 resizeAsync(width: int, height: int): Promise<void>
 ```
 
-基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用生效后返回，回调中可使用[getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结果。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，否则抛出错误码1300010。 > **说明：** > > - 在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口调用不生效。
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。 调用生效后返回，回调中可使用[getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结果。 窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。 调用该接口设置的宽度与高度受到此限制约束，规则： 若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制； 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，否则抛出错误码1300010。 > **说明：** > > - 在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口调用不生效。
 
 **起始版本：** 23
 
@@ -6048,7 +6051,7 @@ restore(): Promise<void>
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md#windowtype)的窗口，并且需在窗口触发过 [DOWN](arkts-arkui-touchtype-e.md#touchtype)事件后才能调用。使用Promise异步回调。
+将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md)的窗口，并且需在窗口触发过 [DOWN](arkts-arkui-touchtype-e.md)事件后才能调用。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -6100,8 +6103,8 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -6131,7 +6134,7 @@ setAspectRatio(ratio: double): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 
 **返回值：**
 
@@ -6200,7 +6203,7 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setBrightness
 
@@ -6255,7 +6258,7 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | number | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setColorSpace
 
@@ -6310,7 +6313,7 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colorSpace | ColorSpace | 是 | 设置色域模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setContentAspectRatio
 
@@ -6330,7 +6333,7 @@ setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| ratio | double | 是 | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 | isPersistent | boolean | 否 | 是否持久化保存该比例参数。<br/>如为`true`，比例参数会持久化保存，销毁窗口、关闭应用或重启设备后，当再次切换到自由悬浮窗口模式时仍然生效。可通过 [resetAspectRatio](#resetaspectratio)清除持久化保存的比例参数。<br/>如为`false`，比例参数仅对当前窗口生效，窗口销毁后清除该数据 。<br/>默认值为`true`。 |
 | needUpdateRect | boolean | 否 | 是否立即根据当前比例更新窗口大小。<br/>如为`true`，立即根据当前比例更新窗口大小。<br/>如为`false`，窗口将在拖拽缩放时根据当前比 例更新，也可以使用[resize](#resize)或 [resizeAsync](#resizeasync)进行主动更新。<br/>默认值为`true`。 |
 
@@ -6440,7 +6443,7 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为[0.0, 1.0]，取1.0时表示最暗。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setDimBehind
 
@@ -6550,7 +6553,7 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。 调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取到 [TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md#avoidareatype)避让类型对应的避让区域或通过 [on('avoidAreaChange')](#onrotationchange)监听 TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
+设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。 调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取到 [TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过 [on('avoidAreaChange')](#on_rotationchangerotationchange)监听 TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **起始版本：** 26.0.0
 
@@ -6635,7 +6638,7 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isFocusable | boolean | 是 | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考 [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setFollowParentMultiScreenPolicy
 
@@ -6721,7 +6724,7 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口或子窗口的布局是否为全屏布局，使用callback异步回调。 全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议联合使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 > 屏。
+设置主窗口或子窗口的布局是否为全屏布局，使用callback异步回调。 全屏布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非全屏布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议联合使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 > 屏。
 
 **起始版本：** 6
 
@@ -6737,8 +6740,8 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示全屏；false表示非全屏。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setFullScreen
 
@@ -6746,7 +6749,7 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 setFullScreen(isFullScreen: boolean): Promise<void>
 ```
 
-设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。 全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议联合使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 > 屏。
+设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。 全屏布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非全屏布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议联合使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全 > 屏。
 
 **起始版本：** 6
 
@@ -6762,7 +6765,7 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
+| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示全屏；false表示非全屏。 |
 
 **返回值：**
 
@@ -6892,7 +6895,7 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setLayoutFullScreen
 
@@ -6900,7 +6903,7 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。 沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。 沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
@@ -6916,8 +6919,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setLayoutFullScreen
 
@@ -6925,7 +6928,7 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-设置主窗口或子窗口的布局是否为沉浸式布局，使用Promise异步回调。 沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+设置主窗口或子窗口的布局是否为沉浸式布局，使用Promise异步回调。 沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
@@ -6941,7 +6944,7 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
 
 **返回值：**
 
@@ -6998,7 +7001,7 @@ setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | touchable | boolean | 是 | 设置是否可点击。true表示可点击；false表示不可点击。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setParentWindow
 
@@ -7094,7 +7097,7 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | orientation | Orientation | 是 | 窗口显示方向的属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。该回调函数返回调用结果是否成功，非应用旋转动效结束。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。该回调函数返回调用结果是否成功，非应用旋转动效结束。 |
 
 **错误码：**
 
@@ -7109,7 +7112,7 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>
 ```
 
-设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window. [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md#orientationexecutionresult).ORIENTATION_IGNORED。
+设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window. [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md).ORIENTATION_IGNORED。
 
 **起始版本：** 26.0.0
 
@@ -7194,7 +7197,7 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setRaiseByClickEnabled
 
@@ -7239,7 +7242,7 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#dragevent)，使用Promise异步回调。 默认场景下为true，能够接收拖拽事件。 当enable为false，当前窗口不能接收拖拽事件。
+设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)，使用Promise异步回调。 默认场景下为true，能够接收拖拽事件。 当enable为false，当前窗口不能接收拖拽事件。
 
 **起始版本：** 23
 
@@ -7329,7 +7332,7 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 设置窗口是否使能通过拖拽进行缩放，true表示使能，false表示禁止。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -7419,7 +7422,7 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-设置主窗口状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏，使用Promise异步回调。 调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
+设置主窗口状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏，使用Promise异步回调。 调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 23
 
@@ -7570,7 +7573,7 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 setSubWindowZLevel(zLevel: int): Promise<void>
 ```
 
-设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。 通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus)进行焦点切换。
+设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。 通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md)进行焦点切换。
 
 **起始版本：** 23
 
@@ -7609,7 +7612,7 @@ setSubWindowZLevel(zLevel: int): Promise<void>
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取窗口避 让区信息或通过 [on('avoidAreaChange')](#onrotationchange)监听窗 口避让区变化。
+创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取窗口避 让区信息或通过 [on('avoidAreaChange')](#on_rotationchangerotationchange)监听窗 口避让区变化。
 
 **起始版本：** 23
 
@@ -7646,7 +7649,7 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。 从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用callback异步回调。 从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
 
 **起始版本：** 7
 
@@ -7662,8 +7665,8 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setSystemBarEnable
 
@@ -7671,7 +7674,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。 从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用Promise异步回调。 从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
 
 **起始版本：** 7
 
@@ -7687,7 +7690,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
+| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
 
 **返回值：**
 
@@ -7701,7 +7704,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
 
 **起始版本：** 6
 
@@ -7717,8 +7720,8 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setSystemBarProperties
 
@@ -7726,7 +7729,7 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用Promise异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 子窗口调用后不生效。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用Promise异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 子窗口调用后不生效。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
 
 **起始版本：** 6
 
@@ -7742,7 +7745,7 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
 
 **返回值：**
 
@@ -7840,7 +7843,7 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## setUIContent
 
@@ -7863,7 +7866,7 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -7994,7 +7997,7 @@ setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | double | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8060,7 +8063,7 @@ setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | colorSpace | ColorSpace | 是 | 设置色域模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8235,7 +8238,7 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 setWindowFocusable(isFocusable: boolean): Promise<void>
 ```
 
-设置窗口是否具有获得焦点的能力，使用Promise异步回调。 从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
+设置窗口是否具有获得焦点的能力，使用Promise异步回调。 从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 23
 
@@ -8271,7 +8274,7 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置窗口是否具有获得焦点的能力，使用callback异步回调。 从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
+设置窗口是否具有获得焦点的能力，使用callback异步回调。 从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 23
 
@@ -8286,7 +8289,7 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isFocusable | boolean | 是 | can be focus if true, or can not be focus if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -8390,7 +8393,7 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8406,7 +8409,7 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。系统窗口调用不生效。 沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。系统窗口调用不生效。 沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 9
 
@@ -8424,8 +8427,8 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;仍然显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、<!--RP15-->三键导航栏<!--RP15End-->仍然显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8441,7 +8444,7 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-设置应用主窗口或应用子窗口的布局是否为沉浸式布局，使用Promise异步回调。其余窗口调用不生效也不报错。 沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+设置应用主窗口或应用子窗口的布局是否为沉浸式布局，使用Promise异步回调。其余窗口调用不生效也不报错。 沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。 非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
 
 **起始版本：** 23
 
@@ -8477,7 +8480,7 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 ```
 
-设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getwindowlimits)或 [getWindowLimitsVP](#getwindowlimitsvp)可获取系统限制。 > **说明：** > > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束。
+设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getwindowlimits)或 [getWindowLimitsVP](#getwindowlimitsvp)可获取系统限制。 > **说明：** > > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 23
 
@@ -8515,7 +8518,7 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>
 ```
 
-设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getwindowlimits)或 [getWindowLimitsVP](#getwindowlimitsvp)可获取系统限制。 > **说明：** > > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)约束。
+设置当前窗口的尺寸限制，使用Promise异步回调。 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。 未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getwindowlimits)或 [getWindowLimitsVP](#getwindowlimitsvp)可获取系统限制。 > **说明：** > > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为 > window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动 > 改变窗口大小（如调用[resize()](#resize)）；系统调节窗 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。 > > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 23
 
@@ -8530,7 +8533,7 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | 是 | 目标窗口的尺寸限制，单位为px或vp。 |
-| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits)的单位为vp时 ：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md#windowlimits) 的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
+| isForcible | boolean | 是 | 是否强制设置窗口的尺寸限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为vp时 ：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。<br>入参[windowLimits](arkts-arkui-window-windowlimits-i.md) 的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
 
 **返回值：**
 
@@ -8686,7 +8689,7 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示为隐私模式，false表示为非隐私模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8770,7 +8773,7 @@ setWindowShadowRadius(radius: double): void
 setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。 从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用callback异步回调。 从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowSystemBarEnable()](#setwindowsystembarenable) > 替代。
 
 **起始版本：** 9
 
@@ -8788,8 +8791,8 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| names | Array&lt;'status' \| 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8805,7 +8808,7 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。 调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用Promise异步回调。 调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 23
 
@@ -8841,7 +8844,7 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt; 子窗口调用后不生效。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End--> 子窗口调用后不生效。 > **说明：** > > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的 > [setWindowSystemBarProperties()](#setwindowsystembarproperties) > 替代。
 
 **起始版本：** 9
 
@@ -8859,8 +8862,8 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -8877,7 +8880,7 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用Promise异步回调。 子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用Promise异步回调。 子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 23
 
@@ -8891,7 +8894,7 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
 
 **返回值：**
 
@@ -9104,7 +9107,7 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isTouchable | boolean | 是 | is touchable if true, or not if false. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -9177,7 +9180,7 @@ show(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## show
 
@@ -9223,7 +9226,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -9316,7 +9319,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -9415,7 +9418,7 @@ snapshotSync(): image.PixelMap
 startMoving(): Promise<void>
 ```
 
-开始移动窗口，使用Promise异步回调。 [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗 口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md#touchtype)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
+开始移动窗口，使用Promise异步回调。 [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗 口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 23
 
@@ -9447,7 +9450,7 @@ startMoving(): Promise<void>
 startMoving(offsetX: int, offsetY: int): Promise<void>
 ```
 
-指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。 在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md#touchtype)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
+指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。 在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。 在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 23
 
@@ -9461,8 +9464,8 @@ startMoving(offsetX: int, offsetY: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offsetX | int | 是 | 窗口移动时预期鼠标位置相对窗口左上角的x轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口宽度为非法参数，窗口宽度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties)中获取。 |
-| offsetY | int | 是 | 窗口移动时预期鼠标位置相对窗口左上角的y轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口高度为非法参数，窗口高度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md#windowproperties)中获取。 |
+| offsetX | int | 是 | 窗口移动时预期鼠标位置相对窗口左上角的x轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口宽度为非法参数，窗口宽度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)中获取。 |
+| offsetY | int | 是 | 窗口移动时预期鼠标位置相对窗口左上角的y轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口高度为非法参数，窗口高度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)中获取。 |
 
 **返回值：**
 

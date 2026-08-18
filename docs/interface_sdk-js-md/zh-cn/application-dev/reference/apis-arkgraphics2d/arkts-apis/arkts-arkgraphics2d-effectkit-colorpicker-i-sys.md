@@ -1,6 +1,6 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景， 可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过 [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。
+取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景， 可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过 [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md)创建一个ColorPicker实例。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree
@@ -189,7 +190,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getDeepenImmersionColor(): Color
 ```
 
-生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#color)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
+生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
 
 **起始版本：** 26.0.0
 
@@ -243,7 +244,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveBackgroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式背景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#color)里。该接口基于主色生成适合作为沉浸式背景的颜色值。
+生成能够创造沉浸式视觉效果的沉浸式背景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式背景的颜色值。
 
 **起始版本：** 26.0.0
 
@@ -297,7 +298,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveForegroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#color)里。该接口基于主色生成适合作为沉浸式前景的颜色值。
+生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式前景的颜色值。
 
 **起始版本：** 26.0.0
 
@@ -351,7 +352,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMorandiShadowColor(): Color
 ```
 
-从图像的主色中获取莫兰迪阴影色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#color)。该接口通过特定的颜色转换算法，将主色调转换为具有莫兰迪风格的阴影色调。
+从图像的主色中获取莫兰迪阴影色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)。该接口通过特定的颜色转换算法，将主色调转换为具有莫兰迪风格的阴影色调。
 
 **起始版本：** 26.0.0
 
@@ -405,7 +406,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md#color)里。根据 [discriminatePictureLightDegree](#discriminatepicturelightdegree)接口获取的图片明亮类型得到一个反色， 仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。根据 [discriminatePictureLightDegree](#discriminatepicturelightdegree)接口获取的图片明亮类型得到一个反色， 仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
 
 **起始版本：** 26.0.0
 

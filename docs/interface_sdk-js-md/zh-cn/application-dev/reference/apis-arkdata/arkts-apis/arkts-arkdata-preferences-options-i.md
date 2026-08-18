@@ -11,6 +11,7 @@ Preferences实例配置选项。
 ## 导入模块
 
 ```TypeScript
+import { preferences } from '@kit.ArkData';
 ```
 
 ## dataGroupId
@@ -19,7 +20,7 @@ Preferences实例配置选项。
 dataGroupId?: string | null | undefined
 ```
 
-应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。&lt;!--RP1End--&gt; 为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。 **模型约束：** 此属性仅在Stage模型下可用。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+应用组ID，<!--RP1-->暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。<!--RP1End--> 为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。 **模型约束：** 此属性仅在Stage模型下可用。 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** string \| null \| undefined
 

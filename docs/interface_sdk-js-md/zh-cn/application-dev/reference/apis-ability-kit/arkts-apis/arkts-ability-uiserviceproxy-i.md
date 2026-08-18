@@ -146,7 +146,7 @@ sendData(data: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
+| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 待发送给UIServiceExtension服务端的数据。 |
 
 **错误码：**
 

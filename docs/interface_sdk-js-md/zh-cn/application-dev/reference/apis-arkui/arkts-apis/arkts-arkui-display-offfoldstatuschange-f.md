@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
 ```
 
 ## offFoldStatusChange
@@ -23,7 +24,7 @@ Unregister the callback for fold status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
-import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfoSync
@@ -13,7 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#launcherabilityinfo) based on the given bundle name and user ID.
+Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID.
 
 **Since:** 23
 
@@ -28,7 +27,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
+| userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 

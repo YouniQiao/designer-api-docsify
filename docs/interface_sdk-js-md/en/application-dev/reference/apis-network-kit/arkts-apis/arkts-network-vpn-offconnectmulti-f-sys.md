@@ -7,7 +7,7 @@ import { vpn } from '@kit.NetworkKit';
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-## off_connectMulti
+## off_connectMulti('connectMulti')
 
 ```TypeScript
 function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): void
@@ -30,7 +30,7 @@ Unsubscribes from vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectMulti' | Yes | Indicates multi vpn connect state changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiVpnConnectState&gt; | No | The callback of the multi vpn connect state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MultiVpnConnectState&gt; | No | The callback of the multi vpn connect state. |
 
 **Error codes:**
 

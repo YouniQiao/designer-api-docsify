@@ -2,7 +2,7 @@
 
 Define configuration of the system VPN network.
 
-**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#vpnconfig-system-api)
+**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md)
 
 **Since:** 12
 
@@ -150,16 +150,16 @@ Whether the VPN network save login name and password. The default value is false
 ## userId
 
 ```TypeScript
-userId?: number
+userId?: int
 ```
 
 The system user id for the VPN network.
 
-**Type:** number
+**Type:** int
 
 **Since:** 12
 
-<!--Device-SysVpnConfig-userId?: number--><!--Device-SysVpnConfig-userId?: number-End-->
+<!--Device-SysVpnConfig-userId?: int--><!--Device-SysVpnConfig-userId?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

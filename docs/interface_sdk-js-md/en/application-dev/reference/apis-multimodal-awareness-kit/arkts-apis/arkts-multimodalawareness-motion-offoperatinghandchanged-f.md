@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { motion } from '@kit.MultimodalAwarenessKit';
-import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offOperatingHandChanged
@@ -27,7 +26,7 @@ Unsubscribe from the operating hand changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 

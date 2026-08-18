@@ -18,7 +18,7 @@ Starts pairing with a remote Bluetooth device. On API 10 and above, the permissi
 
 **Deprecated since:** 10
 
-**Substitutes:** [pairDevice](arkts-connectivity-connection-pairdevice-f.md#pairdevice)
+**Substitutes:** [pairDevice](arkts-connectivity-connection-pairdevice-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

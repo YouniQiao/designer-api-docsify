@@ -1,18 +1,6 @@
 # @ohos.inputMethod.ExtraConfig(The extra config of edit box.)
 
-/*
- Copyright (c) 2025 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
- This module manages input method extension information. It enables the ArkUI editor to pass such information to the
+This module manages input method extension information. It enables the ArkUI editor to pass such information to the
  input method application when the input method is launched. After processing the extension information, the input
  method application can retrieve the details added by the host application. The total length of the information cannot
  exceed 32 KB.
@@ -22,7 +10,6 @@
 
 ```TypeScript
 import { InputMethodExtraConfig } from '@kit.IMEKit';
-import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## Summary
@@ -31,11 +18,11 @@ import { InputMethodExtraConfig } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
+| [InputMethodExtraConfig(The extra config of edit box.)](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CustomValueType](arkts-ime-customvaluetype-t.md) | Represents the extension information type. The specific type of the parameter depends on its functionality. |
+| [CustomValueType(The extra config of edit box.)](arkts-ime-customvaluetype-t.md) | Represents the extension information type. The specific type of the parameter depends on its functionality. |
 

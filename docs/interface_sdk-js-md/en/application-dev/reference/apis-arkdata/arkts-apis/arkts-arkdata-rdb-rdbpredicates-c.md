@@ -6,7 +6,7 @@ Defines predicates for an RDB store. This class determines whether the condition
 
 **Deprecated since:** 9
 
-**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates)
+**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
 <!--Device-rdb-class RdbPredicates--><!--Device-rdb-class RdbPredicates-End-->
 
@@ -175,7 +175,7 @@ A constructor used to create an **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#rdbpredicates)
+**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 
 <!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
 
@@ -600,7 +600,7 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. > **NOTE：**> The value of **devices** can be obtained by using &lt;!--RP2--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. > **NOTE：**> The value of **devices** can be obtained by using <!--RP2--> > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 8
 

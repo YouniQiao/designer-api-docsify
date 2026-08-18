@@ -1,6 +1,6 @@
 # CommonOptions
 
-CommonOptions定义日期时间选择器的通用选项。 > **说明：** > > - Date的使用请参考 > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。 > > - DatePickerComponent的字体字号在14vp至16vp范围内自适应变化，当组件宽度过窄时，可能出现文本显示截断的情况。 > > - 参数缺省或者设置为undefined时，均保持默认值。 > > - 在[DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md#dateoptions)中设置start、end、selected时仅日期部分（年月日）设置生效， > 在[TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md#timeoptions)中设置start、end、selected时仅时间部分（时分秒）设置生效。
+CommonOptions定义日期时间选择器的通用选项。 > **说明：** > > - Date的使用请参考 > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。 > > - DatePickerComponent的字体字号在14vp至16vp范围内自适应变化，当组件宽度过窄时，可能出现文本显示截断的情况。 > > - 参数缺省或者设置为undefined时，均保持默认值。 > > - 在[DateOptions](arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效， > 在[TimeOptions](arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。
 
 **起始版本：** 26.0.0
 
@@ -87,7 +87,7 @@ onChange?: Callback<DatePickerComponentResult>
 
 选择日期或时间后触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -107,7 +107,7 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 选择器项被选中且滚动停止时触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 

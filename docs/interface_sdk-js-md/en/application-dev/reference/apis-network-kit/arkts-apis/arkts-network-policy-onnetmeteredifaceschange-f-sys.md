@@ -6,13 +6,13 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## on_netMeteredIfacesChange
+## on_netMeteredIfacesChange('netMeteredIfacesChange')
 
 ```TypeScript
 function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): void
 ```
 
-Register metered ifaces change listener.
+Registers the callback when the **iface** changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,8 +28,8 @@ Register metered ifaces change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'netMeteredIfacesChange' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of on. |
+| type | 'netMeteredIfacesChange' | Yes | Event type.<br/> The value **netMeteredIfacesChange** indicates a metered **iface** change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. It is called when the registered metered **iface** changes. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # FullScreenLaunchComponent
 
-全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。 > **说明：** > > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability)。 > 否则，系统无法保证原子化服务功能正常。
+全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。 > **说明：** > > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。 > 否则，系统无法保证原子化服务功能正常。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## build
@@ -77,7 +78,7 @@ onError?: ErrorCallback
 
 在启动的ExtensionAbility运行过程中发生错误时触发回调。仅在原子服务以嵌入式模式运行时支持，参数类型为BusinessError。
 
-**类型：** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
+**类型：** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **起始版本：** 23
 
@@ -95,7 +96,7 @@ onReceive?: Callback<Record<string, RecordData>>
 
 表示onReceive的回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 
@@ -113,7 +114,7 @@ onTerminated?: Callback<TerminationInfo>
 
 当EmbeddableUIAbility被终止时触发回调，用于接收终止信息。仅在原子化服务以嵌入式模式运行时支持该回调，参数类型为TerminationInfo。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **起始版本：** 23
 

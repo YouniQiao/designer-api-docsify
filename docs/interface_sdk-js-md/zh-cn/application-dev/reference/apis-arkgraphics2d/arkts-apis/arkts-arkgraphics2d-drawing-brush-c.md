@@ -1,6 +1,6 @@
 # Brush
 
-画刷对象，用于设置图形的填充样式，包括颜色、抗锯齿、混合模式、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果及图像滤波器等，并支持获取颜色、透明度、抗锯齿等属性及重置画刷为初始状态。 画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)方法绑定到画布后生效，绘制完成后通过 [detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md#pen)。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+画刷对象，用于设置图形的填充样式，包括颜色、抗锯齿、混合模式、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果及图像滤波器等，并支持获取颜色、透明度、抗锯齿等属性及重置画刷为初始状态。 画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)方法绑定到画布后生效，绘制完成后通过 [detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md)。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -425,7 +426,7 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color4f | common2D.Color4f | 是 | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0， 小于0.0时，取0.0。颜色值在colorSpace参数指定的色域下进行映射。 |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，需通过 [colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)方法创建，与color4f配合使 用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，需通过 [colorSpaceManager.create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)方法创建，与color4f配合使 用，决定color4f颜色值的映射色域。null表示使用sRGB色域。 |
 
 ## setColorFilter
 

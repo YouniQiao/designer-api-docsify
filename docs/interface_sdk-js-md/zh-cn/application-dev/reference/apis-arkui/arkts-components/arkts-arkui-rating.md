@@ -28,7 +28,17 @@ Rating(options?: RatingOptions)
 
 ## 汇总
 
-- [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)
-- [RatingOptions](arkts-arkui-ratingoptions-i.md)
-- [StarStyleOptions](arkts-arkui-starstyleoptions-i.md)
-- [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
+| [RatingOptions](arkts-arkui-ratingoptions-i.md) | 评分组件的信息。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | 评分组件选中、未选中以及部分选中的星级样式。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) | 当评分条的评分变化时触发该回调。 |
+

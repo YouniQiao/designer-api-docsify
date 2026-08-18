@@ -62,7 +62,7 @@ PIN authentication.
 HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 ```
 
-TUI PIN authentication. &lt;!--Del--&gt;(Currently not supported.)&lt;!--DelEnd--&gt;
+TUI PIN authentication. <!--Del-->(Currently not supported.)<!--DelEnd-->
 
 **Since:** 20
 

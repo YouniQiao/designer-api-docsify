@@ -11,6 +11,7 @@ SSAP服务。
 ## 导入模块
 
 ```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## events

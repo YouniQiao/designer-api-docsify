@@ -11,6 +11,7 @@ Observer选项。
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## id

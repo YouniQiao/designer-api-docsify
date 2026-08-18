@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AgentExtensionAbility } from '@kit.AbilityKit';
-import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -16,7 +15,7 @@ import { AgentExtensionAbility } from '@kit.AbilityKit';
 | [AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md) | The class of agent extension ability. This class cannot be used in Harmony Archive(HAR). |
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |

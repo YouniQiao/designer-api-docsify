@@ -62,7 +62,7 @@ Sends the URI of the selected file and the index of the selected **PhotoPickerCo
 SET_BADGE_CONFIGS = 4
 ```
 
-Sends the badge configurations, which are of the [badgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md#badgeconfig) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
+Sends the badge configurations, which are of the [badgeConfig](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-badgeconfig-c.md) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
 
 **Since:** 21
 
@@ -78,7 +78,7 @@ Sends the badge configurations, which are of the [badgeConfig](arkts-medialibrar
 SET_ITEM_CLICK_RESULT = 5
 ```
 
-Result of the click, which is of the [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md#clickresult) type.
+Result of the click, which is of the [ClickResult](../../apis-na/arkts-apis/arkts-na-file-photopickercomponent-clickresult-c.md) type.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # WritableSystemEnvKey
 
-可写系统环境变量Key，继承自[SystemEnvKey](arkts-na-decorator-systemenvkey-c.md#systemenvkey)。
+可写系统环境变量Key，继承自[SystemEnvKey](arkts-na-decorator-systemenvkey-c.md)。
 
 **继承/实现关系：** WritableSystemEnvKey extends SystemEnvKey<T>
 

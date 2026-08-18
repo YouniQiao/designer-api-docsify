@@ -731,7 +731,7 @@ Sets the number of maxDisplayCount for the dot navigation indicator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKUI_ERROR_CODE_NO_ERROR} Success.<br>         {@link ARKUI_ERROR_CODE_PARAM_INVALID} indicator is null or maxDisplayCount less then 6 or<br>         maxDisplayCount more then 9 |
+| int32_t | {@link ARKUI_ERROR_CODE_NO_ERROR} Success.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} indicator is null or maxDisplayCount less then 6 or          maxDisplayCount more then 9 |
 
 ### OH_ArkUI_SwiperIndicator_GetMaxDisplayCount()
 
@@ -755,7 +755,7 @@ Obtains the number of maxDisplayCount for the dot navigation indicator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the number of the maxDisplayCount, span is 6-9.<br>         0 - indicator is null |
+| int32_t | Returns the number of the maxDisplayCount, span is 6-9.          0 - indicator is null |
 
 ### OH_ArkUI_SwiperIndicator_SetIgnoreSizeOfBottom()
 
@@ -1325,7 +1325,7 @@ Gets whether to show the background for the arrow.
 
 | Type | Description |
 | -- | -- |
-| int32_t | whether to show the background for the arrow.<br>         The value <b>1</b> means to show the background, and <b>0</b> means the opposite. |
+| int32_t | whether to show the background for the arrow.          The value <b>1</b> means to show the background, and <b>0</b> means the opposite. |
 
 ### OH_ArkUI_SwiperArrowStyle_SetShowSidebarMiddle()
 
@@ -1368,7 +1368,7 @@ Gets the display position of the arrow.
 
 | Type | Description |
 | -- | -- |
-| int32_t | the display position of the arrow. The value <b>1</b> means to display on boths sides of the swiper,<br>         and <b>0</b> means display on boths sides of the swiper indicator. |
+| int32_t | the display position of the arrow. The value <b>1</b> means to display on boths sides of the swiper,          and <b>0</b> means display on boths sides of the swiper indicator. |
 
 ### OH_ArkUI_SwiperArrowStyle_SetBackgroundSize()
 

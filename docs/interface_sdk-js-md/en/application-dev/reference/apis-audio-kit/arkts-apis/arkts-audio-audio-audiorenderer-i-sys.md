@@ -1,6 +1,6 @@
 # AudioRenderer
 
-This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer) to create an AudioRenderer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
+This interface provides APIs for audio rendering. Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 23
 
@@ -12,8 +12,6 @@ This interface provides APIs for audio rendering. Before calling any API in Audi
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
@@ -65,7 +63,7 @@ async function getTarget(){
 setTarget(target: RenderTarget): Promise<void>
 ```
 
-Sets the render target of this audio renderer. This function can only be called when the audio renderer is not in the running or released state. Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback). After changing render target to non-PLAYBACK： 1. The audio route and interruption strategy of this renderer will not be affected by [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md#audiosessionmanager). 2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#systemprivate). 3. Calling start when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#audioscenevoicechat) will return error code 6800301. 4. Calling getAudioTime or getAudioTimeSync will return error code 6800301. 5. Calling getAudioTimestampInfo or getAudioTimestampInfoSync will return error code 6800301. 6. Calling setDefaultOutputDevice will return error code 6800301.
+Sets the render target of this audio renderer. This function can only be called when the audio renderer is not in the running or released state. Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback). After changing render target to non-PLAYBACK： 1. The audio route and interruption strategy of this renderer will not be affected by [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md). 2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#system_private). 3. Calling start when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#audio_scene_voice_chat) will return error code 6800301. 4. Calling getAudioTime or getAudioTimeSync will return error code 6800301. 5. Calling getAudioTimestampInfo or getAudioTimestampInfoSync will return error code 6800301. 6. Calling setDefaultOutputDevice will return error code 6800301.
 
 **Since:** 23
 
@@ -118,7 +116,7 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
 setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>
 ```
 
-Sets the render target of this audio renderer. This function can only be called when the audio renderer is not in the running or released state. Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback). After changing render target to non-PLAYBACK: 1. The audio route and interruption strategy of this renderer will not be affected by [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md#audiosessionmanager). 2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#systemprivate). 3. Calling start when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#audioscenevoicechat) will return error code 6800301. 4. Calling getAudioTime or getAudioTimeSync will return error code 6800301. 5. Calling getAudioTimestampInfo or getAudioTimestampInfoSync will return error code 6800301. 6. Calling setDefaultOutputDevice will return error code 6800301. This API uses a promise to return the result.
+Sets the render target of this audio renderer. This function can only be called when the audio renderer is not in the running or released state. Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#playback). After changing render target to non-PLAYBACK: 1. The audio route and interruption strategy of this renderer will not be affected by [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md). 2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#system_private). 3. Calling start when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#audio_scene_voice_chat) will return error code 6800301. 4. Calling getAudioTime or getAudioTimeSync will return error code 6800301. 5. Calling getAudioTimestampInfo or getAudioTimestampInfoSync will return error code 6800301. 6. Calling setDefaultOutputDevice will return error code 6800301. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 

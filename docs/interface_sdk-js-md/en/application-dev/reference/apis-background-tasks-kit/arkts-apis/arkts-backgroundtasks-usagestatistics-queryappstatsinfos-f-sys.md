@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { usageStatistics } from '@kit.BackgroundTasksKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppStatsInfos

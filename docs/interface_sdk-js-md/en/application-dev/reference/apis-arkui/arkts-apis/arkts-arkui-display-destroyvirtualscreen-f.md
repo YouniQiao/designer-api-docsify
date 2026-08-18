@@ -26,7 +26,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | long | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) API. This parameter only accepts integer values. |
+| screenId | long | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md) API. This parameter only accepts integer values. |
 
 **Return value:**
 
@@ -39,7 +39,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function destroyVirtualScreen can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |

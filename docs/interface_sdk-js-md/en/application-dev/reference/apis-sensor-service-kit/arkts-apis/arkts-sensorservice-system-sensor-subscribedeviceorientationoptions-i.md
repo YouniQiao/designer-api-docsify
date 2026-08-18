@@ -32,7 +32,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,7 +76,7 @@ Callback invoked when the device orientation sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#onsensoridcolor)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_sensoridcolor)
 
 **Model restriction:** This API can be used only in the FA model.
 

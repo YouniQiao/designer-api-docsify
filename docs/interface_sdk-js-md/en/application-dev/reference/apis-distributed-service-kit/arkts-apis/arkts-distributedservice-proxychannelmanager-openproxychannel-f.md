@@ -12,7 +12,7 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 function openProxyChannel(channelInfo: ChannelInfo): Promise<int>
 ```
 
-Opens a proxy channel. This API uses a promise to return the result. Based on the link type and peer device information configured in **ChannelInfo**, it negotiates with the peer device via the Bluetooth BR protocol to establish a bidirectional data channel and returns a channel ID that uniquely identifies the channel. This is applicable to scenarios where a phone-side app needs to establish a bidirectional data channel with a wearable device-side app, such as message notification forwarding. After calling this method, you must call [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel) to close the channel and release resources when the proxy channel is no longer needed.
+Opens a proxy channel. This API uses a promise to return the result. Based on the link type and peer device information configured in **ChannelInfo**, it negotiates with the peer device via the Bluetooth BR protocol to establish a bidirectional data channel and returns a channel ID that uniquely identifies the channel. This is applicable to scenarios where a phone-side app needs to establish a bidirectional data channel with a wearable device-side app, such as message notification forwarding. After calling this method, you must call [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md) to close the channel and release resources when the proxy channel is no longer needed.
 
 **Since:** 23
 

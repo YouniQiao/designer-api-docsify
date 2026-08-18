@@ -1,6 +1,6 @@
 # MissionListener（系统接口）
 
-定义系统任务状态监听，可以通过[on](arkts-ability-missionmanager-onmission-f-sys.md#onmission)注册。
+定义系统任务状态监听，可以通过on注册。
 
 **起始版本：** 23
 

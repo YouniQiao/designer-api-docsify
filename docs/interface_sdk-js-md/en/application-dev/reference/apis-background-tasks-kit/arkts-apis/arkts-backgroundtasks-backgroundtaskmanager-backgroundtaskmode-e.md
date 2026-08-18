@@ -1,6 +1,6 @@
 # BackgroundTaskMode
 
-Main type of a continuous task. It is usually used together with the subtype [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md#backgroundtasksubmode). For details, see the mapping table. The two types are newly added in API version 21 for [requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning) and [updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) continuous tasks. When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system) before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
+Main type of a continuous task. It is usually used together with the subtype [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md). For details, see the mapping table. The two types are newly added in API version 21 for [requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) and [updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) continuous tasks. When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system) before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
 
 **Since:** 24
 
@@ -14,7 +14,7 @@ Main type of a continuous task. It is usually used together with the subtype [Ba
 MODE_DATA_TRANSFER = 1
 ```
 
-Data transfer. Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser. **NOTE：**1. During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled. 2. The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning).
+Data transfer. Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser. **NOTE：**1. During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled. 2. The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md).
 
 **Since:** 24
 
@@ -44,7 +44,7 @@ Audio and video playback. Use scenario: audio/video playback in the background a
 MODE_AUDIO_RECORDING = 3
 ```
 
-Audio recording. Use scenario: recording and screen capture in the background.&lt;!--Del--&gt; Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
+Audio recording. Use scenario: recording and screen capture in the background.<!--Del--> Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
 
 **Since:** 24
 
@@ -104,7 +104,7 @@ Multi-device connection. Use scenario: distributed service connection and castin
 MODE_VOIP = 8
 ```
 
-Audio and video calls. Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls. &lt;!--Del--&gt; Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
+Audio and video calls. Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls. <!--Del--> Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
 
 **Since:** 24
 

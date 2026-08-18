@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## dataLoadInfo
@@ -59,7 +60,7 @@ delayedDataLoadHandler?: DelayedDataLoadHandler
 loadHandler: DataLoadHandler
 ```
 
-表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用 [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md#delayeddataloadhandler)。
+表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用 [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md)。
 
 **类型：** [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md)
 

@@ -14,7 +14,6 @@ Specifies a result object that contains the application bundle name and the stat
 
 ```TypeScript
 import { cloudSyncManager } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

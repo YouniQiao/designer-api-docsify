@@ -22,7 +22,7 @@ import { window } from '@kit.ArkUI';
 cutout: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_CUTOUT** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_CUTOUT** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -38,7 +38,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 keyboard: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_KEYBOARD** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -54,7 +54,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -70,7 +70,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoid
 statusBar: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#avoidareatype) is **TYPE_SYSTEM** type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 

@@ -6,7 +6,7 @@ Provides APIs to manage the file retrieval result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#fetchresult)
+**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md)
 
 <!--Device-userFileManager-interface FetchResult--><!--Device-userFileManager-interface FetchResult-End-->
 
@@ -88,7 +88,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
 
 **Examples**
 
@@ -231,7 +231,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
 
 **Examples**
 
@@ -328,7 +328,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
 
 **Examples**
 
@@ -425,7 +425,7 @@ Obtains the next file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
 
 **Examples**
 
@@ -529,7 +529,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the file asset to obtain. The value starts from **0**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
 
 **Error codes:**
 

@@ -38,7 +38,7 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | Type | Description |
 | --- | --- |
-| [ComponentObserver](../../apis-na/arkts-apis/arkts-na-inspector-componentobserver-i.md) | create listener for observer component event. |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | create listener for observer component event. |
 
 **Examples**
 

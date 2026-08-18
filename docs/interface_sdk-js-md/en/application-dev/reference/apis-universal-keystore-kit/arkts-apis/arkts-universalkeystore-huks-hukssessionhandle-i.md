@@ -21,7 +21,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 challenge?: Uint8Array
 ```
 
-Challenge obtained after the [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession) operation. The default value is **undefined**.
+Challenge obtained after the [initSession](arkts-universalkeystore-huks-initsession-f.md) operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 

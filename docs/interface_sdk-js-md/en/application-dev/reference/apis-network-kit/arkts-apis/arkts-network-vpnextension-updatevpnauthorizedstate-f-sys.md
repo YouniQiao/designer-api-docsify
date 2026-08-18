@@ -12,7 +12,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 function updateVpnAuthorizedState(bundleName: string): boolean
 ```
 
-Update a VPN dialog authorize information
+Updates the VPN pop-up authorization status.
 
 **Since:** 11
 
@@ -30,13 +30,13 @@ Update a VPN dialog authorize information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | authorize or not |
+| bundleName | string | Yes | Bundle name of the application (generally a third-party application). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The promise returned by the function. |
+| boolean | Boolean value indicating whether the VPN pop-up authorization status is successfully updated. The value **true** indicates that the VPN pop-up authorization status is successfully updated, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

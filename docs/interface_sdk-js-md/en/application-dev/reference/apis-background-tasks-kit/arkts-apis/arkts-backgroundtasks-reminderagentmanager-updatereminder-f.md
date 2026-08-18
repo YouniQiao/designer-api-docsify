@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## updateReminder
@@ -27,7 +26,7 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be updated. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called. |
 | reminderReq | ReminderRequest | Yes | Request instance used to set detailed information such as the reminder type and ringing duration. |
 
 **Return value:**

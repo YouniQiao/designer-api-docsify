@@ -28,7 +28,22 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 ## Summary
 
-- [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)
-- [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md)
-- [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)
-- [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md) | Sets parameters of the selected item indicator style. |
+| [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | Describes the parameters of the **UIPickerComponent** container. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md) | Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-attribute.md#onscrollstop) events. Value range: an integer in the range of [0, Number of child components – 1]. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md) | Enumerates the types of the selected item indicator. |
+

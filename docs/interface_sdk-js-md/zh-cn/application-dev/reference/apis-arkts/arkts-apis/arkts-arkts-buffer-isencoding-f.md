@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## isEncoding
@@ -25,7 +26,7 @@ function isEncoding(encoding: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 是 | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#bufferencoding)。 |
+| encoding | string | 是 | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
 
 **返回值：**
 

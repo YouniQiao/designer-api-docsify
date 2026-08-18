@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getSimLabel
@@ -24,7 +25,7 @@ Obtains the SIM card label.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM card slot ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | Callback used to return the SIM card label. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 | Callback used to return the SIM card label. |
 
 **错误码：**
 

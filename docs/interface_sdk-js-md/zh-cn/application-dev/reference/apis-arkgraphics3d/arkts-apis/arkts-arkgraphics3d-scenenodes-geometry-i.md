@@ -2,7 +2,7 @@
 
 几何节点类型，用于承载可渲染的网格数据，并支持可选的形变功能，继承自Node。
 
-**继承/实现关系：** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#node)
+**继承/实现关系：** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **起始版本：** 23
 

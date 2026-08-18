@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { AtomicServiceOptions } from '@kit.AbilityKit';
-import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -13,5 +12,5 @@ import { AtomicServiceOptions } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | **AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#startoptions). |
+| [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | **AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md). |
 

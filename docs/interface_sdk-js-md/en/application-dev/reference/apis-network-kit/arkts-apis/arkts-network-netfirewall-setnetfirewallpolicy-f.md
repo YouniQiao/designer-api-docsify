@@ -9,16 +9,16 @@ import { netFirewall } from '@kit.NetworkKit';
 ## setNetFirewallPolicy
 
 ```TypeScript
-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>
+function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>
 ```
 
-Set firewall policy by userId. &lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt;
+Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result. > **NOTE：**> > If this API is called by multiple applications under the same system user, the latest delivered policy prevails. > **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
-<!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>--><!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>-End-->
+<!--Device-netFirewall-function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>--><!--Device-netFirewall-function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -26,14 +26,14 @@ Set firewall policy by userId. &lt;p&gt;Enables or disables the firewall functio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| policy | [NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md) | Yes | The firewall policy to be set. |
+| userId | int | Yes | System user ID, which must exist. |
+| policy | [NetFirewallPolicy](arkts-network-netfirewall-netfirewallpolicy-i.md) | Yes | Firewall policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

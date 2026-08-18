@@ -13,6 +13,7 @@ VoIP通话信息。
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## abilityName

@@ -6,7 +6,7 @@ Represents the authentication result object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md#authresultinfo)
+**Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md)
 
 <!--Device-userAuth-interface AuthResult--><!--Device-userAuth-interface AuthResult-End-->
 
@@ -16,8 +16,6 @@ Represents the authentication result object.
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 

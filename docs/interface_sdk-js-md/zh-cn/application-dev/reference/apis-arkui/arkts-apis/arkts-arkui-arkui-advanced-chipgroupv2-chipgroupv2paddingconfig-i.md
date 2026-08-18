@@ -11,6 +11,7 @@ ChipGroupV2PaddingConfig定义了ChipGroupV2的上下内边距配置，用于控
 ## 导入模块
 
 ```TypeScript
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## bottom

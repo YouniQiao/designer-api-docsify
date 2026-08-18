@@ -37,7 +37,7 @@ Add data to picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
+| dataType | [DataType](arkts-na-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## completed
@@ -62,7 +62,7 @@ Call this method to obtain the complete data after a selection operation has fin
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CompletedResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-completedresult-c.md)&gt; | Promise&lt;CompletedResult&gt; |
+| Promise&lt;[CompletedResult](arkts-na-file-photopickercomponent-completedresult-c.md)&gt; | Promise&lt;CompletedResult&gt; |
 
 ## deleteData
 
@@ -86,7 +86,7 @@ Delete data from picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
+| dataType | [DataType](arkts-na-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## exitPhotoBrowser
@@ -131,7 +131,7 @@ Display the photo after edit.
 | --- | --- | --- | --- |
 | originalUri | string | Yes | Original uri |
 | newUri | string | Yes | New uri after replacement |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns void |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Returns void |
 
 ## saveTrustedPhotoAssets
 
@@ -157,9 +157,9 @@ Save the photo assets of uris.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | trustedUris | string[] | Yes | Uris need to be saved |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Returns the uri list |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Returns the uri list |
 | configs | photoAccessHelper.PhotoCreationConfig[] | No | Photo asset creation configs |
-| saveMode | [SaveMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No | Mode of save |
+| saveMode | [SaveMode](arkts-na-file-photopickercomponent-savemode-e.md) | No | Mode of save |
 
 ## saveTrustedPhotoAssetsEx
 
@@ -186,7 +186,7 @@ Save the photo assets of uris.
 | --- | --- | --- | --- |
 | trustedUris | Array&lt;string&gt; | Yes | Uris need to be saved |
 | settings | Array&lt;photoAccessHelper.CreationSetting&gt; | No | Photo asset creation settings |
-| saveMode | [SaveMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No | Mode of save |
+| saveMode | [SaveMode](arkts-na-file-photopickercomponent-savemode-e.md) | No | Mode of save |
 
 **Return value:**
 
@@ -216,7 +216,7 @@ Set data to picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | data type |
+| dataType | [DataType](arkts-na-file-photopickercomponent-datatype-e.md) | Yes | data type |
 | data | Object | Yes | data |
 
 ## setMaxSelected
@@ -241,7 +241,7 @@ Set max select count to picker component, include max_total_count, max_photo_cou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSelected | [MaxSelected](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-maxselected-c.md) | Yes | max select count data |
+| maxSelected | [MaxSelected](arkts-na-file-photopickercomponent-maxselected-c.md) | Yes | max select count data |
 
 ## setMovingPhotoState
 
@@ -303,7 +303,7 @@ Set photo browser item to picker component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | specify image uri for photo browsing |
-| photoBrowserRange | [PhotoBrowserRange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-photobrowserrange-e.md) | No | photo browser slide range |
+| photoBrowserRange | [PhotoBrowserRange](arkts-na-file-photopickercomponent-photobrowserrange-e.md) | No | photo browser slide range |
 
 ## setPhotoBrowserUIElementVisibility
 
@@ -327,7 +327,7 @@ Sets whether other elements on the photo browser page are visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [PhotoBrowserUIElement](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md)[] | Yes | other elements on the photo browser page |
+| elements | [PhotoBrowserUIElement](arkts-na-file-photopickercomponent-photobrowseruielement-e.md)[] | Yes | other elements on the photo browser page |
 | isVisible | boolean | Yes | visible or not |
 
 ## updatePickerOptions
@@ -352,7 +352,7 @@ Update options of the PhotoPicker component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| updateConfig | [UpdatablePickerConfigs](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Yes | Subset of PickerOptions |
+| updateConfig | [UpdatablePickerConfigs](arkts-na-file-photopickercomponent-updatablepickerconfigs-c.md) | Yes | Subset of PickerOptions |
 
 **Return value:**
 

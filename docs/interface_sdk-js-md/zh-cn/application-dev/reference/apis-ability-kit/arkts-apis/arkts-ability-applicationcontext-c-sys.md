@@ -221,7 +221,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 **废弃版本：** 10
 
-**替代接口：** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
+**替代接口：** [on](arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle)(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -255,7 +255,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 **废弃版本：** 10
 
-**替代接口：** [on](arkts-ability-applicationcontext-c.md#onabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
+**替代接口：** [on](arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle)(type: 'environment', callback: EnvironmentCallback)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -269,7 +269,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -289,7 +289,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 **废弃版本：** 10
 
-**替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#off_abilitylifecycleabilitylifecycle)(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -358,7 +358,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 **废弃版本：** 10
 
-**替代接口：** [off](arkts-ability-applicationcontext-c.md#offabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [off](arkts-ability-applicationcontext-c.md#off_abilitylifecycleabilitylifecycle)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

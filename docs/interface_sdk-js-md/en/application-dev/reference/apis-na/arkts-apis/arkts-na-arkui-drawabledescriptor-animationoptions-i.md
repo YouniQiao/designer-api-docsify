@@ -103,7 +103,7 @@ stopMode?: AnimationStopMode
 
 Mode in which animation stops
 
-**Type:** [AnimationStopMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
+**Type:** [AnimationStopMode](arkts-na-arkui-drawabledescriptor-animationstopmode-e.md)
 
 **Default:** AnimationStopMode.FIRST_FRAME
 

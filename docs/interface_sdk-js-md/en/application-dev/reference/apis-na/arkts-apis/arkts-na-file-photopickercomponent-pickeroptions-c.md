@@ -2,7 +2,7 @@
 
 PickerOptions Object
 
-**Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#baseselectoptions)
+**Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -85,7 +85,7 @@ public badgeConfig?: BadgeConfig
 
 Support to config special badge display. The picker component supports only one type of badge
 
-**Type:** [BadgeConfig](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
+**Type:** [BadgeConfig](arkts-na-file-photopickercomponent-badgeconfig-c.md)
 
 **Since:** 26.1.0
 
@@ -325,7 +325,7 @@ public maxSelectedReminderMode?: ReminderMode
 
 Support to set max select number remind mode.
 
-**Type:** [ReminderMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
+**Type:** [ReminderMode](arkts-na-file-photopickercomponent-remindermode-e.md)
 
 **Since:** 26.0.0
 
@@ -365,7 +365,7 @@ public orientation?: PickerOrientation
 
 Support to set display orientation
 
-**Type:** [PickerOrientation](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
+**Type:** [PickerOrientation](arkts-na-file-photopickercomponent-pickerorientation-e.md)
 
 **Since:** 26.0.0
 
@@ -385,7 +385,7 @@ public photoBrowserBackgroundColorMode?: PickerColorMode
 
 Support to set photo browser background color mode
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 
@@ -468,7 +468,7 @@ public preselectedInfos?: PreselectedInfo[]
 
 Support automatically selecting the user-selected image/video on the PhotoPickerComponent at the specified picker index.
 
-**Type:** [PreselectedInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)[]
+**Type:** [PreselectedInfo](arkts-na-file-photopickercomponent-preselectedinfo-c.md)[]
 
 **Since:** 26.1.0
 
@@ -488,7 +488,7 @@ public selectMode?: SelectMode
 
 Support to set select mode
 
-**Type:** [SelectMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
+**Type:** [SelectMode](arkts-na-file-photopickercomponent-selectmode-e.md)
 
 **Since:** 26.0.0
 
@@ -508,7 +508,7 @@ public singleLineConfig?: SingleLineConfig
 
 Single-line display mode for the PhotoPickerComponent.
 
-**Type:** [SingleLineConfig](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md)
+**Type:** [SingleLineConfig](arkts-na-file-photopickercomponent-singlelineconfig-c.md)
 
 **Since:** 26.0.0
 
@@ -528,7 +528,7 @@ public uiComponentColorMode?: PickerColorMode
 
 Support to set UIComponent color mode.
 
-**Type:** [PickerColorMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
+**Type:** [PickerColorMode](arkts-na-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 26.0.0
 

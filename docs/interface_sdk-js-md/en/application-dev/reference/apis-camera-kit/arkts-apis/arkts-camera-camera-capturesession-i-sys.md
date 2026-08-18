@@ -1,12 +1,12 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#cameraoutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#videosession)
+**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -174,7 +174,7 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#beautytype-system-api) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](#getsupportedbeautytypes) are disabled.
 
 **Since:** 10
 

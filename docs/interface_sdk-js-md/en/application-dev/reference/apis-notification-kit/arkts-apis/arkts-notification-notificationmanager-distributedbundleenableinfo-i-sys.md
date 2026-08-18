@@ -14,7 +14,6 @@ Describes the bundle information of an application that enables cross-device col
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName

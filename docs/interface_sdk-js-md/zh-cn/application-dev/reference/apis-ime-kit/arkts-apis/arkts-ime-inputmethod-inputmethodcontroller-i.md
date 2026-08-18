@@ -1,6 +1,6 @@
 # InputMethodController
 
-下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)获取到InputMethodController实例，再通过实例调用对应方法。 InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： - **绑定管理**：通过 [attach](#attach) 建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和 detach必须配对使用。 - **键盘控制**：通过[showTextInput](#showtextinput)拉 起软键盘进入编辑状态，通过[hideTextInput](#hidetextinput)隐 藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。 - **编辑框状态同步**：通过 [updateCursor](#updatecursor) 、 [changeSelection](#changeselection) 、 [updateAttribute](#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 - **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` > **注意：** > > attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
+下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： - **绑定管理**：通过 [attach](#attach) 建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和 detach必须配对使用。 - **键盘控制**：通过[showTextInput](#showtextinput)拉 起软键盘进入编辑状态，通过[hideTextInput](#hidetextinput)隐 藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。 - **编辑框状态同步**：通过 [updateCursor](#updatecursor) 、 [changeSelection](#changeselection) 、 [updateAttribute](#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 - **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` > **注意：** > > attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
 
 **起始版本：** 23
 
@@ -11,6 +11,12 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## attach
@@ -33,7 +39,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。 <br>- true表示拉起。 <br>- false表示不拉起。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -255,7 +261,7 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 | attachOptions | AttachOptions | 否 | 绑定附加选项。 |
 
@@ -335,7 +341,7 @@ changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void
 | text | string | 是 | 整个输入文本。 |
 | start | int | 是 | 所选文本的起始位置。该参数应为大于或等于0的整数。 |
 | end | int | 是 | 所选文本的结束位置。该参数应为大于或等于0的整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文本信息更新成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当文本信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -457,7 +463,7 @@ detach(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当解绑定输入法成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当解绑定输入法成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -626,7 +632,7 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当软键盘隐藏成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当软键盘隐藏成功。err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -740,7 +746,7 @@ hideTextInput(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功退出编辑状态时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功退出编辑状态时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -854,7 +860,7 @@ offDeleteLeft(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -885,7 +891,7 @@ offDeleteRight(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 to the right of the cursor. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 to the right of the cursor. |
 
 **示例**
 
@@ -916,7 +922,7 @@ offFinishTextPreview(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1062,7 +1068,7 @@ offHandleExtendAction(callback?: Callback<ExtendAction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1093,7 +1099,7 @@ offInsertText(callback?: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1124,7 +1130,7 @@ offMoveCursor(callback?: Callback<Direction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1155,7 +1161,7 @@ offSelectByMovement(callback?: Callback<Movement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1186,7 +1192,7 @@ offSelectByRange(callback?: Callback<Range>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1217,7 +1223,7 @@ offSendFunctionKey(callback?: Callback<FunctionKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1248,7 +1254,7 @@ offSendKeyboardStatus(callback?: Callback<KeyboardStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1308,7 +1314,7 @@ inputMethodController.offSetPreviewText();
 console.info(`All callbacks unsubscribed from setPreviewText`);
 ```
 
-## off_deleteLeft
+## off_deleteLeft('deleteLeft')
 
 ```TypeScript
 off(type: 'deleteLeft', callback?: (length: number) => void): void
@@ -1343,7 +1349,7 @@ inputMethodController.off('deleteLeft', onDeleteLeftCallback);
 inputMethodController.off('deleteLeft');
 ```
 
-## off_deleteRight
+## off_deleteRight('deleteRight')
 
 ```TypeScript
 off(type: 'deleteRight', callback?: (length: number) => void): void
@@ -1377,7 +1383,7 @@ inputMethodController.off('deleteRight', onDeleteRightCallback);
 inputMethodController.off('deleteRight');
 ```
 
-## off_finishTextPreview
+## off_finishTextPreview('finishTextPreview')
 
 ```TypeScript
 off(type: 'finishTextPreview', callback?: Callback<void>): void
@@ -1396,7 +1402,7 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | 是 | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1423,7 +1429,7 @@ inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
 
-## off_getLeftTextOfCursor
+## off_getLeftTextOfCursor('getLeftTextOfCursor')
 
 ```TypeScript
 off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
@@ -1458,7 +1464,7 @@ inputMethodController.off('getLeftTextOfCursor', getLeftTextOfCursorCallback);
 inputMethodController.off('getLeftTextOfCursor');
 ```
 
-## off_getRightTextOfCursor
+## off_getRightTextOfCursor('getRightTextOfCursor')
 
 ```TypeScript
 off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
@@ -1493,7 +1499,7 @@ inputMethodController.off('getRightTextOfCursor', getRightTextOfCursorCallback);
 inputMethodController.off('getRightTextOfCursor');
 ```
 
-## off_getTextIndexAtCursor
+## off_getTextIndexAtCursor('getTextIndexAtCursor')
 
 ```TypeScript
 off(type: 'getTextIndexAtCursor', callback?: () => number): void
@@ -1528,7 +1534,7 @@ inputMethodController.off('getTextIndexAtCursor', getTextIndexAtCursorCallback);
 inputMethodController.off('getTextIndexAtCursor');
 ```
 
-## off_handleExtendAction
+## off_handleExtendAction('handleExtendAction')
 
 ```TypeScript
 off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
@@ -1563,7 +1569,7 @@ inputMethodController.off('handleExtendAction', onHandleExtendActionCallback);
 inputMethodController.off('handleExtendAction');
 ```
 
-## off_insertText
+## off_insertText('insertText')
 
 ```TypeScript
 off(type: 'insertText', callback?: (text: string) => void): void
@@ -1598,7 +1604,7 @@ inputMethodController.off('insertText', onInsertTextCallback);
 inputMethodController.off('insertText');
 ```
 
-## off_moveCursor
+## off_moveCursor('moveCursor')
 
 ```TypeScript
 off(type: 'moveCursor', callback?: (direction: Direction) => void): void
@@ -1633,7 +1639,7 @@ inputMethodController.off('moveCursor', onMoveCursorCallback);
 inputMethodController.off('moveCursor');
 ```
 
-## off_selectByMovement
+## off_selectByMovement('selectByMovement')
 
 ```TypeScript
 off(type: 'selectByMovement', callback?: Callback<Movement>): void
@@ -1652,7 +1658,7 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1668,7 +1674,7 @@ inputMethodController.off('selectByMovement', onSelectByMovementCallback);
 inputMethodController.off('selectByMovement');
 ```
 
-## off_selectByRange
+## off_selectByRange('selectByRange')
 
 ```TypeScript
 off(type: 'selectByRange', callback?: Callback<Range>): void
@@ -1687,7 +1693,7 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1703,7 +1709,7 @@ inputMethodController.off('selectByRange', onSelectByRangeCallback);
 inputMethodController.off('selectByRange');
 ```
 
-## off_sendFunctionKey
+## off_sendFunctionKey('sendFunctionKey')
 
 ```TypeScript
 off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void
@@ -1738,7 +1744,7 @@ inputMethodController.off('sendFunctionKey', onSendFunctionKey);
 inputMethodController.off('sendFunctionKey');
 ```
 
-## off_sendKeyboardStatus
+## off_sendKeyboardStatus('sendKeyboardStatus')
 
 ```TypeScript
 off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void
@@ -1773,7 +1779,7 @@ inputMethodController.off('sendKeyboardStatus', onSendKeyboardStatus);
 inputMethodController.off('sendKeyboardStatus');
 ```
 
-## off_setPreviewText
+## off_setPreviewText('setPreviewText')
 
 ```TypeScript
 off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
@@ -1838,7 +1844,7 @@ onDeleteLeft(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向左删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向左删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1873,7 +1879,7 @@ onDeleteRight(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向右删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回需要向右删除的文本长度。 根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1908,7 +1914,7 @@ onFinishTextPreview(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
 
 **示例**
 
@@ -2063,7 +2069,7 @@ onHandleExtendAction(callback: Callback<ExtendAction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 是 | 回调函数，返回扩展编辑操作类型。 根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | 是 | 回调函数，返回扩展编辑操作类型。 根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
 
 **错误码：**
 
@@ -2098,7 +2104,7 @@ onInsertText(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回需要插入的文本内容。 根据传入的文本，在回调函数中操作编辑框中的内容。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回需要插入的文本内容。 根据传入的文本，在回调函数中操作编辑框中的内容。 |
 
 **错误码：**
 
@@ -2142,7 +2148,7 @@ onMoveCursor(callback: Callback<Direction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 是 | 回调函数，返回光标信息。 根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | 是 | 回调函数，返回光标信息。 根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
 
 **错误码：**
 
@@ -2177,7 +2183,7 @@ onSelectByMovement(callback: Callback<Movement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。 根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。 根据传入的光标移动方向，选中编辑框中相应文本。 |
 
 **示例**
 
@@ -2206,7 +2212,7 @@ onSelectByRange(callback: Callback<Range>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。 根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。 根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
 
 **示例**
 
@@ -2235,7 +2241,7 @@ onSendFunctionKey(callback: Callback<FunctionKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 是 | 回调函数，返回输入法应用发送的功能键信息。 根据返回的功能键信息，做相应操作。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | 是 | 回调函数，返回输入法应用发送的功能键信息。 根据返回的功能键信息，做相应操作。 |
 
 **错误码：**
 
@@ -2270,7 +2276,7 @@ onSendKeyboardStatus(callback: Callback<KeyboardStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 是 | 回调函数，返回软键盘状态。 根据传入的软键盘状态，在回调函数中做相应操作。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | 是 | 回调函数，返回软键盘状态。 根据传入的软键盘状态，在回调函数中做相应操作。 |
 
 **错误码：**
 
@@ -2332,7 +2338,7 @@ inputMethodController.offSetPreviewText();
 console.info(`All callbacks unsubscribed from setPreviewText`);
 ```
 
-## on_deleteLeft
+## on_deleteLeft('deleteLeft')
 
 ```TypeScript
 on(type: 'deleteLeft', callback: (length: number) => void): void
@@ -2368,7 +2374,7 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 });
 ```
 
-## on_deleteRight
+## on_deleteRight('deleteRight')
 
 ```TypeScript
 on(type: 'deleteRight', callback: (length: number) => void): void
@@ -2404,7 +2410,7 @@ inputMethod.getController().on('deleteRight', (length: number) => {
 });
 ```
 
-## on_finishTextPreview
+## on_finishTextPreview('finishTextPreview')
 
 ```TypeScript
 on(type: 'finishTextPreview', callback: Callback<void>): void
@@ -2423,7 +2429,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | 是 | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
 
 **错误码：**
 
@@ -2456,7 +2462,7 @@ inputMethodController.off('finishTextPreview');
 console.info(`All callbacks unsubscribed from finishTextPreview`);
 ```
 
-## on_getLeftTextOfCursor
+## on_getLeftTextOfCursor('getLeftTextOfCursor')
 
 ```TypeScript
 on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
@@ -2494,7 +2500,7 @@ inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
 });
 ```
 
-## on_getRightTextOfCursor
+## on_getRightTextOfCursor('getRightTextOfCursor')
 
 ```TypeScript
 on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
@@ -2532,7 +2538,7 @@ inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
 });
 ```
 
-## on_getTextIndexAtCursor
+## on_getTextIndexAtCursor('getTextIndexAtCursor')
 
 ```TypeScript
 on(type: 'getTextIndexAtCursor', callback: () => number): void
@@ -2570,7 +2576,7 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 });
 ```
 
-## on_handleExtendAction
+## on_handleExtendAction('handleExtendAction')
 
 ```TypeScript
 on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
@@ -2606,7 +2612,7 @@ inputMethod.getController().on('handleExtendAction', (action: inputMethod.Extend
 });
 ```
 
-## on_insertText
+## on_insertText('insertText')
 
 ```TypeScript
 on(type: 'insertText', callback: (text: string) => void): void
@@ -2655,7 +2661,7 @@ inputMethodController.off('insertText', callback1);
 inputMethodController.off('insertText');
 ```
 
-## on_moveCursor
+## on_moveCursor('moveCursor')
 
 ```TypeScript
 on(type: 'moveCursor', callback: (direction: Direction) => void): void
@@ -2691,7 +2697,7 @@ inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) 
 });
 ```
 
-## on_selectByMovement
+## on_selectByMovement('selectByMovement')
 
 ```TypeScript
 on(type: 'selectByMovement', callback: Callback<Movement>): void
@@ -2710,7 +2716,7 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -2726,7 +2732,7 @@ inputMethod.getController().on('selectByMovement', (movement: inputMethod.Moveme
 });
 ```
 
-## on_selectByRange
+## on_selectByRange('selectByRange')
 
 ```TypeScript
 on(type: 'selectByRange', callback: Callback<Range>): void
@@ -2745,7 +2751,7 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -2761,7 +2767,7 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 });
 ```
 
-## on_sendFunctionKey
+## on_sendFunctionKey('sendFunctionKey')
 
 ```TypeScript
 on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
@@ -2797,7 +2803,7 @@ inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.Func
 });
 ```
 
-## on_sendKeyboardStatus
+## on_sendKeyboardStatus('sendKeyboardStatus')
 
 ```TypeScript
 on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void
@@ -2833,7 +2839,7 @@ inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMetho
 });
 ```
 
-## on_setPreviewText
+## on_setPreviewText('setPreviewText')
 
 ```TypeScript
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
@@ -2902,7 +2908,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象通过 [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定 义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 <br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md#messagehandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | MessageHandler | 否 | 该对象通过 [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定 义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 <br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其 [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -3034,7 +3040,7 @@ setCallingWindow(windowId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowId | int | 是 | 绑定输入法应用的应用程序所在的窗口Id。该参数应为整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -3161,7 +3167,7 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当软键盘显示成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当软键盘显示成功。err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -3275,7 +3281,7 @@ showTextInput(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。若成功进入编辑状态，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。若成功进入编辑状态，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -3457,7 +3463,7 @@ stopInput(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
 
 **示例**
 
@@ -3535,7 +3541,7 @@ stopInputSession(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当结束输入会话成功时，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当结束输入会话成功时，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -3661,7 +3667,7 @@ updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | 是 | 编辑框属性对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当编辑框属性信息更新成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当编辑框属性信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -3786,7 +3792,7 @@ updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | 是 | 光标信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标信息更新成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 

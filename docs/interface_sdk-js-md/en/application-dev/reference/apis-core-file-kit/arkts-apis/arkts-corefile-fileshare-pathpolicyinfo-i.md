@@ -12,7 +12,6 @@ Policy information to manager permissions on a path.
 
 ```TypeScript
 import { fileShare } from '@kit.CoreFileKit';
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## operationMode

@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Toggle](arkts-na-toggle-toggle-f.md#toggle) | Defines Toggle Component. |
+| [Toggle](arkts-na-toggle-toggle-f.md) | Defines Toggle Component. |
 
 ### Classes
 

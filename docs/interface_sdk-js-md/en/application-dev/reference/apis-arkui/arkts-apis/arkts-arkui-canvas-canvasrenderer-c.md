@@ -2,7 +2,7 @@
 
 Canvas renderer for drawing shapes, text, images and other objects
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md#canvaspath)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md)
 
 **Since:** 23
 
@@ -79,7 +79,7 @@ Sets the currently created path as the current clipping path
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#canvasfillrule). |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md). |
 
 ## clip
 
@@ -104,7 +104,7 @@ Tailoring according to the specified path
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path to be cut. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#canvasfillrule). |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md). |
 
 ## createConicGradient
 
@@ -407,7 +407,7 @@ Fills existing paths according to the current fill style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#canvasfillrule). |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md). |
 
 ## fill
 
@@ -432,7 +432,7 @@ Fills the specified path according to the current fill style
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path to be filled. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#canvasfillrule). |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md). |
 
 ## fillRect
 
@@ -608,7 +608,7 @@ Obtains the currently applied transformation matrix.
 measureText(text: string): TextMetrics
 ```
 
-Measure the size of a specified text. For details about the return value, see [TextMetrics](arkts-arkui-canvas-textmetrics-i.md#textmetrics).
+Measure the size of a specified text. For details about the return value, see [TextMetrics](arkts-arkui-canvas-textmetrics-i.md).
 
 **Since:** 23
 

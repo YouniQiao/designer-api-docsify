@@ -28,15 +28,30 @@ Defines the constructor of TextInput.
 
 ## Summary
 
-- [PasswordIcon](arkts-arkui-passwordicon-i.md)
-- [SubmitEvent](arkts-arkui-submitevent-i.md)
-- [TextInputOptions](arkts-arkui-textinputoptions-i.md)
-- [UnderlineColor](arkts-arkui-underlinecolor-i.md)
-- [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md)
-- [OnPasteCallback](arkts-arkui-onpastecallback-t.md)
-- [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md)
-- [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md)
-- [ContentType](arkts-arkui-contenttype-e.md)
-- [EnterKeyType](arkts-arkui-enterkeytype-e.md)
-- [InputType](arkts-arkui-inputtype-e.md)
-- [TextInputStyle](arkts-arkui-textinputstyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [PasswordIcon](arkts-arkui-passwordicon-i.md) | PasswordIcon object. |
+| [SubmitEvent](arkts-arkui-submitevent-i.md) | Defines the user submission event. |
+| [TextInputOptions](arkts-arkui-textinputoptions-i.md) | **TextInput** initialization parameters. |
+| [UnderlineColor](arkts-arkui-underlinecolor-i.md) | Defines the underline color width property. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Defines the callback for text content scrolling. |
+| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Defines the callback used to return the pasted text content. |
+| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) | Defines the callback for submission. |
+| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Defines the callback for text selection changes or caret position changes. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ContentType](arkts-arkui-contenttype-e.md) | Enumerates the content types for autofill. |
+| [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Type of the Enter key. |
+| [InputType](arkts-arkui-inputtype-e.md) | Sets the single-line text box type. |
+| [TextInputStyle](arkts-arkui-textinputstyle-e.md) | Text input style. |
+

@@ -11,10 +11,10 @@ Profiler tools for inspectors.
 | [Profiler](arkts-na-profiler-n.md) | Profiler tools for inspectors. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [setAppBgColor](arkts-na-inspector-setappbgcolor-f-sys.md#setappbgcolor-system-api) | Set app background color. |
+| [setAppBgColor](arkts-na-inspector-setappbgcolor-f-sys.md) | Set app background color. |
 <!--DelEnd-->
 

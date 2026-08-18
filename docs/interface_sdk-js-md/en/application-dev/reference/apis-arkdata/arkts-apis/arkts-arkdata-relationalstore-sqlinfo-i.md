@@ -12,7 +12,6 @@ Represents details about the SQL statement executed by the database.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## args

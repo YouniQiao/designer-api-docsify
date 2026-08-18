@@ -12,7 +12,7 @@ import { policy } from '@kit.NetworkKit';
 function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): void
 ```
 
-Get metered network quota policies.
+Obtains the metering network policy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ Get metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | the callback of getNetQuotaPolicies. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ policy.getNetQuotaPolicies((error: BusinessError, data: policy.NetQuotaPolicy[])
 function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>
 ```
 
-Get metered network quota policies.
+Obtains the metering network policy. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -75,7 +75,7 @@ Get metered network quota policies.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

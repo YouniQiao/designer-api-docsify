@@ -2,7 +2,7 @@
 
 ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 
-**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

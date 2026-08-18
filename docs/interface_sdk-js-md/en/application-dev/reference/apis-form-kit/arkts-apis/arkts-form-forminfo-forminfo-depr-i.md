@@ -6,7 +6,7 @@ Widget information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md#forminfo)
+**Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md)
 
 <!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 

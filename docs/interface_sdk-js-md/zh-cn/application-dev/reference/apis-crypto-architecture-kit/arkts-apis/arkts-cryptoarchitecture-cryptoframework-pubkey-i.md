@@ -1,8 +1,8 @@
 # PubKey
 
-公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#key)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。 <br>公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#asykeygenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#asykeygeneratorbyspec)来生成。
+公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。 <br>公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
 
-**继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#key)
+**继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getAsyKeySpec

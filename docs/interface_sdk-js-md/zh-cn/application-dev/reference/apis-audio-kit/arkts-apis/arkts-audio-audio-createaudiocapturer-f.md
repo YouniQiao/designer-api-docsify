@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createAudioCapturer
@@ -24,7 +26,7 @@ function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | 是 | 配置音频采集器。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | 是 | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： <br>错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 <br>错误码6800101：表示必选参数为空或参数类型错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | 是 | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： <br>错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 <br>错误码6800101：表示必选参数为空或参数类型错误。 |
 
 **示例**
 
@@ -67,7 +69,7 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
 ```
 
-Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#audiocapturer) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#audiocapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
 
 **起始版本：** 23
 
@@ -82,7 +84,7 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#audiocapturer) i
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | 是 | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | 是 | Callback used to return the audio capturer instance, or null if any error occurs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | 是 | Callback used to return the audio capturer instance, or null if any error occurs. |
 
 **错误码：**
 
@@ -158,7 +160,7 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
 ```
 
-Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#audiocapturer) instance. This method uses a promise to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#audiocapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This method uses a promise to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
 
 **起始版本：** 23
 

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getExcludeDates
@@ -25,7 +24,7 @@ Obtains all non-reminder dates for a recurring calendar reminder with a specific
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) API is called. |
 
 **Return value:**
 

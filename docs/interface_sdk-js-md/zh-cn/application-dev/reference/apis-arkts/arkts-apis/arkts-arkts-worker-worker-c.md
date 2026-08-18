@@ -2,13 +2,13 @@
 
 Worker类包含所有Worker功能。
 
-**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#eventtarget)
+**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#threadworker)
+**替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
 <!--Device-worker-class Worker--><!--Device-worker-class Worker-End-->
 
@@ -17,6 +17,7 @@ Worker类包含所有Worker功能。
 ## 导入模块
 
 ```TypeScript
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -14,7 +14,6 @@ Represents the details of a single access record.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## accessDuration

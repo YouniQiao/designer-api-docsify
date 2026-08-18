@@ -2,7 +2,7 @@
 
 ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer.
 
-**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#reminderrequest)
+**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 

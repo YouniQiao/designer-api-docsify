@@ -40,7 +40,7 @@ constructor(
   )
 ```
 
-构造函数。若传入了subscribeMe参数建立了订阅关系，订阅关系不再需要时，应调用[unlinkSuscriber()](#unlinksuscriber)解除 订阅（订阅者ID通过IPropertySubscriber.[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）。
+构造函数。若传入了subscribeMe参数建立了订阅关系，订阅关系不再需要时，应调用[unlinkSuscriber()](#unlinksuscriber)解除 订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）。
 
 **起始版本：** 7
 
@@ -63,7 +63,7 @@ constructor(
 createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyOneWay<T>
 ```
 
-创建单向同步属性。数据变更仅从数据源向订阅者单向传播。订阅关系不再需要时，应调用[unlinkSuscriber()](#unlinksuscriber)解除 订阅（订阅者ID通过IPropertySubscriber.[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）， 或由返回的SyncedPropertyOneWay对象 的[aboutToBeDeleted()](arkts-arkui-syncedpropertyoneway-c-sys.md#abouttobedeleted)方法处理取消订阅。
+创建单向同步属性。数据变更仅从数据源向订阅者单向传播。订阅关系不再需要时，应调用[unlinkSuscriber()](#unlinksuscriber)解除 订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）， 或由返回的[SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md)对象 的[aboutToBeDeleted()](arkts-arkui-syncedpropertyoneway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **起始版本：** 7
 
@@ -92,7 +92,7 @@ createOneWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedProper
 createTwoWaySync(subscribeMe?: IPropertySubscriber, info?: string): SyncedPropertyTwoWay<T>
 ```
 
-创建双向同步属性。数据变更在数据源与订阅者之间双向传播。与[createOneWaySync](#createonewaysync)相比，该方法支持 数据源与订阅者之间的双向同步，适用于订阅者也需要反向修改数据源的场景；若仅需数据源向订阅者单向同步， 请使用[createOneWaySync](#createonewaysync)。订阅关系不再需要时， 应调用[unlinkSuscriber()](#unlinksuscriber)解除订阅（订阅者ID 通过IPropertySubscriber.[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）， 或由返回的SyncedPropertyTwoWay对象 的[aboutToBeDeleted()](arkts-arkui-syncedpropertytwoway-c-sys.md#abouttobedeleted)方法处理取消订阅。
+创建双向同步属性。数据变更在数据源与订阅者之间双向传播。与[createOneWaySync](#createonewaysync)相比，该方法支持 数据源与订阅者之间的双向同步，适用于订阅者也需要反向修改数据源的场景；若仅需数据源向订阅者单向同步， 请使用[createOneWaySync](#createonewaysync)。订阅关系不再需要时， 应调用[unlinkSuscriber()](#unlinksuscriber)解除订阅（订阅者ID 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取）， 或由返回的[SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md)对象 的[aboutToBeDeleted()](arkts-arkui-syncedpropertytwoway-c-sys.md#abouttobedeleted)方法处理取消订阅。
 
 **起始版本：** 7
 
@@ -217,7 +217,7 @@ unlinkSuscriber(subscriberId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriberId | number | 是 | 要解除订阅的订阅者ID，需为已通过[createTwoWaySync](#createtwowaysync) 或[createOneWaySync](#createonewaysync)建立订阅关系的订阅者ID， 通过IPropertySubscriber.[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
+| subscriberId | number | 是 | 要解除订阅的订阅者ID，需为已通过[createTwoWaySync](#createtwowaysync) 或[createOneWaySync](#createonewaysync)建立订阅关系的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## id_
 

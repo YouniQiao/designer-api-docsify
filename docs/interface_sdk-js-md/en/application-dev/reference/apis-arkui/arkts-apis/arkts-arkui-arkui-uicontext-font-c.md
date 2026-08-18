@@ -53,7 +53,7 @@ Obtains information about a system font based on the font name.
 getSystemFontList(): Array<string>
 ```
 
-Obtains the list of supported fonts. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) API to obtain the latest system-supported font list data.
+Obtains the list of supported fonts. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
 
 **Since:** 10
 

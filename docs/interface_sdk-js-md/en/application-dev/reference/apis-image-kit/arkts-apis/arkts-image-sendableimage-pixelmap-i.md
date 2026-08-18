@@ -2,7 +2,7 @@
 
 Sendable PixelMap instance.
 
-**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md#isendable)
+**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md)
 
 **Since:** 12
 

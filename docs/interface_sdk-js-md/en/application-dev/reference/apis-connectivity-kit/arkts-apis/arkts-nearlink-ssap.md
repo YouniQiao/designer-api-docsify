@@ -22,29 +22,29 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) | Creates a SSAP client instance. |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) | Creates a SSAP server instance. |
+| [createClient](arkts-connectivity-ssap-createclient-f.md) | Creates a SSAP client instance. |
+| [createServer](arkts-connectivity-ssap-createserver-f.md) | Creates a SSAP server instance. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) to create a ssap client instance. |
+| [Client](arkts-connectivity-ssap-client-i.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance. |
 | [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Describes SSAP connection state. |
 | [Property](arkts-connectivity-ssap-property-i.md) | Describes the SSAP property. |
 | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Describes the SSAP descriptor for property. |
 | [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Describes the parameters of the SSAP client's property read request. |
 | [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Describes the parameters of the SSAP client's property write request. |
-| [Server](arkts-connectivity-ssap-server-i.md) | Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) to create a SSAP server instance. |
+| [Server](arkts-connectivity-ssap-server-i.md) | Manages SSAP server. Before calling a SSAP server method, you must use [createServer](arkts-connectivity-ssap-createserver-f.md) to create a SSAP server instance. |
 | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Describes the parameters of a response send by the server to a specified read or write request. |
 | [Service](arkts-connectivity-ssap-service-i.md) | Describes the SSAP service. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i-sys.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) to create a ssap client instance. |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md) to create a ssap client instance. |
 | [Event](arkts-connectivity-ssap-event-i-sys.md) | Describes the SSAP event. |
 | [Method](arkts-connectivity-ssap-method-i-sys.md) | Describes the SSAP method. |
 | [Service](arkts-connectivity-ssap-service-i-sys.md) | Describes the SSAP service. |

@@ -20,16 +20,16 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability) | Checks whether Host Card Emulation(HCE) capability is supported. |
-| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice) | Checks whether a service is default for given type. |
-| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported) | Checks whether a specified type of card emulation is supported. &lt;p&gt;This method is used to check Whether the host or secure element supports card emulation. |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) | Checks whether Host Card Emulation(HCE) capability is supported. |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md) | Checks whether a service is default for given type. |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md) | Checks whether a specified type of card emulation is supported. &lt;p&gt;This method is used to check Whether the host or secure element supports card emulation. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md#getpaymentservices) | Gets all payment services. |
+| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md) | Gets all payment services. |
 <!--DelEnd-->
 
 ### Classes

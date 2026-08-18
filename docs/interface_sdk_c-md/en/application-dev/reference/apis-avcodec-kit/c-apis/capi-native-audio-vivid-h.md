@@ -98,7 +98,7 @@ Creates an Audio Vivid metadata builder.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder or format parameter is a null pointer or invalid.<br>     <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): This function is not supported on the device.<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): Failed to create the builder. This is an unknown error. Check the log for details. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder or format parameter is a null pointer or invalid.      <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): This function is not supported on the device.      <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): Failed to create the builder. This is an unknown error. Check the log for details. |
 
 ### OH_AudioVividMetaBuilder_UpdateObjectPos()
 
@@ -124,7 +124,7 @@ Updates the position of the audio object when the Audio Vivid signal format is[O
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the objectIndex<br>     or pos parameter is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the objectIndex      or pos parameter is invalid. |
 
 ### OH_AudioVividMetaBuilder_UpdateObjectGain()
 
@@ -150,7 +150,7 @@ Updates the linear gain of audio object rendering when the Audio Vivid signal fo
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the objectIndex<br>     or gain parameter is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the objectIndex      or gain parameter is invalid. |
 
 ### OH_AudioVividMetaBuilder_GetMetaLen()
 
@@ -176,7 +176,7 @@ Obtains the length of metadata.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the len parameter<br>     is a null pointer. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, or the len parameter      is a null pointer. |
 
 ### OH_AudioVividMetaBuilder_GetMeta()
 
@@ -203,7 +203,7 @@ Obtains the metadata buffer.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, the buffer parameter<br>     is a null pointer, or the len parameter value is insufficient. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer or invalid, the buffer parameter      is a null pointer, or the len parameter value is insufficient. |
 
 ### OH_AudioVividMetaBuilder_Destroy()
 
@@ -227,7 +227,7 @@ Destroys an Audio Vivid metadata builder and releases resources.
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The builder parameter is a null pointer. |
 
 ### OH_AudioVividMetaBuilder_CreateEmptyBuilder()
 
@@ -256,7 +256,7 @@ Creates an empty Audio Vivid metadata builder.This function is used for merging 
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): builder is nullptr.<br>     <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): current device not support this function.<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): create builder fail with unknown error. For details, check logs. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): builder is nullptr.      <br>[AV_ERR_UNSUPPORT](capi-native-averrors-h.md#oh_averrcode): current device not support this function.      <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): create builder fail with unknown error. For details, check logs. |
 
 ### OH_AudioVividMetaBuilder_UpdateBaseMeta()
 
@@ -285,7 +285,7 @@ Updates the base metadata of the builder.The buffer contains complete Audio Vivi
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, buffer is nullptr or len is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, buffer is nullptr or len is invalid. |
 
 ### OH_AudioVividMetaBuilder_AddObject()
 
@@ -313,7 +313,7 @@ Adds a new audio object to the builder.After adding an object, you can update it
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is nullptr.<br>     <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode), add object fail with unknown error. For details, check logs. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is nullptr.      <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode), add object fail with unknown error. For details, check logs. |
 
 ### OH_AudioVividMetaBuilder_RemoveObject()
 
@@ -338,6 +338,6 @@ Removes an audio object from the builder.Only objects added by [OH_AudioVividMet
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.<br>     <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful.      <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is invalid. |
 
 

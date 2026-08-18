@@ -9,7 +9,7 @@ import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -17,7 +17,7 @@ import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

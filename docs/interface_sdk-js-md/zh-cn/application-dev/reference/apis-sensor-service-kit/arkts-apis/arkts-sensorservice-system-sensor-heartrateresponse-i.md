@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md#heartrateresponse)
+**替代接口：** [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## heartRate

@@ -1,8 +1,8 @@
 # LayeredDrawableDescriptor
 
-当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#drawabledescriptorloadedresult)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
+当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
 
-**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#drawabledescriptor)
+**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 10
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -13,7 +13,6 @@ A picker view to show available streaming device list.
 ```TypeScript
 import { AVCastPicker } from '@kit.AVSessionKit';
 import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## activeColor

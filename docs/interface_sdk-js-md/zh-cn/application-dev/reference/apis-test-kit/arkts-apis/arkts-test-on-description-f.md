@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## description
@@ -24,7 +26,7 @@ Specifies the description for the target Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | val | string | 是 | the description value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#matchpattern) of description value,set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) if null or undefined. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md) of description value,set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#equals) if null or undefined. |
 
 **返回值：**
 

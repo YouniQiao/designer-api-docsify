@@ -11,6 +11,7 @@ NavDestination组件信息，由系统返回给开发者。
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index

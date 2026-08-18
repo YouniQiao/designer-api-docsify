@@ -244,7 +244,7 @@ onError(event: VoidCallback | ErrorCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) \| undefined | Yes |  |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 

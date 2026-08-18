@@ -12,7 +12,6 @@ Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix f
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

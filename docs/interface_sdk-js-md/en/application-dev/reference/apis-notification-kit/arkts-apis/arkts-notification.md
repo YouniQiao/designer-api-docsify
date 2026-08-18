@@ -6,7 +6,7 @@ The **Notification** module provides notification management capabilities, cover
 
 **Deprecated since:** 9
 
-**Substitutes:** [notificationManager](arkts-notificationmanager.md#ohosnotificationmanager)
+**Substitutes:** [notificationManager](arkts-notificationmanager.md)
 
 <!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
 
@@ -16,8 +16,6 @@ The **Notification** module provides notification management capabilities, cover
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
@@ -47,8 +45,8 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots) | Obtains all notification slots of this application. This API uses a promise to return the result. |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the result. |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | Checks whether this device supports distributed notifications. This API uses a promise to return the result. |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate) to publish a notification. This API uses an asynchronous callback to return the result. |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#notificationtemplate) to publish a notification. This API uses a promise to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses an asynchronous callback to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses a promise to return the result. |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish) | Publishes a notification. This API uses an asynchronous callback to return the result. |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish) | Publishes a notification. This API uses a promise to return the result. |
 | [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots) | Removes all notification slots. This API uses an asynchronous callback to return the result. |
@@ -59,7 +57,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) | Requests notification to be enabled for this application. This API uses a promise to return the result. |
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
@@ -133,7 +131,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Notification key. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -149,7 +147,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [SlotType](arkts-notification-notification-slottype-depr-e.md) | Enumerates the notification slot types. |
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

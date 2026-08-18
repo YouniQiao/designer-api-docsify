@@ -14,7 +14,6 @@ Describes the parameters for requesting efficiency resources.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cpuLevel

@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { application } from '@kit.AbilityKit';
-import { application } from '@kit.AbilityKit';
 ```
 
 ## createBundleContext
@@ -13,7 +12,7 @@ import { application } from '@kit.AbilityKit';
 export function createBundleContext(context: Context, bundleName: string): Promise<Context>
 ```
 
-Creates the context for an application. This API uses a promise to return the result. > **NOTE：**> > Starting from API version 18, the context can obtain the > [process name](arkts-ability-context-c.md#context) of the current > application. The **processName** property in the context created by **createBundleContext** is the same as the > **processName** property in the input parameter **Context**. The values of other properties are obtained based on > the input parameters **Context**, **bundleName**, and **moduleName**.
+Creates the context for an application. This API uses a promise to return the result. > **NOTE：**> > Starting from API version 18, the context can obtain the > [process name](arkts-ability-context-c.md) of the current > application. The **processName** property in the context created by **createBundleContext** is the same as the > **processName** property in the input parameter **Context**. The values of other properties are obtained based on > the input parameters **Context**, **bundleName**, and **moduleName**.
 
 **Since:** 23
 

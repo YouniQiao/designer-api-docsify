@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { overlay } from '@kit.AbilityKit';
-import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfo
@@ -26,7 +25,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#overlaymoduleinfo) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

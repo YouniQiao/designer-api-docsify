@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## setPermissionUsedRecordToggleStatus
@@ -13,7 +12,7 @@ import { privacyManager } from '@kit.AbilityKit';
 function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 ```
 
-Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord-system-api) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord-system-api) API does not generate permission usage records, and deletes the current user's historical records.
+Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API does not generate permission usage records, and deletes the current user's historical records.
 
 **Since:** 23
 
@@ -68,7 +67,7 @@ privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
 function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: int): Promise<void>
 ```
 
-Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord-system-api) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord-system-api) API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
+Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result. When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
 
 **Since:** 26.1.0
 
@@ -87,7 +86,7 @@ Sets whether permission usage records are collected for a specified sub-profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | status | boolean | Yes | Setting of the permission usage record switch. The value **true** means the switch is toggled on; the value **false** means the opposite. |
-| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
+| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
 
 **Return value:**
 

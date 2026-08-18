@@ -4,7 +4,7 @@
 export type UidNetStatsInfo = Record<int, NetStatsInfo>
 ```
 
-[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#netstatsinfo) for every UID. Key is UID.
+[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md) for every UID. Key is UID.
 
 **Since:** 23
 

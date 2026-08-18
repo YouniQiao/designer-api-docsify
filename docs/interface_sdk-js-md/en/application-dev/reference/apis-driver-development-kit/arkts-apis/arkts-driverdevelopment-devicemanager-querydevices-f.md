@@ -26,7 +26,7 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| busType | int | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md#bustype). If this parameter is left empty, all types of devices are searched. |
+| busType | int | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md). If this parameter is left empty, all types of devices are searched. |
 
 **Return value:**
 

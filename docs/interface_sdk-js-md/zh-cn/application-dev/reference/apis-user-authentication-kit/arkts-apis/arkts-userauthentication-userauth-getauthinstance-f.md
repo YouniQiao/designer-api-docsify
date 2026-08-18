@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthInstance
@@ -17,7 +19,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 **废弃版本：** 10
 
-**替代接口：** [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance)
+**替代接口：** [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)
 
 <!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance--><!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance-End-->
 

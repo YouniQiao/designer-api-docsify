@@ -2,7 +2,7 @@
 
 Defines a touch event.
 
-**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#inputevent)
+**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
 **Since:** 23
 

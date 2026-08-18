@@ -21,7 +21,7 @@ Obtains the IP information of a Wi-Fi connection. &lt;p&gt;The IP information in
 
 **Deprecated since:** 9
 
-**Substitutes:** [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getipinfo)
+**Substitutes:** [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

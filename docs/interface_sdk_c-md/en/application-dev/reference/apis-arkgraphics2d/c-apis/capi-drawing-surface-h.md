@@ -100,7 +100,7 @@ Obtains a canvas from an **OH_Drawing_Surface** object.This API may return an er
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Canvas*](capi-drawing-oh-drawing-canvas.md) | Returns a pointer to the created [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) object. The pointer returned does not need to be<br> managed by the caller. |
+| [OH_Drawing_Canvas*](capi-drawing-oh-drawing-canvas.md) | Returns a pointer to the created [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) object. The pointer returned does not need to be  managed by the caller. |
 
 ### OH_Drawing_SurfaceFlush()
 
@@ -124,7 +124,7 @@ Pushes the drawing content from an **OH_Drawing_Surface** object to the GPU for 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if surface is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if surface is NULL. |
 
 ### OH_Drawing_SurfaceDestroy()
 

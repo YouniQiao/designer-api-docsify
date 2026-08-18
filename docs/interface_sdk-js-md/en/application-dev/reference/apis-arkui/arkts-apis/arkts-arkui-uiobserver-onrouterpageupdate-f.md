@@ -6,7 +6,7 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_routerPageUpdate
+## on_routerPageUpdate('routerPageUpdate')
 
 ```TypeScript
 export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void
@@ -30,7 +30,7 @@ Subscribes to state changes of the page during routing.
 | --- | --- | --- | --- |
 | type | 'routerPageUpdate' | Yes | Event type. The value is fixed at **'routerPageUpdate'**, which indicates the state change event of the page during routing. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | Yes | Callback used to return the result. If **pageInfo** is passed, the current page state is returned. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RouterPageInfo&gt; | Yes | Callback used to return the result. If **pageInfo** is passed, the current page state is returned. |
 
 **Examples**
 

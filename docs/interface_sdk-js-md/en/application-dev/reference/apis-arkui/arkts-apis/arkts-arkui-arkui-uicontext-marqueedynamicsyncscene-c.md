@@ -2,7 +2,7 @@
 
 Represents a dynamic synchronization scene of Marquee.
 
-**Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md#dynamicsyncscene)
+**Inheritance/Implementation:** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
 **Since:** 14
 

@@ -2,7 +2,7 @@
 
 Options for the custom-style dialog. The dialog content is provided as the first parameter of present() method, not inside this options object.
 
-**Inheritance/Implementation:** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md#dialogbaseoptions)
+**Inheritance/Implementation:** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
 **Since:** 26.1.0
 

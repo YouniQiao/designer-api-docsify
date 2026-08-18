@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## has
@@ -11,7 +12,7 @@
 function has(obj: object, property: string): boolean
 ```
 
-检查ArkTS对象是否包含某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md#parse)解析JSON字符串之后。 has接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串，传入非字典形式的对象时无法正确判断属性是否存在。
+检查ArkTS对象是否包含某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md)解析JSON字符串之后。 has接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串，传入非字典形式的对象时无法正确判断属性是否存在。
 
 **起始版本：** 12
 

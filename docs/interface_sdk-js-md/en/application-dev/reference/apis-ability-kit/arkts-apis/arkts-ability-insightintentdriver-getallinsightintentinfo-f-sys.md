@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## getAllInsightIntentInfo
@@ -31,7 +30,7 @@ Obtains the information about all intents on the current device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intentFlags | int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#insightintentinfo-system-api)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#getinsightintentflag-system-api). |
+| intentFlags | int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md). |
 
 **Return value:**
 

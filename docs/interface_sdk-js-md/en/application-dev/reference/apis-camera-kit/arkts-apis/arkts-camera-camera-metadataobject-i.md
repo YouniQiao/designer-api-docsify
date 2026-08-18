@@ -1,6 +1,6 @@
 # MetadataObject
 
-Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md#camerainput). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
+Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
 
 **Since:** 23
 

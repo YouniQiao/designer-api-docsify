@@ -18,7 +18,7 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -31,7 +31,7 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-system-api)(networkId: string)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
 

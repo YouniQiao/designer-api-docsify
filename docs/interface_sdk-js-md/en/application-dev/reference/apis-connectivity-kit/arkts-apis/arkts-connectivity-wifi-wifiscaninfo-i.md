@@ -6,7 +6,7 @@ Describes the scanned Wi-Fi information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md#wifiscaninfo)
+**Substitutes:** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)
 
 <!--Device-wifi-interface WifiScanInfo--><!--Device-wifi-interface WifiScanInfo-End-->
 

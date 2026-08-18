@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## isProxy
@@ -21,7 +23,7 @@
 isProxy?: boolean
 ```
 
-默认为false，如果为true，则要创建的[DataShareHelper](#datasharehelperoptions系统接口)处于代理模式，所有操作都不会打开数据提供者APP，除非数据库不存在， 当数据库不存在时， [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper系统接口) 会拉起数据提供者创建数据库。
+默认为false，如果为true，则要创建的[DataShareHelper](#datasharehelperoptions系统接口)处于代理模式，所有操作都不会打开数据提供者APP，除非数据库不存在， 当数据库不存在时， [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) 会拉起数据提供者创建数据库。
 
 **类型：** boolean
 

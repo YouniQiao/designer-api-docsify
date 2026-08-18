@@ -11,6 +11,7 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 ## 导入模块
 
 ```TypeScript
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -19,8 +20,8 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | 从Want中获取请求方的RequestCallback。 |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | 从Want中获取请求方的RequestInfo。 |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) | 从Want中获取请求方的RequestCallback。 |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | 从Want中获取请求方的RequestInfo。 |
 
 ### 接口
 

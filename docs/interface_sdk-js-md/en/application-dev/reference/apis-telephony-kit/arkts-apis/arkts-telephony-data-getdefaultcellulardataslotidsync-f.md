@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function getDefaultCellularDataSlotIdSync(): int
 ```
 
-Get the default cellular data card.
+Obtains the default SIM card used for mobile data synchronously.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Get the default cellular data card.
 
 | Type | Description |
 | --- | --- |
-| int | Returns default cellular data slot id. |
+| int | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2 <br>- **2**: slot ID of the mobile data in the eSIM and SkyTone scenarios. |
 
 **Examples**
 

@@ -1,6 +1,6 @@
 # InterfaceStateInfo (System API)
 
-The interface is used to monitor network interface status changes.
+Listens for status changes of an Ethernet NIC.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { ethernet } from '@kit.NetworkKit';
 active: boolean
 ```
 
-Check if it is active.
+Whether the Ethernet NIC is activated. The value **true** indicates that the Ethernet NIC is activated, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ Check if it is active.
 iface: string
 ```
 
-Define network card name.
+Name of the Ethernet NIC.
 
 **Type:** string
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## sendShortMessage
@@ -25,8 +26,8 @@ function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发送短信的回调函数。 |
+| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发送短信的回调函数。 |
 
 **错误码：**
 
@@ -94,7 +95,7 @@ function sendShortMessage(options: SendMessageOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md#sendmessageoptions)。 |
+| options | [SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md) | 是 | 发送短信的参数和回调，参考[SendMessageOptions](arkts-telephony-sms-sendmessageoptions-i.md)。 |
 
 **返回值：**
 

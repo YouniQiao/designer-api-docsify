@@ -12,7 +12,7 @@ import { sharing } from '@kit.NetworkKit';
 function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the names of interfaces in each sharing state.
+Obtains the names of NICs in the specified network sharing state. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ Obtains the names of interfaces in each sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Is the network sharing state. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Returns an array of interface names that meet this status. |
+| state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Network sharing state. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of NIC names. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ sharing.getSharingIfaces(SHARING_BLUETOOTH, (error: BusinessError, data: string[
 function getSharingIfaces(state: SharingIfaceState): Promise<Array<string>>
 ```
 
-Obtains the names of interfaces in each sharing state.
+Obtains the names of NICs in the specified network sharing state. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -78,13 +78,13 @@ Obtains the names of interfaces in each sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Is the network sharing state. |
+| state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Network sharing state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array of NIC names. |
 
 **Error codes:**
 

@@ -1,8 +1,8 @@
 # TLSSocketConnection
 
-Defines the connection of the TLSSocket client and server.
+Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object. > **NOTE：**> > The TLSSocket client can call related APIs through the **TLSSocketConnection** object only after a connection is > successfully established between the TLSSocket client and the server.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-export interface TLSSocketConnection--><!--Device-socket-export interface TLSSocketConnection-End-->
 
@@ -20,9 +20,9 @@ import { socket } from '@kit.NetworkKit';
 close(callback: AsyncCallback<void>): void
 ```
 
-Closes a TLSSocket client connection.
+Closes a **TLSSocketServer** connection. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void-End-->
 
@@ -32,7 +32,7 @@ Closes a TLSSocket client connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of close. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -93,9 +93,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 close(): Promise<void>
 ```
 
-Closes a TLSSocket client connection.
+Closes a **TLSSocketServer** connection. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-close(): Promise<void>--><!--Device-TLSSocketConnection-close(): Promise<void>-End-->
 
@@ -105,7 +105,7 @@ Closes a TLSSocket client connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -162,9 +162,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getCipherSuite(callback: AsyncCallback<Array<string>>): void
 ```
 
-Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Obtains the cipher suite negotiated by both communication parties after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -174,7 +174,7 @@ Returns a list containing the negotiated cipher suite information. For example:{
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | The callback of getCipherSuite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -234,9 +234,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getCipherSuite(): Promise<Array<string>>
 ```
 
-Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Obtains the cipher suite negotiated by both communication parties after a **TLSSocketServer** connection is established. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>-End-->
 
@@ -246,7 +246,7 @@ Returns a list containing the negotiated cipher suite information. For example:{
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -303,9 +303,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local address of a TLSSocketServer connection.
+Obtains the local socket address of a **TLSSocketConnection** connection. This API uses a promise to return the result. > **NOTE：**> > Call this API only after the **TLSSocketServer** connection is successfully established.
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -315,7 +315,7 @@ Obtains the local address of a TLSSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -323,7 +323,7 @@ Obtains the local address of a TLSSocketServer connection.
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -372,9 +372,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 ```
 
-Obtains the peer address of a TLSSocketServer connection.
+Obtains the remote address of a TLS socket server connection. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
@@ -384,7 +384,7 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | The callback of getRemoteAddress. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation is successful, the remote address is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -392,7 +392,7 @@ Obtains the peer address of a TLSSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -442,9 +442,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getRemoteAddress(): Promise<NetAddress>
 ```
 
-Obtains the peer address of a TLSSocketServer connection.
+Obtains the remote address of a TLS socket server connection. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>-End-->
 
@@ -454,14 +454,14 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -509,9 +509,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
+Obtains the digital certificate of the peer end after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result. It applies only to the scenario where the client sends a certificate to the server.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
@@ -521,7 +521,7 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | The callback of getRemoteCertificate. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -537,9 +537,9 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 getRemoteCertificate(): Promise<X509CertRawData>
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
+Obtains the digital certificate of the peer end after a **TLSSocketServer** connection is established. This API uses a promise to return the result. It applies only to the scenario where the client sends a certificate to the server.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>-End-->
 
@@ -549,7 +549,7 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | The promise returned by the function. |
+| Promise&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -564,9 +564,9 @@ getRemoteCertificate(): Promise<X509CertRawData>
 getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
+Obtains the signing algorithm negotiated by both communication parties after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -576,7 +576,7 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | The callback of getSignatureAlgorithms. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -634,9 +634,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getSignatureAlgorithms(): Promise<Array<string>>
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
+Obtains the signing algorithm negotiated by both communication parties after a **TLSSocketServer** connection is established. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
@@ -646,7 +646,7 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -701,9 +701,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the TLSSocketConnection.
+Obtains the file descriptor of a TLSSocketConnection connection. This API uses a promise to return the result. > **NOTE：**> > - Call this API only after the **TLSSocketServer** connection is successfully established. > > - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the > close API is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket > connection, instead of directly operating the file descriptor.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -715,7 +715,7 @@ Obtains the file descriptor of the TLSSocketConnection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returns the file descriptor of the TLS socket connection. |
+| Promise&lt;int&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -763,15 +763,15 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## off_close
+## off_close('close')
 
 ```TypeScript
 off(type: 'close', callback?: Callback<void>): void
 ```
 
-Cancels listening for close events of the TLSSocketConnection.
+Unsubscribes from **close** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
 
@@ -781,8 +781,8 @@ Cancels listening for close events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback of off. |
+| type | 'close' | Yes | Event type.<br/> **close**: close event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -833,13 +833,13 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Cancels listening for error events of the TLSSocketConnection.
+Unsubscribes from **error** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -851,8 +851,8 @@ Cancels listening for error events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | The callback of off. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -903,15 +903,15 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## off_message
+## off_message('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 ```
 
-Cancels listening for message receiving events of the TLSSocketConnection.
+Unsubscribes from **message** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 10
 
 <!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
@@ -921,8 +921,8 @@ Cancels listening for message receiving events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | The callback of off. |
+| type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. If the operation is successful, the TLS socket connection information is returned. If the operation fails, an error message is returned.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -981,15 +981,15 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## on_close
+## on_close('close')
 
 ```TypeScript
 on(type: 'close', callback: Callback<void>): void
 ```
 
-Listens for close events of the TLSSocketConnection.
+Subscribes to **close** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
 
@@ -999,8 +999,8 @@ Listens for close events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback of on. |
+| type | 'close' | Yes | Event type.<br/> **close**: close event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1046,13 +1046,13 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Listens for error events of the TLSSocketConnection.
+Subscribes to **error** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1064,8 +1064,8 @@ Listens for error events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | The callback of on. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1112,15 +1112,15 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## on_message
+## on_message('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
 ```
 
-Listens for message receiving events of the TLSSocketConnection.
+Subscribes to **message** events of the **TLSSocketConnection** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 10
 
 <!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
@@ -1130,8 +1130,8 @@ Listens for message receiving events of the TLSSocketConnection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | The callback of on. |
+| type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the TLS socket connection information is returned. If the operation fails, an error message is returned.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -1192,9 +1192,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a TLSSocketServer connection to client.
+Sends a message to the client after a **TLSSocketServer** connection is established. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
@@ -1204,8 +1204,8 @@ Sends data over a TLSSocketServer connection to client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Parameters for sending data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of send. |
+| data | string \| ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1267,9 +1267,9 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 send(data: string | ArrayBuffer): Promise<void>
 ```
 
-Sends data over a TLSSocketServer connection to client.
+Sends a message to the server after a **TLSSocketServer** connection is established. This API uses a promise to return the result.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>-End-->
 
@@ -1279,13 +1279,13 @@ Sends data over a TLSSocketServer connection to client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| ArrayBuffer | Yes | Parameters for sending data. |
+| data | string \| ArrayBuffer | Yes | Parameters for sending data over a TLS socket server connection.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1345,11 +1345,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 clientId: int
 ```
 
-The id of a client connects to the TLSSocketServer.
+ID of the connection between the client and TLSSocketServer.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-TLSSocketConnection-clientId: int--><!--Device-TLSSocketConnection-clientId: int-End-->
 

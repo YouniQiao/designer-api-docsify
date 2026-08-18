@@ -4,9 +4,9 @@
 type NetAddress = connection.NetAddress
 ```
 
-Get a network address.
+Obtains the network address.
 
-**Since:** 12
+**Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

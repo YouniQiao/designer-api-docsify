@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedOpenAllowed
@@ -11,7 +12,7 @@
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#embeddableuiability)。使用Promise异步回调。
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
 
 **起始版本：** 23
 

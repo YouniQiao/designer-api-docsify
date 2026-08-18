@@ -1,8 +1,8 @@
 # MutableStyledString
 
-继承于[StyledString](arkts-arkui-styledstring-c.md#styledstring)类。 > **以下接口异常入参处理统一说明：** > > 当start和length越界或者必填传入undefined时，会抛出异常； > > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
+继承于[StyledString](arkts-arkui-styledstring-c.md)类。 > **以下接口异常入参处理统一说明：** > > 当start和length越界或者必填传入undefined时，会抛出异常； > > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
 
-**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md#styledstring)
+**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
 
 **起始版本：** 12
 
@@ -125,7 +125,7 @@ insertStyledString(start: number, other: StyledString): void
 removeString(start: number, length: number): void
 ```
 
-移除指定范围的字符串。 当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md#customspan)时，同样生效。
+移除指定范围的字符串。 当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md)时，同样生效。
 
 **起始版本：** 12
 

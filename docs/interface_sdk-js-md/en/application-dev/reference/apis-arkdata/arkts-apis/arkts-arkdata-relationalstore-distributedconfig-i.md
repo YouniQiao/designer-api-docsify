@@ -12,7 +12,6 @@ Defines a struct for distributed configuration of a table.
 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
 ```
 
 ## assetConflictPolicy

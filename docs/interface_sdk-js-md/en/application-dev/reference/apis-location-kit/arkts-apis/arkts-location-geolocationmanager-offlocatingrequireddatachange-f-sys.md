@@ -28,7 +28,7 @@ Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md)&gt;&gt; | No | Indicates the callback for reporting WiFi/BT scan info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md)&gt;&gt; | No | Indicates the callback for reporting WiFi/BT scan info. |
 
 **Error codes:**
 

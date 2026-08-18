@@ -6,7 +6,7 @@ Defines the key album information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#albumkeys)
+**Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md)
 
 <!--Device-userFileManager-enum AlbumKey--><!--Device-userFileManager-enum AlbumKey-End-->
 
@@ -17,7 +17,7 @@ Defines the key album information.
 ## URI
 
 ```TypeScript
-URI
+URI = 0
 ```
 
 URI of the album.
@@ -28,7 +28,7 @@ URI of the album.
 
 **Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#uri)
 
-<!--Device-AlbumKey-URI--><!--Device-AlbumKey-URI-End-->
+<!--Device-AlbumKey-URI = 0--><!--Device-AlbumKey-URI = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ URI of the album.
 ## FILE_TYPE
 
 ```TypeScript
-FILE_TYPE
+FILE_TYPE = 1
 ```
 
 Type of the file.
@@ -46,9 +46,9 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#albumtype)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
 
-<!--Device-AlbumKey-FILE_TYPE--><!--Device-AlbumKey-FILE_TYPE-End-->
+<!--Device-AlbumKey-FILE_TYPE = 1--><!--Device-AlbumKey-FILE_TYPE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ Type of the file.
 ## ALBUM_NAME
 
 ```TypeScript
-ALBUM_NAME
+ALBUM_NAME = 2
 ```
 
 Name of the album.
@@ -66,9 +66,9 @@ Name of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#albumname)
+**Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#album_name)
 
-<!--Device-AlbumKey-ALBUM_NAME--><!--Device-AlbumKey-ALBUM_NAME-End-->
+<!--Device-AlbumKey-ALBUM_NAME = 2--><!--Device-AlbumKey-ALBUM_NAME = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -77,7 +77,7 @@ Name of the album.
 ## DATE_ADDED
 
 ```TypeScript
-DATE_ADDED
+DATE_ADDED = 3
 ```
 
 Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -86,9 +86,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#datemodified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
 
-<!--Device-AlbumKey-DATE_ADDED--><!--Device-AlbumKey-DATE_ADDED-End-->
+<!--Device-AlbumKey-DATE_ADDED = 3--><!--Device-AlbumKey-DATE_ADDED = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -97,7 +97,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 ## DATE_MODIFIED
 
 ```TypeScript
-DATE_MODIFIED
+DATE_MODIFIED = 4
 ```
 
 Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -106,9 +106,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#datemodified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
 
-<!--Device-AlbumKey-DATE_MODIFIED--><!--Device-AlbumKey-DATE_MODIFIED-End-->
+<!--Device-AlbumKey-DATE_MODIFIED = 4--><!--Device-AlbumKey-DATE_MODIFIED = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

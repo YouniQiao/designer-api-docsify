@@ -1,8 +1,8 @@
 # Portrait（系统接口）
 
-Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#portraitquery系统接口). Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md). Provides the APIs for portrait photo settings.
 
-**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#portraitquery系统接口)
+**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
 
 **起始版本：** 23
 
@@ -15,6 +15,8 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getPortraitEffect

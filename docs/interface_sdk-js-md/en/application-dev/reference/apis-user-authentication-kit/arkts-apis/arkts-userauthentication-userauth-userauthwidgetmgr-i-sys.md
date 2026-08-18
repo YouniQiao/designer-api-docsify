@@ -14,8 +14,6 @@ Defines the identity authentication widget manager. It is used to register custo
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
@@ -48,7 +46,7 @@ Unsubscribes from commands sent from the user authentication framework.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## off_command
+## off_command('command')
 
 ```TypeScript
 off(type: 'command', callback?: IAuthWidgetCallback): void
@@ -69,7 +67,7 @@ Unsubscribes from command events from the user authentication framework. The aut
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'command' | Yes | Event type to subscribe to. The value **'command'** indicates that the event that the user authentication framework sends commands to the identity authentication widget is unsubscribed. |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No | Callback to unregister, which must be the same as the callback passed in the **on** method. If this parameter is not passed, all registered callbacks are unregistered. Before using the **off** API, ensure that the corresponding callback has been registered through the [on](#oncommand) method. |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No | Callback to unregister, which must be the same as the callback passed in the **on** method. If this parameter is not passed, all registered callbacks are unregistered. Before using the **off** API, ensure that the corresponding callback has been registered through the [on](#on_commandcommand) method. |
 
 **Error codes:**
 
@@ -129,7 +127,7 @@ Subscribes to commands from the user authentication framework for the user authe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
-## on_command
+## on_command('command')
 
 ```TypeScript
 on(type: 'command', callback: IAuthWidgetCallback): void

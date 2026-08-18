@@ -32,7 +32,7 @@ Called when the requested image is ready. If an error occurs, **data** returned 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md#picture) type. |
+| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md) type. |
 | imageSource | image.ImageSource | Yes | Data of the image asset that is ready. |
 | map | Map&lt;string, string&gt; | Yes | Additional information about the image asset, such as the image quality. Currently, only **quality** is supported. |
 

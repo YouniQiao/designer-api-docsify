@@ -1,8 +1,8 @@
 # AutoExposure
 
-AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery)。 自动曝光类，对设备自动曝光（AE）操作。
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。 自动曝光类，对设备自动曝光（AE）操作。
 
-**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#autoexposurequery)
+**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureMode
@@ -121,7 +123,7 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
 
 ## onExposureStateChange
 
@@ -145,7 +147,7 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
 
 ## setExposureBias
 
@@ -167,7 +169,7 @@ setExposureBias(exposureBias: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | double | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。 <br>曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。 <br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#cameraerrorcode)。 |
+| exposureBias | double | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。 <br>曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。 <br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 

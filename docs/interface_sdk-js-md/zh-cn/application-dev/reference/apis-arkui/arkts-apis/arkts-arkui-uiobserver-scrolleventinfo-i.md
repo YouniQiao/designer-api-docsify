@@ -11,6 +11,7 @@ ScrollEvent info.
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## axis

@@ -25,7 +25,7 @@ Obtains data of the gravity sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.GRAVITY | Yes | Sensor type. The value is fixed at **SensorId.GRAVITY**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | Callback used to report the sensor data, which is a **GravityResponse** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | Callback used to report the sensor data, which is a **GravityResponse** object. |
 
 **Error codes:**
 

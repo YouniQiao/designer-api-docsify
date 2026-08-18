@@ -1,8 +1,8 @@
 # VideoProfile
 
-视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md#profile)。
+视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md)。
 
-**继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md#profile)
+**继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## frameRateRange

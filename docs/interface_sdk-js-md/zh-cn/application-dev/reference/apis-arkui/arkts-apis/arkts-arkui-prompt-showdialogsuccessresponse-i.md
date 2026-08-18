@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogSuccessResponse](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogsuccessresponse-i.md#showdialogsuccessresponse)
+**替代接口：** [ShowDialogSuccessResponse](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogsuccessresponse-i.md)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## index

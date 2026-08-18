@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## offSimStateChange
@@ -23,7 +24,7 @@ Cancel callback when the sim state is updated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | 否 | Indicates the callback to unsubscribe from the simStateChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SimStateData](arkts-telephony-observer-simstatedata-i.md)&gt; | 否 | Indicates the callback to unsubscribe from the simStateChange event. |
 
 **错误码：**
 

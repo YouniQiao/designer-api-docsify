@@ -16,7 +16,7 @@ Enumerates executable actions for accessibility node elements. An accessibility 
 ACCESSIBILITY_FOCUS = 0
 ```
 
-Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
+Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ Select a component.
 SET_TEXT = 10
 ```
 
-Sets the text of a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).setText parameter must be configured, with the parameter value being the text content to set.
+Sets the text of a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).setText parameter must be configured, with the parameter value being the text content to set.
 
 **Since:** 23
 
@@ -192,7 +192,7 @@ Sets the text of a component. The [Parameter](arkts-accessibility-accessibilitye
 SCROLL_FORWARD = 11
 ```
 
-Scrolls a component forward (toward the end of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
+Scrolls a component forward (toward the end of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
 
@@ -208,7 +208,7 @@ Scrolls a component forward (toward the end of the content). The [Parameter](ark
 SCROLL_BACKWARD = 12
 ```
 
-Scrolls a component backward (toward the beginning of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
+Scrolls a component backward (toward the beginning of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
 
@@ -224,7 +224,7 @@ Scrolls a component backward (toward the beginning of the content). The [Paramet
 SET_SELECTION = 13
 ```
 
-Selects a text range within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextBegin, [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextEnd, and [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).selectTextInForWard parameters must be configured, with the parameter values being the start coordinate, end coordinate of the selected text, and whether to select forward.
+Selects a text range within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextBegin, [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextEnd, and [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextInForWard parameters must be configured, with the parameter values being the start coordinate, end coordinate of the selected text, and whether to select forward.
 
 **Since:** 23
 
@@ -240,7 +240,7 @@ Selects a text range within a component. The [Parameter](arkts-accessibility-acc
 SET_CURSOR_POSITION = 14
 ```
 
-Sets the cursor position within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).offset parameter must be configured, with the parameter value being the character offset of the cursor.
+Sets the cursor position within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).offset parameter must be configured, with the parameter value being the character offset of the cursor.
 
 **Since:** 23
 
@@ -336,7 +336,7 @@ Displays the control center.
 SPAN_CLICK = 20
 ```
 
-Performs a click operation on partial text. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).spanId parameter must be configured, with the parameter value being the hyperlink text ID.
+Performs a click operation on partial text. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).spanId parameter must be configured, with the parameter value being the hyperlink text ID.
 
 **Since:** 23
 
@@ -352,7 +352,7 @@ Performs a click operation on partial text. The [Parameter](arkts-accessibility-
 INJECT_ACTION = 21
 ```
 
-Injects an action that simulates a user operation. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).injectActionType parameter must be configured, with the parameter value being the injection action type.
+Injects an action that simulates a user operation. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).injectActionType parameter must be configured, with the parameter value being the injection action type.
 
 **Since:** 26.0.0
 
@@ -370,7 +370,7 @@ Injects an action that simulates a user operation. The [Parameter](arkts-accessi
 EXECUTE_CUSTOM_ACTION = 22
 ```
 
-Executes a custom action. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#parameter-system-api).customAction parameter must be configured, with the parameter value being the name of the custom action.
+Executes a custom action. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).customAction parameter must be configured, with the parameter value being the name of the custom action.
 
 **Since:** 26.0.0
 

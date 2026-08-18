@@ -1,6 +1,6 @@
 # Schema
 
-表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributeddata-options-i.md#options)中。
+表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributeddata-options-i.md)中。
 
 **起始版本：** 8
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## constructor

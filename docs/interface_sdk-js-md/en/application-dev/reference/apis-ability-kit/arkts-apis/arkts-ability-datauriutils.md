@@ -1,24 +1,12 @@
 # @ohos.ability.dataUriUtils
 
-/*
- Copyright (c) 2021-2023 Huawei Device Co., Ltd.
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- http://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- /
-
+The DataUriUtils module provides APIs to process URI objects. You can use the APIs to attach an ID to the end of a given URI and obtain, delete, or update the ID attached to the end of a given URI. > **NOTE：**> > The APIs of this module are supported since API version 7 and deprecated since API version 9. You are advised to > use [@ohos.app.ability.dataUriUtils](arkts-app-ability-datauriutils.md) instead. Newly added APIs > will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [dataUriUtils](arkts-app-ability-datauriutils.md#ohosappabilitydatauriutils)
+**Substitutes:** [dataUriUtils](arkts-app-ability-datauriutils.md)
 
 <!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 

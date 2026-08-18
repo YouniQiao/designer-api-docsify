@@ -19,17 +19,17 @@ import { windowAnimationManager } from '@kit.ArkUI';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation) | Minimize the window target with animation. |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation-system-api) | Minimize the window target with animation. |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | Set the window animation controller. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | Minimize the window target with animation. |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | Set the window animation controller. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -40,7 +40,7 @@ import { windowAnimationManager } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

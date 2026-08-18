@@ -21,7 +21,7 @@
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#gestureinterface).
+Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
 
 **Since:** 8
 

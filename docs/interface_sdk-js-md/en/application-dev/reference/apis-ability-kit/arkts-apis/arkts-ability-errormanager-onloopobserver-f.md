@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
-import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_loopObserver
+## on_loopObserver('loopObserver')
 
 ```TypeScript
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void

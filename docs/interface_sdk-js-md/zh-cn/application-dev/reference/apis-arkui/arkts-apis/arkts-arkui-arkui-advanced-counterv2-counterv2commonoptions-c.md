@@ -11,6 +11,7 @@ CounterV2CommonOptions定义了CounterV2的共通属性和事件。
 ## 导入模块
 
 ```TypeScript
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## focusable

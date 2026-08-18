@@ -50,7 +50,7 @@ Defines the pointer to an OH_DisplaySoloist callback function.
 
 | Parameter | Description |
 | -- | -- |
-| (long long timestamp | Current frame VSync timestamp. |
+| long long timestamp | Current frame VSync timestamp. |
 | long long targetTimestamp | Expected VSync timestamp of the next frame. |
 | void\* data | Pointer to user-defined data. |
 
@@ -76,7 +76,7 @@ Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance 
 
 | Type | Description |
 | -- | -- |
-| [OH_DisplaySoloist*](capi-nativedisplaysoloist-oh-displaysoloist.md) | Returns the pointer to the [OH_DisplaySoloist](capi-nativedisplaysoloist-oh-displaysoloist.md) instance created if the operation is successful;<br> returns a null pointer otherwise. The failure cause may be out of memory. |
+| [OH_DisplaySoloist*](capi-nativedisplaysoloist-oh-displaysoloist.md) | Returns the pointer to the [OH_DisplaySoloist](capi-nativedisplaysoloist-oh-displaysoloist.md) instance created if the operation is successful;  returns a null pointer otherwise. The failure cause may be out of memory. |
 
 ### OH_DisplaySoloist_Destroy()
 

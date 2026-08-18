@@ -14,6 +14,12 @@ Declares the event loop interfaces in C.
 
 ## Summary
 
+### Struct
+
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [ffrt_loop_t](capi-ffrt-ffrt-loop-t.md) | ffrt_loop_t | Loop handle, which identifies different loops. |
+
 ### Function
 
 | Name | Description |
@@ -44,13 +50,13 @@ Creates a loop on the specified queue for running an event loop.
 
 | Parameter | Description |
 | -- | -- |
-| ffrt_queue_t queue | Indicates a queue. |
+| [ffrt_queue_t](capi-ffrt-ffrt-queue-t.md) queue | Indicates a queue. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API ffrt_loop_t | A non-null loop handle if the loop is created;<br>         a null pointer otherwise. |
+| FFRT_C_API ffrt_loop_t | A non-null loop handle if the loop is created;          a null pointer otherwise. |
 
 ### ffrt_loop_destroy()
 
@@ -74,7 +80,7 @@ Destroys a loop.Call this interface to release the resources associated with the
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the loop is destroyed;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the loop is destroyed;          `-1` otherwise. |
 
 ### ffrt_loop_run()
 
@@ -98,7 +104,7 @@ Starts a loop run.This function occupies the calling thread, running the event l
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the loop run succeeds;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the loop run succeeds;          `-1` otherwise. |
 
 **Reference**:
 
@@ -155,7 +161,7 @@ Controls an epoll file descriptor on ffrt loop.Adds, modifies, or deletes the mo
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the operation succeeds;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the operation succeeds;          `-1` otherwise. |
 
 ### ffrt_loop_timer_start()
 
@@ -213,7 +219,7 @@ Stops a timer on ffrt loop.After this call, the timer no longer fires.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | `0` if the operation succeeds;<br>         `-1` otherwise. |
+| FFRT_C_API int | `0` if the operation succeeds;          `-1` otherwise. |
 
 **Reference**:
 

@@ -2,7 +2,7 @@
 
 V2装饰的变量。
 
-**继承/实现关系：** IDecoratedV2Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md#idecoratedvariable)
+**继承/实现关系：** IDecoratedV2Variable extends [IDecoratedVariable](arkts-na-decorator-idecoratedvariable-i.md)
 
 **起始版本：** 23
 

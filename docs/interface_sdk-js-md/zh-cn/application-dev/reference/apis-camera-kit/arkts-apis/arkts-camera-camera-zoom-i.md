@@ -1,8 +1,8 @@
 # Zoom
 
-Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)。 变焦类，对设备变焦操作。
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。 变焦类，对设备变焦操作。
 
-**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)
+**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,8 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)。 变焦
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getZoomRatio

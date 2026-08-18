@@ -14,7 +14,6 @@ Provides APIs for uploading and downloading assets.
 
 ```TypeScript
 import { cloudExtension } from '@kit.ArkData';
-import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## download

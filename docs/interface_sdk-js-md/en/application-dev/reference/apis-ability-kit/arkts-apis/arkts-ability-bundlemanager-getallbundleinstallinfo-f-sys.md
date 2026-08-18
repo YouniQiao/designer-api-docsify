@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInstallInfo
@@ -65,7 +64,7 @@ Obtains the install information of all apps.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | The install information. |
+| Promise&lt;Array&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;&gt; | The install information. |
 
 **Error codes:**
 

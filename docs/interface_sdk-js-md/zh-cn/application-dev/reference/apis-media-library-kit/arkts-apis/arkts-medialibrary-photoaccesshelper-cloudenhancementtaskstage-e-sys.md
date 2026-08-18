@@ -1,6 +1,6 @@
 # CloudEnhancementTaskStage（系统接口）
 
-枚举，应用查询云增强任务状态时，在[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md#cloudenhancement系统接口)接口中返回，表示云增强任务状态。
+枚举，应用查询云增强任务状态时，在[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md)接口中返回，表示云增强任务状态。
 
 **起始版本：** 23
 

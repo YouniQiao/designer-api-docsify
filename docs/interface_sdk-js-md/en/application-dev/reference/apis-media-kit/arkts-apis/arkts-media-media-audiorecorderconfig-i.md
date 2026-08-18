@@ -6,7 +6,7 @@ Provides the audio recorder configuration definitions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#avrecorderconfig)
+**Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)
 
 <!--Device-media-interface AudioRecorderConfig--><!--Device-media-interface AudioRecorderConfig-End-->
 

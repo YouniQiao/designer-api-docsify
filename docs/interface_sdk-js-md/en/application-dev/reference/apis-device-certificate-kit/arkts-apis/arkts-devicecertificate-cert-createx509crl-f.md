@@ -29,7 +29,7 @@ Creates an **X509CRL** instance. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | Serialized CRL data. The data length cannot exceed 8192 bytes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509CRL** instance created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509CRL** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

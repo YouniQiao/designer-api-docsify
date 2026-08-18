@@ -17,7 +17,7 @@ Obtains file information. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statsync)
+**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md)
 
 <!--Device-unnamed-declare function statSync(path: string): Stat--><!--Device-unnamed-declare function statSync(path: string): Stat-End-->
 

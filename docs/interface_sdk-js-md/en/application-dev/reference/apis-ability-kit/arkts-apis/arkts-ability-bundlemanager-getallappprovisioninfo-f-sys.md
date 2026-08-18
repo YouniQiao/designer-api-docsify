@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllAppProvisionInfo
@@ -29,7 +28,7 @@ Obtains the provision configuration file information of all applications based o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) .<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
+| userId | int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) .<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
 
 **Return value:**
 

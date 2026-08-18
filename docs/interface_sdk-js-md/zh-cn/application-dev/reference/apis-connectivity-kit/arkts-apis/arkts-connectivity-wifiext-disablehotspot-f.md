@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## disableHotspot
@@ -17,7 +18,7 @@ function disableHotspot(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [disableHotspot](arkts-connectivity-wifimanagerext-disablehotspot-f.md#disablehotspot)
+**替代接口：** [disableHotspot](arkts-connectivity-wifimanagerext-disablehotspot-f.md)
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

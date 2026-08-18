@@ -19,22 +19,22 @@ import { backup } from '@kit.CoreFileKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) | Requests filesystem garbage collection with specified configuration. |
-| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) | Get Backup information from bundle. |
-| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) | Obtain the backupVersion. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-system-api) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-system-api) | Obtain a json file that describes local capabilities. |
-| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) | Update send file fd rate. |
-| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) | Update backup or restore timeout. |
+| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md) | Requests filesystem garbage collection with specified configuration. |
+| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md) | Get Backup information from bundle. |
+| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md) | Obtain the backupVersion. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a Json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a Json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a json file that describes local capabilities. |
+| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md) | Update send file fd rate. |
+| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md) | Update backup or restore timeout. |
 <!--DelEnd-->
 
 <!--Del-->
-### Classes（系统接口）
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
@@ -51,7 +51,7 @@ import { backup } from '@kit.CoreFileKit';
 | [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md) | Corresponds to an incremental application, including its last incremental time and incremental list. |
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -67,7 +67,7 @@ import { backup } from '@kit.CoreFileKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Types（系统接口）
+### Types(System API)
 
 | Name | Description |
 | --- | --- |

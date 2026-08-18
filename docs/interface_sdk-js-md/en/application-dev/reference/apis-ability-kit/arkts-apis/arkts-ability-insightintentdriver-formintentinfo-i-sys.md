@@ -14,7 +14,6 @@ Describes the parameters supported by the @InsightIntentForm decorator, such as 
 
 ```TypeScript
 import { insightIntentDriver } from '@kit.AbilityKit';
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -43,7 +42,7 @@ Ability name.
 readonly formName: string
 ```
 
-Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#formextensionability).
+Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md).
 
 **Type:** string
 

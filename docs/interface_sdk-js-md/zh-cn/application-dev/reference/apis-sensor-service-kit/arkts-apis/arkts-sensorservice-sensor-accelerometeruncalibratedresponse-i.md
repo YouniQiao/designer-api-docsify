@@ -1,8 +1,8 @@
 # AccelerometerUncalibratedResponse
 
-未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#response)。
+未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
-**继承/实现关系：** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**继承/实现关系：** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## biasX

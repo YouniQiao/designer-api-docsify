@@ -1,8 +1,8 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。 继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md#timepickeroptions)。
+时间选择器弹窗选项。 继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
 
-**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#timepickeroptions)
+**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
 
 **起始版本：** 8
 
@@ -527,7 +527,7 @@ shadow?: ShadowOptions | ShadowStyle
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md#immersiveoptions)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#immersivematerial)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的效果，该接口影响背景色backgroundColor、 > 背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
+设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的效果，该接口影响背景色backgroundColor、 > 背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
 
 **类型：** SystemUiMaterial
 

@@ -16,7 +16,7 @@ Defines the configuration mode of the Ethernet connection.
 STATIC = 0
 ```
 
-WAN Static configuration.
+Static network configuration for an Ethernet connection.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ WAN Static configuration.
 DHCP = 1
 ```
 
-WAN Dynamic configuration.
+Dynamic network configuration for an Ethernet connection.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ WAN Dynamic configuration.
 LAN_STATIC = 2
 ```
 
-LAN Static configuration.
+Static network configuration for a LAN connection.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ LAN Static configuration.
 LAN_DHCP = 3
 ```
 
-LAN Dynamic configuration.
+Dynamic network configuration for a LAN connection.
 
 **Since:** 11
 

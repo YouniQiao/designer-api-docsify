@@ -2,7 +2,7 @@
 
 Holds the data transferred between worker threads.
 
-**Inheritance/Implementation:** MessageEvent extends [Event](arkts-arkts-worker-event-i.md#event)
+**Inheritance/Implementation:** MessageEvent extends [Event](arkts-arkts-worker-event-i.md)
 
 **Since:** 7
 

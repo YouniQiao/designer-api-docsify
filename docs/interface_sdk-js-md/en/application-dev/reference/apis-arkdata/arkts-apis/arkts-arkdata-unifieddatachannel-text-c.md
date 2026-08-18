@@ -1,8 +1,8 @@
 # Text
 
-Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord) and a base class of text data. You are advised to use the child class of **Text**, for example, [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md#plaintext), [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md#hyperlink), and [HTML](arkts-arkdata-unifieddatachannel-html-c.md#html), to describe data.
+Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of text data. You are advised to use the child class of **Text**, for example, [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md), [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md), and [HTML](arkts-arkdata-unifieddatachannel-html-c.md), to describe data.
 
-**Inheritance/Implementation:** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#unifiedrecord)
+**Inheritance/Implementation:** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
 **Since:** 23
 
@@ -13,7 +13,6 @@ Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

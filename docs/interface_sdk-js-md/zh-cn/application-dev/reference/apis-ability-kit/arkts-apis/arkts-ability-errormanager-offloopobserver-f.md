@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_loopObserver
+## off_loopObserver('loopObserver')
 
 ```TypeScript
 function off(type: 'loopObserver', observer?: LoopObserver): void

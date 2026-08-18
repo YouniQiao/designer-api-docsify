@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContactsByEmail
@@ -11,7 +12,7 @@
 function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -30,7 +31,7 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -54,7 +55,7 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
 function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -70,7 +71,7 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -106,7 +107,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data
 function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -126,7 +127,7 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空默认使用系统联系人应用查询。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -155,7 +156,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -172,7 +173,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 | context | Context | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则使用系统联系人应用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -212,7 +213,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -232,7 +233,7 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的id、key、Emails属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -259,7 +260,7 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -276,7 +277,7 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 | context | Context | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的id、key、Emails属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -314,7 +315,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -335,7 +336,7 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 | email | string | 是 | 联系人的邮箱地址。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的id、key、Emails属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -365,7 +366,7 @@ contact.queryContactsByEmail('xxx@email.com', {
 function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -383,7 +384,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 | email | string | 是 | 联系人的邮箱地址。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的id、key、Emails属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -425,7 +426,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -477,7 +478,7 @@ promise.then((data) => {
 function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#querycontact) 接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 

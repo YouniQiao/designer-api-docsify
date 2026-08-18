@@ -30,8 +30,23 @@ Radio(options: RadioOptions)
 
 ## 汇总
 
-- [RadioConfiguration](arkts-arkui-radioconfiguration-i.md)
-- [RadioOptions](arkts-arkui-radiooptions-i.md)
-- [RadioStyle](arkts-arkui-radiostyle-i.md)
-- [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)
-- [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md)
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。 |
+| [RadioOptions](arkts-arkui-radiooptions-i.md) | 单选框的信息。 |
+| [RadioStyle](arkts-arkui-radiostyle-i.md) | 单选框的样式。 |
+
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | 单选框选中状态改变时触发的回调函数类型定义。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | 单选框的样式。 |
+

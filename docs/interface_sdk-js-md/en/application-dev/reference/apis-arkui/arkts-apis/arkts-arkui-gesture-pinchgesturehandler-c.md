@@ -2,7 +2,7 @@
 
 Defines the PinchGesture handler.
 
-**Inheritance/Implementation:** PinchGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#gesturehandler)
+**Inheritance/Implementation:** PinchGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 Represents a request for changing multiple assets.
 
-**Inheritance/Implementation:** MediaAssetsChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**Inheritance/Implementation:** MediaAssetsChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **Since:** 23
 
@@ -298,7 +298,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-Used to verify the [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest) type. <br>If a class (such as **MediaAssetsChangeRequest**) object can be accessed, it is an implementation class of **MediaChangeRequest**.
+Used to verify the [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) type. <br>If a class (such as **MediaAssetsChangeRequest**) object can be accessed, it is an implementation class of **MediaChangeRequest**.
 
 **Type:** string
 

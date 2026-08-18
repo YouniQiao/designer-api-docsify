@@ -6,7 +6,7 @@ Satellite status information
 
 **Deprecated since:** 9
 
-**Substitutes:** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satellitestatusinfo)
+**Substitutes:** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md)
 
 **Required permissions:** ohos.permission.LOCATION
 

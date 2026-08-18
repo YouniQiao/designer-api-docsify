@@ -2,7 +2,7 @@
 
 着色器，继承自SceneResource。
 
-**继承/实现关系：** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#sceneresource)
+**继承/实现关系：** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
 **起始版本：** 23
 

@@ -56,7 +56,7 @@ Indicates whether the descriptor is writable. Default value: true.
 propertyUuid: string
 ```
 
-The UUID of the [Property](arkts-connectivity-ssap-property-i.md#property) instance which the propertyDescriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the [Property](arkts-connectivity-ssap-property-i.md) instance which the propertyDescriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ The UUID of the [Property](arkts-connectivity-ssap-property-i.md#property) insta
 serviceUuid: string
 ```
 
-The UUID of the [Service](arkts-connectivity-ssap-service-i.md#service) instance which the master property of descriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
+The UUID of the [Service](arkts-connectivity-ssap-service-i.md) instance which the master property of descriptor belongs to. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

@@ -14,7 +14,7 @@
 DEFAULT = 0
 ```
 
-使用&lt;!--Del--&gt;父级EffectComponent定义的&lt;!--DelEnd--&gt;效果模板进行定义。
+使用<!--Del-->父级EffectComponent定义的<!--DelEnd-->效果模板进行定义。
 
 **起始版本：** 14
 

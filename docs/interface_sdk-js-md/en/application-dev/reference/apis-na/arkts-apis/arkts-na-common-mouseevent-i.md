@@ -2,7 +2,7 @@
 
 The mouse click action triggers this method invocation.
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **Since:** 23
 

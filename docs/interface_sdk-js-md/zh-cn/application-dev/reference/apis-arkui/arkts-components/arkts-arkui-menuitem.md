@@ -26,3 +26,8 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 ## 汇总
 
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+

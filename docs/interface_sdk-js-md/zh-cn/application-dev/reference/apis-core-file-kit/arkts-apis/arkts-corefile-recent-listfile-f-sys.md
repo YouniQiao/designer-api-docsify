@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## listFile

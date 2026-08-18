@@ -84,7 +84,7 @@ Sets the {@link onError} callback for the **EmbeddedComponent** component. This 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_EmbeddedComponentOption](capi-arkui-nativemodule-arkui-embeddedcomponentoption.md)\* option | Pointer to the **EmbeddedComponent** option object. |
+| rkUI_EmbeddedComponentOption\* option | Pointer to the **EmbeddedComponent** option object. |
 | void (\*callback)(int32_t code | Callback function that will called when error occurs during the running ofthe **EmbeddedComponent** component |
 
 ### OH_ArkUI_EmbeddedComponentOption_SetOnTerminated()
@@ -103,7 +103,7 @@ Sets the {@link onTerminated} callback for the **EmbeddedComponent** component. 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_EmbeddedComponentOption](capi-arkui-nativemodule-arkui-embeddedcomponentoption.md)\* option | Pointer to the **EmbeddedComponent** option object. |
+| rkUI_EmbeddedComponentOption\* option | Pointer to the **EmbeddedComponent** option object. |
 | void (\*callback)(int32_t code | Callback function that will called when the **EmbeddedComponent** component exits properly. |
 
 

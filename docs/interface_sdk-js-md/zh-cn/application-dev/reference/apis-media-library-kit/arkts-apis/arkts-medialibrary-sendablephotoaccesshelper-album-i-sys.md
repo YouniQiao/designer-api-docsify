@@ -2,7 +2,7 @@
 
 实体相册
 
-**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md#absalbum)
+**继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-sendablephotoaccesshelper-absalbum-i.md)
 
 **起始版本：** 12
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getFaceId
@@ -49,7 +50,7 @@ getFaceId(): Promise<string>
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md#ohosfilesendablephotoaccesshelper)的示例使用。
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

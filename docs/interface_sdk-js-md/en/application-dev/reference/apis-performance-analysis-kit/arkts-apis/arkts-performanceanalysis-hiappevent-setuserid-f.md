@@ -12,7 +12,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function setUserId(name: string, value: string): void
 ```
 
-Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#processor) is configured.
+Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured.
 
 **Since:** 23
 

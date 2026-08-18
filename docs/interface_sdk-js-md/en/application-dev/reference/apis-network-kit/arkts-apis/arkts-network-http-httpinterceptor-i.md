@@ -1,8 +1,8 @@
 # HttpInterceptor
 
-Defines an HTTP Interceptor. User can implement this interface to define the handle function.
+Defines the HTTP interceptor API, which is used to define the interception processing function.
 
-**Since:** 26.0.0
+**Since:** 22
 
 <!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
 
@@ -20,11 +20,11 @@ import { http } from '@kit.NetworkKit';
 interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
 ```
 
-Intercept an HTTP process and do changes as disired.
+Intercepts the HTTP processing and modifies it as required.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
 
@@ -41,7 +41,7 @@ Intercept an HTTP process and do changes as disired.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continue the HTTP process or terminate then return the HTTP response. |
+| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continues the HTTP processing or stops and returns an HTTP response. |
 
 **Examples**
 
@@ -91,9 +91,9 @@ The type of this interceptor. It defines when this intercptor would be called.
 
 **Type:** [InterceptorType](arkts-network-http-interceptortype-e.md)
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HttpInterceptor-interceptorType: InterceptorType--><!--Device-HttpInterceptor-interceptorType: InterceptorType-End-->
 

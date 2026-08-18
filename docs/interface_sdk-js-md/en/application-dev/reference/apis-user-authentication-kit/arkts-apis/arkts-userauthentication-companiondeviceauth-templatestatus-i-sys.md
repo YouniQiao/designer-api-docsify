@@ -14,7 +14,6 @@ Describes the complete status information about a registered companion device au
 
 ```TypeScript
 import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## addedTime
@@ -63,7 +62,7 @@ Device status information. It specifies the current status of the companion devi
 enabledBusinessIds: int[]
 ```
 
-List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids-system-api) API.
+List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md) API.
 
 **Type:** int[]
 

@@ -1,8 +1,8 @@
 # TextPickerDialogOptions
 
-文本选择器弹窗的参数继承自[TextPickerOptions](arkts-na-textpicker-textpickeroptions-i.md#textpickeroptions)。 默认值： { color: \$r('sys.color.comp_background_tertiary'), borderRadius: \$r('sys.float.corner_radius_level12') }
+文本选择器弹窗的参数继承自[TextPickerOptions](arkts-na-textpicker-textpickeroptions-i.md)。 默认值： { color: \$r('sys.color.comp_background_tertiary'), borderRadius: \$r('sys.float.corner_radius_level12') }
 
-**继承/实现关系：** TextPickerDialogOptions extends [TextPickerOptions](arkts-na-textpicker-textpickeroptions-i.md#textpickeroptions)
+**继承/实现关系：** TextPickerDialogOptions extends [TextPickerOptions](arkts-na-textpicker-textpickeroptions-i.md)
 
 **起始版本：** 23
 

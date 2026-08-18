@@ -12,7 +12,6 @@ Represents optional configuration items for the **NumberFormat** object.
 
 ```TypeScript
 import { i18n } from '@kit.LocalizationKit';
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## decimal

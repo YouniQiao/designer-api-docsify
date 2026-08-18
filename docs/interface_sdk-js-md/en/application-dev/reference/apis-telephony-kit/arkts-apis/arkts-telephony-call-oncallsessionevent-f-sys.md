@@ -28,7 +28,7 @@ Subscribe to the callSessionEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CallSessionEvent. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of CallSessionEvent. |
 
 **Error codes:**
 

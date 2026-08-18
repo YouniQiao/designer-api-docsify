@@ -1,8 +1,8 @@
 # TCPSocketServer
 
-Defines a TCPSocket server connection.
+Defines a TCP socket server connection. Before calling TCPSocketServer APIs, you need to call [socket.constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md) to create a **TCPSocketServer** object.
 
-**Since:** 26.0.0
+**Since:** 10
 
 <!--Device-socket-export interface TCPSocketServer--><!--Device-socket-export interface TCPSocketServer-End-->
 
@@ -20,9 +20,9 @@ import { socket } from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-Close the TCPSocketServer. Close the TCPSocketServer listening port.
+Stops listening for events of the **TCPSocketServer** object and releases the port bound by [listen](#listen). If [listen](#listen) has been called for multiple times, all listening ports of the **TCPSocketServer** object are released when this API is called. This API uses a promise to return the result. > **NOTE：**> > This API does not close existing connections. To close connections, call the > [close](arkts-network-socket-tcpsocketconnection-i.md#close) API of > [TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md).
 
-**Since:** 26.0.0
+**Since:** 20
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -34,7 +34,7 @@ Close the TCPSocketServer. Close the TCPSocketServer listening port.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -74,9 +74,9 @@ tcpServer.listen(listenAddr).then(() => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local address of a TCPSocketServer connection.
+Obtains the local socket address of a **TCPSocketServer** connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 12
 
 <!--Device-TCPSocketServer-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocketServer-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -86,7 +86,7 @@ Obtains the local address of a TCPSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ Obtains the local address of a TCPSocketServer connection.
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 
 **Examples**
 
@@ -125,9 +125,9 @@ tcpServer.listen(listenAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the TCPSocketServer.
+Obtains the file descriptor bound to the TCPSocketServer listening port. This API uses a promise to return the result. > **NOTE：**> > - This method can be called only after the > [listen](#listen) method is > successfully called. When listen is called for multiple times, the file descriptor bound to the latest > listening port is obtained. > > - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after > close is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](#close) method to close the socket connection, instead of directly > operating the file descriptor.
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -139,7 +139,7 @@ Obtains the file descriptor of the TCPSocketServer.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The promise returns the file descriptor of the TCP socket server. |
+| Promise&lt;int&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -177,9 +177,9 @@ tcpServer.listen(listenAddr).then(() => {
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-Obtains the status of the TCPSocketServer connection.
+Obtains the status of a TCP socket server connection. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -191,7 +191,7 @@ Obtains the status of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | The callback of getState. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -199,7 +199,7 @@ Obtains the status of the TCPSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -236,9 +236,9 @@ tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of the TCPSocketServer connection.
+Obtains the status of a TCP socket server connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -250,14 +250,14 @@ Obtains the status of the TCPSocketServer connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | The promise returned by the function. |
+| Promise&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -292,9 +292,9 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 listen(address: NetAddress, callback: AsyncCallback<void>): void
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system. &lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses an asynchronous callback to return the result. > **NOTE：**> > The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind** > operation fails, the system randomly allocates a port number.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -306,8 +306,8 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Network address information NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of listen. |
+| address | NetAddress | Yes | Destination address. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -348,9 +348,9 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 listen(address: NetAddress): Promise<void>
 ```
 
-Binds the IP address and port number, the port number can be specified or randomly allocated by the system. &lt;p&gt;Listens for a TCPSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.&lt;/p&gt;
+Binds the IP address and port number. The port number can be specified or randomly allocated by the system. The server listens to and accepts TCP socket connections established over the socket. Multiple threads are used to process client data concurrently. This API uses a promise to return the result. > **NOTE：**> > The server uses this API to perform the **bind**, **listen**, and **accept** operations. If the **bind** > operation fails, the system randomly allocates a port number.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -362,13 +362,13 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Network address information NetAddress. |
+| address | NetAddress | Yes | Destination address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -401,15 +401,15 @@ tcpServer.listen(listenAddr).then(() => {
 });
 ```
 
-## off_connect
+## off_connect('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<TCPSocketConnection>): void
 ```
 
-Cancels listening for connect events of the TCPSocketServer connection.
+Unsubscribes from **connect** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TCPSocketServer-off(type: 'connect', callback?: Callback<TCPSocketConnection>): void--><!--Device-TCPSocketServer-off(type: 'connect', callback?: Callback<TCPSocketConnection>): void-End-->
 
@@ -419,8 +419,8 @@ Cancels listening for connect events of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)&gt; | No | The callback of off. |
+| type | 'connect' | Yes | Event type.<br/> **connect**: connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -457,13 +457,13 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 })
 ```
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Cancels listening for error events of the TCPSocketServer connection.
+Unsubscribes from **error** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -475,8 +475,8 @@ Cancels listening for error events of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | The callback of off. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -513,15 +513,15 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 })
 ```
 
-## on_connect
+## on_connect('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 ```
 
-Listens for connect events of the TCPSocketServer connection.
+Subscribes to **connect** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 24
+**Since:** 10
 
 <!--Device-TCPSocketServer-on(type: 'connect', callback: Callback<TCPSocketConnection>): void--><!--Device-TCPSocketServer-on(type: 'connect', callback: Callback<TCPSocketConnection>): void-End-->
 
@@ -531,8 +531,8 @@ Listens for connect events of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)&gt; | Yes | The callback of on. |
+| type | 'connect' | Yes | Event type.<br/> **connect**: connection event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TCPSocketConnection](arkts-network-socket-tcpsocketconnection-i.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -565,13 +565,13 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 })
 ```
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Listens for error events of the TCPSocketServer connection.
+Subscribes to **error** events of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
 **Since:** 10
 
@@ -583,8 +583,8 @@ Listens for error events of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | The callback of on. |
+| type | 'error' | Yes | Event type.<br/> **error**: error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -623,9 +623,9 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets other attributes of the TCPSocketServer connection.
+Sets other properties of the **TCPSocketServer** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -637,8 +637,8 @@ Sets other attributes of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setExtraOptions. |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TCPSocketServer** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -646,7 +646,7 @@ Sets other attributes of the TCPSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
@@ -699,9 +699,9 @@ tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions): Promise<void>
 ```
 
-Sets other attributes of the TCPSocketServer connection.
+Sets other properties of the **TCPSocketServer** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **listen** is successfully called.
 
-**Since:** 26.0.0
+**Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -713,13 +713,13 @@ Sets other attributes of the TCPSocketServer connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Parameters of the attributes [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#tcpextraoptions). |
+| options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Other properties of the **TCPSocketServer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -727,7 +727,7 @@ Sets other attributes of the TCPSocketServer connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-non-sockets) | Socket operation on non-socket. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**

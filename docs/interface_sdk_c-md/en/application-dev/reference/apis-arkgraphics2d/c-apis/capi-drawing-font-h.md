@@ -454,7 +454,7 @@ Measures the width of a single character. If the typeface of the current font do
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, str, or textWidth is NULL,<br>  or the length of str is 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, str, or textWidth is NULL,   or the length of str is 0. |
 
 ### OH_Drawing_FontMeasureSingleCharacterWithFeatures()
 
@@ -481,7 +481,7 @@ Measures the width of a single character with font features. If the typeface of 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, str, fontFeatures,<br>  or textWidth is NULL, or the length of str is 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, str, fontFeatures,   or textWidth is NULL, or the length of str is 0. |
 
 ### OH_Drawing_FontMeasureText()
 
@@ -510,7 +510,7 @@ Obtains the text width and bounding box.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, text, and textWidth is<br> NULL, or byteLength is 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if at least one of the parameters font, text, and textWidth is  NULL, or byteLength is 0. |
 
 ### OH_Drawing_FontMeasureTextWithBrushOrPen()
 
@@ -541,7 +541,7 @@ Obtains the width and bounding box of the text with a brush or pen.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, text, or textWidth is NULL, byteLength<br>  is 0, or a brush and a pen both exist. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, text, or textWidth is NULL, byteLength   is 0, or a brush and a pen both exist. |
 
 ### OH_Drawing_FontGetWidthsBounds()
 
@@ -571,7 +571,7 @@ Obtains the width and bounding box of each glyph in a glyph array.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or glyphs is NULL, count is not greater<br> than 0, a brush and a pen both exist, or both widths and bounds are NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or glyphs is NULL, count is not greater  than 0, a brush and a pen both exist, or both widths and bounds are NULL. |
 
 ### OH_Drawing_FontGetPos()
 
@@ -599,7 +599,7 @@ Obtains the relative position of each glyph from the specified origin.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, glyphs, and points is NULL, or count<br> is less than or equal to 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, glyphs, and points is NULL, or count  is less than or equal to 0. |
 
 ### OH_Drawing_FontGetSpacing()
 
@@ -624,7 +624,7 @@ Obtains the recommended line spacing for a font.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or spacing is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or spacing is NULL. |
 
 ### OH_Drawing_FontSetLinearText()
 
@@ -995,7 +995,7 @@ Obtains the rectangular bounding box for each glyph in the glyph array.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, glyphs, or bounds is NULL or count is 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if any of font, glyphs, or bounds is NULL or count is 0. |
 
 ### OH_Drawing_FontGetPathForGlyph()
 
@@ -1021,7 +1021,7 @@ Obtains the path of a glyph.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> OH_DRAWING_ERROR_INVALID_PARAMETER if font or path is NULL or the specified glyph does not exist. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  OH_DRAWING_ERROR_INVALID_PARAMETER if font or path is NULL or the specified glyph does not exist. |
 
 ### OH_Drawing_FontGetTextPath()
 
@@ -1051,7 +1051,7 @@ Obtains the text outline path.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following error codes:<br> Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br> Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text, or path is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following error codes:  Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.  Returns [OH_DRAWING_ERROR_INVALID_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text, or path is NULL. |
 
 ### OH_Drawing_FontGetTextPathWithFallback()
 
@@ -1081,7 +1081,7 @@ Gets the path outline for the given text with font fallback support.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.<br>         Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.<br>         Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text or path is nullptr, or<br>                 byteLength is 0. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the error code.          Returns [OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.          Returns [OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text or path is nullptr, or                  byteLength is 0. |
 
 ### OH_Drawing_FontFeaturesCreate()
 
@@ -1099,7 +1099,7 @@ Creates an **OH_Drawing_FontFeatures** object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontFeatures*](capi-drawing-oh-drawing-fontfeatures.md) | Returns a pointer to the created [OH_Drawing_FontFeatures](capi-drawing-oh-drawing-fontfeatures.md) object.<br> If a null pointer is returned, the creation fails. A possible cause is that no memory is available. |
+| [OH_Drawing_FontFeatures*](capi-drawing-oh-drawing-fontfeatures.md) | Returns a pointer to the created [OH_Drawing_FontFeatures](capi-drawing-oh-drawing-fontfeatures.md) object.  If a null pointer is returned, the creation fails. A possible cause is that no memory is available. |
 
 ### OH_Drawing_FontFeaturesAddFeature()
 
@@ -1125,7 +1125,7 @@ Adds a font feature to an **OH_Drawing_FontFeatures** object.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if fontFeatures or name is a null pointer. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if fontFeatures or name is a null pointer. |
 
 ### OH_Drawing_FontFeaturesDestroy()
 
@@ -1149,7 +1149,7 @@ Destroys an **OH_Drawing_FontFeatures** object and reclaims the memory occupied 
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if fontFeatures is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result.  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if fontFeatures is NULL. |
 
 ### OH_Drawing_FontSetThemeFontFollowed()
 
@@ -1174,7 +1174,7 @@ Sets whether to follow the theme font. When **followed** is set to **true**, the
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if font is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if font is NULL. |
 
 ### OH_Drawing_FontIsThemeFontFollowed()
 
@@ -1199,6 +1199,6 @@ Checks whether the font follows the theme font. By default, the theme font is no
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:<br> OH_DRAWING_SUCCESS if the operation is successful.<br> Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or followed is NULL. |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes:  OH_DRAWING_SUCCESS if the operation is successful.  Returns OH_DRAWING_ERROR_INVALID_PARAMETER if either font or followed is NULL. |
 
 

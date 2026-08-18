@@ -35,7 +35,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 
 **Return value:**
 
@@ -239,7 +239,7 @@ async function demo() {
 createUIEventObserver(): UIEventObserver
 ```
 
-Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#uieventobserver).
+Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md).
 
 **Since:** 23
 
@@ -661,7 +661,7 @@ Searches for the target component based on the specified attributes. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 
 **Return value:**
 
@@ -694,7 +694,7 @@ async function demo() {
 findComponent(on: On): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI.
+Find the first matched [Component](arkts-test-uitest-component-c.md) on current UI.
 
 **Since:** 23
 
@@ -706,7 +706,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#component) o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 
 **Return value:**
 
@@ -741,7 +741,7 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 
 **Return value:**
 
@@ -774,7 +774,7 @@ async function demo() {
 findComponents(on: On): Promise<Array<Component> | null>
 ```
 
-Find all the matched [Component](arkts-test-uitest-component-c.md#component)s on current UI.
+Find all the matched [Component](arkts-test-uitest-component-c.md)s on current UI.
 
 **Since:** 23
 
@@ -786,7 +786,7 @@ Find all the matched [Component](arkts-test-uitest-component-c.md#component)s on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 
 **Return value:**
 
@@ -821,7 +821,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow). |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target [UiWindow](arkts-test-uitest-uiwindow-c.md). |
 
 **Return value:**
 
@@ -854,7 +854,7 @@ async function demo() {
 findWindow(filter: WindowFilter): Promise<UiWindow | null>
 ```
 
-Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow) window.
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md) window.
 
 **Since:** 23
 
@@ -866,7 +866,7 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow) wind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#uiwindow). |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md). |
 
 **Return value:**
 
@@ -1295,7 +1295,7 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -1439,8 +1439,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 
@@ -1530,7 +1530,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#inputtextmode).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md).paste. |
 
 **Return value:**
 
@@ -1543,8 +1543,8 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function can not work correctly due to limited device capabilities. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
 **Examples**
 
@@ -1588,7 +1588,7 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. <br> **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | int | No | Drag speed. <br>Value range:[200, 40000] <br>Throws error code 17000007 if negative. <br>Default value: 600 |
@@ -1639,7 +1639,7 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
@@ -1724,7 +1724,7 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -1923,8 +1923,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -1973,8 +1973,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2160,8 +2160,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2210,8 +2210,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2358,8 +2358,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -2409,8 +2409,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
-| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | speed | int | No | Scroll speed of the mouse wheel. <br>Value range:[1, 500] <br>Unit: ticks/s <br>Throws error code 401 if negative. <br>Default value: 20 |
 
 **Return value:**
@@ -2470,8 +2470,8 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 
@@ -2517,8 +2517,8 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 
@@ -2565,8 +2565,8 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 
@@ -2615,8 +2615,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
 
 **Examples**
 
@@ -3205,7 +3205,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 | --- | --- | --- | --- |
 | fingers | int | Yes | Number of fingers. The value can be 3 or 4. If the value is out of range, error code 401 is thrown. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Swipe direction. |
-| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md#touchpadswipeoptions)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
 
 **Return value:**
 
@@ -3217,9 +3217,9 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |  |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |  |
 
 **Examples**
 
@@ -3304,9 +3304,9 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
-| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
-| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 
 **Return value:**
 
@@ -3353,9 +3353,9 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
-| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
-| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). <br>Default value: 0 |
+| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). <br>Default value: 0 |
 | displayId | int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
 
 **Return value:**
@@ -3403,7 +3403,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 
 **Return value:**
 
@@ -3451,7 +3451,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md). |
 | displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. <br> **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
@@ -3503,7 +3503,7 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | Stylus key type, which specifies the stylus key to be used for the operation, such as the handwriting key, air mouse key, and smart key. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | Stylus mode, which specifies the current operation mode of the stylus, such as the handwriting mode or air mouse mode. |
 | operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or double-tap. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md#penkeyoperationoptions). <br> **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#airmouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#airmouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md). <br> **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#air_mouse) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#air_mouse), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
 
 **Return value:**
 
@@ -3539,8 +3539,8 @@ Searches for the target component based on the attributes within a specified tim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#component). |
-| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md#component), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be >= 0 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
+| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be >= 0 |
 
 **Return value:**
 
@@ -3573,7 +3573,7 @@ async function demo() {
 waitForComponent(on: On, time: int): Promise<Component | null>
 ```
 
-Find the first matched [Component](arkts-test-uitest-component-c.md#component) on current UI during the time given.
+Find the first matched [Component](arkts-test-uitest-component-c.md) on current UI during the time given.
 
 **Since:** 23
 
@@ -3585,7 +3585,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#component) o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#component). |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
 | time | int | Yes | duration of finding in milliseconds. <br>Value range: The value should be >= 0 <br>Unit: ms |
 
 **Return value:**

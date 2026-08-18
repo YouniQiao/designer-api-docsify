@@ -6,7 +6,7 @@ Defines the response of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#actionmenusuccessresponse)
+**Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)
 
 <!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
 

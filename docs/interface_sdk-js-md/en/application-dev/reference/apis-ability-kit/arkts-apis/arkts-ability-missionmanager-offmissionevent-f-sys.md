@@ -4,10 +4,9 @@
 
 ```TypeScript
 import { missionManager } from '@kit.AbilityKit';
-import { missionManager } from '@kit.AbilityKit';
 ```
 
-## off_missionEvent
+## off_missionEvent('missionEvent')
 
 ```TypeScript
 function off(type: 'missionEvent', listenerId: long, callback: AsyncCallback<void>): void
@@ -19,7 +18,7 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)(type: 'mission', listenerId: long, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** off(type: 'mission', listenerId: long, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -35,7 +34,7 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | type | 'missionEvent' | Yes | Name of the target mission. The value is fixed at **'mission'**, indicating the system mission status listener. |
 | listenerId | long | Yes | Index of the mission status listener to deregister. It is returned by **on()**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -47,7 +46,7 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
 
 
-## off_missionEvent
+## off_missionEvent('missionEvent')
 
 ```TypeScript
 function off(type: 'missionEvent', listenerId: long): Promise<void>
@@ -59,7 +58,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md#offmission)(type: 'mission', listenerId: long)
+**Substitutes:** off(type: 'mission', listenerId: long)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

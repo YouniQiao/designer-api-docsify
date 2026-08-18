@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getDnsUnicode(host: string, flag?: ConversionProcess): string
 ```
 
-Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by the ToUnicode operation of RFC 3490.
+Converts host names from ASCII to Unicode using the Punycode encoding mode and uses the optional conversionProcess parameter to control the conversion behavior.
 
-**Since:** 26.0.0
+**Since:** 23
 
 <!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string-End-->
 
@@ -24,14 +24,14 @@ Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the domain name of the ASCII type. |
-| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Indicates process flag, can be 0 or any logical OR of possible flags. can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
+| host | string | Yes | Host name to be converted. |
+| flag | [ConversionProcess](arkts-network-connection-conversionprocess-e.md) | No | Conversion flow parameter. The default value is **NO_CONFIGURATION**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the converted string. |
+| string | Conversion result. |
 
 **Error codes:**
 

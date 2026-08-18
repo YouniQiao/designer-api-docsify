@@ -12,7 +12,7 @@ import { accountManager } from '@kit.MDMKit';
 function removeOsAccount(admin: Want, accountId: number): Promise<void>
 ```
 
-Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createnormalosaccount) and system accounts (of the admin, normal, and guest types) created via [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync). The default system account (ID: 100) cannot be removed.
+Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md) and system accounts (of the admin, normal, and guest types) created via [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md). The default system account (ID: 100) cannot be removed.
 
 **Since:** 26.0.0
 

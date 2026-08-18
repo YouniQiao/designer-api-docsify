@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## setKeepAliveForAppServiceExtension
@@ -48,8 +47,8 @@ Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This AP
 | [16000204](../errorcode-ability.md#16000204-application-is-not-installed-for-the-user-with-userid-of-1) | The target bundle is not in u1. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16000202](../errorcode-ability.md#16000202-keepalive-can-be-set-only-for-an-extensionability-of-the-appservice-type) | Invalid main element type. |
-| [16000203](../errorcode-ability.md#16000203-cannot-change-the-keepalive-status-of-an-appserviceextensionability) | Cannot change the keep-alive status. |
+| [16000202](../errorcode-ability.md#16000202-keep-alive-can-be-set-only-for-an-extensionability-of-the-appservice-type) | Invalid main element type. |
+| [16000203](../errorcode-ability.md#16000203-cannot-change-the-keep-alive-status-of-an-appserviceextensionability) | Cannot change the keep-alive status. |
 
 **Examples**
 

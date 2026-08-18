@@ -14,7 +14,7 @@
 HUKS_KEY_WRAP_TYPE_HUK_BASED = 2
 ```
 
-硬件唯一密钥加密类型。&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;
+硬件唯一密钥加密类型。<!--Del-->（暂不支持）<!--DelEnd-->
 
 **起始版本：** 20
 

@@ -1,8 +1,8 @@
 # ServerCert
 
-The serverCert field of the server certificate, which includes two attributes: File paths of server certificate (certPath) and certificate private key (keyPath). Only support PEM format.
+Certificate information, which includes the paths of the WebSocketServer certificate file and private key file.
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-webSocket-export interface ServerCert--><!--Device-webSocket-export interface ServerCert-End-->
 
@@ -20,11 +20,11 @@ import { webSocket } from '@kit.NetworkKit';
 certPath: string
 ```
 
-File path for the server cert.
+Path of the server certificate file.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-ServerCert-certPath: string--><!--Device-ServerCert-certPath: string-End-->
 
@@ -36,11 +36,11 @@ File path for the server cert.
 keyPath: string
 ```
 
-The path of the server certificate private key file.
+Path of the private key file of the server certificate.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 23
 
 <!--Device-ServerCert-keyPath: string--><!--Device-ServerCert-keyPath: string-End-->
 

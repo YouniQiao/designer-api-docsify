@@ -20,11 +20,11 @@ import { http } from '@kit.NetworkKit';
 connectionExtraInfo?: ConnectionExtraInfo
 ```
 
-Information details of HTTP request.
+Detailed information about the HTTP request interaction.
 
 **Type:** [ConnectionExtraInfo](arkts-network-http-connectionextrainfo-i.md)
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo--><!--Device-HttpResponse-connectionExtraInfo?: ConnectionExtraInfo-End-->
 
@@ -36,13 +36,13 @@ Information details of HTTP request.
 cookies: string
 ```
 
-Cookies returned by the server.
+Original cookies returned by the server. How to process the cookies is up to your decision.
 
 **Type:** string
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponse-cookies: string--><!--Device-HttpResponse-cookies: string-End-->
 
@@ -54,13 +54,13 @@ Cookies returned by the server.
 header: Object
 ```
 
-All headers in the response from the server.
+Response header. The return value is a string in JSON format. If you want to use specific content in the response, you need to implement parsing of that content. Common fields and parsing methods are as follows: - content-type: header['content-type'] - status-line: header['status-line'] - date: header.date/header['date'] - server: header.server/header['server']
 
 **Type:** Object
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponse-header: Object--><!--Device-HttpResponse-header: Object-End-->
 
@@ -72,7 +72,7 @@ All headers in the response from the server.
 performanceTiming: PerformanceTiming
 ```
 
-The time taken of various stages of HTTP request.
+Time consumed in each phase of an HTTP request.
 
 **Type:** [PerformanceTiming](arkts-network-http-performancetiming-i.md)
 
@@ -88,13 +88,13 @@ The time taken of various stages of HTTP request.
 responseCode: ResponseCode | int
 ```
 
-Server status code.
+Result code for an HTTP request. If the callback function is successfully executed, a result code defined in [ResponseCode](arkts-network-http-responsecode-e.md) will be returned. Otherwise, an error code will be returned in the **err** field in **AsyncCallback**.
 
 **Type:** [ResponseCode](arkts-network-http-responsecode-e.md) \| int
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponse-responseCode: ResponseCode | int--><!--Device-HttpResponse-responseCode: ResponseCode | int-End-->
 
@@ -106,13 +106,13 @@ Server status code.
 result: string | Object | ArrayBuffer
 ```
 
-result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8. If [expectDataType](arkts-network-http-httprequestoptions-i.md#expectdatatype) is set, the system preferentially returns this parameter.
+Response content returned based on **Content-type** in the response header. If **HttpRequestOptions** does not contain the **expectDataType** field, the response content is returned according to the following rules: - application/json: string in JSON format - application/octet-stream: ArrayBuffer - image: ArrayBuffer - Others: string If **HttpRequestOptions** contains the **expectDataType** field, the response content must be of the same type as the data returned by the server.
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponse-result: string | Object | ArrayBuffer--><!--Device-HttpResponse-result: string | Object | ArrayBuffer-End-->
 
@@ -124,13 +124,13 @@ result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated fr
 resultType: HttpDataType
 ```
 
-If the resultType is string, you can get result directly. If the resultType is Object, you can get result such as this: result['key']. If the resultType is ArrayBuffer, you can use ArrayBuffer to create the binary objects.
+Type of the return value.
 
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpResponse-resultType: HttpDataType--><!--Device-HttpResponse-resultType: HttpDataType-End-->
 

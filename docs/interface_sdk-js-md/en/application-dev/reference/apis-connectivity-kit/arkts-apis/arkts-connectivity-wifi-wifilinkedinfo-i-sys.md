@@ -6,7 +6,7 @@ Wi-Fi connection information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md#wifilinkedinfo)
+**Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 

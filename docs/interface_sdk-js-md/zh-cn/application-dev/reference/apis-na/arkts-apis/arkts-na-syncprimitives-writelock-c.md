@@ -2,7 +2,7 @@
 
 写锁，提供对共享资源的独占写入。
 
-**继承/实现关系：** WriteLock implements [Lock](arkts-na-syncprimitives-lock-i.md#lock)
+**继承/实现关系：** WriteLock implements [Lock](arkts-na-syncprimitives-lock-i.md)
 
 **起始版本：** 26.0.0
 

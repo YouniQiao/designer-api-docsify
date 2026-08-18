@@ -19,17 +19,17 @@ import { hardwareManager } from '@kit.DistributedServiceKit';
 ## Summary
 
 <!--Del-->
-### Functions（系统接口）
+### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pausedistributedhardware) | Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result. |
-| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumedistributedhardware) | Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result. |
-| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopdistributedhardware) | Stops the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md) | Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md) | Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md) | Stops the distributed hardware service on the controlled device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
-### Interfaces（系统接口）
+### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
@@ -37,7 +37,7 @@ import { hardwareManager } from '@kit.DistributedServiceKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums（系统接口）
+### Enums(System API)
 
 | Name | Description |
 | --- | --- |

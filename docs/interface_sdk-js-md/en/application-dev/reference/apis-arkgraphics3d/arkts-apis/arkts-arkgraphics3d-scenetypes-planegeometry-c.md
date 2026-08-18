@@ -2,7 +2,7 @@
 
 A plane geometry type that inherits from GeometryDefinition.
 
-**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#geometrydefinition)
+**Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
 **Since:** 23
 

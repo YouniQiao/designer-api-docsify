@@ -16,10 +16,9 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 ```TypeScript
 import { distributedDataObject } from '@kit.ArkData';
-import { distributedDataObject } from '@kit.ArkData';
 ```
 
-## off_change
+## off_change('change')
 
 ```TypeScript
 off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void
@@ -74,7 +73,7 @@ g_object.off("change", (sessionId: string, fields: Array<string>) => {
 g_object.off("change");
 ```
 
-## off_status
+## off_status('status')
 
 ```TypeScript
 off(
@@ -127,7 +126,7 @@ g_object.off("status", (sessionId: string, networkId: string, status: 'online' |
 g_object.off("status");
 ```
 
-## on_change
+## on_change('change')
 
 ```TypeScript
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void
@@ -179,7 +178,7 @@ g_object.on("change", (sessionId: string, fields: Array<string>) => {
 });
 ```
 
-## on_status
+## on_status('status')
 
 ```TypeScript
 on(

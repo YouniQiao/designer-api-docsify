@@ -105,7 +105,7 @@ Obtains the size of the array of uint32_t values.
 
 | Type | Description |
 | -- | -- |
-| size_t | Returns the number of bytes required to store a <b>TEE_BigIntFMM</b>,<br> given a modulus of length <b>modSizeInBits</b>. |
+| size_t | Returns the number of bytes required to store a <b>TEE_BigIntFMM</b>,  given a modulus of length <b>modSizeInBits</b>. |
 
 ### TEE_BigIntFMMContextSizeInU32()
 
@@ -129,7 +129,7 @@ Obtains the size of an array of uint32_t values required to represent a fast mod
 
 | Type | Description |
 | -- | -- |
-| size_t | Returns the number of bytes required to store a <b>TEE_BigIntFMMContext</b>,<br> given a modulus of length <b>modSizeInBits</b>. |
+| size_t | Returns the number of bytes required to store a <b>TEE_BigIntFMMContext</b>,  given a modulus of length <b>modSizeInBits</b>. |
 
 ### TEE_BigIntInit()
 
@@ -194,7 +194,7 @@ Calculates the necessary prerequisites for fast modular multiplication and store
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns other values if the operation fails. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns other values if the operation fails. |
 
 ### TEE_BigIntInitFMM()
 
@@ -240,7 +240,7 @@ Converts an octet string buffer into the <b>TEE_BigInt</b> format.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW</b> if the memory allocated for <b>dest</b> is too small. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW</b> if the memory allocated for <b>dest</b> is too small. |
 
 ### TEE_BigIntConvertToOctetString()
 
@@ -266,7 +266,7 @@ Converts the absolute value of an integer in <b>TEE_BigInt</b> format into an oc
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the output buffer is too small to hold the octet string. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_SHORT_BUFFER</b> if the output buffer is too small to hold the octet string. |
 
 ### TEE_BigIntConvertFromS32()
 
@@ -310,7 +310,7 @@ Sets <b>dest</b> to the value of <b>src</b>, including the sign of <b>src</b>.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW</b> if <b>src</b> does not fit within an <b> int32_t</b>. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW</b> if <b>src</b> does not fit within an <b> int32_t</b>. |
 
 ### TEE_BigIntCmp()
 
@@ -335,7 +335,7 @@ Checks whether op1 > op2, op1 == op2, or op1 < op2.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if op1 == op2.<br>         Returns a positive number if op1 > op2. |
+| int32_t | Returns <b>0</b> if op1 == op2.          Returns a positive number if op1 > op2. |
 
 ### TEE_BigIntCmpS32()
 
@@ -360,7 +360,7 @@ Checks whether op > shortVal, op == shortVal, or op < shortVal.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if op1 == shortVal.<br>         Returns a positive number if op1 > shortVal. |
+| int32_t | Returns <b>0</b> if op1 == shortVal.          Returns a positive number if op1 > shortVal. |
 
 ### TEE_BigIntShiftRight()
 
@@ -405,7 +405,7 @@ Obtains the <b>bitIndex</b> bit of the natural binary representation of \|src\|.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the Boolean value of <b>bitIndexth</b> in |src|. The value <b>true</b> represents a <b>1</b>,<br> and <b>false</b> represents a <b>0</b>. |
+| bool | Returns the Boolean value of <b>bitIndexth</b> in |src|. The value <b>true</b> represents a <b>1</b>,  and <b>false</b> represents a <b>0</b>. |
 
 ### TEE_BigIntGetBitCount()
 
@@ -429,7 +429,7 @@ Obtains the number of bits in the natural binary representation of \|src\|,that 
 
 | Type | Description |
 | -- | -- |
-| uint32_t | Returns <b>0</b> if <b>src</b> is <b>0</b>.<br>         Returns the number of bits in the natural binary representation of <b>src</b>. |
+| uint32_t | Returns <b>0</b> if <b>src</b> is <b>0</b>.          Returns the number of bits in the natural binary representation of <b>src</b>. |
 
 ### TEE_BigIntSetBit()
 
@@ -455,7 +455,7 @@ Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW bitIndexth</b> if the <b>bitIndexth</b> bit is larger than the allocated bit<br> length of <b>op</b>. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW bitIndexth</b> if the <b>bitIndexth</b> bit is larger than the allocated bit  length of <b>op</b>. |
 
 ### TEE_BigIntAssign()
 
@@ -480,7 +480,7 @@ Assigns the value of <b>src</b> to <b>dest</b>.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW</b> if the <b>dest</b> operand cannot hold the value of <b>src</b>. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW</b> if the <b>dest</b> operand cannot hold the value of <b>src</b>. |
 
 ### TEE_BigIntAbs()
 
@@ -505,7 +505,7 @@ Assigns the value of <b>src</b> to <b>dest</b>.
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_OVERFLOW</b> if the <b>dest</b> operand cannot hold the value of <b>src</b>. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_OVERFLOW</b> if the <b>dest</b> operand cannot hold the value of <b>src</b>. |
 
 ### TEE_BigIntAdd()
 
@@ -772,7 +772,7 @@ Checks whether gcd(op1, op2) == 1.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns <b>true</b> if gcd(op1, op2) == 1.<br>         Returns <b>false</b> if gcd(op1, op2) != 1. |
+| bool | Returns <b>true</b> if gcd(op1, op2) == 1.          Returns <b>false</b> if gcd(op1, op2) != 1. |
 
 ### TEE_BigIntComputeExtendedGcd()
 
@@ -819,7 +819,7 @@ Performs a probabilistic primality test on <b>op</b>.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns <b>0</b> if <b>op</b> is a composite number.<br>         Returns <b>1</b> if <b>op</b> is a prime number.<br>         Returns <b>–1</b> if the test is non-conclusive but the probability that <b>op</b> is composite is<br> less than 2^(-confidenceLevel). |
+| int32_t | Returns <b>0</b> if <b>op</b> is a composite number.          Returns <b>1</b> if <b>op</b> is a prime number.          Returns <b>–1</b> if the test is non-conclusive but the probability that <b>op</b> is composite is  less than 2^(-confidenceLevel). |
 
 ### TEE_BigIntConvertToFMM()
 
@@ -911,6 +911,6 @@ Computes dest = (op1 ^ op2)(mod n).
 
 | Type | Description |
 | -- | -- |
-| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.<br>         Returns <b>TEE_ERROR_NOT_SUPPORTED</b> if the value of <b>n</b> is not supported. |
+| TEE_Result | Returns <b>TEE_SUCCESS</b> if the operation is successful.          Returns <b>TEE_ERROR_NOT_SUPPORTED</b> if the value of <b>n</b> is not supported. |
 
 

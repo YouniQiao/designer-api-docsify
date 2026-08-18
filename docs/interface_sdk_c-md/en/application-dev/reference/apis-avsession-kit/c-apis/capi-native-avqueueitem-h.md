@@ -81,7 +81,7 @@ Creates an OH_AVSession_AVMediaDescriptionBuilder instance.Call [OH_AVSession_AV
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of builder is nullptr.<br>         [AVQUEUEITEM_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avqueueitem_result) No memory to allocate a new instance. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of builder is nullptr.          [AVQUEUEITEM_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avqueueitem_result) No memory to allocate a new instance. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_Destroy()
 
@@ -105,7 +105,7 @@ Destroys a builder.
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of builder is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of builder is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAssetId()
 
@@ -130,7 +130,7 @@ Set current asset id of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of assetId is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of assetId is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetTitle()
 
@@ -155,7 +155,7 @@ Set the title of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of title is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of title is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetSubTitle()
 
@@ -180,7 +180,7 @@ Set the subtitle of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of subtitle is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of subtitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetArtist()
 
@@ -205,7 +205,7 @@ Set the artist of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of artist is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of artist is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAlbumCoverUri()
 
@@ -230,7 +230,7 @@ Set the media image url of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of albumCoverUri is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of albumCoverUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaType()
 
@@ -255,7 +255,7 @@ Set the media type of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Return code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of mediaType is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Return code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1. The param of builder is nullptr.                                                  2. The param of mediaType is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetLyricContent()
 
@@ -280,7 +280,7 @@ Set the lyric content of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of lyricContent is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1. The param of builder is nullptr.                                                  2. The param of lyricContent is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetDuration()
 
@@ -305,7 +305,7 @@ Set the duration of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of duration is invalid. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1. The param of builder is nullptr.                                                  2. The param of duration is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaUri()
 
@@ -330,7 +330,7 @@ Set the media uri of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of mediaUri is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of mediaUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetStartPosition()
 
@@ -355,7 +355,7 @@ Set the start position of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of startPosition is invalid. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of startPosition is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaSize()
 
@@ -380,7 +380,7 @@ Set the size of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Return code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1. The param of builder is nullptr.<br>                                                 2. The param of mediaSize is invalid. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Return code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1. The param of builder is nullptr.                                                  2. The param of mediaSize is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAlbumTitle()
 
@@ -405,7 +405,7 @@ Set the album title of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr.<br>                                                 2.The param of albumTitle is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr.                                                  2.The param of albumTitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAppName()
 
@@ -430,7 +430,7 @@ Set the app name of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr.<br>                                                 2.The param of title  is appName. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr.                                                  2.The param of title  is appName. |
 
 ### OH_AVSession_AVMediaDescription_GetAssetId()
 
@@ -455,7 +455,7 @@ Get current asset id of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of assetId is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of assetId is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetTitle()
 
@@ -480,7 +480,7 @@ Get the title of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of title is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of title is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetSubtitle()
 
@@ -505,7 +505,7 @@ Get the subtitle of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of subtitle is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of subtitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetArtist()
 
@@ -530,7 +530,7 @@ Get the artist of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of artist is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of artist is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAlbumCoverUri()
 
@@ -555,7 +555,7 @@ Get the media image url of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of albumCoverUri is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of albumCoverUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaType()
 
@@ -580,7 +580,7 @@ Get the media type information
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of mediaType is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of mediaType is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetLyricContent()
 
@@ -605,7 +605,7 @@ Get the lyric content of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of lyricContent is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of lyricContent is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetDuration()
 
@@ -630,7 +630,7 @@ Get the duration of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)<br>                                                1. The param of builder is nullptr.<br>                                                2. The param of duration is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)                                                 1. The param of builder is nullptr.                                                 2. The param of duration is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaUri()
 
@@ -655,7 +655,7 @@ Get the media uri of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of mediaUri is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of mediaUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetStartPosition()
 
@@ -680,7 +680,7 @@ Get start position of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)<br>                                                1. The param of description is nullptr.<br>                                                2. The param of startPosition is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)                                                 1. The param of description is nullptr.                                                 2. The param of startPosition is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaSize()
 
@@ -705,7 +705,7 @@ Get media size of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)<br>                                                1. The param of description is nullptr.<br>                                                2. The param of mediaSize is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result)                                                 1. The param of description is nullptr.                                                 2. The param of mediaSize is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAlbumTitle()
 
@@ -730,7 +730,7 @@ Get the album title of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of albumTitle is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of albumTitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAppName()
 
@@ -755,7 +755,7 @@ Get the app name of the resource
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                1.The param of description is nullptr.<br>                                                2.The param of appName is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                 1.The param of description is nullptr.                                                 2.The param of appName is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_GenerateAVMediaDescription()
 
@@ -780,7 +780,7 @@ Create the avMediaDescription.Call [OH_AVSession_AVMediaDescription_Destroy](cap
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avqueueitem_result) No memory to allocate a new instance.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):<br>                                                 1.The param of builder is nullptr;<br>                                                 2.The param of avMediaDescription is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_NO_MEMORY](capi-native-avsession-errors-h.md#avqueueitem_result) No memory to allocate a new instance.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result):                                                  1.The param of builder is nullptr;                                                  2.The param of avMediaDescription is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_Destroy()
 
@@ -804,6 +804,6 @@ Request to release the avMediaDescription.
 
 | Type | Description |
 | -- | -- |
-| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:<br>         [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.<br>         [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of avMediaDescription is nullptr. |
+| [AVQueueItem_Result](capi-native-avsession-errors-h.md#avqueueitem_result) | Function result code:          [AVQUEUEITEM_SUCCESS](capi-native-avsession-errors-h.md#avqueueitem_result) If the execution is successful.          [AVQUEUEITEM_ERROR_INVALID_PARAM](capi-native-avsession-errors-h.md#avqueueitem_result) The param of avMediaDescription is nullptr. |
 
 

@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Add a custom host and corresponding ip mapping for current application.
+Adds custom DNS rules for the specified host of the current application. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call > [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current > application.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void-End-->
 
@@ -28,9 +28,9 @@ Add a custom host and corresponding ip mapping for current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Name of the custom host. |
 | ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback of addCustomDnsRule. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the mapping is added successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -64,13 +64,13 @@ connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"], (error: Busin
 function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 ```
 
-Add a custom host and corresponding ip mapping for current application.
+Adds custom DNS rules for the specified host of the current application. This API uses a promise to return the result. > **NOTE：**> > You can call [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md) to delete a custom DNS rule or call > [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md) to delete all custom DNS rules of the current > application.
 
-**Since:** 26.0.0
+**Since:** 11
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>-End-->
 
@@ -80,14 +80,14 @@ Add a custom host and corresponding ip mapping for current application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | string | Yes | Indicates the host name or the domain. |
+| host | string | Yes | Name of the custom host. |
 | ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

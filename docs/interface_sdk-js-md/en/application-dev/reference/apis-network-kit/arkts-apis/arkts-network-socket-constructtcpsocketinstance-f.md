@@ -12,9 +12,9 @@ import { socket } from '@kit.NetworkKit';
 function constructTCPSocketInstance(): TCPSocket
 ```
 
-Creates a TCPSocket object.
+Creates a **TCPSocket** object.
 
-**Since:** 10
+**Since:** 7
 
 <!--Device-socket-function constructTCPSocketInstance(): TCPSocket--><!--Device-socket-function constructTCPSocketInstance(): TCPSocket-End-->
 
@@ -24,7 +24,7 @@ Creates a TCPSocket object.
 
 | Type | Description |
 | --- | --- |
-| TCPSocket | the TCPSocket of the constructTCPSocketInstance. |
+| TCPSocket | TCPSocket** object. |
 
 **Examples**
 

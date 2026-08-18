@@ -18,7 +18,7 @@ center?: PositionT<LengthMetrics>
 
 The coordinates of the center of the annulus
 
-**类型：** [PositionT](../../apis-na/arkts-apis/arkts-na-positiont-t.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt;
+**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **默认值：** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
@@ -62,7 +62,7 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -82,7 +82,7 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 

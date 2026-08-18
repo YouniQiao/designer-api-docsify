@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getWantAgent
@@ -28,7 +27,7 @@ Obtains a WantAgent object. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
 

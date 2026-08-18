@@ -1,6 +1,6 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller系统接口)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
+在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -31,7 +32,7 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | 回调函数，返回远端播放状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | 回调函数，返回远端播放状态。 |
 
 **错误码：**
 
@@ -85,7 +86,7 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -257,7 +258,7 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数。返回当前支持的命令。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数。返回当前支持的命令。 |
 
 **错误码：**
 
@@ -309,7 +310,7 @@ Unregister listeners for cast control audio renderer error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCastControlDecodingError
 
@@ -329,7 +330,7 @@ Unregister listeners for cast control decoding error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCastControlDrmError
 
@@ -349,7 +350,7 @@ Unregister listeners for cast control drm error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCastControlGenericError
 
@@ -369,7 +370,7 @@ Unregister listeners for cast control generic error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCastControlIoError
 
@@ -389,7 +390,7 @@ Unregister listeners for cast control input/output error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCastControlParsingError
 
@@ -409,7 +410,7 @@ Unregister listeners for cast control parsing error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Callback used to listen for the cast control error event. |
 
 ## offCustomDataChange
 
@@ -429,7 +430,7 @@ Unregister listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -593,7 +594,7 @@ Unregister playback state changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **错误码：**
 
@@ -619,7 +620,7 @@ Unregister requested playback command callback sent by remote side or media cent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | Used to handle 'requestPlay' command |
 
 **错误码：**
 
@@ -665,7 +666,7 @@ Unregister the valid commands of the casted session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **错误码：**
 
@@ -700,7 +701,7 @@ Unregister listener for video size change event, used at remote side.
 aVCastController.offVideoSizeChange();
 ```
 
-## off_castControlAudioRendererError
+## off_castControlAudioRendererError('castControlAudioRendererError')
 
 ```TypeScript
 off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
@@ -721,7 +722,7 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | 是 | 取消对应的监听事件，支持的事件是'castControlAudioRendererError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -729,7 +730,7 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_castControlDecodingError
+## off_castControlDecodingError('castControlDecodingError')
 
 ```TypeScript
 off(type: 'castControlDecodingError', callback?: ErrorCallback): void
@@ -750,7 +751,7 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | 是 | 取消对应的监听事件，支持的事件是'castControlDecodingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -758,7 +759,7 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_castControlDrmError
+## off_castControlDrmError('castControlDrmError')
 
 ```TypeScript
 off(type: 'castControlDrmError', callback?: ErrorCallback): void
@@ -779,7 +780,7 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | 是 | 取消对应的监听事件，支持的事件是'castControlDrmError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -787,7 +788,7 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_castControlGenericError
+## off_castControlGenericError('castControlGenericError')
 
 ```TypeScript
 off(type: 'castControlGenericError', callback?: ErrorCallback): void
@@ -808,7 +809,7 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | 是 | 取消对应的监听事件，支持的事件是'castControlGenericError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -816,7 +817,7 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_castControlIoError
+## off_castControlIoError('castControlIoError')
 
 ```TypeScript
 off(type: 'castControlIoError', callback?: ErrorCallback): void
@@ -837,7 +838,7 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | 是 | 取消对应的监听事件，支持的事件是'castControlIoError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -845,7 +846,7 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_castControlParsingError
+## off_castControlParsingError('castControlParsingError')
 
 ```TypeScript
 off(type: 'castControlParsingError', callback?: ErrorCallback): void
@@ -866,7 +867,7 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | 是 | 取消对应的监听事件，支持的事件是'castControlParsingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -874,7 +875,7 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## off_customDataChange
+## off_customDataChange('customDataChange')
 
 ```TypeScript
 off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
@@ -895,7 +896,7 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 取消对应的监听事件，支持的事件是'customDataChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
@@ -903,7 +904,7 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_endOfStream
+## off_endOfStream('endOfStream')
 
 ```TypeScript
 off(type: 'endOfStream', callback?: Callback<void>): void
@@ -922,7 +923,7 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | 是 | 取消对应的监听事件，支持事件`'endOfStream'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -931,7 +932,7 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_error
+## off_error('error')
 
 ```TypeScript
 off(type: 'error'): void
@@ -966,7 +967,7 @@ off(type: 'error'): void
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
-## off_keyRequest
+## off_keyRequest('keyRequest')
 
 ```TypeScript
 off(type: 'keyRequest', callback?: KeyRequestCallback): void
@@ -996,7 +997,7 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_mediaItemChange
+## off_mediaItemChange('mediaItemChange')
 
 ```TypeScript
 off(type: 'mediaItemChange'): void
@@ -1025,7 +1026,7 @@ off(type: 'mediaItemChange'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_playNext
+## off_playNext('playNext')
 
 ```TypeScript
 off(type: 'playNext'): void
@@ -1054,7 +1055,7 @@ off(type: 'playNext'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_playPrevious
+## off_playPrevious('playPrevious')
 
 ```TypeScript
 off(type: 'playPrevious'): void
@@ -1083,7 +1084,7 @@ off(type: 'playPrevious'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_playbackStateChange
+## off_playbackStateChange('playbackStateChange')
 
 ```TypeScript
 off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
@@ -1113,7 +1114,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_requestPlay
+## off_requestPlay('requestPlay')
 
 ```TypeScript
 off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
@@ -1132,7 +1133,7 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | 是 | 取消对应的监听事件，支持事件`'requestPlay'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可 选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可 选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1141,7 +1142,7 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_seekDone
+## off_seekDone('seekDone')
 
 ```TypeScript
 off(type: 'seekDone'): void
@@ -1170,7 +1171,7 @@ off(type: 'seekDone'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## off_validCommandChange
+## off_validCommandChange('validCommandChange')
 
 ```TypeScript
 off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
@@ -1189,7 +1190,7 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -1199,7 +1200,7 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off_videoSizeChange
+## off_videoSizeChange('videoSizeChange')
 
 ```TypeScript
 off(type: 'videoSizeChange'): void
@@ -1250,7 +1251,7 @@ Register listeners for cast control audio renderer error error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1278,7 +1279,7 @@ Register listeners for cast control decoding error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1309,7 +1310,7 @@ Register listeners for cast control drm error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1344,7 +1345,7 @@ Register listeners for cast control generic error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1383,7 +1384,7 @@ Register listeners for cast control input/output error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1400,7 +1401,7 @@ Register listeners for cast control input/output error events.
 | [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) | An unspecified input/output error occurs. |
 | [6612001](../errorcode-avsession.md#6612001-网络连接失败) | Network connection failure. |
 | [6612002](../errorcode-avsession.md#6612002-网络超时) | Network timeout. |
-| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) | Invalid "Content-Type" HTTP header. |
+| [6612003](../errorcode-avsession.md#6612003-无效content-typehttp头) | Invalid "Content-Type" HTTP header. |
 | [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) | Reading data out of the data bound. |
 | [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) | Using the requested content to play is not allowed. |
 | [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) | The use of the allowed content cannot be verified. |
@@ -1425,7 +1426,7 @@ Register listeners for cast control parsing error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the cast control error event. |
 
 **错误码：**
 
@@ -1455,7 +1456,7 @@ Register listener for custom data sent from remote device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
 
 **错误码：**
 
@@ -1507,7 +1508,7 @@ Register listeners for playback error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Callback used to listen for the playback error event. |
 
 **错误码：**
 
@@ -1565,7 +1566,7 @@ Register listener for current media item playback events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | Callback used to listen for current item changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | Callback used to listen for current item changed. |
 
 **错误码：**
 
@@ -1643,8 +1644,8 @@ Register playback state changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **错误码：**
 
@@ -1670,7 +1671,7 @@ Register playback state changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#avplaybackstate) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **错误码：**
 
@@ -1696,7 +1697,7 @@ Register requested playback command callback sent by remote side or media center
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | Used to handle 'requestPlay' command |
 
 **错误码：**
 
@@ -1722,7 +1723,7 @@ Register listens for playback events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to listen for the playback seekDone event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to listen for the playback seekDone event. |
 
 **错误码：**
 
@@ -1748,7 +1749,7 @@ Register the valid commands of the casted session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **错误码：**
 
@@ -1792,7 +1793,7 @@ aVCastController.onVideoSizeChange((width: int, height: int) => {
 });
 ```
 
-## on_castControlAudioRendererError
+## on_castControlAudioRendererError('castControlAudioRendererError')
 
 ```TypeScript
 on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
@@ -1813,7 +1814,7 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | 是 | 错误事件回调类型，支持的事件：'castControlAudioRendererError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播音频渲染器的错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播音频渲染器的错误事件回调方法。 |
 
 **错误码：**
 
@@ -1824,7 +1825,7 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 | [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) | Initializing the audio renderer failed. |
 | [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) | The audio renderer fails to write data. |
 
-## on_castControlDecodingError
+## on_castControlDecodingError('castControlDecodingError')
 
 ```TypeScript
 on(type: 'castControlDecodingError', callback: ErrorCallback): void
@@ -1845,7 +1846,7 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | 是 | 错误事件回调类型，支持的事件：'castControlDecodingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播解码的错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播解码的错误事件回调方法。 |
 
 **错误码：**
 
@@ -1859,7 +1860,7 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 | [6614002](../errorcode-avsession.md#6614002-解码器查询失败) | Decoder query failed. |
 | [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) | Decoding the media samples failed. |
 
-## on_castControlDrmError
+## on_castControlDrmError('castControlDrmError')
 
 ```TypeScript
 on(type: 'castControlDrmError', callback: ErrorCallback): void
@@ -1880,7 +1881,7 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | 是 | 错误事件回调类型，支持的事件：'castControlDrmError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播drm的错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播drm的错误事件回调方法。 |
 
 **错误码：**
 
@@ -1898,7 +1899,7 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 | [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) | The DRM-protected content to play is incompatible. |
 | [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) | The DRM license being loaded into the open DRM session has expired. |
 
-## on_castControlGenericError
+## on_castControlGenericError('castControlGenericError')
 
 ```TypeScript
 on(type: 'castControlGenericError', callback: ErrorCallback): void
@@ -1919,7 +1920,7 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | 是 | 错误事件回调类型，支持的事件：'castControlGenericError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播通用错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播通用错误事件回调方法。 |
 
 **错误码：**
 
@@ -1941,7 +1942,7 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 | [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) | The playback position falls behind the live window. |
 | [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) | The process of cast control times out. |
 
-## on_castControlIoError
+## on_castControlIoError('castControlIoError')
 
 ```TypeScript
 on(type: 'castControlIoError', callback: ErrorCallback): void
@@ -1962,7 +1963,7 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | 是 | 错误事件回调类型，支持的事件：'castControlIoError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播输入/输出的错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播输入/输出的错误事件回调方法。 |
 
 **错误码：**
 
@@ -1979,7 +1980,7 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 | [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) | An unspecified input/output error occurs. |
 | [6612001](../errorcode-avsession.md#6612001-网络连接失败) | Network connection failure. |
 | [6612002](../errorcode-avsession.md#6612002-网络超时) | Network timeout. |
-| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) | Invalid "Content-Type" HTTP header. |
+| [6612003](../errorcode-avsession.md#6612003-无效content-typehttp头) | Invalid "Content-Type" HTTP header. |
 | [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) | Reading data out of the data bound. |
 | [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) | Using the requested content to play is not allowed. |
 | [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) | The use of the allowed content cannot be verified. |
@@ -1987,7 +1988,7 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 | [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) | An error occurs when sending packet from source device to sink device. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
-## on_castControlParsingError
+## on_castControlParsingError('castControlParsingError')
 
 ```TypeScript
 on(type: 'castControlParsingError', callback: ErrorCallback): void
@@ -2008,7 +2009,7 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | 是 | 错误事件回调类型，支持的事件：'castControlParsingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播解析的错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 投播解析的错误事件回调方法。 |
 
 **错误码：**
 
@@ -2021,7 +2022,7 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 | [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) | Parsing error associated with the media manifest. |
 | [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 
-## on_customDataChange
+## on_customDataChange('customDataChange')
 
 ```TypeScript
 on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
@@ -2042,7 +2043,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | 是 | 事件回调类型，支持'customDataChange'事件。媒体提供方发送自定义数据时触发。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
@@ -2050,7 +2051,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_endOfStream
+## on_endOfStream('endOfStream')
 
 ```TypeScript
 on(type: 'endOfStream', callback: Callback<void>): void
@@ -2069,7 +2070,7 @@ on(type: 'endOfStream', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | 是 | 事件回调类型，支持事件`'endOfStream'`：当资源播放结束时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当监听事件注册成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2078,7 +2079,7 @@ on(type: 'endOfStream', callback: Callback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_error
+## on_error('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -2099,7 +2100,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 错误事件回调类型，支持的事件：'error'，用户操作和系统都会触发此事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 错误事件回调方法：远端播放过程中发生的错误，会提供错误码ID和错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 错误事件回调方法：远端播放过程中发生的错误，会提供错误码ID和错误信息。 |
 
 **错误码：**
 
@@ -2114,7 +2115,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) | Time out. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
-## on_keyRequest
+## on_keyRequest('keyRequest')
 
 ```TypeScript
 on(type: 'keyRequest', callback: KeyRequestCallback): void
@@ -2144,7 +2145,7 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_mediaItemChange
+## on_mediaItemChange('mediaItemChange')
 
 ```TypeScript
 on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
@@ -2165,7 +2166,7 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'mediaItemChange' | 是 | 事件回调类型，支持事件`'mediaItemChange'`：当播放的媒体内容变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。 |
 
 **错误码：**
 
@@ -2174,7 +2175,7 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_playNext
+## on_playNext('playNext')
 
 ```TypeScript
 on(type: 'playNext', callback: Callback<void>): void
@@ -2195,7 +2196,7 @@ on(type: 'playNext', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playNext' | 是 | 事件回调类型，支持事件`'playNext'`：当播放下一首状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2204,7 +2205,7 @@ on(type: 'playNext', callback: Callback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_playPrevious
+## on_playPrevious('playPrevious')
 
 ```TypeScript
 on(type: 'playPrevious', callback: Callback<void>): void
@@ -2225,7 +2226,7 @@ on(type: 'playPrevious', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | 是 | 事件回调类型，支持事件`'playPrevious'`：当播放上一首状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -2234,7 +2235,7 @@ on(type: 'playPrevious', callback: Callback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_playbackStateChange
+## on_playbackStateChange('playbackStateChange')
 
 ```TypeScript
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
@@ -2265,7 +2266,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_requestPlay
+## on_requestPlay('requestPlay')
 
 ```TypeScript
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
@@ -2284,7 +2285,7 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | 是 | 事件回调类型，支持事件`'requestPlay'`：当请求播放状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件注册成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2293,7 +2294,7 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_seekDone
+## on_seekDone('seekDone')
 
 ```TypeScript
 on(type: 'seekDone', callback: Callback<int>): void
@@ -2314,7 +2315,7 @@ on(type: 'seekDone', callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'seekDone' | 是 | 事件回调类型，支持事件`'seekDone'`：当seek结束时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回seek后播放的位置。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回seek后播放的位置。 |
 
 **错误码：**
 
@@ -2323,7 +2324,7 @@ on(type: 'seekDone', callback: Callback<int>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-## on_validCommandChange
+## on_validCommandChange('validCommandChange')
 
 ```TypeScript
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
@@ -2342,7 +2343,7 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | 是 | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数。参数commands是有效命令的集合。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数。参数commands是有效命令的集合。 |
 
 **错误码：**
 
@@ -2352,7 +2353,7 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## on_videoSizeChange
+## on_videoSizeChange('videoSizeChange')
 
 ```TypeScript
 on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
@@ -2408,7 +2409,7 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | 是 | 播放列表中单项的相关属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2508,7 +2509,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令执行成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令执行成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2563,7 +2564,7 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | 是 | 会话的相关命令和命令相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2664,7 +2665,7 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | 是 | 播放列表中单项的相关属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 

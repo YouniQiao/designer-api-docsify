@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## alpha

@@ -2,7 +2,7 @@
 
 Defines ReactiveComponentContent.
 
-**Inheritance/Implementation:** ReactiveComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md#componentcontentbase)
+**Inheritance/Implementation:** ReactiveComponentContent extends [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md)
 
 **Since:** 26.0.0
 
@@ -162,7 +162,7 @@ Reuse the ReactiveComponentContent based on the provided parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing ReactiveComponentContent. These parameters will be directly applied to the reuse of all top-level custom components in the ReactiveComponentContent. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the ReactiveComponentContent will directly use the data source from the construction phase. |
+| param | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing ReactiveComponentContent. These parameters will be directly applied to the reuse of all top-level custom components in the ReactiveComponentContent. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the ReactiveComponentContent will directly use the data source from the construction phase. |
 
 ## updateConfiguration
 

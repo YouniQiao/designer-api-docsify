@@ -2,7 +2,7 @@
 
 Provides APIs for managing the media album change request.
 
-**Inheritance/Implementation:** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#mediachangerequest)
+**Inheritance/Implementation:** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
 **Since:** 23
 
@@ -841,38 +841,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## setAlbumNameByFile
-
-```TypeScript
-setAlbumNameByFile(name: string): void
-```
-
-set album name by filemanger.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | string | Yes | Album name to set. <br>Value range:1-255 <br>Album name parameter specifications: The album name contains 1 to 255 characters. Invalid English characters, including: \ /: *? "'`&lt; &gt; \| {} [] It is not allowed to name only. or.. English characters are case insensitive. The album name must be unique. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The album is not exist; |
-
 ## setCoverUri
 
 ```TypeScript
@@ -996,39 +964,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
-
-## setHiddenAttribute
-
-```TypeScript
-setHiddenAttribute(hiddenState: boolean, isInherited:boolean):void
-```
-
-set hidden state of album.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited:boolean):void--><!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited:boolean):void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| hiddenState | boolean | Yes | Hidden status of the album. |
-| isInherited | boolean | Yes | Whether all child files or directories under an album inherit this setting. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. <br>Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The ablum is not exist; |
 
 ## setIsMe
 

@@ -6,7 +6,7 @@ FormProvider模块提供了卡片提供方相关接口的能力，开发者在�
 
 **废弃版本：** 9
 
-**替代接口：** [formProvider](arkts-app-form-formprovider.md#ohosappformformprovider)
+**替代接口：** [formProvider](arkts-app-form-formprovider.md)
 
 <!--Device-unnamed-declare namespace formProvider--><!--Device-unnamed-declare namespace formProvider-End-->
 

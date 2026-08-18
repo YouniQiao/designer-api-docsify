@@ -2,7 +2,7 @@
 
 **PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**</br>
 
-## Key Enums <li>[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md#pasteiconstyle): Enumeration of icon styles for the paste button. Specifies the icon style displayed.</li> <li>[PasteDescription](arkts-arkui-pastedescription-e.md#pastedescription): Enumeration of text descriptions for the paste button. Specifies the text description displayed.</li> <li>[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md#pastebuttononclickresult): Enumeration of click results for the paste button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md#pastebuttonoptions): Configuration object for the paste button. Defines properties including icon, text and button type.</li> <li>[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md#pastebuttoncallback): Callback for paste button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
+## Key Enums <li>[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md): Enumeration of icon styles for the paste button. Specifies the icon style displayed.</li> <li>[PasteDescription](arkts-arkui-pastedescription-e.md): Enumeration of text descriptions for the paste button. Specifies the text description displayed.</li> <li>[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md): Enumeration of click results for the paste button. Indicates whether authorization succeeds after a click.</li> ###### Key APIs <li>[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md): Configuration object for the paste button. Defines properties including icon, text and button type.</li> <li>[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md): Callback for paste button clicks. Returns click events, authorization results and error messages.</li> ###### Child Components <li>Not supported.</li></ul>
 
 ## PasteButton
 
@@ -48,8 +48,23 @@ Creates a paste button with the specified icon, text and button type. After crea
 
 ## Summary
 
-- [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md)
-- [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md)
-- [PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md)
-- [PasteDescription](arkts-arkui-pastedescription-e.md)
-- [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Defines options for the paste button, including icon, text and button type. > **NOTE：**> > - You are advised to specify at least one of **icon** or **text**. > - If neither **icon** nor **text** is specified, **PasteButton** is created with default styles as follows: > **PasteIconStyle** defaults to **LINES**, **PasteDescription** to **PASTE**, and **ButtonType** to **Capsule**. > - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification. Styles and properties > of security components are verified by the system upon creation. Dynamic changes may cause the component to > violate specifications for security components and invalidate authorization. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | Triggered when the **PasteButton** component is clicked. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md) | Enumerates the authorization results after the **PasteButton** component is tapped. |
+| [PasteDescription](arkts-arkui-pastedescription-e.md) | Enumerates the text that can be displayed on the paste button. |
+| [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md) | Enumerates icon styles of the **PasteButton** component. |
+

@@ -22,7 +22,7 @@ data: KVObject
 
 Component data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 8
 

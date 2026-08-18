@@ -12,9 +12,9 @@ import { connection } from '@kit.NetworkKit';
 function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>
 ```
 
-Obtains the data network that is activated by default. You can only call this method in VPN application.
+Queries the UID of the application that initiates a specified network connection. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only in VPN applications. > > - Set the port numbers of the **local** and **remote** parameters when calling the API. If the port number is not > set or is set to 0, the API filters out a set of UIDs that meet the conditions based on other parameters and > returns a matched UID. > > - When protocol is set to PROTO_TYPE_UDP, if no UID is found based on the local and remote parameters, the UID is > filtered based on the local parameter and the matched UID is returned. > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
-**Since:** 26.0.0
+**Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -26,15 +26,15 @@ Obtains the data network that is activated by default. You can only call this me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | ProtocolType | Yes | Protocol type. |
-| local | NetAddress | Yes | Local net address. |
-| remote | NetAddress | Yes | Remote net address. |
+| protocol | ProtocolType | Yes | Type of a network protocol. |
+| local | NetAddress | Yes | Source network address. |
+| remote | NetAddress | Yes | Destination network address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | The owner uid of the specified connection. |
+| Promise&lt;int&gt; | Promise used to return the UID of an application. If no matching UID is found, -1 is returned. |
 
 **Error codes:**
 
@@ -44,7 +44,7 @@ Obtains the data network that is activated by default. You can only call this me
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) | Incorrect usage in non-VPN application. |
+| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-non-vpn-application) | Incorrect usage in non-VPN application. |
 
 **Examples**
 

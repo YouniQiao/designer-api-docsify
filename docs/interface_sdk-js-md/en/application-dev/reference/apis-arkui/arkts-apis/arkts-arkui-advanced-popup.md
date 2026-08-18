@@ -13,7 +13,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#popup) |  |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md) |  |
 
 ### Interfaces
 

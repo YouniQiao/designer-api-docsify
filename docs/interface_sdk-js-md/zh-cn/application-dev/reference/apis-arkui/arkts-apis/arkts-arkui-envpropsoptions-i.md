@@ -37,7 +37,7 @@ defaultValue: number | string | boolean
 key: string
 ```
 
-环境变量名称，支持的范围详见[内置环境变量说明](arkts-arkui-environment-c.md#environment)。
+环境变量名称，支持的范围详见[内置环境变量说明](arkts-arkui-environment-c.md)。
 
 **类型：** string
 

@@ -14,7 +14,6 @@ Defines the detailed permission usage information.
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
-import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## activeStatus

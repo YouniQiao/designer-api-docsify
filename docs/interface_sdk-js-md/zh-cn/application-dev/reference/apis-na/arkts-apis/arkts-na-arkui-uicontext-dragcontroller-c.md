@@ -133,7 +133,7 @@ Execute a drag event.
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| [DragItemInfo](arkts-na-common-dragiteminfo-i.md) \| undefined | 是 | Object used for prompts displayed when the object is dragged. |
 | dragInfo | dragController.DragInfo | 是 | Information about the drag event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | 是 | Callback that contains the drag event information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | 是 | Callback that contains the drag event information. |
 
 **错误码：**
 

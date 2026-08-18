@@ -42,7 +42,7 @@ Extended information in JSON string format. Length range: (0, 500].
 types: AnalysisType[]
 ```
 
-Array of intelligent analysis types. The maximum size of the array is the number of members defined by the [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#analysistype-system-api) enum.
+Array of intelligent analysis types. The maximum size of the array is the number of members defined by the [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) enum.
 
 **Type:** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 

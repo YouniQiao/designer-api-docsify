@@ -1,8 +1,8 @@
 # LongPressGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent). This object can be passed as the **event** parameter of onGestureJudgeBegin.
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of onGestureJudgeBegin.
 
-**Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureevent)
+**Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
 **Since:** 11
 

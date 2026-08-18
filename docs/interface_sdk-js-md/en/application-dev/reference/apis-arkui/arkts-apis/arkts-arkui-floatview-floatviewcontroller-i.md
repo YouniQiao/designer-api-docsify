@@ -1,6 +1,6 @@
 # FloatViewController
 
-Defines a float view controller instance, which is used to start and stop the float view and register callbacks. Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md#create) to create a float view controller instance (that is, **floatViewController**).
+Defines a float view controller instance, which is used to start and stop the float view and register callbacks. Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -63,7 +63,7 @@ Unregisters the callback for listening to limit changes of the float view.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Unregisters the callback for listening to changes in the rectangular area of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -119,7 +119,7 @@ Unregisters the callback for listening to float view state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -147,7 +147,7 @@ Registers a callback for listening to limit changes of the float view. When the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | Yes | Callback used to return the limit change information of the current float view. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | Yes | Callback used to return the limit change information of the current float view. |
 
 **Error codes:**
 
@@ -176,7 +176,7 @@ Registers a callback for listening to changes in the rectangular area (position 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | Yes | Callback used to return the rectangle area change information of the current float view. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | Yes | Callback used to return the rectangle area change information of the current float view. |
 
 **Error codes:**
 
@@ -205,7 +205,7 @@ Registers a callback for listening to float view state changes. To prevent memor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | Yes | Callback used to return the status change information of the current float view. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | Yes | Callback used to return the status change information of the current float view. |
 
 **Error codes:**
 
@@ -364,7 +364,7 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
+Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -378,7 +378,7 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API. |
 
 **Return value:**
 
@@ -467,7 +467,7 @@ Stops the float view. The return value of this API does not indicate that the st
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
+Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](#onrectchange) API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -481,7 +481,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md) API. |
 
 **Return value:**
 

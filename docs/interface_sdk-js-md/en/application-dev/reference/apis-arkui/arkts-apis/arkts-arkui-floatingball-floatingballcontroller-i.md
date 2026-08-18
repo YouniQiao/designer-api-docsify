@@ -1,6 +1,6 @@
 # FloatingBallController
 
-Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks. Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md#create) to create a floating ball controller instance.
+Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks. Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance.
 
 **Since:** 23
 
@@ -75,7 +75,7 @@ Unregister floating ball click event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -105,7 +105,7 @@ Unregister floating ball destroy event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Unregister floating ball stateChange event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -143,7 +143,7 @@ Unregister floating ball stateChange event listener.
 | [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## off_click
+## off_click('click')
 
 ```TypeScript
 off(type: 'click', callback?: Callback<void>): void
@@ -162,7 +162,7 @@ Unregisters the listener for click events of the floating ball.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -185,7 +185,7 @@ try {
 }
 ```
 
-## off_stateChange
+## off_stateChange('stateChange')
 
 ```TypeScript
 off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
@@ -204,7 +204,7 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -245,7 +245,7 @@ Register floating ball click event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle {'click'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle {'click'} command. |
 
 **Error codes:**
 
@@ -276,7 +276,7 @@ Register floating ball destroy event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
 
 **Error codes:**
 
@@ -305,7 +305,7 @@ Register floating ball stateChange event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Used to handle {'stateChange'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Used to handle {'stateChange'} command. |
 
 **Error codes:**
 
@@ -316,7 +316,7 @@ Register floating ball stateChange event listener.
 | [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
 | [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
-## on_click
+## on_click('click')
 
 ```TypeScript
 on(type: 'click', callback: Callback<void>): void
@@ -335,7 +335,7 @@ Registers a listener for click events of the floating ball. To prevent memory le
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
 
 **Error codes:**
 
@@ -359,7 +359,7 @@ try {
 }
 ```
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: Callback<FloatingBallState>): void
@@ -378,7 +378,7 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Callback used to return the floating ball lifecycle state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes | Callback used to return the floating ball lifecycle state. |
 
 **Error codes:**
 

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## data
@@ -39,7 +40,7 @@ data: string
 mmsConfig?: MmsConfig
 ```
 
-彩信配置文件，参考[MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md#mmsconfig系统接口)。
+彩信配置文件，参考[MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)。
 
 **类型：** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 

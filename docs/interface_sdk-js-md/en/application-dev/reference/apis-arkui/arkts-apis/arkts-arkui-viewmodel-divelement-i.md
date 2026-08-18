@@ -2,7 +2,7 @@
 
 The &lt;div&gt; component provides a div container.
 
-**Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+**Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
 **Since:** 6
 

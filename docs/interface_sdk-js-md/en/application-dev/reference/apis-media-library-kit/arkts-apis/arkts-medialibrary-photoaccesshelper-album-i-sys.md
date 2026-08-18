@@ -2,7 +2,7 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md#absalbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md)
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -433,7 +433,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -579,7 +579,7 @@ Sets the cover of the user album. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to be set as the album cover. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 

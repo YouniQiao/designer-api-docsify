@@ -1,0 +1,25 @@
+# phone
+
+Provides methods for setting the answering mode of incoming and outgoing calls.
+
+**Since:** 23
+
+<!--Device-settings-namespace phone--><!--Device-settings-namespace phone-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+## Modules to Import
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
+```
+
+## Summary
+
+### Constants
+
+| Name | Description |
+| --- | --- |
+| [RTT_CALLING_STATUS](arkts-basicservices-phone-con.md#rtt_calling_status) | Specifies whether real-time text (RTT) calling is enabled. If enabled, incoming and outgoing calls are answered as RTT calls when supported by the device and carrier. If the value is {@code 1}, RTT calling is enabled. If the value is {@code 0}, RTT calling is disabled. |
+

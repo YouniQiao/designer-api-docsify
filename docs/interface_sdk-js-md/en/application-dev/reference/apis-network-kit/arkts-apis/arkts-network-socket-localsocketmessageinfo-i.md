@@ -1,8 +1,8 @@
 # LocalSocketMessageInfo
 
-Defines the local socket connection information.
+Defines the data received by the client over a local socket connection.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-socket-export interface LocalSocketMessageInfo--><!--Device-socket-export interface LocalSocketMessageInfo-End-->
 
@@ -20,11 +20,11 @@ import { socket } from '@kit.NetworkKit';
 address: string
 ```
 
-Bound local socket address.
+Local socket connection address.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketMessageInfo-address: string--><!--Device-LocalSocketMessageInfo-address: string-End-->
 
@@ -36,11 +36,11 @@ Bound local socket address.
 message: ArrayBuffer
 ```
 
-Message data.
+Data received.
 
 **Type:** ArrayBuffer
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-LocalSocketMessageInfo-message: ArrayBuffer--><!--Device-LocalSocketMessageInfo-message: ArrayBuffer-End-->
 
@@ -49,16 +49,16 @@ Message data.
 ## size
 
 ```TypeScript
-size: number
+size: int
 ```
 
-Length of the message, in bytes.
+Data length.
 
-**Type:** number
+**Type:** int
 
-**Since:** 12
+**Since:** 11
 
-<!--Device-LocalSocketMessageInfo-size: number--><!--Device-LocalSocketMessageInfo-size: number-End-->
+<!--Device-LocalSocketMessageInfo-size: int--><!--Device-LocalSocketMessageInfo-size: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

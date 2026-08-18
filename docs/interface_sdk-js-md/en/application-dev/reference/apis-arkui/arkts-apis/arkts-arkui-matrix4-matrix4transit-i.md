@@ -205,7 +205,7 @@ Rotates this matrix object along the x, y, and z axes. The matrix that calls thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
+| options | [RotateOption](../../apis-na/arkts-apis/arkts-na-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
 
 **Return value:**
 
@@ -261,7 +261,7 @@ Scales this matrix object along the x, y, and z axes. The matrix that calls this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
+| options | [ScaleOption](../../apis-na/arkts-apis/arkts-na-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
 
 **Return value:**
 
@@ -320,7 +320,7 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
+| options | [PolyToPolyOptions](../../apis-na/arkts-apis/arkts-na-matrix4-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
 
 **Return value:**
 
@@ -499,7 +499,7 @@ Translates this matrix object along the x, y, and z axes. The matrix that calls 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
+| options | [TranslateOption](../../apis-na/arkts-apis/arkts-na-matrix4-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 

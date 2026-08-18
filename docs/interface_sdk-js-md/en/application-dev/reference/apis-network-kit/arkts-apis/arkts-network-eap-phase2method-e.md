@@ -1,8 +1,8 @@
 # Phase2Method
 
-802.1x phase 2 method.
+Enumerates the Phase 2 authentication methods.
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-eap-enum Phase2Method--><!--Device-eap-enum Phase2Method-End-->
 
@@ -11,112 +11,112 @@
 ## PHASE2_NONE
 
 ```TypeScript
-PHASE2_NONE
+PHASE2_NONE = 0
 ```
 
-Not specified
+Not specified.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_NONE--><!--Device-Phase2Method-PHASE2_NONE-End-->
+<!--Device-Phase2Method-PHASE2_NONE = 0--><!--Device-Phase2Method-PHASE2_NONE = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_PAP
 
 ```TypeScript
-PHASE2_PAP
+PHASE2_PAP = 1
 ```
 
-Password authentication protocol
+PAP.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_PAP--><!--Device-Phase2Method-PHASE2_PAP-End-->
+<!--Device-Phase2Method-PHASE2_PAP = 1--><!--Device-Phase2Method-PHASE2_PAP = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_MSCHAP
 
 ```TypeScript
-PHASE2_MSCHAP
+PHASE2_MSCHAP = 2
 ```
 
-Microsoft challenge handshake authentication protocol
+MS-CHAP.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_MSCHAP--><!--Device-Phase2Method-PHASE2_MSCHAP-End-->
+<!--Device-Phase2Method-PHASE2_MSCHAP = 2--><!--Device-Phase2Method-PHASE2_MSCHAP = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_MSCHAPV2
 
 ```TypeScript
-PHASE2_MSCHAPV2
+PHASE2_MSCHAPV2 = 3
 ```
 
-Microsoft challenge handshake authentication protocol version 2
+MS-CHAPv2.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_MSCHAPV2--><!--Device-Phase2Method-PHASE2_MSCHAPV2-End-->
+<!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3--><!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_GTC
 
 ```TypeScript
-PHASE2_GTC
+PHASE2_GTC = 4
 ```
 
-Generic token card
+GTC.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_GTC--><!--Device-Phase2Method-PHASE2_GTC-End-->
+<!--Device-Phase2Method-PHASE2_GTC = 4--><!--Device-Phase2Method-PHASE2_GTC = 4-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_SIM
 
 ```TypeScript
-PHASE2_SIM
+PHASE2_SIM = 5
 ```
 
-Subscriber identity module
+SIM.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_SIM--><!--Device-Phase2Method-PHASE2_SIM-End-->
+<!--Device-Phase2Method-PHASE2_SIM = 5--><!--Device-Phase2Method-PHASE2_SIM = 5-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA
 
 ```TypeScript
-PHASE2_AKA
+PHASE2_AKA = 6
 ```
 
-Authentication and key agreement
+AKA.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_AKA--><!--Device-Phase2Method-PHASE2_AKA-End-->
+<!--Device-Phase2Method-PHASE2_AKA = 6--><!--Device-Phase2Method-PHASE2_AKA = 6-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA_PRIME
 
 ```TypeScript
-PHASE2_AKA_PRIME
+PHASE2_AKA_PRIME = 7
 ```
 
-AKA Prime
+AKA Prime.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-Phase2Method-PHASE2_AKA_PRIME--><!--Device-Phase2Method-PHASE2_AKA_PRIME-End-->
+<!--Device-Phase2Method-PHASE2_AKA_PRIME = 7--><!--Device-Phase2Method-PHASE2_AKA_PRIME = 7-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 

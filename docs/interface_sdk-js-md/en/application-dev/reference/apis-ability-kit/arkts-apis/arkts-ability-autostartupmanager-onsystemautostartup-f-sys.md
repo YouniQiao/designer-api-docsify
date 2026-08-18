@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { autoStartupManager } from '@kit.AbilityKit';
-import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## onSystemAutoStartup

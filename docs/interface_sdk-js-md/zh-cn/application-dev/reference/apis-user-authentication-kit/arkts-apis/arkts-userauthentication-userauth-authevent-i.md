@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#iauthcallback)
+**替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
 
 <!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## callback

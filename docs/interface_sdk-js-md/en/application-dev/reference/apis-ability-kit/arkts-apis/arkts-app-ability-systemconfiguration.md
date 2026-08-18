@@ -14,7 +14,6 @@ The class of a system configuration.
 
 ```TypeScript
 import { systemConfiguration } from '@kit.AbilityKit';
-import { systemConfiguration } from '@kit.AbilityKit';
 ```
 
 ## Summary

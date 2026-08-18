@@ -14,7 +14,6 @@ Callback API type used during data migration, defining the callback methods for 
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
-import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## onHeartBeat

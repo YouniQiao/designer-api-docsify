@@ -6,7 +6,7 @@ Describes the parameters for scan.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md#scanoptions)
+**Substitutes:** [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md)
 
 <!--Device-bluetooth-interface ScanOptions--><!--Device-bluetooth-interface ScanOptions-End-->
 

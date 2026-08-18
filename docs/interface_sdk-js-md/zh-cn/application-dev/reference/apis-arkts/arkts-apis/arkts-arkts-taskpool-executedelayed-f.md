@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executeDelayed

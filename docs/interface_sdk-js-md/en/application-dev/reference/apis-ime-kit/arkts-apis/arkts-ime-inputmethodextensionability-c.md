@@ -12,7 +12,6 @@ The **InputMethodExtensionAbility** module provides APIs for developing input me
 
 ```TypeScript
 import { InputMethodExtensionAbility } from '@kit.IMEKit';
-import { InputMethodExtensionAbility } from '@kit.IMEKit';
 ```
 
 ## onCreate

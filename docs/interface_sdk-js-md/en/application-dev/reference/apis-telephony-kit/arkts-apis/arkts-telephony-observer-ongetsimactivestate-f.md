@@ -27,7 +27,7 @@ Registers an observer for SIM card activation state changes. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback function used to return whether the SIM card is activated. <br>- **true**: activated. <br>- **false**: not activated. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback function used to return whether the SIM card is activated. <br>- **true**: activated. <br>- **false**: not activated. |
 
 **Error codes:**
 

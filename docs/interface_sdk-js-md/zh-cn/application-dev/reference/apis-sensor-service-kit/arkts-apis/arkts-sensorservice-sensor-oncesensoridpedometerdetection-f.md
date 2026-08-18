@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorId.PEDOMETER_DETECTION
@@ -26,7 +27,7 @@ function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.PEDOMETER_DETECTION | 是 | 传感器类型，该值固定为SensorId.PEDOMETER_DETECTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为PedometerDetectionResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为PedometerDetectionResponse。 |
 
 **错误码：**
 

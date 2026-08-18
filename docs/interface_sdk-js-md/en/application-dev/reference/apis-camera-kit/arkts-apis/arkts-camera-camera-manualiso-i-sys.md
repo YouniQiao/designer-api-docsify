@@ -2,7 +2,7 @@
 
 ManualIso object.
 
-**Inheritance/Implementation:** ManualIso extends [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md#manualisoquery-system-api)
+**Inheritance/Implementation:** ManualIso extends [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md)
 
 **Since:** 23
 

@@ -23,7 +23,7 @@ import { wearDetection } from '@kit.ConnectivityKit';
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_stateChange
+## on_stateChange('stateChange')
 
 ```TypeScript
 function on(type: 'stateChange', callback: Callback<BluetoothState>): void
@@ -48,7 +48,7 @@ Subscribe the event reported when the Bluetooth state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
 
 **Examples**
 

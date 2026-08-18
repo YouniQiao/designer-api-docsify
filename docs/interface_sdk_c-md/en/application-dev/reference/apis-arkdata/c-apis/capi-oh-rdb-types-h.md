@@ -79,7 +79,7 @@ Creates an OH_RDB_ReturningContext instance object.
 
 | Type | Description |
 | -- | -- |
-| [OH_RDB_ReturningContext *](capi-rdb-oh-rdb-returningcontext.md) | Returns a pointer to OH_RDB_ReturningContext instance when the execution is successful.<br>     Otherwise, nullptr is returned. The memory must be released through the OH_RDB_DestroyReturningContext<br>     interface after the use is complete. |
+| [OH_RDB_ReturningContext *](capi-rdb-oh-rdb-returningcontext.md) | Returns a pointer to OH_RDB_ReturningContext instance when the execution is successful.      Otherwise, nullptr is returned. The memory must be released through the OH_RDB_DestroyReturningContext      interface after the use is complete. |
 
 **Reference**:
 
@@ -128,7 +128,7 @@ Set the returning fields.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_RDB_SetMaxReturningCount()
 
@@ -153,7 +153,7 @@ Set the maximum returning value.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.<br>         Returns {@link RDB_OK} if the execution is successful.<br>         Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_RDB_GetReturningValues()
 
@@ -177,7 +177,7 @@ Get the cursor of data changes, includes 1024 by default.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.<br>     If Get Cursor failed, nullptr is returned. |
+| [OH_Cursor *](capi-rdb-oh-cursor.md) | a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.      If Get Cursor failed, nullptr is returned. |
 
 ### OH_RDB_GetChangedCount()
 

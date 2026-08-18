@@ -6,7 +6,7 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 **Deprecated since:** 9
 
-**Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md#interruptevent)
+**Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
 
 <!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
@@ -16,8 +16,6 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 import { audioHaptic } from '@kit.AudioKit';
 ```
 

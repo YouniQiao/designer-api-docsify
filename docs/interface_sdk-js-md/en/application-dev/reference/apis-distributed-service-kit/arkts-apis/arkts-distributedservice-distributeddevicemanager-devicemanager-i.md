@@ -12,7 +12,6 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bindTarget
@@ -37,7 +36,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
 | bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{deviceId: string;}&gt; | Yes |  |
 
 **Error codes:**
 
@@ -105,7 +104,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
 | bindParam | Record&lt;string, int \| string&gt; | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes | Callback used to return the authentication result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -135,7 +134,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
@@ -332,7 +331,7 @@ Obtains the device type based on the network ID of the specified device.
 
 | Type | Description |
 | --- | --- |
-| int | &lt;!--RP2--&gt;Device type obtained.&lt;!--RP2End--&gt; |
+| int | <!--RP2-->Device type obtained.<!--RP2End--> |
 
 **Error codes:**
 
@@ -515,7 +514,7 @@ Obtains the local device type.
 
 | Type | Description |
 | --- | --- |
-| int | &lt;!--RP1--&gt;Local device type obtained.&lt;!--RP1End--&gt; |
+| int | <!--RP1-->Local device type obtained.<!--RP1End--> |
 
 **Error codes:**
 
@@ -560,7 +559,7 @@ UnRegister the device name change result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No | Indicates the device name change callback to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No | Indicates the device name change callback to unregister. |
 
 **Error codes:**
 
@@ -588,7 +587,7 @@ UnRegister device state callback based on the application bundle name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No | Indicates the device state callback to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No | Indicates the device state callback to unregister. |
 
 **Error codes:**
 
@@ -616,7 +615,7 @@ UnRegister the device discovery result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No | Indicates the device found result callback to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No | Indicates the device found result callback to unregister. |
 
 **Error codes:**
 
@@ -644,7 +643,7 @@ UnRegister the device discovery result callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No | Indicates the device discovery callback to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No | Indicates the device discovery callback to unregister. |
 
 **Error codes:**
 
@@ -672,7 +671,7 @@ UnRegister the service error callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No | Indicates the service error callback to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No | Indicates the service error callback to unregister. |
 
 **Error codes:**
 
@@ -680,7 +679,7 @@ UnRegister the service error callback.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## off_deviceNameChange
+## off_deviceNameChange('deviceNameChange')
 
 ```TypeScript
 off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
@@ -701,7 +700,7 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ deviceName: string; }&gt; | No |  |
 
 **Error codes:**
 
@@ -731,7 +730,7 @@ try {
 }
 ```
 
-## off_deviceStateChange
+## off_deviceStateChange('deviceStateChange')
 
 ```TypeScript
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -752,7 +751,7 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
@@ -788,7 +787,7 @@ try {
 }
 ```
 
-## off_discoverFailure
+## off_discoverFailure('discoverFailure')
 
 ```TypeScript
 off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
@@ -809,7 +808,7 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ reason: int; }&gt; | No |  |
 
 **Error codes:**
 
@@ -839,7 +838,7 @@ try {
 }
 ```
 
-## off_discoverSuccess
+## off_discoverSuccess('discoverSuccess')
 
 ```TypeScript
 off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void
@@ -860,7 +859,7 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
 
 **Error codes:**
 
@@ -895,7 +894,7 @@ try {
 }
 ```
 
-## off_serviceDie
+## off_serviceDie('serviceDie')
 
 ```TypeScript
 off(type: 'serviceDie', callback?: Callback<{}>): void
@@ -916,7 +915,7 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 
@@ -962,7 +961,7 @@ Register a device name change callback so that the application can be notified w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes | Indicates the device name change callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes | Indicates the device name change callback to register. |
 
 **Error codes:**
 
@@ -990,7 +989,7 @@ Register a device state callback so that the application can be notified upon de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes | Indicates the device state callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes | Indicates the device state callback to register. |
 
 **Error codes:**
 
@@ -1018,7 +1017,7 @@ Register a device discovery result callback so that the application can be notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes | Indicates the device found result callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes | Indicates the device found result callback to register. |
 
 **Error codes:**
 
@@ -1046,7 +1045,7 @@ Register a device discovery result callback so that the application can be notif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes | Indicates the device discovery callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes | Indicates the device discovery callback to register. |
 
 **Error codes:**
 
@@ -1074,7 +1073,7 @@ Register a serviceError callback so that the application can be notified when de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes | Indicates the service error callback to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes | Indicates the service error callback to register. |
 
 **Error codes:**
 
@@ -1082,7 +1081,7 @@ Register a serviceError callback so that the application can be notified when de
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-## on_deviceNameChange
+## on_deviceNameChange('deviceNameChange')
 
 ```TypeScript
 on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
@@ -1103,7 +1102,7 @@ Subscribes to device name changes. The application will be notified when the nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ deviceName: string; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1133,7 +1132,7 @@ try {
 }
 ```
 
-## on_deviceStateChange
+## on_deviceStateChange('deviceStateChange')
 
 ```TypeScript
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -1154,7 +1153,7 @@ Subscribes to the device state changes. The application (identified by the bundl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1190,7 +1189,7 @@ try {
 }
 ```
 
-## on_discoverFailure
+## on_discoverFailure('discoverFailure')
 
 ```TypeScript
 on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void
@@ -1211,7 +1210,7 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: int; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ reason: int; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1241,7 +1240,7 @@ try {
 }
 ```
 
-## on_discoverSuccess
+## on_discoverSuccess('discoverSuccess')
 
 ```TypeScript
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
@@ -1262,7 +1261,7 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1297,7 +1296,7 @@ try {
 }
 ```
 
-## on_serviceDie
+## on_serviceDie('serviceDie')
 
 ```TypeScript
 on(type: 'serviceDie', callback?: Callback<{}>): void
@@ -1318,7 +1317,7 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{}&gt; | No |  |
 
 **Error codes:**
 

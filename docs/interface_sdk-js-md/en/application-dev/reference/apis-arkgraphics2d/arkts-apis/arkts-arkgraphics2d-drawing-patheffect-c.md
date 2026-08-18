@@ -12,7 +12,6 @@ Implements a path effect. > **NOTE：**> > - The initial APIs of this class are 
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D';
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createComposePathEffect

@@ -12,7 +12,7 @@ import { data } from '@kit.TelephonyKit';
 function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>
 ```
 
-Query APN IDs.
+Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns the result asynchronously.
 
 **Since:** 23
 
@@ -26,13 +26,13 @@ Query APN IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes | The APN information that needs to be queried. |
+| apnInfo | [ApnInfo](arkts-telephony-data-apninfo-i.md) | Yes | APN to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

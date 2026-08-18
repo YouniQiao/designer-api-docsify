@@ -158,7 +158,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 lockCanvas(): DrawingCanvas | null
 ```
 
-获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#canvas)。
+获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)。
 
 **起始版本：** 20
 

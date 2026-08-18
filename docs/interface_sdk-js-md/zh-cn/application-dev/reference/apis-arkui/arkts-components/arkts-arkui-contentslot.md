@@ -28,4 +28,9 @@ ContentSlot(content: Content)
 
 ## 汇总
 
-- [Content](arkts-arkui-content-t.md)
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [Content](arkts-arkui-content-t.md) | 定义ComponentContent和NodeContent的基类。 |
+

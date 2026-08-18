@@ -2,13 +2,13 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md#baseprofile)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md#a2dpsourceprofile)
+**Substitutes:** [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md)
 
 <!--Device-bluetooth-interface A2dpSourceProfile--><!--Device-bluetooth-interface A2dpSourceProfile-End-->
 
@@ -152,7 +152,7 @@ let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.Profi
 let state : bluetooth.PlayingState = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
 ```
 
-## off_connectionStateChange
+## off_connectionStateChange('connectionStateChange')
 
 ```TypeScript
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
@@ -175,9 +175,9 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
-## on_connectionStateChange
+## on_connectionStateChange('connectionStateChange')
 
 ```TypeScript
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
@@ -200,5 +200,5 @@ Subscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 

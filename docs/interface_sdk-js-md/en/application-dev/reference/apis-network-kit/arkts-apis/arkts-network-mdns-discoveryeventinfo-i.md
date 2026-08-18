@@ -1,6 +1,6 @@
 # DiscoveryEventInfo
 
-Defines the discovery events information of mDNS services.
+Defines the MDNS service event information.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ import { mdns } from '@kit.NetworkKit';
 errorCode?: MdnsError
 ```
 
-The mDNS error information.
+MDNS error information.
 
 **Type:** [MdnsError](arkts-network-mdns-mdnserror-e.md)
 
@@ -38,7 +38,7 @@ The mDNS error information.
 serviceInfo: LocalServiceInfo
 ```
 
-Information about the mDNS service.
+MDNS service information.
 
 **Type:** [LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)
 

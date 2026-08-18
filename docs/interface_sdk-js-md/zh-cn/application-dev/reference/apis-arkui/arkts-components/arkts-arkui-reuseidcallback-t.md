@@ -4,7 +4,7 @@
 declare type ReuseIdCallback = () => string
 ```
 
-ReuseId callback type. It is used to compute reuseId.
+获取复用标识ID的回调方法。
 
 **起始版本：** 18
 

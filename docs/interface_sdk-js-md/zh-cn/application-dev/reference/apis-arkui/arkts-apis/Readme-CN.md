@@ -487,10 +487,35 @@
   - [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md)
   - [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md)
   - [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
+- [@ohos.arkui.componentSnapshot](arkts-arkui-componentsnapshot.md)
+  - [getSync](arkts-arkui-componentsnapshot-getsync-f.md)
+  - [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md)
+  - [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md)
+  - [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md)
+  - [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md)
+  - [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md)
+  - [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md)
+  - [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
 - [@ohos.arkui.componentUtils](arkts-arkui-componentutils.md)
   <!--Del-->
   - [getItemsInShapePath(系统接口)](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md)<!--DelEnd-->
   - [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md)
+  - [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md)
+  <!--Del-->
+  - [GetItemsInShapePathParams(系统接口)](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ImageItem(系统接口)](arkts-arkui-componentutils-imageitem-i-sys.md)<!--DelEnd-->
+  - [Offset](arkts-arkui-componentutils-offset-i.md)
+  - [RotateResult](arkts-arkui-componentutils-rotateresult-i.md)
+  <!--Del-->
+  - [Rotation2D(系统接口)](arkts-arkui-componentutils-rotation2d-i-sys.md)<!--DelEnd-->
+  - [ScaleResult](arkts-arkui-componentutils-scaleresult-i.md)
+  - [Size](arkts-arkui-componentutils-size-i.md)
+  - [TranslateResult](arkts-arkui-componentutils-translateresult-i.md)
+  - [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md)
+- [@ohos.arkui.componentUtils](arkts-arkui-componentutils.md)
+  <!--Del-->
+  - [getItemsInShapePath(系统接口)](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md)<!--DelEnd-->
   - [ComponentInfo](arkts-arkui-componentutils-componentinfo-i.md)
   <!--Del-->
   - [GetItemsInShapePathParams(系统接口)](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md)<!--DelEnd-->
@@ -558,6 +583,19 @@
   - [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md)
   - [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md)
   - [getDragPreview](arkts-arkui-dragcontroller-getdragpreview-f.md)
+  - [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md)
+  - [SpringLoadingContext](arkts-arkui-dragcontroller-springloadingcontext-c.md)
+  - [AnimationOptions](arkts-arkui-dragcontroller-animationoptions-i.md)
+  - [DragAction](arkts-arkui-dragcontroller-dragaction-i.md)
+  - [DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)
+  - [DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)
+  - [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md)
+  - [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md)
+  - [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
+  - [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
+  - [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md)
+  - [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md)
+- [@ohos.arkui.dragController](arkts-arkui-dragcontroller.md)
   - [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md)
   - [SpringLoadingContext](arkts-arkui-dragcontroller-springloadingcontext-c.md)
   - [AnimationOptions](arkts-arkui-dragcontroller-animationoptions-i.md)
@@ -2062,6 +2100,10 @@
     - [Flex](arkts-arkui-flex-flex-f.md)
     - [FlexOptions](arkts-arkui-flex-flexoptions-i.md)
     - [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md)
+  - [focus](arkts-focus.md)
+    - [FocusBoxStyle](arkts-arkui-focus-focusboxstyle-i.md)
+    - [FocusPriority](arkts-arkui-focus-focuspriority-e.md)
+    - [KeyProcessingMode](arkts-arkui-focus-keyprocessingmode-e.md)
   - [folderStack](arkts-folderstack.md)
     - [FolderStack](arkts-arkui-folderstack-folderstack-f.md)
     - [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md)

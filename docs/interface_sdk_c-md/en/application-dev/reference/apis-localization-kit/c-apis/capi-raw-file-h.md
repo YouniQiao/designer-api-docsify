@@ -72,7 +72,7 @@ Reads data of the specified length from the current offset position of a rawfile
 
 | Type | Description |
 | -- | -- |
-| int | Length of the data read. If the file has been read and no data is available for reading, or if `rawFile` is<br>     `NULL`, `0` is returned. |
+| int | Length of the data read. If the file has been read and no data is available for reading, or if `rawFile` is      `NULL`, `0` is returned. |
 
 ### OH_ResourceManager_SeekRawFile()
 
@@ -98,7 +98,7 @@ Adjusts the offset position of a rawfile based on the specified offset and offse
 
 | Type | Description |
 | -- | -- |
-| int | Seeking result.<br>     <br>0: The operation is successful and the file offset is moved to the specified position.<br>     <br>-1: The operation fails and the file offset remains unchanged. Possible cause: `rawFile` is `NULL`,<br>     `offset` is out the file range, or `whence` is invalid. |
+| int | Seeking result.      <br>0: The operation is successful and the file offset is moved to the specified position.      <br>-1: The operation fails and the file offset remains unchanged. Possible cause: `rawFile` is `NULL`,      `offset` is out the file range, or `whence` is invalid. |
 
 ### OH_ResourceManager_GetRawFileSize()
 
@@ -247,7 +247,7 @@ Obtains the rawfile descriptor information. After obtaining the file descriptor 
 
 | Type | Description |
 | -- | -- |
-| bool | Obtaining result. If the operation is successful, `true` is returned. If the operation fails, `false` is<br>     returned. The possible cause is that `rawFile` or `descriptor` is `NULL` or the access to the rawfile is denied. |
+| bool | Obtaining result. If the operation is successful, `true` is returned. If the operation fails, `false` is      returned. The possible cause is that `rawFile` or `descriptor` is `NULL` or the access to the rawfile is denied. |
 
 ### OH_ResourceManager_ReleaseRawFileDescriptor()
 
@@ -275,7 +275,7 @@ Releases the file descriptor of a rawfile. To prevent file descriptor leakage, y
 
 | Type | Description |
 | -- | -- |
-| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is<br>     returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
+| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is      returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
 
 ### OH_ResourceManager_ReleaseRawFileDescriptorData()
 
@@ -299,7 +299,7 @@ Releases rawfile file descriptor resources. After successful release, `fd` in `d
 
 | Type | Description |
 | -- | -- |
-| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is<br>     returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
+| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is      returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
 
 ### OH_ResourceManager_ReadRawFile64()
 
@@ -325,7 +325,7 @@ Reads data of the specified length from the current offset position of a rawfile
 
 | Type | Description |
 | -- | -- |
-| int64_t | Length of the data read. If the file has been read and no data is available for reading, or if `rawFile` is<br>     `NULL`, `0` is returned. |
+| int64_t | Length of the data read. If the file has been read and no data is available for reading, or if `rawFile` is      `NULL`, `0` is returned. |
 
 ### OH_ResourceManager_SeekRawFile64()
 
@@ -351,7 +351,7 @@ Adjusts the offset position of a rawfile based on the specified offset and offse
 
 | Type | Description |
 | -- | -- |
-| int | Seeking result.<br>     <br>0: The operation is successful and the file offset is moved to the specified position.<br>     <br>-1: The operation fails and the file offset remains unchanged. Possible cause: `rawFile` is `NULL`,<br>     `offset` is out the file range, or `whence` is invalid. |
+| int | Seeking result.      <br>0: The operation is successful and the file offset is moved to the specified position.      <br>-1: The operation fails and the file offset remains unchanged. Possible cause: `rawFile` is `NULL`,      `offset` is out the file range, or `whence` is invalid. |
 
 ### OH_ResourceManager_GetRawFileSize64()
 
@@ -471,7 +471,7 @@ Obtains the rawfile descriptor information. After obtaining the file descriptor 
 
 | Type | Description |
 | -- | -- |
-| bool | Obtaining result. If the operation is successful, `true` is returned. If the operation fails, `false` is<br>     returned. The possible cause is that `rawFile` or `descriptor` is `NULL` or the access to the rawfile is denied. |
+| bool | Obtaining result. If the operation is successful, `true` is returned. If the operation fails, `false` is      returned. The possible cause is that `rawFile` or `descriptor` is `NULL` or the access to the rawfile is denied. |
 
 ### OH_ResourceManager_ReleaseRawFileDescriptor64()
 
@@ -495,6 +495,6 @@ Releases rawfile file descriptor resources. After successful release, `fd` in `d
 
 | Type | Description |
 | -- | -- |
-| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is<br>     returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
+| bool | Release result. If the operation is successful, `true` is returned. If the operation fails, `false` is      returned. The possible cause is that `descriptor` is `NULL` or the file descriptor has been released. |
 
 

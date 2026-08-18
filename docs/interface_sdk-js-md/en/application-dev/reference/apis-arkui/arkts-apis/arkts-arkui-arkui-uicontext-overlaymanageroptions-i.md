@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext).
+Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md).
 
 **Since:** 15
 

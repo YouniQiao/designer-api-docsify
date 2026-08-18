@@ -6,7 +6,7 @@ Represents the result returned. > **NOTE：**> > - For details about the error c
 
 **Deprecated since:** 9
 
-**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md#huksreturnresult)
+**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
 
 <!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 

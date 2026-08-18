@@ -18,7 +18,7 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 
 **Deprecated since:** 23
 
-**Substitutes:** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-system-api)
+**Substitutes:** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
 
@@ -31,7 +31,7 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ state: boolean }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-system-api)
+**Substitutes:** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
 

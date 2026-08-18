@@ -14,7 +14,6 @@ Defines the device service ID. It uniquely identifies a device and its user, inc
 
 ```TypeScript
 import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceId
@@ -43,7 +42,7 @@ Device ID. It is a string that uniquely identifies a device. The format is deter
 deviceIdType: int
 ```
 
-Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#deviceidtype-system-api). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
+Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
 
 **Type:** int
 

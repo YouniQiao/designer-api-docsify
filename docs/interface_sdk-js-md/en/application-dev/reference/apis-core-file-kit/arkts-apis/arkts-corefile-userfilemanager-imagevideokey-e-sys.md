@@ -6,7 +6,7 @@ Defines the key information about an image or video file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#photokeys)
+**Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md)
 
 <!--Device-userFileManager-enum ImageVideoKey--><!--Device-userFileManager-enum ImageVideoKey-End-->
 
@@ -17,7 +17,7 @@ Defines the key information about an image or video file.
 ## URI
 
 ```TypeScript
-URI
+URI = 0
 ```
 
 URI of the file.
@@ -28,7 +28,7 @@ URI of the file.
 
 **Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#uri)
 
-<!--Device-ImageVideoKey-URI--><!--Device-ImageVideoKey-URI-End-->
+<!--Device-ImageVideoKey-URI = 0--><!--Device-ImageVideoKey-URI = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -37,7 +37,7 @@ URI of the file.
 ## FILE_TYPE
 
 ```TypeScript
-FILE_TYPE
+FILE_TYPE = 1
 ```
 
 Type of the file.
@@ -46,9 +46,9 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#phototype)
+**Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#photo_type)
 
-<!--Device-ImageVideoKey-FILE_TYPE--><!--Device-ImageVideoKey-FILE_TYPE-End-->
+<!--Device-ImageVideoKey-FILE_TYPE = 1--><!--Device-ImageVideoKey-FILE_TYPE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -57,7 +57,7 @@ Type of the file.
 ## DISPLAY_NAME
 
 ```TypeScript
-DISPLAY_NAME
+DISPLAY_NAME = 2
 ```
 
 File name displayed.
@@ -66,9 +66,9 @@ File name displayed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#displayname)
+**Substitutes:** [DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#display_name)
 
-<!--Device-ImageVideoKey-DISPLAY_NAME--><!--Device-ImageVideoKey-DISPLAY_NAME-End-->
+<!--Device-ImageVideoKey-DISPLAY_NAME = 2--><!--Device-ImageVideoKey-DISPLAY_NAME = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -77,7 +77,7 @@ File name displayed.
 ## DATE_ADDED
 
 ```TypeScript
-DATE_ADDED
+DATE_ADDED = 3
 ```
 
 Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -86,9 +86,9 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#dateadded)
+**Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_added)
 
-<!--Device-ImageVideoKey-DATE_ADDED--><!--Device-ImageVideoKey-DATE_ADDED-End-->
+<!--Device-ImageVideoKey-DATE_ADDED = 3--><!--Device-ImageVideoKey-DATE_ADDED = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -97,7 +97,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 ## DATE_MODIFIED
 
 ```TypeScript
-DATE_MODIFIED
+DATE_MODIFIED = 4
 ```
 
 Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -106,9 +106,9 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#datemodified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_modified)
 
-<!--Device-ImageVideoKey-DATE_MODIFIED--><!--Device-ImageVideoKey-DATE_MODIFIED-End-->
+<!--Device-ImageVideoKey-DATE_MODIFIED = 4--><!--Device-ImageVideoKey-DATE_MODIFIED = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -117,7 +117,7 @@ Date when the file content (not the file name) was last modified. The value is t
 ## TITLE
 
 ```TypeScript
-TITLE
+TITLE = 5
 ```
 
 Title of the file.
@@ -128,7 +128,7 @@ Title of the file.
 
 **Substitutes:** [TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#title)
 
-<!--Device-ImageVideoKey-TITLE--><!--Device-ImageVideoKey-TITLE-End-->
+<!--Device-ImageVideoKey-TITLE = 5--><!--Device-ImageVideoKey-TITLE = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -137,7 +137,7 @@ Title of the file.
 ## DURATION
 
 ```TypeScript
-DURATION
+DURATION = 6
 ```
 
 Duration, in ms.
@@ -148,7 +148,7 @@ Duration, in ms.
 
 **Substitutes:** [DURATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#duration)
 
-<!--Device-ImageVideoKey-DURATION--><!--Device-ImageVideoKey-DURATION-End-->
+<!--Device-ImageVideoKey-DURATION = 6--><!--Device-ImageVideoKey-DURATION = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -157,7 +157,7 @@ Duration, in ms.
 ## WIDTH
 
 ```TypeScript
-WIDTH
+WIDTH = 7
 ```
 
 Image width, in pixels.
@@ -168,7 +168,7 @@ Image width, in pixels.
 
 **Substitutes:** [WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#width)
 
-<!--Device-ImageVideoKey-WIDTH--><!--Device-ImageVideoKey-WIDTH-End-->
+<!--Device-ImageVideoKey-WIDTH = 7--><!--Device-ImageVideoKey-WIDTH = 7-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -177,7 +177,7 @@ Image width, in pixels.
 ## HEIGHT
 
 ```TypeScript
-HEIGHT
+HEIGHT = 8
 ```
 
 Image height, in pixels.
@@ -188,7 +188,7 @@ Image height, in pixels.
 
 **Substitutes:** [HEIGHT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#height)
 
-<!--Device-ImageVideoKey-HEIGHT--><!--Device-ImageVideoKey-HEIGHT-End-->
+<!--Device-ImageVideoKey-HEIGHT = 8--><!--Device-ImageVideoKey-HEIGHT = 8-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -197,7 +197,7 @@ Image height, in pixels.
 ## DATE_TAKEN
 
 ```TypeScript
-DATE_TAKEN
+DATE_TAKEN = 9
 ```
 
 Date when the file (photo) was taken. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -206,9 +206,9 @@ Date when the file (photo) was taken. The value is the number of seconds elapsed
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#datetaken)
+**Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_taken)
 
-<!--Device-ImageVideoKey-DATE_TAKEN--><!--Device-ImageVideoKey-DATE_TAKEN-End-->
+<!--Device-ImageVideoKey-DATE_TAKEN = 9--><!--Device-ImageVideoKey-DATE_TAKEN = 9-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -217,7 +217,7 @@ Date when the file (photo) was taken. The value is the number of seconds elapsed
 ## ORIENTATION
 
 ```TypeScript
-ORIENTATION
+ORIENTATION = 10
 ```
 
 Orientation of the image file.
@@ -228,7 +228,7 @@ Orientation of the image file.
 
 **Substitutes:** [ORIENTATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#orientation)
 
-<!--Device-ImageVideoKey-ORIENTATION--><!--Device-ImageVideoKey-ORIENTATION-End-->
+<!--Device-ImageVideoKey-ORIENTATION = 10--><!--Device-ImageVideoKey-ORIENTATION = 10-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -237,7 +237,7 @@ Orientation of the image file.
 ## FAVORITE
 
 ```TypeScript
-FAVORITE
+FAVORITE = 11
 ```
 
 Whether the file is added to favorites.
@@ -248,7 +248,7 @@ Whether the file is added to favorites.
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#favorite)
 
-<!--Device-ImageVideoKey-FAVORITE--><!--Device-ImageVideoKey-FAVORITE-End-->
+<!--Device-ImageVideoKey-FAVORITE = 11--><!--Device-ImageVideoKey-FAVORITE = 11-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -257,7 +257,7 @@ Whether the file is added to favorites.
 ## POSITION
 
 ```TypeScript
-POSITION
+POSITION = 12
 ```
 
 File location type.
@@ -268,7 +268,7 @@ File location type.
 
 **Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#position)
 
-<!--Device-ImageVideoKey-POSITION--><!--Device-ImageVideoKey-POSITION-End-->
+<!--Device-ImageVideoKey-POSITION = 12--><!--Device-ImageVideoKey-POSITION = 12-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -277,7 +277,7 @@ File location type.
 ## DATE_TRASHED
 
 ```TypeScript
-DATE_TRASHED
+DATE_TRASHED = 13
 ```
 
 Date when the file was deleted. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
@@ -286,9 +286,9 @@ Date when the file was deleted. The value is the number of seconds elapsed since
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#datetrashed)
+**Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#date_trashed)
 
-<!--Device-ImageVideoKey-DATE_TRASHED--><!--Device-ImageVideoKey-DATE_TRASHED-End-->
+<!--Device-ImageVideoKey-DATE_TRASHED = 13--><!--Device-ImageVideoKey-DATE_TRASHED = 13-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -297,7 +297,7 @@ Date when the file was deleted. The value is the number of seconds elapsed since
 ## HIDDEN
 
 ```TypeScript
-HIDDEN
+HIDDEN = 14
 ```
 
 Whether the file is hidden.
@@ -308,7 +308,7 @@ Whether the file is hidden.
 
 **Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#hidden)
 
-<!--Device-ImageVideoKey-HIDDEN--><!--Device-ImageVideoKey-HIDDEN-End-->
+<!--Device-ImageVideoKey-HIDDEN = 14--><!--Device-ImageVideoKey-HIDDEN = 14-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -317,7 +317,7 @@ Whether the file is hidden.
 ## USER_COMMENT
 
 ```TypeScript
-USER_COMMENT
+USER_COMMENT = 15
 ```
 
 User comment information.
@@ -326,9 +326,9 @@ User comment information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#usercomment)
+**Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#user_comment)
 
-<!--Device-ImageVideoKey-USER_COMMENT--><!--Device-ImageVideoKey-USER_COMMENT-End-->
+<!--Device-ImageVideoKey-USER_COMMENT = 15--><!--Device-ImageVideoKey-USER_COMMENT = 15-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -337,7 +337,7 @@ User comment information.
 ## CAMERA_SHOT_KEY
 
 ```TypeScript
-CAMERA_SHOT_KEY
+CAMERA_SHOT_KEY = 16
 ```
 
 Key for the Ultra Snapshot feature. This parameter is available only for the system camera, and the key value is defined by the system camera.
@@ -346,9 +346,9 @@ Key for the Ultra Snapshot feature. This parameter is available only for the sys
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#camerashotkey)
+**Substitutes:** [CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#camera_shot_key)
 
-<!--Device-ImageVideoKey-CAMERA_SHOT_KEY--><!--Device-ImageVideoKey-CAMERA_SHOT_KEY-End-->
+<!--Device-ImageVideoKey-CAMERA_SHOT_KEY = 16--><!--Device-ImageVideoKey-CAMERA_SHOT_KEY = 16-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

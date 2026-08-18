@@ -2,7 +2,7 @@
 
 光源，继承自Node。
 
-**继承/实现关系：** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#node)
+**继承/实现关系：** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **起始版本：** 23
 

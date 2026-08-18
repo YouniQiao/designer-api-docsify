@@ -14,8 +14,6 @@ Provides APIs to implement device-cloud sync of media assets in **Gallery**. Bef
 
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
@@ -63,7 +61,7 @@ Unsubscribes from sync progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
 
 **Error codes:**
 
@@ -123,7 +121,7 @@ Removes the specified callback from the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress), and the return value is **void**. |
+| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -215,7 +213,7 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes | callback function with a `SyncProgress` argument. |
 
 **Error codes:**
 
@@ -249,7 +247,7 @@ Registers a listener for the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#syncprogress), and the return value is **void**. |
+| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -345,7 +343,7 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to start device-cloud sync. |
 
 **Error codes:**
 
@@ -442,7 +440,7 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to stop device-cloud sync. |
 
 **Error codes:**
 

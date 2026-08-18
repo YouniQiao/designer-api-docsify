@@ -12,7 +12,6 @@ The metadata of the current media.Used to set the properties of the current medi
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## album
@@ -241,7 +240,7 @@ The duration of this media, used to automatically calculate playback position, d
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). The system will use this value for fastforward skip intervals instead of [skipIntervals](#skipintervals). If not set, the fast forward skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
+The supported skipIntervals when doing fast forward operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds_15). The system will use this value for fastforward skip intervals instead of [skipIntervals](#skipintervals). If not set, the fast forward skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -259,7 +258,7 @@ The supported skipIntervals when doing fast forward operation, the default is [S
 filter?: int
 ```
 
-The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#typecastplusstream). See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#protocoltype)
+The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#type_cast_plus_stream). See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md)
 
 **Type:** int
 
@@ -363,7 +362,7 @@ The publishDate of the media
 rewindSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). The system will use this value for rewind skip intervals instead of [skipIntervals](#skipintervals). If not set, the rewind skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
+The supported skipIntervals when doing rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds_15). The system will use this value for rewind skip intervals instead of [skipIntervals](#skipintervals). If not set, the rewind skip intervals still use [skipIntervals](#skipintervals). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -399,7 +398,7 @@ The single lyric text of the media, not including time prefix
 skipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward and rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds15). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#skipintervals)
+The supported skipIntervals when doing fast forward and rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#seconds_15). See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 

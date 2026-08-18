@@ -1,8 +1,8 @@
 # EapMethod
 
-802.1x EAP method.
+Enumerates the EAP authentication methods.
 
-**Since:** 23
+**Since:** 20
 
 <!--Device-eap-enum EapMethod--><!--Device-eap-enum EapMethod-End-->
 
@@ -11,126 +11,126 @@
 ## EAP_NONE
 
 ```TypeScript
-EAP_NONE
+EAP_NONE = 0
 ```
 
-Not specified
+Not specified.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_NONE--><!--Device-EapMethod-EAP_NONE-End-->
+<!--Device-EapMethod-EAP_NONE = 0--><!--Device-EapMethod-EAP_NONE = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_PEAP
 
 ```TypeScript
-EAP_PEAP
+EAP_PEAP = 1
 ```
 
-Protected extensible authentication protocol
+PEAP.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_PEAP--><!--Device-EapMethod-EAP_PEAP-End-->
+<!--Device-EapMethod-EAP_PEAP = 1--><!--Device-EapMethod-EAP_PEAP = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_TLS
 
 ```TypeScript
-EAP_TLS
+EAP_TLS = 2
 ```
 
-Transport layer security
+TLS.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_TLS--><!--Device-EapMethod-EAP_TLS-End-->
+<!--Device-EapMethod-EAP_TLS = 2--><!--Device-EapMethod-EAP_TLS = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_TTLS
 
 ```TypeScript
-EAP_TTLS
+EAP_TTLS = 3
 ```
 
-Tunneled transport layer security
+TTLS.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_TTLS--><!--Device-EapMethod-EAP_TTLS-End-->
+<!--Device-EapMethod-EAP_TTLS = 3--><!--Device-EapMethod-EAP_TTLS = 3-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_PWD
 
 ```TypeScript
-EAP_PWD
+EAP_PWD = 4
 ```
 
-Password
+Password.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_PWD--><!--Device-EapMethod-EAP_PWD-End-->
+<!--Device-EapMethod-EAP_PWD = 4--><!--Device-EapMethod-EAP_PWD = 4-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_SIM
 
 ```TypeScript
-EAP_SIM
+EAP_SIM = 5
 ```
 
-Subscriber identity module
+SIM.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_SIM--><!--Device-EapMethod-EAP_SIM-End-->
+<!--Device-EapMethod-EAP_SIM = 5--><!--Device-EapMethod-EAP_SIM = 5-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_AKA
 
 ```TypeScript
-EAP_AKA
+EAP_AKA = 6
 ```
 
-Authentication and key agreement
+AKA.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_AKA--><!--Device-EapMethod-EAP_AKA-End-->
+<!--Device-EapMethod-EAP_AKA = 6--><!--Device-EapMethod-EAP_AKA = 6-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_AKA_PRIME
 
 ```TypeScript
-EAP_AKA_PRIME
+EAP_AKA_PRIME = 7
 ```
 
-AKA prime
+AKA Prime.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_AKA_PRIME--><!--Device-EapMethod-EAP_AKA_PRIME-End-->
+<!--Device-EapMethod-EAP_AKA_PRIME = 7--><!--Device-EapMethod-EAP_AKA_PRIME = 7-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_UNAUTH_TLS
 
 ```TypeScript
-EAP_UNAUTH_TLS
+EAP_UNAUTH_TLS = 8
 ```
 
-Unauth TLS
+UNAUTH TLS.
 
-**Since:** 23
+**Since:** 20
 
-<!--Device-EapMethod-EAP_UNAUTH_TLS--><!--Device-EapMethod-EAP_UNAUTH_TLS-End-->
+<!--Device-EapMethod-EAP_UNAUTH_TLS = 8--><!--Device-EapMethod-EAP_UNAUTH_TLS = 8-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 

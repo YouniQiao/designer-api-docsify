@@ -39,7 +39,7 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type. If it is not a component operation event, [COMPONENT_UNDEFINED](arkts-test-uitest-componenteventtype-e.md#componentundefined) is returned.
+Component operation event type. If it is not a component operation event, [COMPONENT_UNDEFINED](arkts-test-uitest-componenteventtype-e.md#component_undefined) is returned.
 
 **Type:** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
@@ -75,7 +75,7 @@ Component ID. If it is not a component operation event, an empty string is retur
 readonly componentRect?: Rect
 ```
 
-Component border information. If it is not a component operation event, a [Rect](arkts-test-uitest-rect-i.md#rect) object whose attribute values are all **0** is returned.
+Component border information. If it is not a component operation event, a [Rect](arkts-test-uitest-rect-i.md) object whose attribute values are all **0** is returned.
 
 **Type:** [Rect](arkts-test-uitest-rect-i.md)
 
@@ -129,7 +129,7 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type. If the event is not a window change event, [WINDOW_UNDEFINED](arkts-test-uitest-windowchangetype-e.md#windowundefined) is returned.
+Window change event type. If the event is not a window change event, [WINDOW_UNDEFINED](arkts-test-uitest-windowchangetype-e.md#window_undefined) is returned.
 
 **Type:** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 

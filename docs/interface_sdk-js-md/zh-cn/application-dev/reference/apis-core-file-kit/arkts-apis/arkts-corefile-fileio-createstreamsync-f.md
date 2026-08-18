@@ -17,7 +17,7 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **废弃版本：** 9
 
-**替代接口：** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createstreamsync)
+**替代接口：** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md)
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 

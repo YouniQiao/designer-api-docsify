@@ -1,8 +1,8 @@
 # Point3d
 
-三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md#point)。
+三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md)。
 
-**继承/实现关系：** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md#point)
+**继承/实现关系：** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md)
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## z

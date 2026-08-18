@@ -6,7 +6,7 @@ Describes the manufacturer data.
 
 **Deprecated since:** 10
 
-**Substitutes:** [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md#manufacturedata)
+**Substitutes:** [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md)
 
 <!--Device-bluetoothManager-interface ManufactureData--><!--Device-bluetoothManager-interface ManufactureData-End-->
 

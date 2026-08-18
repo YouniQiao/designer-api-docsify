@@ -22,7 +22,7 @@ import { screenshot } from '@kit.ArkUI';
 displayId?: long
 ```
 
-ID of the [display](arkts-arkui-display-displaystate-e.md#displaystate) device on which the screen region is to be captured. The value must be an integer.
+ID of the [display](arkts-arkui-display-displaystate-e.md) device on which the screen region is to be captured. The value must be an integer.
 
 **Type:** long
 
@@ -76,7 +76,7 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through [captureStatusChange](arkts-arkui-display-onadd-f.md#onadd).
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through captureStatusChange.
 
 **Type:** boolean
 

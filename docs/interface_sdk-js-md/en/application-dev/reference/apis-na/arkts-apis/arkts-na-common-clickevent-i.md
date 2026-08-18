@@ -2,7 +2,7 @@
 
 The tap action triggers this method invocation.
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-na-common-baseevent-i.md#baseevent)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-na-common-baseevent-i.md)
 
 **Since:** 23
 

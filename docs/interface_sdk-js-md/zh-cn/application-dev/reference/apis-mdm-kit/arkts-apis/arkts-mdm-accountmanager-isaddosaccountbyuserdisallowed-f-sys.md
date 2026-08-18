@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## isAddOsAccountByUserDisallowed
@@ -17,7 +18,7 @@ function isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed)
+**替代接口：** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

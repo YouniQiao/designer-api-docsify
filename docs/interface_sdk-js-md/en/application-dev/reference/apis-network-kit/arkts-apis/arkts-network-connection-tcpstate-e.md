@@ -1,8 +1,8 @@
 # TcpState
 
-State of the TCP network port.
+Enumerates TCP states.
 
-**Since:** 26.0.0
+**Since:** 24
 
 <!--Device-connection-export enum TcpState--><!--Device-connection-export enum TcpState-End-->
 
@@ -14,9 +14,9 @@ State of the TCP network port.
 TCP_ESTABLISHED = 1
 ```
 
-The TCP connection is in the ESTABLISHED state.
+The connection is established, and data can be sent and received properly.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,9 +30,9 @@ The TCP connection is in the ESTABLISHED state.
 TCP_SYN_SENT = 2
 ```
 
-The TCP connection is in the SYN_SENT state.
+The client sends SYN and waits for ACK+SYN from the server (the first step of the three-way handshake).
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +46,9 @@ The TCP connection is in the SYN_SENT state.
 TCP_SYN_RECV = 3
 ```
 
-The TCP connection is in the SYN_RECV state.
+The server receives SYN and sends ACK+SYN, and waits for ACK from the client (the second step of the three-way handshake).
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,9 +62,9 @@ The TCP connection is in the SYN_RECV state.
 TCP_FIN_WAIT1 = 4
 ```
 
-The TCP connection is in the FIN_WAIT1 state.
+The active end sends FIN and waits for ACK from the peer end.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,9 +78,9 @@ The TCP connection is in the FIN_WAIT1 state.
 TCP_FIN_WAIT2 = 5
 ```
 
-The TCP connection is in the FIN_WAIT2 state.
+The active end receives ACK of FIN and waits for ACK from the peer end.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +94,9 @@ The TCP connection is in the FIN_WAIT2 state.
 TCP_TIME_WAIT = 6
 ```
 
-The TCP connection is in the TIME_WAIT state.
+The active end receives FIN from the peer end and replies with ACK. After two times of the maximum segment lifetime, the connection is completely released.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,9 +110,9 @@ The TCP connection is in the TIME_WAIT state.
 TCP_CLOSE = 7
 ```
 
-The TCP connection is in the CLOSE state.
+Initial/closed state, with no connection.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,9 +126,9 @@ The TCP connection is in the CLOSE state.
 TCP_CLOSE_WAIT = 8
 ```
 
-The TCP connection is in the CLOSE_WAIT state.
+The passive end receives FIN and sends ACK, and waits for FIN from the peer end.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,9 +142,9 @@ The TCP connection is in the CLOSE_WAIT state.
 TCP_LAST_ACK = 9
 ```
 
-The TCP connection is in the LAST_ACK state.
+The passive end sends FIN and waits for ACK from the peer end.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,9 +158,9 @@ The TCP connection is in the LAST_ACK state.
 TCP_LISTEN = 10
 ```
 
-The TCP connection is in the LISTEN state.
+The server listens and waits for the client to connect.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,9 +174,9 @@ The TCP connection is in the LISTEN state.
 TCP_CLOSING = 11
 ```
 
-The TCP connection is in the CLOSING state.
+Both ends send FIN and wait for ACK from each other.
 
-**Since:** 26.0.0
+**Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 

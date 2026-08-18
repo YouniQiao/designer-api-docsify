@@ -1,6 +1,6 @@
 # ApnInfo
 
-Defines the APN info.
+Defines the APN information.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { data } from '@kit.TelephonyKit';
 apn: string
 ```
 
-Indicates APN.
+APN.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Indicates APN.
 apnName: string
 ```
 
-Indicates APN name.
+APN name.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ Indicates APN name.
 mcc: string
 ```
 
-Indicates APN mcc.
+Mobile country code (MCC) of the SIM card.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Indicates APN mcc.
 mmsproxy?: string
 ```
 
-Indicates APN mmsproxy.
+Multimedia messaging service (MMS) proxy.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ Indicates APN mmsproxy.
 mnc: string
 ```
 
-Indicates APN mcc.
+Mobile network code (MNC) of the SIM card.
 
 **Type:** string
 
@@ -100,7 +100,7 @@ Indicates APN mcc.
 proxy?: string
 ```
 
-Indicates APN proxy.
+Proxy address.
 
 **Type:** string
 
@@ -116,7 +116,7 @@ Indicates APN proxy.
 type?: string
 ```
 
-Indicates APN type.
+APN type.
 
 **Type:** string
 
@@ -132,7 +132,7 @@ Indicates APN type.
 user?: string
 ```
 
-Indicates APN user.
+User name.
 
 **Type:** string
 

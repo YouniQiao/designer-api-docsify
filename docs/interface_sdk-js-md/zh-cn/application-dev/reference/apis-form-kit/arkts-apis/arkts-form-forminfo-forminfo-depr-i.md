@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [FormInfo](arkts-form-forminfo-forminfo-i.md#forminfo)
+**替代接口：** [FormInfo](arkts-form-forminfo-forminfo-i.md)
 
 <!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 

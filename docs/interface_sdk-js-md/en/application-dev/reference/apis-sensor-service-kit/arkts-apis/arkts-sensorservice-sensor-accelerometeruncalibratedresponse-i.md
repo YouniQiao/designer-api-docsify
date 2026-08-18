@@ -1,8 +1,8 @@
 # AccelerometerUncalibratedResponse
 
-Describes the uncalibrated acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+Describes the uncalibrated acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
-**Inheritance/Implementation:** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+**Inheritance/Implementation:** AccelerometerUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 23
 

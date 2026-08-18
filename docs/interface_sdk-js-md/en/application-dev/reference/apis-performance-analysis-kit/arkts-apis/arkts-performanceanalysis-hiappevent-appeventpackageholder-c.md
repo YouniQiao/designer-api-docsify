@@ -20,7 +20,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 constructor(watcherName: string)
 ```
 
-Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
+Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher). If no watcher is added, no data is displayed by default. |
+| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md). If no watcher is added, no data is displayed by default. |
 
 **Examples**
 

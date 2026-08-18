@@ -1,8 +1,8 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery). It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md). It provides APIs related to the flash.
 
-**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
 **Since:** 23
 

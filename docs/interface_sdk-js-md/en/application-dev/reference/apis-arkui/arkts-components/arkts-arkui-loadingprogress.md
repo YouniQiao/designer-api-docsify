@@ -24,5 +24,15 @@ Creates a loading progress component.
 
 ## Summary
 
-- [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)
-- [LoadingProgressStyle](arkts-arkui-loadingprogressstyle-e.md)
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [LoadingProgressStyle](arkts-arkui-loadingprogressstyle-e.md) | Enumerates style types of **LoadingProgress**. This API is not recommended for use. |
+

@@ -1,6 +1,6 @@
 # UidNetworkAccessPolicy (System API)
 
-Provides the container definition for network access policy key-value pairs.
+Defines the network policy for an application with the specified UID.
 
 **Since:** 12
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInfo
@@ -28,7 +29,7 @@ function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<Bundle
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -85,8 +86,8 @@ function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -145,7 +146,7 @@ function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
 

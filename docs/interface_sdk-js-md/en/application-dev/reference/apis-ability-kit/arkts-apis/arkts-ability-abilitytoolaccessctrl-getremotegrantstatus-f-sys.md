@@ -35,6 +35,6 @@ Gets the remote grant status. This function queries whether the remote authoriza
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
-| 24010001 | Service is abnormal. possible cause: IPC failed. |
+| 24010002 | Common internal error. Possible cause: dependent service unavailable, resource access failure, etc. |
+| 24010001 | Service is abnormal. Possible cause: IPC failed. |
 

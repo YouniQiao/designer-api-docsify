@@ -4,7 +4,7 @@
 type NonSendableValues = Array<relationalStore.ValueType>
 ```
 
-Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#valuetype) array that cannot be passed across threads.
+Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array that cannot be passed across threads.
 
 **Since:** 20
 

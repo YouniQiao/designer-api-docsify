@@ -36,7 +36,7 @@ STREAM_USAGE_MEDIA = 1
 
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_AUDIOBOOK](#streamusageaudiobook)
+**替代接口：** [STREAM_USAGE_AUDIOBOOK](#stream_usage_audiobook)
 
 <!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
 
@@ -134,7 +134,7 @@ STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 
 **废弃版本：** 10
 
-**替代接口：** [STREAM_USAGE_RINGTONE](#streamusageringtone)
+**替代接口：** [STREAM_USAGE_RINGTONE](#stream_usage_ringtone)
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 

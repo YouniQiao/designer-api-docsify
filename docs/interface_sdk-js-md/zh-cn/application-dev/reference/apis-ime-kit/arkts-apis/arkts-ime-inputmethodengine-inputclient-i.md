@@ -11,6 +11,7 @@ InputClient是输入法客户端对象，代表当前绑定到输入法应用的
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -32,7 +33,7 @@ deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -215,7 +216,7 @@ deleteForward(length: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为 undefined，data为false；否则为错误对象。 |
 
 **错误码：**
 
@@ -517,7 +518,7 @@ getBackward(length: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
@@ -760,7 +761,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -801,7 +802,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 |  |
 
 **错误码：**
 
@@ -953,7 +954,7 @@ getForward(length: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | int | 是 | 文本长度。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
@@ -1127,7 +1128,7 @@ getTextIndexAtCursor(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为 undefined。 |
 
 **错误码：**
 
@@ -1281,7 +1282,7 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 文本内容。建议长度不超过1KB。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -1413,7 +1414,7 @@ moveCursor(direction: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | int | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1532,7 +1533,7 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
 
 **示例**
 
@@ -1552,7 +1553,7 @@ inputMethodEngine.getInputMethodAbility()
 });
 ```
 
-## off_attachOptionsDidChange
+## off_attachOptionsDidChange('attachOptionsDidChange')
 
 ```TypeScript
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
@@ -1571,7 +1572,7 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -1605,7 +1606,7 @@ onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **示例**
 
@@ -1625,7 +1626,7 @@ inputMethodEngine.getInputMethodAbility()
 });
 ```
 
-## on_attachOptionsDidChange
+## on_attachOptionsDidChange('attachOptionsDidChange')
 
 ```TypeScript
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
@@ -1644,7 +1645,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **错误码：**
 
@@ -1687,7 +1688,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 <br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#messagehandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。 <br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -1734,7 +1735,7 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | movement | Movement | 是 | 选中时光标移动的方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1860,7 +1861,7 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | range | Range | 是 | 选中文本的范围。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1989,7 +1990,7 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | ExtendAction | 是 | 要发送的扩展操作。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -2078,7 +2079,7 @@ sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | int | 是 | 功能键键值。<br/>- 当值为0时，表示无效按键。<br/>- 当值为1时，表示确认键（即回车键）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **错误码：**
 

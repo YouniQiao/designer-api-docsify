@@ -18,7 +18,7 @@ Obtains the class of a peer Bluetooth device. On API 10 and above, the permissio
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-connection-getremotedeviceclass-f.md#getremotedeviceclass)
+**Substitutes:** [getRemoteDeviceClass](arkts-connectivity-connection-getremotedeviceclass-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

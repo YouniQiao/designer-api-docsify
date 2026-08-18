@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## renameSync
@@ -25,8 +28,8 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oldPath | string | 是 | 文件的应用沙箱原路径。 |
-| newPath | string | 是 | 文件的应用沙箱新路径。 |
+| oldPath | string | 是 | 文件或目录的应用沙箱原路径。 |
+| newPath | string | 是 | 文件或目录的应用沙箱新路径。 |
 
 **错误码：**
 

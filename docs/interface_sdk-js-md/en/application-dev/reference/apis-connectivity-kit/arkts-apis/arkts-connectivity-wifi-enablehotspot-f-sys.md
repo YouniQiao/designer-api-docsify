@@ -21,7 +21,7 @@ Enables a Wi-Fi hotspot. &lt;p&gt;This method is asynchronous. After the Wi-Fi h
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md#enablehotspot-system-api)
+**Substitutes:** [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

@@ -153,7 +153,7 @@ Creates an immersive material object with the specified style. The level of the 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) | Returns the pointer to the created immersive material object.<br>         If creation fails or the style is invalid, returns NULL. |
+| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) | Returns the pointer to the created immersive material object.          If creation fails or the style is invalid, returns NULL. |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_Destroy()
 
@@ -196,7 +196,7 @@ Sets the style. Only effective for exquisite and gentle materials.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_GetStyle()
 
@@ -221,7 +221,7 @@ Gets the style of an immersive material object.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_SetMaterialColor()
 
@@ -246,7 +246,7 @@ Sets the material color of an immersive material object. This parameter is effec
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_GetMaterialColor()
 
@@ -271,7 +271,7 @@ Gets the material color of an immersive material object.If the value is never se
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if the value is never set.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if the value is never set.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_SetApplyShadow()
 
@@ -296,7 +296,7 @@ Sets the apply shadow attribute of an immersive material object. This parameter 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_GetApplyShadow()
 
@@ -321,7 +321,7 @@ Gets the apply shadow attribute of an immersive material object.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_SetInteractive()
 
@@ -346,7 +346,7 @@ Sets the interactive attribute of an immersive material object. This parameter i
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_GetInteractive()
 
@@ -371,7 +371,7 @@ Gets the interactive attribute of an immersive material object.If the value is n
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if the value is never set.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if the value is never set.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_LightEffectOptions_Create()
 
@@ -432,7 +432,7 @@ Sets the color of the light effect.If not set, the default white color is white(
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_SetLightEffect()
 
@@ -457,7 +457,7 @@ Sets the light effect of an immersive material object.Passing NULL disables the 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_ImmersiveMaterial_GetLightEffectColor()
 
@@ -482,6 +482,6 @@ Gets the color of the light effect of an immersive material object.Only succeeds
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul><br>         <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li><br>         <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if lightEffect is never set or disabled.</li><br>         </ul> |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul>          <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li>          <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.</li>          <li>[ARKUI_ERROR_CODE_PARAM_ERROR](capi-error-code-h.md#arkui_errorcode) if lightEffect is never set or disabled.</li>          </ul> |
 
 

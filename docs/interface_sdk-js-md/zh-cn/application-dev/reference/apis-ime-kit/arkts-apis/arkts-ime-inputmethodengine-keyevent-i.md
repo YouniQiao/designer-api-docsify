@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## keyAction
@@ -35,7 +36,7 @@ readonly keyAction: int
 readonly keyCode: int
 ```
 
-按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#keycode)。
+按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)。
 
 **类型：** int
 

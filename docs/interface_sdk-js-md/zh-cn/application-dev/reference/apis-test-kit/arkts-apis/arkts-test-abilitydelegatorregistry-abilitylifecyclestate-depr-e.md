@@ -6,7 +6,7 @@ Ability生命周期状态。
 
 **废弃版本：** 9
 
-**替代接口：** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#abilitylifecyclestate)
+**替代接口：** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md)
 
 <!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState--><!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState-End-->
 

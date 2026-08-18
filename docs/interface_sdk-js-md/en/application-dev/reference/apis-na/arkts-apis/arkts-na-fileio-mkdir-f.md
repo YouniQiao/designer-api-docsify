@@ -125,7 +125,7 @@ Creates a single-level directory. If the parent directory does not exist, an err
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -170,7 +170,7 @@ Creates a directory. If **recursion** is set to **true**, a directory is created
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
 | recursion | boolean | Yes | Whether to create a directory recursively. <br> The value **true** means to create a directory recursively. The value **false** means to create a single- level directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

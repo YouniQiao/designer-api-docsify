@@ -6,7 +6,7 @@ Enumerates the media file types that can be selected.
 
 **废弃版本：** 12
 
-**替代接口：** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#photoviewmimetypes)
+**替代接口：** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 <!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
@@ -24,7 +24,7 @@ IMAGE_TYPE = 'image/*'
 
 **废弃版本：** 18
 
-**替代接口：** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagetype)
+**替代接口：** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,7 +44,7 @@ VIDEO_TYPE = 'video/*'
 
 **废弃版本：** 18
 
-**替代接口：** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#videotype)
+**替代接口：** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -64,7 +64,7 @@ IMAGE_VIDEO_TYPE = '*/*'
 
 **废弃版本：** 18
 
-**替代接口：** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#imagevideotype)
+**替代接口：** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

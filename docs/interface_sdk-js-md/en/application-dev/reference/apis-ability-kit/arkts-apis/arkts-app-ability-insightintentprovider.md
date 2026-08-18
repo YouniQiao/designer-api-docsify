@@ -14,7 +14,6 @@ Insight intent Provider.
 
 ```TypeScript
 import { insightIntentProvider } from '@kit.AbilityKit';
-import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -23,7 +22,7 @@ import { insightIntentProvider } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) | Send execute result. |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) | Send intent result. |
-| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) | Send intent result. |
+| [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) | Send execute result. |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) | Send intent result. |
+| [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md) | Send intent result. |
 

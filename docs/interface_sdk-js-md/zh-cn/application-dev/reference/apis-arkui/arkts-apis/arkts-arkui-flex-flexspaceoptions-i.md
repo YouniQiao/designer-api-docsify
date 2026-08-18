@@ -18,7 +18,7 @@ cross?: LengthMetrics
 
 Flex容器交叉轴上的space。
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ main?: LengthMetrics
 
 Flex容器主轴上的space。
 
-**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 

@@ -9,16 +9,16 @@ import { policy } from '@kit.NetworkKit';
 ## isUidNetAllowed
 
 ```TypeScript
-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void
+function isUidNetAllowed(uid: int, isMetered: boolean, callback: AsyncCallback<boolean>): void
 ```
 
-Get the status whether the uid app can access the metered network or non-metered network.
+Checks whether the application specified by a given UID is allowed to access a metered network. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void-End-->
+<!--Device-policy-function isUidNetAllowed(uid: int, isMetered: boolean, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: int, isMetered: boolean, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -28,9 +28,9 @@ Get the status whether the uid app can access the metered network or non-metered
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| isMetered | boolean | Yes | Indicates metered network or non-metered network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isUidNetAllowed. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| isMetered | boolean | Yes | Whether the network is a metered network. The value **true** indicates that the network is a metered network, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access metered networks, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -58,16 +58,16 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
 ## isUidNetAllowed
 
 ```TypeScript
-function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
+function isUidNetAllowed(uid: int, isMetered: boolean): Promise<boolean>
 ```
 
-Get the status whether the uid app can access the metered network or non-metered network.
+Checks whether the application specified by a given UID is allowed to access a metered network. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>-End-->
+<!--Device-policy-function isUidNetAllowed(uid: int, isMetered: boolean): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: int, isMetered: boolean): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -77,14 +77,14 @@ Get the status whether the uid app can access the metered network or non-metered
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| isMetered | boolean | Yes | Indicates metered network or non-metered network. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| isMetered | boolean | Yes | Whether the network is a metered network. The value **true** indicates that the network is a metered network, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the UID can access the metering or non-metering network, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -116,16 +116,16 @@ policy
 ## isUidNetAllowed
 
 ```TypeScript
-function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boolean>): void
+function isUidNetAllowed(uid: int, iface: string, callback: AsyncCallback<boolean>): void
 ```
 
-Get the status of whether the specified uid can access the specified network.
+Obtains whether the network of the specified iface can be accessed by the corresponding UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boolean>): void-End-->
+<!--Device-policy-function isUidNetAllowed(uid: int, iface: string, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: int, iface: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -135,9 +135,9 @@ Get the status of whether the specified uid can access the specified network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| iface | string | Yes | The specified network interface name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isUidNetAllowed. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| iface | string | Yes | Name of the target network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -165,16 +165,16 @@ policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => 
 ## isUidNetAllowed
 
 ```TypeScript
-function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
+function isUidNetAllowed(uid: int, iface: string): Promise<boolean>
 ```
 
-Get the status of whether the specified uid can access the specified network.
+Obtains whether the UID can access the network of the specified iface. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
-<!--Device-policy-function isUidNetAllowed(uid: number, iface: string): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: number, iface: string): Promise<boolean>-End-->
+<!--Device-policy-function isUidNetAllowed(uid: int, iface: string): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: int, iface: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -184,14 +184,14 @@ Get the status of whether the specified uid can access the specified network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | The specified UID of application. |
-| iface | string | Yes | The specified network interface name. |
+| uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
+| iface | string | Yes | Name of the target network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
 
 **Error codes:**
 

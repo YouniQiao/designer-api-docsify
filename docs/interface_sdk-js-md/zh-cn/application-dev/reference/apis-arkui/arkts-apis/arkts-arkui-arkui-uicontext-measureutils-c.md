@@ -1,6 +1,6 @@
 # MeasureUtils
 
-MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本自适应布局、多行文本截断、动态UI适配等场景。通过该类可精确计算文本尺寸，帮助开发者在布局前预判文本显示效果，避免文本溢出或布局错乱等问题。 > **说明：**> > - 以下API需先使用UIContext中的[getMeasureUtils()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmeasureutils)方法获取MeasureUtils实例，再通过此实例调用对应方法。 > > - 如需更多测算文本参数，建议使用图形对应测算接口[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#paragraph)接口。 > > - 调用文本计算接口时，应避免同时用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。 > > - 在测算裁剪后的文本时，由于某些Unicode字符（如emoji）的码位长度大于1，直接按字符串长度裁剪会导致不准确的结果。建议基于Unicode码点进行迭代处理，避免错误截断字符，确保测算结果准确，请参考[measureTextSize](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md#measuretextsize)的示例2。
+MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本自适应布局、多行文本截断、动态UI适配等场景。通过该类可精确计算文本尺寸，帮助开发者在布局前预判文本显示效果，避免文本溢出或布局错乱等问题。 > **说明：**> > - 以下API需先使用UIContext中的[getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils)方法获取MeasureUtils实例，再通过此实例调用对应方法。 > > - 如需更多测算文本参数，建议使用图形对应测算接口[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md)接口。 > > - 调用文本计算接口时，应避免同时用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。 > > - 在测算裁剪后的文本时，由于某些Unicode字符（如emoji）的码位长度大于1，直接按字符串长度裁剪会导致不准确的结果。建议基于Unicode码点进行迭代处理，避免错误截断字符，确保测算结果准确，请参考[measureTextSize](#measuretextsize)的示例2。
 
 **起始版本：** 12
 
@@ -11,6 +11,10 @@ MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## getParagraphs
@@ -19,7 +23,7 @@ MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本�
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-将属性字符串根据文本布局选项转换成对应的[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#paragraph)数组。
+将属性字符串根据文本布局选项转换成对应的[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md)数组。
 
 **起始版本：** 20
 
@@ -48,7 +52,7 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 measureText(options: MeasureOptions): number
 ```
 
-计算指定文本作为单行文本显示时的宽度，如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。 > **说明：**> > - 调用此接口时，应避免同时使用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。 > > - measureText接口的计算结果始终是单行文本的宽度，入参options中配置的布局约束（如constraintWidth、maxLines）对measureText的结果没有影响。如果需要计算布局约束下的宽度，请使用[measureTextSize](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md#measuretextsize)方法。
+计算指定文本作为单行文本显示时的宽度，如果文本包含多行（由换行符`\n`分隔），则返回其中最长的行的宽度。 > **说明：**> > - 调用此接口时，应避免同时使用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。 > > - measureText接口的计算结果始终是单行文本的宽度，入参options中配置的布局约束（如constraintWidth、maxLines）对measureText的结果没有影响。如果需要计算布局约束下的宽度，请使用[measureTextSize](#measuretextsize)方法。
 
 **起始版本：** 12
 
@@ -64,7 +68,7 @@ measureText(options: MeasureOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](../../apis-na/arkts-apis/arkts-na-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）等属性。constraintWidth、maxLines等布局约束属性对measureText的计算结果无影响，如需计算布局约束下的宽度，请使用measureTextSize方法。 |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）等属性。constraintWidth、maxLines等布局约束属性对measureText的计算结果无影响，如需计算布局约束下的宽度，请使用measureTextSize方法。 |
 
 **返回值：**
 
@@ -94,7 +98,7 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](../../apis-na/arkts-apis/arkts-na-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）、约束宽度（constraintWidth）、最大行数（maxLines）等属性，用于配置被计算文本的测量参数。 |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | 是 | 文本测量配置选项。包含文本内容（textContent）、字体大小（fontSize）、约束宽度（constraintWidth）、最大行数（maxLines）等属性，用于配置被计算文本的测量参数。 |
 
 **返回值：**
 

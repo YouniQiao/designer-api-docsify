@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -19,13 +20,13 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md#disablehotspot) | 去使能WLAN热点。 |
-| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md#enablehotspot) | 使能WLAN热点。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md#getpowermodel) | 获取功率模式。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md#getpowermodel) | 获取功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md#getsupportedpowermodel) | 获取支持的功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md#getsupportedpowermodel) | 获取支持的功率模式。 |
-| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md#setpowermodel) | 设置功率模式。 |
+| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) | 去使能WLAN热点。 |
+| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) | 使能WLAN热点。 |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
+| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) | 设置功率模式。 |
 
 ### 枚举
 

@@ -13,7 +13,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests an anonymous key. This API uses an asynchronous callback to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Attests an anonymous key. This API uses an asynchronous callback to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission. <!--RP1--><!--RP1End-->
 
 **Since:** 11
 
@@ -29,7 +29,7 @@ Attests an anonymous key. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ async function generateKeyThenAttestKey(): Promise<void> {
 function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests an anonymous key. This API uses a promise to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md#hukskeysecuritylevel) > requires the ohos.permission.ACCESS_SE_KEY permission. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Attests an anonymous key. This API uses a promise to return the result. This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later. > **NOTE：**> > Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) > requires the ohos.permission.ACCESS_SE_KEY permission. <!--RP1--><!--RP1End-->
 
 **Since:** 11
 
